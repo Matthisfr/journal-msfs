@@ -40,10 +40,22 @@ def verify():
         raise AssertionError("Audit des 171 scènes manquant")
     watch = json.loads(get("watch.json"))
     if watch.get("total", 0) < 30: raise AssertionError("Liste de veille incomplète")
+    if 'id="logiciels"' not in index or 'id="hardware-gallery"' not in index:
+        raise AssertionError("Pages Logiciels ou galerie matériel absentes")
+    software = json.loads(get("software_versions.json"))
+    if software.get("total", 0) < 23 or len(software.get("items", [])) < 23:
+        raise AssertionError("Catalogue logiciel quotidien incomplet")
+    images = json.loads(get("hardware-images.json"))
+    if len(images) < 12:
+        raise AssertionError("Inventaire photo matériel incomplet")
+    available = [x for x in images.values() if x.get("state") in ("photo","photo_remote") and x.get("path")]
+    if len(available) < 8:
+        raise AssertionError(f"Photos de matériel insuffisantes : {len(available)}/12")
     print(f"Site en ligne OK : 171 scènes ; {watch['total']} sources ; "
           f"{coverage.get('verified_today',0)} versions vérifiées ; "
           f"{len(status.get('weather',[]))} METAR classés ; "
-          f"{len(status.get('news',[]))} actualités automatiques.")
+          f"{len(status.get('news',[]))} actualités automatiques ; "
+          f"{software['total']} logiciels ; {len(available)} photos de matériel.")
     return True
 
 if __name__ == "__main__":
