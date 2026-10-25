@@ -67,3 +67,20 @@ for shop in ("contrail.shop","inibuilds.com"):
    ps=data.get("products",[])
    print("CATALOG",shop,page,len(ps),[(x.get("title"),x.get("vendor"),x.get("handle")) for x in ps[:2]])
   except Exception as e:print("CATALOG_ERROR",shop,page,type(e).__name__,str(e)[:160])
+
+for url in ("https://secure.simmarket.com/search.php?keywords=LFST",
+            "https://secure.simmarket.com/search.php?keywords=CYVR",
+            "https://secure.simmarket.com/france-vfr-lfst-strasbourg-entzheim-msfs.phtml",
+            "https://orbxdirect.com/product/essa-msfs2024",
+            "https://orbxdirect.com/product/esgg-msfs"):
+ try:
+  req=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0"})
+  with urllib.request.urlopen(req,timeout=18) as resp: raw=resp.read(800000).decode("utf-8",errors="replace")
+  titles=re.findall(r"<title[^>]*>(.*?)</title>",raw,re.I|re.S)
+  links=list(dict.fromkeys(re.findall(r'href="([^"]+\.phtml[^"]*)"',raw,re.I)))[:8]
+  samples=[]
+  for needle in ("Version","Published by","Product Version","1.3.3"):
+   m=re.search(re.escape(needle),raw,re.I)
+   if m:samples.append((needle,re.sub(r"\\s+"," ",raw[max(0,m.start()-110):m.start()+150])))
+  print("OTHER_PROBE",url,"size",len(raw),"title",titles[:1],"links",links,"samples",samples)
+ except Exception as e:print("OTHER_PROBE_ERROR",url,type(e).__name__,str(e)[:160])
