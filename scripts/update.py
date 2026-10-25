@@ -191,8 +191,20 @@ def run():
         src['official_news']='error'
         status['errors'].append('Actualités: '+str(e)[:250])
         print('News failure:',e,file=sys.stderr)
-    src['airport_versions']='non_verified'
-    status['note']='METAR et annonces officielles automatisés ; vérification des versions de scènes et veille éditoriale ChatGPT non automatisées.'
+    try:
+        from versions import update_versions
+        coverage,version_errors=update_versions(airports)
+        status['version_coverage']=coverage
+        status['versions_checked_at']=NOW.isoformat()
+        src['airport_versions']='partial' if coverage['verified_today'] else 'error'
+        status['errors'].extend(('Versions : '+e) for e in version_errors[:5])
+        (PUBLIC/'airports.json').write_text(json.dumps(airports,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        print('Versions éditeurs:',coverage)
+    except Exception as e:
+        src['airport_versions']='error'
+        status['errors'].append('Versions : '+str(e)[:200])
+        print('Versions failure:',e,file=sys.stderr)
+    status['note']='METAR, TAF, annonces officielles et vérification limitée de huit fiches Aerosoft automatisés ; autres scènes et veille éditoriale ChatGPT non automatisées.'
     status_path.write_text(json.dumps(status,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print('Updated',status_path)
 
