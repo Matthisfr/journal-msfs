@@ -64,11 +64,17 @@ def update_versions(airports):
         except Exception as e: return a,None,str(e)[:100]
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         for a,version,error in pool.map(check,candidates):
+            a['last_attempt_at']=dt.datetime.now(dt.timezone.utc).isoformat()
             if version:
                 a['server_version']=version
                 a['version_checked_at']=dt.datetime.now(dt.timezone.utc).date().isoformat()
+                a['version_check_state']='verified'
+                a.pop('version_check_reason',None)
                 a['status']='verified'
                 successes+=1
             else:
+                a['version_check_state']='unavailable'
+                a['version_check_reason']=error or 'Version non confirmée'
+                a['status']='UNK-S'
                 errors.append(a.get('icao','?')+': '+(error or 'non vérifié'))
     return {'eligible':len(candidates),'verified_today':successes,'unavailable':len(errors)},errors
