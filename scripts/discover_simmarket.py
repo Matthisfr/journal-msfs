@@ -48,6 +48,7 @@ def vendor_match(a,slug):
  publisher=norm(a.get("publisher"))
  return any(len(x)>3 and x in slug_norm for x in allowed) or (len(publisher)>4 and publisher in slug_norm)
 def candidate(a,url):
+ if "(SUB" in str(a.get("icao","")):return False
  slug=urllib.parse.urlparse(url).path.rsplit("/",1)[-1].replace(".phtml","")
  code=airport_code(a)
  if not vendor_match(a,slug):return False
@@ -100,23 +101,32 @@ def run():
  for row in missing:
   a=byfolder[row["folder"]]
   links,_=search.get(airport_code(a),([],None))
+  choices=[]
   for url in [u for u in links if candidate(a,u)][:4]:
    p=products.get(url,{})
    if p.get("state")!="verified":continue
-   # Le code doit apparaître dans la fiche ou l'URL; la recherche par ville
-   # seule peut désigner un autre aéroport : jamais de promotion automatique.
    code=airport_code(a)
    if not re.search(r"(?<![A-Z0-9])"+re.escape(code)+r"(?![A-Z0-9])",
                     (p.get("title","")+" "+url.rsplit("/",1)[-1]).upper().replace("-"," ")):
     continue
-   row["selected"]={"score":25,"store":"simMarket","title":p["title"],
-                    "vendor":a.get("publisher"),"url":url,"edition":p["edition"],
-                    "version":p["version"],"checked_at":p["checked_at"],"state":"verified"}
-   row["state"]="source_found"
-   row["matches"].append(row["selected"])
-   found+=1
-   print("SIMMARKET_TROUVÉ",row["icao"],row["folder"],a.get("installed"),"→",p["version"],url,flush=True)
-   break
+   ed=p.get("edition")
+   score={"2024":12,"2020+2024":10,"MSFS (édition non précisée)":5,"2020":0}.get(ed,1)
+   if p.get("version")==a.get("installed"):score+=20
+   v1=re.findall(r"\d+",str(a.get("installed","")))
+   v2=re.findall(r"\d+",str(p.get("version","")))
+   if v1 and v2 and v1[0]==v2[0]:score+=4
+   if v1 and v2 and len(v1)==len(v2) and tuple(map(int,v2))<tuple(map(int,v1)):score-=6
+   choices.append((score,url,p))
+  choices.sort(key=lambda x:x[0],reverse=True)
+  if not choices:continue
+  _,url,p=choices[0]
+  row["selected"]={"score":25,"store":"simMarket","title":p["title"],
+                   "vendor":a.get("publisher"),"url":url,"edition":p["edition"],
+                   "version":p["version"],"checked_at":p["checked_at"],"state":"verified"}
+  row["state"]="source_found"
+  row["matches"].append(row["selected"])
+  found+=1
+  print("SIMMARKET_TROUVÉ",row["icao"],row["folder"],a.get("installed"),"→",p["version"],p["edition"],url,flush=True)
  data["stores"]["simMarket"]=len(product_to_check)
  data["counts"]["source_found"]=sum(bool(x.get("selected")) for x in rows)
  data["counts"]["needs_research"]=sum(not x.get("selected") for x in rows)
