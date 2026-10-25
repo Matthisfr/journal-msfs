@@ -9,8 +9,8 @@ let airports=[], status={}, editorial={};
 window.MSFS_MAP_URL='https://www.google.com/maps/d/u/0/edit?mid=1smgM-lIXr_QPyWKxPrS68bmU0FsMjYM&usp=sharing';
 function switchView(view){if(!document.getElementById(view))view='accueil';$$('.view').forEach(e=>e.classList.toggle('active',e.id===view));$$('.navbtn').forEach(e=>{const sel=e.dataset.view===view;e.classList.toggle('selected',sel);if(sel)e.setAttribute('aria-current','page');else e.removeAttribute('aria-current')});history.replaceState(null,'','#'+view);if(view==='aeroports')renderMap();window.scrollTo({top:0,behavior:'smooth'})}
 $$('.navbtn').forEach(e=>e.addEventListener('click',()=>switchView(e.dataset.view)));
-$('[data-goto]').forEach(e=>e.addEventListener('click',()=>switchView(e.dataset.goto)));
-$('[data-top]').forEach(e=>e.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'})));
+$$('[data-goto]').forEach(e=>e.addEventListener('click',()=>switchView(e.dataset.goto)));
+$$('[data-top]').forEach(e=>e.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'})));
 
 function compareVersions(installed,online){
   const a=String(installed||'').match(/\d+/g),b=String(online||'').match(/\d+/g);
