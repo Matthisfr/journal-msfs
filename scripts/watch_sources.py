@@ -61,6 +61,14 @@ SOURCES = [
     ("fsdg", "FSDG — scènes", "Éditeurs de scènes", "https://fsdg-online.com/"),
     ("rdpresets", "RDPresets — scènes", "Éditeurs de scènes", "https://www.rdpresets.com/"),
     ("fsdreamteam", "FSDreamTeam — scènes", "Éditeurs de scènes", "https://www.fsdreamteam.com/"),
+    ("pacsim", "PacSim — Cleveland / Salt Lake City", "Éditeurs de scènes", "https://www.islandsim.com/index.html"),
+    ("pacsim-kslc", "PacSim KSLC V2 — suivi des révisions publiques", "Éditeurs de scènes", "https://forums.flightsimulator.com/t/pacsim-kslc-salt-lake-city-international-airport/547684"),
+    ("bmw-lipz", "Beautiful Model of the World — LIPZ", "Éditeurs de scènes", "https://beautifulmodelworld.com/"),
+    ("orbx-central", "Orbx Central — annonces et versions privées", "Éditeurs de scènes", "https://orbxdirect.com/central"),
+    ("simmarket", "simMarket — fiches et révisions de scènes", "Éditeurs de scènes", "https://secure.simmarket.com/"),
+    ("flightsimto-lepa", "EuroScene LEPA — version publiée", "Éditeurs de scènes", "https://fr.flightsim.to/addon/84186/lepa-palma-de-mallorca-airport"),
+    ("fsdt-updater", "FSDreamTeam — GSX et Live Update", "Éditeurs de scènes", "https://www.fsdreamteam.com/forum/"),
+
 ]
 assert len({x[0] for x in SOURCES}) == len(SOURCES), "Identifiants de veille dupliqués"
 
