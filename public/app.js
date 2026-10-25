@@ -121,13 +121,13 @@ function renderSoftware(){
   const body=$('#software-body');if(!body)return;
   body.innerHTML=selected.map(x=>{
     const ok=['verified','changed'].includes(x.state),fresh=x.state==='changed';
-    const tag=fresh?'<span class="new-tag">NEWS</span>':ok?'<span class="flag flag-ok">VÉRIFIÉ</span>':'<span class="flag flag-v">UNKNOWN</span>';
+    const tag=fresh?'<span class="new-tag">NEWS</span>':ok?'<span class="flag flag-ok">VÉRIFIÉ</span>':x.reference_version?'<span class="flag flag-c">RÉFÉRENCE DATÉE</span>':'<span class="flag flag-v">UNKNOWN</span>';
     const preview=x.preview_version?'<small>Préversion : '+esc(x.preview_version)+'</small>':'';
     const last=x.previous_version?'<small>Précédente : '+esc(x.previous_version)+'</small>':'';
     return '<tr><td><strong>'+esc(x.name)+'</strong><small>'+esc(x.group)+'</small></td>'+
-      '<td><strong>'+esc(x.version||'Non publiée')+'</strong>'+preview+'</td>'+
+      '<td><strong>'+esc(x.version||x.reference_version||'Non publiée')+'</strong>'+(x.reference_version&&!x.version?'<small>Relevée le '+esc(localDate(x.reference_checked_at))+' · non revalidée automatiquement</small>':'')+preview+'</td>'+
       '<td>'+tag+last+'<small>'+esc(x.reason||'')+'</small></td>'+
-      '<td><a href="'+esc(isSafeUrl(x.version_url||x.source_url))+'" target="_blank" rel="noopener noreferrer">Source officielle ↗</a>'+
+      '<td><a href="'+esc(isSafeUrl(x.version_url||(x.reference_version?x.reference_source_url:null)||x.source_url))+'" target="_blank" rel="noopener noreferrer">Source officielle ↗</a>'+
       (fresh?'<small>Changelog complet dans <a href="#nouveautes" data-software-news="1">Nouveautés</a></small>':'')+
       '<small>Contrôle : '+esc(localDateTime(x.checked_at))+'</small></td></tr>';
   }).join('')||'<tr><td colspan="4">Aucun logiciel correspondant.</td></tr>';
