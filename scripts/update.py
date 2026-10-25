@@ -238,6 +238,23 @@ def run():
         src['airport_versions']='error'
         status['errors'].append('Versions : '+str(e)[:200])
         print('Versions failure:',e,file=sys.stderr)
+    # Suivi logiciel indépendant : versions exactes et notes de changement.
+    try:
+        from software_versions import update as update_software
+        software,software_news,software_errors=update_software()
+        status['software_coverage']={
+            'total':software['total'],'verified':software['verified'],
+            'changed':software['changed'],'checked_at':software['checked_at'],
+            'unverified':software['total']-software['verified']}
+        src['software_versions']='partial' if software_errors else 'ok'
+        status['errors'].extend('Logiciels : '+e for e in software_errors[:5])
+        if software_news:
+            merged={x['id']:x for x in status.get('news',[]) if x.get('id')}
+            for entry in software_news:merged[entry['id']]=entry
+            status['news']=sorted(merged.values(),key=lambda x:x.get('date',''),reverse=True)[:70]
+    except Exception as e:
+        src['software_versions']='error'
+        status['errors'].append('Versions logiciels : '+str(e)[:180])
     status['note']='Collecte quotidienne automatique : METAR/TAF NOAA, flux officiel MSFS, versions GitHub publiées, audit des 171 scènes, extraction des versions des boutiques publiques reconnues et surveillance des sites publics. Les versions non publiées ou inaccessibles restent UNKNOWN ; une page modifiée n’est pas une mise à jour confirmée.'
     status_path.write_text(json.dumps(status,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print('Updated',status_path)
