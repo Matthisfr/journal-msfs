@@ -28,11 +28,13 @@ function compareVersions(installed,online){
 }
 function renderAirports(){
   const q=$('#airport-search').value.trim().toLowerCase(),region=$('#region-filter').value,st=$('#status-filter').value;
-  const verified=airports.filter(a=>a.server_version&&a.source_url);
+  const checkedDate=String(status.versions_checked_at||'').slice(0,10);
+  const isVerified=a=>!!a.server_version&&a.version_check_state==='verified'&&a.version_checked_at===checkedDate;
+  const verified=airports.filter(isVerified);
   const updates=verified.filter(a=>compareVersions(a.installed,a.server_version)==='update');
   $('#verified-count').textContent=verified.length;
   $('#updates-count').textContent=updates.length;
-  const matches=airports.filter(a=>(!q||[a.icao,a.original,a.name,a.publisher,a.folder,a.country,a.region,a.installed,a.server_version].join(' ').toLowerCase().includes(q))&&(!region||(a.region||a.country)===region)&&(!st||(st==='verified'?!!a.server_version:st==='update'?compareVersions(a.installed,a.server_version)==='update'&&!!a.server_version:a.status===st)));
+  const matches=airports.filter(a=>(!q||[a.icao,a.original,a.name,a.publisher,a.folder,a.country,a.region,a.installed,a.server_version].join(' ').toLowerCase().includes(q))&&(!region||(a.region||a.country)===region)&&(!st||(st==='verified'?isVerified(a):st==='update'?isVerified(a)&&compareVersions(a.installed,a.server_version)==='update':a.status===st)));
   $('#airport-count').textContent=`${matches.length} scène${matches.length>1?'s':''} affichée${matches.length>1?'s':''} sur ${airports.length}`;
   const cls={'UNK-P':'p','UNK-V':'v','UNK-C':'c','UNK-S':'s','verified':'ok'};
   $('#airport-body').innerHTML=matches.map(a=>{
@@ -41,7 +43,7 @@ function renderAirports(){
     const comp=a.server_version?compareVersions(a.installed,a.server_version):'unknown';
     const compLabel=comp==='update'?'MISE À JOUR':comp==='current'?'À JOUR':comp==='ahead'?'INSTALLÉE + RÉCENTE':'À COMPARER';
     const compClass=comp==='update'?'flag-s':comp==='current'?'flag-ok':'flag-v';
-    const online=a.server_version?`<b>${esc(a.server_version)}</b><small><span class="flag ${compClass}">${compLabel}</span></small><small>${source}</small><small>Vérifiée le ${esc(localDate(a.version_checked_at))}</small>`:`<span class="flag flag-${cls[st]||'v'}">${esc(st)}</span>${source?`<small>${source}</small>`:''}`;
+    const online=isVerified(a)?`<b>${esc(a.server_version)}</b><small><span class="flag ${compClass}">${compLabel}</span></small><small>${source}</small><small>Vérifiée le ${esc(localDate(a.version_checked_at))}</small>`:a.server_version?`<b>${esc(a.server_version)}</b><small>Dernière version connue, non revalidée aujourd’hui</small><small><span class="flag flag-${cls[st]||'v'}">${esc(st==='verified'?'UNK-V':st)}</span></small><small>${source}</small><small>Dernière confirmation : ${esc(localDate(a.version_checked_at))}</small>`:`<span class="flag flag-${cls[st]||'v'}">${esc(st)}</span>${source?`<small>${source}</small>`:''}`;
     return `<tr><td><span class="code">${esc(a.icao)}</span>${a.original!==a.icao?`<small>Source : ${esc(a.original)}</small>`:''}</td><td><b>${esc(a.name)}</b><small>${esc(a.note||a.folder||'')}</small></td><td>${esc(a.publisher)}</td><td><b>${esc(a.installed||'Non renseignée')}</b></td><td>${online}</td></tr>`;
   }).join('')||'<tr><td colspan="5">Aucune scène correspondant à ces filtres.</td></tr>';
 }
