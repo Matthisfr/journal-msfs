@@ -44,7 +44,7 @@ function renderMap(){
   const url=(window.MSFS_MAP_URL||'').trim();
   const m=url.match(/[?&]mid=([a-zA-Z0-9_-]+)/);
   if(m&&/^https:\/\/(?:www\.)?google\.com\/maps\/d\//.test(url)){
-    slot.innerHTML=`<p class="map-caption map-open"><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/d/viewer?mid=${encodeURIComponent(m[1])}">↗ Ouvrir ma carte complète dans Google Maps</a></p><iframe title="Carte personnelle Google My Maps des aéroports" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen src="https://www.google.com/maps/d/embed?mid=${encodeURIComponent(m[1])}&ehbc=2E312F"></iframe><p class="map-caption"><a target="_blank" rel="noopener noreferrer" href="${esc(url)}">Si la carte ne se charge pas dans Safari, utilise le lien ci-dessus pour la consulter directement.</p>`;
+    slot.innerHTML=`<p class="map-caption map-open"><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/d/viewer?mid=${encodeURIComponent(m[1])}">↗ Ouvrir ma carte complète dans Google Maps</a></p><iframe title="Carte personnelle Google My Maps des aéroports" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen src="https://www.google.com/maps/d/embed?mid=${encodeURIComponent(m[1])}&ehbc=2E312F"></iframe><p class="map-caption">Si la carte ne se charge pas dans Safari, utilise le lien ci-dessus pour la consulter directement.</p>`;
   }else{
     slot.innerHTML='<div class="map-placeholder"><strong>Ta carte Google My Maps</strong><p>Emplacement prêt. Il manque uniquement le lien de partage de ta carte pour afficher tes aéroports ici.</p><a href="https://www.google.com/maps/d/" target="_blank" rel="noopener noreferrer">Accéder à Google My Maps ↗</a></div>';
   }
