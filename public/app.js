@@ -57,14 +57,18 @@ function topicInfo(a){
   if(/\bfenix\b|\ba32x\b|\bcids\b/.test(s))return ['FX','fenix','Fenix'];
   if(/\bwinctrl\b|\bwinwing\b|\bsimapppro\b/.test(s))return ['WC','winctrl','WINCTRL'];
   if(/\bgsx\b/.test(s))return ['GSX','gsx','GSX'];
-  if(/\bfshud\b|\batc\b/.test(s))return ['ATC','atc','ATC'];
+  if(/\bnavigraph\b/.test(s))return ['NAV','navigraph','Navigraph'];
+  if(/\bfshud\b/.test(s))return ['ATC','fshud','FSHud'];
+  if(/\bfsl tl\b|\bfsltl\b|\baig\b/.test(s))return ['AI','traffic','Trafic IA'];
+  if(/\bsantiluib3\b|\bs3\b/.test(s))return ['S3','s3','Modules S3'];
+  if(/\batc\b/.test(s))return ['ATC','atc','ATC'];
   if(/\bm[eé]t[eé]o\b|\bmetar\b|\bstratawx\b/.test(s))return ['WX','weather','Météo'];
   if(/\bmsfs\b|\bflight simulator\b|\bsim update\b/.test(s))return ['FS','msfs','MSFS 2024'];
   return ['✈','generic','Actualités aviation'];
 }
 function topicBadge(a){
   const [code,kind,label]=topicInfo(a);
-  return '<span class="topic-icon topic-'+kind+'" title="'+esc(label)+'" aria-label="'+esc(label)+'">'+esc(code)+'</span>';
+  return '<span class="topic-icon topic-'+kind+'" title="'+esc(label)+'" aria-label="'+esc(label)+'"><img src="icons/'+kind+'.svg" width="42" height="42" alt="" decoding="async"></span>';
 }
 function newsMarkup(a){
   return '<article class="news-card"><div class="news-meta">'+esc(a.category||'ACTUALITÉS')+' · '+esc(localDate(a.date))+(a.new?'<span class="new-tag">NEWS</span>':'')+'</div><div class="news-heading">'+topicBadge(a)+'<h3>'+esc(a.title)+'</h3></div>'+(a.summary?'<p>'+esc(a.summary)+'</p>':'')+(a.impact?'<div class="news-impact"><b>Impact / action :</b> '+esc(a.impact)+'</div>':'')+'<div class="news-source"><a href="'+esc(isSafeUrl(a.url))+'" target="_blank" rel="noopener noreferrer">'+esc(a.source||'Source officielle')+' ↗</a></div></article>';
