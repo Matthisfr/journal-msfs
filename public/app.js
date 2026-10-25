@@ -49,6 +49,7 @@ function renderAirports(){
   const duplicateCounts=new Map();
   airports.forEach(a=>{const code=String(a.icao||'').trim().toUpperCase();if(code)duplicateCounts.set(code,(duplicateCounts.get(code)||0)+1)});
   const matches=airports.filter(a=>(!q||[a.icao,a.original,a.name,a.publisher,a.folder,a.country,a.region,a.installed,a.server_version].join(' ').toLowerCase().includes(q))&&(!region||(a.region||a.country)===region)&&(!st||(st==='verified'?isVerified(a):st==='update'?isVerified(a)&&a.version_comparison==='update':st==='duplicates'?(duplicateCounts.get(String(a.icao||'').trim().toUpperCase())||0)>1:a.status===st)));
+  if(airportMap)updateAirportMap(matches);
   $('#airport-count').textContent=`${matches.length} scène${matches.length>1?'s':''} affichée${matches.length>1?'s':''} sur ${airports.length}`;
   const cls={'UNK-P':'p','UNK-V':'v','UNK-C':'c','UNK-S':'s','verified':'ok'};
   $('#airport-body').innerHTML=matches.map(a=>{
@@ -62,6 +63,18 @@ function renderAirports(){
   }).join('')||'<tr><td colspan="5">Aucune scène correspondant à ces filtres.</td></tr>';
 }
 let airportMap=null;
+let airportMapMarkers=[];
+let airportMapCaption=null;
+function updateAirportMap(matches){
+ if(!airportMap)return;
+ const visibleCodes=new Set(matches.map(a=>String(a.icao||'').trim().toUpperCase()));
+ let shown=0;
+ for(const item of airportMapMarkers){
+  if(visibleCodes.has(item.code)){if(!airportMap.hasLayer(item.marker))item.marker.addTo(airportMap);shown++}
+  else if(airportMap.hasLayer(item.marker))airportMap.removeLayer(item.marker);
+ }
+ if(airportMapCaption)airportMapCaption.textContent=shown+' aéroports affichés sur '+airportMapMarkers.length+' géolocalisés · '+matches.length+' scènes filtrées · Vert : à jour · Orange : MAJ disponible · Gris : non vérifié';
+}
 async function renderMap(){
  const slot=$('#google-map');if(!slot||airportMap)return;
  try{
@@ -74,6 +87,7 @@ async function renderMap(){
   const bounds=[];
   const mappedSceneCount=Object.values(groups).reduce((sum,items)=>sum+items.length,0);
   const info=slot.querySelector('.map-caption');
+  airportMapCaption=info;
   if(info)info.textContent=Object.keys(groups).length+' aéroports localisés · '+mappedSceneCount+' scènes · '+(airports.length-mappedSceneCount)+' scènes sans repère autonome (sous-scènes, code non confirmé ou fictif) · Vert : à jour · Orange : MAJ disponible · Gris : non vérifié';
   for(const [code,items] of Object.entries(groups)){
    const valid=a=>a.version_check_state==='verified'&&a.server_version&&a.version_checked_at===String(status.versions_checked_at||'').slice(0,10);
@@ -84,8 +98,10 @@ async function renderMap(){
    const icon=L.divIcon({className:'airport-pin',html:svg,iconSize:[36,46],iconAnchor:[18,44]});
    const details=items.map(a=>'<p><b>'+esc(a.name||a.folder)+'</b><br>'+esc(a.publisher)+' · '+esc(a.installed||'—')+' / '+esc(a.server_version||'inconnue')+'</p>').join('');
    const m=L.marker([data[code].lat,data[code].lon],{icon}).bindPopup('<strong>'+esc(code)+' — '+esc(data[code].name||'')+'</strong>'+details).addTo(airportMap);
+   airportMapMarkers.push({code:String(code).trim().toUpperCase(),marker:m});
    bounds.push(m.getLatLng());
   }
+  updateAirportMap(airports.filter(a=>{const q=$('#airport-search').value.trim().toLowerCase(),region=$('#region-filter').value,st=$('#status-filter').value;const code=String(a.icao||'').trim().toUpperCase();const counts=airports.filter(x=>String(x.icao||'').trim().toUpperCase()===code).length;const verified=!!a.server_version&&a.version_check_state==='verified'&&a.version_checked_at===String(status.versions_checked_at||'').slice(0,10);return (!q||[a.icao,a.original,a.name,a.publisher,a.folder,a.country,a.region,a.installed,a.server_version].join(' ').toLowerCase().includes(q))&&(!region||(a.region||a.country)===region)&&(!st||(st==='duplicates'?counts>1:st==='verified'?verified:st==='update'?verified&&a.version_comparison==='update':a.status===st))}));
   if(bounds.length)airportMap.fitBounds(bounds,{padding:[20,20],maxZoom:7});
   setTimeout(()=>airportMap.invalidateSize(),100);
  }catch(e){slot.textContent='Carte momentanément indisponible : '+e.message}
