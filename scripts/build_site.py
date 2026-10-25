@@ -354,7 +354,7 @@ body{{background:#f5f5f1}}
 <header class="independent-header"><div class="shell">
 <a href="./index.html#aeroports">← Retour au journal</a>
 <h1>Mes {len(airports)} scènes et aéroports</h1>
-<p>Inventaire complet issu d'Export APT 5.xlsx · {len(airports)} scènes · versions installées et vérifications officielles</p>
+<p>Inventaire complet synchronisé depuis le dernier Excel disponible · {len(airports)} scènes · versions installées et vérifications officielles</p>
 </div></header>
 <main class="shell independent-content">
 <p class="standalone-note">Cette page affiche toutes les scènes même si JavaScript est bloqué ou en cache dans Safari.</p>
