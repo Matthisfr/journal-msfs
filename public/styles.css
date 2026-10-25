@@ -196,3 +196,5 @@
 #sayintentions-career .si-flights td:first-child strong{color:#e8b54d}
 #sayintentions-career .si-flight-rules{background:#137f99;color:#eafaff;border-radius:5px;padding:3px 7px;font-size:11px;font-weight:800}
 #sayintentions-career .si-flights>.fineprint{padding:0 16px 13px}
+
+#airport-leaflet-map{height:690px;width:100%;z-index:1}.airport-pin{background:transparent;border:0}.airport-pin svg{filter:drop-shadow(0 2px 3px #0005)}.leaflet-popup-content{max-height:360px;overflow:auto}.leaflet-popup-content p{border-top:1px solid #ddd;padding-top:5px}
