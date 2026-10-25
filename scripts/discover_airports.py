@@ -80,6 +80,8 @@ def airport_code(a):
  m=re.search(r"[A-Z0-9]{4}",icao)
  return m.group(0) if m else ""
 def edition(title):
+ if re.search(r"(?:msfs|fs)\s*(?:20\s*[/&+-]\s*24|24\s*[/&+-]\s*20)",title,re.I):
+  return "2020+2024"
  s=norm(title)
  if any(t in s for t in ("xplane","xpl","xp12","xp11","prepar3d","p3dv","fsxonly")):
   return "other"
