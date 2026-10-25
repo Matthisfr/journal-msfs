@@ -46,7 +46,9 @@ function renderAirports(){
   const unresolved=airports.length-verified.length;
   const diag=$('#airport-diagnostics');
   if(diag)diag.textContent=`À approfondir : ${unresolved} scènes · `+Object.entries(issues).filter(([,n])=>n).map(([label,n])=>`${n} ${label.toLowerCase()}`).join(' · ')+'. Chaque cas est réévalué quotidiennement.';
-  const matches=airports.filter(a=>(!q||[a.icao,a.original,a.name,a.publisher,a.folder,a.country,a.region,a.installed,a.server_version].join(' ').toLowerCase().includes(q))&&(!region||(a.region||a.country)===region)&&(!st||(st==='verified'?isVerified(a):st==='update'?isVerified(a)&&a.version_comparison==='update':a.status===st)));
+  const duplicateCounts=new Map();
+  airports.forEach(a=>{const code=String(a.icao||'').trim().toUpperCase();if(code)duplicateCounts.set(code,(duplicateCounts.get(code)||0)+1)});
+  const matches=airports.filter(a=>(!q||[a.icao,a.original,a.name,a.publisher,a.folder,a.country,a.region,a.installed,a.server_version].join(' ').toLowerCase().includes(q))&&(!region||(a.region||a.country)===region)&&(!st||(st==='verified'?isVerified(a):st==='update'?isVerified(a)&&a.version_comparison==='update':st==='duplicates'?(duplicateCounts.get(String(a.icao||'').trim().toUpperCase())||0)>1:a.status===st)));
   $('#airport-count').textContent=`${matches.length} scène${matches.length>1?'s':''} affichée${matches.length>1?'s':''} sur ${airports.length}`;
   const cls={'UNK-P':'p','UNK-V':'v','UNK-C':'c','UNK-S':'s','verified':'ok'};
   $('#airport-body').innerHTML=matches.map(a=>{
