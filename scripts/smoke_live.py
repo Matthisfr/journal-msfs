@@ -45,6 +45,11 @@ def verify():
     software = json.loads(get("software_versions.json"))
     if software.get("total", 0) < 23 or len(software.get("items", [])) < 23:
         raise AssertionError("Catalogue logiciel quotidien incomplet")
+    if 'id="simbrief-last-flight"' not in index:
+        raise AssertionError("Encart dernier plan de vol absent de la page d'accueil")
+    simbrief = json.loads(get("simbrief_last.json"))
+    if simbrief.get("state") != "ok" or not (simbrief.get("origin") or {}).get("icao") or not (simbrief.get("destination") or {}).get("icao"):
+        raise AssertionError("Dernier plan de vol SimBrief non publié ou incomplet")
     images = json.loads(get("hardware-images.json"))
     if len(images) < 12:
         raise AssertionError("Inventaire photo matériel incomplet")
