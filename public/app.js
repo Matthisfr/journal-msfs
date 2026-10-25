@@ -198,6 +198,16 @@ async function showPublishedSimbrief(){
   '<p class="fineprint">Dernier OFP généré sur SimBrief · collecte '+v(d.retrieved_at)+'. Planification, pas confirmation de vol effectué.</p>';
  }catch(e){el.innerHTML='<p class="fineprint">Dernier OFP non encore disponible. Utilise « Consulter SimBrief » pour essayer une lecture directe.</p>';}
 }
+async function showSayIntentionsCareer(){
+ const el=$('#sayintentions-career-data');if(!el)return;
+ try{
+  const r=await fetch('sayintentions_career.json',{cache:'no-store'});if(!r.ok)throw Error('Unavailable');
+  const d=await r.json();const value=x=>esc(x??'—');
+  if(d.rank==null&&d.flight_hours==null){el.innerHTML='<p class="fineprint">Le profil public est connu, mais les statistiques ne sont pas encore lisibles automatiquement. <a href="https://pilots.sayintentions.ai/u/Mathis" target="_blank" rel="noopener noreferrer">Voir le profil officiel ↗</a></p>';return;}
+  el.innerHTML='<div class="tile-grid"><div><small>GRADE</small><h3>'+value(d.rank)+'</h3></div><div><small>HEURES DE VOL</small><h3>'+value(d.flight_hours)+'</h3></div></div><p class="fineprint">'+(d.state==='ok'?'Données publiques récupérées automatiquement.':'Dernière donnée disponible, actualisation non confirmée.')+' Vérification : '+value(d.verified_at)+'. <a href="https://pilots.sayintentions.ai/u/Mathis" target="_blank" rel="noopener noreferrer">Profil officiel ↗</a></p>';
+ }catch(e){el.innerHTML='<p class="fineprint">Statistiques SayIntentions en attente de première collecte. <a href="https://pilots.sayintentions.ai/u/Mathis" target="_blank" rel="noopener noreferrer">Consulter le profil ↗</a></p>';}
+}
+showSayIntentionsCareer();
 showPublishedSimbrief();
 
 ['airport-search','region-filter','status-filter'].forEach(id=>$('#'+id).addEventListener(id==='airport-search'?'input':'change',renderAirports));['software-search','software-filter'].forEach(id=>{const el=$('#'+id);if(el)el.addEventListener(id==='software-search'?'input':'change',renderSoftware)});init();
