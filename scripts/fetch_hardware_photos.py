@@ -60,7 +60,7 @@ def save_photo(key,url,credit):
     if not ext:raise ValueError("Format non photographique")
     path=DEST/(key+"."+ext)
     path.write_bytes(data)
-    return {"path":"hardware/"+path.name,"state":"photo","source":credit,"origin":url}
+    return {"path":"hardware/"+path.name,"state":"photo","source":credit,"origin":url,"verification":"non_verifiee_visuellement"}
 def run():
     items=json.loads((PUBLIC/"hardware_catalog.json").read_text())
     sources=json.loads((PUBLIC/"hardware_photo_sources.json").read_text()) if (PUBLIC/"hardware_photo_sources.json").exists() else {}
@@ -69,7 +69,7 @@ def run():
         key=x["id"]
         existing=next((DEST/(key+"."+ext) for ext in ("jpg","png","webp") if (DEST/(key+"."+ext)).is_file()),None)
         if existing:
-            manifest[key]={"path":"hardware/"+existing.name,"state":"photo","source":sources.get(key,{}).get("credit","Photographie du produit")}
+            manifest[key]={"path":"hardware/"+existing.name,"state":"photo","source":sources.get(key,{}).get("credit","Photographie du produit"),"verification":"non_verifiee_visuellement"}
             continue
         source=sources.get(key)
         if source:
