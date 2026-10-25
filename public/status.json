@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-25",
-  "last_run": "2026-10-25T21:20:43.912218+00:00",
-  "weather_checked_at": "2026-10-25T21:20:43.912218+00:00",
-  "news_checked_at": "2026-10-25T21:20:43.912218+00:00",
+  "last_run": "2026-10-25T21:43:18.157979+00:00",
+  "weather_checked_at": "2026-10-25T21:43:18.157979+00:00",
+  "news_checked_at": "2026-10-25T21:43:18.157979+00:00",
   "weather": [
     {
       "icao": "KABQ",
@@ -33,8 +33,8 @@
     {
       "icao": "LESO",
       "name": "San Sebastian",
-      "observed_at": "2026-10-25T21:00:00+00:00",
-      "raw": "METAR LESO 252100Z 23005KT 190V280 3000 DZ FEW008 BKN011 OVC016 16/16 Q1024",
+      "observed_at": "2026-10-25T21:30:00+00:00",
+      "raw": "METAR LESO 252130Z AUTO 20004KT 180V280 3500 -RA BR BKN011 OVC018 16/16 Q1023 REDZ",
       "score": 57,
       "summary": "visibilité < 3 SM, précipitations",
       "icon": "🌧️",
@@ -44,30 +44,30 @@
       "taf_raw": "TAF LESO 251700Z 2518/2618 22009KT 9999 BKN035 TX22/2611Z TN15/2606Z PROB40 TEMPO 2518/2524 BKN010 PROB40 TEMPO 2518/2522 3000 RADZ PROB30 TEMPO 2610/2618 02010KT"
     },
     {
-      "icao": "LFBD",
-      "name": "LFBD Bordeaux-Mérignac Airport",
-      "observed_at": "2026-10-25T21:00:00+00:00",
-      "raw": "METAR LFBD 252100Z AUTO VRB02KT 3100 1200 R23/1600U R05/1700N R29/P2300 BR NSC 09/08 Q1023 TEMPO 1000 MIFG",
+      "icao": "LOWI",
+      "name": "LOWI Innsbruck",
+      "observed_at": "2026-10-25T21:20:00+00:00",
+      "raw": "METAR LOWI 252120Z VRB01KT 4700 0550W R08/0550D R26/P2000D BCFG FEW001 06/05 Q1016 TEMPO 8000",
       "score": 45,
       "summary": "visibilité < 3 SM",
-      "icon": "☀️",
-      "phenomenon": "Ciel dégagé",
+      "icon": "🌤️",
+      "phenomenon": "Éclaircies",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF AMD LFBD 251907Z 2519/2624 VRB03KT CAVOK TX21/2614Z TN12/2521Z TEMPO 2519/2602 1000 MIFG BECMG 2603/2605 15010KT BKN010 PROB30 TEMPO 2605/2609 2000 -DZ OVC003 BECMG 2611/2613 VRB03KT SCT030 BECMG 2614/2616 NSC TEMPO 2622/2624 1500 MIFG"
+      "taf_raw": "TAF AMD LOWI 252057Z 2520/2618 27010KT 8000 FEW020 SCT040 BKN060 TX13/2614Z TN05/2607Z PROB40 2520/2522 3000 MIFG BR TEMPO 2522/2602 -SHRA PROB40 TEMPO 2604/2608 VRB02KT 1200 BCFG BKN002 FM260900 VRB05KT 9999 FEW040"
     },
     {
-      "icao": "LOWS",
-      "name": "LOWS Salzburg Airport",
-      "observed_at": "2026-10-25T20:50:00+00:00",
-      "raw": "METAR LOWS 252050Z 26016G26KT 230V300 9999 -SHRA FEW024 BKN050 09/04 Q1016 NOSIG",
-      "score": 34,
-      "summary": "rafales ≥ 25 kt, précipitations",
+      "icao": "ENGM",
+      "name": "Aerosoft Oslo Airport",
+      "observed_at": "2026-10-25T21:20:00+00:00",
+      "raw": "METAR ENGM 252120Z 14012KT 8000 RA BKN008 08/07 Q0976 TEMPO -SHRA BKN012 FEW020CB",
+      "score": 32,
+      "summary": "visibilité < 5 SM, précipitations",
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF AMD LOWS 252055Z 2520/2618 28012KT 9999 SCT040 TX13/2614Z TN06/2604Z TEMPO 2520/2602 27015G25KT SHRA TEMPO 2604/2610 20005KT BECMG 2610/2612 26005KT"
+      "taf_raw": "TAF AMD ENGM 251942Z 2519/2618 12012KT 9999 FEW012 SCT020TCU BKN035 TEMPO 2519/2524 16015G25KT 4000 SHRA BKN008 SCT020CB BECMG 2600/2603 18005KT PROB40 2600/2609 BKN008"
     },
     {
       "icao": "KPDX",
@@ -83,36 +83,10 @@
       "taf_raw": "TAF KPDX 252050Z 2521/2618 12011KT 4SM -RA BR OVC022 FM260000 12009KT P6SM -SHRA SCT020 BKN035 FM261200 15007KT P6SM -SHRA OVC020"
     },
     {
-      "icao": "EDDV",
-      "name": "EDDV Hannover Airport",
-      "observed_at": "2026-10-25T20:50:00+00:00",
-      "raw": "METAR EDDV 252050Z AUTO 24015G26KT 210V270 CAVOK 10/05 Q1004 BECMG 25015KT",
-      "score": 22,
-      "summary": "rafales ≥ 25 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EDDV 251700Z 2518/2618 24015KT 9999 BKN020 PROB40 TEMPO 2518/2523 23020G35KT SHRA BKN015CB TEMPO 2523/2604 24015G25KT SHRA BKN015TCU BECMG 2603/2605 21010KT PROB30 TEMPO 2608/2613 23015G25KT"
-    },
-    {
-      "icao": "LFKF",
-      "name": "LFKF Figari Sud Corse Airport",
-      "observed_at": "2026-10-25T21:00:00+00:00",
-      "raw": "METAR LFKF 252100Z AUTO 28020G30KT 260V320 9999 SCT035 BKN043 BKN052 20/14 Q1014 TEMPO 28025G40KT",
-      "score": 22,
-      "summary": "rafales ≥ 25 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LFKF 251400Z 2515/2615 28015G25KT 9999 BKN040 PROB40 TEMPO 2521/2524 28025G40KT BECMG 2600/2602 27010KT CAVOK BECMG 2604/2606 VRB03KT BECMG 2608/2610 22008KT"
-    },
-    {
       "icao": "DTMB",
       "name": "DTMB Monastir International Airport",
-      "observed_at": "2026-10-25T21:00:00+00:00",
-      "raw": "METAR DTMB 252100Z 31011KT 8000 FEW020 21/14 Q1019",
+      "observed_at": "2026-10-25T21:30:00+00:00",
+      "raw": "METAR DTMB 252130Z 28006KT 260V320 8000 FEW020 21/14 Q1019",
       "score": 20,
       "summary": "visibilité < 5 SM",
       "icon": "🌤️",
@@ -122,17 +96,43 @@
       "taf_raw": "TAF DTMB 251700Z 2518/2618 32015KT 9999 SCT026 PROB40 TEMPO 2610/2618 35020G35KT"
     },
     {
-      "icao": "EDDG",
-      "name": "EDDG MUNSTER OSNABRUCK",
-      "observed_at": "2026-10-25T20:50:00+00:00",
-      "raw": "METAR EDDG 252050Z AUTO 23012KT 200V260 9999 -SHRA FEW///CB 10/04 Q1007 NOSIG",
+      "icao": "EDDH",
+      "name": "sim-wings Hamburg",
+      "observed_at": "2026-10-25T21:20:00+00:00",
+      "raw": "METAR EDDH 252120Z AUTO 24014KT 9999 FEW038 10/06 Q1000 TEMPO 25020G35KT 4500 SHRA BKN020CB",
       "score": 12,
       "summary": "précipitations",
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "Faible contrainte",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EDDG 251700Z 2518/2618 25014G25KT 9999 SCT035 BECMG 2518/2521 22011KT BECMG 2614/2617 16008KT"
+      "taf_raw": "TAF EDDH 251700Z 2518/2624 23020KT 9999 BKN020 TEMPO 2518/2602 23020G35KT SHRA BKN015CB PROB30 TEMPO 2518/2523 4500 TSRA BKN014CB BECMG 2600/2602 23015KT TEMPO 2602/2613 23015G25KT SHRA BKN014TCU BECMG 2614/2616 20010KT TEMPO 2621/2624 RA"
+    },
+    {
+      "icao": "EKVG",
+      "name": "Vagar Airport",
+      "observed_at": "2026-10-25T21:20:00+00:00",
+      "raw": "METAR EKVG 252120Z AUTO 30017KT 9999 DZRA OVC014/// 08/07 Q0980 RMK OVC013/// WIND SKEID 31034G44KT",
+      "score": 12,
+      "summary": "précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "Faible contrainte",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EKVG 251427Z 2515/2521 02012KT 9999 BKN018 TEMPO 2515/2516 02015G25KT RA BKN008 BECMG 2516/2518 32018KT RA BKN006 TEMPO 2518/2521 4000 -RADZ BKN012"
+    },
+    {
+      "icao": "KMSP",
+      "name": "KMSP Minneapolis St. Paul Airport",
+      "observed_at": "2026-10-25T20:53:00+00:00",
+      "raw": "METAR KMSP 252053Z 35007KT 10SM BKN080 OVC095 12/01 A3041 RMK AO2 RAB01E39 SLP303 P0000 60000 T01170011 58006 $",
+      "score": 12,
+      "summary": "précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "Faible contrainte",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KMSP 252059Z 2521/2624 02006KT P6SM BKN050 FM260000 02007KT P6SM FEW030 BKN040 PROB30 2618/2624 5SM -SHRA BKN030"
     }
   ],
   "weather_coverage": {
@@ -269,15 +269,15 @@
     "without_official_url": 5,
     "manual_source": 5,
     "unverified": 36,
-    "audited_at": "2026-10-25T21:20:43.912218+00:00"
+    "audited_at": "2026-10-25T21:43:18.157979+00:00"
   },
-  "versions_checked_at": "2026-10-25T21:20:43.912218+00:00",
-  "releases_checked_at": "2026-10-25T21:20:43.912218+00:00",
+  "versions_checked_at": "2026-10-25T21:43:18.157979+00:00",
+  "releases_checked_at": "2026-10-25T21:43:18.157979+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-25T21:21:15.069701+00:00",
+    "checked_at": "2026-10-25T21:43:47.414543+00:00",
     "unverified": 20
   }
 }
