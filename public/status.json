@@ -1,36 +1,220 @@
 {
   "edition": "2026-10-25",
-  "last_run": null,
-  "weather_checked_at": null,
-  "news_checked_at": null,
-  "weather": [],
+  "last_run": "2026-10-25T08:20:12.155149+00:00",
+  "weather_checked_at": "2026-10-25T08:20:12.155149+00:00",
+  "news_checked_at": "2026-10-25T08:20:12.155149+00:00",
+  "weather": [
+    {
+      "icao": "KBZN",
+      "name": "KBZN Bozeman Yellowstone Airport",
+      "observed_at": "2026-10-25T07:56:00+00:00",
+      "raw": "METAR KBZN 250756Z AUTO 08003KT 1/4SM R12/2000V3000FT FZFG VV001 M03/M03 A3027 RMK AO2 SLP288 I1001 T10281028",
+      "score": 145,
+      "summary": "brouillard, visibilité < 1 SM",
+      "icon": "🌫️",
+      "phenomenon": "Brouillard",
+      "level": "Très dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KBZN 250705Z 2507/2612 VRB04KT P6SM VCFG SCT002 TEMPO 2507/2511 1/2SM FZFG BKN002 FM251100 VRB03KT 1/2SM FZFG BKN002 TEMPO 2514/2517 2SM BR SCT002 FM251700 VRB06KT P6SM SKC"
+    },
+    {
+      "icao": "KDTW",
+      "name": "KDTW Detro Metro Wayne County Airport",
+      "observed_at": "2026-10-25T08:14:00+00:00",
+      "raw": "SPECI KDTW 250814Z 00000KT 1/2SM R03R/2000V2800FT BR BKN003 07/07 A3047 RMK AO2 SFC VIS 1 T00720067",
+      "score": 80,
+      "summary": "visibilité < 1 SM",
+      "icon": "☁️",
+      "phenomenon": "Ciel couvert",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KDTW 250520Z 2506/2612 VRB03KT 2SM BR SCT004 FM250800 VRB03KT 1/4SM FG VV003 FM251300 21005KT 1SM BR SCT003 FM251400 21005KT P6SM BKN250"
+    },
+    {
+      "icao": "KCRW",
+      "name": "KCRW West Virginia International Yeager Airport",
+      "observed_at": "2026-10-25T07:54:00+00:00",
+      "raw": "METAR KCRW 250754Z 05003KT 10SM CLR 06/06 A3045 RMK AO2 SLP307 VLY FG T00610061 $",
+      "score": 65,
+      "summary": "brouillard",
+      "icon": "🌫️",
+      "phenomenon": "Brouillard",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KCRW 250520Z 2506/2606 00000KT P6SM SKC FM251500 13003KT P6SM SKC"
+    },
+    {
+      "icao": "EGCC",
+      "name": "EGCC Manchester International Airport",
+      "observed_at": "2026-10-25T07:50:00+00:00",
+      "raw": "METAR EGCC 250750Z AUTO 25024G35KT 9999 -RA SCT031/// BKN039/// BKN049/// //////CB 10/05 Q0991",
+      "score": 57,
+      "summary": "rafales ≥ 35 kt, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF AMD EGCC 250701Z 2507/2612 27026G39KT 9999 SCT040 TEMPO 2507/2510 7000 SHRA RA PROB30 TEMPO 2507/2510 4000 +SHRA PROB30 TEMPO 2510/2522 7000 SHRA BECMG 2513/2516 27017G29KT BECMG 2521/2524 25012KT BECMG 2600/2603 17009KT BECMG 2609/2612 18015G28KT TEMPO 2609/2612 6000 RA BKN012 PROB30 TEMPO 2610/2612 4000 +RA BKN008"
+    },
+    {
+      "icao": "EKCH",
+      "name": "EKCH Copenhagen Airport",
+      "observed_at": "2026-10-25T07:50:00+00:00",
+      "raw": "METAR EKCH 250750Z 17028G42KT 9999 -RA OVC010 09/08 Q0987 RERA BECMG BKN018",
+      "score": 57,
+      "summary": "rafales ≥ 35 kt, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EKCH 250533Z 2506/2606 20018KT 9999 BKN020 TEMPO 2506/2510 17030G45KT 4000 RA BKN012 TEMPO 2510/2522 22020G30KT SHRA BKN020CB TEMPO 2522/2606 22015G25KT SCT020CB"
+    },
+    {
+      "icao": "LFBD",
+      "name": "LFBD Bordeaux-Mérignac Airport",
+      "observed_at": "2026-10-25T08:00:00+00:00",
+      "raw": "METAR LFBD 250800Z AUTO 23013KT 4400 DZ BR OVC005 15/15 Q1017 TEMPO 24015G25KT 2000 DZ",
+      "score": 57,
+      "summary": "visibilité < 3 SM, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF AMD LFBD 250743Z 2507/2612 24010KT 9999 BKN015 TX18/2511Z TN12/2521Z TEMPO 2507/2510 24015G25KT 2000 DZ OVC004 TEMPO 2510/2514 24015G25KT 3000 RA OVC007 BECMG 2514/2516 33010KT BKN020 PROB40 2600/2611 OVC005"
+    },
+    {
+      "icao": "LFJL",
+      "name": "LFJL Metz-Nancy Lorraine Airport",
+      "observed_at": "2026-10-25T08:00:00+00:00",
+      "raw": "METAR LFJL 250800Z AUTO 21026KT 3200 RA BR BKN006/// OVC035/// ///CB 12/11 Q1000 TEMPO 28025G38KT",
+      "score": 57,
+      "summary": "visibilité < 3 SM, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF LFJL 250515Z 2506/2606 21020KT 8000 -RA FEW008 BKN015 TEMPO 2506/2508 22025G38KT 4000 RADZ BKN008 TEMPO 2508/2510 28025G38KT 3000 RA BKN009 SCT020CB BECMG 2510/2512 26015G25KT NSW TEMPO 2512/2519 30025G40KT 4000 SHRA SCT020CB BECMG 2519/2521 25012KT"
+    },
+    {
+      "icao": "LPPR",
+      "name": "LPPR Porto",
+      "observed_at": "2026-10-25T08:00:00+00:00",
+      "raw": "METAR LPPR 250800Z 10004KT 040V140 4000 -DZ BR FEW008 OVC011 13/12 Q1027",
+      "score": 57,
+      "summary": "visibilité < 3 SM, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF AMD LPPR 250709Z 2507/2606 12005KT 9999 BKN020 TEMPO 2507/2606 3000 BR SCT004 BKN008 BECMG 2511/2513 22010KT BECMG 2518/2520 VRB02KT PROB40 TEMPO 2521/2606 1200 BCFG BR BKN002"
+    },
+    {
+      "icao": "EINN",
+      "name": "EINN Shannon Airport",
+      "observed_at": "2026-10-25T08:00:00+00:00",
+      "raw": "METAR EINN 250800Z 28017G28KT 8000 -SHRA FEW012 FEW018CB SCT034 09/04 Q1003 TEMPO 4000 SHRA",
+      "score": 54,
+      "summary": "visibilité < 5 SM, rafales ≥ 25 kt, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EINN 250500Z 2506/2606 29020G32KT 9999 FEW018 BKN045 TEMPO 2506/2509 28025G42KT 4000 SHRA FEW018CB PROB40 TEMPO 2509/2513 -SHRA FEW018CB BECMG 2513/2515 27015KT TEMPO 2515/2517 27016G26KT BECMG 2517/2519 24010KT BECMG 2519/2521 19008KT BECMG 2600/2602 13012KT -RA TEMPO 2603/2606 14015G25KT 3000 -RADZ BKN008"
+    },
+    {
+      "icao": "EGPF",
+      "name": "EGPF Glasgow Airport",
+      "observed_at": "2026-10-25T07:50:00+00:00",
+      "raw": "METAR EGPF 250750Z AUTO 27027G41KT 9999 BKN036/// BKN046/// //////TCU 10/04 Q0978",
+      "score": 45,
+      "summary": "rafales ≥ 35 kt",
+      "icon": "💨",
+      "phenomenon": "Vent fort",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EGPF 250458Z 2506/2606 27030G45KT 9999 SCT022 TEMPO 2506/2512 3500 +SHRA PROB40 TEMPO 2506/2512 28045G55KT PROB40 TEMPO 2512/2604 7000 SHRA BECMG 2517/2521 25015KT PROB30 TEMPO 2521/2602 25018G30KT"
+    }
+  ],
   "weather_coverage": {
-    "eligible": 0,
-    "received": 0,
-    "fresh": 0
+    "eligible": 153,
+    "received": 150,
+    "fresh": 150
   },
   "news": [
     {
-      "id": "msfs-2024-su71-19210",
-      "title": "MSFS 2024 : Sim Update 7.1 disponible — version 1.9.21.0",
-      "category": "MSFS 2024",
+      "id": "779387",
+      "title": "Release Notes - Microsoft Flight Simulator 2024 Sim Update 7.1 [1.9.21.0]",
+      "category": "MSFS officiel",
       "date": "2026-10-23",
-      "source": "Microsoft Flight Simulator — notes de version officielles",
-      "url": "https://www.flightsimulator.com/su71-release/",
-      "summary": "Cette mise à jour corrige notamment un problème de calcul de traînée du modèle de vol et plusieurs anomalies. Sur PC, l'éditeur conseille de vérifier les anciens packages Community en cas de problème de stabilité.",
-      "impact": "À examiner pour les vols Fenix après passage à SU7.1 ; ne pas confondre la version du simulateur avec celle de Fenix.",
+      "source": "Forum officiel Microsoft Flight Simulator",
+      "url": "https://forums.flightsimulator.com/t/release-notes-microsoft-flight-simulator-2024-sim-update-7-1-1-9-21-0/779387",
+      "summary": "RELEASE NOTES Sim Update 7.1 - 1.9.21.0 If you are playing on PC, outdated packages in your community folder may have an unexpected impact on the title’s performance and behavior. If you suffer from stability issues or long loading…",
+      "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
+      "new": false
+    },
+    {
+      "id": "779510",
+      "title": "[Blog] Weekly Briefing for 2026-10-22",
+      "category": "MSFS officiel",
+      "date": "2026-10-22",
+      "source": "Forum officiel Microsoft Flight Simulator",
+      "url": "https://forums.flightsimulator.com/t/blog-weekly-briefing-for-2026-10-22/779510",
+      "summary": "The latest Weekly Briefing is now available! Read on for information about: Sim Update 7.1 beta info November Developer Livestream Question form Weekly Marketplace releases Screenshot competition winners And more! October 22nd, 2026…",
+      "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
+      "new": false
+    },
+    {
+      "id": "778878",
+      "title": "[Blog] Weekly Briefing for 2026-10-15",
+      "category": "MSFS officiel",
+      "date": "2026-10-15",
+      "source": "Forum officiel Microsoft Flight Simulator",
+      "url": "https://forums.flightsimulator.com/t/blog-weekly-briefing-for-2026-10-15/778878",
+      "summary": "The latest Weekly Briefing is now available! Read on for information about: Sim Update 7 release information National Championship Air Races Pilot Roundtable Screenshot competition winners And more! October 15th, 2026 MSFS Weekly…",
+      "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
+      "new": false
+    },
+    {
+      "id": "778876",
+      "title": "National Championship Air Races Panel Discussion with Five Race Pilots",
+      "category": "MSFS officiel",
+      "date": "2026-10-15",
+      "source": "Forum officiel Microsoft Flight Simulator",
+      "url": "https://forums.flightsimulator.com/t/national-championship-air-races-panel-discussion-with-five-race-pilots/778876",
+      "summary": "Join us this week at 11:00am PDT (1800 UTC) to watch this special conversation about air racing with five of the best race pilots in the word! Tammy Camilleri - Jet Class - Miss Independance Rod Hewitt - STOL Drag Class - Angry Kitten…",
+      "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
+      "new": false
+    },
+    {
+      "id": "778607",
+      "title": "Release Notes - Microsoft Flight Simulator 2024 Sim Update 7 [1.9.18.0]",
+      "category": "MSFS officiel",
+      "date": "2026-10-13",
+      "source": "Forum officiel Microsoft Flight Simulator",
+      "url": "https://forums.flightsimulator.com/t/release-notes-microsoft-flight-simulator-2024-sim-update-7-1-9-18-0/778607",
+      "summary": "RELEASE NOTES Sim Update 7 - 1.9.18.0 If you are playing on PC, outdated packages in your community folder may have an unexpected impact on the title’s performance and behavior. If you suffer from stability issues or long loading times,…",
+      "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
+      "new": false
+    },
+    {
+      "id": "778293",
+      "title": "[Blog] Weekly Briefing for 2026-10-08",
+      "category": "MSFS officiel",
+      "date": "2026-10-08",
+      "source": "Forum officiel Microsoft Flight Simulator",
+      "url": "https://forums.flightsimulator.com/t/blog-weekly-briefing-for-2026-10-08/778293",
+      "summary": "The latest Weekly Briefing is now available! Read on for information about: Airbus Helicopters H125 now available on MSFS (2020) Developer Spotlight: The Art of Carenado Weekly Marketplace releases Screenshot competition winners And…",
+      "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
       "new": false
     }
   ],
   "hardware": [],
   "source_status": {
-    "metar": "non_executed",
-    "taf": "non_executed",
-    "official_news": "non_executed",
+    "metar": "ok",
+    "taf": "ok",
+    "official_news": "ok",
     "airport_versions": "non_verified"
   },
-  "errors": [
-    "Collecte automatique non encore exécutée sur l'hébergement."
-  ],
-  "note": "Édition de lancement. Les données météorologiques et les versions serveur seront affichées seulement après vérification."
+  "errors": [],
+  "note": "METAR et annonces officielles automatisés ; vérification des versions de scènes et veille éditoriale ChatGPT non automatisées."
 }
