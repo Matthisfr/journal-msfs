@@ -3,15 +3,106 @@
   "profile_url": "https://pilots.sayintentions.ai/u/Mathis",
   "username": "Mathis",
   "rank": "Senior 1st Officer",
-  "flight_hours": 57,
-  "ifr_hours": 55,
+  "flight_hours": 59,
+  "ifr_hours": 57,
   "vfr_hours": 2,
-  "total_flights": 37,
-  "airports_visited": 36,
+  "total_flights": 38,
+  "airports_visited": 37,
   "source": "profil public Gate 404 (navigateur Chromium)",
   "rank_badge": null,
-  "recent_flights": [],
-  "flights_checked_at": null,
-  "verified_at": "2026-10-25T14:50:35.049591+00:00",
-  "checked_at": "2026-10-25T14:50:35.049591+00:00"
+  "recent_flights": [
+    {
+      "id": "IFR-883929202",
+      "aircraft": "F-FENX",
+      "when": "9 hours ago",
+      "origin": "LGMK",
+      "destination": "HECA",
+      "rules": "IFR",
+      "duration": "1h 57m"
+    },
+    {
+      "id": "IFR-883907560",
+      "aircraft": "F-FENX",
+      "when": "yesterday",
+      "origin": "DTTJ",
+      "destination": "LGMK",
+      "rules": "IFR",
+      "duration": "2h 15m"
+    },
+    {
+      "id": "IFR-883875244",
+      "aircraft": "F-FENX",
+      "when": "2 days ago",
+      "origin": "DAAG",
+      "destination": "DTTJ",
+      "rules": "IFR",
+      "duration": "1h 36m"
+    },
+    {
+      "id": "IFR-883854493",
+      "aircraft": "F-FENX",
+      "when": "3 days ago",
+      "origin": "GMMX",
+      "destination": "DAAG",
+      "rules": "IFR",
+      "duration": "2h 12m"
+    },
+    {
+      "id": "IFR-883848461",
+      "aircraft": "F-FENX",
+      "when": "3 days ago",
+      "origin": "LPPT",
+      "destination": "GMMX",
+      "rules": "IFR",
+      "duration": "1h 54m"
+    },
+    {
+      "id": "IFR-883826237",
+      "aircraft": "F-FENX",
+      "when": "4 days ago",
+      "origin": "LSGG",
+      "destination": "LPPT",
+      "rules": "IFR",
+      "duration": "3h 18m"
+    },
+    {
+      "id": "IFR-883810326",
+      "aircraft": "F-FENX",
+      "when": "5 days ago",
+      "origin": "LFMN",
+      "destination": "EGLL",
+      "rules": "IFR",
+      "duration": "2h 4m"
+    },
+    {
+      "id": "IFR-883793722",
+      "aircraft": "F-FENX",
+      "when": "6 days ago",
+      "origin": "LFRK",
+      "destination": "LFMN",
+      "rules": "IFR",
+      "duration": "2h 1m"
+    },
+    {
+      "id": "IFR-883790225",
+      "aircraft": "F-FENX",
+      "when": "6 days ago",
+      "origin": "EGLL",
+      "destination": "LFML",
+      "rules": "IFR",
+      "duration": "2h 0m"
+    },
+    {
+      "id": "IFR-883771553",
+      "aircraft": "F-FENX",
+      "when": "1 week ago",
+      "origin": "LOWS",
+      "destination": "LFMN",
+      "rules": "IFR",
+      "duration": "1h 46m"
+    }
+  ],
+  "flights_checked_at": "2026-10-25T15:32:28.839858+00:00",
+  "verified_at": "2026-10-25T15:32:28.839858+00:00",
+  "checked_at": "2026-10-25T15:32:28.839858+00:00"
 }
