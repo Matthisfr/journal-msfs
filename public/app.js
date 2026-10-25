@@ -146,7 +146,7 @@ function renderHardwareGallery(){
       '<div class="overline">'+esc(x.ownership==='Possédé'?'DANS TON COCKPIT':'MATÉRIEL ATTENDU')+'</div>'+
       '<h3>'+esc(x.name)+'</h3>'+
       '<p>'+esc(x.ownership==='Possédé'?'Matériel possédé · suivi SimAppPro et Fenix.':'Sortie, disponibilité et révision à surveiller.')+'</p>'+
-      '<div class="hardware-card-bottom"><span class="flag '+(x.ownership==='Possédé'?'flag-ok':'flag-v')+'">'+esc(x.ownership)+'</span>'+
+      (x.preview_url?'<p><a href="'+esc(isSafeUrl(x.preview_url))+'" target="_blank" rel="noopener noreferrer">Voir les visuels du prototype ↗</a><small>'+esc(x.preview_note||'')+'</small></p>':'')+'<div class="hardware-card-bottom"><span class="flag '+(x.ownership==='Possédé'?'flag-ok':'flag-v')+'">'+esc(x.ownership)+'</span>'+
       '<a href="'+esc(isSafeUrl(x.official_url))+'" target="_blank" rel="noopener noreferrer">WINCTRL ↗</a></div>'+
       (['photo','photo_remote'].includes(photo.state)?'<small class="photo-credit">'+esc(photo.source||'Photo de produit')+'</small>':'')+
       '</article>';
