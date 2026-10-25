@@ -1,6 +1,10 @@
 name: Recherche manuelle des sources des scènes
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/probe_sources.py'
+      - '.github/workflows/source-research.yml'
 permissions:
   contents: read
 jobs:
