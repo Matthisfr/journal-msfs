@@ -730,5 +730,191 @@
     "lon": -66.001801,
     "name": "Luis Munoz Marin International Airport",
     "source": "OurAirports / airport-codes"
+  },
+  "58CA": {
+    "lat": 34.054500579833984,
+    "lon": -118.22899627685547,
+    "name": "Jay Stephen Hooper Memorial Heliport",
+    "source": "OurAirports / airport-codes"
+  },
+  "CYVR": {
+    "lat": 49.193901,
+    "lon": -123.183998,
+    "name": "Vancouver International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KABQ": {
+    "lat": 35.039976,
+    "lon": -106.608925,
+    "name": "Albuquerque International Sunport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KASE": {
+    "lat": 39.223202,
+    "lon": -106.869003,
+    "name": "Aspen-Pitkin County Airport (Sardy Field)",
+    "source": "OurAirports / airport-codes"
+  },
+  "KBOI": {
+    "lat": 43.5644,
+    "lon": -116.223,
+    "name": "Boise Air Terminal/Gowen Field",
+    "source": "OurAirports / airport-codes"
+  },
+  "KBZN": {
+    "lat": 45.778853,
+    "lon": -111.153711,
+    "name": "Bozeman Yellowstone International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KDEN": {
+    "lat": 39.860027,
+    "lon": -104.673792,
+    "name": "Denver International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KDFW": {
+    "lat": 32.896801,
+    "lon": -97.038002,
+    "name": "Dallas Fort Worth International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KFSD": {
+    "lat": 43.585463,
+    "lon": -96.741152,
+    "name": "Sioux Falls Regional Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KIAH": {
+    "lat": 29.9844,
+    "lon": -95.3414,
+    "name": "George Bush Intercontinental Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KICT": {
+    "lat": 37.650314,
+    "lon": -97.428583,
+    "name": "Wichita Dwight D. Eisenhower National Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KJAC": {
+    "lat": 43.6073,
+    "lon": -110.737999,
+    "name": "Jackson Hole Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KJAN": {
+    "lat": 32.311199,
+    "lon": -90.075897,
+    "name": "Jackson-Medgar Wiley Evers International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KLAS": {
+    "lat": 36.083361,
+    "lon": -115.151817,
+    "name": "Harry Reid International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KLAX": {
+    "lat": 33.942501,
+    "lon": -118.407997,
+    "name": "Los Angeles International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KLIT": {
+    "lat": 34.729222,
+    "lon": -92.223591,
+    "name": "Bill & Hillary Clinton National Airport/Adams Field",
+    "source": "OurAirports / airport-codes"
+  },
+  "KMCI": {
+    "lat": 39.301699,
+    "lon": -94.713893,
+    "name": "Kansas City International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KMSP": {
+    "lat": 44.880081,
+    "lon": -93.221741,
+    "name": "Minneapolis–Saint Paul International Airport / Wold–Chamberlain Field",
+    "source": "OurAirports / airport-codes"
+  },
+  "KMSY": {
+    "lat": 29.993401,
+    "lon": -90.264673,
+    "name": "Louis Armstrong New Orleans International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KOKC": {
+    "lat": 35.393388,
+    "lon": -97.598248,
+    "name": "OKC Will Rogers World Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KOMA": {
+    "lat": 41.3032,
+    "lon": -95.894096,
+    "name": "Eppley Airfield",
+    "source": "OurAirports / airport-codes"
+  },
+  "KPDX": {
+    "lat": 45.588699,
+    "lon": -122.598,
+    "name": "Portland International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KPHX": {
+    "lat": 33.435302,
+    "lon": -112.005905,
+    "name": "Phoenix Sky Harbor International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KSEA": {
+    "lat": 47.447943,
+    "lon": -122.310276,
+    "name": "Seattle–Tacoma International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KSFO": {
+    "lat": 37.619806,
+    "lon": -122.374821,
+    "name": "San Francisco International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KSLC": {
+    "lat": 40.78886,
+    "lon": -111.979866,
+    "name": "Salt Lake City International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KTUS": {
+    "lat": 32.115004,
+    "lon": -110.938053,
+    "name": "Tucson International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "PANC": {
+    "lat": 61.179004,
+    "lon": -149.992561,
+    "name": "Ted Stevens Anchorage International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "PHNL": {
+    "lat": 21.318387,
+    "lon": -157.92567,
+    "name": "Daniel K. Inouye International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "ROAH": {
+    "lat": 26.192437,
+    "lon": 127.639804,
+    "name": "Naha International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "YPAD": {
+    "lat": -34.947512,
+    "lon": 138.533393,
+    "name": "Adelaide International Airport",
+    "source": "OurAirports / airport-codes"
   }
 }
