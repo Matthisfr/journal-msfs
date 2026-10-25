@@ -125,7 +125,7 @@ jobs:
           git config user.name "journal-msfs-bot"
           git config user.email "journal-msfs-bot@users.noreply.github.com"
           git add public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/hardware/
-          if [[ -f public/sayintentions-rank.png ]]; then git add public/sayintentions-rank.png; fi
+          if [[ -f public/sayintentions-rank.svg ]]; then git add public/sayintentions-rank.svg; fi
           if ! git diff --cached --quiet; then
             git commit -m "Journal: collecte automatique $(date -u +%Y-%m-%d)"
             if ! git push origin HEAD:main; then
