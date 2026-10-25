@@ -45,8 +45,10 @@
     "source": "Photographie produit — SimRaceShop"
   },
   "acp": {
-    "state": "unpublished",
-    "reason": "Pas de photographie exacte publiée"
+    "path": "hardware/acp.webp",
+    "state": "photo",
+    "source": "Visuel de présentation WINWING ACP32 — FSExpo 2025 / simFlight",
+    "origin": "https://www.simflight.com/wp-content/uploads/2025/06/WinWing_02.webp"
   },
   "ovhd": {
     "state": "unpublished",
