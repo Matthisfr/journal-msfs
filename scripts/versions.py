@@ -23,7 +23,7 @@ ALLOWED = {
     "www.aerosoft.com", "aerosoft.com", "contrail.shop", "inibuilds.com",
     "www.inibuilds.com", "secure.simmarket.com", "orbxdirect.com",
     "glideslope.pro", "www.glideslope.pro", "flightsim.to",
-    "www.flightsim.to", "fsdg-online.com", "www.fsdg-online.com",
+    "www.flightsim.to", "fr.flightsim.to", "fsdg-online.com", "www.fsdg-online.com",
 }
 VERSION = r"([vV]?\d+(?:\.\d+){0,4})"
 LABELS = [
@@ -66,7 +66,7 @@ def parse_version(raw, expected_name=None, store=None, edition=None):
     if store=="orbxdirect.com":
         # Orbx Central a les versions; les pages OrbxDirect ne les publient pas.
         return None
-    if store=="flightsim.to":
+    if store in ("flightsim.to","www.flightsim.to","fr.flightsim.to"):
         match=re.search(r"\bVersion\s+([vV]?\d+(?:\.\d+){1,4})\b",text,re.I)
         return match.group(1).lstrip("vV") if match else None
     if store=="glideslope.pro":
@@ -205,7 +205,7 @@ def update_versions(airports):
         elif a.get("source_scope")=="parent_reference_only":
             state,reason="not_automatable","Sous-scène : la version du produit parent n'est pas la version de ce module"
         elif not url:
-            state,reason="no_source","Aucune fiche officielle du produit exact identifiée"
+            state,reason="no_source",("Catalogue / source de référence disponible, mais aucune version produit actuelle publiée" if a.get("source_catalog_url") else "Aucune fiche officielle du produit exact identifiée")
         elif host not in ALLOWED:
             state,reason="not_automatable","Boutique non prise en charge ou source non fiable"
         else:
@@ -233,7 +233,7 @@ def update_versions(airports):
                 else:
                     version=parse_version(body,store=host,edition=a.get("source_edition"))
                     if not version:
-                        state,reason="no_version","Fiche accessible, mais aucun numéro de version public fiable ou édition ambiguë"
+                        state,reason="no_version",("Version visible uniquement dans Orbx Central (connexion au compte requise)" if host=="orbxdirect.com" else "Fiche accessible, mais aucun numéro de version public fiable ou édition ambiguë")
                     else:
                         a["server_version"]=version
                         a["version_checked_at"]=TODAY
