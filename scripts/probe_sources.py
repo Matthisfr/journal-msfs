@@ -84,3 +84,26 @@ for url in ("https://secure.simmarket.com/search.php?keywords=LFST",
    if m:samples.append((needle,re.sub(r"\\s+"," ",raw[max(0,m.start()-110):m.start()+150])))
   print("OTHER_PROBE",url,"size",len(raw),"title",titles[:1],"links",links,"samples",samples)
  except Exception as e:print("OTHER_PROBE_ERROR",url,type(e).__name__,str(e)[:160])
+
+try:
+ url="https://secure.simmarket.com/default-en.html"
+ req=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0"})
+ with urllib.request.urlopen(req,timeout=15) as resp: raw=resp.read(450000).decode("utf-8",errors="replace")
+ forms=re.findall(r'<form[^>]*>(.*?)</form>',raw,re.I|re.S)
+ for i,form in enumerate(forms):
+  if "search" in form.lower() or "keyword" in form.lower():
+   print("SEARCH_FORM",i,re.sub(r"\\s+"," ",form[:1200]))
+ for m in list(re.finditer(r'(search|keyword|autocomplete)',raw,re.I))[:15]:
+  print("SEARCH_HTML",re.sub(r"\\s+"," ",raw[max(0,m.start()-150):m.start()+240]))
+except Exception as e:print("SEARCH_FORM_ERROR",type(e).__name__,str(e)[:160])
+for url in ("https://www.bing.com/search?q=site%3Asecure.simmarket.com+LFST+FRANCE+VFR",
+            "https://www.google.com/search?q=site%3Asecure.simmarket.com+LFST+FRANCE+VFR",
+            "https://secure.simmarket.com/search?query=LFST",
+            "https://secure.simmarket.com/search?keywords=LFST",
+            "https://secure.simmarket.com/advanced_search_result.php?keywords=LFST"):
+ try:
+  req=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0"})
+  with urllib.request.urlopen(req,timeout=15) as resp: raw=resp.read(300000).decode("utf-8",errors="replace")
+  links=list(dict.fromkeys(re.findall(r'href="([^"]+\.phtml[^"]*)"',raw,re.I)))[:6]
+  print("SEARCH_ENDPOINT",url,resp.status,len(raw),resp.url,links)
+ except Exception as e:print("SEARCH_ENDPOINT_ERROR",url,type(e).__name__,str(e)[:120])
