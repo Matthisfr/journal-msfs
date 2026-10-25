@@ -1,22 +1,9 @@
 {
   "edition": "2026-10-25",
-  "last_run": "2026-10-25T14:23:28.049710+00:00",
-  "weather_checked_at": "2026-10-25T14:23:28.049710+00:00",
-  "news_checked_at": "2026-10-25T14:23:28.049710+00:00",
+  "last_run": "2026-10-25T14:29:57.856788+00:00",
+  "weather_checked_at": "2026-10-25T14:29:57.856788+00:00",
+  "news_checked_at": "2026-10-25T14:29:57.856788+00:00",
   "weather": [
-    {
-      "icao": "KBZN",
-      "name": "KBZN Bozeman Yellowstone Airport",
-      "observed_at": "2026-10-25T14:08:00+00:00",
-      "raw": "SPECI KBZN 251408Z 00000KT 1/2SM R12/1800V2000FT FZFG CLR M06/M06 A3032 RMK AO2 T10611061",
-      "score": 145,
-      "summary": "brouillard, visibilité < 1 SM",
-      "icon": "🌫️",
-      "phenomenon": "Brouillard",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KBZN 251151Z 2512/2618 VRB03KT P6SM SCT004 TEMPO 2512/2516 1/2SM FZFG VV002 FM251600 VRB06KT P6SM SCT120 TEMPO 2611/2615 1SM BR BKN003"
-    },
     {
       "icao": "KJAC",
       "name": "Dreamflight-KJAC",
@@ -67,59 +54,33 @@
       "phenomenon": "Précipitations",
       "level": "Dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF AMD LSZH 251321Z 2513/2618 25015G25KT 6000 FEW014 BKN040 TX14/2514Z TN05/2606Z TX13/2514Z TEMPO 2513/2517 26020G35KT SHRA TEMPO 2513/2516 4000 +SHRA BKN014 FEW030TCU PROB30 TEMPO 2514/2517 27025G45KT BECMG 2517/2520 23007KT BECMG 2523/2602 CAVOK PROB30 2604/2608 7000 MIFG NSC"
+      "taf_raw": "TAF LSZH 251425Z 2515/2621 25015G25KT 6000 FEW014 SCT020 BKN045 TX10/2515Z TN05/2606Z TX13/2614Z TEMPO 2515/2517 27020G35KT SHRA TEMPO 2515/2516 2500 +SHRA BKN014 FEW030TCU PROB30 TEMPO 2515/2517 29025G45KT BECMG 2517/2520 23007KT BECMG 2523/2602 CAVOK PROB30 2604/2608 7000 MIFG NSC"
+    },
+    {
+      "icao": "EGPF",
+      "name": "EGPF Glasgow Airport",
+      "observed_at": "2026-10-25T14:20:00+00:00",
+      "raw": "METAR EGPF 251420Z COR 28030G47KT 9999 VCSH FEW023TCU SCT034 09/03 Q0991",
+      "score": 45,
+      "summary": "rafales ≥ 35 kt",
+      "icon": "💨",
+      "phenomenon": "Vent fort",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EGPF 251059Z 2512/2612 27030G45KT 9999 SCT022 PROB40 TEMPO 2512/2604 7000 SHRA BECMG 2519/2522 25015KT PROB30 TEMPO 2521/2602 25018G30KT TEMPO 2607/2612 4000 RA BKN014"
     },
     {
       "icao": "EGPK",
       "name": "EGPK Prestwick Airport",
-      "observed_at": "2026-10-25T13:50:00+00:00",
-      "raw": "METAR EGPK 251350Z 28036G53KT 9999 -RA FEW021CB BKN029 08/05 Q0992 RESHRA",
-      "score": 57,
-      "summary": "rafales ≥ 35 kt, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "Dégradé",
+      "observed_at": "2026-10-25T14:20:00+00:00",
+      "raw": "METAR EGPK 251420Z 28033G46KT 9999 SCT019CB SCT029 08/03 Q0993 RESHRA",
+      "score": 45,
+      "summary": "rafales ≥ 35 kt",
+      "icon": "💨",
+      "phenomenon": "Vent fort",
+      "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF EGPK 251059Z 2512/2612 28032G45KT 9999 SCT022 PROB40 TEMPO 2512/2520 28038G55KT PROB40 TEMPO 2512/2524 7000 SHRA BECMG 2519/2522 24018G28KT PROB40 TEMPO 2600/2604 7000 SHRA BKN014 BECMG 2601/2604 22012KT TEMPO 2609/2612 5000 SHRA BKN012"
-    },
-    {
-      "icao": "LFSB",
-      "name": "LFSB Basel-Mulhouse-Freiburg EuroAirport",
-      "observed_at": "2026-10-25T12:30:00+00:00",
-      "raw": "METAR LFSB 251230Z AUTO 25026G38KT 9999 SCT035 BKN044 OVC060 17/12 Q1005 TEMPO 2500 +RA SCT025TCU",
-      "score": 57,
-      "summary": "rafales ≥ 35 kt, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LFSB 251100Z 2512/2612 24020G35KT 9999 BKN035 BKN060 TEMPO 2512/2515 4000 RA SCT025TCU PROB40 TEMPO 2513/2515 28025G40KT 2500 +RA BKN010 BECMG 2514/2516 27015G25KT PROB40 TEMPO 2515/2521 -SHRA FEW020TCU BECMG 2518/2520 26010KT BECMG 2601/2604 VRB03KT"
-    },
-    {
-      "icao": "EGCC",
-      "name": "EGCC Manchester International Airport",
-      "observed_at": "2026-10-25T13:50:00+00:00",
-      "raw": "METAR EGCC 251350Z 27025G37KT 9999 VCSH BKN037TCU 11/04 Q1000 RESHRA",
-      "score": 45,
-      "summary": "rafales ≥ 35 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EGCC 251102Z 2512/2618 27026G42KT 9999 SCT035 PROB40 TEMPO 2512/2522 7000 SHRA BECMG 2514/2517 27017G32KT BECMG 2522/2601 25013KT BECMG 2601/2604 17005KT BECMG 2607/2610 16015KT TEMPO 2609/2613 6000 RA BKN012 PROB40 TEMPO 2609/2618 17018G28KT PROB30 TEMPO 2610/2612 4000 +RA BKN008 PROB30 TEMPO 2613/2618 6000 -RADZ BKN010"
-    },
-    {
-      "icao": "EHRD",
-      "name": "EHRD Rotterdam The Hague",
-      "observed_at": "2026-10-25T13:55:00+00:00",
-      "raw": "METAR EHRD 251355Z AUTO 27020G35KT 230V320 9999 SCT042 BKN047 13/05 Q0999 NOSIG",
-      "score": 45,
-      "summary": "rafales ≥ 35 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EHRD 251117Z 2512/2618 27023G34KT 9999 SCT030 BECMG 2523/2602 27018G28KT BECMG 2602/2605 26014KT BECMG 2605/2608 23011KT BECMG 2615/2618 18016KT 6000 -RADZ SCT009 BKN014"
     },
     {
       "icao": "EIDW",
@@ -133,6 +94,45 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF EIDW 251100Z 2512/2612 28020G35KT 9999 SCT033 BKN038 BECMG 2516/2518 27018G28KT BECMG 2518/2520 25012KT BECMG 2520/2522 22010KT BECMG 2602/2604 16010KT PROB30 TEMPO 2606/2612 4000 -RADZ BR BKN010 BECMG 2610/2612 20015G25KT"
+    },
+    {
+      "icao": "KBZN",
+      "name": "KBZN Bozeman Yellowstone Airport",
+      "observed_at": "2026-10-25T14:23:00+00:00",
+      "raw": "SPECI KBZN 251423Z 00000KT 2SM R12/2600V3500FT BCFG CLR M06/M06 A3032 RMK AO2 I1000 T10611061",
+      "score": 45,
+      "summary": "visibilité < 3 SM",
+      "icon": "☀️",
+      "phenomenon": "Ciel dégagé",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KBZN 251151Z 2512/2618 VRB03KT P6SM SCT004 TEMPO 2512/2516 1/2SM FZFG VV002 FM251600 VRB06KT P6SM SCT120 TEMPO 2611/2615 1SM BR BKN003"
+    },
+    {
+      "icao": "ESGG",
+      "name": "ESGG Gothenburg Landvetter",
+      "observed_at": "2026-10-25T14:20:00+00:00",
+      "raw": "METAR ESGG 251420Z 18014G30KT 150V220 9999 -SHRA BKN013CB 10/08 Q0981",
+      "score": 34,
+      "summary": "rafales ≥ 25 kt, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF ESGG 251130Z 2512/2612 16015G25KT 9999 -RA SCT010 BKN020 TEMPO 2512/2513 2500 RA BKN006 TEMPO 2513/2612 4000 SHRA BKN008 BKN020CB PROB40 2515/2519 TS"
+    },
+    {
+      "icao": "LESO",
+      "name": "San Sebastian",
+      "observed_at": "2026-10-25T14:00:00+00:00",
+      "raw": "METAR LESO 251400Z 25012G26KT 200V300 9999 -DZ FEW030 BKN040 20/13 Q1021",
+      "score": 34,
+      "summary": "rafales ≥ 25 kt, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF LESO 251100Z 2512/2612 22009KT 9999 BKN040 TX21/2512Z TN15/2606Z PROB30 TEMPO 2512/2514 25015G25KT PROB30 TEMPO 2512/2522 RA PROB40 TEMPO 2517/2524 BKN010 PROB30 TEMPO 2603/2606 16010KT"
     }
   ],
   "weather_coverage": {
@@ -269,15 +269,15 @@
     "without_official_url": 4,
     "manual_source": 5,
     "unverified": 35,
-    "audited_at": "2026-10-25T14:23:28.049710+00:00"
+    "audited_at": "2026-10-25T14:29:57.856788+00:00"
   },
-  "versions_checked_at": "2026-10-25T14:23:28.049710+00:00",
-  "releases_checked_at": "2026-10-25T14:23:28.049710+00:00",
+  "versions_checked_at": "2026-10-25T14:29:57.856788+00:00",
+  "releases_checked_at": "2026-10-25T14:29:57.856788+00:00",
   "software_coverage": {
     "total": 23,
     "verified": 3,
     "changed": 0,
-    "checked_at": "2026-10-25T14:24:19.066015+00:00",
+    "checked_at": "2026-10-25T14:30:29.972901+00:00",
     "unverified": 20
   }
 }

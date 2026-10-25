@@ -1,14 +1,9 @@
 {
-  "state": "manual_verified",
+  "state": "unparsed",
   "profile_url": "https://pilots.sayintentions.ai/u/Mathis",
   "username": "Mathis",
   "rank": "Senior 1st Officer",
   "flight_hours": 57,
-  "ifr_hours": 55,
-  "vfr_hours": 2,
-  "total_flights": 37,
-  "airports_visited": 36,
-  "source": "capture du profil public fournie le 25 octobre 2026",
   "verified_at": "2026-10-25",
-  "checked_at": "2026-10-25T14:24:21.845665+00:00"
+  "checked_at": "2026-10-25T14:30:31.996901+00:00"
 }
