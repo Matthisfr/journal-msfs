@@ -175,4 +175,17 @@ async function loadSimbriefFlight(){
   finally{button.disabled=false;}
 }
 $('#simbrief-refresh')?.addEventListener('click',loadSimbriefFlight);
+async function showPublishedSimbrief(){
+ const el=$('#simbrief-flight-data');if(!el)return;
+ try{
+  const response=await fetch('simbrief_last.json',{cache:'no-store'});if(!response.ok)throw Error('Not published');
+  const d=await response.json();if(d.state!=='ok'||!d.origin?.icao||!d.destination?.icao)throw Error('No OFP');
+  const v=x=>esc(x||'—');
+  el.innerHTML='<div class="tile-grid"><div><small>🛫 DÉPART</small><h3>'+v(d.origin.icao)+'</h3><p>'+v(d.origin.name)+'</p></div><div><small>🛬 ARRIVÉE</small><h3>'+v(d.destination.icao)+'</h3><p>'+v(d.destination.name)+'</p></div><div><small>✈ APPAREIL</small><h3>'+v(d.aircraft)+'</h3><p>'+v(d.flight_number)+'</p></div></div>'+
+  '<p><b>PLAN DE VOL :</b> '+v(d.route)+'</p><p><b>Altitude :</b> '+v(d.altitude)+' · <b>Temps prévu :</b> '+v(d.enroute_time)+'</p>'+
+  '<p class="fineprint">Dernier OFP généré sur SimBrief · collecte '+v(d.retrieved_at)+'. Planification, pas confirmation de vol effectué.</p>';
+ }catch(e){el.innerHTML='<p class="fineprint">Dernier OFP non encore disponible. Utilise « Consulter SimBrief » pour essayer une lecture directe.</p>';}
+}
+showPublishedSimbrief();
+
 ['airport-search','region-filter','status-filter'].forEach(id=>$('#'+id).addEventListener(id==='airport-search'?'input':'change',renderAirports));['software-search','software-filter'].forEach(id=>{const el=$('#'+id);if(el)el.addEventListener(id==='software-search'?'input':'change',renderSoftware)});init();
