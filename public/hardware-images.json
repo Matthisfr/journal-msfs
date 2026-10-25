@@ -2,52 +2,62 @@
   "fcu": {
     "path": "hardware/fcu.jpg",
     "state": "photo",
-    "source": "Photographie produit — Shopee"
+    "source": "Photographie produit — Shopee",
+    "verification": "non_verifiee_visuellement"
   },
   "efis": {
     "path": "hardware/efis.jpg",
     "state": "photo",
-    "source": "Photographie produit — Carousell"
+    "source": "Photographie produit — Carousell",
+    "verification": "non_verifiee_visuellement"
   },
   "mcdu": {
     "path": "hardware/mcdu.png",
     "state": "photo",
-    "source": "Photographie WINWING MCDU (gamme de trois CDU) — FSNews"
+    "source": "Photographie WINWING MCDU (gamme de trois CDU) — FSNews",
+    "verification": "non_verifiee_visuellement"
   },
   "nws": {
     "path": "hardware/nws.png",
     "state": "photo",
-    "source": "Photographie promotionnelle WINWING — simFlight"
+    "source": "Photographie promotionnelle WINWING — simFlight",
+    "verification": "non_verifiee_visuellement"
   },
   "rmp": {
     "path": "hardware/rmp.jpg",
     "state": "photo",
-    "source": "Visuel produit WINCTRL officiel — X"
+    "source": "Visuel produit WINCTRL officiel — X",
+    "verification": "non_verifiee_visuellement"
   },
   "tcas": {
     "path": "hardware/tcas.png",
     "state": "photo",
-    "source": "Photographie produit — JVTech"
+    "source": "Photographie produit — JVTech",
+    "verification": "non_verifiee_visuellement"
   },
   "throttle": {
     "path": "hardware/throttle.jpg",
     "state": "photo",
-    "source": "Photographie promotionnelle WINWING — simFlight"
+    "source": "Photographie promotionnelle WINWING — simFlight",
+    "verification": "non_verifiee_visuellement"
   },
   "pac": {
     "path": "hardware/pac.webp",
     "state": "photo",
-    "source": "Photographie produit — SimRaceShop"
+    "source": "Photographie produit — SimRaceShop",
+    "verification": "non_verifiee_visuellement"
   },
   "pedals": {
     "path": "hardware/pedals.webp",
     "state": "photo",
-    "source": "Photographie produit — SimRaceShop"
+    "source": "Photographie produit — SimRaceShop",
+    "verification": "non_verifiee_visuellement"
   },
   "acp": {
     "path": "hardware/acp.webp",
     "state": "photo",
-    "source": "Visuel de présentation WINWING ACP32 — FSExpo 2025 / simFlight"
+    "source": "Visuel de présentation WINWING ACP32 — FSExpo 2025 / simFlight",
+    "verification": "non_verifiee_visuellement"
   },
   "ovhd": {
     "state": "unpublished",
@@ -56,6 +66,7 @@
   "agp": {
     "path": "hardware/agp.jpg",
     "state": "photo",
-    "source": "Photographie produit — The Onion Shop"
+    "source": "Photographie produit — The Onion Shop",
+    "verification": "non_verifiee_visuellement"
   }
 }
