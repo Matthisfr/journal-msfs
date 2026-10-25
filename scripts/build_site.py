@@ -68,6 +68,8 @@ def render_rows(airports):
         else:
             state = str(a.get("status") or "UNK-V")
             status = f'<span class="flag flag-{cls.get(state, "v")}">{h(state)}</span>{source}'
+        if a.get("source_note"):
+            status += f'<small class="source-note">{h(a["source_note"])}</small>'
         out.append(
             f'<tr><td>{code}</td><td>{name}</td><td>{h(a.get("publisher") or "")}</td>'
             f'<td><b>{installed}</b></td><td>{status}</td></tr>'
@@ -120,6 +122,18 @@ def render_airport_digest(airports):
                 f'<small>{h(a.get("publisher") or "")} · Installée {h(a.get("installed") or "?")} '
                 f'→ Source {h(a.get("server_version") or "?")} · {source}</small></span></li>')
         (updates if label == "MISE À JOUR" else editions).append(line)
+    for a in airports:
+        if not a.get("new_edition_version") or not a.get("source_url"):
+            continue
+        editions.append(
+            f'<li><span class="airport-update-code">{h(a.get("icao") or "")}</span>'
+            f'<span><strong>{h(a.get("name") or "")} — édition MSFS 2024 distincte</strong>'
+            f'<small>Installée {h(a.get("installed") or "?")} · Nouvelle édition '
+            f'{h(a["new_edition_version"])} · '
+            f'<a href="{h(a["source_url"])}" target="_blank" rel="noopener noreferrer">'
+            f'{h(a.get("source_store") or "Éditeur")} ↗</a></small>'
+            f'<small>{h(a.get("source_note") or "")}</small></span></li>'
+        )
     checked = sum(a.get("version_check_state") == "verified" and a.get("version_checked_at") == today
                   for a in airports)
     body = ('<div class="airport-update-head"><div class="overline">BILAN QUOTIDIEN DES VERSIONS</div>'
