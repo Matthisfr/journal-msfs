@@ -211,21 +211,9 @@ def run():
     try:
         from versions import update_versions
         coverage,version_errors=update_versions(airports)
-        from versions import PRODUCTS
-        for a in airports:
-            a['last_audited_at']=NOW.isoformat()
-            if a.get('folder') in PRODUCTS and str(a.get('source_url') or '').startswith('https://www.aerosoft.com/'):
-                continue
-            if a.get('version_check_state')=='verified' and a.get('version_checked_at')==NOW.date().isoformat():
-                continue
-            if not a.get('source_url'):
-                a['version_check_state']='no_source'
-                a['version_check_reason']='Fiche exacte non encore trouvée dans les catalogues contrôlés'
-                a['status']='UNK-P'
-            else:
-                a['version_check_state']='unavailable'
-                a['version_check_reason']=a.get('version_check_reason') or 'Fiche connue, version non confirmée aujourd’hui'
-                a['status']='UNK-V'
+        # Chaque scène a été auditée par versions.update_versions(), avec
+        # statut précis : vérifiée, non publiée, source bloquée ou édition
+        # incompatible. Ne jamais écraser ces résultats par un UNKNOWN générique.
         from versions import is_newer as compare_versions
         verified=sum(a.get('version_check_state')=='verified' and a.get('version_checked_at')==NOW.date().isoformat() for a in airports)
         coverage.update({
@@ -235,7 +223,9 @@ def run():
             'manual_source':sum(a.get('version_check_state')=='not_automatable' for a in airports),
             'unverified':len(airports)-verified,
             'verified_today':verified,
-            'updates_confirmed':sum(a.get('version_check_state')=='verified' and a.get('version_checked_at')==NOW.date().isoformat() and a.get('server_version') and compare_versions(a.get('installed'),a.get('server_version')) for a in airports),
+            'updates_confirmed':sum(a.get('version_check_state')=='verified'
+                and a.get('version_checked_at')==NOW.date().isoformat()
+                and compare_versions(a.get('installed'),a.get('server_version')) for a in airports),
             'audited_at':NOW.isoformat(),
         })
         status['version_coverage']=coverage
