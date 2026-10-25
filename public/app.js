@@ -5,7 +5,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const isSafeUrl=u=>{try{const x=new URL(u);return ['https:','http:'].includes(x.protocol)?x.href:'#'}catch{return '#'}};
 const localDate=s=>{if(!s)return '—';const d=new Date(s.length===10?s+'T12:00:00Z':s);return isNaN(d)?s:new Intl.DateTimeFormat('fr-FR',{day:'2-digit',month:'short',year:'numeric',timeZone:'Europe/Paris'}).format(d)};
 const localDateTime=s=>{if(!s)return 'Non exécutée';const d=new Date(s);return isNaN(d)?s:new Intl.DateTimeFormat('fr-FR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit',timeZone:'Europe/Paris'}).format(d)};
-let airports=[], status={}, editorial={};
+let airports=[], status={}, editorial={}, software={items:[]}, hardware=[], hardwareImages={};
 const brandLogos=(()=>{try{return JSON.parse(document.getElementById('brand-manifest')?.textContent||'{}')}catch{return {}}})();
 function brandIcon(kind,label){
   const source=brandLogos[kind]?.path||'icons/'+kind+'.svg';
@@ -102,6 +102,48 @@ function renderNews(){
     .sort((x,y)=>String(y.date||'').localeCompare(String(x.date||'')));
   $('#news-container').innerHTML=a.length?a.map(newsMarkup).join(''):'<div class="empty"><strong>Aucune nouveauté vérifiée</strong>Le site ne publie pas d’annonce sans date ni source vérifiable.</div>';
   $('#home-news').innerHTML=a.slice(0,3).map(x=>'<article><div class="home-news-row">'+topicBadge(x)+'<div class="home-news-content"><small>'+esc(x.category||'Actualités')+' · '+esc(localDate(x.date))+'</small><strong>'+esc(x.title)+'</strong><a href="'+esc(isSafeUrl(x.url))+'" target="_blank" rel="noopener noreferrer">Source officielle ↗</a></div></div></article>').join('')||'<p class="muted">Aucune actualité sourcée pour le moment.</p>';
+}
+
+function renderSoftware(){
+  const items=software.items||[],q=($('#software-search')?.value||'').trim().toLowerCase(),filter=$('#software-filter')?.value||'';
+  const changed=items.filter(x=>x.state==='changed').length,verified=items.filter(x=>x.state==='verified'||x.state==='changed').length;
+  const overview=$('#software-overview');
+  if(overview)overview.innerHTML='<strong>'+items.length+' logiciels suivis</strong><span>'+verified+' versions confirmées · '+changed+' changements · '+(items.length-verified)+' non confirmées</span><small>Contrôle : '+esc(localDateTime(software.checked_at))+'</small>';
+  const nav=$('#software-nav-news');if(nav){nav.hidden=!changed;nav.textContent=changed?'NEWS '+changed:'NEWS'}
+  const selected=items.filter(x=>(!q||[x.name,x.group,x.version,x.reason].join(' ').toLowerCase().includes(q))&&(!filter||(filter==='changed'?x.state==='changed':filter==='verified'?['verified','changed'].includes(x.state):!['verified','changed'].includes(x.state))));
+  const body=$('#software-body');if(!body)return;
+  body.innerHTML=selected.map(x=>{
+    const ok=['verified','changed'].includes(x.state),fresh=x.state==='changed';
+    const tag=fresh?'<span class="new-tag">NEWS</span>':ok?'<span class="flag flag-ok">VÉRIFIÉ</span>':'<span class="flag flag-v">UNKNOWN</span>';
+    const preview=x.preview_version?'<small>Préversion : '+esc(x.preview_version)+'</small>':'';
+    const last=x.previous_version?'<small>Précédente : '+esc(x.previous_version)+'</small>':'';
+    return '<tr><td><strong>'+esc(x.name)+'</strong><small>'+esc(x.group)+'</small></td>'+
+      '<td><strong>'+esc(x.version||'Non publiée')+'</strong>'+preview+'</td>'+
+      '<td>'+tag+last+'<small>'+esc(x.reason||'')+'</small></td>'+
+      '<td><a href="'+esc(isSafeUrl(x.version_url||x.source_url))+'" target="_blank" rel="noopener noreferrer">Source officielle ↗</a>'+
+      (fresh?'<small>Changelog complet dans <a href="#nouveautes" data-software-news="1">Nouveautés</a></small>':'')+
+      '<small>Contrôle : '+esc(localDateTime(x.checked_at))+'</small></td></tr>';
+  }).join('')||'<tr><td colspan="4">Aucun logiciel correspondant.</td></tr>';
+  $('[data-software-news]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();switchView('nouveautes')}));
+}
+function renderHardwareGallery(){
+  const el=$('#hardware-gallery');if(!el)return;
+  el.innerHTML=hardware.map(x=>{
+    const photo=hardwareImages[x.id]||{};
+    const picture=photo.state==='photo'&&photo.path?
+      '<img class="hardware-photo" loading="lazy" decoding="async" src="'+esc(photo.path)+'" alt="Photographie du matériel '+esc(x.name)+'" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.hidden=false">'+
+      '<span class="hardware-no-photo" hidden>Photographie momentanément indisponible</span>':
+      '<span class="hardware-no-photo">Photo produit non disponible</span>';
+    return '<article class="hardware-card hardware-device">'+
+      '<div class="hardware-image">'+picture+'</div>'+
+      '<div class="overline">'+esc(x.ownership==='Possédé'?'DANS TON COCKPIT':'MATÉRIEL ATTENDU')+'</div>'+
+      '<h3>'+esc(x.name)+'</h3>'+
+      '<p>'+esc(x.ownership==='Possédé'?'Matériel possédé · suivi SimAppPro et Fenix.':'Sortie, disponibilité et révision à surveiller.')+'</p>'+
+      '<div class="hardware-card-bottom"><span class="flag '+(x.ownership==='Possédé'?'flag-ok':'flag-v')+'">'+esc(x.ownership)+'</span>'+
+      '<a href="'+esc(isSafeUrl(x.official_url))+'" target="_blank" rel="noopener noreferrer">WINCTRL ↗</a></div>'+
+      (photo.state==='photo'?'<small class="photo-credit">'+esc(photo.source||'Photo de produit')+'</small>':'')+
+      '</article>';
+  }).join('')||'<p>Inventaire matériel indisponible.</p>';
 }
 function renderHardwareNews(){const a=editorial.hardware||[];$('#hardware-news').innerHTML=a.length?'<div class="sectionbar"><h2>Actualités du matériel</h2></div><div class="news-grid">'+a.map(newsMarkup).join('')+'</div>':''}
 function renderStatus(){if(status.edition)$('#edition-date').textContent=new Date(status.edition+'T12:00:00Z').toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric',timeZone:'Europe/Paris'}).toUpperCase();const done=!!status.last_run;const dateTime=new Intl.DateTimeFormat('fr-FR',{day:'2-digit',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit',timeZone:'Europe/Paris'});$('#home-updated').textContent=done?'Le '+dateTime.format(new Date(status.last_run)):'En attente de la première collecte';$('#home-editorial-updated').textContent=editorial.last_updated?localDate(editorial.last_updated):'Non actualisées';$('#last-check').textContent=done?'Collecte : '+localDateTime(status.last_run):'Données de lancement · non actualisées';$('#sync-label').textContent=done?'DERNIÈRE COLLECTE : '+localDateTime(status.last_run):'COLLECTE AUTOMATIQUE NON ENCORE EXÉCUTÉE';$('#dashboard-timestamp').textContent=done?'Dernier passage : '+localDateTime(status.last_run):'Édition de lancement';$('#run-state').textContent=done?'Collecte exécutée':'Automatisation non encore exécutée';$('#run-detail').textContent=done?'Voir le détail des sources ci-dessous.':'La collecte doit être activée après publication sur GitHub.';$('#status-dot').classList.toggle('good',done&&status.source_status?.metar==='ok');$('#footer-updated').textContent=done?'Dernière collecte : '+localDateTime(status.last_run):'Publication et automatisation non encore activées';const src=status.source_status||{};const parts=[['Météo METAR',src.metar],['Prévisions TAF',src.taf],['Actualités officielles',src.official_news],['Versions des scènes',airports.some(a=>a.server_version)?'partial':src.airport_versions],['Éditorial ChatGPT',editorial.last_updated?'ok':'non_executed']];$('#source-health').innerHTML=parts.map(([name,s])=>`<div class="health ${s==='ok'?'ok':''}"><strong>${esc(name)}</strong><span>${s==='ok'?'Collecte réussie':s==='non_verified'?'Non vérifiées':s==='error'?'Échec de collecte':s==='partial'?'Partiellement vérifiées':'En attente'}</span></div>`).join('')}
