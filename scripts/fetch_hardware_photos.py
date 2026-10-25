@@ -52,31 +52,45 @@ def match_image(page,keywords):
             candidates.append((len(alt),url,alt))
     candidates.sort(reverse=True)
     return candidates[0][1] if candidates else None
+def save_photo(key,url,credit):
+    data,typ=fetch(url)
+    if not 2000<len(data)<2_500_000:raise ValueError("Photo vide ou trop grande")
+    ext=("jpg" if data[:3]==b"\xff\xd8\xff" else "png" if data.startswith(b"\x89PNG\r\n\x1a\n")
+         else "webp" if data[:4]==b"RIFF" and data[8:12]==b"WEBP" else "")
+    if not ext:raise ValueError("Format non photographique")
+    path=DEST/(key+"."+ext)
+    path.write_bytes(data)
+    return {"path":"hardware/"+path.name,"state":"photo","source":credit,"origin":url}
 def run():
     items=json.loads((PUBLIC/"hardware_catalog.json").read_text())
+    sources=json.loads((PUBLIC/"hardware_photo_sources.json").read_text()) if (PUBLIC/"hardware_photo_sources.json").exists() else {}
     manifest={}
     for x in items:
-        key=x["id"];existing=next((DEST/(key+"."+ext) for ext in ("jpg","png","webp") if (DEST/(key+"."+ext)).is_file()),None)
+        key=x["id"]
+        existing=next((DEST/(key+"."+ext) for ext in ("jpg","png","webp") if (DEST/(key+"."+ext)).is_file()),None)
         if existing:
-            manifest[key]={"path":"hardware/"+existing.name,"state":"photo","source":"Photographie de produit — winwingturkiye.com"}
+            manifest[key]={"path":"hardware/"+existing.name,"state":"photo","source":sources.get(key,{}).get("credit","Photographie du produit")}
             continue
-        queries=[x["image_query"],x["name"]]
+        source=sources.get(key)
+        if source:
+            try:
+                manifest[key]=save_photo(key,source["url"],source["credit"])
+                continue
+            except Exception as exc:
+                print("Photo référencée inaccessible",key,type(exc).__name__,str(exc)[:90])
+        # Never invent pictures for unannounced/unreleased devices.
+        if x["ownership"]=="Attendu" and not source:
+            manifest[key]={"state":"unpublished","reason":"Pas de photographie exacte publiée"}
+            continue
         try:
-            for query in queries:
-                url=SOURCE+"?"+urllib.parse.urlencode({"s":query,"post_type":"product"})
-                page,typ=fetch(url)
-                src=match_image(page.decode("utf-8","replace"),ALIASES[key])
-                if not src:continue
-                data,typ=fetch(src)
-                if not 2000<len(data)<2_500_000:continue
-                ext=("jpg" if data[:3]==b"\xff\xd8\xff" else "png" if data.startswith(b"\x89PNG\r\n\x1a\n") else "webp" if data[:4]==b"RIFF" and data[8:12]==b"WEBP" else "")
-                if not ext:continue
-                path=DEST/(key+"."+ext);path.write_bytes(data)
-                manifest[key]={"path":"hardware/"+path.name,"state":"photo",
-                               "source":"Photographie de produit — winwingturkiye.com","origin":src}
-                break
-            else:
-                manifest[key]={"state":"unpublished","reason":"Photographie produit exacte non trouvée sur les pages publiques du revendeur"}
+            query=x["image_query"]
+            url=SOURCE+"?"+urllib.parse.urlencode({"s":query,"post_type":"product"})
+            page,typ=fetch(url)
+            src=match_image(page.decode("utf-8","replace"),ALIASES[key])
+            if src:
+                manifest[key]=save_photo(key,src,"Photographie produit — winwingturkiye.com")
+                continue
+            manifest[key]={"state":"unpublished","reason":"Photo exacte non trouvée sur la fiche"}
         except Exception as exc:
             manifest[key]={"state":"unavailable","reason":type(exc).__name__+" : "+str(exc)[:90]}
     (PUBLIC/"hardware-images.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+"\n")
