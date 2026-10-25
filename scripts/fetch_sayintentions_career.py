@@ -69,24 +69,30 @@ def run():
             # Le badge doit être une image proche du nom/grade dans le profil.
             # Ne pas prendre la photo du pilote ni le badge d'identification.
             try:
-                candidates=page.locator("img").evaluate_all("""imgs => imgs.map(i => ({
-                  src:i.currentSrc||i.src, alt:i.alt||'', title:i.title||'',
-                  x:i.getBoundingClientRect().x, y:i.getBoundingClientRect().y,
-                  w:i.getBoundingClientRect().width, h:i.getBoundingClientRect().height
-                }))""")
-                profile=page.get_by_text("Mathis",exact=True).first.bounding_box()
-                eligible=[(i,c) for i,c in enumerate(candidates) if c["w"]>=30 and c["w"]<=110 and c["h"]>=30 and c["h"]<=110 and profile and abs(c["y"]-profile["y"])<100 and c["x"]<profile["x"]]
-                if not eligible:
-                    print("Gate 404: images de la page:",[(c["alt"][:50],c["src"][:110],round(c["x"]),round(c["y"]),round(c["w"]),round(c["h"])) for c in candidates[:18]])
-                if eligible:
-                    idx,c=min(eligible,key=lambda item:abs(item[1]["x"]-profile["x"])+abs(item[1]["y"]-profile["y"]))
-                    image=page.locator("img").nth(idx)
-                    badge_path=ROOT/"public"/"sayintentions-rank.png"
-                    image.screenshot(path=str(badge_path),timeout=5000)
-                    result["rank_badge"]="sayintentions-rank.png"
-                    print("Gate 404: insigne de grade récupéré près du profil")
+                badge=page.locator('img[alt="Senior 1st Officer"]').filter(visible=True).first
+                if badge.count():
+                    src=badge.get_attribute("src") or ""
+                    if src.startswith("/p2d/assets/images/rankings/"):
+                        badge_url="https://pilots.sayintentions.ai"+src
+                    elif src.startswith("https://pilots.sayintentions.ai/p2d/assets/images/rankings/"):
+                        badge_url=src
+                    else:
+                        badge_url=""
+                    if badge_url.endswith(".svg"):
+                        req=urllib.request.Request(badge_url,headers={"User-Agent":"Mozilla/5.0"})
+                        with urllib.request.urlopen(req,timeout=12) as response:
+                            data=response.read(100000)
+                        if b"<svg" in data[:1000]:
+                            badge_path=ROOT/"public"/"sayintentions-rank.svg"
+                            badge_path.write_bytes(data)
+                            result["rank_badge"]="sayintentions-rank.svg"
+                            print("Gate 404: badge SVG officiel téléchargé:",badge_url)
+                        else:
+                            print("Gate 404: SVG inattendu, insigne ignoré")
+                    else:
+                        print("Gate 404: source de badge non autorisée",src[:120])
                 else:
-                    print("Gate 404: insigne de grade non identifié, aucune image substituée")
+                    print("Gate 404: badge officiel non trouvé")
             except Exception as badge_error:
                 print("Gate 404: insigne indisponible:",type(badge_error).__name__)
             try:
