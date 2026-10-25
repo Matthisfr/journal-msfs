@@ -126,6 +126,10 @@ def comparable_parts(installed,online,folder=""):
         if re.fullmatch(r"\d{2}\.\d{1,2}\.\d{1,2}",left):
             yy,mm,dd=map(int,left.split("."))
             left=f"{2000+yy}.{mm}.{dd}"
+        if re.fullmatch(r"20\d{2}\.\d{1,2}\.\d{1,2}",right):
+            yyyy,mm,dd=map(int,right.split("."))
+            if 1<=mm<=12 and 1<=dd<=31:
+                right=f"{yyyy}.{mm}.{dd}"
     # Formats 1.01, 1.03, 1.00 : interpréter comme 1.0.1/1.0.3/1.0.0
     # seulement lorsque le manifeste local possède exactement cette forme.
     if re.fullmatch(r"\d+\.0\d{1,2}",right) and re.fullmatch(r"\d+\.\d+\.\d+",left):
