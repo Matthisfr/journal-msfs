@@ -80,8 +80,8 @@ def run():
                 print("Photo référencée inaccessible depuis GitHub",key,type(exc).__name__,str(exc)[:90])
                 # En dernier recours, laisser le navigateur tenter la photo
                 # réelle du fournisseur, avec onerror visible si refusée.
-                manifest[key]={"path":source["url"],"state":"photo_remote","source":source["credit"],
-                               "reason":"Photo externe : affichage soumis à l'autorisation du fournisseur"}
+                manifest[key]={"state":"unavailable",
+                               "reason":"Photo officielle non récupérable : ne pas afficher un lien externe cassé"}
                 continue
         # Never invent pictures for unannounced/unreleased devices.
         if x["ownership"]=="Attendu" and not source:
