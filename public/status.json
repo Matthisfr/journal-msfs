@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-25",
-  "last_run": "2026-10-25T14:40:46.276067+00:00",
-  "weather_checked_at": "2026-10-25T14:40:46.276067+00:00",
-  "news_checked_at": "2026-10-25T14:40:46.276067+00:00",
+  "last_run": "2026-10-25T14:42:44.987597+00:00",
+  "weather_checked_at": "2026-10-25T14:42:44.987597+00:00",
+  "news_checked_at": "2026-10-25T14:42:44.987597+00:00",
   "weather": [
     {
       "icao": "KJAC",
@@ -96,19 +96,6 @@
       "taf_raw": "TAF EGPK 251059Z 2512/2612 28032G45KT 9999 SCT022 PROB40 TEMPO 2512/2520 28038G55KT PROB40 TEMPO 2512/2524 7000 SHRA BECMG 2519/2522 24018G28KT PROB40 TEMPO 2600/2604 7000 SHRA BKN014 BECMG 2601/2604 22012KT TEMPO 2609/2612 5000 SHRA BKN012"
     },
     {
-      "icao": "KBZN",
-      "name": "KBZN Bozeman Yellowstone Airport",
-      "observed_at": "2026-10-25T14:23:00+00:00",
-      "raw": "SPECI KBZN 251423Z 00000KT 2SM R12/2600V3500FT BCFG CLR M06/M06 A3032 RMK AO2 I1000 T10611061",
-      "score": 45,
-      "summary": "visibilité < 3 SM",
-      "icon": "☀️",
-      "phenomenon": "Ciel dégagé",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KBZN 251151Z 2512/2618 VRB03KT P6SM SCT004 TEMPO 2512/2516 1/2SM FZFG VV002 FM251600 VRB06KT P6SM SCT120 TEMPO 2611/2615 1SM BR BKN003"
-    },
-    {
       "icao": "EIDW",
       "name": "EIDW Dublin International Airport",
       "observed_at": "2026-10-25T14:30:00+00:00",
@@ -133,6 +120,19 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF ESGG 251430Z 2515/2615 16015G25KT 9999 -RA SCT010 BKN020 TEMPO 2515/2612 4000 SHRA BKN008 BKN020CB PROB40 2515/2519 TS"
+    },
+    {
+      "icao": "LFSB",
+      "name": "LFSB Basel-Mulhouse-Freiburg EuroAirport",
+      "observed_at": "2026-10-25T14:30:00+00:00",
+      "raw": "METAR LFSB 251430Z AUTO 30021G32KT 9999 -RA SCT017/// SCT025/// BKN037/// ///TCU 12/09 Q1010 NOSIG",
+      "score": 34,
+      "summary": "rafales ≥ 25 kt, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF LFSB 251100Z 2512/2612 24020G35KT 9999 BKN035 BKN060 TEMPO 2512/2515 4000 RA SCT025TCU PROB40 TEMPO 2513/2515 28025G40KT 2500 +RA BKN010 BECMG 2514/2516 27015G25KT PROB40 TEMPO 2515/2521 -SHRA FEW020TCU BECMG 2518/2520 26010KT BECMG 2601/2604 VRB03KT"
     }
   ],
   "weather_coverage": {
@@ -269,15 +269,15 @@
     "without_official_url": 4,
     "manual_source": 5,
     "unverified": 35,
-    "audited_at": "2026-10-25T14:40:46.276067+00:00"
+    "audited_at": "2026-10-25T14:42:44.987597+00:00"
   },
-  "versions_checked_at": "2026-10-25T14:40:46.276067+00:00",
-  "releases_checked_at": "2026-10-25T14:40:46.276067+00:00",
+  "versions_checked_at": "2026-10-25T14:42:44.987597+00:00",
+  "releases_checked_at": "2026-10-25T14:42:44.987597+00:00",
   "software_coverage": {
     "total": 23,
     "verified": 3,
     "changed": 0,
-    "checked_at": "2026-10-25T14:41:41.456634+00:00",
+    "checked_at": "2026-10-25T14:43:21.290490+00:00",
     "unverified": 20
   }
 }
