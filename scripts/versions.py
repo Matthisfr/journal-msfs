@@ -147,9 +147,9 @@ def comparable_parts(installed,online,folder=""):
     # 1.2 et 1.2.0 sont équivalents, tout comme 2.0 et 2.0.0.
     # Ne jamais convertir 1.01 en 1.1, ni comparer deux branches majeures.
     if len(a)!=len(b):
-        if len(a)==3 and len(b)==2 and not right.split(".")[1].startswith("0"):
+        if len(a)==3 and len(b)==2 and len(right.split(".")[1])==1:
             b=b+(0,)
-        elif len(a)==2 and len(b)==3 and not left.split(".")[1].startswith("0"):
+        elif len(a)==2 and len(b)==3 and len(left.split(".")[1])==1:
             a=a+(0,)
         else:return None,None
     if a[0]!=b[0] and folder not in DATE_SCENES:return None,None
