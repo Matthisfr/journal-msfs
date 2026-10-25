@@ -91,7 +91,7 @@ def run():
   matches=[u for u in links if candidate(a,u)]
   row["simmarket_search_count"]=len(matches)
   if error:row["simmarket_error"]=error
-  for url in matches[:4]:
+  for url in matches[:8]:
    product_to_check[url]=True
  print("SIMMARKET",len(codes),"recherches",len(product_to_check),"fiches candidates",flush=True)
  products={}
@@ -103,7 +103,7 @@ def run():
   a=byfolder[row["folder"]]
   links,_=search.get(airport_code(a),([],None))
   choices=[]
-  for url in [u for u in links if candidate(a,u)][:4]:
+  for url in [u for u in links if candidate(a,u)][:8]:
    p=products.get(url,{})
    if p.get("state")!="verified":continue
    code=airport_code(a)
