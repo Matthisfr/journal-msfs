@@ -69,6 +69,9 @@ for a in airports:
  a["source_store"]=m.get("store","Éditeur")
  a["source_edition"]=m.get("edition","")
  a["source_title"]=a.get("name")
+ a["source_note"]=m.get("note","")
+ if m.get("new_edition_version"):
+  a["new_edition_version"]=m["new_edition_version"]
  a["version_check_state"]="unavailable"
  a["version_check_reason"]=m.get("note","Version à vérifier dans le gestionnaire éditeur")
  a["status"]="UNK-V"
