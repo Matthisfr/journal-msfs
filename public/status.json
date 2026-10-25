@@ -1,14 +1,14 @@
 {
   "edition": "2026-10-25",
-  "last_run": "2026-10-25T21:44:45.007282+00:00",
-  "weather_checked_at": "2026-10-25T21:44:45.007282+00:00",
-  "news_checked_at": "2026-10-25T21:44:45.007282+00:00",
+  "last_run": "2026-10-25T22:06:36.738327+00:00",
+  "weather_checked_at": "2026-10-25T22:06:36.738327+00:00",
+  "news_checked_at": "2026-10-25T22:06:36.738327+00:00",
   "weather": [
     {
       "icao": "KABQ",
       "name": "KABQ Albuquerque International Sunport",
-      "observed_at": "2026-10-25T20:52:00+00:00",
-      "raw": "METAR KABQ 252052Z 17018KT 10SM VCTS SCT065CB BKN200 19/04 A3014 RMK AO2 PK WND 19027/2035 SLP148 OCNL LTGICCG VC W-NW TS VC SW-W MOV NE SHRA DSNT SE AND SW-NW T01940044 56024 $",
+      "observed_at": "2026-10-25T22:02:00+00:00",
+      "raw": "SPECI KABQ 252202Z 28006G15KT 10SM VCTS SCT055CB BKN090 BKN110 18/05 A3015 RMK AO2 TSE2156 OCNL LTGICCG VC W-NW TS VC W-NW MOV NE SHRA VC SW-NE T01780050 $",
       "score": 122,
       "summary": "orage, précipitations",
       "icon": "⛈️",
@@ -18,75 +18,75 @@
       "taf_raw": "TAF KABQ 252059Z 2521/2618 16012G22KT P6SM SCT050 BKN100 TEMPO 2521/2601 VRB18G30KT 6SM -TSRA BKN050CB FM260200 34006KT P6SM SCT060"
     },
     {
-      "icao": "KASE",
-      "name": "KASE Pitkin County Airport",
-      "observed_at": "2026-10-25T20:53:00+00:00",
-      "raw": "METAR KASE 252053Z 35006KT 10SM -RA BKN026 OVC039 07/04 A3023 RMK AO2 LTG DSNT NE RAB21 TSB30E45 SLP182 P0003 60003 T00670044 55009",
-      "score": 122,
-      "summary": "orage, précipitations",
-      "icon": "⛈️",
-      "phenomenon": "Orage",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KASE 251740Z 2518/2618 15007KT P6SM FEW010 BKN060 TEMPO 2518/2522 4SM -SHRA BKN030 FM252200 23006KT P6SM BKN020 BKN050 PROB30 2522/2524 4SM -SHRA OVC012 FM260000 29005KT P6SM -SHRA BKN020 BKN035 FM260300 VRB03KT 3SM -SHRA BKN008 BKN015 FM260900 00000KT P6SM BKN030 BKN050 PROB30 2609/2612 4SM -SHRASN OVC020"
-    },
-    {
-      "icao": "LESO",
-      "name": "San Sebastian",
-      "observed_at": "2026-10-25T21:30:00+00:00",
-      "raw": "METAR LESO 252130Z AUTO 20004KT 180V280 3500 -RA BR BKN011 OVC018 16/16 Q1023 REDZ",
-      "score": 57,
-      "summary": "visibilité < 3 SM, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LESO 251700Z 2518/2618 22009KT 9999 BKN035 TX22/2611Z TN15/2606Z PROB40 TEMPO 2518/2524 BKN010 PROB40 TEMPO 2518/2522 3000 RADZ PROB30 TEMPO 2610/2618 02010KT"
-    },
-    {
       "icao": "LOWI",
       "name": "LOWI Innsbruck",
-      "observed_at": "2026-10-25T21:20:00+00:00",
-      "raw": "METAR LOWI 252120Z VRB01KT 4700 0550W R08/0550D R26/P2000D BCFG FEW001 06/05 Q1016 TEMPO 8000",
+      "observed_at": "2026-10-25T21:50:00+00:00",
+      "raw": "METAR LOWI 252150Z 30003KT 250V360 2300 1300W R08/P2000D R26/P2000D BR FEW001 SCT007 05/04 Q1017 TEMPO 1200 BCFG BKN007",
       "score": 45,
       "summary": "visibilité < 3 SM",
-      "icon": "🌤️",
-      "phenomenon": "Éclaircies",
+      "icon": "☁️",
+      "phenomenon": "Ciel couvert",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF AMD LOWI 252057Z 2520/2618 27010KT 8000 FEW020 SCT040 BKN060 TX13/2614Z TN05/2607Z PROB40 2520/2522 3000 MIFG BR TEMPO 2522/2602 -SHRA PROB40 TEMPO 2604/2608 VRB02KT 1200 BCFG BKN002 FM260900 VRB05KT 9999 FEW040"
     },
     {
-      "icao": "ENGM",
-      "name": "Aerosoft Oslo Airport",
-      "observed_at": "2026-10-25T21:20:00+00:00",
-      "raw": "METAR ENGM 252120Z 14012KT 8000 RA BKN008 08/07 Q0976 TEMPO -SHRA BKN012 FEW020CB",
+      "icao": "LESO",
+      "name": "San Sebastian",
+      "observed_at": "2026-10-25T22:00:00+00:00",
+      "raw": "METAR LESO 252200Z AUTO 21004KT 190V250 4900 2200SW -RA BR BKN014 BKN022 OVC027 16/16 Q1023",
       "score": 32,
       "summary": "visibilité < 5 SM, précipitations",
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF AMD ENGM 251942Z 2519/2618 12012KT 9999 FEW012 SCT020TCU BKN035 TEMPO 2519/2524 16015G25KT 4000 SHRA BKN008 SCT020CB BECMG 2600/2603 18005KT PROB40 2600/2609 BKN008"
+      "taf_raw": "TAF LESO 251700Z 2518/2618 22009KT 9999 BKN035 TX22/2611Z TN15/2606Z PROB40 TEMPO 2518/2524 BKN010 PROB40 TEMPO 2518/2522 3000 RADZ PROB30 TEMPO 2610/2618 02010KT"
     },
     {
-      "icao": "KPDX",
-      "name": "Flightbeam KPDX Next",
-      "observed_at": "2026-10-25T20:53:00+00:00",
-      "raw": "METAR KPDX 252053Z 12013KT 3SM RA BR OVC022 09/08 A2998 RMK AO2 SLP152 P0008 60039 T00890078 58009 $",
+      "icao": "LFKJ",
+      "name": "LFKJ Ajaccio Napoleon Bonaparte Airport",
+      "observed_at": "2026-10-25T22:00:00+00:00",
+      "raw": "METAR LFKJ 252200Z AUTO 04005KT 360V100 7000 -RA BKN026 BKN031 OVC060 16/15 Q1016 TEMPO RADZ",
       "score": 32,
       "summary": "visibilité < 5 SM, précipitations",
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KPDX 252050Z 2521/2618 12011KT 4SM -RA BR OVC022 FM260000 12009KT P6SM -SHRA SCT020 BKN035 FM261200 15007KT P6SM -SHRA OVC020"
+      "taf_raw": "TAF LFKJ 252000Z 2521/2621 05004KT 9999 BKN030 OVC040 PROB40 TEMPO 2521/2601 RADZ BECMG 2610/2612 24010KT CAVOK BECMG 2616/2618 05004KT"
+    },
+    {
+      "icao": "LHBP",
+      "name": "Budapest Airport",
+      "observed_at": "2026-10-25T22:00:00+00:00",
+      "raw": "METAR LHBP 252200Z 19004KT 150V230 8000 -RA NSC 10/08 Q1012 TEMPO TL2230 5000 RA TEMPO FM2230 2500 SHRA SCT020TCU OVC040",
+      "score": 32,
+      "summary": "visibilité < 5 SM, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF LHBP 251715Z 2518/2618 17007KT CAVOK TEMPO 2518/2604 2500 RA SHRA SCT030TCU OVC040 BECMG 2521/2601 25008KT BECMG 2604/2607 31016G26KT SCT030 BECMG 2612/2615 31009KT CAVOK"
+    },
+    {
+      "icao": "EHRD",
+      "name": "EHRD Rotterdam The Hague",
+      "observed_at": "2026-10-25T21:55:00+00:00",
+      "raw": "METAR EHRD 252155Z AUTO 26016G26KT 230V310 9999 FEW045/// 12/04 Q1009 NOSIG",
+      "score": 22,
+      "summary": "rafales ≥ 25 kt",
+      "icon": "💨",
+      "phenomenon": "Vent fort",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EHRD 251707Z 2518/2624 27020G30KT 9999 SCT030 BECMG 2523/2602 27015G25KT BECMG 2602/2605 26014KT BECMG 2605/2608 23011KT BECMG 2615/2618 18015KT SCT008 BKN012 PROB40 TEMPO 2616/2620 6000 -RADZ BECMG 2620/2623 BKN008"
     },
     {
       "icao": "DTMB",
       "name": "DTMB Monastir International Airport",
-      "observed_at": "2026-10-25T21:30:00+00:00",
-      "raw": "METAR DTMB 252130Z 28006KT 260V320 8000 FEW020 21/14 Q1019",
+      "observed_at": "2026-10-25T22:00:00+00:00",
+      "raw": "METAR DTMB 252200Z 31007KT 8000 FEW020 21/14 Q1019",
       "score": 20,
       "summary": "visibilité < 5 SM",
       "icon": "🌤️",
@@ -98,41 +98,41 @@
     {
       "icao": "EDDH",
       "name": "sim-wings Hamburg",
-      "observed_at": "2026-10-25T21:20:00+00:00",
-      "raw": "METAR EDDH 252120Z AUTO 24014KT 9999 FEW038 10/06 Q1000 TEMPO 25020G35KT 4500 SHRA BKN020CB",
+      "observed_at": "2026-10-25T21:50:00+00:00",
+      "raw": "METAR EDDH 252150Z AUTO 25014KT 210V280 9999 FEW035 SCT044 10/05 Q1001 TEMPO 25020G35KT 4500 SHRA BKN020CB",
       "score": 12,
       "summary": "précipitations",
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "Faible contrainte",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EDDH 251700Z 2518/2624 23020KT 9999 BKN020 TEMPO 2518/2602 23020G35KT SHRA BKN015CB PROB30 TEMPO 2518/2523 4500 TSRA BKN014CB BECMG 2600/2602 23015KT TEMPO 2602/2613 23015G25KT SHRA BKN014TCU BECMG 2614/2616 20010KT TEMPO 2621/2624 RA"
+      "taf_raw": "TAF AMD EDDH 252140Z 2521/2624 24020KT 9999 BKN020 BECMG 2521/2524 23015KT TEMPO 2521/2602 23020G35KT SHRA BKN015CB PROB30 TEMPO 2521/2523 4500 TSRA BKN014CB TEMPO 2602/2613 23015G25KT SHRA BKN014TCU BECMG 2614/2616 20010KT TEMPO 2621/2624 RA"
     },
     {
-      "icao": "EKVG",
-      "name": "Vagar Airport",
-      "observed_at": "2026-10-25T21:20:00+00:00",
-      "raw": "METAR EKVG 252120Z AUTO 30017KT 9999 DZRA OVC014/// 08/07 Q0980 RMK OVC013/// WIND SKEID 31034G44KT",
+      "icao": "EDDS",
+      "name": "EDDS Stuttgart Airport",
+      "observed_at": "2026-10-25T21:50:00+00:00",
+      "raw": "METAR EDDS 252150Z AUTO 21005KT 140V290 9999 -SHRA FEW038 FEW///TCU 08/05 Q1016",
       "score": 12,
       "summary": "précipitations",
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "Faible contrainte",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EKVG 251427Z 2515/2521 02012KT 9999 BKN018 TEMPO 2515/2516 02015G25KT RA BKN008 BECMG 2516/2518 32018KT RA BKN006 TEMPO 2518/2521 4000 -RADZ BKN012"
+      "taf_raw": "TAF EDDS 251700Z 2518/2618 23008KT 9999 SCT025"
     },
     {
-      "icao": "KMSP",
-      "name": "KMSP Minneapolis St. Paul Airport",
-      "observed_at": "2026-10-25T20:53:00+00:00",
-      "raw": "METAR KMSP 252053Z 35007KT 10SM BKN080 OVC095 12/01 A3041 RMK AO2 RAB01E39 SLP303 P0000 60000 T01170011 58006 $",
+      "icao": "EKCH",
+      "name": "EKCH Copenhagen Airport",
+      "observed_at": "2026-10-25T21:50:00+00:00",
+      "raw": "METAR EKCH 252150Z 22017KT 9999 -SHRA FEW022CB BKN048 10/08 Q0994 TEMPO 20020G32KT SCT020",
       "score": 12,
       "summary": "précipitations",
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "Faible contrainte",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KMSP 252059Z 2521/2624 02006KT P6SM BKN050 FM260000 02007KT P6SM FEW030 BKN040 PROB30 2618/2624 5SM -SHRA BKN030"
+      "taf_raw": "TAF EKCH 252027Z 2521/2621 21015KT 9999 BKN035 TEMPO 2521/2524 23018G32KT SHRA BKN020CB TEMPO 2600/2612 25015G28KT SCT012CB TEMPO 2618/2621 BKN012TCU"
     }
   ],
   "weather_coverage": {
@@ -269,15 +269,15 @@
     "without_official_url": 5,
     "manual_source": 5,
     "unverified": 36,
-    "audited_at": "2026-10-25T21:44:45.007282+00:00"
+    "audited_at": "2026-10-25T22:06:36.738327+00:00"
   },
-  "versions_checked_at": "2026-10-25T21:44:45.007282+00:00",
-  "releases_checked_at": "2026-10-25T21:44:45.007282+00:00",
+  "versions_checked_at": "2026-10-25T22:06:36.738327+00:00",
+  "releases_checked_at": "2026-10-25T22:06:36.738327+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-25T21:45:13.758956+00:00",
+    "checked_at": "2026-10-25T22:07:07.011303+00:00",
     "unverified": 20
   }
 }
