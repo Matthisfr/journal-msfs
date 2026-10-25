@@ -87,7 +87,30 @@ def news_topic(a):
         return "FS", "msfs"
     return "✈", "generic"
 
-def build_news(status, editorial):
+def brand_icon(kind, manifest):
+    entry = manifest.get(kind, {})
+    path = entry.get("path") or f"icons/{kind}.svg"
+    fallback = f"icons/{kind}.svg"
+    if not (PUBLIC / path).is_file():
+        path = fallback
+    branded = " brand-original" if kind in manifest and path == entry.get("path") else ""
+    return (
+        f'<span class="topic-icon topic-{kind}{branded}" aria-hidden="true">'
+        f'<img src="{h(path)}" width="42" height="42" alt="" decoding="async"'
+        f' onerror="this.onerror=null;this.src=&#39;{h(fallback)}&#39;">'
+        '</span>'
+    )
+
+def static_brand_icons(index, manifest):
+    pattern = r'<span class="topic-icon topic-([a-z0-9-]+)"([^>]*)><img src="icons/[a-z0-9-]+\.svg"[^>]*></span>'
+    def replace(match):
+        kind, attrs = match.groups()
+        img = brand_icon(kind, manifest)
+        # Preserve aria-label and aria-hidden from the source template.
+        return re.sub(r' aria-hidden="true"', attrs if attrs.strip() else ' aria-hidden="true"', img, count=1)
+    return re.sub(pattern, replace, index)
+
+def build_news(status, editorial, manifest):
     editorial_news = editorial.get("news") or []
     superseded = {url for a in editorial_news for url in a.get("supersedes", [])}
     seen = set()
@@ -103,7 +126,7 @@ def build_news(status, editorial):
     homes = []
     for a in news:
         label, kind = news_topic(a)
-        icon = f'<span class="topic-icon topic-{kind}" aria-hidden="true"><img src="icons/{kind}.svg" width="42" height="42" alt="" decoding="async"></span>'
+        icon = brand_icon(kind, manifest)
         title = h(a.get("title") or "")
         date = h(a.get("date") or "")
         category = h(a.get("category") or "ACTUALITÉS")
@@ -139,8 +162,14 @@ def build():
     else:
         home_updated = "En attente de la première collecte"
     editorial_updated = editorial.get("last_updated") or "Non actualisées"
+    manifest_file = PUBLIC / "brand-manifest.json"
+    manifest = json.loads(manifest_file.read_text(encoding="utf-8")) if manifest_file.is_file() else {}
     index = (PUBLIC / "index.html").read_text(encoding="utf-8")
-    cards, home_cards = build_news(status, editorial)
+    index = static_brand_icons(index, manifest)
+    index = index.replace("</body>", '<script type="application/json" id="brand-manifest">' +
+                          json.dumps(manifest, ensure_ascii=False).replace("<", "\\u003c") +
+                          '</script></body>')
+    cards, home_cards = build_news(status, editorial, manifest)
     index = index.replace('<div id="news-container" class="news-grid"></div>',
                           '<div id="news-container" class="news-grid">' + cards + '</div>')
     index = index.replace('<div id="home-news" class="home-news"></div>',
