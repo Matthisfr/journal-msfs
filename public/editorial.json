@@ -1,6 +1,58 @@
 {
-  "last_updated": null,
-  "news": [],
+  "last_updated": "2026-10-25",
+  "news": [
+    {
+      "id": "fenix-v3-20261021",
+      "title": "Fenix A319 / A320 / A321 : la version 3 est disponible",
+      "category": "FENIX",
+      "date": "2026-10-21",
+      "source": "Fenix Simulations — annonce et changelog officiels",
+      "url": "https://fenixsim.com/blog/entries/2026-10-21_v3_update/",
+      "summary": "Mise à jour majeure V3.0.0.7438 : refonte du modèle de vol, du fly-by-wire et du guidage, CIDS et FAP simulés, Virtual Purser, EFB remanié, améliorations FMGS et GSX. Disponible via Fenix Installer pour l’A320 et l’extension A319/A321.",
+      "impact": "Mettre à jour via Fenix Installer. Vérifier les mods, le profil MobiFlight et les annonces cabine ; Fenix signale des incompatibilités possibles avec les anciens mods et un problème de traînée dans SU7.",
+      "new": true,
+      "topic": "FENIX"
+    },
+    {
+      "id": "msfs-su71-20261023",
+      "title": "MSFS 2024 : Sim Update 7.1 (1.9.21.0) publiée",
+      "category": "MSFS 2024",
+      "date": "2026-10-23",
+      "source": "Microsoft Flight Simulator — notes officielles",
+      "url": "https://www.flightsimulator.com/su71-release/",
+      "summary": "Le correctif SU7.1 répare notamment une anomalie de traînée aérodynamique introduite avec SU7, apporte les contre-la-montre NCAR et plusieurs corrections du SDK, dont la SimVar ELECTRICAL BATTERY LOAD.",
+      "impact": "Vérifier que MSFS 2024 est bien en 1.9.21.0 avant d’évaluer le comportement du Fenix V3 ; contrôler les anciens packages Community en cas d’instabilité.",
+      "new": true,
+      "topic": "MSFS",
+      "supersedes": [
+        "https://forums.flightsimulator.com/t/release-notes-microsoft-flight-simulator-2024-sim-update-7-1-1-9-21-0/779387"
+      ]
+    },
+    {
+      "id": "mobiflight-1131-20261007",
+      "title": "MobiFlight 11.3.1 : version stable annoncée",
+      "category": "MOBIFLIGHT",
+      "date": "2026-10-07",
+      "source": "MobiFlight — téléchargement officiel",
+      "url": "https://mobiflight.com/download/",
+      "summary": "Le site officiel indique la version 11.3.1 du 7 octobre. La série 11.3 passe à .NET 10, améliore les performances de l’interface et la gestion des contrôleurs, et ajoute des prises en charge matérielles.",
+      "impact": "Pour ton cockpit, sauvegarder les fichiers .mcc et vérifier les affectations WINCTRL avant mise à niveau. Contrôler les paramètres des modificateurs, susceptibles d’être affectés par le changement de types numériques.",
+      "new": false,
+      "topic": "MF"
+    },
+    {
+      "id": "sayintentions-callouts-20261016",
+      "title": "SayIntentions : documentation actualisée des callouts copilote",
+      "category": "SAYINTENTIONS",
+      "date": "2026-10-16",
+      "source": "SayIntentions.AI — centre d’aide officiel",
+      "url": "https://kb.sayintentions.ai/knowledgebase",
+      "summary": "La documentation officielle décrit les callouts du copilote en préversion, notamment V1, Rotate, Positive rate et les annonces d’approche. La fonction est signalée comme encore en développement.",
+      "impact": "À essayer séparément des checklists V2 et de tes mappings ACP/MobiFlight. Ne pas assimiler cette fonction à une vérification autonome des LVAR du Fenix.",
+      "new": false,
+      "topic": "SI"
+    }
+  ],
   "hardware": [],
-  "note": "Espace éditorial réservé aux analyses ChatGPT après autorisation d'écriture sur le dépôt. Aucune mise à jour ChatGPT automatisée n'est actuellement active."
+  "note": "Édition éditoriale sourcée et vérifiée le 25 octobre 2026. Les dates des annonces sont distinctes de la date de collecte. La veille automatique couvre aussi le flux officiel MSFS ; les autres sources ne sont pas toutes collectées automatiquement."
 }
