@@ -502,13 +502,16 @@
     "installed": "1.0.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-P",
+    "status": "UNK-V",
     "note": "",
-    "source_url": null,
+    "source_url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/4545/aerosoft-airport-dortmund",
     "server_version": null,
     "last_audited_at": "2026-10-25T09:45:41.560209+00:00",
-    "version_check_state": "no_source",
-    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
+    "version_check_state": "pending",
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés",
+    "source_store": "Aerosoft / Pavel Movzer",
+    "source_edition": "2020+2024",
+    "source_match": "Fiche produit exacte retrouvée le 25 octobre 2026"
   },
   {
     "icao": "EFHK",
@@ -3438,15 +3441,17 @@
     "installed": "2.0.2",
     "region": "ASIE",
     "country": "ASIE",
-    "status": "UNK-V",
+    "status": "UNK-C",
     "note": "",
     "source_url": "https://inibuilds.com/products/inibuilds-dubai-omdb-msfs-2024",
     "server_version": null,
     "last_audited_at": "2026-10-25T09:45:41.560209+00:00",
-    "version_check_state": "pending",
+    "version_check_state": "not_automatable",
     "source_store": "iniBuilds / Dubai 2024 bundle",
     "source_edition": "2024",
-    "source_match": "Identité du produit et édition vérifiées par recherche du 25 octobre 2026"
+    "source_match": "Identité du produit et édition vérifiées par recherche du 25 octobre 2026",
+    "source_scope": "parent_reference_only",
+    "version_check_reason": "Version du sous-package OMDU non déductible du bundle OMDB"
   },
   {
     "icao": "OOMS",
@@ -3457,13 +3462,16 @@
     "installed": "1.0.0",
     "region": "AFRIQUE",
     "country": "AFRIQUE",
-    "status": "UNK-P",
+    "status": "UNK-V",
     "note": "",
-    "source_url": null,
+    "source_url": "https://inibuilds.com/products/double-t-muscat-ooms-msfs",
     "server_version": null,
     "last_audited_at": "2026-10-25T09:45:41.560209+00:00",
-    "version_check_state": "no_source",
-    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
+    "version_check_state": "pending",
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés",
+    "source_store": "iniBuilds / Double T",
+    "source_edition": "2020+2024",
+    "source_match": "Fiche produit exacte retrouvée le 25 octobre 2026"
   },
   {
     "icao": "PANC",
