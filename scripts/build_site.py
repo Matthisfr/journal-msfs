@@ -199,7 +199,14 @@ body{{background:#f5f5f1}}
     assert "id=\"home-updated\">Le " in index, "Horodatage accueil absent"
     assert index.count('class="news-card"') >= 4, "Actualités officielles manquantes"
     assert index.count('src="icons/') >= 15, "Pictogrammes graphiques manquants"
-    assert all((PUBLIC / "icons" / (k + ".svg")).is_file() for k in ("si","fenix","mf","winctrl","msfs","airport","weather","s3","generic")), "Un fichier d'icône est absent"
+    import xml.etree.ElementTree as ET
+    icon_keys = ("si", "fenix", "mf", "winctrl", "msfs", "airport", "weather", "s3", "generic", "gsx", "atc", "fshud", "hardware", "navigraph", "traffic")
+    for kind in icon_keys:
+        svg_file = PUBLIC / "icons" / (kind + ".svg")
+        assert svg_file.is_file(), f"Icône absente : {svg_file}"
+        ET.parse(svg_file)  # Valider le SVG pour éviter les pictogrammes blancs dans Safari.
+    for ref in re.findall(r'src="icons/([^"]+\.svg)"', index):
+        assert (PUBLIC / "icons" / ref).is_file(), f"Icône HTML manquante : {ref}"
     assert independent.count("<tr>") >= len(airports), "Page indépendante incomplète"
     print(f"Publication : {len(airports)} scènes HTML statiques + page indépendante ; rev={rev}")
 
