@@ -1,35 +1,23 @@
-name: Recherche de sources des scènes
+name: Recherche manuelle des sources des scènes
 on:
-  push:
-    paths:
-      - 'scripts/probe_sources.py'
-      - 'scripts/discover_airports.py'
-      - '.github/workflows/source-research.yml'
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          persist-credentials: true
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Examiner la recherche simMarket et les versions Orbx
+      - name: Diagnostiquer les sources secondaires
         run: python scripts/probe_sources.py
       - name: Explorer les catalogues et vérifier les fiches produit
         run: python scripts/discover_airports.py
-      - name: Sauvegarder les résultats pour revue
-        run: |
-          git config user.name "journal-msfs-research"
-          git config user.email "journal-msfs-research@users.noreply.github.com"
-          git add public/airport_source_candidates.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Recherche : fiches et versions publiques des 171 scènes"
-            git fetch origin main
-            git -c rebase.autoStash=true rebase origin/main
-            git push origin HEAD:main
-          fi
+      - name: Conserver le rapport de recherche sans modifier la production
+        uses: actions/upload-artifact@v4
+        with:
+          name: airport-sources-research
+          path: public/airport_source_candidates.json
+          retention-days: 7
