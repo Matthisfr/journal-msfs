@@ -1,0 +1,91 @@
+"""Import an airport inventory Excel safely, preserving publisher audits and scene duplicates.
+
+Put the newest .xlsx in data/airports/. The workbook must contain columns for
+airport code, scene name or package folder, and installed version.
+"""
+from __future__ import annotations
+import json, pathlib, re, sys, unicodedata
+ROOT=pathlib.Path(__file__).resolve().parents[1]
+DIR=ROOT/"data"/"airports"
+OUT=ROOT/"public"/"airports.json"
+ALIASES={
+ "icao":{"icao","code","code icao","airport code","airport","code aeroport","aeroport"},
+ "name":{"name","nom","scene","scene name","nom scene","airport name","nom aeroport"},
+ "folder":{"folder","dossier","package","package name","nom dossier","community folder","repertoire"},
+ "installed":{"installed","version","version installee","installed version","version locale","local version"},
+ "publisher":{"publisher","editeur","developer","developpeur","auteur"},
+ "region":{"region","continent","zone","category","categorie"},
+}
+CORRECTIONS={"BCGB":"LXGB","KABK":"KABQ"}
+def norm(value):
+ s=unicodedata.normalize("NFKD",str(value or "")).encode("ascii","ignore").decode().lower()
+ return re.sub(r"[^a-z0-9]+"," ",s).strip()
+def colmap(row):
+ labels=[norm(x) for x in row]
+ return {key:next((i for i,label in enumerate(labels) if label in names),None) for key,names in ALIASES.items()}
+def parse(book):
+ from openpyxl import load_workbook
+ wb=load_workbook(book,read_only=True,data_only=True)
+ records=[]
+ for sheet in wb:
+  rows=sheet.iter_rows(values_only=True)
+  for header in rows:
+   if not any(v is not None for v in header): continue
+   cols=colmap(header)
+   if cols["installed"] is not None and (cols["folder"] is not None or cols["name"] is not None) and cols["icao"] is not None:
+    break
+  else: continue
+  for row in rows:
+   def get(key):
+    idx=cols[key]
+    return str(row[idx]).strip() if idx is not None and idx<len(row) and row[idx] is not None else ""
+   code=get("icao").upper()
+   folder=get("folder")
+   name=get("name")
+   version=get("installed")
+   if not code and not folder and not name: continue
+   if not code or not version or not (folder or name):
+    raise ValueError(f"{sheet.title}: ligne incomplète : ICAO, scène/dossier et version requis")
+   original=code
+   code=CORRECTIONS.get(code,code)
+   if code=="KLVB": continue
+   records.append({"icao":code,"original":original,"name":name or folder,"folder":folder,"installed":version,"publisher":get("publisher"),"region":get("region")})
+ return records
+def merge(records,old):
+ by_folder={norm(a.get("folder")):a for a in old if a.get("folder")}
+ by_identity={(a.get("icao"),norm(a.get("name")),norm(a.get("publisher"))):a for a in old}
+ output=[]
+ seen=set()
+ for rec in records:
+  key=norm(rec["folder"]) if rec["folder"] else (rec["icao"],norm(rec["name"]),norm(rec["publisher"]))
+  if key in seen: raise ValueError(f"Doublon exact de scène dans Excel : {rec['name']}")
+  seen.add(key)
+  previous=by_folder.get(norm(rec["folder"])) if rec["folder"] else None
+  if previous is None: previous=by_identity.get((rec["icao"],norm(rec["name"]),norm(rec["publisher"])))
+  entry=dict(previous or {})
+  entry.update({k:v for k,v in rec.items() if v or k in ("icao","original","installed")})
+  if previous and previous.get("installed")!=entry["installed"]:
+   for field in ("version_checked_at","version_comparison","version_check_state","server_version"):
+    entry.pop(field,None)
+   entry["status"]="UNK-V"
+  entry.setdefault("status","UNK-V")
+  entry.setdefault("country",entry.get("region",""))
+  output.append(entry)
+ return output
+def main():
+ files=sorted(DIR.glob("*.xlsx"),key=lambda p:(p.stat().st_mtime,p.name),reverse=True) if DIR.exists() else []
+ if not files:
+  print("Aucun fichier Excel : inventaire actuel conservé.")
+  return
+ if len(files)>1: raise ValueError("Plusieurs fichiers Excel présents : conserver un seul fichier dans data/airports/")
+ records=parse(files[0])
+ if len(records)<10: raise ValueError(f"Import annulé : seulement {len(records)} scènes (minimum 10)")
+ old=json.loads(OUT.read_text(encoding="utf-8"))
+ result=merge(records,old)
+ OUT.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+ print(f"Excel importé : {files[0].name}, {len(result)} scènes, {len(set(a['icao'] for a in result))} codes")
+if __name__=="__main__":
+ try: main()
+ except Exception as exc:
+  print(f"ERREUR IMPORT EXCEL : {exc}",file=sys.stderr)
+  raise
