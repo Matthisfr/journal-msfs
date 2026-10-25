@@ -1221,7 +1221,9 @@
     "server_version": null,
     "last_audited_at": "2026-10-25T10:23:16.019832+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
+    "version_check_reason": "PacSim : boutique officielle, version non publique",
+    "source_catalog_url": "https://www.islandsim.com/index.html",
+    "source_note": "PacSim : boutique officielle, version non publique"
   },
   {
     "icao": "KCLT",
@@ -1660,13 +1662,15 @@
     "installed": "1.0.2",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-P",
+    "status": "UNK-C",
     "note": "Piste fictive — inventaire uniquement, exclue de la météo",
     "source_url": null,
     "server_version": null,
     "last_audited_at": "2026-10-25T10:23:16.019832+00:00",
-    "version_check_state": "no_source",
-    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
+    "version_check_state": "not_automatable",
+    "version_check_reason": "Piste fictive de Venice Beach : hors contrôle aéroport réel",
+    "source_catalog_url": "https://inibuilds.com/",
+    "source_note": "Piste fictive de Venice Beach : hors contrôle aéroport réel"
   },
   {
     "icao": "KMCI",
@@ -2141,7 +2145,9 @@
     "server_version": null,
     "last_audited_at": "2026-10-25T10:23:16.019832+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
+    "version_check_reason": "PacSim : boutique officielle, KSLC V2 disponible, version précise à confirmer",
+    "source_catalog_url": "https://www.islandsim.com/index.html",
+    "source_note": "PacSim : boutique officielle, KSLC V2 disponible, version précise à confirmer"
   },
   {
     "icao": "KTUS",
@@ -3036,7 +3042,9 @@
     "server_version": null,
     "last_audited_at": "2026-10-25T10:23:16.019832+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
+    "version_check_reason": "Beautiful Model of the World : site officiel, historique de versions contradictoire",
+    "source_catalog_url": "https://beautifulmodelworld.com/",
+    "source_note": "Beautiful Model of the World : site officiel, historique de versions contradictoire"
   },
   {
     "icao": "LIRF",
