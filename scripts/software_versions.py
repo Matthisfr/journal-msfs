@@ -54,6 +54,25 @@ def simapppro_version():
     notes=raw[m.end():matches[1].start() if len(matches)>1 else m.end()+6000].strip()
     if not re.search(r"(?m)^\s*\d+\s*[\.\)]",notes):raise ValueError("Version sans notes")
     return {"version":m.group(1),"url":url,"published_at":None,"notes":notes[:12000]}
+def msfs_official():
+    url="https://www.flightsimulator.com/category/releases/"
+    raw=get(url)
+    # Only official MSFS 2024 release-notes headlines, never beta builds.
+    m=re.search(r"Release Notes[^<]{0,140}Sim Update\s*(\d+(?:\.\d+)?)\s*\[\s*(\d+\.\d+\.\d+\.\d+)\s*\][^<]{0,30}Now Available",text_html(raw),re.I)
+    if not m:raise ValueError("Aucune release MSFS 2024 explicite dans la page officielle")
+    link=re.search(r'href=["\'](https://www\.flightsimulator\.com/[^"\']+)["\'][^>]*>[^<]*Release Notes[^<]{0,140}Sim Update\s*'+re.escape(m.group(1)),raw,re.I)
+    page=link.group(1) if link else url
+    return {"version":m.group(2),"url":page,"published_at":None,
+            "notes":"MSFS 2024 Sim Update "+m.group(1)+" : "+m.group(2)+". Notes officielles et corrections sur la page liée."}
+def fenix_official():
+    url="https://fenixsim.com/blog/"
+    raw=text_html(get(url))
+    m=re.search(r"Fenix\s+A32X\s+Version\s+(\d+)\s+Released",raw,re.I)
+    if not m:raise ValueError("Branche Fenix non explicitement publiée sur le blog")
+    # Version majeure, PAS numéro exact de build de l'installateur Fenix.
+    return {"version":"V"+m.group(1)+" (branche)","url":"https://fenixsim.com/blog/entries/2026-10-21_v3_update/" if m.group(1)=="3" else url,
+            "published_at":None,"notes":"Version majeure confirmée. Numéro exact du launcher non public : consulter le journal des modifications Fenix."}
+
 def short_notes(text):
     lines=[re.sub(r"\s+"," ",line).strip(" -*#\t") for line in str(text).splitlines()]
     lines=[x for x in lines if x and not x.startswith("![")]
@@ -74,6 +93,10 @@ def update():
                 stable,preview=github_version(entry["repo"])
             elif entry["method"]=="simapppro":
                 stable=simapppro_version()
+            elif entry["method"]=="msfs_official":
+                stable=msfs_official()
+            elif entry["method"]=="fenix_official":
+                stable=fenix_official()
             if stable:
                 row.update({"version":stable["version"],"state":"verified","version_url":stable["url"],
                             "published_at":stable["published_at"],"reason":"Version vérifiée sur le changelog officiel"})
