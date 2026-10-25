@@ -25,6 +25,6 @@ setTimeout(()=>{
   const rows=(html.match(/<tr>/g)||[]).length;
   assert.equal(rows,airports.length,'Toutes les scènes doivent être affichées');
   assert.match(elem('#google-map').innerHTML,/google\.com\/maps\/d\/embed/,'Carte intégrée');
-  assert.match(elem('#airport-count').textContent,/171 scènes/);
+  assert.match(elem('#airport-count').textContent,new RegExp('\\b'+airports.length+' scènes\\b'));
   console.log('OK :',rows,'scènes et carte Google My Maps visibles.');
 },100);
