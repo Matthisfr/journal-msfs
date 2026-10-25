@@ -55,7 +55,7 @@ def run():
             "rank":previous.get("rank"),"flight_hours":previous.get("flight_hours"),
             "ifr_hours":previous.get("ifr_hours"),"vfr_hours":previous.get("vfr_hours"),
             "total_flights":previous.get("total_flights"),"airports_visited":previous.get("airports_visited"),
-            "source":previous.get("source"),
+            "source":previous.get("source"),"rank_badge":previous.get("rank_badge"),
             "verified_at":previous.get("verified_at"),"checked_at":dt.datetime.now(dt.timezone.utc).isoformat()}
     try:
         request=urllib.request.Request(URL,headers={"User-Agent":"Mozilla/5.0 (compatible; JournalMSFS/1.0)","Accept":"text/html"})
@@ -65,6 +65,27 @@ def run():
             page.goto(URL,wait_until="domcontentloaded",timeout=30000)
             page.get_by_text("IFR HOURS",exact=False).first.wait_for(timeout=20000)
             html=page.locator("body").inner_text()
+            # Le badge doit être une image proche du nom/grade dans le profil.
+            # Ne pas prendre la photo du pilote ni le badge d'identification.
+            try:
+                candidates=page.locator("img").evaluate_all("""imgs => imgs.map(i => ({
+                  src:i.currentSrc||i.src, alt:i.alt||'', title:i.title||'',
+                  x:i.getBoundingClientRect().x, y:i.getBoundingClientRect().y,
+                  w:i.getBoundingClientRect().width, h:i.getBoundingClientRect().height
+                }))""")
+                profile=page.get_by_text("Mathis",exact=True).first.bounding_box()
+                eligible=[(i,c) for i,c in enumerate(candidates) if c["w"]>=30 and c["w"]<=110 and c["h"]>=30 and c["h"]<=110 and profile and abs(c["y"]-profile["y"])<100 and c["x"]<profile["x"]]
+                if eligible:
+                    idx,c=min(eligible,key=lambda item:abs(item[1]["x"]-profile["x"])+abs(item[1]["y"]-profile["y"]))
+                    image=page.locator("img").nth(idx)
+                    badge_path=ROOT/"public"/"sayintentions-rank.png"
+                    image.screenshot(path=str(badge_path),timeout=5000)
+                    result["rank_badge"]="sayintentions-rank.png"
+                    print("Gate 404: insigne de grade récupéré près du profil")
+                else:
+                    print("Gate 404: insigne de grade non identifié, aucune image substituée")
+            except Exception as badge_error:
+                print("Gate 404: insigne indisponible:",type(badge_error).__name__)
             browser.close()
         found=parse_public_profile(html)
         if all(found.get(k) is not None for k in ("rank","ifr_hours","vfr_hours","total_flights","airports_visited")):
