@@ -47,6 +47,9 @@ def run():
         except (OSError,ValueError):pass
     result={"state":"unavailable","profile_url":URL,"username":"Mathis",
             "rank":previous.get("rank"),"flight_hours":previous.get("flight_hours"),
+            "ifr_hours":previous.get("ifr_hours"),"vfr_hours":previous.get("vfr_hours"),
+            "total_flights":previous.get("total_flights"),"airports_visited":previous.get("airports_visited"),
+            "source":previous.get("source"),
             "verified_at":previous.get("verified_at"),"checked_at":dt.datetime.now(dt.timezone.utc).isoformat()}
     try:
         request=urllib.request.Request(URL,headers={"User-Agent":"Mozilla/5.0 (compatible; JournalMSFS/1.0)","Accept":"text/html"})
@@ -58,7 +61,7 @@ def run():
             result["state"]="partial" if any(v is None for v in found.values()) else "ok"
             result["verified_at"]=result["checked_at"]
         else:
-            result["state"]="unparsed"
+            result["state"]="stale" if previous.get("rank") else "unparsed"
             print("Gate 404: page reçue, données probablement chargées en JavaScript")
     except Exception as exc:
         print("Gate 404: profil inaccessible",type(exc).__name__,str(exc)[:120])
