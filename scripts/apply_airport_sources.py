@@ -29,7 +29,13 @@ for a in airports:
  if selected.get("score",0)<20:continue
  url=selected["url"]
  parsed=urlparse(url)
- if parsed.scheme!="https" or parsed.netloc not in ("contrail.shop","inibuilds.com") or not parsed.path.startswith("/products/"):
+ if parsed.scheme!="https":
+  continue
+ if parsed.netloc in ("contrail.shop","inibuilds.com"):
+  if not parsed.path.startswith("/products/"):continue
+ elif parsed.netloc=="secure.simmarket.com":
+  if not parsed.path.endswith(".phtml"):continue
+ else:
   continue
  # Les 8 sources Aerosoft ont un extracteur officiel distinct : conserver la référence.
  if str(a.get("source_url") or "").startswith("https://www.aerosoft.com/"):
