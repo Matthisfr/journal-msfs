@@ -59,16 +59,31 @@ function renderAirports(){
     return `<tr><td><span class="code">${esc(a.icao)}</span>${a.original!==a.icao?`<small>Source : ${esc(a.original)}</small>`:''}</td><td><b>${esc(a.name)}</b><small>${esc(a.note||a.folder||'')}</small></td><td>${esc(a.publisher)}</td><td><b>${esc(a.installed||'Non renseignée')}</b></td><td>${online}${(a.version_check_state!=='verified'&&a.version_check_reason)?`<small class="source-note">${esc(a.version_check_reason)}</small>`:''}${a.source_note?`<small class="source-note">${esc(a.source_note)}</small>`:''}${a.reference_version&&a.reference_source_url?`<small class="source-note">${a.reference_confidence==='publisher_page_human_checked'||a.reference_confidence==='official_support_human_checked'?'Référence éditeur, non revalidée automatiquement':'Indication tierce non officielle'} : <a href="${esc(isSafeUrl(a.reference_source_url))}" target="_blank" rel="noopener noreferrer">${esc(a.reference_version)} ↗</a> (non utilisée pour les alertes)</small>`:''}</td></tr>`;
   }).join('')||'<tr><td colspan="5">Aucune scène correspondant à ces filtres.</td></tr>';
 }
-function renderMap(){
-  const slot=$('#google-map');
-  if(!slot)return;
-  const url=(window.MSFS_MAP_URL||'').trim();
-  const m=url.match(/[?&]mid=([a-zA-Z0-9_-]+)/);
-  if(m&&/^https:\/\/(?:www\.)?google\.com\/maps\/d\//.test(url)){
-    slot.innerHTML=`<p class="map-caption map-open"><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/d/viewer?mid=${encodeURIComponent(m[1])}">↗ Ouvrir ma carte complète dans Google Maps</a></p><iframe title="Carte personnelle Google My Maps des aéroports" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen src="https://www.google.com/maps/d/embed?mid=${encodeURIComponent(m[1])}&ehbc=2E312F"></iframe><p class="map-caption">Si la carte ne se charge pas dans Safari, utilise le lien ci-dessus pour la consulter directement.</p>`;
-  }else{
-    slot.innerHTML='<div class="map-placeholder"><strong>Ta carte Google My Maps</strong><p>Emplacement prêt. Il manque uniquement le lien de partage de ta carte pour afficher tes aéroports ici.</p><a href="https://www.google.com/maps/d/" target="_blank" rel="noopener noreferrer">Accéder à Google My Maps ↗</a></div>';
+let airportMap=null;
+async function renderMap(){
+ const slot=$('#google-map');if(!slot||airportMap)return;
+ try{
+  const data=await fetch('airport_coordinates.json').then(r=>r.json());
+  if(!window.L){await new Promise((ok,no)=>{const s=document.createElement('script');s.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';s.onload=ok;s.onerror=no;document.head.appendChild(s)})}
+  slot.innerHTML='<div id="airport-leaflet-map"></div><p class="map-caption">Vert : à jour · Orange : mise à jour disponible · Gris : non vérifié</p>';
+  airportMap=L.map('airport-leaflet-map').setView([43.7,7.2],5);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(airportMap);
+  const groups={};for(const a of airports){const k=a.icao;if(data[k])(groups[k]??=[]).push(a)}
+  const bounds=[];
+  for(const [code,items] of Object.entries(groups)){
+   const valid=a=>a.version_check_state==='verified'&&a.server_version&&a.version_checked_at===String(status.versions_checked_at||'').slice(0,10);
+   const outdated=items.some(a=>valid(a)&&a.version_comparison==='update');
+   const current=items.every(a=>valid(a)&&a.version_comparison==='equal');
+   const color=outdated?'#f29a25':current?'#249c63':'#9299a3';
+   const svg='<svg xmlns="http://www.w3.org/2000/svg" width="36" height="46" viewBox="0 0 36 46"><path d="M18 44C13 35 2 26 2 18a16 16 0 1 1 32 0c0 8-11 18-16 26" fill="'+color+'" stroke="white" stroke-width="2"/><path d="M18 7l3 9 9 4v3l-9-2-1 8 3 3v2l-5-2-5 2v-2l3-3-1-8-9 2v-3l9-4z" fill="white"/></svg>';
+   const icon=L.divIcon({className:'airport-pin',html:svg,iconSize:[36,46],iconAnchor:[18,44]});
+   const details=items.map(a=>'<p><b>'+esc(a.name||a.folder)+'</b><br>'+esc(a.publisher)+' · '+esc(a.installed||'—')+' / '+esc(a.server_version||'inconnue')+'</p>').join('');
+   const m=L.marker([data[code].lat,data[code].lon],{icon}).bindPopup('<strong>'+esc(code)+' — '+esc(data[code].name||'')+'</strong>'+details).addTo(airportMap);
+   bounds.push(m.getLatLng());
   }
+  if(bounds.length)airportMap.fitBounds(bounds,{padding:[20,20],maxZoom:7});
+  setTimeout(()=>airportMap.invalidateSize(),100);
+ }catch(e){slot.textContent='Carte momentanément indisponible : '+e.message}
 }
 function renderWeather(){const cov=status.weather_coverage||{};$('#metar-eligible').textContent=cov.eligible??'—';$('#metar-fresh').textContent=cov.fresh??'—';$('#metar-updated').textContent=status.weather_checked_at?localDateTime(status.weather_checked_at):'Non collectée';const arr=(status.weather||[]).slice(0,10);const w=$('#weather-container');if(!arr.length){w.innerHTML='<div class="empty"><strong>☁ Aucune observation vérifiée disponible</strong>Le TOP 10 apparaîtra après une collecte METAR réussie. Aucun classement fictif n’est présenté.</div>';return}const stale=status.source_status?.metar!=='ok';w.innerHTML=(stale?'<div class="error">La dernière collecte METAR a échoué : les observations ci-dessous peuvent être périmées. Vérifie les heures UTC.</div>':'')+arr.map((a,i)=>`<article class="weather-item"><div class="weather-rank">${String(i+1).padStart(2,'0')}</div><div class="weather-symbol" aria-label="${esc(a.phenomenon||'Conditions météo')}">${esc(a.icon||'☁️')}</div><div><div class="weather-code">${esc(a.icao)} <span style="font-weight:400;color:#6c8291;font-size:12px;letter-spacing:0">${esc(a.name||'')}</span></div><div class="weather-detail">${esc(a.summary||'Observation disponible')} · ${esc(localDateTime(a.observed_at))} (heure Paris) · <a href="${esc(isSafeUrl(a.source_url||'https://aviationweather.gov/'))}" target="_blank" rel="noopener noreferrer">NOAA AWC ↗</a></div><div class="weather-raw">METAR : ${esc(a.raw||'Non disponible')}</div>${a.taf_raw?`<div class="weather-raw">TAF (prévision) : ${esc(a.taf_raw)}</div>`:''}</div><div class="weather-score">${esc(a.level||'À surveiller')}<small>${esc(a.score??'')} points</small></div></article>`).join('');$('#tile-weather').textContent=`${arr.length} stations classées parmi ${cov.fresh??'?'} METAR récents.`}
 function topicInfo(a){
