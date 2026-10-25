@@ -1,5 +1,5 @@
 {
-  "state": "stale",
+  "state": "ok",
   "profile_url": "https://pilots.sayintentions.ai/u/Mathis",
   "username": "Mathis",
   "rank": "Senior 1st Officer",
@@ -8,7 +8,7 @@
   "vfr_hours": 2,
   "total_flights": 37,
   "airports_visited": 36,
-  "source": "capture du profil public fournie le 25 octobre 2026",
-  "verified_at": "2026-10-25",
-  "checked_at": "2026-10-25T14:36:56.668911+00:00"
+  "source": "profil public Gate 404 (navigateur Chromium)",
+  "verified_at": "2026-10-25T14:40:16.562208+00:00",
+  "checked_at": "2026-10-25T14:40:16.562208+00:00"
 }
