@@ -6,7 +6,7 @@ const isSafeUrl=u=>{try{const x=new URL(u);return ['https:','http:'].includes(x.
 const localDate=s=>{if(!s)return '—';const d=new Date(s.length===10?s+'T12:00:00Z':s);return isNaN(d)?s:new Intl.DateTimeFormat('fr-FR',{day:'2-digit',month:'short',year:'numeric',timeZone:'Europe/Paris'}).format(d)};
 const localDateTime=s=>{if(!s)return 'Non exécutée';const d=new Date(s);return isNaN(d)?s:new Intl.DateTimeFormat('fr-FR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit',timeZone:'Europe/Paris'}).format(d)};
 let airports=[], status={}, editorial={};
-window.MSFS_MAP_URL='';
+window.MSFS_MAP_URL='https://www.google.com/maps/d/u/0/edit?mid=1smgM-lIXr_QPyWKxPrS68bmU0FsMjYM&usp=sharing';
 function switchView(view){if(!document.getElementById(view))view='accueil';$$('.view').forEach(e=>e.classList.toggle('active',e.id===view));$$('.navbtn').forEach(e=>{const sel=e.dataset.view===view;e.classList.toggle('selected',sel);if(sel)e.setAttribute('aria-current','page');else e.removeAttribute('aria-current')});history.replaceState(null,'','#'+view);window.scrollTo({top:0,behavior:'smooth'})}
 $$('.navbtn').forEach(e=>e.addEventListener('click',()=>switchView(e.dataset.view)));
 $('[data-goto]').forEach(e=>e.addEventListener('click',()=>switchView(e.dataset.goto)));
