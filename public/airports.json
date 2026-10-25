@@ -12,9 +12,9 @@
     "note": "Sous-scène de KLAS — non utilisée comme station METAR",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "(SUB KMCI)",
@@ -29,9 +29,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "(SUB LGSR)",
@@ -46,9 +46,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "58CA",
@@ -63,9 +63,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "BGSF",
@@ -80,9 +80,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "BIKF",
@@ -97,9 +97,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "CYUL",
@@ -114,9 +114,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "CYVR",
@@ -131,9 +131,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "CYYZ",
@@ -148,9 +148,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "DAAG",
@@ -165,9 +165,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "DTMB",
@@ -182,9 +182,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "DTTA",
@@ -199,9 +199,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "DTTJ",
@@ -216,9 +216,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "EBBR",
@@ -235,9 +235,9 @@
     "server_version": "1.0.5",
     "version_checked_at": "2026-10-25",
     "version_source": "Aerosoft — fiche produit officielle",
-    "last_attempt_at": "2026-10-25T09:27:16.907063+00:00",
+    "last_attempt_at": "2026-10-25T09:28:00.998835+00:00",
     "version_check_state": "verified",
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00"
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00"
   },
   {
     "icao": "EDDB",
@@ -248,14 +248,14 @@
     "installed": "3.4.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "verified",
+    "status": "UNK-V",
     "note": "",
     "source_url": "https://www.aerosoft.com/en/blog/detail/sCategory/2238/blogArticle/6521",
     "server_version": "3.4.0",
     "version_checked_at": "2026-10-25",
     "version_source": "Aerosoft — annonce officielle mise à jour 3.4 MSFS 2024",
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
-    "version_check_state": "not_automatable",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
+    "version_check_state": "unavailable",
     "version_check_reason": "Page connue, version non extraite automatiquement"
   },
   {
@@ -273,9 +273,9 @@
     "server_version": "1.1.2",
     "version_checked_at": "2026-10-25",
     "version_source": "Aerosoft — fiche produit officielle",
-    "last_attempt_at": "2026-10-25T09:27:16.907095+00:00",
+    "last_attempt_at": "2026-10-25T09:28:00.998878+00:00",
     "version_check_state": "verified",
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00"
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00"
   },
   {
     "icao": "EDDG",
@@ -290,9 +290,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "EDDH",
@@ -309,9 +309,9 @@
     "server_version": "1.0.4",
     "version_checked_at": "2026-10-25",
     "version_source": "Aerosoft — fiche produit officielle",
-    "last_attempt_at": "2026-10-25T09:27:16.907106+00:00",
+    "last_attempt_at": "2026-10-25T09:28:00.998886+00:00",
     "version_check_state": "verified",
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00"
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00"
   },
   {
     "icao": "EDDK",
@@ -328,9 +328,9 @@
     "server_version": "1.1.1",
     "version_checked_at": "2026-10-25",
     "version_source": "Aerosoft — fiche produit officielle",
-    "last_attempt_at": "2026-10-25T09:27:16.907115+00:00",
+    "last_attempt_at": "2026-10-25T09:28:00.998893+00:00",
     "version_check_state": "verified",
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00"
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00"
   },
   {
     "icao": "EDDL",
@@ -347,9 +347,9 @@
     "server_version": "1.0.3",
     "version_checked_at": "2026-10-25",
     "version_source": "Aerosoft — fiche produit officielle",
-    "last_attempt_at": "2026-10-25T09:27:16.907123+00:00",
+    "last_attempt_at": "2026-10-25T09:28:03.476665+00:00",
     "version_check_state": "verified",
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00"
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00"
   },
   {
     "icao": "EDDL",
@@ -364,9 +364,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "EDDM",
@@ -383,9 +383,9 @@
     "server_version": "2.5.1",
     "version_checked_at": "2026-10-25",
     "version_source": "Aerosoft — fiche produit officielle",
-    "last_attempt_at": "2026-10-25T09:27:16.907129+00:00",
+    "last_attempt_at": "2026-10-25T09:28:03.476694+00:00",
     "version_check_state": "verified",
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00"
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00"
   },
   {
     "icao": "EDDS",
@@ -400,9 +400,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "EDDV",
@@ -417,9 +417,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "EDLW",
@@ -434,9 +434,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "EFHK",
@@ -451,9 +451,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "EFRO",
@@ -468,9 +468,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "EGCC",
@@ -485,9 +485,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "EGKK",
@@ -502,9 +502,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "EGLL",
@@ -519,9 +519,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "EGPF",
@@ -536,9 +536,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "EGPK",
@@ -553,9 +553,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "EHRD",
@@ -570,9 +570,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "EICK",
@@ -587,9 +587,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "EIDW",
@@ -604,9 +604,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "EINN",
@@ -621,9 +621,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "EKCH",
@@ -638,9 +638,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "EKVG",
@@ -655,9 +655,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "ENGM",
@@ -674,9 +674,9 @@
     "server_version": "1.0.2",
     "version_checked_at": "2026-10-25",
     "version_source": "Aerosoft — fiche produit officielle",
-    "last_attempt_at": "2026-10-25T09:27:17.706216+00:00",
+    "last_attempt_at": "2026-10-25T09:28:03.789934+00:00",
     "version_check_state": "verified",
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00"
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00"
   },
   {
     "icao": "ESGG",
@@ -691,9 +691,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "ESSA",
@@ -708,9 +708,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "GCFV",
@@ -725,9 +725,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "GMMN",
@@ -742,9 +742,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "GMMX",
@@ -759,9 +759,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "HECA",
@@ -776,9 +776,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KABQ",
@@ -793,9 +793,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KASE",
@@ -810,9 +810,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KATL",
@@ -827,9 +827,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KBDL",
@@ -844,9 +844,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KBHM",
@@ -861,9 +861,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KBNA",
@@ -878,9 +878,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KBOI",
@@ -895,9 +895,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KBOS",
@@ -912,9 +912,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KBTV",
@@ -929,9 +929,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KBWI",
@@ -946,9 +946,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KBZN",
@@ -963,9 +963,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KCHS",
@@ -980,9 +980,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KCLE",
@@ -997,9 +997,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KCLT",
@@ -1014,9 +1014,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KCRW",
@@ -1031,9 +1031,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KDEN",
@@ -1048,9 +1048,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KDFW",
@@ -1065,9 +1065,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KDTW",
@@ -1082,9 +1082,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KEWR",
@@ -1099,9 +1099,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KEWR",
@@ -1116,9 +1116,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KFSD",
@@ -1133,9 +1133,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KIAD",
@@ -1150,9 +1150,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KIAH",
@@ -1167,9 +1167,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KICT",
@@ -1184,9 +1184,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KIND",
@@ -1201,9 +1201,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KJAC",
@@ -1218,9 +1218,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KJAN",
@@ -1235,9 +1235,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KJFK",
@@ -1252,9 +1252,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KLAS",
@@ -1269,9 +1269,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KLAS",
@@ -1286,9 +1286,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KLAX",
@@ -1303,9 +1303,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KLGA",
@@ -1320,9 +1320,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KLIT",
@@ -1337,9 +1337,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KLVB",
@@ -1354,9 +1354,9 @@
     "note": "Piste fictive — inventaire uniquement, exclue de la météo",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KMCI",
@@ -1371,9 +1371,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KMCI",
@@ -1388,9 +1388,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KMDW",
@@ -1405,9 +1405,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KMHT",
@@ -1422,9 +1422,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KMIA",
@@ -1439,9 +1439,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KMIA",
@@ -1456,9 +1456,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KMKE",
@@ -1473,9 +1473,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KMSP",
@@ -1490,9 +1490,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KMSY",
@@ -1507,9 +1507,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KOKC",
@@ -1524,9 +1524,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KOMA",
@@ -1541,9 +1541,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KORD",
@@ -1558,9 +1558,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KPDX",
@@ -1575,9 +1575,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KPHL",
@@ -1592,9 +1592,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KPHX",
@@ -1609,9 +1609,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KPVD",
@@ -1626,9 +1626,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KPVD",
@@ -1643,9 +1643,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KPVD",
@@ -1660,9 +1660,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KPWM",
@@ -1677,9 +1677,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KSEA",
@@ -1694,9 +1694,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KSFO",
@@ -1711,9 +1711,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KSLC",
@@ -1728,9 +1728,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "KTUS",
@@ -1745,9 +1745,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LDZA",
@@ -1762,9 +1762,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LEBL",
@@ -1779,9 +1779,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LEGE",
@@ -1796,9 +1796,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LEIB",
@@ -1813,9 +1813,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LEMD",
@@ -1830,9 +1830,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LEMG",
@@ -1847,9 +1847,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LEPA",
@@ -1864,9 +1864,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LESO",
@@ -1881,9 +1881,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LEZL",
@@ -1898,9 +1898,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LFBD",
@@ -1915,9 +1915,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LFBO",
@@ -1932,9 +1932,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LFJL",
@@ -1949,9 +1949,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LFKB",
@@ -1966,9 +1966,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LFKC",
@@ -1983,9 +1983,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LFKC",
@@ -2000,9 +2000,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LFKC",
@@ -2017,9 +2017,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LFKF",
@@ -2034,9 +2034,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LFKJ",
@@ -2051,9 +2051,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LFKJ",
@@ -2068,9 +2068,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LFMD",
@@ -2085,9 +2085,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LFML",
@@ -2102,9 +2102,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LFMN",
@@ -2119,9 +2119,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LFMT",
@@ -2136,9 +2136,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LFNA",
@@ -2153,9 +2153,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LFPO",
@@ -2170,9 +2170,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LFRN",
@@ -2187,9 +2187,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LFRS",
@@ -2204,9 +2204,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LFSB",
@@ -2221,9 +2221,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LFST",
@@ -2238,9 +2238,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LFTZ",
@@ -2255,9 +2255,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LGAV",
@@ -2272,9 +2272,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LGMK",
@@ -2289,9 +2289,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LGRP",
@@ -2306,9 +2306,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LGSR",
@@ -2323,9 +2323,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LHBP",
@@ -2340,9 +2340,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LICJ",
@@ -2357,9 +2357,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LIMC",
@@ -2374,9 +2374,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LIML",
@@ -2391,9 +2391,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LIPE",
@@ -2408,9 +2408,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LIPZ",
@@ -2425,9 +2425,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LIRF",
@@ -2442,9 +2442,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LIRN",
@@ -2459,9 +2459,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LMML",
@@ -2476,9 +2476,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LMML",
@@ -2493,9 +2493,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LOWI",
@@ -2510,9 +2510,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LOWS",
@@ -2527,9 +2527,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LOWS",
@@ -2544,9 +2544,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LPFR",
@@ -2561,9 +2561,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LPPR",
@@ -2578,9 +2578,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LPPT",
@@ -2595,9 +2595,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LSGG",
@@ -2612,9 +2612,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LSZH",
@@ -2629,9 +2629,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LSZH",
@@ -2646,9 +2646,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LTFM",
@@ -2663,9 +2663,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "LXGB",
@@ -2680,9 +2680,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "MDSD",
@@ -2697,9 +2697,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "MUHA",
@@ -2714,9 +2714,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "OERK",
@@ -2731,9 +2731,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "OMDB",
@@ -2748,9 +2748,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "OMDU",
@@ -2765,9 +2765,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "OOMS",
@@ -2782,9 +2782,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "PANC",
@@ -2801,9 +2801,9 @@
     "server_version": "1.1.0",
     "version_checked_at": "2026-10-25",
     "version_source": "Aerosoft — fiche produit officielle",
-    "last_attempt_at": "2026-10-25T09:27:18.488186+00:00",
+    "last_attempt_at": "2026-10-25T09:28:03.789961+00:00",
     "version_check_state": "verified",
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00"
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00"
   },
   {
     "icao": "PHNL",
@@ -2818,9 +2818,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "ROAH",
@@ -2835,9 +2835,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "SBGL",
@@ -2852,9 +2852,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "TFFF",
@@ -2869,9 +2869,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "TFFR",
@@ -2886,9 +2886,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "TJSJ",
@@ -2903,9 +2903,9 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   },
   {
     "icao": "YPAD",
@@ -2920,8 +2920,8 @@
     "note": "",
     "source_url": null,
     "server_version": null,
-    "last_audited_at": "2026-10-25T09:27:05.243344+00:00",
+    "last_audited_at": "2026-10-25T09:27:46.438615+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Fiche éditeur précise non identifiée"
+    "version_check_reason": "Fiche exacte non encore trouvée dans les catalogues contrôlés"
   }
 ]
