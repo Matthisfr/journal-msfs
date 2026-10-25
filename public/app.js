@@ -35,6 +35,17 @@ function renderAirports(){
   const updates=verified.filter(a=>a.version_comparison==='update');
   $('#verified-count').textContent=verified.length;
   $('#updates-count').textContent=updates.length;
+  const issues={
+    "Version non publiée":airports.filter(a=>a.version_check_state==='no_version').length,
+    "Boutique en retard":airports.filter(a=>a.version_check_state==='source_older').length,
+    "Édition / format ambigu":airports.filter(a=>a.version_check_state==='inconsistent').length,
+    "Source inaccessible":airports.filter(a=>a.version_check_state==='unavailable').length,
+    "Fiche produit manquante":airports.filter(a=>a.version_check_state==='no_source').length,
+    "Sous-scène / privé":airports.filter(a=>a.version_check_state==='not_automatable').length
+  };
+  const unresolved=airports.length-verified.length;
+  const diag=$('#airport-diagnostics');
+  if(diag)diag.textContent=`À approfondir : ${unresolved} scènes · `+Object.entries(issues).filter(([,n])=>n).map(([label,n])=>`${n} ${label.toLowerCase()}`).join(' · ')+'. Chaque cas est réévalué quotidiennement.';
   const matches=airports.filter(a=>(!q||[a.icao,a.original,a.name,a.publisher,a.folder,a.country,a.region,a.installed,a.server_version].join(' ').toLowerCase().includes(q))&&(!region||(a.region||a.country)===region)&&(!st||(st==='verified'?isVerified(a):st==='update'?isVerified(a)&&a.version_comparison==='update':a.status===st)));
   $('#airport-count').textContent=`${matches.length} scène${matches.length>1?'s':''} affichée${matches.length>1?'s':''} sur ${airports.length}`;
   const cls={'UNK-P':'p','UNK-V':'v','UNK-C':'c','UNK-S':'s','verified':'ok'};
