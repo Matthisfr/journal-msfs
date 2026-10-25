@@ -57,14 +57,20 @@ def render_rows(airports):
         verified_today = (a.get("version_check_state") == "verified"
                           and a.get("version_checked_at") == today)
         if online and verified_today:
-            label, flag = compare(a.get("installed"), online)
+            comparison = a.get("version_comparison")
+            label, flag = (("MISE À JOUR", "flag-s") if comparison == "update"
+                           else ("À JOUR", "flag-ok") if comparison == "equal"
+                           else ("À COMPARER", "flag-v"))
             status = f'<b>{h(online)}</b><small><span class="flag {flag}">{h(label)}</span></small>{source}'
             status += f'<small>Vérifiée le {h(a["version_checked_at"])}</small>'
         elif online:
             state = str(a.get("status") or "UNK-V")
             if state == "verified":
                 state = "UNK-V"
-            status = (f'<b>{h(online)}</b><small>Dernière version connue, non revalidée aujourd’hui</small>'
+            source_today = a.get("version_checked_at") == today
+            source_note = ("Version de la fiche contrôlée aujourd’hui, mais comparaison non validée"
+                           if source_today else "Dernière version connue, non revalidée aujourd’hui")
+            status = (f'<b>{h(online)}</b><small>{source_note}</small>'
                       f'<small><span class="flag flag-{cls.get(state, "v")}">{h(state)}</span></small>{source}')
             if a.get("version_checked_at"):
                 status += f'<small>Dernière confirmation : {h(a["version_checked_at"])}</small>'
