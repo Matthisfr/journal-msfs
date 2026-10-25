@@ -1,0 +1,36 @@
+{
+  "edition": "2026-10-25",
+  "last_run": null,
+  "weather_checked_at": null,
+  "news_checked_at": null,
+  "weather": [],
+  "weather_coverage": {
+    "eligible": 0,
+    "received": 0,
+    "fresh": 0
+  },
+  "news": [
+    {
+      "id": "msfs-2024-su71-19210",
+      "title": "MSFS 2024 : Sim Update 7.1 disponible — version 1.9.21.0",
+      "category": "MSFS 2024",
+      "date": "2026-10-23",
+      "source": "Microsoft Flight Simulator — notes de version officielles",
+      "url": "https://www.flightsimulator.com/su71-release/",
+      "summary": "Cette mise à jour corrige notamment un problème de calcul de traînée du modèle de vol et plusieurs anomalies. Sur PC, l'éditeur conseille de vérifier les anciens packages Community en cas de problème de stabilité.",
+      "impact": "À examiner pour les vols Fenix après passage à SU7.1 ; ne pas confondre la version du simulateur avec celle de Fenix.",
+      "new": false
+    }
+  ],
+  "hardware": [],
+  "source_status": {
+    "metar": "non_executed",
+    "taf": "non_executed",
+    "official_news": "non_executed",
+    "airport_versions": "non_verified"
+  },
+  "errors": [
+    "Collecte automatique non encore exécutée sur l'hébergement."
+  ],
+  "note": "Édition de lancement. Les données météorologiques et les versions serveur seront affichées seulement après vérification."
+}
