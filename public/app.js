@@ -70,6 +70,9 @@ async function renderMap(){
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(airportMap);
   const groups={};for(const a of airports){const k=a.icao;if(data[k])(groups[k]??=[]).push(a)}
   const bounds=[];
+  const mappedSceneCount=Object.values(groups).reduce((sum,items)=>sum+items.length,0);
+  const info=slot.querySelector('.map-caption');
+  if(info)info.textContent=Object.keys(groups).length+' aéroports localisés · '+mappedSceneCount+' scènes · '+(airports.length-mappedSceneCount)+' scènes sans repère autonome (sous-scènes, code non confirmé ou fictif) · Vert : à jour · Orange : MAJ disponible · Gris : non vérifié';
   for(const [code,items] of Object.entries(groups)){
    const valid=a=>a.version_check_state==='verified'&&a.server_version&&a.version_checked_at===String(status.versions_checked_at||'').slice(0,10);
    const outdated=items.some(a=>valid(a)&&a.version_comparison==='update');
