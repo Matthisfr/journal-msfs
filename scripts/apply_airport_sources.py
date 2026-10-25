@@ -41,6 +41,10 @@ for a in airports:
  row=rows.get(a["folder"],{})
  selected=row.get("selected")
  if not selected or not selected.get("url") or not selected.get("version"):continue
+ # Les correspondances validées manuellement (ICAO, éditeur, édition) sont
+ # prioritaires sur un classement automatique susceptible de confondre 2020/24.
+ if a.get("source_url") and a["source_url"]!=selected["url"]:continue
+ if a.get("source_scope")=="parent_reference_only":continue
  if selected.get("score",0)<20:continue
  url=selected["url"]
  parsed=urlparse(url)
