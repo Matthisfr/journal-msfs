@@ -42,7 +42,7 @@ jobs:
           git add public/status.json
           if ! git diff --cached --quiet; then
             git commit -m "Journal: collecte automatique $(date -u +%Y-%m-%d)"
-            git push origin HEAD:main
+            git push origin HEAD:main || echo "Une modification concurrente a empêché la sauvegarde Git ; la publication continue avec les données fraîchement collectées."
           fi
       - name: Configurer GitHub Pages
         uses: actions/configure-pages@v5
