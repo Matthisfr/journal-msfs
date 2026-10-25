@@ -101,10 +101,10 @@ def run():
                     if not flight_id:continue
                     # Colonnes du tableau public: Actions, ID, Aircraft, When, Origin, Destination, Rules, Duration.
                     offset=0 if len(cells)>=8 else -1
-                    if len(cells)<7+max(offset,0):continue
-                    item={"id":flight_id.group(0),"aircraft":cells[1+offset],"when":cells[2+offset],
-                          "origin":cells[3+offset],"destination":cells[4+offset],
-                          "rules":cells[5+offset],"duration":cells[6+offset]}
+                    if len(cells)<8+offset:continue
+                    item={"id":flight_id.group(0),"aircraft":cells[2+offset],"when":cells[3+offset],
+                          "origin":cells[4+offset],"destination":cells[5+offset],
+                          "rules":cells[6+offset],"duration":cells[7+offset]}
                     if re.fullmatch(r"[A-Z0-9]{3,5}",item["origin"]) and re.fullmatch(r"[A-Z0-9]{3,5}",item["destination"]):
                         flights.append(item)
                 if flights:
