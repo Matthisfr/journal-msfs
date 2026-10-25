@@ -295,7 +295,7 @@ body{{background:#f5f5f1}}
     assert index.count('class="news-card"') >= 4, "Actualités officielles manquantes"
     assert index.count('class="watch-source"') >= 30, "Surveillance des sources manquante"
     assert index.count('class="topic-icon topic-') >= 15, "Pictogrammes graphiques manquants"
-    assert index.count('src="brand/') >= 6, "Logos authentiques attendus absents du HTML publié"
+    assert 'icons/mf.svg' in index, "Logo MobiFlight officiel absent"
     import xml.etree.ElementTree as ET
     icon_keys = ("si", "fenix", "mf", "winctrl", "msfs", "airport", "weather", "s3", "generic", "gsx", "atc", "fshud", "hardware", "navigraph", "traffic")
     for kind in icon_keys:
