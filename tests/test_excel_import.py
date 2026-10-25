@@ -18,11 +18,11 @@ class ExcelImportTests(unittest.TestCase):
    path=pathlib.Path(directory)/"test.xlsx"
    wb.save(path)
    rows=module.parse(path)
-  self.assertEqual(len(rows),3)
-  self.assertEqual([r["icao"] for r in rows],["LXGB","LXGB","KABQ"])
+  self.assertEqual(len(rows),4)
+  self.assertEqual([r["icao"] for r in rows],["LXGB","LXGB","KABQ","KLVB"])
   old=[dict(rows[0],server_version="1.2.0",version_check_state="verified",version_checked_at="2026-10-25")]
   merged=module.merge(rows,old)
-  self.assertEqual(len(merged),3)
+  self.assertEqual(len(merged),4)
   self.assertEqual(merged[0]["server_version"],"1.2.0")
   rows[0]["installed"]="1.3.0"
   updated=module.merge(rows,old)
