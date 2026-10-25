@@ -255,6 +255,14 @@ def run():
     except Exception as e:
         src['software_versions']='error'
         status['errors'].append('Versions logiciels : '+str(e)[:180])
+    # Un panneau NEWS n'est nouveau que pendant les deux jours qui
+    # suivent sa publication/détection, pas indéfiniment.
+    for item in status.get('news', []):
+        try:
+            age=(NOW.date()-dt.date.fromisoformat(item.get('date',''))).days
+            if age>2: item['new']=False
+        except (ValueError,TypeError):
+            item['new']=False
     status['note']='Collecte quotidienne automatique : METAR/TAF NOAA, flux officiel MSFS, versions GitHub publiées, audit des 171 scènes, extraction des versions des boutiques publiques reconnues et surveillance des sites publics. Les versions non publiées ou inaccessibles restent UNKNOWN ; une page modifiée n’est pas une mise à jour confirmée.'
     status_path.write_text(json.dumps(status,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print('Updated',status_path)
