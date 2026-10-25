@@ -125,11 +125,12 @@ def render_airport_digest(airports):
     for a in airports:
         if not a.get("new_edition_version") or not a.get("source_url"):
             continue
+        edition_status = "Vérifiée aujourd’hui" if a.get("new_edition_checked_at")==today else "Dernière version connue, non revalidée"
         editions.append(
             f'<li><span class="airport-update-code">{h(a.get("icao") or "")}</span>'
             f'<span><strong>{h(a.get("name") or "")} — édition MSFS 2024 distincte</strong>'
             f'<small>Installée {h(a.get("installed") or "?")} · Nouvelle édition '
-            f'{h(a["new_edition_version"])} · '
+            f'{h(a["new_edition_version"])} · {h(edition_status)} · '
             f'<a href="{h(a["source_url"])}" target="_blank" rel="noopener noreferrer">'
             f'{h(a.get("source_store") or "Éditeur")} ↗</a></small>'
             f'<small>{h(a.get("source_note") or "")}</small></span></li>'
