@@ -67,7 +67,8 @@ def parse_page(url):
   if not m:raise ValueError("Numéro de version non publié dans la fiche")
   # Vérifier que le produit est bien une scène MSFS, et non FSX/P3D/X-Plane.
   ed=edition(title)
-  if ed=="other":raise ValueError("Produit pour un autre simulateur")
+  if ed=="other" or not re.search(r"\bMSFS(?:20|24|2020|2024)?\b|\bFS2020\b|\bFS2024\b|Microsoft Flight Simulator (?:2020|2024)",title,re.I):
+   raise ValueError("La fiche ne désigne pas explicitement une scène MSFS 2020/2024")
   return url,{"version":m.group(1),"title":title,"edition":ed,"store":"simMarket",
               "state":"verified","checked_at":dt.datetime.now(dt.timezone.utc).isoformat()}
  except Exception as e:
