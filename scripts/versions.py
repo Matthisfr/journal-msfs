@@ -22,6 +22,14 @@ PRODUCTS = {
  'simwings-airport-panc-anchorage': ('sim-wings Anchorage', '1.1.0'),
 }
 
+def is_newer(installed, online):
+    """Uniquement une mise à jour comparable au sein de la même édition majeure."""
+    a=[int(x) for x in re.findall(r'\d+',str(installed or ''))]
+    b=[int(x) for x in re.findall(r'\d+',str(online or ''))]
+    if len(a)!=len(b) or len(a)<2 or a[0]!=b[0]:
+        return False
+    return tuple(b)>tuple(a)
+
 class VisibleText(HTMLParser):
     def __init__(self):
         super().__init__()
