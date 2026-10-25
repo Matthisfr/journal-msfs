@@ -56,3 +56,14 @@ for url in ("https://contrail.shop/products/mk-studios-keflavik-reykjavik-airpor
     samples.append({"needle":needle,"count":len(matches),"sample":re.sub(r"\\s+"," ",html[max(0,x.start()-130):x.start()+200])})
   print("VERSION_PROBE",url,"len",len(html),json.dumps(samples,ensure_ascii=False))
  except Exception as e:print("VERSION_PROBE_ERROR",url,str(e))
+
+for shop in ("contrail.shop","inibuilds.com"):
+ for page in (1,2,3):
+  url=f"https://{shop}/products.json?limit=250&page={page}"
+  try:
+   req=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0"})
+   with urllib.request.urlopen(req,timeout=25) as resp:
+    data=json.load(resp)
+   ps=data.get("products",[])
+   print("CATALOG",shop,page,len(ps),[(x.get("title"),x.get("vendor"),x.get("handle")) for x in ps[:2]])
+  except Exception as e:print("CATALOG_ERROR",shop,page,type(e).__name__,str(e)[:160])
