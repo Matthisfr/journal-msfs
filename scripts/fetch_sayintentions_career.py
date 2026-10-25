@@ -1,0 +1,67 @@
+"""Collecte prudente des statistiques publiques Gate 404, sans authentification."""
+from __future__ import annotations
+import datetime as dt
+from html.parser import HTMLParser
+import json
+from pathlib import Path
+import re
+import urllib.request
+
+ROOT=Path(__file__).resolve().parents[1]
+DEST=ROOT/"public"/"sayintentions_career.json"
+URL="https://pilots.sayintentions.ai/u/Mathis"
+class VisibleText(HTMLParser):
+    def __init__(self):
+        super().__init__();self.parts=[];self.skip=0
+    def handle_starttag(self,tag,attrs):
+        if tag in ("script","style","noscript"):self.skip+=1
+    def handle_endtag(self,tag):
+        if tag in ("script","style","noscript"):self.skip=max(0,self.skip-1)
+    def handle_data(self,data):
+        if not self.skip:self.parts.append(data)
+def parse_public_profile(html):
+    parser=VisibleText();parser.feed(html)
+    text=" ".join(" ".join(parser.parts).split())
+    # Only match a rank when it is actually present in the public page.
+    rank=re.search(r"\b(Senior\s+Copilot|Junior\s+Copilot|First\s+Officer|Senior\s+First\s+Officer|Captain|Senior\s+Captain)\b",text,re.I)
+    # Label must be directly adjacent to its number. Never guess from unrelated page numbers.
+    patterns=[
+        r"\b(?:total\s+)?flight\s+hours\s*[:\-]?\s*([\d,.]+)",
+        r"\b(?:total\s+)?hours\s+flown\s*[:\-]?\s*([\d,.]+)",
+        r"\b([\d,.]+)\s*(?:flight\s+hours|hours\s+flown)\b",
+    ]
+    hours=None
+    for pat in patterns:
+        m=re.search(pat,text,re.I)
+        if m:
+            raw=m.group(1).replace(",","")
+            try:
+                v=float(raw)
+                if 0<=v<=100000:hours=v;break
+            except ValueError:pass
+    return {"rank":rank.group(1) if rank else None,"flight_hours":hours}
+def run():
+    previous={}
+    if DEST.exists():
+        try:previous=json.loads(DEST.read_text(encoding="utf-8"))
+        except (OSError,ValueError):pass
+    result={"state":"unavailable","profile_url":URL,"username":"Mathis",
+            "rank":previous.get("rank"),"flight_hours":previous.get("flight_hours"),
+            "verified_at":previous.get("verified_at"),"checked_at":dt.datetime.now(dt.timezone.utc).isoformat()}
+    try:
+        request=urllib.request.Request(URL,headers={"User-Agent":"Mozilla/5.0 (compatible; JournalMSFS/1.0)","Accept":"text/html"})
+        with urllib.request.urlopen(request,timeout=18) as response:
+            html=response.read(1_500_000).decode("utf-8","replace")
+        found=parse_public_profile(html)
+        if found["rank"] is not None or found["flight_hours"] is not None:
+            result.update({k:v for k,v in found.items() if v is not None})
+            result["state"]="partial" if any(v is None for v in found.values()) else "ok"
+            result["verified_at"]=result["checked_at"]
+        else:
+            result["state"]="unparsed"
+            print("Gate 404: page reçue, données probablement chargées en JavaScript")
+    except Exception as exc:
+        print("Gate 404: profil inaccessible",type(exc).__name__,str(exc)[:120])
+    DEST.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    print("Gate 404:",result["state"],"rank=",result["rank"],"hours=",result["flight_hours"])
+if __name__=="__main__":run()
