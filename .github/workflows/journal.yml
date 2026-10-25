@@ -1,0 +1,55 @@
+name: Journal MSFS - actualisation et publication
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '17 4 * * *'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: journal-msfs-pages
+  cancel-in-progress: false
+
+jobs:
+  update-and-publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Vérifier le code de collecte
+        run: python -m unittest discover -s tests -v
+      - name: Collecter METAR, TAF et annonces officielles
+        run: python scripts/update.py
+      - name: Enregistrer les données vérifiées
+        run: |
+          git config user.name "journal-msfs-bot"
+          git config user.email "journal-msfs-bot@users.noreply.github.com"
+          git add public/status.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Journal: collecte automatique $(date -u +%Y-%m-%d)"
+            git push origin HEAD:main
+          fi
+      - name: Configurer GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Préparer le site statique
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - name: Publier le site
+        id: deployment
+        uses: actions/deploy-pages@v4
