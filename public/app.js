@@ -105,7 +105,7 @@ function renderNews(){
   const editorialNews=editorial.news||[];
   const superseded=new Set(editorialNews.flatMap(a=>a.supersedes||[]));
   const a=[...editorialNews,...(status.news||[]).filter(x=>!superseded.has(x.url))]
-    .filter((x,i,all)=>all.findIndex(y=>y.url===x.url)===i)
+    .filter((x,i,all)=>all.findIndex(y=>(y.id||y.url+' '+y.title)===(x.id||x.url+' '+x.title))===i)
     .sort((x,y)=>String(y.date||'').localeCompare(String(x.date||'')));
   $('#news-container').innerHTML=a.length?a.map(newsMarkup).join(''):'<div class="empty"><strong>Aucune nouveauté vérifiée</strong>Le site ne publie pas d’annonce sans date ni source vérifiable.</div>';
   $('#home-news').innerHTML=a.slice(0,3).map(x=>'<article><div class="home-news-row">'+topicBadge(x)+'<div class="home-news-content"><small>'+esc(x.category||'Actualités')+' · '+esc(localDate(x.date))+'</small><strong>'+esc(x.title)+'</strong><a href="'+esc(isSafeUrl(x.url))+'" target="_blank" rel="noopener noreferrer">Source officielle ↗</a></div></div></article>').join('')||'<p class="muted">Aucune actualité sourcée pour le moment.</p>';
