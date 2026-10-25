@@ -24,7 +24,7 @@ setTimeout(()=>{
   const html=elem('#airport-body').innerHTML;
   const rows=(html.match(/<tr>/g)||[]).length;
   assert.equal(rows,airports.length,'Toutes les scènes doivent être affichées');
-  assert.match(fs.readFileSync(path.join(root,'public/app.js'),'utf8'),/airport_coordinates\\.json/,'Carte interactive reliée aux coordonnées');
+  assert.match(fs.readFileSync(path.join(root,'public/app.js'),'utf8'),/airport_coordinates\.json/,'Carte interactive reliée aux coordonnées');
   assert.match(elem('#airport-count').textContent,new RegExp('\\b'+airports.length+' scènes\\b'));
   console.log('OK :',rows,'scènes et carte interactive configurée.');
 },100);
