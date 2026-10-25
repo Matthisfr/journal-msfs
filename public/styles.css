@@ -179,3 +179,7 @@
 #sayintentions-career a{color:#e4b552;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:900px){#sayintentions-career-data .tile-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:560px){#sayintentions-career-data .tile-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}#sayintentions-career .sectionbar{padding:14px}#sayintentions-career-data{padding:12px}#sayintentions-career-data .tile-grid>div{padding:14px 8px}}
+
+#sayintentions-career-data .si-rank-line{display:flex;align-items:center;justify-content:center;gap:10px;min-height:48px}
+#sayintentions-career-data .si-rank-badge{width:45px;height:55px;object-fit:contain;flex-shrink:0;border-radius:6px}
+@media(max-width:560px){#sayintentions-career-data .si-rank-line{flex-direction:column;gap:5px}}
