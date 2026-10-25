@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-25",
-  "last_run": "2026-10-25T10:23:16.019832+00:00",
-  "weather_checked_at": "2026-10-25T10:23:16.019832+00:00",
-  "news_checked_at": "2026-10-25T10:23:16.019832+00:00",
+  "last_run": "2026-10-25T10:25:05.743380+00:00",
+  "weather_checked_at": "2026-10-25T10:25:05.743380+00:00",
+  "news_checked_at": "2026-10-25T10:25:05.743380+00:00",
   "weather": [
     {
       "icao": "KASE",
@@ -20,8 +20,8 @@
     {
       "icao": "KBZN",
       "name": "KBZN Bozeman Yellowstone Airport",
-      "observed_at": "2026-10-25T08:56:00+00:00",
-      "raw": "METAR KBZN 250856Z AUTO 04003KT 1/4SM R12/1800V3000FT FZFG VV001 M03/M04 A3027 RMK AO2 SLP289 I1002 I3003 T10331039 53000",
+      "observed_at": "2026-10-25T09:56:00+00:00",
+      "raw": "METAR KBZN 250956Z AUTO 17003KT 1/4SM R12/1200V2000FT FZFG VV001 M03/M03 A3026 RMK AO2 SLP286 I1001 T10331033",
       "score": 145,
       "summary": "brouillard, visibilité < 1 SM",
       "icon": "🌫️",
@@ -33,8 +33,8 @@
     {
       "icao": "KDTW",
       "name": "KDTW Detro Metro Wayne County Airport",
-      "observed_at": "2026-10-25T09:03:00+00:00",
-      "raw": "SPECI KDTW 250903Z 00000KT 1/8SM R03R/1000V1600FT FG OVC001 08/07 A3047 RMK AO2 TWR VIS 1/2 T00780072",
+      "observed_at": "2026-10-25T09:53:00+00:00",
+      "raw": "METAR KDTW 250953Z 00000KT 1/16SM R03R/1400V1600FT FG VV001 08/07 A3047 RMK AO2 TWR VIS 1/2 SLP320 T00780072 $",
       "score": 145,
       "summary": "brouillard, visibilité < 1 SM",
       "icon": "🌫️",
@@ -44,23 +44,10 @@
       "taf_raw": "TAF KDTW 250901Z 2509/2612 VRB03KT 1/4SM FG VV003 FM251300 21005KT 1SM BR SCT003 FM251400 21005KT P6SM BKN250 FM260600 25003KT P6SM BKN250"
     },
     {
-      "icao": "EGCC",
-      "name": "EGCC Manchester International Airport",
-      "observed_at": "2026-10-25T09:50:00+00:00",
-      "raw": "METAR EGCC 250950Z AUTO 27024G37KT 6000 -RA BKN034 BKN046 10/04 Q0995",
-      "score": 77,
-      "summary": "visibilité < 5 SM, rafales ≥ 35 kt, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF AMD EGCC 250701Z 2507/2612 27026G39KT 9999 SCT040 TEMPO 2507/2510 7000 SHRA RA PROB30 TEMPO 2507/2510 4000 +SHRA PROB30 TEMPO 2510/2522 7000 SHRA BECMG 2513/2516 27017G29KT BECMG 2521/2524 25012KT BECMG 2600/2603 17009KT BECMG 2609/2612 18015G28KT TEMPO 2609/2612 6000 RA BKN012 PROB30 TEMPO 2610/2612 4000 +RA BKN008"
-    },
-    {
       "icao": "KCRW",
       "name": "KCRW West Virginia International Yeager Airport",
-      "observed_at": "2026-10-25T08:54:00+00:00",
-      "raw": "METAR KCRW 250854Z 00000KT 10SM CLR 06/06 A3045 RMK AO2 SLP309 VLY FG T00610061 51001 $",
+      "observed_at": "2026-10-25T09:54:00+00:00",
+      "raw": "METAR KCRW 250954Z 00000KT 10SM CLR 06/06 A3047 RMK AO2 SLP317 VLY FG T00560056 $",
       "score": 65,
       "summary": "brouillard",
       "icon": "🌫️",
@@ -68,32 +55,6 @@
       "level": "Dégradé",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF KCRW 250520Z 2506/2606 00000KT P6SM SKC FM251500 13003KT P6SM SKC"
-    },
-    {
-      "icao": "EGPF",
-      "name": "EGPF Glasgow Airport",
-      "observed_at": "2026-10-25T09:50:00+00:00",
-      "raw": "METAR EGPF 250950Z 28025G35KT 9000 -SHRA SCT021CB BKN030 BKN039 08/05 Q0983 RESHRA",
-      "score": 57,
-      "summary": "rafales ≥ 35 kt, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EGPF 250458Z 2506/2606 27030G45KT 9999 SCT022 TEMPO 2506/2512 3500 +SHRA PROB40 TEMPO 2506/2512 28045G55KT PROB40 TEMPO 2512/2604 7000 SHRA BECMG 2517/2521 25015KT PROB30 TEMPO 2521/2602 25018G30KT"
-    },
-    {
-      "icao": "ESGG",
-      "name": "ESGG Gothenburg Landvetter",
-      "observed_at": "2026-10-25T09:50:00+00:00",
-      "raw": "METAR ESGG 250950Z 16014KT 3000 RA SCT005 BKN013 07/06 Q0981",
-      "score": 57,
-      "summary": "visibilité < 3 SM, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF AMD ESGG 251017Z 2510/2609 16015G25KT 9999 -RA SCT010 BKN020 TEMPO 2510/2513 2500 RA BKN006 TEMPO 2513/2606 4000 SHRA BKN008 BKN020CB PROB40 2515/2606 TS"
     },
     {
       "icao": "LFBD",
@@ -109,10 +70,23 @@
       "taf_raw": "TAF AMD LFBD 250743Z 2507/2612 24010KT 9999 BKN015 TX18/2511Z TN12/2521Z TEMPO 2507/2510 24015G25KT 2000 DZ OVC004 TEMPO 2510/2514 24015G25KT 3000 RA OVC007 BECMG 2514/2516 33010KT BKN020 PROB40 2600/2611 OVC005"
     },
     {
+      "icao": "EGPF",
+      "name": "EGPF Glasgow Airport",
+      "observed_at": "2026-10-25T10:20:00+00:00",
+      "raw": "METAR EGPF 251020Z AUTO 28028G43KT 9999 SCT031/// BKN039/// //////TCU 09/04 Q0984",
+      "score": 45,
+      "summary": "rafales ≥ 35 kt",
+      "icon": "💨",
+      "phenomenon": "Vent fort",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EGPF 250458Z 2506/2606 27030G45KT 9999 SCT022 TEMPO 2506/2512 3500 +SHRA PROB40 TEMPO 2506/2512 28045G55KT PROB40 TEMPO 2512/2604 7000 SHRA BECMG 2517/2521 25015KT PROB30 TEMPO 2521/2602 25018G30KT"
+    },
+    {
       "icao": "EGPK",
       "name": "EGPK Prestwick Airport",
-      "observed_at": "2026-10-25T09:50:00+00:00",
-      "raw": "METAR EGPK 250950Z 28028G41KT 9999 FEW025 BKN036 10/06 Q0986",
+      "observed_at": "2026-10-25T10:20:00+00:00",
+      "raw": "METAR EGPK 251020Z 29034G54KT 9999 FEW025 BKN036 11/04 Q0987",
       "score": 45,
       "summary": "rafales ≥ 35 kt",
       "icon": "💨",
@@ -133,6 +107,32 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF EHRD 250515Z 2506/2612 26022G34KT 9999 SCT030 PROB30 TEMPO 2508/2518 26027G42KT 6000 SHRA SCT025CB BECMG 2516/2519 26017KT BECMG 2601/2604 26012KT BECMG 2605/2608 21010KT"
+    },
+    {
+      "icao": "EIDW",
+      "name": "EIDW Dublin International Airport",
+      "observed_at": "2026-10-25T10:00:00+00:00",
+      "raw": "METAR EIDW 251000Z 27024G35KT 9999 FEW009 SCT020 09/03 Q0999 NOSIG",
+      "score": 45,
+      "summary": "rafales ≥ 35 kt",
+      "icon": "💨",
+      "phenomenon": "Vent fort",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EIDW 250500Z 2506/2606 26020G32KT 9999 FEW018 SCT030 PROB40 TEMPO 2506/2514 27025G40KT -SHRA FEW018CB BECMG 2514/2516 27018G30KT BECMG 2517/2519 25013KT BECMG 2520/2522 22010KT BECMG 2601/2603 19010KT BECMG 2603/2605 14008KT PROB30 TEMPO 2605/2606 4000 -RADZ BKN010"
+    },
+    {
+      "icao": "EKVG",
+      "name": "Vagar Airport",
+      "observed_at": "2026-10-25T10:20:00+00:00",
+      "raw": "METAR EKVG 251020Z AUTO 36022G34KT 9999 -DZ BKN018/// BKN052/// 09/07 Q0966 RMK BKN014/// WIND SKEID 35029G42KT",
+      "score": 34,
+      "summary": "rafales ≥ 25 kt, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EKVG 250827Z 2509/2518 02012KT 9999 BKN018 TEMPO 2509/2516 02015G25KT RA BKN008 BECMG 2516/2518 32018KT RA BKN006"
     }
   ],
   "weather_coverage": {
@@ -240,20 +240,33 @@
     "airport_versions": "partial",
     "official_releases": "ok"
   },
-  "errors": [],
+  "errors": [
+    "Versions : 58CA / inibuilds : Numérotation différente : installée 1.0.2, boutique 1.01 ; comparaison interdite",
+    "Versions : CYVR / fsdreamteam : Boutique 1.0.7 antérieure à l'installation 1.3.1 ; canal de diffusion possiblement différent",
+    "Versions : CYYZ / FlyTampa : Numérotation différente : installée 1.5.0, boutique 1.2 ; comparaison interdite",
+    "Versions : DTTA / prealsoft : Numérotation différente : installée 1.0.1, boutique 1.00 ; comparaison interdite",
+    "Versions : EDDB / LIMESIM : Code de scène absent de la fiche produit : association à revoir"
+  ],
   "note": "Collecte quotidienne automatique : METAR/TAF NOAA, flux officiel MSFS, versions GitHub publiées, audit des 171 scènes, extraction des versions Aerosoft accessibles et surveillance des sites publics. Les versions non publiées ou inaccessibles restent UNKNOWN ; une page modifiée n’est pas une mise à jour confirmée.",
   "version_coverage": {
-    "eligible": 8,
-    "verified_today": 135,
+    "verified_today": 116,
+    "eligible": 163,
     "unavailable": 0,
+    "no_version": 13,
+    "inconsistent": 34,
+    "not_automatable": 5,
+    "no_source": 3,
+    "total_checked": 171,
+    "with_source": 167,
+    "missing_source": 4,
+    "updates_confirmed": 17,
     "inventory_total": 171,
-    "official_url_known": 165,
-    "without_official_url": 6,
-    "manual_source": 0,
-    "unverified": 36,
-    "updates_confirmed": 16,
-    "audited_at": "2026-10-25T10:23:16.019832+00:00"
+    "official_url_known": 167,
+    "without_official_url": 4,
+    "manual_source": 5,
+    "unverified": 55,
+    "audited_at": "2026-10-25T10:25:05.743380+00:00"
   },
-  "versions_checked_at": "2026-10-25T10:23:16.019832+00:00",
-  "releases_checked_at": "2026-10-25T10:23:16.019832+00:00"
+  "versions_checked_at": "2026-10-25T10:25:05.743380+00:00",
+  "releases_checked_at": "2026-10-25T10:25:05.743380+00:00"
 }
