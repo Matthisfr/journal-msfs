@@ -6,6 +6,13 @@ const isSafeUrl=u=>{try{const x=new URL(u);return ['https:','http:'].includes(x.
 const localDate=s=>{if(!s)return '—';const d=new Date(s.length===10?s+'T12:00:00Z':s);return isNaN(d)?s:new Intl.DateTimeFormat('fr-FR',{day:'2-digit',month:'short',year:'numeric',timeZone:'Europe/Paris'}).format(d)};
 const localDateTime=s=>{if(!s)return 'Non exécutée';const d=new Date(s);return isNaN(d)?s:new Intl.DateTimeFormat('fr-FR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit',timeZone:'Europe/Paris'}).format(d)};
 let airports=[], status={}, editorial={};
+const brandLogos=(()=>{try{return JSON.parse(document.getElementById('brand-manifest')?.textContent||'{}')}catch{return {}}})();
+function brandIcon(kind,label){
+  const source=brandLogos[kind]?.path||'icons/'+kind+'.svg';
+  const fallback='icons/'+kind+'.svg';
+  const cls=brandLogos[kind]?' brand-original':'';
+  return '<span class="topic-icon topic-'+kind+cls+'" title="'+esc(label)+'" aria-label="'+esc(label)+'"><img src="'+esc(source)+'" width="42" height="42" alt="" decoding="async" onerror="this.onerror=null;this.src=&#39;'+esc(fallback)+'&#39;"></span>';
+}
 window.MSFS_MAP_URL='https://www.google.com/maps/d/u/0/edit?mid=1smgM-lIXr_QPyWKxPrS68bmU0FsMjYM&usp=sharing';
 function switchView(view){if(!document.getElementById(view))view='accueil';$$('.view').forEach(e=>e.classList.toggle('active',e.id===view));$$('.navbtn').forEach(e=>{const sel=e.dataset.view===view;e.classList.toggle('selected',sel);if(sel)e.setAttribute('aria-current','page');else e.removeAttribute('aria-current')});history.replaceState(null,'','#'+view);if(view==='aeroports')renderMap();window.scrollTo({top:0,behavior:'smooth'})}
 $$('.navbtn').forEach(e=>e.addEventListener('click',()=>switchView(e.dataset.view)));
@@ -68,7 +75,7 @@ function topicInfo(a){
 }
 function topicBadge(a){
   const [code,kind,label]=topicInfo(a);
-  return '<span class="topic-icon topic-'+kind+'" title="'+esc(label)+'" aria-label="'+esc(label)+'"><img src="icons/'+kind+'.svg" width="42" height="42" alt="" decoding="async"></span>';
+  return brandIcon(kind,label);
 }
 function newsMarkup(a){
   return '<article class="news-card"><div class="news-meta">'+esc(a.category||'ACTUALITÉS')+' · '+esc(localDate(a.date))+(a.new?'<span class="new-tag">NEWS</span>':'')+'</div><div class="news-heading">'+topicBadge(a)+'<h3>'+esc(a.title)+'</h3></div>'+(a.summary?'<p>'+esc(a.summary)+'</p>':'')+(a.impact?'<div class="news-impact"><b>Impact / action :</b> '+esc(a.impact)+'</div>':'')+'<div class="news-source"><a href="'+esc(isSafeUrl(a.url))+'" target="_blank" rel="noopener noreferrer">'+esc(a.source||'Source officielle')+' ↗</a></div></article>';
