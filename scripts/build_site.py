@@ -1,0 +1,118 @@
+"""Build a fully populated, no-JavaScript airport table and a standalone fallback page.
+Run AFTER the daily collector and BEFORE uploading the GitHub Pages artifact.
+Only the published artifact is modified; the source index.html stays a template.
+"""
+from __future__ import annotations
+
+import datetime as dt
+import html
+import json
+import pathlib
+import re
+
+ROOT = pathlib.Path(__file__).resolve().parents[1]
+PUBLIC = ROOT / "public"
+MAP_ID = "1smgM-lIXr_QPyWKxPrS68bmU0FsMjYM"
+
+def h(value):
+    return html.escape(str(value if value is not None else ""), quote=True)
+
+def compare(installed, online):
+    a = [int(x) for x in re.findall(r"\d+", str(installed or ""))]
+    b = [int(x) for x in re.findall(r"\d+", str(online or ""))]
+    if not a or not b:
+        return "À COMPARER", "flag-v"
+    for i in range(max(len(a), len(b))):
+        x = a[i] if i < len(a) else 0
+        y = b[i] if i < len(b) else 0
+        if y > x:
+            return "MISE À JOUR", "flag-s"
+        if y < x:
+            return "INSTALLÉE + RÉCENTE", "flag-v"
+    return "À JOUR", "flag-ok"
+
+def render_rows(airports):
+    out = []
+    cls = {"UNK-P": "p", "UNK-V": "v", "UNK-C": "c", "UNK-S": "s"}
+    for a in airports:
+        original = a.get("original") or ""
+        icao = a.get("icao") or ""
+        code = f'<span class="code">{h(icao)}</span>'
+        if original != icao:
+            code += f'<small>Source : {h(original)}</small>'
+        name = f'<b>{h(a.get("name") or "")}</b><small>{h(a.get("note") or a.get("folder") or "")}</small>'
+        installed = h(a.get("installed") or "Non renseignée")
+        url = str(a.get("source_url") or "")
+        source = f'<small><a href="{h(url)}" target="_blank" rel="noopener noreferrer">Fiche éditeur ↗</a></small>' if url.startswith("https://") else ""
+        online = a.get("server_version")
+        if online:
+            label, flag = compare(a.get("installed"), online)
+            status = f'<b>{h(online)}</b><small><span class="flag {flag}">{h(label)}</span></small>{source}'
+            if a.get("version_checked_at"):
+                status += f'<small>Vérifiée le {h(a["version_checked_at"])}</small>'
+        else:
+            state = str(a.get("status") or "UNK-V")
+            status = f'<span class="flag flag-{cls.get(state, "v")}">{h(state)}</span>{source}'
+        out.append(
+            f'<tr><td>{code}</td><td>{name}</td><td>{h(a.get("publisher") or "")}</td>'
+            f'<td><b>{installed}</b></td><td>{status}</td></tr>'
+        )
+    return "\n".join(out)
+
+def build():
+    airports = json.loads((PUBLIC / "airports.json").read_text(encoding="utf-8"))
+    assert len(airports) == 171, f"Inventaire incomplet : {len(airports)} scènes"
+    rows = render_rows(airports)
+    index = (PUBLIC / "index.html").read_text(encoding="utf-8")
+    marker = '<tbody id="airport-body"></tbody>'
+    assert index.count(marker) == 1, "Emplacement du tableau introuvable"
+    index = index.replace(marker, f'<tbody id="airport-body">\n{rows}\n</tbody>')
+    # The HTML query string alone does not invalidate Safari's cached app.js.
+    rev = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%d%H%M%S")
+    index = index.replace('src="app.js"', f'src="app.js?rev={rev}"')
+    index = index.replace('href="styles.css"', f'href="styles.css?rev={rev}"')
+    index = index.replace(
+        '<div class="tablebox"><table>',
+        '<p class="standalone-link"><a href="airports.html">↗ Afficher les 171 scènes sur une page indépendante (sans JavaScript)</a></p><div class="tablebox"><table>',
+        1,
+    )
+    (PUBLIC / "index.html").write_text(index, encoding="utf-8")
+
+    css = (PUBLIC / "styles.css").read_text(encoding="utf-8")
+    table = (
+        '<div class="tablebox"><table><thead><tr><th>ICAO</th><th>Scène / aéroport</th>'
+        '<th>Éditeur</th><th>Installée</th><th>Serveur / statut</th></tr></thead>'
+        f'<tbody>{rows}</tbody></table></div>'
+    )
+    independent = f"""<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Le Journal MSFS — Inventaire complet</title>
+<link rel="stylesheet" href="styles.css?rev={rev}">
+<style>
+body{{background:#f5f5f1}}
+.independent-header{{background:#071b2c;color:white;padding:25px 0;border-bottom:4px solid #c6a073}}
+.independent-header a{{color:#bfe4ff}}
+.independent-header h1{{font:700 35px Georgia,serif;margin:12px 0}}
+.independent-content{{padding:30px 0}}
+.independent-content .tablebox{{max-height:none}}
+.standalone-note{{margin:12px 0 20px}}
+</style></head><body>
+<header class="independent-header"><div class="shell">
+<a href="./index.html#aeroports">← Retour au journal</a>
+<h1>Mes 171 scènes et aéroports</h1>
+<p>Inventaire complet issu d'Export APT 5.xlsx · {len(airports)} scènes · versions installées et vérifications officielles</p>
+</div></header>
+<main class="shell independent-content">
+<p class="standalone-note">Cette page affiche toutes les scènes même si JavaScript est bloqué ou en cache dans Safari.</p>
+{table}
+<div class="map-section"><div class="overline">CARTE GOOGLE MY MAPS</div><h2>Mes aéroports sur la carte</h2>
+<p><a href="https://www.google.com/maps/d/viewer?mid={MAP_ID}" target="_blank" rel="noopener noreferrer">Ouvrir la carte Google My Maps ↗</a></p>
+<div class="map-box"><iframe title="Carte Google My Maps des aéroports" loading="eager" allowfullscreen src="https://www.google.com/maps/d/embed?mid={MAP_ID}&amp;ehbc=2E312F"></iframe></div>
+</div></main></body></html>"""
+    (PUBLIC / "airports.html").write_text(independent, encoding="utf-8")
+    assert index.count("<tr>") >= len(airports), "Lignes statiques manquantes"
+    assert independent.count("<tr>") >= len(airports), "Page indépendante incomplète"
+    print(f"Publication : {len(airports)} scènes HTML statiques + page indépendante ; rev={rev}")
+
+if __name__ == "__main__":
+    build()
