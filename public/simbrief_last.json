@@ -1,7 +1,7 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-10-25T12:51:02.011763+00:00",
+  "retrieved_at": "2026-10-25T14:22:55.753102+00:00",
   "origin": {
     "icao": "LGMK",
     "name": "MIKONOS"
@@ -12,8 +12,8 @@
   },
   "flight_number": "2809",
   "aircraft": "A320",
-  "route": "PIDA1R PIDAX L995 LURUS UN139 KUMBI L612 BLT A16 CVO DCT",
-  "altitude": "23000",
-  "enroute_time": "01:32:42",
-  "generated_at": "2026-10-24T22:54:32Z"
+  "route": "PIDA1V PIDAX L995 LURUS UN139 KUMBI L612 BLT A16 CVO DCT",
+  "altitude": "37000",
+  "enroute_time": "01:31:22",
+  "generated_at": "2026-10-25T12:56:26Z"
 }
