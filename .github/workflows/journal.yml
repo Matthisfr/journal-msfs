@@ -4,6 +4,15 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Type de mise à jour'
+        required: true
+        type: choice
+        default: normale
+        options:
+          - normale
+          - totale
   schedule:
     # 07:08 en France : 05:08 UTC l'été, 06:08 UTC l'hiver.
     # GitHub Actions ne gère pas directement le fuseau Europe/Paris :
@@ -83,12 +92,12 @@ jobs:
         run: |
           # La vérification des versions se fait chaque matin sur les fiches
           # existantes. Les catalogues entiers sont rescannés le dimanche.
-          if [[ "$(TZ=Europe/Paris date +%u)" == "7" && "${{ github.event_name }}" == "schedule" ]]; then
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.mode }}" == "totale" ]] || [[ "$(TZ=Europe/Paris date +%u)" == "7" && "${{ github.event_name }}" == "schedule" ]]; then
             python scripts/discover_airports.py || echo "Catalogue Contrail / iniBuilds indisponible"
             python scripts/discover_simmarket.py || echo "Recherche simMarket indisponible"
             python scripts/apply_airport_sources.py
           else
-            echo "Fiches déjà associées : recherche catalogue complète réservée au dimanche."
+            echo "Recherche catalogue complète : dimanche automatique ou lancement manuel en mode totale."
           fi
 
       - name: Collecter METAR, TAF, actualités et versions de scènes
