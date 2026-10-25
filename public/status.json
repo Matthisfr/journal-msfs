@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-25",
-  "last_run": "2026-10-25T14:29:57.856788+00:00",
-  "weather_checked_at": "2026-10-25T14:29:57.856788+00:00",
-  "news_checked_at": "2026-10-25T14:29:57.856788+00:00",
+  "last_run": "2026-10-25T14:31:01.736617+00:00",
+  "weather_checked_at": "2026-10-25T14:31:01.736617+00:00",
+  "news_checked_at": "2026-10-25T14:31:01.736617+00:00",
   "weather": [
     {
       "icao": "KJAC",
@@ -269,15 +269,15 @@
     "without_official_url": 4,
     "manual_source": 5,
     "unverified": 35,
-    "audited_at": "2026-10-25T14:29:57.856788+00:00"
+    "audited_at": "2026-10-25T14:31:01.736617+00:00"
   },
-  "versions_checked_at": "2026-10-25T14:29:57.856788+00:00",
-  "releases_checked_at": "2026-10-25T14:29:57.856788+00:00",
+  "versions_checked_at": "2026-10-25T14:31:01.736617+00:00",
+  "releases_checked_at": "2026-10-25T14:31:01.736617+00:00",
   "software_coverage": {
     "total": 23,
     "verified": 3,
     "changed": 0,
-    "checked_at": "2026-10-25T14:30:29.972901+00:00",
+    "checked_at": "2026-10-25T14:31:34.474046+00:00",
     "unverified": 20
   }
 }
