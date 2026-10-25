@@ -45,8 +45,11 @@ def verify():
     if 'id="logiciels"' not in index or 'id="hardware-gallery"' not in index:
         raise AssertionError("Pages Logiciels ou galerie matériel absentes")
     software = json.loads(get("software_versions.json"))
-    if software.get("total", 0) < 23 or len(software.get("items", [])) < 23:
-        raise AssertionError("Catalogue logiciel quotidien incomplet")
+    catalog = json.loads(get("software_catalog.json"))
+    catalog_ids = {item["id"] for item in catalog}
+    published_ids = {item["id"] for item in software.get("items", [])}
+    if software.get("total") != len(catalog) or published_ids != catalog_ids:
+        raise AssertionError(f"Catalogue logiciel incohérent : {len(published_ids)}/{len(catalog)} produits")
     if 'id="qualite"' not in index or 'id="quality-airport-details"' not in index:
         raise AssertionError("Onglet QUALITÉ ou inventaire des anomalies absent")
     if 'id="quality-audit"' not in index:
