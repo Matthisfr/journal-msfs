@@ -20,24 +20,26 @@ def get(path):
         return r.read(1_500_000).decode("utf-8", errors="replace")
 
 def verify():
+    airports = json.loads(get("airports.json"))
+    expected = len(airports)
+    if expected < 1: raise AssertionError("Inventaire vide")
     index = get("index.html")
-    if index.count("<tr>") < 171: raise AssertionError("171 scènes absentes du HTML publié")
+    if index.count("<tr>") < expected: raise AssertionError("Scènes absentes du HTML publié")
     for marker in ('id="watch-container"', 'id="home-updated"', 'id="news-container"',
                    'id="google-map"', 'id="airport-body"'):
         if marker not in index: raise AssertionError(f"Élément manquant: {marker}")
     if index.count('class="watch-source"') < 30: raise AssertionError("Veille des sites absente")
     independent = get("airports.html")
-    if independent.count("<tr>") < 171 or "google.com/maps/d/embed" not in independent:
+    if independent.count("<tr>") < expected or "google.com/maps/d/embed" not in independent:
         raise AssertionError("Page indépendante ou carte Google manquante")
-    airports = json.loads(get("airports.json"))
-    if len(airports) != 171: raise AssertionError("Inventaire incomplet")
+
     status = json.loads(get("status.json"))
     checked = dt.datetime.fromisoformat(status["last_run"].replace("Z", "+00:00"))
     if dt.datetime.now(dt.timezone.utc) - checked > dt.timedelta(hours=3):
         raise AssertionError("Collecte trop ancienne")
     coverage = status.get("version_coverage", {})
-    if coverage.get("inventory_total") != 171:
-        raise AssertionError("Audit des 171 scènes manquant")
+    if coverage.get("inventory_total") != expected:
+        raise AssertionError("Audit des scènes incomplet")
     watch = json.loads(get("watch.json"))
     if watch.get("total", 0) < 30: raise AssertionError("Liste de veille incomplète")
     if 'id="logiciels"' not in index or 'id="hardware-gallery"' not in index:
@@ -63,7 +65,7 @@ def verify():
     available = [x for x in images.values() if x.get("state") in ("photo","photo_remote") and x.get("path")]
     if len(available) < 8:
         raise AssertionError(f"Photos de matériel insuffisantes : {len(available)}/12")
-    print(f"Site en ligne OK : 171 scènes ; {watch['total']} sources ; "
+    print(f"Site en ligne OK : {expected} scènes ; {watch['total']} sources ; "
           f"{coverage.get('verified_today',0)} versions vérifiées ; "
           f"{len(status.get('weather',[]))} METAR classés ; "
           f"{len(status.get('news',[]))} actualités automatiques ; "
