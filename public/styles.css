@@ -163,3 +163,19 @@
 @media(max-width:410px){.hardware-gallery{grid-template-columns:1fr}.hardware-image{height:200px}}
 
 .changelog-details{margin:10px 0;border-top:1px solid rgba(110,130,150,.25);padding-top:10px}.changelog-details summary{cursor:pointer;font-size:12px;font-weight:800}.changelog-details p{white-space:pre-wrap;line-height:1.55;max-height:320px;overflow:auto;font-size:12px}
+
+/* Profil Gate 404 — identité visuelle inspirée du portail SayIntentions */
+#sayintentions-career{background:#151513;color:#eeeae2;border:1px solid #53514c;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.16);overflow:hidden;padding:0}
+#sayintentions-career .sectionbar{background:#2a2927;border-bottom:1px solid #565044;margin:0;padding:16px 22px}
+#sayintentions-career .overline{color:#d7a843;letter-spacing:.16em;font-weight:800}
+#sayintentions-career h2{color:#f0b93f;font-family:inherit;font-size:clamp(20px,2.5vw,27px);font-weight:800;margin:4px 0}
+#sayintentions-career-data{padding:20px 22px 22px}
+#sayintentions-career-data .tile-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+#sayintentions-career-data .tile-grid>div{background:#252522;border:1px solid #3b3a35;border-radius:9px;padding:20px 10px;text-align:center;min-width:0}
+#sayintentions-career-data .tile-grid small{display:block;color:#aaa8a2;letter-spacing:.07em;font-size:11px;font-weight:800;text-transform:uppercase;margin:0 0 9px}
+#sayintentions-career-data .tile-grid h3{color:#f7f4eb;font-family:inherit;font-size:clamp(18px,2vw,26px);font-weight:800;line-height:1.22;margin:0;overflow-wrap:anywhere}
+#sayintentions-career-data .tile-grid>div:first-child h3{color:#f1c15c;font-size:clamp(15px,1.65vw,22px)}
+#sayintentions-career-data .fineprint{color:#aaa9a4;margin:15px 0 0;line-height:1.55}
+#sayintentions-career a{color:#e4b552;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){#sayintentions-career-data .tile-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){#sayintentions-career-data .tile-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}#sayintentions-career .sectionbar{padding:14px}#sayintentions-career-data{padding:12px}#sayintentions-career-data .tile-grid>div{padding:14px 8px}}
