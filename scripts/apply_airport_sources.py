@@ -22,6 +22,21 @@ rows={x["folder"]:x for x in report.get("airports",[])}
 added=0
 verified=0
 stale=0
+# Une ancienne correspondance simMarket incorrecte ne doit pas survivre
+# après un nouveau contrôle complet du catalogue (notamment FSX/P3D).
+fresh_report=(report.get("generated_at","")[:10]==today and
+              report.get("simmarket_checked_at","")[:10]==today and
+              not report.get("catalog_errors"))
+if fresh_report:
+ for a in airports:
+  if a.get("source_store")!="simMarket":continue
+  if rows.get(a["folder"],{}).get("selected"):continue
+  for key in ("source_url","source_store","source_title","source_edition","source_vendor",
+              "source_confidence","server_version","version_checked_at"):
+   a.pop(key,None)
+  a["version_check_state"]="no_source"
+  a["version_check_reason"]="Ancienne correspondance rejetée : produit ou simulateur différent"
+  a["status"]="UNK-P"
 for a in airports:
  row=rows.get(a["folder"],{})
  selected=row.get("selected")
