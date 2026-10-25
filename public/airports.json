@@ -1423,8 +1423,11 @@
     "version_check_state": "no_source",
     "version_check_reason": "Aucune fiche officielle du produit exact identifiée",
     "source_catalog_url": "https://www.islandsim.com/index.html",
-    "source_note": "PacSim : boutique officielle, version non publique",
-    "last_attempt_at": "2026-10-25T10:55:49.482292+00:00"
+    "source_note": "PacSim KCLE : version 1.0.0 répertoriée sur un site tiers, non confirmée par une fiche officielle actualisée.",
+    "last_attempt_at": "2026-10-25T10:55:49.482292+00:00",
+    "reference_version": "1.0.0",
+    "reference_source_url": "https://sceneryaddons.org/pacsim-kcle-cleveland-hopkins-international-airport/",
+    "reference_confidence": "third_party_unverified"
   },
   {
     "icao": "KCLT",
@@ -2497,9 +2500,12 @@
     "last_audited_at": "2026-10-25T10:55:49.482292+00:00",
     "version_check_state": "no_source",
     "version_check_reason": "Aucune fiche officielle du produit exact identifiée",
-    "source_catalog_url": "https://www.islandsim.com/index.html",
-    "source_note": "PacSim : boutique officielle, KSLC V2 disponible, version précise à confirmer",
-    "last_attempt_at": "2026-10-25T10:55:49.482292+00:00"
+    "source_catalog_url": "https://forums.flightsimulator.com/t/pacsim-kslc-salt-lake-city-international-airport/547684?page=9",
+    "source_note": "PacSim KSLC V2 (2026) : mise à disposition par lien de commande et compte acheteur ; révision précise non publiée sur une page produit ouverte.",
+    "last_attempt_at": "2026-10-25T10:55:49.482292+00:00",
+    "reference_edition": "KSLC V2 (2026)",
+    "reference_source_url": "https://www.simflight.com/2026/06/03/review-kslc-salt-lake-city-v2-from-pacsim/",
+    "reference_confidence": "third_party_edition_only"
   },
   {
     "icao": "KTUS",
@@ -2694,15 +2700,16 @@
     "country": "EUROPE",
     "status": "UNK-V",
     "note": "",
-    "source_url": "https://flightsim.to/addon/84186/lepa-palma-de-mallorca-airport",
+    "source_url": "https://fr.flightsim.to/addon/84186/lepa-palma-de-mallorca-airport",
     "server_version": null,
     "last_audited_at": "2026-10-25T10:55:49.482292+00:00",
     "version_check_state": "no_version",
-    "source_store": "Flightsim.to / EuroScene",
+    "source_store": "Flightsim.to — EuroScene",
     "source_edition": "2020",
     "source_match": "Identité du produit et édition vérifiées par recherche du 25 octobre 2026",
     "version_check_reason": "Fiche accessible, mais aucun numéro de version public fiable ou édition ambiguë",
-    "last_attempt_at": "2026-10-25T10:55:49.482292+00:00"
+    "last_attempt_at": "2026-10-25T10:55:49.482292+00:00",
+    "source_note": "Version datée de l’éditeur (2026.09.14). Le manifeste local 25.8.5 correspond à 2025.08.05 ; comparaison selon la date, sans confusion avec un autre add-on."
   },
   {
     "icao": "LESO",
@@ -3553,8 +3560,11 @@
     "version_check_state": "no_source",
     "version_check_reason": "Aucune fiche officielle du produit exact identifiée",
     "source_catalog_url": "https://beautifulmodelworld.com/",
-    "source_note": "Beautiful Model of the World : site officiel, historique de versions contradictoire",
-    "last_attempt_at": "2026-10-25T10:55:49.482292+00:00"
+    "source_note": "Le site historique BMW indique 4.2.2 (2021), mais un suivi communautaire mentionne 3.2.5 (2025–2026). Versions et branches incompatibles : ne pas comparer sans confirmation éditeur.",
+    "last_attempt_at": "2026-10-25T10:55:49.482292+00:00",
+    "reference_version": "3.2.5",
+    "reference_source_url": "https://sceneryaddons.org/beautiful-model-of-the-world-lipz-venice-marco-polo-airport/",
+    "reference_confidence": "third_party_unverified"
   },
   {
     "icao": "LIRF",
@@ -4047,12 +4057,13 @@
     "source_url": "https://inibuilds.com/products/inibuilds-dubai-omdb-msfs-2024",
     "server_version": null,
     "last_audited_at": "2026-10-25T10:55:49.482292+00:00",
-    "version_check_state": "inconsistent",
+    "version_check_state": "not_automatable",
     "source_store": "iniBuilds / Dubai 2024 bundle",
     "source_edition": "2024",
     "source_match": "Identité du produit et édition vérifiées par recherche du 25 octobre 2026",
-    "version_check_reason": "Code de scène absent de la fiche produit : association à revoir",
-    "last_attempt_at": "2026-10-25T10:55:49.482292+00:00"
+    "version_check_reason": "OMDU Skydive Dubai : sous-scène distincte ; le produit OMDB ne publie pas sa version propre.",
+    "last_attempt_at": "2026-10-25T10:55:49.482292+00:00",
+    "source_scope": "parent_reference_only"
   },
   {
     "icao": "OOMS",
