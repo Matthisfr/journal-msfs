@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-25",
-  "last_run": "2026-10-25T20:48:38.354566+00:00",
-  "weather_checked_at": "2026-10-25T20:48:38.354566+00:00",
-  "news_checked_at": "2026-10-25T20:48:38.354566+00:00",
+  "last_run": "2026-10-25T20:53:35.335320+00:00",
+  "weather_checked_at": "2026-10-25T20:53:35.335320+00:00",
+  "news_checked_at": "2026-10-25T20:53:35.335320+00:00",
   "weather": [
     {
       "icao": "KABQ",
@@ -20,8 +20,8 @@
     {
       "icao": "KASE",
       "name": "KASE Pitkin County Airport",
-      "observed_at": "2026-10-25T20:37:00+00:00",
-      "raw": "SPECI KASE 252037Z 02010G15KT 9SM TSRA BKN025 BKN033 OVC049 07/04 A3023 RMK AO2 LTG DSNT SW RAB21 TSB30 P0003 T00670044",
+      "observed_at": "2026-10-25T20:49:00+00:00",
+      "raw": "SPECI KASE 252049Z 36006KT 10SM -RA BKN025 OVC036 07/04 A3023 RMK AO2 LTG DSNT NE RAB21 TSB30E45 P0003",
       "score": 122,
       "summary": "orage, précipitations",
       "icon": "⛈️",
@@ -54,7 +54,7 @@
       "phenomenon": "Précipitations",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KPDX 251823Z 2518/2618 13009KT 4SM -RA BR OVC025 FM260000 12008KT P6SM -SHRA BKN035 FM261200 15007KT P6SM -SHRA OVC020"
+      "taf_raw": "TAF KPDX 252050Z 2521/2618 12011KT 4SM -RA BR OVC022 FM260000 12009KT P6SM -SHRA SCT020 BKN035 FM261200 15007KT P6SM -SHRA OVC020"
     },
     {
       "icao": "LESO",
@@ -68,19 +68,6 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF LESO 251700Z 2518/2618 22009KT 9999 BKN035 TX22/2611Z TN15/2606Z PROB40 TEMPO 2518/2524 BKN010 PROB40 TEMPO 2518/2522 3000 RADZ PROB30 TEMPO 2610/2618 02010KT"
-    },
-    {
-      "icao": "YPAD",
-      "name": "YPAD Adelaide Airport",
-      "observed_at": "2026-10-25T20:30:00+00:00",
-      "raw": "SPECI YPAD 252030Z AUTO 10004KT 030V130 6000 RA SCT027 BKN034 BKN043 09/08 Q1021",
-      "score": 32,
-      "summary": "visibilité < 5 SM, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF YPAD 251719Z 2518/2700 04005KT 9999 -SHRA SCT030 FM260100 23010KT 9999 -SHRA SCT045 FM260600 18008KT CAVOK FM261200 15005KT CAVOK FM261700 03004KT CAVOK INTER 2519/2601 5000 SHRA SCT020"
     },
     {
       "icao": "EDDV",
@@ -133,6 +120,19 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF DTMB 251700Z 2518/2618 32015KT 9999 SCT026 PROB40 TEMPO 2610/2618 35020G35KT"
+    },
+    {
+      "icao": "MDSD",
+      "name": "MDSD Las Americas International Airport",
+      "observed_at": "2026-10-25T20:00:00+00:00",
+      "raw": "METAR MDSD 252000Z 15009KT 8000 VCSH FEW016CB BKN016 BKN300 27/25 Q1011 CB/NE/SE/S/W",
+      "score": 20,
+      "summary": "visibilité < 5 SM",
+      "icon": "☁️",
+      "phenomenon": "Ciel couvert",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF MDSD 251600Z 2518/2618 18010KT 9999 FEW014CB BKN016 BKN300 PROB30 2519/2601 7000 -TSRA FEW014CB BKN016 BKN300 BECMG 2604/2606 04004KT"
     }
   ],
   "weather_coverage": {
@@ -269,15 +269,15 @@
     "without_official_url": 5,
     "manual_source": 5,
     "unverified": 36,
-    "audited_at": "2026-10-25T20:48:38.354566+00:00"
+    "audited_at": "2026-10-25T20:53:35.335320+00:00"
   },
-  "versions_checked_at": "2026-10-25T20:48:38.354566+00:00",
-  "releases_checked_at": "2026-10-25T20:48:38.354566+00:00",
+  "versions_checked_at": "2026-10-25T20:53:35.335320+00:00",
+  "releases_checked_at": "2026-10-25T20:53:35.335320+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-25T20:49:19.565146+00:00",
+    "checked_at": "2026-10-25T20:54:07.131548+00:00",
     "unverified": 20
   }
 }
