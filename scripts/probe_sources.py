@@ -32,3 +32,12 @@ def probe(url):
 with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
  for x in pool.map(probe,URLS):
   print(json.dumps(x,ensure_ascii=False))
+
+for shop,q in [("contrail.shop","BIKF"),("inibuilds.com","EGLL"),("contrail.shop","LIRF"),("inibuilds.com","KJFK")]:
+ u=f"https://{shop}/search/suggest.json?q={q}&resources%5Btype%5D=product&resources%5Blimit%5D=10"
+ try:
+  req=urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0"})
+  with urllib.request.urlopen(req,timeout=15) as resp: data=json.load(resp)
+  items=data.get("resources",{}).get("results",{}).get("products",[])
+  print("PRODUCTS",shop,q,len(items),json.dumps([{k:p.get(k) for k in ("title","vendor","type","url","handle","id")} for p in items],ensure_ascii=False))
+ except Exception as e: print("ERROR",u,str(e))
