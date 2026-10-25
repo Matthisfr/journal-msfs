@@ -206,10 +206,12 @@
     "installed": "3.4.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "verified",
     "note": "",
-    "source_url": null,
-    "server_version": null
+    "source_url": "https://www.aerosoft.com/en/blog/detail/sCategory/2238/blogArticle/6521",
+    "server_version": "3.4.0",
+    "version_checked_at": "2026-10-25",
+    "version_source": "Aerosoft — annonce officielle mise à jour 3.4 MSFS 2024"
   },
   {
     "icao": "EDDF",
