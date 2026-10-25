@@ -59,6 +59,63 @@ def render_rows(airports):
         )
     return "\n".join(out)
 
+def news_topic(a):
+    s = " ".join(str(a.get(k) or "") for k in ("topic", "category", "title")).lower()
+    if "sayintention" in s:
+        return "SI", "si"
+    if "mobiflight" in s:
+        return "MF", "mf"
+    if "fenix" in s:
+        return "FX", "fenix"
+    if "winctrl" in s or "winwing" in s:
+        return "WC", "winctrl"
+    if "gsx" in s:
+        return "GSX", "gsx"
+    if "fshud" in s:
+        return "ATC", "atc"
+    if "metar" in s or "stratawx" in s:
+        return "WX", "weather"
+    if "msfs" in s or "flight simulator" in s:
+        return "FS", "msfs"
+    return "✈", "generic"
+
+def build_news(status, editorial):
+    editorial_news = editorial.get("news") or []
+    superseded = {url for a in editorial_news for url in a.get("supersedes", [])}
+    seen = set()
+    news = []
+    for a in editorial_news + [x for x in status.get("news", []) if x.get("url") not in superseded]:
+        url = str(a.get("url") or "")
+        if url in seen or not url.startswith("https://"):
+            continue
+        seen.add(url)
+        news.append(a)
+    news.sort(key=lambda a: str(a.get("date") or ""), reverse=True)
+    cards = []
+    homes = []
+    for a in news:
+        label, kind = news_topic(a)
+        icon = f'<span class="topic-icon topic-{kind}" aria-hidden="true">{h(label)}</span>'
+        title = h(a.get("title") or "")
+        date = h(a.get("date") or "")
+        category = h(a.get("category") or "ACTUALITÉS")
+        url = h(a["url"])
+        source = h(a.get("source") or "Source officielle")
+        cards.append(
+            '<article class="news-card"><div class="news-meta">' + category + ' · ' + date +
+            ('<span class="new-tag">NEWS</span>' if a.get("new") else "") +
+            '</div><div class="news-heading">' + icon + '<h3>' + title + '</h3></div>' +
+            ('<p>' + h(a["summary"]) + '</p>' if a.get("summary") else "") +
+            ('<div class="news-impact"><b>Impact / action :</b> ' + h(a["impact"]) + '</div>' if a.get("impact") else "") +
+            '<div class="news-source"><a href="' + url + '" target="_blank" rel="noopener noreferrer">' + source + ' ↗</a></div></article>'
+        )
+        homes.append(
+            '<article><div class="home-news-row">' + icon + '<div class="home-news-content"><small>' +
+            category + ' · ' + date + '</small><strong>' + title +
+            '</strong><a href="' + url + '" target="_blank" rel="noopener noreferrer">Source officielle ↗</a></div></div></article>'
+        )
+    return "\n".join(cards), "\n".join(homes[:3])
+
 def build():
     airports = json.loads((PUBLIC / "airports.json").read_text(encoding="utf-8"))
     assert len(airports) == 171, f"Inventaire incomplet : {len(airports)} scènes"
@@ -75,6 +132,11 @@ def build():
         home_updated = "En attente de la première collecte"
     editorial_updated = editorial.get("last_updated") or "Non actualisées"
     index = (PUBLIC / "index.html").read_text(encoding="utf-8")
+    cards, home_cards = build_news(status, editorial)
+    index = index.replace('<div id="news-container" class="news-grid"></div>',
+                          '<div id="news-container" class="news-grid">' + cards + '</div>')
+    index = index.replace('<div id="home-news" class="home-news"></div>',
+                          '<div id="home-news" class="home-news">' + home_cards + '</div>')
     index = index.replace('id="home-updated">En attente de la première collecte</strong>',
                           'id="home-updated">' + h(home_updated) + '</strong>')
     index = index.replace('id="home-editorial-updated">Édition en préparation</strong>',
@@ -127,6 +189,7 @@ body{{background:#f5f5f1}}
     (PUBLIC / "airports.html").write_text(independent, encoding="utf-8")
     assert index.count("<tr>") >= len(airports), "Lignes statiques manquantes"
     assert "id=\"home-updated\">Le " in index, "Horodatage accueil absent"
+    assert index.count('class="news-card"') >= 4, "Actualités officielles manquantes"
     assert independent.count("<tr>") >= len(airports), "Page indépendante incomplète"
     print(f"Publication : {len(airports)} scènes HTML statiques + page indépendante ; rev={rev}")
 
