@@ -22,5 +22,30 @@
     "store": "Orbx Direct",
     "edition": "MSFS 2020",
     "note": "Version disponible via Orbx Central, non publiée sur la page"
+  },
+  "PUR justsim-airport-lfmn-nice": {
+    "url": "https://secure.simmarket.com/justsim-nice-cote-dazur-airport-msfs24.phtml",
+    "store": "simMarket / JustSim",
+    "edition": "MSFS 2024 — nouvelle édition",
+    "note": "Attention : ta version 2.2.0 est celle de la série NG MSFS 2020. JustSim déconseille son utilisation dans MSFS 2024. Édition MSFS 2024 distincte : 1.2.2, mise à niveau éventuellement payante.",
+    "new_edition_version": "1.2.2"
+  },
+  "fsdreamteam-airport-cyvr-vancouver": {
+    "url": "https://secure.simmarket.com/fsdreamteam-vancouver-v2-msfs.phtml",
+    "store": "simMarket / FSDreamTeam",
+    "edition": "MSFS 2020 / 2024",
+    "note": "Fiche simMarket trouvée, version affichée 1.0.7 ; version installée 1.3.1. Contrôler la version dans FSDT Live Update, boutique possiblement en retard."
+  },
+  "fsdreamteam-airport-kclt-charlotte": {
+    "url": "https://secure.simmarket.com/fsdreamteam-charlotte-douglas-msfs.phtml",
+    "store": "simMarket / FSDreamTeam",
+    "edition": "MSFS 2020 / 2024",
+    "note": "Fiche simMarket version 1.2.0 ; vérifier si elle correspond à la branche de ta scène FSDreamTeam."
+  },
+  "fsdreamteam-airport-lszh-zurich": {
+    "url": "https://secure.simmarket.com/fsdreamteam-zurich-airport-msfs.phtml",
+    "store": "simMarket / FSDreamTeam",
+    "edition": "MSFS 2020 / 2024",
+    "note": "Fiche simMarket version 1.6.5, inférieure à ta version 1.6.8 ; privilégier FSDT Live Update pour la dernière révision."
   }
 }
