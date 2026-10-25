@@ -357,7 +357,12 @@
     "last_audited_at": "2026-10-25T10:58:53.529308+00:00",
     "version_check_state": "no_version",
     "version_check_reason": "Fiche accessible, mais aucun numéro de version public fiable ou édition ambiguë",
-    "last_attempt_at": "2026-10-25T10:58:53.529308+00:00"
+    "last_attempt_at": "2026-10-25T10:58:53.529308+00:00",
+    "reference_version": "3.4.0",
+    "reference_source_url": "https://forum.aerosoft.com/index.php?/topic/185758-ctd-beim-ein-und-auszoomen-im-msfs-2024-seit-su61/",
+    "reference_confidence": "official_support_human_checked",
+    "reference_checked_at": "2026-10-25",
+    "source_note": "Le support Aerosoft mentionne la version 3.4.0 ; numéro présent dans l'inventaire, mais la page consultée par le robot ne publie pas un champ Version exploitable."
   },
   {
     "icao": "EDDF",
@@ -2709,7 +2714,11 @@
     "source_match": "Identité du produit et édition vérifiées par recherche du 25 octobre 2026",
     "version_check_reason": "Fiche accessible, mais aucun numéro de version public fiable ou édition ambiguë",
     "last_attempt_at": "2026-10-25T10:58:53.529308+00:00",
-    "source_note": "Version datée de l’éditeur (2026.09.14). Le manifeste local 25.8.5 correspond à 2025.08.05 ; comparaison selon la date, sans confusion avec un autre add-on."
+    "source_note": "Version publiée 2026.09.14 constatée sur la page EuroScene le 25/10/2026. Le robot ne peut pas encore extraire ce numéro : alerte de mise à jour à confirmer manuellement (25.8.5 = 2025.08.05).",
+    "reference_version": "2026.09.14",
+    "reference_source_url": "https://fr.flightsim.to/addon/84186/lepa-palma-de-mallorca-airport",
+    "reference_confidence": "publisher_page_human_checked",
+    "reference_checked_at": "2026-10-25"
   },
   {
     "icao": "LESO",
