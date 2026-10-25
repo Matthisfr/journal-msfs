@@ -123,19 +123,19 @@ def comparable_parts(installed,online,folder=""):
     left=str(installed or "").strip().lstrip("vV")
     right=str(online or "").strip().lstrip("vV")
     if folder in DATE_SCENES:
-        if re.fullmatch(r"\d{2}\\.\d{1,2}\\.\d{1,2}",left):
+        if re.fullmatch(r"\d{2}\.\d{1,2}\.\d{1,2}",left):
             yy,mm,dd=map(int,left.split("."))
             left=f"{2000+yy}.{mm}.{dd}"
     # Formats 1.01, 1.03, 1.00 : interpréter comme 1.0.1/1.0.3/1.0.0
     # seulement lorsque le manifeste local possède exactement cette forme.
-    if re.fullmatch(r"\d+\\.0\d{1,2}",right) and re.fullmatch(r"\d+\\.\d+\\.\d+",left):
+    if re.fullmatch(r"\d+\.0\d{1,2}",right) and re.fullmatch(r"\d+\.\d+\.\d+",left):
         major,compressed=right.split(".")
         if len(compressed)==2:
             right=f"{major}.{int(compressed[0])}.{int(compressed[1])}"
         elif len(compressed)==3:
             right=f"{major}.{int(compressed[0])}.{int(compressed[1:])}"
     # France VFR : 1.31 signifie 1.3.1, 1.10 signifie 1.1.0.
-    if folder.startswith(PACKED_VENDOR_PREFIXES) and re.fullmatch(r"\d+\\.\d{2}",right):
+    if folder.startswith(PACKED_VENDOR_PREFIXES) and re.fullmatch(r"\d+\.\d{2}",right):
         major,compressed=right.split(".")
         right=f"{major}.{compressed[0]}.{compressed[1]}"
     a,b=version_parts(left),version_parts(right)
