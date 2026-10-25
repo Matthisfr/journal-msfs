@@ -9,7 +9,7 @@
   "total_flights": 38,
   "airports_visited": 37,
   "source": "profil public Gate 404 (navigateur Chromium)",
-  "rank_badge": null,
+  "rank_badge": "sayintentions-rank.svg",
   "recent_flights": [
     {
       "id": "IFR-883929202",
@@ -102,7 +102,7 @@
       "duration": "1h 46m"
     }
   ],
-  "flights_checked_at": "2026-10-25T15:34:31.847034+00:00",
-  "verified_at": "2026-10-25T15:34:31.847034+00:00",
-  "checked_at": "2026-10-25T15:34:31.847034+00:00"
+  "flights_checked_at": "2026-10-25T15:39:12.487097+00:00",
+  "verified_at": "2026-10-25T15:39:12.487097+00:00",
+  "checked_at": "2026-10-25T15:39:12.487097+00:00"
 }
