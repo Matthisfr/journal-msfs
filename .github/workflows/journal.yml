@@ -62,11 +62,19 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Installer le lecteur Excel
+        if: steps.gate.outputs.run == 'true'
+        run: python -m pip install openpyxl==3.1.5
+
+      - name: Importer le nouvel inventaire Excel
+        if: steps.gate.outputs.run == 'true'
+        run: python scripts/import_airports_excel.py
+
       - name: Vérifier le code et les scripts du site
         if: steps.gate.outputs.run == 'true'
         run: |
           python -m unittest discover -s tests -v
-          python -m py_compile scripts/update.py scripts/versions.py scripts/releases.py scripts/watch_sources.py scripts/build_site.py scripts/build_airport_map.py scripts/smoke_live.py scripts/discover_airports.py scripts/discover_simmarket.py scripts/apply_airport_sources.py scripts/software_versions.py scripts/fetch_hardware_photos.py scripts/fetch_simbrief.py scripts/fetch_sayintentions_career.py
+          python -m py_compile scripts/update.py scripts/versions.py scripts/releases.py scripts/watch_sources.py scripts/build_site.py scripts/build_airport_map.py scripts/import_airports_excel.py scripts/smoke_live.py scripts/discover_airports.py scripts/discover_simmarket.py scripts/apply_airport_sources.py scripts/software_versions.py scripts/fetch_hardware_photos.py scripts/fetch_simbrief.py scripts/fetch_sayintentions_career.py
           node --check public/app.js
           node tests/test_frontend.cjs
 
