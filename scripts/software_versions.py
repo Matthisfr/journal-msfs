@@ -130,7 +130,7 @@ def update():
                         "url":current["url"],"new":True,
                         "summary":f"Version précédente {previous_version} → {current['version']}. "+short_notes(current["notes"]),
                         "impact":"Consulter le changelog officiel complet et vérifier la compatibilité Fenix / MSFS 2024 avant installation.",
-                        "details":short_notes(current["notes"]),
+                        "details":"\n".join(line.strip() for line in str(current["notes"]).splitlines() if line.strip())[:3800],
                         "changelog_url":current["url"],
                         "version_before":previous_version,"version_after":current["version"]
                     })
