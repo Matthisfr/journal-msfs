@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-25",
-  "last_run": "2026-10-25T09:22:13.495919+00:00",
-  "weather_checked_at": "2026-10-25T09:22:13.495919+00:00",
-  "news_checked_at": "2026-10-25T09:22:13.495919+00:00",
+  "last_run": "2026-10-25T09:23:42.077168+00:00",
+  "weather_checked_at": "2026-10-25T09:23:42.077168+00:00",
+  "news_checked_at": "2026-10-25T09:23:42.077168+00:00",
   "weather": [
     {
       "icao": "KBZN",
@@ -109,19 +109,6 @@
       "taf_raw": "TAF AMD EGLL 250622Z 2506/2612 24018G28KT 9999 SCT040 BECMG 2506/2509 27022G32KT PROB30 TEMPO 2509/2514 27026G43KT BECMG 2516/2519 25012KT PROB30 TEMPO 2516/2521 26015G25KT BECMG 2603/2606 18008KT TEMPO 2607/2612 6000 RA -RADZ BKN014 BECMG 2609/2612 18018G28KT PROB30 TEMPO 2610/2612 4000 RADZ BKN008"
     },
     {
-      "icao": "EKCH",
-      "name": "EKCH Copenhagen Airport",
-      "observed_at": "2026-10-25T08:50:00+00:00",
-      "raw": "METAR EKCH 250850Z 19023G34KT 9999 -RA OVC008 10/10 Q0987 TEMPO 6000 BKN018",
-      "score": 34,
-      "summary": "rafales ≥ 25 kt, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EKCH 250827Z 2509/2609 19018KT 9999 BKN020 TEMPO 2509/2510 17030G45KT BKN008 TEMPO 2510/2522 20020G32KT SHRA BKN020CB BECMG 2522/2524 24018KT TEMPO 2600/2609 23015G25KT SCT012CB"
-    },
-    {
       "icao": "ENGM",
       "name": "Aerosoft Oslo Airport",
       "observed_at": "2026-10-25T08:50:00+00:00",
@@ -133,6 +120,19 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF ENGM 250500Z 2506/2606 14020G32KT 9999 -RA BKN015 BECMG 2506/2508 RA TEMPO 2506/2512 15015KT 4000 BKN007 BECMG 2512/2514 12015KT -RA BKN008 TEMPO 2516/2606 4000 SHRA BKN006 FEW030CB BECMG 2602/2604 20005KT"
+    },
+    {
+      "icao": "LFST",
+      "name": "LFST Strasbourg-Entzheim Airport",
+      "observed_at": "2026-10-25T09:00:00+00:00",
+      "raw": "METAR LFST 250900Z AUTO 19016G31KT 170V230 9999 BKN033 OVC041 14/11 Q1003 TEMPO 4000 RA FEW010 SCT020TCU BKN030",
+      "score": 34,
+      "summary": "rafales ≥ 25 kt, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF LFST 250515Z 2506/2606 19016KT 9999 FEW015 BKN030 TEMPO 2506/2510 20018G30KT -RA TEMPO 2510/2513 26020G35KT 4000 RA FEW010 SCT020TCU BKN030 BECMG 2513/2514 27015KT PROB40 TEMPO 2514/2519 30020G35KT 4000 SHRA SCT020TCU BECMG 2521/2523 21008KT"
     }
   ],
   "weather_coverage": {
@@ -251,8 +251,8 @@
     "without_official_url": 162,
     "manual_source": 1,
     "unverified": 163,
-    "audited_at": "2026-10-25T09:22:13.495919+00:00"
+    "audited_at": "2026-10-25T09:23:42.077168+00:00"
   },
-  "versions_checked_at": "2026-10-25T09:22:13.495919+00:00",
-  "releases_checked_at": "2026-10-25T09:22:13.495919+00:00"
+  "versions_checked_at": "2026-10-25T09:23:42.077168+00:00",
+  "releases_checked_at": "2026-10-25T09:23:42.077168+00:00"
 }
