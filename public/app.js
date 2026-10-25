@@ -32,19 +32,19 @@ function renderAirports(){
   const checkedDate=String(status.versions_checked_at||'').slice(0,10);
   const isVerified=a=>!!a.server_version&&a.version_check_state==='verified'&&a.version_checked_at===checkedDate;
   const verified=airports.filter(isVerified);
-  const updates=verified.filter(a=>compareVersions(a.installed,a.server_version)==='update');
+  const updates=verified.filter(a=>a.version_comparison==='update');
   $('#verified-count').textContent=verified.length;
   $('#updates-count').textContent=updates.length;
-  const matches=airports.filter(a=>(!q||[a.icao,a.original,a.name,a.publisher,a.folder,a.country,a.region,a.installed,a.server_version].join(' ').toLowerCase().includes(q))&&(!region||(a.region||a.country)===region)&&(!st||(st==='verified'?isVerified(a):st==='update'?isVerified(a)&&compareVersions(a.installed,a.server_version)==='update':a.status===st)));
+  const matches=airports.filter(a=>(!q||[a.icao,a.original,a.name,a.publisher,a.folder,a.country,a.region,a.installed,a.server_version].join(' ').toLowerCase().includes(q))&&(!region||(a.region||a.country)===region)&&(!st||(st==='verified'?isVerified(a):st==='update'?isVerified(a)&&a.version_comparison==='update':a.status===st)));
   $('#airport-count').textContent=`${matches.length} scène${matches.length>1?'s':''} affichée${matches.length>1?'s':''} sur ${airports.length}`;
   const cls={'UNK-P':'p','UNK-V':'v','UNK-C':'c','UNK-S':'s','verified':'ok'};
   $('#airport-body').innerHTML=matches.map(a=>{
     const st=a.status||'UNK-V';
     const source=a.source_url?`<a href="${esc(isSafeUrl(a.source_url))}" target="_blank" rel="noopener noreferrer">${esc((a.source_store||'Éditeur')+(a.source_edition?' · '+a.source_edition:''))} ↗</a>`:a.source_catalog_url?`<a href="${esc(isSafeUrl(a.source_catalog_url))}" target="_blank" rel="noopener noreferrer">Catalogue éditeur (version non confirmée) ↗</a>`:'';
-    const comp=a.server_version?compareVersions(a.installed,a.server_version):'unknown';
+    const comp=a.server_version?(a.version_comparison==='update'?'update':a.version_comparison==='equal'?'current':a.version_comparison==='source_older'?'ahead':'unknown'):'unknown';
     const compLabel=comp==='update'?'MISE À JOUR':comp==='current'?'À JOUR':comp==='ahead'?'INSTALLÉE + RÉCENTE':comp==='major'?'NOUVELLE ÉDITION':'À COMPARER';
     const compClass=comp==='update'?'flag-s':comp==='current'?'flag-ok':'flag-v';
-    const online=isVerified(a)?`<b>${esc(a.server_version)}</b><small><span class="flag ${compClass}">${compLabel}</span></small><small>${source}</small><small>Vérifiée le ${esc(localDate(a.version_checked_at))}</small>`:a.server_version?`<b>${esc(a.server_version)}</b><small>Dernière version connue, non revalidée aujourd’hui</small><small><span class="flag flag-${cls[st]||'v'}">${esc(st==='verified'?'UNK-V':st)}</span></small><small>${source}</small><small>Dernière confirmation : ${esc(localDate(a.version_checked_at))}</small>`:`<span class="flag flag-${cls[st]||'v'}">${esc(st)}</span>${source?`<small>${source}</small>`:''}`;
+    const online=isVerified(a)?`<b>${esc(a.server_version)}</b><small><span class="flag ${compClass}">${compLabel}</span></small><small>${source}</small><small>Vérifiée le ${esc(localDate(a.version_checked_at))}</small>`:a.server_version?`<b>${esc(a.server_version)}</b><small>${a.version_checked_at===checkedDate?'Version boutique contrôlée aujourd’hui, comparaison non validée':'Dernière version connue, non revalidée aujourd’hui'}</small><small><span class="flag flag-${cls[st]||'v'}">${esc(st==='verified'?'UNK-V':st)}</span></small><small>${source}</small><small>Dernière confirmation : ${esc(localDate(a.version_checked_at))}</small>`:`<span class="flag flag-${cls[st]||'v'}">${esc(st)}</span>${source?`<small>${source}</small>`:''}`;
     return `<tr><td><span class="code">${esc(a.icao)}</span>${a.original!==a.icao?`<small>Source : ${esc(a.original)}</small>`:''}</td><td><b>${esc(a.name)}</b><small>${esc(a.note||a.folder||'')}</small></td><td>${esc(a.publisher)}</td><td><b>${esc(a.installed||'Non renseignée')}</b></td><td>${online}${(a.version_check_state!=='verified'&&a.version_check_reason)?`<small class="source-note">${esc(a.version_check_reason)}</small>`:a.source_note?`<small class="source-note">${esc(a.source_note)}</small>`:''}</td></tr>`;
   }).join('')||'<tr><td colspan="5">Aucune scène correspondant à ces filtres.</td></tr>';
 }
