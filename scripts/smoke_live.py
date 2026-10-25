@@ -45,6 +45,13 @@ def verify():
     software = json.loads(get("software_versions.json"))
     if software.get("total", 0) < 23 or len(software.get("items", [])) < 23:
         raise AssertionError("Catalogue logiciel quotidien incomplet")
+    if 'id="qualite"' not in index or 'id="quality-airport-details"' not in index:
+        raise AssertionError("Onglet QUALITÉ ou inventaire des anomalies absent")
+    if 'id="quality-audit"' not in index:
+        raise AssertionError("Bilan qualité absent de son onglet dédié")
+    home = index.split('id="accueil"', 1)[1].split('id="meteo"', 1)[0]
+    if 'id="quality-audit"' in home:
+        raise AssertionError("Bilan qualité toujours présent sur l'accueil")
     if 'id="simbrief-last-flight"' not in index:
         raise AssertionError("Encart dernier plan de vol absent de la page d'accueil")
     simbrief = json.loads(get("simbrief_last.json"))
