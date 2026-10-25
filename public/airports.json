@@ -190,10 +190,12 @@
     "installed": "1.0.5",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "verified",
     "note": "",
-    "source_url": null,
-    "server_version": null
+    "source_url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/3238/aerosoft-mega-airport-brussels",
+    "server_version": "1.0.5",
+    "version_checked_at": "2026-10-25",
+    "version_source": "Aerosoft — fiche produit officielle"
   },
   {
     "icao": "EDDB",
@@ -218,10 +220,12 @@
     "installed": "1.1.2",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "verified",
     "note": "",
-    "source_url": null,
-    "server_version": null
+    "source_url": "https://www.aerosoft.com/us/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/4398/aerosoft-mega-airport-frankfurt",
+    "server_version": "1.1.2",
+    "version_checked_at": "2026-10-25",
+    "version_source": "Aerosoft — fiche produit officielle"
   },
   {
     "icao": "EDDG",
@@ -246,10 +250,12 @@
     "installed": "1.0.4",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "verified",
     "note": "",
-    "source_url": null,
-    "server_version": null
+    "source_url": "https://www.aerosoft.com/us/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/3254/sim-wings-hamburg",
+    "server_version": "1.0.4",
+    "version_checked_at": "2026-10-25",
+    "version_source": "Aerosoft — fiche produit officielle"
   },
   {
     "icao": "EDDK",
@@ -260,10 +266,12 @@
     "installed": "1.1.1",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "verified",
     "note": "",
-    "source_url": null,
-    "server_version": null
+    "source_url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/3237/aerosoft-airport-cologne/bonn",
+    "server_version": "1.1.1",
+    "version_checked_at": "2026-10-25",
+    "version_source": "Aerosoft — fiche produit officielle"
   },
   {
     "icao": "EDDL",
@@ -274,10 +282,12 @@
     "installed": "1.0.3",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "verified",
     "note": "",
-    "source_url": null,
-    "server_version": null
+    "source_url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/4547/aerosoft-airport-dusseldorf",
+    "server_version": "1.0.3",
+    "version_checked_at": "2026-10-25",
+    "version_source": "Aerosoft — fiche produit officielle"
   },
   {
     "icao": "EDDL",
@@ -302,10 +312,12 @@
     "installed": "2.5.1",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "verified",
     "note": "",
-    "source_url": null,
-    "server_version": null
+    "source_url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/3253/sim-wings-munich-v2",
+    "server_version": "2.5.1",
+    "version_checked_at": "2026-10-25",
+    "version_source": "Aerosoft — fiche produit officielle"
   },
   {
     "icao": "EDDS",
@@ -540,10 +552,12 @@
     "installed": "1.0.2",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "verified",
     "note": "",
-    "source_url": null,
-    "server_version": null
+    "source_url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/4286/aerosoft-mega-airport-oslo-gardermoen",
+    "server_version": "1.0.2",
+    "version_checked_at": "2026-10-25",
+    "version_source": "Aerosoft — fiche produit officielle"
   },
   {
     "icao": "ESGG",
@@ -2290,10 +2304,12 @@
     "installed": "1.1.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "verified",
     "note": "",
-    "source_url": null,
-    "server_version": null
+    "source_url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-north-america/3812/sim-wings-anchorage",
+    "server_version": "1.1.0",
+    "version_checked_at": "2026-10-25",
+    "version_source": "Aerosoft — fiche produit officielle"
   },
   {
     "icao": "PHNL",
