@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-25",
-  "last_run": "2026-10-25T09:00:08.168923+00:00",
-  "weather_checked_at": "2026-10-25T09:00:08.168923+00:00",
-  "news_checked_at": "2026-10-25T09:00:08.168923+00:00",
+  "last_run": "2026-10-25T09:06:09.298302+00:00",
+  "weather_checked_at": "2026-10-25T09:06:09.298302+00:00",
+  "news_checked_at": "2026-10-25T09:06:09.298302+00:00",
   "weather": [
     {
       "icao": "KBZN",
@@ -20,15 +20,15 @@
     {
       "icao": "KDTW",
       "name": "KDTW Detro Metro Wayne County Airport",
-      "observed_at": "2026-10-25T08:53:00+00:00",
-      "raw": "METAR KDTW 250853Z 00000KT 1/4SM R03R/1400V1600FT FG OVC002 08/07 A3047 RMK AO2 TWR VIS 1/2 SLP318 T00780067 51001",
+      "observed_at": "2026-10-25T09:03:00+00:00",
+      "raw": "SPECI KDTW 250903Z 00000KT 1/8SM R03R/1000V1600FT FG OVC001 08/07 A3047 RMK AO2 TWR VIS 1/2 T00780072",
       "score": 145,
       "summary": "brouillard, visibilité < 1 SM",
       "icon": "🌫️",
       "phenomenon": "Brouillard",
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KDTW 250520Z 2506/2612 VRB03KT 2SM BR SCT004 FM250800 VRB03KT 1/4SM FG VV003 FM251300 21005KT 1SM BR SCT003 FM251400 21005KT P6SM BKN250"
+      "taf_raw": "TAF KDTW 250901Z 2509/2612 VRB03KT 1/4SM FG VV003 FM251300 21005KT 1SM BR SCT003 FM251400 21005KT P6SM BKN250 FM260600 25003KT P6SM BKN250"
     },
     {
       "icao": "KCRW",
@@ -83,19 +83,6 @@
       "taf_raw": "TAF AMD EGPK 250822Z 2508/2606 28032G45KT 9999 SCT022 TEMPO 2508/2512 31045G55KT 3500 +SHRA PROB40 TEMPO 2508/2512 27055G65KT PROB40 TEMPO 2512/2520 28038G55KT PROB40 TEMPO 2512/2524 7000 SHRA BECMG 2517/2520 26018G28KT PROB40 TEMPO 2600/2604 7000 SHRA BKN014 BECMG 2601/2604 22014KT"
     },
     {
-      "icao": "EINN",
-      "name": "EINN Shannon Airport",
-      "observed_at": "2026-10-25T08:30:00+00:00",
-      "raw": "METAR EINN 250830Z 27024G38KT 9999 FEW018CB 09/05 Q1004 TEMPO 4000 SHRA",
-      "score": 57,
-      "summary": "rafales ≥ 35 kt, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EINN 250500Z 2506/2606 29020G32KT 9999 FEW018 BKN045 TEMPO 2506/2509 28025G42KT 4000 SHRA FEW018CB PROB40 TEMPO 2509/2513 -SHRA FEW018CB BECMG 2513/2515 27015KT TEMPO 2515/2517 27016G26KT BECMG 2517/2519 24010KT BECMG 2519/2521 19008KT BECMG 2600/2602 13012KT -RA TEMPO 2603/2606 14015G25KT 3000 -RADZ BKN008"
-    },
-    {
       "icao": "ESGG",
       "name": "ESGG Gothenburg Landvetter",
       "observed_at": "2026-10-25T08:50:00+00:00",
@@ -109,19 +96,6 @@
       "taf_raw": "TAF ESGG 250830Z 2509/2609 16022G35KT 9999 -RA SCT010 BKN020 TEMPO 2509/2513 2500 RA BKN006 TEMPO 2511/2606 4000 SHRA BKN008 BKN020CB PROB40 2515/2606 TS"
     },
     {
-      "icao": "LFJL",
-      "name": "LFJL Metz-Nancy Lorraine Airport",
-      "observed_at": "2026-10-25T08:30:00+00:00",
-      "raw": "METAR LFJL 250830Z AUTO 24017KT 2300 R04/1400U +RA BR BKN006/// BKN015/// BKN027/// ///CB 11/11 Q1002 BECMG 26015G25KT 8000 NSW FEW008 BKN015",
-      "score": 57,
-      "summary": "visibilité < 3 SM, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF AMD LFJL 250835Z 2508/2606 24020KT 8000 -RA FEW008 BKN015 TEMPO 2508/2510 28025G38KT 2500 RA BKN006 SCT020CB BECMG 2510/2512 26015G25KT NSW TEMPO 2512/2519 30025G40KT 4000 SHRA SCT020CB BECMG 2519/2521 25012KT"
-    },
-    {
       "icao": "EGLL",
       "name": "EGLL London Heathrow",
       "observed_at": "2026-10-25T08:50:00+00:00",
@@ -133,6 +107,32 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF AMD EGLL 250622Z 2506/2612 24018G28KT 9999 SCT040 BECMG 2506/2509 27022G32KT PROB30 TEMPO 2509/2514 27026G43KT BECMG 2516/2519 25012KT PROB30 TEMPO 2516/2521 26015G25KT BECMG 2603/2606 18008KT TEMPO 2607/2612 6000 RA -RADZ BKN014 BECMG 2609/2612 18018G28KT PROB30 TEMPO 2610/2612 4000 RADZ BKN008"
+    },
+    {
+      "icao": "EKCH",
+      "name": "EKCH Copenhagen Airport",
+      "observed_at": "2026-10-25T08:50:00+00:00",
+      "raw": "METAR EKCH 250850Z 19023G34KT 9999 -RA OVC008 10/10 Q0987 TEMPO 6000 BKN018",
+      "score": 34,
+      "summary": "rafales ≥ 25 kt, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EKCH 250827Z 2509/2609 19018KT 9999 BKN020 TEMPO 2509/2510 17030G45KT BKN008 TEMPO 2510/2522 20020G32KT SHRA BKN020CB BECMG 2522/2524 24018KT TEMPO 2600/2609 23015G25KT SCT012CB"
+    },
+    {
+      "icao": "ENGM",
+      "name": "Aerosoft Oslo Airport",
+      "observed_at": "2026-10-25T08:50:00+00:00",
+      "raw": "METAR ENGM 250850Z 13017G29KT 100V160 9999 -RA SCT012 BKN015 05/03 Q0981 TEMPO RA",
+      "score": 34,
+      "summary": "rafales ≥ 25 kt, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF ENGM 250500Z 2506/2606 14020G32KT 9999 -RA BKN015 BECMG 2506/2508 RA TEMPO 2506/2512 15015KT 4000 BKN007 BECMG 2512/2514 12015KT -RA BKN008 TEMPO 2516/2606 4000 SHRA BKN006 FEW030CB BECMG 2602/2604 20005KT"
     }
   ],
   "weather_coverage": {
@@ -222,5 +222,5 @@
     "verified_today": 8,
     "unavailable": 0
   },
-  "versions_checked_at": "2026-10-25T09:00:08.168923+00:00"
+  "versions_checked_at": "2026-10-25T09:06:09.298302+00:00"
 }
