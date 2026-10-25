@@ -42,6 +42,9 @@ class VersionTests(unittest.TestCase):
         self.assertEqual(v.compare_versions('1.0.1','1.01','francevfr-airport-lfkj-ajaccio'),'equal')
         self.assertEqual(v.compare_versions('1.0.2','1.01','inibuilds-heliport-58ca-hooper'),'source_older')
         self.assertEqual(v.compare_versions('1.0.0','1.00','doublet-airport-ooms-muscat'),'equal')
+    def test_muha_single_major_only(self):
+        self.assertEqual(v.compare_versions('2.0.0','2','mexhighflight-airport-muha-jose-marti'),'equal')
+        self.assertEqual(v.compare_versions('2.0.0','2','unrelated-airport'),'incomparable')
     def test_euroscene_date_format(self):
         self.assertEqual(v.compare_versions('25.8.5','2026.09.14','euroscene-airport-lepa-palma-de-mallorca'),'update')
         self.assertEqual(v.compare_versions('25.8.5','2025.08.05','euroscene-airport-lepa-palma-de-mallorca'),'equal')
