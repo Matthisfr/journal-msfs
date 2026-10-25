@@ -72,6 +72,16 @@ for a in airports:
  a["source_note"]=m.get("note","")
  if m.get("new_edition_version"):
   a["new_edition_version"]=m["new_edition_version"]
+  try:
+   from discover_simmarket import parse_page
+   _,result=parse_page(m["url"])
+   if result.get("state")=="verified":
+    a["new_edition_version"]=result["version"]
+    a["new_edition_checked_at"]=today
+   else:
+    a["new_edition_checked_at"]=None
+  except Exception:
+   a["new_edition_checked_at"]=None
  a["version_check_state"]="unavailable"
  a["version_check_reason"]=m.get("note","Version à vérifier dans le gestionnaire éditeur")
  a["status"]="UNK-V"
