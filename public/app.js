@@ -112,7 +112,7 @@ function renderNews(){
 }
 
 function renderSoftware(){
-  const items=software.items||[],q=($('#software-search')?.value||'').trim().toLowerCase(),filter=$('#software-filter')?.value||'';
+  const items=Array.isArray(software.items)?software.items:[],q=($('#software-search')?.value||'').trim().toLowerCase(),filter=$('#software-filter')?.value||'';
   const changed=items.filter(x=>x.state==='changed').length,verified=items.filter(x=>x.state==='verified'||x.state==='changed').length;
   const overview=$('#software-overview');
   if(overview)overview.innerHTML='<strong>'+items.length+' logiciels suivis</strong><span>'+verified+' versions confirmées · '+changed+' changements · '+(items.length-verified)+' non confirmées</span><small>Contrôle : '+esc(localDateTime(software.checked_at))+'</small>';
@@ -135,7 +135,7 @@ function renderSoftware(){
 }
 function renderHardwareGallery(){
   const el=$('#hardware-gallery');if(!el)return;
-  el.innerHTML=hardware.map(x=>{
+  el.innerHTML=(Array.isArray(hardware)?hardware:[]).map(x=>{
     const photo=hardwareImages[x.id]||{};
     const picture=photo.state==='photo'&&photo.path?
       '<img class="hardware-photo" loading="lazy" decoding="async" src="'+esc(photo.path)+'" alt="Photographie du matériel '+esc(x.name)+'" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.hidden=false">'+
