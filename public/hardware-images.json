@@ -2,56 +2,48 @@
   "fcu": {
     "path": "hardware/fcu.jpg",
     "state": "photo",
-    "source": "Photographie produit — Shopee",
-    "origin": "https://down-th.img.susercontent.com/file/th-11134207-7rasl-ma464bh8iux534"
+    "source": "Photographie produit — Shopee"
   },
   "efis": {
     "path": "hardware/efis.jpg",
     "state": "photo",
-    "source": "Photographie produit — Carousell",
-    "origin": "https://media.karousell.com/media/photos/products/2024/11/30/preorder_winwing_airbus_a320_e_1732937914_71388ee5_progressive"
+    "source": "Photographie produit — Carousell"
   },
   "mcdu": {
-    "path": "https://images-cdn.ubuy.lv/690f9f19039e9835dd0f1c93-winwing-airbus-mcdu-multifunction.jpg",
-    "state": "photo_remote",
-    "source": "Photographie produit — Ubuy",
-    "reason": "Photo externe : affichage soumis à l'autorisation du fournisseur"
+    "path": "hardware/mcdu.png",
+    "state": "photo",
+    "source": "Photographie WINWING MCDU (gamme de trois CDU) — FSNews",
+    "origin": "https://cdn.fsnews.eu/uploads/2025/01/bbbb.png"
   },
   "nws": {
     "path": "hardware/nws.png",
     "state": "photo",
-    "source": "Photographie promotionnelle WINWING — simFlight",
-    "origin": "https://www.simflight.com/wp-content/uploads/2025/06/WinWing_05.png"
+    "source": "Photographie promotionnelle WINWING — simFlight"
   },
   "rmp": {
     "path": "hardware/rmp.jpg",
     "state": "photo",
-    "source": "Visuel produit WINCTRL officiel — X",
-    "origin": "https://pbs.twimg.com/media/HJfZ10VbUAAjwQe.jpg"
+    "source": "Visuel produit WINCTRL officiel — X"
   },
   "tcas": {
     "path": "hardware/tcas.png",
     "state": "photo",
-    "source": "Photographie produit — JVTech",
-    "origin": "https://image.jeuxvideo.com/medias-crop-1200-675/177623/1776230873-8697-card.png"
+    "source": "Photographie produit — JVTech"
   },
   "throttle": {
     "path": "hardware/throttle.jpg",
     "state": "photo",
-    "source": "Photographie promotionnelle WINWING — simFlight",
-    "origin": "https://www.simflight.com/wp-content/uploads/2025/09/URSA-MINOR-32-Throttle-Meta-01-1536x1536.jpeg"
+    "source": "Photographie promotionnelle WINWING — simFlight"
   },
   "pac": {
     "path": "hardware/pac.webp",
     "state": "photo",
-    "source": "Photographie produit — SimRaceShop",
-    "origin": "https://simraceshop.de/media/image/product/7667/md/winwing-32-pac.webp"
+    "source": "Photographie produit — SimRaceShop"
   },
   "pedals": {
     "path": "hardware/pedals.webp",
     "state": "photo",
-    "source": "Photographie produit — SimRaceShop",
-    "origin": "https://simraceshop.de/media/image/product/7663/lg/winwing-rudder-with-damper.webp"
+    "source": "Photographie produit — SimRaceShop"
   },
   "acp": {
     "state": "unpublished",
@@ -64,7 +56,6 @@
   "agp": {
     "path": "hardware/agp.jpg",
     "state": "photo",
-    "source": "Photographie produit — The Onion Shop",
-    "origin": "https://theonionshop.com/cdn/shop/files/32agp2.jpg?v=1767843393&width=1445"
+    "source": "Photographie produit — The Onion Shop"
   }
 }
