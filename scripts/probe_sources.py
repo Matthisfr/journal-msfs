@@ -107,3 +107,13 @@ for url in ("https://www.bing.com/search?q=site%3Asecure.simmarket.com+LFST+FRAN
   links=list(dict.fromkeys(re.findall(r'href="([^"]+\.phtml[^"]*)"',raw,re.I)))[:6]
   print("SEARCH_ENDPOINT",url,resp.status,len(raw),resp.url,links)
  except Exception as e:print("SEARCH_ENDPOINT_ERROR",url,type(e).__name__,str(e)[:120])
+
+for q in ("LFST","CYVR","LFKB","ESSA","TFFF"):
+ url="https://secure.simmarket.com/advanced_search_result.php?keywords="+q
+ try:
+  req=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0"})
+  with urllib.request.urlopen(req,timeout=18) as resp: raw=resp.read(800000).decode("utf-8",errors="replace")
+  links=list(dict.fromkeys(re.findall(r'(?:href|data-url)\s*=\s*["\\']([^"\\']+\.phtml[^"\\']*)',raw,re.I)))[:12]
+  matches=[re.sub(r"\\s+"," ",raw[max(0,m.start()-100):m.start()+220]) for m in list(re.finditer(q,raw,re.I))[:5]]
+  print("SEARCH_RESULT",q,len(raw),links,matches)
+ except Exception as e:print("SEARCH_RESULT_ERROR",q,type(e).__name__,str(e)[:120])
