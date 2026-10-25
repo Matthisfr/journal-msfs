@@ -1,9 +1,22 @@
 {
   "edition": "2026-10-25",
-  "last_run": "2026-10-25T20:33:29.205729+00:00",
-  "weather_checked_at": "2026-10-25T20:33:29.205729+00:00",
-  "news_checked_at": "2026-10-25T20:33:29.205729+00:00",
+  "last_run": "2026-10-25T20:36:37.896300+00:00",
+  "weather_checked_at": "2026-10-25T20:36:37.896300+00:00",
+  "news_checked_at": "2026-10-25T20:36:37.896300+00:00",
   "weather": [
+    {
+      "icao": "KABQ",
+      "name": "KABQ Albuquerque International Sunport",
+      "observed_at": "2026-10-25T20:32:00+00:00",
+      "raw": "SPECI KABQ 252032Z 16014G24KT 10SM VCTS SCT065CB SCT200 21/04 A3014 RMK AO2 OCNL LTGICCG VC W-NW TS VC SW-W MOV NE SHRA DSNT SE AND SW-NW T02060044 $",
+      "score": 122,
+      "summary": "orage, précipitations",
+      "icon": "⛈️",
+      "phenomenon": "Orage",
+      "level": "Très dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KABQ 251741Z 2518/2618 16011KT P6SM SCT050 SCT110 PROB30 2518/2520 VRB15G28KT 6SM -TSRA BKN050CB FM252000 16012G22KT P6SM SCT050 BKN100 TEMPO 2523/2602 VRB18G30KT 6SM -TSRA BKN050CB FM260200 34006KT P6SM SCT060"
+    },
     {
       "icao": "KASE",
       "name": "KASE Pitkin County Airport",
@@ -16,19 +29,6 @@
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF KASE 251740Z 2518/2618 15007KT P6SM FEW010 BKN060 TEMPO 2518/2522 4SM -SHRA BKN030 FM252200 23006KT P6SM BKN020 BKN050 PROB30 2522/2524 4SM -SHRA OVC012 FM260000 29005KT P6SM -SHRA BKN020 BKN035 FM260300 VRB03KT 3SM -SHRA BKN008 BKN015 FM260900 00000KT P6SM BKN030 BKN050 PROB30 2609/2612 4SM -SHRASN OVC020"
-    },
-    {
-      "icao": "LESO",
-      "name": "San Sebastian",
-      "observed_at": "2026-10-25T20:06:00+00:00",
-      "raw": "SPECI LESO 252006Z 24005KT 190V280 3000 DZ FEW008 BKN011 OVC016 16/16 Q1023",
-      "score": 57,
-      "summary": "visibilité < 3 SM, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LESO 251700Z 2518/2618 22009KT 9999 BKN035 TX22/2611Z TN15/2606Z PROB40 TEMPO 2518/2524 BKN010 PROB40 TEMPO 2518/2522 3000 RADZ PROB30 TEMPO 2610/2618 02010KT"
     },
     {
       "icao": "EDDH",
@@ -55,6 +55,19 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF KPDX 251823Z 2518/2618 13009KT 4SM -RA BR OVC025 FM260000 12008KT P6SM -SHRA BKN035 FM261200 15007KT P6SM -SHRA OVC020"
+    },
+    {
+      "icao": "LESO",
+      "name": "San Sebastian",
+      "observed_at": "2026-10-25T20:30:00+00:00",
+      "raw": "METAR LESO 252030Z 23005KT 200V260 5000 -DZ FEW008 BKN011 OVC016 16/16 Q1024 REDZ",
+      "score": 32,
+      "summary": "visibilité < 5 SM, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF LESO 251700Z 2518/2618 22009KT 9999 BKN035 TX22/2611Z TN15/2606Z PROB40 TEMPO 2518/2524 BKN010 PROB40 TEMPO 2518/2522 3000 RADZ PROB30 TEMPO 2610/2618 02010KT"
     },
     {
       "icao": "YPAD",
@@ -120,19 +133,6 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF DTMB 251700Z 2518/2618 32015KT 9999 SCT026 PROB40 TEMPO 2610/2618 35020G35KT"
-    },
-    {
-      "icao": "MDSD",
-      "name": "MDSD Las Americas International Airport",
-      "observed_at": "2026-10-25T20:00:00+00:00",
-      "raw": "METAR MDSD 252000Z 15009KT 8000 VCSH FEW016CB BKN016 BKN300 27/25 Q1011 CB/NE/SE/S/W",
-      "score": 20,
-      "summary": "visibilité < 5 SM",
-      "icon": "☁️",
-      "phenomenon": "Ciel couvert",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF MDSD 251600Z 2518/2618 18010KT 9999 FEW014CB BKN016 BKN300 PROB30 2519/2601 7000 -TSRA FEW014CB BKN016 BKN300 BECMG 2604/2606 04004KT"
     }
   ],
   "weather_coverage": {
@@ -248,7 +248,7 @@
     "Versions : DTTA / prealsoft : Fiche 1.00 plus ancienne que l'installation 1.0.1 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : GMMX / PERFECTSOFT : Fiche 1.1.0 plus ancienne que l'installation 1.2.0 : vérifier le canal éditeur, ne pas rétrograder",
     "Logiciels : fenix: Source inaccessible : ValueError Branche Fenix non explicitement publiée sur le blog",
-    "Logiciels : simapppro: Source inaccessible : ValueError Changelog SimAppPro absent"
+    "Logiciels : simapppro: Source inaccessible : HTTPError HTTP Error 502: Bad Gateway"
   ],
   "note": "Collecte quotidienne automatique : METAR/TAF NOAA, flux officiel MSFS, versions GitHub publiées, audit des scènes répertoriées, extraction des versions des boutiques publiques reconnues et surveillance des sites publics. Les versions non publiées ou inaccessibles restent UNKNOWN ; une page modifiée n’est pas une mise à jour confirmée.",
   "version_coverage": {
@@ -269,15 +269,15 @@
     "without_official_url": 5,
     "manual_source": 5,
     "unverified": 36,
-    "audited_at": "2026-10-25T20:33:29.205729+00:00"
+    "audited_at": "2026-10-25T20:36:37.896300+00:00"
   },
-  "versions_checked_at": "2026-10-25T20:33:29.205729+00:00",
-  "releases_checked_at": "2026-10-25T20:33:29.205729+00:00",
+  "versions_checked_at": "2026-10-25T20:36:37.896300+00:00",
+  "releases_checked_at": "2026-10-25T20:36:37.896300+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-25T20:34:04.047728+00:00",
+    "checked_at": "2026-10-25T20:37:20.012421+00:00",
     "unverified": 20
   }
 }
