@@ -225,7 +225,7 @@ def run():
             'verified_today':verified,
             'updates_confirmed':sum(a.get('version_check_state')=='verified'
                 and a.get('version_checked_at')==NOW.date().isoformat()
-                and compare_versions(a.get('installed'),a.get('server_version')) for a in airports),
+                and compare_versions(a.get('installed'),a.get('server_version'),a.get('folder','')) for a in airports),
             'audited_at':NOW.isoformat(),
         })
         status['version_coverage']=coverage
@@ -238,7 +238,7 @@ def run():
         src['airport_versions']='error'
         status['errors'].append('Versions : '+str(e)[:200])
         print('Versions failure:',e,file=sys.stderr)
-    status['note']='Collecte quotidienne automatique : METAR/TAF NOAA, flux officiel MSFS, versions GitHub publiées, audit des 171 scènes, extraction des versions Aerosoft accessibles et surveillance des sites publics. Les versions non publiées ou inaccessibles restent UNKNOWN ; une page modifiée n’est pas une mise à jour confirmée.'
+    status['note']='Collecte quotidienne automatique : METAR/TAF NOAA, flux officiel MSFS, versions GitHub publiées, audit des 171 scènes, extraction des versions des boutiques publiques reconnues et surveillance des sites publics. Les versions non publiées ou inaccessibles restent UNKNOWN ; une page modifiée n’est pas une mise à jour confirmée.'
     status_path.write_text(json.dumps(status,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print('Updated',status_path)
 
