@@ -1,22 +1,9 @@
 {
   "edition": "2026-10-25",
-  "last_run": "2026-10-25T12:07:23.133665+00:00",
-  "weather_checked_at": "2026-10-25T12:07:23.133665+00:00",
-  "news_checked_at": "2026-10-25T12:07:23.133665+00:00",
+  "last_run": "2026-10-25T12:10:29.464202+00:00",
+  "weather_checked_at": "2026-10-25T12:10:29.464202+00:00",
+  "news_checked_at": "2026-10-25T12:10:29.464202+00:00",
   "weather": [
-    {
-      "icao": "KJAC",
-      "name": "Dreamflight-KJAC",
-      "observed_at": "2026-10-25T11:56:00+00:00",
-      "raw": "METAR KJAC 251156Z AUTO 01003KT 1/4SM FZFG OVC002 M03/M03 A3027 RMK AO2 SLP265 T10281033 11017 21039 53004 FZRANO",
-      "score": 157,
-      "summary": "brouillard, visibilité < 1 SM, précipitations",
-      "icon": "🌫️",
-      "phenomenon": "Brouillard",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KJAC 251137Z 2512/2612 03004KT P6SM FEW060 TEMPO 2512/2515 3/4SM BR BKN002 FM251900 22005KT P6SM FEW040 FEW200 FM260400 02005KT P6SM BKN080"
-    },
     {
       "icao": "KDTW",
       "name": "KDTW Detro Metro Wayne County Airport",
@@ -42,6 +29,19 @@
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF EDDH 251100Z 2512/2618 23020G30KT 9999 BKN020 TEMPO 2512/2523 23025G40KT SHRA BKN015CB PROB30 TEMPO 2514/2523 4500 TSRA BKN014CB PROB30 TEMPO 2523/2611 SHRA BKN015TCU BECMG 2612/2615 22013KT"
+    },
+    {
+      "icao": "KJAC",
+      "name": "Dreamflight-KJAC",
+      "observed_at": "2026-10-25T12:08:00+00:00",
+      "raw": "SPECI KJAC 251208Z AUTO 02003KT 3/4SM BR OVC002 M03/M03 A3027 RMK AO2 FZRANO",
+      "score": 92,
+      "summary": "visibilité < 1 SM, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KJAC 251137Z 2512/2612 03004KT P6SM FEW060 TEMPO 2512/2515 3/4SM BR BKN002 FM251900 22005KT P6SM FEW040 FEW200 FM260400 02005KT P6SM BKN080"
     },
     {
       "icao": "EGPF",
@@ -269,15 +269,15 @@
     "without_official_url": 4,
     "manual_source": 5,
     "unverified": 35,
-    "audited_at": "2026-10-25T12:07:23.133665+00:00"
+    "audited_at": "2026-10-25T12:10:29.464202+00:00"
   },
-  "versions_checked_at": "2026-10-25T12:07:23.133665+00:00",
-  "releases_checked_at": "2026-10-25T12:07:23.133665+00:00",
+  "versions_checked_at": "2026-10-25T12:10:29.464202+00:00",
+  "releases_checked_at": "2026-10-25T12:10:29.464202+00:00",
   "software_coverage": {
     "total": 23,
     "verified": 3,
     "changed": 0,
-    "checked_at": "2026-10-25T12:07:55.690478+00:00",
+    "checked_at": "2026-10-25T12:11:03.227934+00:00",
     "unverified": 20
   }
 }
