@@ -65,9 +65,12 @@ def msfs_official():
     return {"version":m.group(2),"url":page,"published_at":None,
             "notes":"MSFS 2024 Sim Update "+m.group(1)+" : "+m.group(2)+". Notes officielles et corrections sur la page liée."}
 def fenix_official():
-    url="https://fenixsim.com/blog/"
+    url="https://fenixsim.com/status/"
     raw=text_html(get(url))
-    m=re.search(r"Fenix\s+A32X\s+Version\s+(\d+)\s+Released",raw,re.I)
+    m=re.search(r"major\s+V(\d+)\s+update",raw,re.I)
+    if not m:
+        raw=text_html(get("https://fenixsim.com/blog/"))
+        m=re.search(r"Fenix\s+A32X\s+Version\s+(\d+)\s+Released",raw,re.I)
     if not m:
         # La page d'accueil peut ne plus présenter la sortie du 21 octobre.
         # Vérifier alors la page de publication officielle, jamais un forum.
