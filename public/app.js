@@ -131,7 +131,7 @@ function renderSoftware(){
       (fresh?'<small>Changelog complet dans <a href="#nouveautes" data-software-news="1">Nouveautés</a></small>':'')+
       '<small>Contrôle : '+esc(localDateTime(x.checked_at))+'</small></td></tr>';
   }).join('')||'<tr><td colspan="4">Aucun logiciel correspondant.</td></tr>';
-  $('[data-software-news]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();switchView('nouveautes')}));
+  $$('[data-software-news]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();switchView('nouveautes')}));
 }
 function renderHardwareGallery(){
   const el=$('#hardware-gallery');if(!el)return;
