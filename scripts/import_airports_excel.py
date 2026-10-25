@@ -41,7 +41,6 @@ def parse_addons_linker(sheet):
   if not (re.fullmatch(r"[A-Z0-9]{4}",code) or code.startswith("(SUB ")): continue
   original=code
   code=CORRECTIONS.get(code,code)
-  if code=="KLVB": continue
   records.append({"icao":code,"original":original,"name":name,"folder":folder,
                   "installed":version,"publisher":str(row[12] or "").strip(),
                   "region":region or country})
@@ -73,8 +72,7 @@ def parse(book):
     raise ValueError(f"{sheet.title}: ligne incomplète : ICAO, scène/dossier et version requis")
    original=code
    code=CORRECTIONS.get(code,code)
-   if code=="KLVB": continue
-   records.append({"icao":code,"original":original,"name":name or folder,"folder":folder,"installed":version,"publisher":get("publisher"),"region":get("region")})
+    records.append({"icao":code,"original":original,"name":name or folder,"folder":folder,"installed":version,"publisher":get("publisher"),"region":get("region")})
  return records
 def merge(records,old):
  by_folder={norm(a.get("folder")):a for a in old if a.get("folder")}
