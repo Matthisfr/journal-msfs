@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-25",
-  "last_run": "2026-10-25T11:24:36.043644+00:00",
-  "weather_checked_at": "2026-10-25T11:24:36.043644+00:00",
-  "news_checked_at": "2026-10-25T11:24:36.043644+00:00",
+  "last_run": "2026-10-25T11:25:50.336888+00:00",
+  "weather_checked_at": "2026-10-25T11:25:50.336888+00:00",
+  "news_checked_at": "2026-10-25T11:25:50.336888+00:00",
   "weather": [
     {
       "icao": "KDTW",
@@ -106,7 +106,7 @@
       "phenomenon": "Vent fort",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EDDK 250500Z 2506/2612 22013KT 9999 SCT025 TEMPO 2506/2507 26020G35KT SHRA BKN015TCU BECMG 2508/2511 26015G30KT PROB40 TEMPO 2511/2514 26020G35KT TEMPO 2512/2518 SHRA BKN020TCU PROB30 TEMPO 2513/2515 TSRA BECMG 2516/2519 26010KT BECMG 2602/2605 20007KT"
+      "taf_raw": "TAF EDDK 251100Z 2512/2618 25015G30KT 9999 SCT035 PROB40 TEMPO 2512/2515 26020G35KT TEMPO 2512/2518 SHRA BKN025CB BECMG 2516/2519 26010KT BECMG 2602/2605 20007KT"
     },
     {
       "icao": "EGKK",
@@ -269,15 +269,15 @@
     "without_official_url": 4,
     "manual_source": 5,
     "unverified": 36,
-    "audited_at": "2026-10-25T11:24:36.043644+00:00"
+    "audited_at": "2026-10-25T11:25:50.336888+00:00"
   },
-  "versions_checked_at": "2026-10-25T11:24:36.043644+00:00",
-  "releases_checked_at": "2026-10-25T11:24:36.043644+00:00",
+  "versions_checked_at": "2026-10-25T11:25:50.336888+00:00",
+  "releases_checked_at": "2026-10-25T11:25:50.336888+00:00",
   "software_coverage": {
     "total": 23,
     "verified": 3,
     "changed": 0,
-    "checked_at": "2026-10-25T11:25:01.265813+00:00",
+    "checked_at": "2026-10-25T11:26:35.404135+00:00",
     "unverified": 20
   }
 }
