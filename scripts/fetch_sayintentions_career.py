@@ -39,7 +39,13 @@ def parse_public_profile(html):
                 v=float(raw)
                 if 0<=v<=100000:hours=v;break
             except ValueError:pass
-    return {"rank":rank.group(1) if rank else None,"flight_hours":hours}
+    values={}
+    for key,label in (("ifr_hours","IFR HOURS"),("vfr_hours","VFR HOURS"),("total_flights","TOTAL FLIGHTS"),("airports_visited","AIRPORTS VISITED")):
+        m=re.search(r"([0-9,]+)\\s+"+label,text,re.I)
+        values[key]=int(m.group(1).replace(",","")) if m else None
+    if values["ifr_hours"] is not None and values["vfr_hours"] is not None:
+        hours=values["ifr_hours"]+values["vfr_hours"]
+    return {"rank":rank.group(1) if rank else None,"flight_hours":hours,**values}
 def run():
     previous={}
     if DEST.exists():
@@ -61,9 +67,9 @@ def run():
             html=page.locator("body").inner_text()
             browser.close()
         found=parse_public_profile(html)
-        if found["rank"] is not None or found["flight_hours"] is not None:
+        if all(found.get(k) is not None for k in ("rank","ifr_hours","vfr_hours","total_flights","airports_visited")):
             result.update({k:v for k,v in found.items() if v is not None})
-            result["state"]="partial" if any(v is None for v in found.values()) else "ok"
+            result["state"]="ok"\n            result["source"]="profil public Gate 404 (navigateur Chromium)"
             result["verified_at"]=result["checked_at"]
         else:
             result["state"]="stale" if previous.get("rank") else "unparsed"
