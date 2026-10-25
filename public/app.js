@@ -21,7 +21,8 @@ $$('[data-top]').forEach(e=>e.addEventListener('click',()=>window.scrollTo({top:
 
 function compareVersions(installed,online){
   const a=String(installed||'').match(/\d+/g),b=String(online||'').match(/\d+/g);
-  if(!a||!b)return 'different';
+  if(!a||!b||a.length!==b.length)return 'different';
+  if(Number(a[0])!==Number(b[0]))return Number(b[0])>Number(a[0])?'major':'ahead';
   const n=Math.max(a.length,b.length);
   for(let i=0;i<n;i++){const x=Number(a[i]||0),y=Number(b[i]||0);if(y>x)return 'update';if(y<x)return 'ahead'}
   return 'current';
@@ -39,9 +40,9 @@ function renderAirports(){
   const cls={'UNK-P':'p','UNK-V':'v','UNK-C':'c','UNK-S':'s','verified':'ok'};
   $('#airport-body').innerHTML=matches.map(a=>{
     const st=a.status||'UNK-V';
-    const source=a.source_url?`<a href="${esc(isSafeUrl(a.source_url))}" target="_blank" rel="noopener noreferrer">Fiche éditeur ↗</a>`:'';
+    const source=a.source_url?`<a href="${esc(isSafeUrl(a.source_url))}" target="_blank" rel="noopener noreferrer">${esc((a.source_store||'Éditeur')+(a.source_edition?' · '+a.source_edition:''))} ↗</a>`:'';
     const comp=a.server_version?compareVersions(a.installed,a.server_version):'unknown';
-    const compLabel=comp==='update'?'MISE À JOUR':comp==='current'?'À JOUR':comp==='ahead'?'INSTALLÉE + RÉCENTE':'À COMPARER';
+    const compLabel=comp==='update'?'MISE À JOUR':comp==='current'?'À JOUR':comp==='ahead'?'INSTALLÉE + RÉCENTE':comp==='major'?'NOUVELLE ÉDITION':'À COMPARER';
     const compClass=comp==='update'?'flag-s':comp==='current'?'flag-ok':'flag-v';
     const online=isVerified(a)?`<b>${esc(a.server_version)}</b><small><span class="flag ${compClass}">${compLabel}</span></small><small>${source}</small><small>Vérifiée le ${esc(localDate(a.version_checked_at))}</small>`:a.server_version?`<b>${esc(a.server_version)}</b><small>Dernière version connue, non revalidée aujourd’hui</small><small><span class="flag flag-${cls[st]||'v'}">${esc(st==='verified'?'UNK-V':st)}</span></small><small>${source}</small><small>Dernière confirmation : ${esc(localDate(a.version_checked_at))}</small>`:`<span class="flag flag-${cls[st]||'v'}">${esc(st)}</span>${source?`<small>${source}</small>`:''}`;
     return `<tr><td><span class="code">${esc(a.icao)}</span>${a.original!==a.icao?`<small>Source : ${esc(a.original)}</small>`:''}</td><td><b>${esc(a.name)}</b><small>${esc(a.note||a.folder||'')}</small></td><td>${esc(a.publisher)}</td><td><b>${esc(a.installed||'Non renseignée')}</b></td><td>${online}</td></tr>`;
