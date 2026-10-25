@@ -66,14 +66,15 @@ jobs:
         if: steps.gate.outputs.run == 'true'
         run: |
           python -m unittest discover -s tests -v
-          python -m py_compile scripts/update.py scripts/versions.py scripts/releases.py scripts/watch_sources.py scripts/build_site.py scripts/smoke_live.py scripts/discover_airports.py scripts/apply_airport_sources.py
+          python -m py_compile scripts/update.py scripts/versions.py scripts/releases.py scripts/watch_sources.py scripts/build_site.py scripts/smoke_live.py scripts/discover_airports.py scripts/discover_simmarket.py scripts/apply_airport_sources.py
           node --check public/app.js
           node tests/test_frontend.cjs
 
       - name: Rechercher les fiches exactes des 171 scènes chez les revendeurs
         if: steps.gate.outputs.run == 'true'
         run: |
-          python scripts/discover_airports.py || echo "Catalogue inaccessible : utiliser les dernières sources enregistrées"
+          python scripts/discover_airports.py || echo "Catalogues Contrail / iniBuilds inaccessibles : conserver les références précédentes"
+          python scripts/discover_simmarket.py || echo "Recherche simMarket indisponible : conserver les références précédentes"
           python scripts/apply_airport_sources.py
 
       - name: Collecter METAR, TAF, actualités et versions de scènes
