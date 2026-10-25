@@ -63,7 +63,22 @@ def build():
     airports = json.loads((PUBLIC / "airports.json").read_text(encoding="utf-8"))
     assert len(airports) == 171, f"Inventaire incomplet : {len(airports)} scènes"
     rows = render_rows(airports)
+    status = json.loads((PUBLIC / "status.json").read_text(encoding="utf-8"))
+    editorial = json.loads((PUBLIC / "editorial.json").read_text(encoding="utf-8"))
+    from zoneinfo import ZoneInfo
+    updated = status.get("last_run")
+    if updated:
+        dt_utc = dt.datetime.fromisoformat(updated.replace("Z", "+00:00"))
+        paris = dt_utc.astimezone(ZoneInfo("Europe/Paris"))
+        home_updated = "Le " + paris.strftime("%d/%m/%Y à %H:%M") + " (Paris)"
+    else:
+        home_updated = "En attente de la première collecte"
+    editorial_updated = editorial.get("last_updated") or "Non actualisées"
     index = (PUBLIC / "index.html").read_text(encoding="utf-8")
+    index = index.replace('id="home-updated">En attente de la première collecte</strong>',
+                          'id="home-updated">' + h(home_updated) + '</strong>')
+    index = index.replace('id="home-editorial-updated">Édition en préparation</strong>',
+                          'id="home-editorial-updated">' + h(editorial_updated) + '</strong>')
     marker = '<tbody id="airport-body"></tbody>'
     assert index.count(marker) == 1, "Emplacement du tableau introuvable"
     index = index.replace(marker, f'<tbody id="airport-body">\n{rows}\n</tbody>')
@@ -111,6 +126,7 @@ body{{background:#f5f5f1}}
 </div></main></body></html>"""
     (PUBLIC / "airports.html").write_text(independent, encoding="utf-8")
     assert index.count("<tr>") >= len(airports), "Lignes statiques manquantes"
+    assert "id=\"home-updated\">Le " in index, "Horodatage accueil absent"
     assert independent.count("<tr>") >= len(airports), "Page indépendante incomplète"
     print(f"Publication : {len(airports)} scènes HTML statiques + page indépendante ; rev={rev}")
 
