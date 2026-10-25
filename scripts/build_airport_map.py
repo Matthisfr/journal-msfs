@@ -3,20 +3,21 @@ import csv, io, json, pathlib, urllib.request
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 PUBLIC=ROOT/"public"
 OUT=PUBLIC/"airport_coordinates.json"
-URL="https://raw.githubusercontent.com/datasets/airport-codes/master/data/airport-codes.csv"
+URL="https://raw.githubusercontent.com/datasets/airport-codes/main/data/airport-codes.csv"
 def main():
     airports=json.loads((PUBLIC/"airports.json").read_text(encoding="utf-8"))
     codes={a.get("icao","").upper() for a in airports}
     codes={c for c in codes if len(c)==4 and c.isalnum() and not c.startswith("(") and c!="KLVB"}
-    existing={}  # Ne jamais conserver des coordonnées anciennes potentiellement inversées
+    existing=json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
     result=dict(existing)
     try:
         req=urllib.request.Request(URL,headers={"User-Agent":"MSFS-Journal-Map/1.0"})
         with urllib.request.urlopen(req,timeout=25) as response:
             reader=csv.DictReader(io.TextIOWrapper(response,encoding="utf-8"))
             for row in reader:
-                code=(row.get("gps_code") or "").upper()
-                if code not in codes: continue
+                candidates=[str(row.get(key) or "").strip().upper() for key in ("gps_code","ident")]
+                code=next((value for value in candidates if value in codes),None)
+                if code is None: continue
                 coord=(row.get("coordinates") or "").split(",")
                 if len(coord)!=2: continue
                 try: lat,lon=map(float,coord)
