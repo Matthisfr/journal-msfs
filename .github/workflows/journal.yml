@@ -104,10 +104,31 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "Journal: collecte automatique $(date -u +%Y-%m-%d)"
             if ! git push origin HEAD:main; then
-              echo "Le dépôt a changé pendant la collecte : rebase puis nouvel essai."
-              git fetch origin main
-              git -c rebase.autoStash=true rebase origin/main
-              git push origin HEAD:main
+              echo "Dépôt modifié pendant la collecte : conserver les données puis repartir du dernier main."
+              mkdir -p "$RUNNER_TEMP/journal-sync"
+              cp public/status.json public/airports.json public/watch.json public/airport_source_candidates.json "$RUNNER_TEMP/journal-sync/"
+              success=false
+              for attempt in 1 2 3; do
+                git fetch origin main
+                git reset --hard origin/main
+                cp "$RUNNER_TEMP/journal-sync/"*.json public/
+                git add public/status.json public/airports.json public/watch.json public/airport_source_candidates.json
+                if git diff --cached --quiet; then
+                  success=true
+                  break
+                fi
+                git commit -m "Journal: collecte automatique $(date -u +%Y-%m-%d) [synchronisation]"
+                if git push origin HEAD:main; then
+                  success=true
+                  break
+                fi
+                echo "Nouvelle tentative de synchronisation $attempt/3"
+              done
+              if [[ "$success" != true ]]; then
+                echo "Échec de synchronisation : ne pas publier un site avec des données non enregistrées."
+                exit 1
+              fi
+              python scripts/build_site.py
             fi
           fi
 
