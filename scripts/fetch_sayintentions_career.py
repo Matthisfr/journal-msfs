@@ -76,6 +76,8 @@ def run():
                 }))""")
                 profile=page.get_by_text("Mathis",exact=True).first.bounding_box()
                 eligible=[(i,c) for i,c in enumerate(candidates) if c["w"]>=30 and c["w"]<=110 and c["h"]>=30 and c["h"]<=110 and profile and abs(c["y"]-profile["y"])<100 and c["x"]<profile["x"]]
+                if not eligible:
+                    print("Gate 404: images de la page:",[(c["alt"][:50],c["src"][:110],round(c["x"]),round(c["y"]),round(c["w"]),round(c["h"])) for c in candidates[:18]])
                 if eligible:
                     idx,c=min(eligible,key=lambda item:abs(item[1]["x"]-profile["x"])+abs(item[1]["y"]-profile["y"]))
                     image=page.locator("img").nth(idx)
