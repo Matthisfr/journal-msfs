@@ -47,5 +47,33 @@
     "store": "simMarket / FSDreamTeam",
     "edition": "MSFS 2020 / 2024",
     "note": "Fiche simMarket version 1.6.5, inférieure à ta version 1.6.8 ; privilégier FSDT Live Update pour la dernière révision."
+  },
+  "uk2000scenery-airport-egpf-glasgow": {
+    "url": "https://secure.simmarket.com/uk2000-scenery-glasgow-2020hd-msfs.phtml",
+    "store": "simMarket / UK2000",
+    "edition": "MSFS 2020 / compatible 2024",
+    "auto_verify": true,
+    "note": "Page produit UK2000 Glasgow : version publiée et contrôlée quotidiennement."
+  },
+  "uk2000scenery-airport-egpk-prestwick": {
+    "url": "https://secure.simmarket.com/uk2000-scenery-glasgow-prestwick-airport-msfs.phtml",
+    "store": "simMarket / UK2000",
+    "edition": "MSFS 2020 / 2024",
+    "auto_verify": true,
+    "note": "Page produit UK2000 Prestwick : version publiée et contrôlée quotidiennement."
+  },
+  "justsim-airport-lgrp-rhodes": {
+    "url": "https://secure.simmarket.com/justsim-rhodes-international-airport-diagoras-(en_19773).phtml",
+    "store": "simMarket / JustSim",
+    "edition": "MSFS 2024",
+    "auto_verify": true,
+    "note": "La boutique écrit 3.1, le manifeste installé 3.1.0 : format de version différent, à comparer prudemment."
+  },
+  "justsim-airport-lmml-malta": {
+    "url": "https://secure.simmarket.com/justsim-malta-international-airport-msfs.phtml",
+    "store": "simMarket / JustSim",
+    "edition": "MSFS 2020 / compatible 2024",
+    "auto_verify": true,
+    "note": "La boutique écrit 1.3, le manifeste installé 1.3.0 : format de version différent, à comparer prudemment."
   }
 }
