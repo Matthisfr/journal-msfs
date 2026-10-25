@@ -1,0 +1,110 @@
+[
+  {
+    "id": "fcu",
+    "name": "FCU Unit1",
+    "ownership": "Possédé",
+    "image_query": "FCU Airbus",
+    "official_url": "https://winwingsim.com/view/goods-details.html?id=550",
+    "photo_source": "winwingturkiye.com",
+    "photo_status": "pending"
+  },
+  {
+    "id": "efis",
+    "name": "EFIS L",
+    "ownership": "Possédé",
+    "image_query": "EFIS Airbus",
+    "official_url": "https://winwingsim.com/view/regular.html",
+    "photo_source": "winwingturkiye.com",
+    "photo_status": "pending"
+  },
+  {
+    "id": "mcdu",
+    "name": "MCDU-32",
+    "ownership": "Possédé",
+    "image_query": "Airbus MCDU",
+    "official_url": "https://winwingsim.com/view/regular.html",
+    "photo_source": "winwingturkiye.com",
+    "photo_status": "pending"
+  },
+  {
+    "id": "nws",
+    "name": "WINCTRL 32 NWS L 1.0",
+    "ownership": "Possédé",
+    "image_query": "NWS tiller Airbus",
+    "official_url": "https://winwingsim.com/view/regular.html",
+    "photo_source": "winwingturkiye.com",
+    "photo_status": "pending"
+  },
+  {
+    "id": "rmp",
+    "name": "WINCTRL 32 RMP 1.0",
+    "ownership": "Possédé",
+    "image_query": "Airbus RMP",
+    "official_url": "https://winwingsim.com/view/regular.html",
+    "photo_source": "winwingturkiye.com",
+    "photo_status": "pending"
+  },
+  {
+    "id": "tcas",
+    "name": "WINCTRL 32 TCAS 1.0",
+    "ownership": "Possédé",
+    "image_query": "Airbus TCAS",
+    "official_url": "https://winwingsim.com/view/regular.html",
+    "photo_source": "winwingturkiye.com",
+    "photo_status": "pending"
+  },
+  {
+    "id": "throttle",
+    "name": "URSA MINOR 32 Throttle Metal",
+    "ownership": "Possédé",
+    "image_query": "Airbus Throttle Metal",
+    "official_url": "https://winwingsim.com/view/regular.html",
+    "photo_source": "winwingturkiye.com",
+    "photo_status": "pending"
+  },
+  {
+    "id": "pac",
+    "name": "32 PAC Metal",
+    "ownership": "Possédé",
+    "image_query": "Airbus throttle PAC",
+    "official_url": "https://winwingsim.com/view/regular.html",
+    "photo_source": "winwingturkiye.com",
+    "photo_status": "pending"
+  },
+  {
+    "id": "pedals",
+    "name": "Orion 32 Rudder Pedals Metal with Damper",
+    "ownership": "Possédé",
+    "image_query": "Orion 32 Rudder Pedals",
+    "official_url": "https://winwingsim.com/view/regular.html",
+    "photo_source": "winwingturkiye.com",
+    "photo_status": "pending"
+  },
+  {
+    "id": "acp",
+    "name": "ACP32",
+    "ownership": "Attendu",
+    "image_query": "ACP32 audio Airbus",
+    "official_url": "https://winwingsim.com/view/regular.html",
+    "photo_source": "winwingturkiye.com",
+    "photo_status": "pending"
+  },
+  {
+    "id": "ovhd",
+    "name": "OVHD32 / Overhead",
+    "ownership": "Attendu",
+    "image_query": "OVHD32 Airbus overhead",
+    "official_url": "https://winwingsim.com/view/regular.html",
+    "photo_source": "winwingturkiye.com",
+    "photo_status": "pending"
+  },
+  {
+    "id": "agp",
+    "name": "32 AGP",
+    "ownership": "Attendu",
+    "image_query": "AGP Airbus landing gear",
+    "official_url": "https://winwingsim.com/view/regular.html",
+    "photo_source": "winwingturkiye.com",
+    "photo_status": "pending"
+  }
+]
