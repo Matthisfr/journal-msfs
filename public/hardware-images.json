@@ -1,50 +1,70 @@
 {
   "fcu": {
-    "state": "unpublished",
-    "reason": "Photographie produit exacte non trouvée sur les pages publiques du revendeur"
+    "path": "hardware/fcu.jpg",
+    "state": "photo",
+    "source": "Photographie produit — Shopee",
+    "origin": "https://down-th.img.susercontent.com/file/th-11134207-7rasl-ma464bh8iux534"
   },
   "efis": {
-    "state": "unpublished",
-    "reason": "Photographie produit exacte non trouvée sur les pages publiques du revendeur"
+    "path": "hardware/efis.jpg",
+    "state": "photo",
+    "source": "Photographie produit — Carousell",
+    "origin": "https://media.karousell.com/media/photos/products/2024/11/30/preorder_winwing_airbus_a320_e_1732937914_71388ee5_progressive"
   },
   "mcdu": {
-    "state": "unavailable",
-    "reason": "HTTPError : HTTP Error 429: Too Many Requests"
+    "path": "https://images-cdn.ubuy.lv/690f9f19039e9835dd0f1c93-winwing-airbus-mcdu-multifunction.jpg",
+    "state": "photo_remote",
+    "source": "Photographie produit — Ubuy",
+    "reason": "Photo externe : affichage soumis à l'autorisation du fournisseur"
   },
   "nws": {
-    "state": "unavailable",
-    "reason": "HTTPError : HTTP Error 429: Too Many Requests"
+    "path": "hardware/nws.png",
+    "state": "photo",
+    "source": "Photographie promotionnelle WINWING — simFlight",
+    "origin": "https://www.simflight.com/wp-content/uploads/2025/06/WinWing_05.png"
   },
   "rmp": {
-    "state": "unavailable",
-    "reason": "HTTPError : HTTP Error 429: Too Many Requests"
+    "path": "hardware/rmp.jpg",
+    "state": "photo",
+    "source": "Visuel produit WINCTRL officiel — X",
+    "origin": "https://pbs.twimg.com/media/HJfZ10VbUAAjwQe.jpg"
   },
   "tcas": {
-    "state": "unavailable",
-    "reason": "HTTPError : HTTP Error 429: Too Many Requests"
+    "path": "hardware/tcas.png",
+    "state": "photo",
+    "source": "Photographie produit — JVTech",
+    "origin": "https://image.jeuxvideo.com/medias-crop-1200-675/177623/1776230873-8697-card.png"
   },
   "throttle": {
-    "state": "unavailable",
-    "reason": "HTTPError : HTTP Error 429: Too Many Requests"
+    "path": "hardware/throttle.jpg",
+    "state": "photo",
+    "source": "Photographie promotionnelle WINWING — simFlight",
+    "origin": "https://www.simflight.com/wp-content/uploads/2025/09/URSA-MINOR-32-Throttle-Meta-01-1536x1536.jpeg"
   },
   "pac": {
-    "state": "unavailable",
-    "reason": "HTTPError : HTTP Error 429: Too Many Requests"
+    "path": "hardware/pac.webp",
+    "state": "photo",
+    "source": "Photographie produit — SimRaceShop",
+    "origin": "https://simraceshop.de/media/image/product/7667/md/winwing-32-pac.webp"
   },
   "pedals": {
-    "state": "unavailable",
-    "reason": "HTTPError : HTTP Error 429: Too Many Requests"
+    "path": "hardware/pedals.webp",
+    "state": "photo",
+    "source": "Photographie produit — SimRaceShop",
+    "origin": "https://simraceshop.de/media/image/product/7663/lg/winwing-rudder-with-damper.webp"
   },
   "acp": {
-    "state": "unavailable",
-    "reason": "HTTPError : HTTP Error 429: Too Many Requests"
+    "state": "unpublished",
+    "reason": "Pas de photographie exacte publiée"
   },
   "ovhd": {
-    "state": "unavailable",
-    "reason": "HTTPError : HTTP Error 429: Too Many Requests"
+    "state": "unpublished",
+    "reason": "Pas de photographie exacte publiée"
   },
   "agp": {
-    "state": "unavailable",
-    "reason": "HTTPError : HTTP Error 429: Too Many Requests"
+    "path": "hardware/agp.jpg",
+    "state": "photo",
+    "source": "Photographie produit — The Onion Shop",
+    "origin": "https://theonionshop.com/cdn/shop/files/32agp2.jpg?v=1767843393&width=1445"
   }
 }
