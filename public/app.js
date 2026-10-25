@@ -125,7 +125,7 @@ function renderSoftware(){
     const preview=x.preview_version?'<small>Préversion : '+esc(x.preview_version)+'</small>':'';
     const last=x.previous_version?'<small>Précédente : '+esc(x.previous_version)+'</small>':'';
     return '<tr><td><strong>'+esc(x.name)+'</strong><small>'+esc(x.group)+'</small></td>'+
-      '<td><strong>'+esc(x.version||x.reference_version||'Non publiée')+'</strong>'+(x.reference_version&&!x.version?'<small>Relevée le '+esc(localDate(x.reference_checked_at))+' · non revalidée automatiquement</small>':'')+preview+'</td>'+
+      '<td><strong>'+esc(x.version||x.reference_version||'Non publiée')+'</strong>'+(x.state==='unavailable'&&x.version?'<small>Dernière version connue · non revérifiée depuis '+esc(localDateTime(x.last_confirmed_at))+'</small>':'')+(x.reference_version&&!x.version?'<small>Relevée le '+esc(localDate(x.reference_checked_at))+' · non revalidée automatiquement</small>':'')+preview+'</td>'+
       '<td>'+tag+last+'<small>'+esc(x.reason||'')+'</small></td>'+
       '<td><a href="'+esc(isSafeUrl(x.version_url||(x.reference_version?x.reference_source_url:null)||x.source_url))+'" target="_blank" rel="noopener noreferrer">Source officielle ↗</a>'+
       (fresh?'<small>Changelog complet dans <a href="#nouveautes" data-software-news="1">Nouveautés</a></small>':'')+
