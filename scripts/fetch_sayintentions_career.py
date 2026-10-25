@@ -56,6 +56,7 @@ def run():
             "ifr_hours":previous.get("ifr_hours"),"vfr_hours":previous.get("vfr_hours"),
             "total_flights":previous.get("total_flights"),"airports_visited":previous.get("airports_visited"),
             "source":previous.get("source"),"rank_badge":previous.get("rank_badge"),
+            "recent_flights":previous.get("recent_flights",[]),"flights_checked_at":previous.get("flights_checked_at"),
             "verified_at":previous.get("verified_at"),"checked_at":dt.datetime.now(dt.timezone.utc).isoformat()}
     try:
         request=urllib.request.Request(URL,headers={"User-Agent":"Mozilla/5.0 (compatible; JournalMSFS/1.0)","Accept":"text/html"})
@@ -86,6 +87,34 @@ def run():
                     print("Gate 404: insigne de grade non identifié, aucune image substituée")
             except Exception as badge_error:
                 print("Gate 404: insigne indisponible:",type(badge_error).__name__)
+            try:
+                rows=page.locator("table tr").evaluate_all("""rows => rows.map(tr => ({
+                  cells:[...tr.querySelectorAll('td')].map(td=>td.innerText.trim()),
+                  href:tr.querySelector('a[href]')?.getAttribute('href')||''
+                }))""")
+                flights=[]
+                for row in rows:
+                    cells=row["cells"]
+                    if len(cells)<7:continue
+                    joined=" ".join(cells)
+                    flight_id=re.search(r"\\b(?:IFR|VFR)-\\d{5,}\\b",joined,re.I)
+                    if not flight_id:continue
+                    # Colonnes du tableau public: Actions, ID, Aircraft, When, Origin, Destination, Rules, Duration.
+                    offset=1 if len(cells)>=8 else 0
+                    if len(cells)<7+offset:continue
+                    item={"id":flight_id.group(0),"aircraft":cells[1+offset],"when":cells[2+offset],
+                          "origin":cells[3+offset],"destination":cells[4+offset],
+                          "rules":cells[5+offset],"duration":cells[6+offset]}
+                    if re.fullmatch(r"[A-Z0-9]{3,5}",item["origin"]) and re.fullmatch(r"[A-Z0-9]{3,5}",item["destination"]):
+                        flights.append(item)
+                if flights:
+                    result["recent_flights"]=flights[:15]
+                    result["flights_checked_at"]=result["checked_at"]
+                    print("Gate 404: derniers vols récupérés:",len(flights))
+                else:
+                    print("Gate 404: tableau des derniers vols non reconnu")
+            except Exception as flights_error:
+                print("Gate 404: lecture des vols indisponible:",type(flights_error).__name__,str(flights_error)[:120])
             browser.close()
         found=parse_public_profile(html)
         if all(found.get(k) is not None for k in ("rank","ifr_hours","vfr_hours","total_flights","airports_visited")):
