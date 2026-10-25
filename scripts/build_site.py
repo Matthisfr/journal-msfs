@@ -328,7 +328,7 @@ def build():
     index = index.replace('href="styles.css"', f'href="styles.css?rev={rev}"')
     index = index.replace(
         '<div class="tablebox"><table>',
-        '<p class="standalone-link"><a href="airports.html">↗ Afficher les {len(airports)} scènes sur une page indépendante (sans JavaScript)</a></p><div class="tablebox"><table>',
+        f'<p class="standalone-link"><a href="airports.html">↗ Afficher les {len(airports)} scènes sur une page indépendante (sans JavaScript)</a></p><div class="tablebox"><table>',
         1,
     )
     (PUBLIC / "index.html").write_text(index, encoding="utf-8")
