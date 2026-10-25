@@ -41,3 +41,18 @@ for shop,q in [("contrail.shop","BIKF"),("inibuilds.com","EGLL"),("contrail.shop
   items=data.get("resources",{}).get("results",{}).get("products",[])
   print("PRODUCTS",shop,q,len(items),json.dumps([{k:p.get(k) for k in ("title","vendor","type","url","handle","id")} for p in items],ensure_ascii=False))
  except Exception as e: print("ERROR",u,str(e))
+
+for url in ("https://contrail.shop/products/mk-studios-keflavik-reykjavik-airports-v2-msfs",
+            "https://contrail.shop/products/mk-studios-lirf-rome-fiumicino-v2-msfs-2020-2024",
+            "https://inibuilds.com/products/inibuilds-london-heathrow-egll-msfs-2024"):
+ try:
+  req=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0"})
+  with urllib.request.urlopen(req,timeout=15) as resp: html=resp.read(1500000).decode("utf-8",errors="replace")
+  samples=[]
+  for needle in ("Product Version","Version","v2.0.5","v2.0.2","1.1.0","application/ld+json","data-product"):
+   matches=list(re.finditer(re.escape(needle),html,re.I))
+   if matches:
+    x=matches[-1] if needle=="Version" else matches[0]
+    samples.append({"needle":needle,"count":len(matches),"sample":re.sub(r"\\s+"," ",html[max(0,x.start()-130):x.start()+200])})
+  print("VERSION_PROBE",url,"len",len(html),json.dumps(samples,ensure_ascii=False))
+ except Exception as e:print("VERSION_PROBE_ERROR",url,str(e))
