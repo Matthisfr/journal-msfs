@@ -15,7 +15,11 @@
     "source_url": "https://fenixsim.com/blog/",
     "method": "fenix_official",
     "installed_version": null,
-    "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
+    "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie",
+    "reference_version": "V3 (branche)",
+    "reference_checked_at": "2026-10-25",
+    "reference_source_url": "https://fenixsim.com/status/",
+    "reference_note": "Version majeure V3 officielle du 21 octobre 2026. Build précis à vérifier dans Fenix Installer."
   },
   {
     "id": "fenix-techlog",
@@ -79,7 +83,11 @@
     "source_url": "https://winwingsim.com/mobileview/simapppro.html",
     "method": "simapppro",
     "installed_version": null,
-    "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
+    "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie",
+    "reference_version": "1.17.1",
+    "reference_checked_at": "2026-10-25",
+    "reference_source_url": "https://winwingsim.com/mobileview/simapppro.html",
+    "reference_note": "Version relevée dans le changelog officiel, extraction automatique non garantie."
   },
   {
     "id": "gsx",
