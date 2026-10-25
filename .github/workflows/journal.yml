@@ -117,12 +117,16 @@ jobs:
               echo "Dépôt modifié pendant la collecte : conserver les données puis repartir du dernier main."
               mkdir -p "$RUNNER_TEMP/journal-sync"
               cp public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json "$RUNNER_TEMP/journal-sync/"
+              mkdir -p "$RUNNER_TEMP/journal-sync/hardware"
+              if [[ -d public/hardware ]]; then cp -a public/hardware/. "$RUNNER_TEMP/journal-sync/hardware/"; fi
               success=false
               for attempt in 1 2 3; do
                 git fetch origin main
                 git reset --hard origin/main
                 cp "$RUNNER_TEMP/journal-sync/"*.json public/
-                git add public/status.json public/airports.json public/watch.json public/airport_source_candidates.json
+                mkdir -p public/hardware
+                cp -a "$RUNNER_TEMP/journal-sync/hardware/." public/hardware/
+                git add public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/hardware/
                 if git diff --cached --quiet; then
                   success=true
                   break
