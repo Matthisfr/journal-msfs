@@ -326,6 +326,7 @@ body{{background:#f5f5f1}}
 </div></header>
 <main class="shell independent-content">
 <p class="standalone-note">Cette page affiche toutes les scènes même si JavaScript est bloqué ou en cache dans Safari.</p>
+<div class="airport-update-digest">{render_airport_digest(airports)}</div>
 {table}
 <div class="map-section"><div class="overline">CARTE GOOGLE MY MAPS</div><h2>Mes aéroports sur la carte</h2>
 <p><a href="https://www.google.com/maps/d/viewer?mid={MAP_ID}" target="_blank" rel="noopener noreferrer">Ouvrir la carte Google My Maps ↗</a></p>
@@ -336,6 +337,8 @@ body{{background:#f5f5f1}}
     assert "id=\"home-updated\">Le " in index, "Horodatage accueil absent"
     assert index.count('class="news-card"') >= 4, "Actualités officielles manquantes"
     assert index.count('class="watch-source"') >= 30, "Surveillance des sources manquante"
+    assert 'id="airport-update-digest"' in index, "Bilan des mises à jour de scènes absent"
+    assert 'class="airport-update-digest"' in independent, "Bilan de secours absent"
     assert index.count('class="topic-icon topic-') >= 15, "Pictogrammes graphiques manquants"
     assert 'icons/mf.svg' in index, "Logo MobiFlight officiel absent"
     import xml.etree.ElementTree as ET
