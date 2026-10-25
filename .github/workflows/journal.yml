@@ -130,7 +130,7 @@ jobs:
                 cp "$RUNNER_TEMP/journal-sync/"*.json public/
                 mkdir -p public/hardware
                 cp -a "$RUNNER_TEMP/journal-sync/hardware/." public/hardware/
-                git add public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/hardware/
+                git add public/simbrief_last.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/hardware/
                 if git diff --cached --quiet; then
                   success=true
                   break
