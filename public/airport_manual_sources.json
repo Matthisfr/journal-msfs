@@ -1,0 +1,26 @@
+{
+  "orbx-airport-esgg-gothenburg": {
+    "url": "https://orbxdirect.com/product/esgg-msfs",
+    "store": "Orbx Direct",
+    "edition": "MSFS 2020 / compatible 2024",
+    "note": "Orbx Central est nécessaire ; numéro de version non publié sur la page"
+  },
+  "orbx-airport-essa-stockholm-arlanda": {
+    "url": "https://orbxdirect.com/product/essa-msfs",
+    "store": "Orbx Direct",
+    "edition": "MSFS 2020",
+    "note": "Une édition MSFS 2024 distincte existe ; vérifier dans Orbx Central"
+  },
+  "orbx-airport-katl-atlanta": {
+    "url": "https://orbxdirect.com/product/katl-msfs2024",
+    "store": "Orbx Direct",
+    "edition": "MSFS 2024",
+    "note": "Édition 2024 : vérifier la correspondance avec la scène installée dans Orbx Central"
+  },
+  "orbx-airport-kcrw-yeager": {
+    "url": "https://orbxdirect.com/product/kcrw-msfs",
+    "store": "Orbx Direct",
+    "edition": "MSFS 2020",
+    "note": "Version disponible via Orbx Central, non publiée sur la page"
+  }
+}
