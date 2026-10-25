@@ -65,3 +65,35 @@
 .tile .topic-icon{margin:2px 0 3px}
 .news-heading .topic-icon,.home-news-row .topic-icon{margin-top:2px}
 .hardware-heading .topic-icon{margin:0}
+
+
+/* Collection des marques originales, harmonisée comme des miniatures éditoriales.
+   Les logos des éditeurs restent intacts ; seul le cadre, le cadrage et la taille changent. */
+.topic-icon{
+  box-sizing:border-box;
+  width:42px!important;height:42px!important;
+  min-width:42px!important;min-height:42px!important;
+  max-width:42px!important;max-height:42px!important;
+  padding:3px!important;
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  background:linear-gradient(155deg,#28465e 0%,#0a2031 100%)!important;
+  border:1px solid rgba(187,207,219,.55)!important;
+  border-radius:9px!important;
+  box-shadow:0 2px 7px rgba(12,35,51,.19),inset 0 1px 0 rgba(255,255,255,.14)!important;
+  overflow:hidden!important;
+}
+.topic-icon img{
+  display:block!important;
+  width:100%!important;height:100%!important;
+  object-fit:contain!important;
+  border-radius:5px!important;
+  background:transparent;
+}
+.topic-icon.brand-original img{background:#f7f9fc}
+.topic-icon.topic-mf.brand-original img{background:#3366cc}
+.topic-icon.topic-winctrl.brand-original img,
+.topic-icon.topic-gsx.brand-original img{background:#090b0f;object-fit:cover!important}
+.topic-icon.topic-si.brand-original img{object-fit:cover!important;object-position:50% 37%;transform:scale(1.23)}
+.topic-icon.topic-msfs.brand-original img{transform:scale(1.08)}
+.topic-icon.topic-winctrl.brand-original img{transform:scale(2.05)}
+.topic-icon.topic-gsx.brand-original img{transform:scale(1.12)}
