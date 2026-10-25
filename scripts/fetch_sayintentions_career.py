@@ -69,7 +69,8 @@ def run():
         found=parse_public_profile(html)
         if all(found.get(k) is not None for k in ("rank","ifr_hours","vfr_hours","total_flights","airports_visited")):
             result.update({k:v for k,v in found.items() if v is not None})
-            result["state"]="ok"\n            result["source"]="profil public Gate 404 (navigateur Chromium)"
+            result["state"]="ok"
+            result["source"]="profil public Gate 404 (navigateur Chromium)"
             result["verified_at"]=result["checked_at"]
         else:
             result["state"]="stale" if previous.get("rank") else "unparsed"
