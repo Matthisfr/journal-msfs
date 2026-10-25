@@ -72,7 +72,7 @@ def parse(book):
     raise ValueError(f"{sheet.title}: ligne incomplète : ICAO, scène/dossier et version requis")
    original=code
    code=CORRECTIONS.get(code,code)
-    records.append({"icao":code,"original":original,"name":name or folder,"folder":folder,"installed":version,"publisher":get("publisher"),"region":get("region")})
+   records.append({"icao":code,"original":original,"name":name or folder,"folder":folder,"installed":version,"publisher":get("publisher"),"region":get("region")})
  return records
 def merge(records,old):
  by_folder={norm(a.get("folder")):a for a in old if a.get("folder")}
