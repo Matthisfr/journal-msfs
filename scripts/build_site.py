@@ -12,7 +12,6 @@ import re
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public"
-MAP_ID = "1smgM-lIXr_QPyWKxPrS68bmU0FsMjYM"
 
 def h(value):
     return html.escape(str(value if value is not None else ""), quote=True)
@@ -361,10 +360,7 @@ body{{background:#f5f5f1}}
 <p class="standalone-note">Cette page affiche toutes les scènes même si JavaScript est bloqué ou en cache dans Safari.</p>
 <div class="airport-update-digest">{render_airport_digest(airports)}</div>
 {table}
-<div class="map-section"><div class="overline">CARTE GOOGLE MY MAPS</div><h2>Mes aéroports sur la carte</h2>
-<p><a href="https://www.google.com/maps/d/viewer?mid={MAP_ID}" target="_blank" rel="noopener noreferrer">Ouvrir la carte Google My Maps ↗</a></p>
-<div class="map-box"><iframe title="Carte Google My Maps des aéroports" loading="eager" allowfullscreen src="https://www.google.com/maps/d/embed?mid={MAP_ID}&amp;ehbc=2E312F"></iframe></div>
-</div></main></body></html>"""
+<div class="map-section"><h2>Carte interactive des aéroports</h2><p><a href="./index.html#aeroports">Ouvrir la carte interactive avec repères colorés</a></p><div id="airport-leaflet-map" hidden></div></div></div></main></body></html>"""
     (PUBLIC / "airports.html").write_text(independent, encoding="utf-8")
     assert index.count("<tr>") >= len(airports), "Lignes statiques manquantes"
     assert "id=\"home-updated\">Le " in index, "Horodatage accueil absent"
