@@ -96,7 +96,12 @@ jobs:
           git add public/status.json public/airports.json public/watch.json
           if ! git diff --cached --quiet; then
             git commit -m "Journal: collecte automatique $(date -u +%Y-%m-%d)"
-            git push origin HEAD:main
+            if ! git push origin HEAD:main; then
+              echo "Le dépôt a changé pendant la collecte : rebase puis nouvel essai."
+              git fetch origin main
+              git -c rebase.autoStash=true rebase origin/main
+              git push origin HEAD:main
+            fi
           fi
 
       - name: Configurer GitHub Pages
