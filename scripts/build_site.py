@@ -20,8 +20,10 @@ def h(value):
 def compare(installed, online):
     a = [int(x) for x in re.findall(r"\d+", str(installed or ""))]
     b = [int(x) for x in re.findall(r"\d+", str(online or ""))]
-    if not a or not b:
+    if not a or not b or len(a)!=len(b):
         return "À COMPARER", "flag-v"
+    if a[0]!=b[0]:
+        return ("NOUVELLE ÉDITION", "flag-v") if b[0]>a[0] else ("INSTALLÉE + RÉCENTE", "flag-v")
     for i in range(max(len(a), len(b))):
         x = a[i] if i < len(a) else 0
         y = b[i] if i < len(b) else 0
@@ -43,7 +45,10 @@ def render_rows(airports):
         name = f'<b>{h(a.get("name") or "")}</b><small>{h(a.get("note") or a.get("folder") or "")}</small>'
         installed = h(a.get("installed") or "Non renseignée")
         url = str(a.get("source_url") or "")
-        source = f'<small><a href="{h(url)}" target="_blank" rel="noopener noreferrer">Fiche éditeur ↗</a></small>' if url.startswith("https://") else ""
+        store = str(a.get("source_store") or "Éditeur")
+        edition = str(a.get("source_edition") or "")
+        source_label = h(store + (" · " + edition if edition else ""))
+        source = f'<small><a href="{h(url)}" target="_blank" rel="noopener noreferrer">{source_label} ↗</a></small>' if url.startswith("https://") else ""
         online = a.get("server_version")
         today = dt.datetime.now(dt.timezone.utc).date().isoformat()
         verified_today = (a.get("version_check_state") == "verified"
