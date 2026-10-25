@@ -60,5 +60,17 @@ for a in airports:
   a["version_check_state"]="unavailable"
   a["version_check_reason"]="Source retrouvée mais version non revalidée aujourd'hui"
   a["status"]="UNK-V"
+manual_path=PUBLIC/"airport_manual_sources.json"
+manual=json.loads(manual_path.read_text(encoding="utf-8")) if manual_path.is_file() else {}
+for a in airports:
+ m=manual.get(a["folder"])
+ if not m or a.get("source_url"):continue
+ a["source_url"]=m["url"]
+ a["source_store"]=m.get("store","Éditeur")
+ a["source_edition"]=m.get("edition","")
+ a["source_title"]=a.get("name")
+ a["version_check_state"]="unavailable"
+ a["version_check_reason"]=m.get("note","Version à vérifier dans le gestionnaire éditeur")
+ a["status"]="UNK-V"
 airports_path.write_text(json.dumps(airports,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 print(f"Fiches liées : {added} ; versions boutique contrôlées aujourd'hui : {verified} ; anciennes : {stale} ; inventaire : {len(airports)}")
