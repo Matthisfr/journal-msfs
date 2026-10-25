@@ -45,11 +45,21 @@ def render_rows(airports):
         url = str(a.get("source_url") or "")
         source = f'<small><a href="{h(url)}" target="_blank" rel="noopener noreferrer">Fiche éditeur ↗</a></small>' if url.startswith("https://") else ""
         online = a.get("server_version")
-        if online:
+        today = dt.datetime.now(dt.timezone.utc).date().isoformat()
+        verified_today = (a.get("version_check_state") == "verified"
+                          and a.get("version_checked_at") == today)
+        if online and verified_today:
             label, flag = compare(a.get("installed"), online)
             status = f'<b>{h(online)}</b><small><span class="flag {flag}">{h(label)}</span></small>{source}'
+            status += f'<small>Vérifiée le {h(a["version_checked_at"])}</small>'
+        elif online:
+            state = str(a.get("status") or "UNK-V")
+            if state == "verified":
+                state = "UNK-V"
+            status = (f'<b>{h(online)}</b><small>Dernière version connue, non revalidée aujourd’hui</small>'
+                      f'<small><span class="flag flag-{cls.get(state, "v")}">{h(state)}</span></small>{source}')
             if a.get("version_checked_at"):
-                status += f'<small>Vérifiée le {h(a["version_checked_at"])}</small>'
+                status += f'<small>Dernière confirmation : {h(a["version_checked_at"])}</small>'
         else:
             state = str(a.get("status") or "UNK-V")
             status = f'<span class="flag flag-{cls.get(state, "v")}">{h(state)}</span>{source}'
@@ -147,6 +157,58 @@ def build_news(status, editorial, manifest):
         )
     return "\n".join(cards), "\n".join(homes[:3])
 
+def render_watch(watch):
+    rows = watch.get("sources", [])
+    totals = watch.get("totals", {})
+    checked = h(watch.get("checked_at", "Non exécutée"))
+    count = len(rows)
+    ok = totals.get("ok", 0) + totals.get("changed", 0)
+    changed = totals.get("changed", 0)
+    restricted = totals.get("restricted", 0)
+    unavailable = totals.get("unavailable", 0)
+    changes = watch.get("changes", [])
+    recent = []
+    for x in reversed(changes):
+        try:
+            at = dt.datetime.fromisoformat(x["detected_at"].replace("Z", "+00:00"))
+            if dt.datetime.now(dt.timezone.utc) - at > dt.timedelta(days=14):
+                continue
+        except (KeyError, ValueError):
+            continue
+        recent.append(x)
+        if len(recent) >= 6: break
+    highlights = "".join(
+        f'<li><a href="{h(x["url"])}" target="_blank" rel="noopener noreferrer">{h(x["name"])}</a>'
+        f' — changement détecté le {h(x["detected_at"][:10])}, à confirmer</li>'
+        for x in recent
+    )
+    items = []
+    labels = {"ok": "OK", "changed": "À CONTRÔLER", "restricted": "ACCÈS LIMITÉ", "unavailable": "INACCESSIBLE"}
+    for x in rows:
+        state = x.get("state", "unavailable")
+        note = " · " + h(x.get("reason", "")) if x.get("reason") else ""
+        items.append(
+            f'<div class="watch-source"><span class="watch-pill {h(state)}">{labels.get(state,"UNKNOWN")}</span>'
+            f'<div><a href="{h(x["url"])}" target="_blank" rel="noopener noreferrer">{h(x["name"])} ↗</a>'
+            f'<small>{h(x["group"])}{note}</small></div></div>'
+        )
+    return (
+        '<div class="overline">CONTRÔLE AUTOMATIQUE DES SOURCES</div>'
+        '<h3>Sites et logiciels sous surveillance</h3>'
+        f'<p class="watch-intro">Dernier contrôle : {checked} (UTC). '
+        'Un changement de page déclenche une alerte à examiner, jamais une version inventée.</p>'
+        '<div class="watch-kpis">'
+        f'<span><strong>{count}</strong> sources inscrites</span>'
+        f'<span><strong>{ok}</strong> accessibles</span>'
+        f'<span><strong>{changed}</strong> modifications détectées</span>'
+        f'<span><strong>{restricted+unavailable}</strong> UNKNOWN / accès bloqué</span>'
+        '</div>'
+        + ('<div class="watch-changes"><b>Modifications récentes à vérifier :</b><ul>' + highlights + '</ul></div>'
+           if highlights else '<p class="watch-intro">Aucune modification confirmée depuis la première référence disponible.</p>')
+        + f'<details><summary>Afficher les {count} sources et leurs résultats de contrôle</summary>'
+        + '<div class="watch-list">' + "".join(items) + '</div></details>'
+    )
+
 def build():
     airports = json.loads((PUBLIC / "airports.json").read_text(encoding="utf-8"))
     assert len(airports) == 171, f"Inventaire incomplet : {len(airports)} scènes"
@@ -165,6 +227,10 @@ def build():
     manifest_file = PUBLIC / "brand-manifest.json"
     manifest = json.loads(manifest_file.read_text(encoding="utf-8")) if manifest_file.is_file() else {}
     index = (PUBLIC / "index.html").read_text(encoding="utf-8")
+    watch_file = PUBLIC / "watch.json"
+    watch = json.loads(watch_file.read_text(encoding="utf-8")) if watch_file.is_file() else {}
+    index = index.replace('<div id="watch-container" class="watch-panel"><p>La surveillance quotidienne des sites sera affichée après la collecte.</p></div>',
+                          '<div id="watch-container" class="watch-panel">' + render_watch(watch) + '</div>')
     index = static_brand_icons(index, manifest)
     index = index.replace("</body>", '<script type="application/json" id="brand-manifest">' +
                           json.dumps(manifest, ensure_ascii=False).replace("<", "\\u003c") +
@@ -227,6 +293,7 @@ body{{background:#f5f5f1}}
     assert index.count("<tr>") >= len(airports), "Lignes statiques manquantes"
     assert "id=\"home-updated\">Le " in index, "Horodatage accueil absent"
     assert index.count('class="news-card"') >= 4, "Actualités officielles manquantes"
+    assert index.count('class="watch-source"') >= 30, "Surveillance des sources manquante"
     assert index.count('class="topic-icon topic-') >= 15, "Pictogrammes graphiques manquants"
     assert index.count('src="brand/') >= 6, "Logos authentiques attendus absents du HTML publié"
     import xml.etree.ElementTree as ET
