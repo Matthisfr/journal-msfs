@@ -96,7 +96,9 @@
     "image_query": "OVHD32 Airbus overhead",
     "official_url": "https://winwingsim.com/view/regular.html",
     "photo_source": "winwingturkiye.com",
-    "photo_status": "pending"
+    "photo_status": "pending",
+    "preview_url": "https://msfsaddons.com/2026/03/21/winctrls-ovhd32-sop-brings-a-full-airbus-overhead-panel-to-home-cockpits-for-349-95/",
+    "preview_note": "Visuels du prototype OVHD32 SOP, pas une photo du produit commercial final."
   },
   {
     "id": "agp",
