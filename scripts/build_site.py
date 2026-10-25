@@ -227,7 +227,8 @@ body{{background:#f5f5f1}}
     assert index.count("<tr>") >= len(airports), "Lignes statiques manquantes"
     assert "id=\"home-updated\">Le " in index, "Horodatage accueil absent"
     assert index.count('class="news-card"') >= 4, "Actualités officielles manquantes"
-    assert index.count('src="icons/') >= 15, "Pictogrammes graphiques manquants"
+    assert index.count('class="topic-icon topic-') >= 15, "Pictogrammes graphiques manquants"
+    assert index.count('src="brand/') >= 6, "Logos authentiques attendus absents du HTML publié"
     import xml.etree.ElementTree as ET
     icon_keys = ("si", "fenix", "mf", "winctrl", "msfs", "airport", "weather", "s3", "generic", "gsx", "atc", "fshud", "hardware", "navigraph", "traffic")
     for kind in icon_keys:
