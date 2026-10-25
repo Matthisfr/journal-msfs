@@ -97,11 +97,11 @@ def run():
                     cells=row["cells"]
                     if len(cells)<7:continue
                     joined=" ".join(cells)
-                    flight_id=re.search(r"\\b(?:IFR|VFR)-\\d{5,}\\b",joined,re.I)
+                    flight_id=re.search(r"\b(?:IFR|VFR)-\d{5,}\b",joined,re.I)
                     if not flight_id:continue
                     # Colonnes du tableau public: Actions, ID, Aircraft, When, Origin, Destination, Rules, Duration.
-                    offset=1 if len(cells)>=8 else 0
-                    if len(cells)<7+offset:continue
+                    offset=0 if len(cells)>=8 else -1
+                    if len(cells)<7+max(offset,0):continue
                     item={"id":flight_id.group(0),"aircraft":cells[1+offset],"when":cells[2+offset],
                           "origin":cells[3+offset],"destination":cells[4+offset],
                           "rules":cells[5+offset],"duration":cells[6+offset]}
@@ -112,7 +112,7 @@ def run():
                     result["flights_checked_at"]=result["checked_at"]
                     print("Gate 404: derniers vols récupérés:",len(flights))
                 else:
-                    print("Gate 404: tableau des derniers vols non reconnu")
+                    print("Gate 404: tableau non reconnu; lignes:",len(rows),"exemples:",[row["cells"][:8] for row in rows[:3]])
             except Exception as flights_error:
                 print("Gate 404: lecture des vols indisponible:",type(flights_error).__name__,str(flights_error)[:120])
             browser.close()
