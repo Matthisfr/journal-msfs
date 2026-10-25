@@ -205,15 +205,5 @@
     "method": "official_news",
     "installed_version": null,
     "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
-  },
-  {
-    "id": "fenix2gsx",
-    "name": "Fenix2GSX (outil communautaire)",
-    "group": "Sol / Trafic",
-    "source_url": "https://github.com/Fragtality/Fenix2GSX/releases",
-    "method": "github_release",
-    "repo": "Fragtality/Fenix2GSX",
-    "installed_version": null,
-    "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
   }
 ]
