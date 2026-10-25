@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-25",
-  "last_run": "2026-10-25T09:09:14.408197+00:00",
-  "weather_checked_at": "2026-10-25T09:09:14.408197+00:00",
-  "news_checked_at": "2026-10-25T09:09:14.408197+00:00",
+  "last_run": "2026-10-25T09:12:58.945399+00:00",
+  "weather_checked_at": "2026-10-25T09:12:58.945399+00:00",
+  "news_checked_at": "2026-10-25T09:12:58.945399+00:00",
   "weather": [
     {
       "icao": "KBZN",
@@ -109,6 +109,19 @@
       "taf_raw": "TAF AMD EGLL 250622Z 2506/2612 24018G28KT 9999 SCT040 BECMG 2506/2509 27022G32KT PROB30 TEMPO 2509/2514 27026G43KT BECMG 2516/2519 25012KT PROB30 TEMPO 2516/2521 26015G25KT BECMG 2603/2606 18008KT TEMPO 2607/2612 6000 RA -RADZ BKN014 BECMG 2609/2612 18018G28KT PROB30 TEMPO 2610/2612 4000 RADZ BKN008"
     },
     {
+      "icao": "KASE",
+      "name": "KASE Pitkin County Airport",
+      "observed_at": "2026-10-25T09:09:00+00:00",
+      "raw": "SPECI KASE 250909Z AUTO 22003KT 2 1/2SM BR OVC001 03/02 A3024 RMK AO2 VIS 3/4V5 T00280022",
+      "score": 45,
+      "summary": "visibilité < 3 SM",
+      "icon": "☁️",
+      "phenomenon": "Ciel couvert",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KASE 250520Z 2506/2606 00000KT P6SM FEW002 BKN110 TEMPO 2506/2509 4SM -SHRA BKN035 FM251900 18007KT P6SM FEW045 SCT120 PROB30 2519/2523 4SM -SHRA BKN045 BKN060 FM252300 29005KT 6SM -SHRA SCT035 BKN070 FM260300 VRB03KT 6SM -SHRA SCT015 BKN035"
+    },
+    {
       "icao": "EKCH",
       "name": "EKCH Copenhagen Airport",
       "observed_at": "2026-10-25T08:50:00+00:00",
@@ -120,19 +133,6 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF EKCH 250827Z 2509/2609 19018KT 9999 BKN020 TEMPO 2509/2510 17030G45KT BKN008 TEMPO 2510/2522 20020G32KT SHRA BKN020CB BECMG 2522/2524 24018KT TEMPO 2600/2609 23015G25KT SCT012CB"
-    },
-    {
-      "icao": "ENGM",
-      "name": "Aerosoft Oslo Airport",
-      "observed_at": "2026-10-25T08:50:00+00:00",
-      "raw": "METAR ENGM 250850Z 13017G29KT 100V160 9999 -RA SCT012 BKN015 05/03 Q0981 TEMPO RA",
-      "score": 34,
-      "summary": "rafales ≥ 25 kt, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF ENGM 250500Z 2506/2606 14020G32KT 9999 -RA BKN015 BECMG 2506/2508 RA TEMPO 2506/2512 15015KT 4000 BKN007 BECMG 2512/2514 12015KT -RA BKN008 TEMPO 2516/2606 4000 SHRA BKN006 FEW030CB BECMG 2602/2604 20005KT"
     }
   ],
   "weather_coverage": {
@@ -151,6 +151,18 @@
       "summary": "RELEASE NOTES Sim Update 7.1 - 1.9.21.0 If you are playing on PC, outdated packages in your community folder may have an unexpected impact on the title’s performance and behavior. If you suffer from stability issues or long loading…",
       "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
       "new": false
+    },
+    {
+      "id": "github-MobiFlight-MobiFlight-Connector-11.3.1.2",
+      "title": "MobiFlight : préversion 11.3.1.2",
+      "category": "MOBIFLIGHT",
+      "topic": "MF",
+      "date": "2026-10-23",
+      "source": "GitHub Releases officiel — MobiFlight/MobiFlight-Connector",
+      "url": "https://github.com/MobiFlight/MobiFlight-Connector/releases/tag/11.3.1.2",
+      "summary": "What's Changed New Hardware Support 🕹️ Support MOZA MA3F Flight Computer Display by @DocMoebiuz in https://github.com/MobiFlight/MobiFlight-Connector/pull/3387 Add rowsfire firmware for A113 and A107 Pro by @DocMoebiuz in…",
+      "impact": "Préversion : ne pas installer sur le cockpit principal sans sauvegarde et vérification de compatibilité.",
+      "new": true
     },
     {
       "id": "779510",
@@ -206,6 +218,18 @@
       "summary": "The latest Weekly Briefing is now available! Read on for information about: Airbus Helicopters H125 now available on MSFS (2020) Developer Spotlight: The Art of Carenado Weekly Marketplace releases Screenshot competition winners And…",
       "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
       "new": false
+    },
+    {
+      "id": "github-MobiFlight-MobiFlight-Connector-11.3.1",
+      "title": "MobiFlight : version stable 11.3.1",
+      "category": "MOBIFLIGHT",
+      "topic": "MF",
+      "date": "2026-10-06",
+      "source": "GitHub Releases officiel — MobiFlight/MobiFlight-Connector",
+      "url": "https://github.com/MobiFlight/MobiFlight-Connector/releases/tag/11.3.1",
+      "summary": "What's Changed Improvement ✨ Add Honeycomb Aeronautical to gold sponsor list by @JunMyungH in https://github.com/MobiFlight/MobiFlight-Connector/pull/3412 Bug Fixes 🐛 Fix logfile \"copy to clipboard\" by @ColinM9991 in…",
+      "impact": "Vérifier le changelog officiel et sauvegarder les configurations avant installation.",
+      "new": false
     }
   ],
   "hardware": [],
@@ -213,14 +237,22 @@
     "metar": "ok",
     "taf": "ok",
     "official_news": "ok",
-    "airport_versions": "partial"
+    "airport_versions": "partial",
+    "official_releases": "ok"
   },
   "errors": [],
-  "note": "METAR, TAF, annonces officielles et vérification limitée de huit fiches Aerosoft automatisés ; autres scènes et veille éditoriale ChatGPT non automatisées.",
+  "note": "Collecte quotidienne automatique : METAR/TAF NOAA, flux officiel MSFS, versions GitHub publiées, audit des 171 scènes, extraction des versions Aerosoft accessibles et surveillance des sites publics. Les versions non publiées ou inaccessibles restent UNKNOWN ; une page modifiée n’est pas une mise à jour confirmée.",
   "version_coverage": {
     "eligible": 8,
     "verified_today": 8,
-    "unavailable": 0
+    "unavailable": 0,
+    "inventory_total": 171,
+    "official_url_known": 9,
+    "without_official_url": 162,
+    "manual_source": 1,
+    "unverified": 163,
+    "audited_at": "2026-10-25T09:12:58.945399+00:00"
   },
-  "versions_checked_at": "2026-10-25T09:09:14.408197+00:00"
+  "versions_checked_at": "2026-10-25T09:12:58.945399+00:00",
+  "releases_checked_at": "2026-10-25T09:12:58.945399+00:00"
 }

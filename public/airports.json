@@ -8,10 +8,13 @@
     "installed": "3.2.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "Sous-scène de KLAS — non utilisée comme station METAR",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "(SUB KMCI)",
@@ -22,10 +25,13 @@
     "installed": "2.5.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "(SUB LGSR)",
@@ -36,10 +42,13 @@
     "installed": "1.0.1",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "58CA",
@@ -50,10 +59,13 @@
     "installed": "1.0.2",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "BGSF",
@@ -64,10 +76,13 @@
     "installed": "1.2.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "BIKF",
@@ -78,10 +93,13 @@
     "installed": "2.0.5",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "CYUL",
@@ -92,10 +110,13 @@
     "installed": "1.3.2",
     "region": "CANADA",
     "country": "CANADA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "CYVR",
@@ -106,10 +127,13 @@
     "installed": "1.3.1",
     "region": "CANADA",
     "country": "CANADA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "CYYZ",
@@ -120,10 +144,13 @@
     "installed": "1.5.0",
     "region": "CANADA",
     "country": "CANADA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "DAAG",
@@ -134,10 +161,13 @@
     "installed": "2.4.0",
     "region": "AFRIQUE",
     "country": "AFRIQUE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "DTMB",
@@ -148,10 +178,13 @@
     "installed": "1.4.0",
     "region": "AFRIQUE",
     "country": "AFRIQUE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "DTTA",
@@ -162,10 +195,13 @@
     "installed": "1.0.1",
     "region": "AFRIQUE",
     "country": "AFRIQUE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "DTTJ",
@@ -176,10 +212,13 @@
     "installed": "1.1.2",
     "region": "AFRIQUE",
     "country": "AFRIQUE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "EBBR",
@@ -195,7 +234,10 @@
     "source_url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/3238/aerosoft-mega-airport-brussels",
     "server_version": "1.0.5",
     "version_checked_at": "2026-10-25",
-    "version_source": "Aerosoft — fiche produit officielle"
+    "version_source": "Aerosoft — fiche produit officielle",
+    "last_attempt_at": "2026-10-25T09:13:06.116214+00:00",
+    "version_check_state": "verified",
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00"
   },
   {
     "icao": "EDDB",
@@ -211,7 +253,10 @@
     "source_url": "https://www.aerosoft.com/en/blog/detail/sCategory/2238/blogArticle/6521",
     "server_version": "3.4.0",
     "version_checked_at": "2026-10-25",
-    "version_source": "Aerosoft — annonce officielle mise à jour 3.4 MSFS 2024"
+    "version_source": "Aerosoft — annonce officielle mise à jour 3.4 MSFS 2024",
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "not_automatable",
+    "version_check_reason": "Page connue, version non extraite automatiquement"
   },
   {
     "icao": "EDDF",
@@ -227,7 +272,10 @@
     "source_url": "https://www.aerosoft.com/us/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/4398/aerosoft-mega-airport-frankfurt",
     "server_version": "1.1.2",
     "version_checked_at": "2026-10-25",
-    "version_source": "Aerosoft — fiche produit officielle"
+    "version_source": "Aerosoft — fiche produit officielle",
+    "last_attempt_at": "2026-10-25T09:13:06.286861+00:00",
+    "version_check_state": "verified",
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00"
   },
   {
     "icao": "EDDG",
@@ -238,10 +286,13 @@
     "installed": "1.0.5",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "EDDH",
@@ -257,7 +308,10 @@
     "source_url": "https://www.aerosoft.com/us/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/3254/sim-wings-hamburg",
     "server_version": "1.0.4",
     "version_checked_at": "2026-10-25",
-    "version_source": "Aerosoft — fiche produit officielle"
+    "version_source": "Aerosoft — fiche produit officielle",
+    "last_attempt_at": "2026-10-25T09:13:11.016772+00:00",
+    "version_check_state": "verified",
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00"
   },
   {
     "icao": "EDDK",
@@ -273,7 +327,10 @@
     "source_url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/3237/aerosoft-airport-cologne/bonn",
     "server_version": "1.1.1",
     "version_checked_at": "2026-10-25",
-    "version_source": "Aerosoft — fiche produit officielle"
+    "version_source": "Aerosoft — fiche produit officielle",
+    "last_attempt_at": "2026-10-25T09:13:11.278576+00:00",
+    "version_check_state": "verified",
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00"
   },
   {
     "icao": "EDDL",
@@ -289,7 +346,10 @@
     "source_url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/4547/aerosoft-airport-dusseldorf",
     "server_version": "1.0.3",
     "version_checked_at": "2026-10-25",
-    "version_source": "Aerosoft — fiche produit officielle"
+    "version_source": "Aerosoft — fiche produit officielle",
+    "last_attempt_at": "2026-10-25T09:13:11.278588+00:00",
+    "version_check_state": "verified",
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00"
   },
   {
     "icao": "EDDL",
@@ -300,10 +360,13 @@
     "installed": "1.0.2",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "EDDM",
@@ -319,7 +382,10 @@
     "source_url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/3253/sim-wings-munich-v2",
     "server_version": "2.5.1",
     "version_checked_at": "2026-10-25",
-    "version_source": "Aerosoft — fiche produit officielle"
+    "version_source": "Aerosoft — fiche produit officielle",
+    "last_attempt_at": "2026-10-25T09:13:11.278593+00:00",
+    "version_check_state": "verified",
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00"
   },
   {
     "icao": "EDDS",
@@ -330,10 +396,13 @@
     "installed": "1.3.1",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "EDDV",
@@ -344,10 +413,13 @@
     "installed": "1.2.1",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "EDLW",
@@ -358,10 +430,13 @@
     "installed": "1.0.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "EFHK",
@@ -372,10 +447,13 @@
     "installed": "2.0.2",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "EFRO",
@@ -386,10 +464,13 @@
     "installed": "2.0.1",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "EGCC",
@@ -400,10 +481,13 @@
     "installed": "1.3.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "EGKK",
@@ -414,10 +498,13 @@
     "installed": "1.1.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "EGLL",
@@ -428,10 +515,13 @@
     "installed": "1.1.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "EGPF",
@@ -442,10 +532,13 @@
     "installed": "1.4.1",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "EGPK",
@@ -456,10 +549,13 @@
     "installed": "1.4.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "EHRD",
@@ -470,10 +566,13 @@
     "installed": "2.2.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "EICK",
@@ -484,10 +583,13 @@
     "installed": "1.4.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "EIDW",
@@ -498,10 +600,13 @@
     "installed": "2.3.3",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "EINN",
@@ -512,10 +617,13 @@
     "installed": "1.3.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "EKCH",
@@ -526,10 +634,13 @@
     "installed": "1.0.7",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "EKVG",
@@ -540,10 +651,13 @@
     "installed": "2.0.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "ENGM",
@@ -559,7 +673,10 @@
     "source_url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/4286/aerosoft-mega-airport-oslo-gardermoen",
     "server_version": "1.0.2",
     "version_checked_at": "2026-10-25",
-    "version_source": "Aerosoft — fiche produit officielle"
+    "version_source": "Aerosoft — fiche produit officielle",
+    "last_attempt_at": "2026-10-25T09:13:16.547927+00:00",
+    "version_check_state": "verified",
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00"
   },
   {
     "icao": "ESGG",
@@ -570,10 +687,13 @@
     "installed": "1.4.2",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "ESSA",
@@ -584,10 +704,13 @@
     "installed": "1.5.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "GCFV",
@@ -598,10 +721,13 @@
     "installed": "1.3.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "GMMN",
@@ -612,10 +738,13 @@
     "installed": "1.2.1",
     "region": "AFRIQUE",
     "country": "AFRIQUE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "GMMX",
@@ -626,10 +755,13 @@
     "installed": "1.2.0",
     "region": "AFRIQUE",
     "country": "AFRIQUE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "HECA",
@@ -640,10 +772,13 @@
     "installed": "1.0.3",
     "region": "AFRIQUE",
     "country": "AFRIQUE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KABQ",
@@ -654,10 +789,13 @@
     "installed": "1.1.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KASE",
@@ -668,10 +806,13 @@
     "installed": "2.0.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KATL",
@@ -682,10 +823,13 @@
     "installed": "1.0.4",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KBDL",
@@ -696,10 +840,13 @@
     "installed": "1.0.3",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KBHM",
@@ -710,10 +857,13 @@
     "installed": "1.2.1",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KBNA",
@@ -724,10 +874,13 @@
     "installed": "1.4.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KBOI",
@@ -738,10 +891,13 @@
     "installed": "1.1.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KBOS",
@@ -752,10 +908,13 @@
     "installed": "1.9.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KBTV",
@@ -766,10 +925,13 @@
     "installed": "2.0.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KBWI",
@@ -780,10 +942,13 @@
     "installed": "1.0.3",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KBZN",
@@ -794,10 +959,13 @@
     "installed": "1.1.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KCHS",
@@ -808,10 +976,13 @@
     "installed": "1.4.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KCLE",
@@ -822,10 +993,13 @@
     "installed": "1.0.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KCLT",
@@ -836,10 +1010,13 @@
     "installed": "1.0.7",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KCRW",
@@ -850,10 +1027,13 @@
     "installed": "1.1.1",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KDEN",
@@ -864,10 +1044,13 @@
     "installed": "1.2.3",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KDFW",
@@ -878,10 +1061,13 @@
     "installed": "1.0.3",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KDTW",
@@ -892,10 +1078,13 @@
     "installed": "1.0.5",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KEWR",
@@ -906,10 +1095,13 @@
     "installed": "1.1.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KEWR",
@@ -920,10 +1112,13 @@
     "installed": "1.6.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KFSD",
@@ -934,10 +1129,13 @@
     "installed": "1.0.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KIAD",
@@ -948,10 +1146,13 @@
     "installed": "1.2.7",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KIAH",
@@ -962,10 +1163,13 @@
     "installed": "1.0.7",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KICT",
@@ -976,10 +1180,13 @@
     "installed": "2.2.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KIND",
@@ -990,10 +1197,13 @@
     "installed": "2.4.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KJAC",
@@ -1004,10 +1214,13 @@
     "installed": "2.0.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KJAN",
@@ -1018,10 +1231,13 @@
     "installed": "1.5.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KJFK",
@@ -1032,10 +1248,13 @@
     "installed": "1.1.1",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KLAS",
@@ -1046,10 +1265,13 @@
     "installed": "3.2.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KLAS",
@@ -1060,10 +1282,13 @@
     "installed": "2.2.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KLAX",
@@ -1074,10 +1299,13 @@
     "installed": "1.0.2",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KLGA",
@@ -1088,10 +1316,13 @@
     "installed": "1.1.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KLIT",
@@ -1102,10 +1333,13 @@
     "installed": "1.2.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KLVB",
@@ -1116,10 +1350,13 @@
     "installed": "1.0.2",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "Piste fictive — inventaire uniquement, exclue de la météo",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KMCI",
@@ -1130,10 +1367,13 @@
     "installed": "1.1.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KMCI",
@@ -1144,10 +1384,13 @@
     "installed": "2.5.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KMDW",
@@ -1158,10 +1401,13 @@
     "installed": "1.3.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KMHT",
@@ -1172,10 +1418,13 @@
     "installed": "1.0.1",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KMIA",
@@ -1186,10 +1435,13 @@
     "installed": "2.2.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KMIA",
@@ -1200,10 +1452,13 @@
     "installed": "1.0.1",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KMKE",
@@ -1214,10 +1469,13 @@
     "installed": "2.0.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KMSP",
@@ -1228,10 +1486,13 @@
     "installed": "1.0.5",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KMSY",
@@ -1242,10 +1503,13 @@
     "installed": "1.0.7",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KOKC",
@@ -1256,10 +1520,13 @@
     "installed": "1.0.4",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KOMA",
@@ -1270,10 +1537,13 @@
     "installed": "2.0.1",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KORD",
@@ -1284,10 +1554,13 @@
     "installed": "1.0.2",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KPDX",
@@ -1298,10 +1571,13 @@
     "installed": "2.3.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KPHL",
@@ -1312,10 +1588,13 @@
     "installed": "1.4.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KPHX",
@@ -1326,10 +1605,13 @@
     "installed": "3.1.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KPVD",
@@ -1340,10 +1622,13 @@
     "installed": "1.0.2",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KPVD",
@@ -1354,10 +1639,13 @@
     "installed": "4.5.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KPVD",
@@ -1368,10 +1656,13 @@
     "installed": "1.0.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KPWM",
@@ -1382,10 +1673,13 @@
     "installed": "1.1.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KSEA",
@@ -1396,10 +1690,13 @@
     "installed": "1.0.2",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KSFO",
@@ -1410,10 +1707,13 @@
     "installed": "1.3.5",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KSLC",
@@ -1424,10 +1724,13 @@
     "installed": "2.0.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "KTUS",
@@ -1438,10 +1741,13 @@
     "installed": "1.1.0",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LDZA",
@@ -1452,10 +1758,13 @@
     "installed": "2.5.4",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LEBL",
@@ -1466,10 +1775,13 @@
     "installed": "1.4.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LEGE",
@@ -1480,10 +1792,13 @@
     "installed": "1.2.1",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LEIB",
@@ -1494,10 +1809,13 @@
     "installed": "1.0.1",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LEMD",
@@ -1508,10 +1826,13 @@
     "installed": "1.0.10",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LEMG",
@@ -1522,10 +1843,13 @@
     "installed": "1.2.2",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LEPA",
@@ -1536,10 +1860,13 @@
     "installed": "25.8.5",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LESO",
@@ -1550,10 +1877,13 @@
     "installed": "1.2.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LEZL",
@@ -1564,10 +1894,13 @@
     "installed": "1.3.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LFBD",
@@ -1578,10 +1911,13 @@
     "installed": "2.1.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LFBO",
@@ -1592,10 +1928,13 @@
     "installed": "1.1.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LFJL",
@@ -1606,10 +1945,13 @@
     "installed": "1.0.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LFKB",
@@ -1620,10 +1962,13 @@
     "installed": "1.1.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LFKC",
@@ -1634,10 +1979,13 @@
     "installed": "1.5.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LFKC",
@@ -1648,10 +1996,13 @@
     "installed": "1.1.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LFKC",
@@ -1662,10 +2013,13 @@
     "installed": "2.0.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LFKF",
@@ -1676,10 +2030,13 @@
     "installed": "1.0.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LFKJ",
@@ -1690,10 +2047,13 @@
     "installed": "1.3.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LFKJ",
@@ -1704,10 +2064,13 @@
     "installed": "1.0.1",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LFMD",
@@ -1718,10 +2081,13 @@
     "installed": "1.3.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LFML",
@@ -1732,10 +2098,13 @@
     "installed": "1.0.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LFMN",
@@ -1746,10 +2115,13 @@
     "installed": "2.2.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LFMT",
@@ -1760,10 +2132,13 @@
     "installed": "2.1.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LFNA",
@@ -1774,10 +2149,13 @@
     "installed": "1.1.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LFPO",
@@ -1788,10 +2166,13 @@
     "installed": "1.4.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LFRN",
@@ -1802,10 +2183,13 @@
     "installed": "1.3.1",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LFRS",
@@ -1816,10 +2200,13 @@
     "installed": "1.0.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LFSB",
@@ -1830,10 +2217,13 @@
     "installed": "1.1.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LFST",
@@ -1844,10 +2234,13 @@
     "installed": "1.3.3",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LFTZ",
@@ -1858,10 +2251,13 @@
     "installed": "1.4.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LGAV",
@@ -1872,10 +2268,13 @@
     "installed": "1.7.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LGMK",
@@ -1886,10 +2285,13 @@
     "installed": "1.0.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LGRP",
@@ -1900,10 +2302,13 @@
     "installed": "3.1.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LGSR",
@@ -1914,10 +2319,13 @@
     "installed": "1.0.1",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LHBP",
@@ -1928,10 +2336,13 @@
     "installed": "1.1.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LICJ",
@@ -1942,10 +2353,13 @@
     "installed": "1.0.3",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LIMC",
@@ -1956,10 +2370,13 @@
     "installed": "1.0.5",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LIML",
@@ -1970,10 +2387,13 @@
     "installed": "1.3.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LIPE",
@@ -1984,10 +2404,13 @@
     "installed": "1.0.2",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LIPZ",
@@ -1998,10 +2421,13 @@
     "installed": "3.2.1",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LIRF",
@@ -2012,10 +2438,13 @@
     "installed": "2.0.1",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LIRN",
@@ -2026,10 +2455,13 @@
     "installed": "1.0.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LMML",
@@ -2040,10 +2472,13 @@
     "installed": "1.0.1",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LMML",
@@ -2054,10 +2489,13 @@
     "installed": "1.3.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LOWI",
@@ -2068,10 +2506,13 @@
     "installed": "1.0.3",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LOWS",
@@ -2082,10 +2523,13 @@
     "installed": "1.2.1",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LOWS",
@@ -2096,10 +2540,13 @@
     "installed": "1.2.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LPFR",
@@ -2110,10 +2557,13 @@
     "installed": "1.3.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LPPR",
@@ -2124,10 +2574,13 @@
     "installed": "1.2.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LPPT",
@@ -2138,10 +2591,13 @@
     "installed": "1.0.3",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LSGG",
@@ -2152,10 +2608,13 @@
     "installed": "1.1.3",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LSZH",
@@ -2166,10 +2625,13 @@
     "installed": "1.6.8",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LSZH",
@@ -2180,10 +2642,13 @@
     "installed": "1.1.1",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LTFM",
@@ -2194,10 +2659,13 @@
     "installed": "1.0.8",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "LXGB",
@@ -2208,10 +2676,13 @@
     "installed": "1.1.0",
     "region": "EUROPE",
     "country": "EUROPE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "MDSD",
@@ -2222,10 +2693,13 @@
     "installed": "1.6.5",
     "region": "CARAIBES",
     "country": "CARAIBES",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "MUHA",
@@ -2236,10 +2710,13 @@
     "installed": "2.0.0",
     "region": "CARAIBES",
     "country": "CARAIBES",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "OERK",
@@ -2250,10 +2727,13 @@
     "installed": "3.7.0",
     "region": "AFRIQUE",
     "country": "AFRIQUE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "OMDB",
@@ -2264,10 +2744,13 @@
     "installed": "2.0.2",
     "region": "ASIE",
     "country": "ASIE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "OMDU",
@@ -2278,10 +2761,13 @@
     "installed": "2.0.2",
     "region": "ASIE",
     "country": "ASIE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "OOMS",
@@ -2292,10 +2778,13 @@
     "installed": "1.0.0",
     "region": "AFRIQUE",
     "country": "AFRIQUE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "PANC",
@@ -2311,7 +2800,10 @@
     "source_url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-north-america/3812/sim-wings-anchorage",
     "server_version": "1.1.0",
     "version_checked_at": "2026-10-25",
-    "version_source": "Aerosoft — fiche produit officielle"
+    "version_source": "Aerosoft — fiche produit officielle",
+    "last_attempt_at": "2026-10-25T09:13:16.547951+00:00",
+    "version_check_state": "verified",
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00"
   },
   {
     "icao": "PHNL",
@@ -2322,10 +2814,13 @@
     "installed": "1.2.3",
     "region": "USA",
     "country": "USA",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "ROAH",
@@ -2336,10 +2831,13 @@
     "installed": "1.0.2",
     "region": "AFRIQUE",
     "country": "AFRIQUE",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "SBGL",
@@ -2350,10 +2848,13 @@
     "installed": "1.0.0",
     "region": "AMERIQUE DU SUD",
     "country": "AMERIQUE DU SUD",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "TFFF",
@@ -2364,10 +2865,13 @@
     "installed": "2.0.0",
     "region": "CARAIBES",
     "country": "CARAIBES",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "TFFR",
@@ -2378,10 +2882,13 @@
     "installed": "1.5.1",
     "region": "CARAIBES",
     "country": "CARAIBES",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "TJSJ",
@@ -2392,10 +2899,13 @@
     "installed": "3.0.0",
     "region": "CARAIBES",
     "country": "CARAIBES",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   },
   {
     "icao": "YPAD",
@@ -2406,9 +2916,12 @@
     "installed": "1.0.2",
     "region": "PACIFIC",
     "country": "PACIFIC",
-    "status": "UNK-V",
+    "status": "UNK-P",
     "note": "",
     "source_url": null,
-    "server_version": null
+    "server_version": null,
+    "last_audited_at": "2026-10-25T09:12:58.945399+00:00",
+    "version_check_state": "no_source",
+    "version_check_reason": "Fiche éditeur précise non identifiée"
   }
 ]
