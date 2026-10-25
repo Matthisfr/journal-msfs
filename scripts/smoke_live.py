@@ -23,9 +23,12 @@ def verify():
     index = get("index.html")
     if index.count("<tr>") < 171: raise AssertionError("171 scènes absentes du HTML publié")
     for marker in ('id="watch-container"', 'id="home-updated"', 'id="news-container"',
-                   'google.com/maps/d/embed', 'id="airport-body"'):
+                   'id="google-map"', 'id="airport-body"'):
         if marker not in index: raise AssertionError(f"Élément manquant: {marker}")
     if index.count('class="watch-source"') < 30: raise AssertionError("Veille des sites absente")
+    independent = get("airports.html")
+    if independent.count("<tr>") < 171 or "google.com/maps/d/embed" not in independent:
+        raise AssertionError("Page indépendante ou carte Google manquante")
     airports = json.loads(get("airports.json"))
     if len(airports) != 171: raise AssertionError("Inventaire incomplet")
     status = json.loads(get("status.json"))
