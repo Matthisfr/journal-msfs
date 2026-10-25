@@ -8,7 +8,7 @@ def main():
     airports=json.loads((PUBLIC/"airports.json").read_text(encoding="utf-8"))
     codes={a.get("icao","").upper() for a in airports}
     codes={c for c in codes if len(c)==4 and c.isalnum() and not c.startswith("(") and c!="KLVB"}
-    existing=json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
+    existing={}  # Ne jamais conserver des coordonnées anciennes potentiellement inversées
     result=dict(existing)
     try:
         req=urllib.request.Request(URL,headers={"User-Agent":"MSFS-Journal-Map/1.0"})
@@ -19,13 +19,17 @@ def main():
                 if code not in codes: continue
                 coord=(row.get("coordinates") or "").split(",")
                 if len(coord)!=2: continue
-                try: lon,lat=map(float,coord)
+                try: lat,lon=map(float,coord)
                 except ValueError: continue
                 if -90<=lat<=90 and -180<=lon<=180:
                     result[code]={"lat":lat,"lon":lon,"name":row.get("name",""),"source":"OurAirports / airport-codes"}
     except Exception as exc:
-        print(f"Source de coordonnées indisponible, cache conservé : {exc}")
+        raise RuntimeError(f"Source de coordonnées indisponible : {exc}") from exc
     result={k:v for k,v in result.items() if k in codes}
+    if len(result) < 50: raise RuntimeError(f"Seulement {len(result)} coordonnées : publication interrompue")
+    for code,loc in result.items():
+        if not (-90 <= loc["lat"] <= 90 and -180 <= loc["lon"] <= 180):
+            raise ValueError(f"Coordonnées invalides : {code}")
     OUT.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(f"Carte : {len(result)}/{len(codes)} codes géolocalisés, aucun point inventé")
 if __name__=="__main__": main()
