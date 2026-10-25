@@ -48,11 +48,11 @@ def simapppro_version():
     raw=text_html(get(url))
     # Only a version with a numbered change list counts. The site contains
     # many old changelogs; use the highest first explicitly documented entry.
-    matches=list(re.finditer(r"(?m)^\s*(1\.\d+\.\d+)\s*:\s*$",raw))
+    matches=list(re.finditer(r"(?<!\d)(1\.\d+\.\d+)\s*:",raw))
     if not matches:raise ValueError("Changelog SimAppPro absent")
     m=matches[0]
     notes=raw[m.end():matches[1].start() if len(matches)>1 else m.end()+6000].strip()
-    if not re.search(r"(?m)^\s*\d+\s*[\.\)]",notes):raise ValueError("Version sans notes")
+    if not re.search(r"\b\d+\s*[\.\)]",notes):raise ValueError("Version sans notes")
     return {"version":m.group(1),"url":url,"published_at":None,"notes":notes[:12000]}
 def msfs_official():
     url="https://www.flightsimulator.com/category/releases/"
@@ -68,6 +68,11 @@ def fenix_official():
     url="https://fenixsim.com/blog/"
     raw=text_html(get(url))
     m=re.search(r"Fenix\s+A32X\s+Version\s+(\d+)\s+Released",raw,re.I)
+    if not m:
+        # La page d'accueil peut ne plus présenter la sortie du 21 octobre.
+        # Vérifier alors la page de publication officielle, jamais un forum.
+        raw=text_html(get("https://fenixsim.com/blog/entries/2026-10-21_v3_update/"))
+        m=re.search(r"Fenix\s+A32X\s+Version\s+(\d+)\s+Released",raw,re.I)
     if not m:raise ValueError("Branche Fenix non explicitement publiée sur le blog")
     # Version majeure, PAS numéro exact de build de l'installateur Fenix.
     return {"version":"V"+m.group(1)+" (branche)","url":"https://fenixsim.com/blog/entries/2026-10-21_v3_update/" if m.group(1)=="3" else url,
