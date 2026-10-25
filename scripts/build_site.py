@@ -79,8 +79,12 @@ def render_rows(airports):
             status = f'<span class="flag flag-{cls.get(state, "v")}">{h(state)}</span>{source}'
         if a.get("version_check_reason") and a.get("version_check_state")!="verified":
             status += f'<small class="source-note">{h(a["version_check_reason"])}</small>'
-        elif a.get("source_note"):
+        if a.get("source_note"):
             status += f'<small class="source-note">{h(a["source_note"])}</small>'
+        if a.get("reference_version") and a.get("reference_source_url"):
+            status += (f'<small class="source-note">Indication non officielle : '
+                       f'<a href="{h(a["reference_source_url"])}" target="_blank" rel="noopener noreferrer">'
+                       f'{h(a["reference_version"])} ↗</a> (non utilisée pour les alertes)</small>')
         out.append(
             f'<tr><td>{code}</td><td>{name}</td><td>{h(a.get("publisher") or "")}</td>'
             f'<td><b>{installed}</b></td><td>{status}</td></tr>'
