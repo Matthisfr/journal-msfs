@@ -32,7 +32,7 @@ for a in airports:
  if parsed.scheme!="https" or parsed.netloc not in ("contrail.shop","inibuilds.com") or not parsed.path.startswith("/products/"):
   continue
  # Les 8 sources Aerosoft ont un extracteur officiel distinct : conserver la référence.
- if a.get("source_url","").startswith("https://www.aerosoft.com/"):
+ if str(a.get("source_url") or "").startswith("https://www.aerosoft.com/"):
   continue
  if a.get("source_url")!=url:added+=1
  a["source_url"]=url
