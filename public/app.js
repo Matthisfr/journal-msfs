@@ -48,7 +48,7 @@ function renderAirports(){
   if(diag)diag.textContent=`À approfondir : ${unresolved} scènes · `+Object.entries(issues).filter(([,n])=>n).map(([label,n])=>`${n} ${label.toLowerCase()}`).join(' · ')+'. Chaque cas est réévalué quotidiennement.';
   const duplicateCounts=new Map();
   airports.forEach(a=>{const code=String(a.icao||'').trim().toUpperCase();if(code)duplicateCounts.set(code,(duplicateCounts.get(code)||0)+1)});
-  const matches=airports.filter(a=>(!q||[a.icao,a.original,a.name,a.publisher,a.folder,a.country,a.region,a.installed,a.server_version].join(' ').toLowerCase().includes(q))&&(!region||(a.region||a.country)===region)&&(!st||(st==='verified'?isVerified(a):st==='update'?isVerified(a)&&a.version_comparison==='update':st==='duplicates'?(duplicateCounts.get(String(a.icao||'').trim().toUpperCase())||0)>1:a.status===st)));
+  const matches=airports.filter(a=>(!q||[a.icao,a.original,a.name,a.publisher,a.folder,a.country,a.region,a.installed,a.server_version].join(' ').toLowerCase().includes(q))&&(!region||(a.region||a.country)===region)&&(!st||(st==='verified'?isVerified(a):st==='current'?isVerified(a)&&a.version_comparison==='equal':st==='update'?isVerified(a)&&a.version_comparison==='update':st==='duplicates'?(duplicateCounts.get(String(a.icao||'').trim().toUpperCase())||0)>1:a.status===st)));
   if(airportMap)updateAirportMap(matches);
   $('#airport-count').textContent=`${matches.length} scène${matches.length>1?'s':''} affichée${matches.length>1?'s':''} sur ${airports.length}`;
   const cls={'UNK-P':'p','UNK-V':'v','UNK-C':'c','UNK-S':'s','verified':'ok'};
@@ -101,7 +101,7 @@ async function renderMap(){
    airportMapMarkers.push({code:String(code).trim().toUpperCase(),marker:m});
    bounds.push(m.getLatLng());
   }
-  updateAirportMap(airports.filter(a=>{const q=$('#airport-search').value.trim().toLowerCase(),region=$('#region-filter').value,st=$('#status-filter').value;const code=String(a.icao||'').trim().toUpperCase();const counts=airports.filter(x=>String(x.icao||'').trim().toUpperCase()===code).length;const verified=!!a.server_version&&a.version_check_state==='verified'&&a.version_checked_at===String(status.versions_checked_at||'').slice(0,10);return (!q||[a.icao,a.original,a.name,a.publisher,a.folder,a.country,a.region,a.installed,a.server_version].join(' ').toLowerCase().includes(q))&&(!region||(a.region||a.country)===region)&&(!st||(st==='duplicates'?counts>1:st==='verified'?verified:st==='update'?verified&&a.version_comparison==='update':a.status===st))}));
+  updateAirportMap(airports.filter(a=>{const q=$('#airport-search').value.trim().toLowerCase(),region=$('#region-filter').value,st=$('#status-filter').value;const code=String(a.icao||'').trim().toUpperCase();const counts=airports.filter(x=>String(x.icao||'').trim().toUpperCase()===code).length;const verified=!!a.server_version&&a.version_check_state==='verified'&&a.version_checked_at===String(status.versions_checked_at||'').slice(0,10);return (!q||[a.icao,a.original,a.name,a.publisher,a.folder,a.country,a.region,a.installed,a.server_version].join(' ').toLowerCase().includes(q))&&(!region||(a.region||a.country)===region)&&(!st||(st==='duplicates'?counts>1:st==='verified'?verified:st==='current'?verified&&a.version_comparison==='equal':st==='update'?verified&&a.version_comparison==='update':a.status===st))}));
   if(bounds.length)airportMap.fitBounds(bounds,{padding:[20,20],maxZoom:7});
   setTimeout(()=>airportMap.invalidateSize(),100);
  }catch(e){slot.textContent='Carte momentanément indisponible : '+e.message}
