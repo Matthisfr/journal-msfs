@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import re
 import urllib.request
+from playwright.sync_api import sync_playwright
 
 ROOT=Path(__file__).resolve().parents[1]
 DEST=ROOT/"public"/"sayintentions_career.json"
@@ -20,10 +21,9 @@ class VisibleText(HTMLParser):
     def handle_data(self,data):
         if not self.skip:self.parts.append(data)
 def parse_public_profile(html):
-    parser=VisibleText();parser.feed(html)
-    text=" ".join(" ".join(parser.parts).split())
+    text=" ".join(html.split())
     # Only match a rank when it is actually present in the public page.
-    rank=re.search(r"\b(Senior\s+Copilot|Junior\s+Copilot|First\s+Officer|Senior\s+First\s+Officer|Captain|Senior\s+Captain)\b",text,re.I)
+    rank=re.search(r"\b(Senior\s+(?:1st|First)\s+Officer|Senior\s+Copilot|Junior\s+Copilot|First\s+Officer|Senior\s+First\s+Officer|Captain|Senior\s+Captain)\b",text,re.I)
     # Label must be directly adjacent to its number. Never guess from unrelated page numbers.
     patterns=[
         r"\b(?:total\s+)?flight\s+hours\s*[:\-]?\s*([\d,.]+)",
@@ -53,8 +53,13 @@ def run():
             "verified_at":previous.get("verified_at"),"checked_at":dt.datetime.now(dt.timezone.utc).isoformat()}
     try:
         request=urllib.request.Request(URL,headers={"User-Agent":"Mozilla/5.0 (compatible; JournalMSFS/1.0)","Accept":"text/html"})
-        with urllib.request.urlopen(request,timeout=18) as response:
-            html=response.read(1_500_000).decode("utf-8","replace")
+        with sync_playwright() as playwright:
+            browser=playwright.chromium.launch(headless=True)
+            page=browser.new_page()
+            page.goto(URL,wait_until="domcontentloaded",timeout=30000)
+            page.get_by_text("IFR HOURS",exact=False).first.wait_for(timeout=20000)
+            html=page.locator("body").inner_text()
+            browser.close()
         found=parse_public_profile(html)
         if found["rank"] is not None or found["flight_hours"] is not None:
             result.update({k:v for k,v in found.items() if v is not None})
