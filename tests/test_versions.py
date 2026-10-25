@@ -29,6 +29,23 @@ class VersionTests(unittest.TestCase):
         self.assertEqual(v.parse_version(page('EuroScene LEPA Downloads 86K Version 2026.09.14'),store='flightsim.to'),'2026.09.14')
     def test_orbx_no_public_version(self):
         self.assertIsNone(v.parse_version(page('Orbx KDEN Denver Version 1.2.3'),store='orbxdirect.com'))
+    def test_comparable_trailing_zero(self):
+        self.assertEqual(v.compare_versions('2.0.0','2.0','fsxcenery-airport-kmke-milwaukee'),'equal')
+        self.assertEqual(v.compare_versions('1.3.0','1.8','tms-airport-egcc-manchester'),'update')
+        self.assertEqual(v.compare_versions('1.5.0','1.2','flytampa-airport-cyyz-toronto-pearson'),'source_older')
+    def test_comparable_france_vfr(self):
+        self.assertEqual(v.compare_versions('1.3.1','1.31','francevfr-airport-lfrn-rennes'),'equal')
+        self.assertEqual(v.compare_versions('1.1.0','1.10','francevfr-airport-lfkb-bastia-poretta'),'equal')
+        self.assertEqual(v.compare_versions('1.3.1','1.32','francevfr-airport-lfrn-rennes'),'update')
+        self.assertEqual(v.compare_versions('1.3.1','1.32','some-other-vendor'),'incomparable')
+    def test_compact_zeros(self):
+        self.assertEqual(v.compare_versions('1.0.1','1.01','francevfr-airport-lfkj-ajaccio'),'equal')
+        self.assertEqual(v.compare_versions('1.0.2','1.01','inibuilds-heliport-58ca-hooper'),'source_older')
+        self.assertEqual(v.compare_versions('1.0.0','1.00','doublet-airport-ooms-muscat'),'equal')
+    def test_euroscene_date_format(self):
+        self.assertEqual(v.compare_versions('25.8.5','2026.09.14','euroscene-airport-lepa-palma-de-mallorca'),'update')
+        self.assertEqual(v.compare_versions('25.8.5','2025.08.05','euroscene-airport-lepa-palma-de-mallorca'),'equal')
+        self.assertEqual(v.compare_versions('25.8.5','2026.09.14','unrelated-airport'),'incomparable')
     def test_semver_safety(self):
         self.assertTrue(v.is_newer('1.0.2','1.0.3'))
         self.assertFalse(v.is_newer('1.0.2','2.0.0'))
