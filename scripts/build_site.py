@@ -49,6 +49,9 @@ def render_rows(airports):
         edition = str(a.get("source_edition") or "")
         source_label = h(store + (" · " + edition if edition else ""))
         source = f'<small><a href="{h(url)}" target="_blank" rel="noopener noreferrer">{source_label} ↗</a></small>' if url.startswith("https://") else ""
+        if not source and str(a.get("source_catalog_url") or "").startswith("https://"):
+            source = (f'<small><a href="{h(a["source_catalog_url"])}" target="_blank" rel="noopener noreferrer">'
+                      'Catalogue éditeur (pas de version confirmée) ↗</a></small>')
         online = a.get("server_version")
         today = dt.datetime.now(dt.timezone.utc).date().isoformat()
         verified_today = (a.get("version_check_state") == "verified"
@@ -68,7 +71,9 @@ def render_rows(airports):
         else:
             state = str(a.get("status") or "UNK-V")
             status = f'<span class="flag flag-{cls.get(state, "v")}">{h(state)}</span>{source}'
-        if a.get("source_note"):
+        if a.get("version_check_reason") and a.get("version_check_state")!="verified":
+            status += f'<small class="source-note">{h(a["version_check_reason"])}</small>'
+        elif a.get("source_note"):
             status += f'<small class="source-note">{h(a["source_note"])}</small>'
         out.append(
             f'<tr><td>{code}</td><td>{name}</td><td>{h(a.get("publisher") or "")}</td>'
