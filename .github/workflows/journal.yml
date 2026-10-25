@@ -35,6 +35,7 @@ jobs:
         run: |
           python -m unittest discover -s tests -v
           node --check public/app.js
+          node tests/test_frontend.cjs
       - name: Collecter METAR, TAF et annonces officielles
         run: python scripts/update.py
       - name: Enregistrer les données vérifiées
