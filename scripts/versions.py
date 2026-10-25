@@ -179,11 +179,28 @@ def fetch(url):
         return resp.read(1_900_000).decode("utf-8",errors="replace")
 
 def check_page(url):
-    try: return fetch(url),None
-    except urllib.error.HTTPError as exc:
-        return None, f"HTTP {exc.code} — {'accès compte ou robot' if exc.code in (401,403,429) else 'page inaccessible'}"
-    except Exception as exc:
-        return None, f"{type(exc).__name__}: {str(exc)[:95]}"
+    """Une seconde tentative seulement pour les erreurs réseau temporaires.
+
+    Les refus d'accès et les pages sans version restent UNKNOWN : jamais de
+    version déduite d'une ancienne réponse ou d'un numéro de catalogue.
+    """
+    import time
+    for attempt in range(2):
+        try:
+            return fetch(url), None
+        except urllib.error.HTTPError as exc:
+            if exc.code in (429, 500, 502, 503, 504) and attempt == 0:
+                time.sleep(1.5)
+                continue
+            label = "accès compte ou robot" if exc.code in (401, 403, 429) else "page inaccessible"
+            return None, f"HTTP {exc.code} — {label}"
+        except (TimeoutError, urllib.error.URLError, ConnectionError) as exc:
+            if attempt == 0:
+                time.sleep(1.5)
+                continue
+            return None, f"Réseau indisponible après 2 essais : {type(exc).__name__}: {str(exc)[:75]}"
+        except Exception as exc:
+            return None, f"{type(exc).__name__}: {str(exc)[:95]}"
 
 def update_versions(airports):
     unique={}
