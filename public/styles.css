@@ -57,3 +57,11 @@
   .freshness-editorial{margin-left:55px;padding:8px 0 0;border-left:0;border-top:1px solid #e5edf2;min-width:calc(100% - 55px)}
   .topic-icon{flex:0 0 42px}
 }
+
+
+/* Icônes éditoriales vectorielles : toutes au même format, sans badge alphabétique. */
+.topic-icon{background:transparent!important;border:0!important;border-radius:9px;overflow:hidden;box-shadow:0 2px 6px rgba(12,33,49,.12);line-height:0;flex-shrink:0}
+.topic-icon img{display:block;width:42px;height:42px;max-width:100%;max-height:100%;object-fit:contain;border-radius:9px}
+.tile .topic-icon{margin:2px 0 3px}
+.news-heading .topic-icon,.home-news-row .topic-icon{margin-top:2px}
+.hardware-heading .topic-icon{margin:0}
