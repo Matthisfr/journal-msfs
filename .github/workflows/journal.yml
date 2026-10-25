@@ -5,7 +5,11 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    - cron: '17 4 * * *'
+    # 07:08 en France : 05:08 UTC l'été, 06:08 UTC l'hiver.
+    # GitHub Actions ne gère pas directement le fuseau Europe/Paris :
+    # le contrôle ci-dessous ignore l'un des deux créneaux selon la saison.
+    - cron: '8 5 * * *'
+    - cron: '8 6 * * *'
 
 permissions:
   contents: write
@@ -23,44 +27,95 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Choisir le créneau de 07 h Europe/Paris
+        id: gate
+        shell: bash
+        run: |
+          if [[ "${{ github.event_name }}" != "schedule" ]]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "Déclenchement manuel ou commit : collecte autorisée"
+            exit 0
+          fi
+          offset=$(TZ=Europe/Paris date +%z)
+          if [[ "$offset" == "+0200" ]]; then
+            expected="8 5 * * *"
+          else
+            expected="8 6 * * *"
+          fi
+          if [[ "${{ github.event.schedule }}" == "$expected" ]]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "Créneau 07:08 France confirmé : $offset"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "Créneau UTC secondaire ignoré pour le changement d'heure : $offset"
+          fi
+
       - name: Récupérer le dépôt
+        if: steps.gate.outputs.run == 'true'
         uses: actions/checkout@v4
         with:
           persist-credentials: true
+
       - name: Python
+        if: steps.gate.outputs.run == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
       - name: Vérifier le code et les scripts du site
+        if: steps.gate.outputs.run == 'true'
         run: |
           python -m unittest discover -s tests -v
+          python -m py_compile scripts/update.py scripts/versions.py scripts/releases.py scripts/watch_sources.py scripts/build_site.py scripts/smoke_live.py
           node --check public/app.js
           node tests/test_frontend.cjs
-      - name: Collecter METAR, TAF et annonces officielles
+
+      - name: Collecter METAR, TAF, actualités et versions de scènes
+        if: steps.gate.outputs.run == 'true'
         run: python scripts/update.py
+
+      - name: Vérifier les sites des éditeurs et logiciels surveillés
+        if: steps.gate.outputs.run == 'true'
+        run: python scripts/watch_sources.py
+
       - name: Récupérer les logos originaux des éditeurs
+        if: steps.gate.outputs.run == 'true'
         run: python scripts/fetch_brand_assets.py
-      - name: Construire le tableau statique et la page indépendante
+
+      - name: Construire le site, la veille et la liste indépendante
+        if: steps.gate.outputs.run == 'true'
         run: |
           python scripts/build_site.py
-          python -c "from pathlib import Path; p=Path('public/index.html').read_text(); a=Path('public/airports.html').read_text(); assert p.count('<tr>')>=171 and a.count('<tr>')>=171; assert 'app.js?rev=' in p; print('Tests statiques : 171 scènes dans les deux pages, JS cache-bust OK')"
-      - name: Enregistrer les données vérifiées
+          python -c "from pathlib import Path; import json; p=Path('public/index.html').read_text(); a=Path('public/airports.html').read_text(); w=json.loads(Path('public/watch.json').read_text()); s=json.loads(Path('public/status.json').read_text()); assert p.count('<tr>')>=171 and a.count('<tr>')>=171; assert w['total']>=30; assert s['version_coverage']['inventory_total']==171; assert 'app.js?rev=' in p; print('Tests OK : 171 scènes, surveillance des sources, météo/news, carte et JS')"
+
+      - name: Enregistrer les données collectées
+        if: steps.gate.outputs.run == 'true'
         run: |
           git config user.name "journal-msfs-bot"
           git config user.email "journal-msfs-bot@users.noreply.github.com"
-          git add public/status.json public/airports.json
+          git add public/status.json public/airports.json public/watch.json
           if ! git diff --cached --quiet; then
             git commit -m "Journal: collecte automatique $(date -u +%Y-%m-%d)"
-            git push origin HEAD:main || echo "Une modification concurrente a empêché la sauvegarde Git ; la publication continue avec les données fraîchement collectées."
+            git push origin HEAD:main
           fi
+
       - name: Configurer GitHub Pages
+        if: steps.gate.outputs.run == 'true'
         uses: actions/configure-pages@v5
         with:
           enablement: true
+
       - name: Préparer le site statique
+        if: steps.gate.outputs.run == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
+
       - name: Publier le site
+        if: steps.gate.outputs.run == 'true'
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Vérifier le vrai site public après publication
+        if: steps.gate.outputs.run == 'true'
+        run: python scripts/smoke_live.py "${{ steps.deployment.outputs.page_url }}"
