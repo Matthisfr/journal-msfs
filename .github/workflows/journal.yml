@@ -70,12 +70,18 @@ jobs:
           node --check public/app.js
           node tests/test_frontend.cjs
 
-      - name: Rechercher les fiches exactes des 171 scènes chez les revendeurs
+      - name: Rechercher de nouvelles fiches produit (hebdomadaire)
         if: steps.gate.outputs.run == 'true'
         run: |
-          python scripts/discover_airports.py || echo "Catalogues Contrail / iniBuilds inaccessibles : conserver les références précédentes"
-          python scripts/discover_simmarket.py || echo "Recherche simMarket indisponible : conserver les références précédentes"
-          python scripts/apply_airport_sources.py
+          # La vérification des versions se fait chaque matin sur les fiches
+          # existantes. Les catalogues entiers sont rescannés le dimanche.
+          if [[ "$(TZ=Europe/Paris date +%u)" == "7" && "${{ github.event_name }}" == "schedule" ]]; then
+            python scripts/discover_airports.py || echo "Catalogue Contrail / iniBuilds indisponible"
+            python scripts/discover_simmarket.py || echo "Recherche simMarket indisponible"
+            python scripts/apply_airport_sources.py
+          else
+            echo "Fiches déjà associées : recherche catalogue complète réservée au dimanche."
+          fi
 
       - name: Collecter METAR, TAF, actualités et versions de scènes
         if: steps.gate.outputs.run == 'true'
