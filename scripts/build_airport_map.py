@@ -27,6 +27,10 @@ def main():
         raise RuntimeError(f"Source de coordonnées indisponible : {exc}") from exc
     result={k:v for k,v in result.items() if k in codes}
     if len(result) < 50: raise RuntimeError(f"Seulement {len(result)} coordonnées : publication interrompue")
+    reference={"CYUL":(45.47,-73.74),"BGSF":(67.01,-50.72),"LFPG":(49.01,2.55),"KJFK":(40.64,-73.78)}
+    for code,(lat,lon) in reference.items():
+        if code in result and (abs(result[code]["lat"]-lat)>0.5 or abs(result[code]["lon"]-lon)>0.5):
+            raise ValueError(f"Coordonnées suspectes pour {code}: {result[code]}")
     for code,loc in result.items():
         if not (-90 <= loc["lat"] <= 90 and -180 <= loc["lon"] <= 180):
             raise ValueError(f"Coordonnées invalides : {code}")
