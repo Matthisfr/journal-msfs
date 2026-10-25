@@ -69,7 +69,7 @@ def run():
             # Le badge doit être une image proche du nom/grade dans le profil.
             # Ne pas prendre la photo du pilote ni le badge d'identification.
             try:
-                badge=page.locator('img[alt="Senior 1st Officer"]').filter(visible=True).first
+                badge=page.locator('img[alt="Senior 1st Officer"]:visible').first
                 if badge.count():
                     src=badge.get_attribute("src") or ""
                     if src.startswith("/p2d/assets/images/rankings/"):
