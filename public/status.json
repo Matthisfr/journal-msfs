@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-25",
-  "last_run": "2026-10-25T20:56:16.431746+00:00",
-  "weather_checked_at": "2026-10-25T20:56:16.431746+00:00",
-  "news_checked_at": "2026-10-25T20:56:16.431746+00:00",
+  "last_run": "2026-10-25T21:00:43.214623+00:00",
+  "weather_checked_at": "2026-10-25T21:00:43.214623+00:00",
+  "news_checked_at": "2026-10-25T21:00:43.214623+00:00",
   "weather": [
     {
       "icao": "KABQ",
@@ -41,13 +41,13 @@
       "phenomenon": "Précipitations",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF AMD LOWS 251938Z 2519/2618 28012KT 9999 SCT040 TX13/2613Z TN06/2603Z TEMPO 2519/2602 28020G35KT SHRA TEMPO 2604/2610 20005KT BECMG 2610/2612 26005KT"
+      "taf_raw": "TAF AMD LOWS 252055Z 2520/2618 28012KT 9999 SCT040 TX13/2614Z TN06/2604Z TEMPO 2520/2602 27015G25KT SHRA TEMPO 2604/2610 20005KT BECMG 2610/2612 26005KT"
     },
     {
       "icao": "KPDX",
       "name": "Flightbeam KPDX Next",
-      "observed_at": "2026-10-25T20:53:00+00:00",
-      "raw": "METAR KPDX 252053Z 12013KT 3SM RA BR OVC022 09/08 A2998 RMK AO2 SLP152 P0008 60039 T00890078 58009 $",
+      "observed_at": "2026-10-25T20:16:00+00:00",
+      "raw": "SPECI KPDX 252016Z 12013KT 4SM -RA BR OVC022 09/07 A3000 RMK AO2 P0004 T00890072 $",
       "score": 32,
       "summary": "visibilité < 5 SM, précipitations",
       "icon": "🌧️",
@@ -109,19 +109,6 @@
       "taf_raw": "TAF DTMB 251700Z 2518/2618 32015KT 9999 SCT026 PROB40 TEMPO 2610/2618 35020G35KT"
     },
     {
-      "icao": "MDSD",
-      "name": "MDSD Las Americas International Airport",
-      "observed_at": "2026-10-25T20:00:00+00:00",
-      "raw": "METAR MDSD 252000Z 15009KT 8000 VCSH FEW016CB BKN016 BKN300 27/25 Q1011 CB/NE/SE/S/W",
-      "score": 20,
-      "summary": "visibilité < 5 SM",
-      "icon": "☁️",
-      "phenomenon": "Ciel couvert",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF MDSD 251600Z 2518/2618 18010KT 9999 FEW014CB BKN016 BKN300 PROB30 2519/2601 7000 -TSRA FEW014CB BKN016 BKN300 BECMG 2604/2606 04004KT"
-    },
-    {
       "icao": "EDDG",
       "name": "EDDG MUNSTER OSNABRUCK",
       "observed_at": "2026-10-25T20:50:00+00:00",
@@ -133,6 +120,19 @@
       "level": "Faible contrainte",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF EDDG 251700Z 2518/2618 25014G25KT 9999 SCT035 BECMG 2518/2521 22011KT BECMG 2614/2617 16008KT"
+    },
+    {
+      "icao": "EDDH",
+      "name": "sim-wings Hamburg",
+      "observed_at": "2026-10-25T20:50:00+00:00",
+      "raw": "METAR EDDH 252050Z AUTO 25015KT 220V290 9999 FEW043 10/06 Q1000 TEMPO 25020G35KT 4500 SHRA BKN020CB",
+      "score": 12,
+      "summary": "précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "Faible contrainte",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EDDH 251700Z 2518/2624 23020KT 9999 BKN020 TEMPO 2518/2602 23020G35KT SHRA BKN015CB PROB30 TEMPO 2518/2523 4500 TSRA BKN014CB BECMG 2600/2602 23015KT TEMPO 2602/2613 23015G25KT SHRA BKN014TCU BECMG 2614/2616 20010KT TEMPO 2621/2624 RA"
     }
   ],
   "weather_coverage": {
@@ -257,27 +257,27 @@
     "unavailable": 0,
     "no_version": 14,
     "inconsistent": 4,
-    "not_automatable": 4,
+    "not_automatable": 5,
     "no_source": 4,
     "source_older": 9,
-    "total_checked": 171,
+    "total_checked": 172,
     "with_source": 167,
-    "missing_source": 4,
+    "missing_source": 5,
     "updates_confirmed": 4,
-    "inventory_total": 171,
+    "inventory_total": 172,
     "official_url_known": 167,
-    "without_official_url": 4,
-    "manual_source": 4,
-    "unverified": 35,
-    "audited_at": "2026-10-25T20:56:16.431746+00:00"
+    "without_official_url": 5,
+    "manual_source": 5,
+    "unverified": 36,
+    "audited_at": "2026-10-25T21:00:43.214623+00:00"
   },
-  "versions_checked_at": "2026-10-25T20:56:16.431746+00:00",
-  "releases_checked_at": "2026-10-25T20:56:16.431746+00:00",
+  "versions_checked_at": "2026-10-25T21:00:43.214623+00:00",
+  "releases_checked_at": "2026-10-25T21:00:43.214623+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-25T20:56:44.945299+00:00",
+    "checked_at": "2026-10-25T21:01:15.073071+00:00",
     "unverified": 20
   }
 }
