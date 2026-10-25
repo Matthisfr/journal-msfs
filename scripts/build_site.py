@@ -82,9 +82,12 @@ def render_rows(airports):
         if a.get("source_note"):
             status += f'<small class="source-note">{h(a["source_note"])}</small>'
         if a.get("reference_version") and a.get("reference_source_url"):
-            status += (f'<small class="source-note">Indication non officielle : '
+            hint_label = ("Référence éditeur contrôlée manuellement" if a.get("reference_confidence") in
+                          ("publisher_page_human_checked", "official_support_human_checked")
+                          else "Indication tierce non officielle")
+            status += (f'<small class="source-note">{hint_label} : '
                        f'<a href="{h(a["reference_source_url"])}" target="_blank" rel="noopener noreferrer">'
-                       f'{h(a["reference_version"])} ↗</a> (non utilisée pour les alertes)</small>')
+                       f'{h(a["reference_version"])} ↗</a> (non utilisée pour les alertes automatiques)</small>')
         out.append(
             f'<tr><td>{code}</td><td>{name}</td><td>{h(a.get("publisher") or "")}</td>'
             f'<td><b>{installed}</b></td><td>{status}</td></tr>'
