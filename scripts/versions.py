@@ -130,6 +130,10 @@ def comparable_parts(installed,online,folder=""):
             yyyy,mm,dd=map(int,right.split("."))
             if 1<=mm<=12 and 1<=dd<=31:
                 right=f"{yyyy}.{mm}.{dd}"
+    # Mex High Flight MUHA : la boutique affiche seulement "2" pour la
+    # branche 2.0.0. Autoriser ce cas exact, pas tous les numéros d'articles.
+    if folder=="mexhighflight-airport-muha-jose-marti" and right=="2" and left=="2.0.0":
+        right="2.0.0"
     # Formats 1.01, 1.03, 1.00 : interpréter comme 1.0.1/1.0.3/1.0.0
     # seulement lorsque le manifeste local possède exactement cette forme.
     if re.fullmatch(r"\d+\.0\d{1,2}",right) and re.fullmatch(r"\d+\.\d+\.\d+",left):
