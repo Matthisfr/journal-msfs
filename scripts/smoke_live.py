@@ -30,9 +30,11 @@ def verify():
         if marker not in index: raise AssertionError(f"Élément manquant: {marker}")
     if index.count('class="watch-source"') < 30: raise AssertionError("Veille des sites absente")
     independent = get("airports.html")
-    if independent.count("<tr>") < expected or "google.com/maps/d/embed" not in independent:
-        raise AssertionError("Page indépendante ou carte Google manquante")
+    if independent.count("<tr>") < expected or "airport-leaflet-map" not in independent:
+        raise AssertionError("Page indépendante ou carte interactive manquante")
 
+    coordinates = json.loads(get("airport_coordinates.json"))
+    if not coordinates: raise AssertionError("Carte sans coordonnées")
     status = json.loads(get("status.json"))
     checked = dt.datetime.fromisoformat(status["last_run"].replace("Z", "+00:00"))
     if dt.datetime.now(dt.timezone.utc) - checked > dt.timedelta(hours=3):
