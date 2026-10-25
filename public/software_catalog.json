@@ -3,8 +3,8 @@
     "id": "msfs2024",
     "name": "Microsoft Flight Simulator 2024",
     "group": "Plateforme",
-    "source_url": "https://www.flightsimulator.com/",
-    "method": "official_news",
+    "source_url": "https://www.flightsimulator.com/category/releases/",
+    "method": "msfs_official",
     "installed_version": null,
     "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
   },
@@ -13,7 +13,7 @@
     "name": "Fenix A319 / A320 / A321",
     "group": "Avions",
     "source_url": "https://fenixsim.com/blog/",
-    "method": "official_news",
+    "method": "fenix_official",
     "installed_version": null,
     "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
   },
