@@ -183,3 +183,16 @@
 #sayintentions-career-data .si-rank-line{display:flex;align-items:center;justify-content:center;gap:10px;min-height:48px}
 #sayintentions-career-data .si-rank-badge{width:45px;height:55px;object-fit:contain;flex-shrink:0;border-radius:6px}
 @media(max-width:560px){#sayintentions-career-data .si-rank-line{flex-direction:column;gap:5px}}
+
+#sayintentions-career .si-flights{margin-top:23px;border:1px solid #49453b;border-radius:9px;overflow:hidden;background:#191917}
+#sayintentions-career .si-flights-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#302e29;padding:13px 17px;flex-wrap:wrap}
+#sayintentions-career .si-flights-heading h3{font-family:inherit;color:#edba4a;font-size:16px;margin:0;font-weight:800}
+#sayintentions-career .si-flights-heading a{font-size:12px}
+#sayintentions-career .si-flights-scroll{overflow-x:auto;width:100%}
+#sayintentions-career .si-flights table{width:100%;border-collapse:collapse;min-width:690px;font-size:13px}
+#sayintentions-career .si-flights th{background:#121210;color:#a9a7a1;text-align:left;font-size:11px;padding:12px 14px;font-weight:800;white-space:nowrap}
+#sayintentions-career .si-flights td{padding:12px 14px;color:#ddd9d1;border-top:1px solid #34332e;white-space:nowrap}
+#sayintentions-career .si-flights tbody tr:nth-child(even){background:#22221f}
+#sayintentions-career .si-flights td:first-child strong{color:#e8b54d}
+#sayintentions-career .si-flight-rules{background:#137f99;color:#eafaff;border-radius:5px;padding:3px 7px;font-size:11px;font-weight:800}
+#sayintentions-career .si-flights>.fineprint{padding:0 16px 13px}
