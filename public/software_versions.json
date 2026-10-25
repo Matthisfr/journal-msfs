@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-10-25T14:45:32.069479+00:00",
+  "checked_at": "2026-10-25T14:50:12.223070+00:00",
   "total": 23,
-  "verified": 3,
+  "verified": 1,
   "changed": 0,
   "items": [
     {
@@ -15,7 +15,7 @@
       "version": "1.9.21.0",
       "preview_version": null,
       "state": "verified",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
       "reason": "Version vérifiée sur le changelog officiel",
       "version_url": "https://www.flightsimulator.com/su71-release/",
       "published_at": null,
@@ -36,7 +36,7 @@
       "version": null,
       "preview_version": null,
       "state": "unavailable",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
       "reason": "Source inaccessible : ValueError Branche Fenix non explicitement publiée sur le blog"
     },
     {
@@ -50,7 +50,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -64,7 +64,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -78,7 +78,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -92,7 +92,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -106,7 +106,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -118,14 +118,12 @@
       "installed_version": null,
       "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie",
       "version": "11.3.1",
-      "preview_version": "11.3.1.2",
-      "state": "verified",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
-      "reason": "Version vérifiée sur le changelog officiel",
+      "preview_version": null,
+      "state": "unavailable",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
+      "reason": "Source inaccessible aujourd'hui ; dernière version confirmée conservée à titre historique, non revérifiée.",
       "version_url": "https://github.com/MobiFlight/MobiFlight-Connector/releases/tag/11.3.1",
-      "published_at": "2026-10-06T10:51:23Z",
-      "preview_url": "https://github.com/MobiFlight/MobiFlight-Connector/releases/tag/11.3.1.2",
-      "baseline_at": "2026-10-25"
+      "last_confirmed_at": "2026-10-25T14:45:32.069479+00:00"
     },
     {
       "id": "simapppro",
@@ -142,7 +140,7 @@
       "version": null,
       "preview_version": null,
       "state": "unavailable",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
       "reason": "Source inaccessible : ValueError Changelog SimAppPro absent"
     },
     {
@@ -156,7 +154,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -170,7 +168,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -184,7 +182,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -198,7 +196,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -212,7 +210,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -226,7 +224,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -240,7 +238,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -254,7 +252,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -268,7 +266,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -282,7 +280,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -296,7 +294,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -310,7 +308,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -324,7 +322,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -337,16 +335,17 @@
       "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie",
       "version": "0.6.1",
       "preview_version": null,
-      "state": "verified",
-      "checked_at": "2026-10-25T14:45:32.069479+00:00",
-      "reason": "Version vérifiée sur le changelog officiel",
+      "state": "unavailable",
+      "checked_at": "2026-10-25T14:50:12.223070+00:00",
+      "reason": "Source inaccessible aujourd'hui ; dernière version confirmée conservée à titre historique, non revérifiée.",
       "version_url": "https://github.com/Fragtality/Fenix2GSX/releases/tag/v0.6.1",
-      "published_at": "2026-04-25T16:32:01Z",
-      "baseline_at": "2026-10-25"
+      "last_confirmed_at": "2026-10-25T14:45:32.069479+00:00"
     }
   ],
   "errors": [
     "fenix: Source inaccessible : ValueError Branche Fenix non explicitement publiée sur le blog",
-    "simapppro: Source inaccessible : ValueError Changelog SimAppPro absent"
+    "mobiflight: Source inaccessible : HTTPError HTTP Error 403: rate limit exceeded",
+    "simapppro: Source inaccessible : ValueError Changelog SimAppPro absent",
+    "fenix2gsx: Source inaccessible : HTTPError HTTP Error 403: rate limit exceeded"
   ]
 }
