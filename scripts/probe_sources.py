@@ -117,3 +117,16 @@ for q in ("LFST","CYVR","LFKB","ESSA","TFFF"):
   matches=[re.sub(r"\\s+"," ",raw[max(0,m.start()-100):m.start()+220]) for m in list(re.finditer(q,raw,re.I))[:5]]
   print("SEARCH_RESULT",q,len(raw),links,matches)
  except Exception as e:print("SEARCH_RESULT_ERROR",q,type(e).__name__,str(e)[:120])
+
+for q in ("LFST","CYVR","LFKB","TFFF"):
+ url="https://secure.simmarket.com/advanced_search_result.php?keywords="+q
+ try:
+  req=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0"})
+  with urllib.request.urlopen(req,timeout=18) as resp: raw=resp.read(800000).decode("utf-8",errors="replace")
+  m=list(re.finditer(r"\\.phtml",raw,re.I))
+  examples=[re.sub(r"\\s+"," ",raw[max(0,x.start()-180):x.start()+120]) for x in m[:6]]
+  for marker in ("search-result","product-card","result-count","products-grid","Search Results","No products"):
+   hits=list(re.finditer(re.escape(marker),raw,re.I))
+   if hits:examples.append((marker,len(hits),re.sub(r"\\s+"," ",raw[max(0,hits[0].start()-90):hits[0].start()+160])))
+  print("SIMMARKET_DETAILS",q,"phtml",len(m),"examples",examples)
+ except Exception as e:print("SIMMARKET_DETAILS_ERROR",q,type(e).__name__,str(e)[:120])
