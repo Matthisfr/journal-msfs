@@ -41,7 +41,7 @@ def parse_public_profile(html):
             except ValueError:pass
     values={}
     for key,label in (("ifr_hours","IFR HOURS"),("vfr_hours","VFR HOURS"),("total_flights","TOTAL FLIGHTS"),("airports_visited","AIRPORTS VISITED")):
-        m=re.search(r"([0-9,]+)\\s+"+label,text,re.I)
+        m=re.search(r"([0-9,]+)\s+"+label,text,re.I)
         values[key]=int(m.group(1).replace(",","")) if m else None
     if values["ifr_hours"] is not None and values["vfr_hours"] is not None:
         hours=values["ifr_hours"]+values["vfr_hours"]
@@ -74,7 +74,7 @@ def run():
             result["verified_at"]=result["checked_at"]
         else:
             result["state"]="stale" if previous.get("rank") else "unparsed"
-            print("Gate 404: page reçue, données probablement chargées en JavaScript")
+            print("Gate 404: données visibles mais extraction incomplète:", {k:v for k,v in found.items() if v is None})
     except Exception as exc:
         print("Gate 404: profil inaccessible",type(exc).__name__,str(exc)[:120])
     DEST.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
