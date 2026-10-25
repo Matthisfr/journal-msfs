@@ -18,6 +18,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Examiner la recherche simMarket et les versions Orbx
+        run: python scripts/probe_sources.py
       - name: Explorer les catalogues et vérifier les fiches produit
         run: python scripts/discover_airports.py
       - name: Sauvegarder les résultats pour revue
