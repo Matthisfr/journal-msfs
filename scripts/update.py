@@ -181,22 +181,61 @@ def run():
         src['taf']='error'
         status['errors'].append('METAR: '+str(e)[:250])
         print('METAR failure:',e,file=sys.stderr)
+    news_from_sources=[]
     try:
-        news=collect_news(status.get('news',[]))
-        if news: status['news']=news
+        news_from_sources=collect_news(status.get('news',[]))
         status['news_checked_at']=NOW.isoformat()
-        src['official_news']='ok' if news else 'no_data'
-        print('News:',len(news))
+        src['official_news']='ok' if news_from_sources else 'no_data'
+        print('Actualités officielles MSFS:',len(news_from_sources))
     except Exception as e:
         src['official_news']='error'
-        status['errors'].append('Actualités: '+str(e)[:250])
-        print('News failure:',e,file=sys.stderr)
+        status['errors'].append('Actualités MSFS: '+str(e)[:250])
+        print('MSFS news failure:',e,file=sys.stderr)
+    try:
+        from releases import release_items
+        releases,release_errors=release_items(status.get('news',[]))
+        news_from_sources.extend(releases)
+        src['official_releases']='partial' if release_errors else 'ok'
+        status['releases_checked_at']=NOW.isoformat()
+        status['errors'].extend('Versions GitHub: '+e for e in release_errors)
+        print('Versions officielles GitHub:',len(releases))
+    except Exception as e:
+        src['official_releases']='error'
+        status['errors'].append('Versions GitHub: '+str(e)[:250])
+    if news_from_sources:
+        unique={x['url']:x for x in status.get('news',[]) if x.get('url')}
+        for x in news_from_sources: unique[x['url']]=x
+        threshold=(NOW-dt.timedelta(days=60)).date().isoformat()
+        status['news']=sorted((x for x in unique.values() if x.get('date','')>=threshold),
+                              key=lambda x:x.get('date',''),reverse=True)[:35]
     try:
         from versions import update_versions
         coverage,version_errors=update_versions(airports)
+        from versions import PRODUCTS
+        for a in airports:
+            a['last_audited_at']=NOW.isoformat()
+            if a.get('folder') in PRODUCTS and a.get('source_url','').startswith('https://www.aerosoft.com/'):
+                continue
+            if not a.get('source_url'):
+                a['version_check_state']='no_source'
+                a['version_check_reason']='Fiche éditeur précise non identifiée'
+                a['status']='UNK-P'
+            else:
+                a['version_check_state']='not_automatable'
+                a['version_check_reason']='Page connue, version non extraite automatiquement'
+                if a.get('version_checked_at')!=NOW.date().isoformat():
+                    a['status']='UNK-V'
+        coverage.update({
+            'inventory_total':len(airports),
+            'official_url_known':sum(bool(a.get('source_url')) for a in airports),
+            'without_official_url':sum(not a.get('source_url') for a in airports),
+            'manual_source':sum(a.get('version_check_state')=='not_automatable' for a in airports),
+            'unverified':sum(a.get('version_check_state')!='verified' for a in airports),
+            'audited_at':NOW.isoformat(),
+        })
         status['version_coverage']=coverage
         status['versions_checked_at']=NOW.isoformat()
-        src['airport_versions']='partial' if coverage['verified_today'] else 'error'
+        src['airport_versions']='ok' if coverage['verified_today']==len(airports) else 'partial'
         status['errors'].extend(('Versions : '+e) for e in version_errors[:5])
         (PUBLIC/'airports.json').write_text(json.dumps(airports,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
         print('Versions éditeurs:',coverage)
@@ -204,7 +243,7 @@ def run():
         src['airport_versions']='error'
         status['errors'].append('Versions : '+str(e)[:200])
         print('Versions failure:',e,file=sys.stderr)
-    status['note']='METAR, TAF, annonces officielles et vérification limitée de huit fiches Aerosoft automatisés ; autres scènes et veille éditoriale ChatGPT non automatisées.'
+    status['note']='Collecte quotidienne automatique : METAR/TAF NOAA, flux officiel MSFS, versions GitHub publiées, audit des 171 scènes, extraction des versions Aerosoft accessibles et surveillance des sites publics. Les versions non publiées ou inaccessibles restent UNKNOWN ; une page modifiée n’est pas une mise à jour confirmée.'
     status_path.write_text(json.dumps(status,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print('Updated',status_path)
 
