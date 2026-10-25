@@ -1,22 +1,9 @@
 {
   "edition": "2026-10-25",
-  "last_run": "2026-10-25T10:57:51.163833+00:00",
-  "weather_checked_at": "2026-10-25T10:57:51.163833+00:00",
-  "news_checked_at": "2026-10-25T10:57:51.163833+00:00",
+  "last_run": "2026-10-25T10:58:50.156275+00:00",
+  "weather_checked_at": "2026-10-25T10:58:50.156275+00:00",
+  "news_checked_at": "2026-10-25T10:58:50.156275+00:00",
   "weather": [
-    {
-      "icao": "KBZN",
-      "name": "KBZN Bozeman Yellowstone Airport",
-      "observed_at": "2026-10-25T10:49:00+00:00",
-      "raw": "SPECI KBZN 251049Z AUTO 12005KT 1/2SM R12/4000VP6000FT FZFG VV001 M04/M05 A3027 RMK AO2 I1002 T10441050",
-      "score": 145,
-      "summary": "brouillard, visibilité < 1 SM",
-      "icon": "🌫️",
-      "phenomenon": "Brouillard",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KBZN 250908Z 2509/2612 VRB03KT 1/4SM FZFG VV001 TEMPO 2514/2517 2SM BR SCT002 FM251700 VRB06KT P6SM SCT120"
-    },
     {
       "icao": "KDTW",
       "name": "KDTW Detro Metro Wayne County Airport",
@@ -133,6 +120,19 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF EGPF 250458Z 2506/2606 27030G45KT 9999 SCT022 TEMPO 2506/2512 3500 +SHRA PROB40 TEMPO 2506/2512 28045G55KT PROB40 TEMPO 2512/2604 7000 SHRA BECMG 2517/2521 25015KT PROB30 TEMPO 2521/2602 25018G30KT"
+    },
+    {
+      "icao": "EGPK",
+      "name": "EGPK Prestwick Airport",
+      "observed_at": "2026-10-25T10:50:00+00:00",
+      "raw": "METAR EGPK 251050Z 27027G39KT 9999 FEW025CB BKN036 11/05 Q0988",
+      "score": 45,
+      "summary": "rafales ≥ 35 kt",
+      "icon": "💨",
+      "phenomenon": "Vent fort",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF AMD EGPK 250822Z 2508/2606 28032G45KT 9999 SCT022 TEMPO 2508/2512 31045G55KT 3500 +SHRA PROB40 TEMPO 2508/2512 27055G65KT PROB40 TEMPO 2512/2520 28038G55KT PROB40 TEMPO 2512/2524 7000 SHRA BECMG 2517/2520 26018G28KT PROB40 TEMPO 2600/2604 7000 SHRA BKN014 BECMG 2601/2604 22014KT"
     }
   ],
   "weather_coverage": {
@@ -266,8 +266,8 @@
     "without_official_url": 4,
     "manual_source": 5,
     "unverified": 36,
-    "audited_at": "2026-10-25T10:57:51.163833+00:00"
+    "audited_at": "2026-10-25T10:58:50.156275+00:00"
   },
-  "versions_checked_at": "2026-10-25T10:57:51.163833+00:00",
-  "releases_checked_at": "2026-10-25T10:57:51.163833+00:00"
+  "versions_checked_at": "2026-10-25T10:58:50.156275+00:00",
+  "releases_checked_at": "2026-10-25T10:58:50.156275+00:00"
 }
