@@ -1,0 +1,50 @@
+{
+  "fcu": {
+    "state": "unpublished",
+    "reason": "Photographie produit exacte non trouvée sur les pages publiques du revendeur"
+  },
+  "efis": {
+    "state": "unpublished",
+    "reason": "Photographie produit exacte non trouvée sur les pages publiques du revendeur"
+  },
+  "mcdu": {
+    "state": "unavailable",
+    "reason": "HTTPError : HTTP Error 429: Too Many Requests"
+  },
+  "nws": {
+    "state": "unavailable",
+    "reason": "HTTPError : HTTP Error 429: Too Many Requests"
+  },
+  "rmp": {
+    "state": "unavailable",
+    "reason": "HTTPError : HTTP Error 429: Too Many Requests"
+  },
+  "tcas": {
+    "state": "unavailable",
+    "reason": "HTTPError : HTTP Error 429: Too Many Requests"
+  },
+  "throttle": {
+    "state": "unavailable",
+    "reason": "HTTPError : HTTP Error 429: Too Many Requests"
+  },
+  "pac": {
+    "state": "unavailable",
+    "reason": "HTTPError : HTTP Error 429: Too Many Requests"
+  },
+  "pedals": {
+    "state": "unavailable",
+    "reason": "HTTPError : HTTP Error 429: Too Many Requests"
+  },
+  "acp": {
+    "state": "unavailable",
+    "reason": "HTTPError : HTTP Error 429: Too Many Requests"
+  },
+  "ovhd": {
+    "state": "unavailable",
+    "reason": "HTTPError : HTTP Error 429: Too Many Requests"
+  },
+  "agp": {
+    "state": "unavailable",
+    "reason": "HTTPError : HTTP Error 429: Too Many Requests"
+  }
+}
