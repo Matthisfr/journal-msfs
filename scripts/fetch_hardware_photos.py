@@ -77,7 +77,12 @@ def run():
                 manifest[key]=save_photo(key,source["url"],source["credit"])
                 continue
             except Exception as exc:
-                print("Photo référencée inaccessible",key,type(exc).__name__,str(exc)[:90])
+                print("Photo référencée inaccessible depuis GitHub",key,type(exc).__name__,str(exc)[:90])
+                # En dernier recours, laisser le navigateur tenter la photo
+                # réelle du fournisseur, avec onerror visible si refusée.
+                manifest[key]={"path":source["url"],"state":"photo_remote","source":source["credit"],
+                               "reason":"Photo externe : affichage soumis à l'autorisation du fournisseur"}
+                continue
         # Never invent pictures for unannounced/unreleased devices.
         if x["ownership"]=="Attendu" and not source:
             manifest[key]={"state":"unpublished","reason":"Pas de photographie exacte publiée"}
