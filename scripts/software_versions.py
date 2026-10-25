@@ -148,7 +148,8 @@ def update():
             if prior.get("version"):
                 row["version"]=prior["version"]
                 row["version_url"]=prior.get("version_url",row["source_url"])
-                row["last_confirmed_at"]=prior.get("checked_at")
+                row["last_confirmed_at"]=prior.get("last_confirmed_at") or prior.get("checked_at")
+                row["reason"]="Source inaccessible aujourd'hui ; dernière version confirmée conservée à titre historique, non revérifiée."
         rows.append(row)
     data={"checked_at":NOW.isoformat(),"total":len(rows),
           "verified":sum(x["state"] in ("verified","changed") for x in rows),
