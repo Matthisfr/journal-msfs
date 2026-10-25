@@ -137,7 +137,7 @@ function renderHardwareGallery(){
   const el=$('#hardware-gallery');if(!el)return;
   el.innerHTML=(Array.isArray(hardware)?hardware:[]).map(x=>{
     const photo=hardwareImages[x.id]||{};
-    const picture=photo.state==='photo'&&photo.path?
+    const picture=['photo','photo_remote'].includes(photo.state)&&photo.path?
       '<img class="hardware-photo" loading="lazy" decoding="async" src="'+esc(photo.path)+'" alt="Photographie du matériel '+esc(x.name)+'" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.hidden=false">'+
       '<span class="hardware-no-photo" hidden>Photographie momentanément indisponible</span>':
       '<span class="hardware-no-photo">Photo produit non disponible</span>';
@@ -148,7 +148,7 @@ function renderHardwareGallery(){
       '<p>'+esc(x.ownership==='Possédé'?'Matériel possédé · suivi SimAppPro et Fenix.':'Sortie, disponibilité et révision à surveiller.')+'</p>'+
       '<div class="hardware-card-bottom"><span class="flag '+(x.ownership==='Possédé'?'flag-ok':'flag-v')+'">'+esc(x.ownership)+'</span>'+
       '<a href="'+esc(isSafeUrl(x.official_url))+'" target="_blank" rel="noopener noreferrer">WINCTRL ↗</a></div>'+
-      (photo.state==='photo'?'<small class="photo-credit">'+esc(photo.source||'Photo de produit')+'</small>':'')+
+      (['photo','photo_remote'].includes(photo.state)?'<small class="photo-credit">'+esc(photo.source||'Photo de produit')+'</small>':'')+
       '</article>';
   }).join('')||'<p>Inventaire matériel indisponible.</p>';
 }
