@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-25",
-  "last_run": "2026-10-25T14:33:07.880977+00:00",
-  "weather_checked_at": "2026-10-25T14:33:07.880977+00:00",
-  "news_checked_at": "2026-10-25T14:33:07.880977+00:00",
+  "last_run": "2026-10-25T14:35:56.719355+00:00",
+  "weather_checked_at": "2026-10-25T14:35:56.719355+00:00",
+  "news_checked_at": "2026-10-25T14:35:56.719355+00:00",
   "weather": [
     {
       "icao": "KJAC",
@@ -98,28 +98,15 @@
     {
       "icao": "EIDW",
       "name": "EIDW Dublin International Airport",
-      "observed_at": "2026-10-25T14:00:00+00:00",
-      "raw": "METAR EIDW 251400Z 27024G37KT 9999 FEW030 SCT037 BKN042 11/04 Q1003 NOSIG",
-      "score": 45,
-      "summary": "rafales ≥ 35 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
+      "observed_at": "2026-10-25T14:30:00+00:00",
+      "raw": "METAR EIDW 251430Z 28021G31KT 9999 -DZ FEW020 SCT035 BKN044 11/05 Q1004 NOSIG",
+      "score": 34,
+      "summary": "rafales ≥ 25 kt, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF EIDW 251100Z 2512/2612 28020G35KT 9999 SCT033 BKN038 BECMG 2516/2518 27018G28KT BECMG 2518/2520 25012KT BECMG 2520/2522 22010KT BECMG 2602/2604 16010KT PROB30 TEMPO 2606/2612 4000 -RADZ BR BKN010 BECMG 2610/2612 20015G25KT"
-    },
-    {
-      "icao": "KBZN",
-      "name": "KBZN Bozeman Yellowstone Airport",
-      "observed_at": "2026-10-25T14:23:00+00:00",
-      "raw": "SPECI KBZN 251423Z 00000KT 2SM R12/2600V3500FT BCFG CLR M06/M06 A3032 RMK AO2 I1000 T10611061",
-      "score": 45,
-      "summary": "visibilité < 3 SM",
-      "icon": "☀️",
-      "phenomenon": "Ciel dégagé",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KBZN 251151Z 2512/2618 VRB03KT P6SM SCT004 TEMPO 2512/2516 1/2SM FZFG VV002 FM251600 VRB06KT P6SM SCT120 TEMPO 2611/2615 1SM BR BKN003"
     },
     {
       "icao": "ESGG",
@@ -132,7 +119,20 @@
       "phenomenon": "Précipitations",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF ESGG 251130Z 2512/2612 16015G25KT 9999 -RA SCT010 BKN020 TEMPO 2512/2513 2500 RA BKN006 TEMPO 2513/2612 4000 SHRA BKN008 BKN020CB PROB40 2515/2519 TS"
+      "taf_raw": "TAF ESGG 251430Z 2515/2615 16015G25KT 9999 -RA SCT010 BKN020 TEMPO 2515/2612 4000 SHRA BKN008 BKN020CB PROB40 2515/2519 TS"
+    },
+    {
+      "icao": "LFSB",
+      "name": "LFSB Basel-Mulhouse-Freiburg EuroAirport",
+      "observed_at": "2026-10-25T14:30:00+00:00",
+      "raw": "METAR LFSB 251430Z AUTO 30021G32KT 9999 -RA SCT017/// SCT025/// BKN037/// ///TCU 12/09 Q1010 NOSIG",
+      "score": 34,
+      "summary": "rafales ≥ 25 kt, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF LFSB 251100Z 2512/2612 24020G35KT 9999 BKN035 BKN060 TEMPO 2512/2515 4000 RA SCT025TCU PROB40 TEMPO 2513/2515 28025G40KT 2500 +RA BKN010 BECMG 2514/2516 27015G25KT PROB40 TEMPO 2515/2521 -SHRA FEW020TCU BECMG 2518/2520 26010KT BECMG 2601/2604 VRB03KT"
     }
   ],
   "weather_coverage": {
@@ -248,7 +248,7 @@
     "Versions : DTTA / prealsoft : Fiche 1.00 plus ancienne que l'installation 1.0.1 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : GMMX / PERFECTSOFT : Fiche 1.1.0 plus ancienne que l'installation 1.2.0 : vérifier le canal éditeur, ne pas rétrograder",
     "Logiciels : fenix: Source inaccessible : ValueError Branche Fenix non explicitement publiée sur le blog",
-    "Logiciels : simapppro: Source inaccessible : ValueError Changelog SimAppPro absent"
+    "Logiciels : simapppro: Source inaccessible : HTTPError HTTP Error 502: Bad Gateway"
   ],
   "note": "Collecte quotidienne automatique : METAR/TAF NOAA, flux officiel MSFS, versions GitHub publiées, audit des 171 scènes, extraction des versions des boutiques publiques reconnues et surveillance des sites publics. Les versions non publiées ou inaccessibles restent UNKNOWN ; une page modifiée n’est pas une mise à jour confirmée.",
   "version_coverage": {
@@ -269,15 +269,15 @@
     "without_official_url": 4,
     "manual_source": 5,
     "unverified": 35,
-    "audited_at": "2026-10-25T14:33:07.880977+00:00"
+    "audited_at": "2026-10-25T14:35:56.719355+00:00"
   },
-  "versions_checked_at": "2026-10-25T14:33:07.880977+00:00",
-  "releases_checked_at": "2026-10-25T14:33:07.880977+00:00",
+  "versions_checked_at": "2026-10-25T14:35:56.719355+00:00",
+  "releases_checked_at": "2026-10-25T14:35:56.719355+00:00",
   "software_coverage": {
     "total": 23,
     "verified": 3,
     "changed": 0,
-    "checked_at": "2026-10-25T14:33:49.038816+00:00",
+    "checked_at": "2026-10-25T14:36:28.291049+00:00",
     "unverified": 20
   }
 }
