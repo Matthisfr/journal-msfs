@@ -102,6 +102,41 @@ def news_topic(a):
         return "FS", "msfs"
     return "✈", "generic"
 
+def render_airport_digest(airports):
+    today = dt.datetime.now(dt.timezone.utc).date().isoformat()
+    updates = []
+    editions = []
+    for a in airports:
+        if a.get("version_check_state") != "verified" or a.get("version_checked_at") != today:
+            continue
+        label, _ = compare(a.get("installed"), a.get("server_version"))
+        if label not in ("MISE À JOUR", "NOUVELLE ÉDITION"):
+            continue
+        url = str(a.get("source_url") or "")
+        source = (f'<a href="{h(url)}" target="_blank" rel="noopener noreferrer">'
+                  f'{h(a.get("source_store") or "Fiche source")} ↗</a>') if url.startswith("https://") else ""
+        line = (f'<li><span class="airport-update-code">{h(a.get("icao") or "")}</span>'
+                f'<span><strong>{h(a.get("name") or "")}</strong>'
+                f'<small>{h(a.get("publisher") or "")} · Installée {h(a.get("installed") or "?")} '
+                f'→ Source {h(a.get("server_version") or "?")} · {source}</small></span></li>')
+        (updates if label == "MISE À JOUR" else editions).append(line)
+    checked = sum(a.get("version_check_state") == "verified" and a.get("version_checked_at") == today
+                  for a in airports)
+    body = ('<div class="airport-update-head"><div class="overline">BILAN QUOTIDIEN DES VERSIONS</div>'
+            f'<h3>{len(updates)} mise(s) à jour vérifiée(s) · {checked}/171 sources contrôlées</h3>'
+            f'<p>État des boutiques publiques au {h(today)} (UTC). '
+            'Les changements d’édition majeure sont signalés séparément ; '
+            'les autres scènes restent UNKNOWN si leur version ne peut pas être confirmée.</p></div>')
+    if updates:
+        body += '<ul class="airport-update-list">' + ''.join(updates) + '</ul>'
+    else:
+        body += '<p class="airport-update-empty">Aucune mise à jour comparable confirmée lors de cette collecte.</p>'
+    if editions:
+        body += (f'<details><summary>{len(editions)} nouvelle(s) édition(s) majeure(s) '
+                 '(tarif et compatibilité à vérifier)</summary><ul class="airport-update-list">'
+                 + ''.join(editions) + '</ul></details>')
+    return body
+
 def brand_icon(kind, manifest):
     entry = manifest.get(kind, {})
     path = entry.get("path") or f"icons/{kind}.svg"
@@ -236,6 +271,8 @@ def build():
     watch = json.loads(watch_file.read_text(encoding="utf-8")) if watch_file.is_file() else {}
     index = index.replace('<div id="watch-container" class="watch-panel"><p>La surveillance quotidienne des sites sera affichée après la collecte.</p></div>',
                           '<div id="watch-container" class="watch-panel">' + render_watch(watch) + '</div>')
+    index = index.replace('<div id="airport-update-digest" class="airport-update-digest"><p>Les mises à jour confirmées seront affichées après la vérification quotidienne.</p></div>',
+                          '<div id="airport-update-digest" class="airport-update-digest">' + render_airport_digest(airports) + '</div>')
     index = static_brand_icons(index, manifest)
     index = index.replace("</body>", '<script type="application/json" id="brand-manifest">' +
                           json.dumps(manifest, ensure_ascii=False).replace("<", "\\u003c") +
