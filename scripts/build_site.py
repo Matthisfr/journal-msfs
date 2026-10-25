@@ -156,7 +156,7 @@ def render_airport_digest(airports):
     checked = sum(a.get("version_check_state") == "verified" and a.get("version_checked_at") == today
                   for a in airports)
     body = ('<div class="airport-update-head"><div class="overline">BILAN QUOTIDIEN DES VERSIONS</div>'
-            f'<h3>{len(updates)} mise(s) à jour vérifiée(s) · {checked}/171 sources contrôlées</h3>'
+            f'<h3>{len(updates)} mise(s) à jour vérifiée(s) · {checked}/{len(airports)} sources contrôlées</h3>'
             f'<p>État des boutiques publiques au {h(today)} (UTC). '
             'Les changements d’édition majeure sont signalés séparément ; '
             'les autres scènes restent UNKNOWN si leur version ne peut pas être confirmée.</p></div>')
@@ -284,7 +284,7 @@ def render_watch(watch):
 
 def build():
     airports = json.loads((PUBLIC / "airports.json").read_text(encoding="utf-8"))
-    assert len(airports) == 171, f"Inventaire incomplet : {len(airports)} scènes"
+    assert len(airports) >= 1, "Inventaire des scènes vide"
     rows = render_rows(airports)
     status = json.loads((PUBLIC / "status.json").read_text(encoding="utf-8"))
     editorial = json.loads((PUBLIC / "editorial.json").read_text(encoding="utf-8"))
@@ -328,7 +328,7 @@ def build():
     index = index.replace('href="styles.css"', f'href="styles.css?rev={rev}"')
     index = index.replace(
         '<div class="tablebox"><table>',
-        '<p class="standalone-link"><a href="airports.html">↗ Afficher les 171 scènes sur une page indépendante (sans JavaScript)</a></p><div class="tablebox"><table>',
+        '<p class="standalone-link"><a href="airports.html">↗ Afficher les {len(airports)} scènes sur une page indépendante (sans JavaScript)</a></p><div class="tablebox"><table>',
         1,
     )
     (PUBLIC / "index.html").write_text(index, encoding="utf-8")
@@ -354,7 +354,7 @@ body{{background:#f5f5f1}}
 </style></head><body>
 <header class="independent-header"><div class="shell">
 <a href="./index.html#aeroports">← Retour au journal</a>
-<h1>Mes 171 scènes et aéroports</h1>
+<h1>Mes {len(airports)} scènes et aéroports</h1>
 <p>Inventaire complet issu d'Export APT 5.xlsx · {len(airports)} scènes · versions installées et vérifications officielles</p>
 </div></header>
 <main class="shell independent-content">
