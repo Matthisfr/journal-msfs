@@ -79,7 +79,8 @@ manual_path=PUBLIC/"airport_manual_sources.json"
 manual=json.loads(manual_path.read_text(encoding="utf-8")) if manual_path.is_file() else {}
 for a in airports:
  m=manual.get(a["folder"])
- if not m or a.get("source_url"):continue
+ if not m:continue
+ if a.get("source_url") and a.get("source_url")!=m["url"]:continue
  a["source_url"]=m["url"]
  a["source_store"]=m.get("store","Éditeur")
  a["source_edition"]=m.get("edition","")
@@ -100,5 +101,17 @@ for a in airports:
  a["version_check_state"]="unavailable"
  a["version_check_reason"]=m.get("note","Version à vérifier dans le gestionnaire éditeur")
  a["status"]="UNK-V"
+ if m.get("auto_verify"):
+  try:
+   from discover_simmarket import parse_page
+   _,result=parse_page(m["url"])
+   if result.get("state")=="verified":
+    a["server_version"]=result["version"]
+    a["version_checked_at"]=today
+    a["version_check_state"]="verified"
+    a["status"]="verified"
+    a.pop("version_check_reason",None)
+  except Exception:
+   pass
 airports_path.write_text(json.dumps(airports,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 print(f"Fiches liées : {added} ; versions boutique contrôlées aujourd'hui : {verified} ; anciennes : {stale} ; inventaire : {len(airports)}")
