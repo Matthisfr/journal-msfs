@@ -93,7 +93,7 @@ function topicBadge(a){
 }
 function newsMarkup(a){
   const change=a.changelog_url?'<div class="news-impact"><b>Version : '+esc(a.version_before||'—')+' → '+esc(a.version_after||'—')+'</b>'+
-    (a.details?'<p>'+esc(a.details)+'</p>':'')+
+    (a.details?'<details class="changelog-details"><summary>Afficher les modifications détaillées</summary><p>'+esc(a.details)+'</p></details>':'')+
     '<a href="'+esc(isSafeUrl(a.changelog_url))+'" target="_blank" rel="noopener noreferrer">Consulter le changelog officiel complet ↗</a></div>':'';
   return '<article class="news-card"><div class="news-meta">'+esc(a.category||'ACTUALITÉS')+' · '+esc(localDate(a.date))+
     (a.new?'<span class="new-tag">NEWS</span>':'')+'</div><div class="news-heading">'+topicBadge(a)+
