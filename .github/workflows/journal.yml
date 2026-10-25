@@ -91,6 +91,12 @@ jobs:
         if: steps.gate.outputs.run == 'true'
         run: python scripts/fetch_simbrief.py
 
+      - name: Installer Chromium pour le profil pilote public
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          python -m pip install playwright==1.56.0
+          python -m playwright install --with-deps chromium
+
       - name: Lire le profil public SayIntentions Gate 404 Mathis
         if: steps.gate.outputs.run == 'true'
         run: python scripts/fetch_sayintentions_career.py
