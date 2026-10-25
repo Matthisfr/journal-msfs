@@ -7,7 +7,7 @@ URL="https://raw.githubusercontent.com/datasets/airport-codes/main/data/airport-
 def main():
     airports=json.loads((PUBLIC/"airports.json").read_text(encoding="utf-8"))
     codes={a.get("icao","").upper() for a in airports}
-    codes={c for c in codes if len(c)==4 and c.isalnum() and not c.startswith("(") and c!="KLVB"}
+    codes={c for c in codes if len(c)==4 and c.isalnum() and not c.startswith("(") and c not in {"KLVB","OMDU"}}
     existing=json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
     result=dict(existing)
     try:
@@ -27,7 +27,8 @@ def main():
     except Exception as exc:
         raise RuntimeError(f"Source de coordonnées indisponible : {exc}") from exc
     result={k:v for k,v in result.items() if k in codes}
-    if len(result) < 120: raise RuntimeError(f"Seulement {len(result)} coordonnées : publication interrompue")
+    missing=sorted(codes-set(result))
+    if missing: raise RuntimeError(f"Coordonnées manquantes pour les aéroports vérifiables : {missing}")
     reference={"KDEN":(39.86,-104.67),"KLAX":(33.94,-118.41),"CYVR":(49.19,-123.18),"PANC":(61.17,-150.00),"CYUL":(45.47,-73.74),"BGSF":(67.01,-50.72),"LFPG":(49.01,2.55),"KJFK":(40.64,-73.78)}
     missing_major=[code for code in ("KDEN","KLAX","CYVR","PANC","KSEA","KSFO") if code in codes and code not in result]
     if missing_major: raise ValueError(f"Aéroports majeurs absents des coordonnées : {missing_major}")
