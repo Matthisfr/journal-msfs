@@ -38,6 +38,8 @@ jobs:
           node tests/test_frontend.cjs
       - name: Collecter METAR, TAF et annonces officielles
         run: python scripts/update.py
+      - name: Récupérer les logos originaux des éditeurs
+        run: python scripts/fetch_brand_assets.py
       - name: Construire le tableau statique et la page indépendante
         run: |
           python scripts/build_site.py
