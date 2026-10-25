@@ -98,8 +98,7 @@ def vendor_matches(a,p):
  if prefix=="flightbeam" and airport_code(a)=="KPDX": allowed.add("iblueyonder")
  if vendor in allowed:return True
  if vendor==publisher and vendor:return True
- if vendor and (vendor in norm(p.get("handle")) or any(x in norm(p.get("handle")) for x in allowed if len(x)>5)):
-  return True
+ # Ne jamais accepter une autre marque au seul motif qu'elle figure dans son URL.
  return False
 def score(a,p,shop):
  title=str(p.get("title") or "")
@@ -126,7 +125,10 @@ def score(a,p,shop):
  else:base-=2
  if shop=="iniBuilds" and prefix=="inibuilds":base+=3
  if shop=="Contrail" and prefix!="inibuilds":base+=2
- if re.search(r"\bv2\b",title,re.I) and str(a.get("installed","")).startswith("2."):base+=1
+ major_match=re.search(r"(?<![A-Za-z0-9])v([1-9])(?:\b|[ .-])",title,re.I)
+ if major_match:
+  installed_major=str(a.get("installed","")).split(".")[0]
+  base += 5 if major_match.group(1)==installed_major else -9
  if "premium" in norm(title) and "premium" not in norm(a.get("name")):base-=1
  return base
 def parse_product_version(raw,shop):
