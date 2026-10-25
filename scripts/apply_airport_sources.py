@@ -13,7 +13,7 @@ airports_path=PUBLIC/"airports.json"
 candidates_path=PUBLIC/"airport_source_candidates.json"
 today=dt.datetime.now(dt.timezone.utc).date().isoformat()
 airports=json.loads(airports_path.read_text(encoding="utf-8"))
-if len(airports)!=171:raise RuntimeError("Inventaire des 171 scènes incomplet")
+if len(airports)<172:raise RuntimeError(f"Inventaire incomplet : {len(airports)} scènes (minimum 172 attendu)")
 if not candidates_path.exists():
  print("Pas encore de fichier de recherche : liens existants conservés.")
  raise SystemExit(0)
