@@ -161,3 +161,5 @@
 .nav-news[hidden]{display:none!important}
 @media(max-width:720px){.hardware-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.hardware-image{height:132px}.hardware-device{padding:10px}.software-overview{align-items:start;flex-direction:column;gap:8px}.software-table{overflow-x:auto}}
 @media(max-width:410px){.hardware-gallery{grid-template-columns:1fr}.hardware-image{height:200px}}
+
+.changelog-details{margin:10px 0;border-top:1px solid rgba(110,130,150,.25);padding-top:10px}.changelog-details summary{cursor:pointer;font-size:12px;font-weight:800}.changelog-details p{white-space:pre-wrap;line-height:1.55;max-height:320px;overflow:auto;font-size:12px}
