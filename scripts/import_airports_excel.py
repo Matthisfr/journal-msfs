@@ -23,9 +23,34 @@ def norm(value):
 def colmap(row):
  labels=[norm(x) for x in row]
  return {key:next((i for i,label in enumerate(labels) if label in names),None) for key,names in ALIASES.items()}
+def parse_addons_linker(sheet):
+ records=[]
+ region=""
+ country=""
+ for row in sheet.iter_rows(values_only=True):
+  if len(row)<13: continue
+  if row[3] and not row[4] and not row[5]:
+   region=str(row[3]).split(" (")[0].strip()
+  if row[4] and not row[5]:
+   country=str(row[4]).split(" (")[0].strip()
+  folder=str(row[5] or row[4] or "").strip()
+  code=str(row[6] or "").strip().upper()
+  version=str(row[9] or "").strip()
+  name=str(row[11] or folder).strip()
+  if not code or not version or not folder or not name: continue
+  if not (re.fullmatch(r"[A-Z0-9]{4}",code) or code.startswith("(SUB ")): continue
+  original=code
+  code=CORRECTIONS.get(code,code)
+  if code=="KLVB": continue
+  records.append({"icao":code,"original":original,"name":name,"folder":folder,
+                  "installed":version,"publisher":str(row[12] or "").strip(),
+                  "region":region or country})
+ return records
 def parse(book):
  from openpyxl import load_workbook
  wb=load_workbook(book,read_only=True,data_only=True)
+ if any(str(cell.value or "").strip()=="ICAO Duplicate" for cell in wb.active[1]):
+  return parse_addons_linker(wb.active)
  records=[]
  for sheet in wb:
   rows=sheet.iter_rows(values_only=True)
