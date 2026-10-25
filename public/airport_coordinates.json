@@ -1,0 +1,734 @@
+{
+  "BGSF": {
+    "lat": -50.715294,
+    "lon": 67.010446,
+    "name": "Kangerlussuaq International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "BIKF": {
+    "lat": -22.6056,
+    "lon": 63.985001,
+    "name": "Keflavik International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "CYUL": {
+    "lat": -73.742294,
+    "lon": 45.467837,
+    "name": "Montreal / Pierre Elliott Trudeau International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "CYYZ": {
+    "lat": -79.629421,
+    "lon": 43.675935,
+    "name": "Toronto Pearson International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "DAAG": {
+    "lat": 3.214531,
+    "lon": 36.693886,
+    "name": "Houari Boumediene Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "DTMB": {
+    "lat": 10.75469970703125,
+    "lon": 35.75809860229492,
+    "name": "Monastir Habib Bourguiba International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "DTTA": {
+    "lat": 10.2272,
+    "lon": 36.851002,
+    "name": "Tunis Carthage International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "DTTJ": {
+    "lat": 10.7773,
+    "lon": 33.873719,
+    "name": "Djerba Zarzis International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EBBR": {
+    "lat": 4.48444,
+    "lon": 50.901402,
+    "name": "Brussels Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EDDB": {
+    "lat": 13.502341,
+    "lon": 52.361738,
+    "name": "Berlin Brandenburg Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EDDF": {
+    "lat": 8.55835,
+    "lon": 50.026706,
+    "name": "Frankfurt Main Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EDDG": {
+    "lat": 7.688482,
+    "lon": 52.133816,
+    "name": "Münster Osnabrück Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EDDH": {
+    "lat": 9.98823,
+    "lon": 53.630402,
+    "name": "Hamburg Helmut Schmidt Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EDDK": {
+    "lat": 7.14274,
+    "lon": 50.865898,
+    "name": "Cologne Bonn Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EDDL": {
+    "lat": 6.76678,
+    "lon": 51.289501,
+    "name": "Düsseldorf Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EDDM": {
+    "lat": 11.7861,
+    "lon": 48.353802,
+    "name": "Munich Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EDDS": {
+    "lat": 9.22196,
+    "lon": 48.689899,
+    "name": "Stuttgart Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EDDV": {
+    "lat": 9.68508,
+    "lon": 52.461102,
+    "name": "Hannover Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EDLW": {
+    "lat": 7.61224,
+    "lon": 51.518299,
+    "name": "Dortmund Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EFHK": {
+    "lat": 24.963341,
+    "lon": 60.318363,
+    "name": "Helsinki Vantaa Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EFRO": {
+    "lat": 25.829751,
+    "lon": 66.563327,
+    "name": "Rovaniemi Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EGCC": {
+    "lat": -2.279521,
+    "lon": 53.349375,
+    "name": "Manchester Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EGKK": {
+    "lat": -0.185739,
+    "lon": 51.148744,
+    "name": "London Gatwick Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EGLL": {
+    "lat": -0.459909,
+    "lon": 51.470748,
+    "name": "London Heathrow Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EGPF": {
+    "lat": -4.43306,
+    "lon": 55.871899,
+    "name": "Glasgow Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EGPK": {
+    "lat": -4.577182,
+    "lon": 55.501499,
+    "name": "Glasgow Prestwick Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EHRD": {
+    "lat": 4.43722,
+    "lon": 51.956902,
+    "name": "Rotterdam The Hague Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EICK": {
+    "lat": -8.49111,
+    "lon": 51.841301,
+    "name": "Cork International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EIDW": {
+    "lat": -6.262121,
+    "lon": 53.428713,
+    "name": "Dublin Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EINN": {
+    "lat": -8.92482,
+    "lon": 52.702,
+    "name": "Shannon Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EKCH": {
+    "lat": 12.656000137329,
+    "lon": 55.617900848389,
+    "name": "Copenhagen Kastrup Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "EKVG": {
+    "lat": -7.275782,
+    "lon": 62.063256,
+    "name": "Vágar Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "ENGM": {
+    "lat": 11.1004,
+    "lon": 60.193901,
+    "name": "Oslo-Gardermoen International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "ESGG": {
+    "lat": 12.2798,
+    "lon": 57.6628,
+    "name": "Göteborg Landvetter Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "ESSA": {
+    "lat": 17.928829,
+    "lon": 59.64849,
+    "name": "Stockholm-Arlanda Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "GCFV": {
+    "lat": -13.8638,
+    "lon": 28.4527,
+    "name": "Fuerteventura Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "GMMN": {
+    "lat": -7.58997,
+    "lon": 33.3675,
+    "name": "Mohammed V International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "GMMX": {
+    "lat": -8.035788,
+    "lon": 31.604807,
+    "name": "Marrakesh Menara Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "HECA": {
+    "lat": 31.396694,
+    "lon": 30.111534,
+    "name": "Cairo International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KATL": {
+    "lat": -84.428101,
+    "lon": 33.6367,
+    "name": "Hartsfield Jackson Atlanta International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KBDL": {
+    "lat": -72.688016,
+    "lon": 41.938555,
+    "name": "Bradley International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KBHM": {
+    "lat": -86.750712,
+    "lon": 33.562877,
+    "name": "Birmingham-Shuttlesworth International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KBNA": {
+    "lat": -86.6782,
+    "lon": 36.1245,
+    "name": "Nashville International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KBOS": {
+    "lat": -71.0079,
+    "lon": 42.36197,
+    "name": "Boston Logan International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KBTV": {
+    "lat": -73.153297,
+    "lon": 44.471901,
+    "name": "Patrick Leahy Burlington International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KBWI": {
+    "lat": -76.668297,
+    "lon": 39.1754,
+    "name": "Baltimore/Washington International Thurgood Marshall Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KCHS": {
+    "lat": -80.038151,
+    "lon": 32.896159,
+    "name": "Charleston International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KCLE": {
+    "lat": -81.8498,
+    "lon": 41.411701,
+    "name": "Cleveland Hopkins International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KCLT": {
+    "lat": -80.94309997558594,
+    "lon": 35.2140007019043,
+    "name": "Charlotte Douglas International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KCRW": {
+    "lat": -81.593201,
+    "lon": 38.3731,
+    "name": "Yeager Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KDTW": {
+    "lat": -83.353786,
+    "lon": 42.21377,
+    "name": "Detroit Metropolitan Wayne County Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KEWR": {
+    "lat": -74.170545,
+    "lon": 40.6894,
+    "name": "Newark Liberty International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KIAD": {
+    "lat": -77.455803,
+    "lon": 38.9445,
+    "name": "Washington Dulles International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KIND": {
+    "lat": -86.294403,
+    "lon": 39.7173,
+    "name": "Indianapolis International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KJFK": {
+    "lat": -73.779317,
+    "lon": 40.639447,
+    "name": "John F. Kennedy International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KLGA": {
+    "lat": -73.872597,
+    "lon": 40.777199,
+    "name": "LaGuardia Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KMDW": {
+    "lat": -87.752403,
+    "lon": 41.785999,
+    "name": "Chicago Midway International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KMHT": {
+    "lat": -71.435699,
+    "lon": 42.932598,
+    "name": "Manchester-Boston Regional Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KMIA": {
+    "lat": -80.289751,
+    "lon": 25.796011,
+    "name": "Miami International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KMKE": {
+    "lat": -87.896599,
+    "lon": 42.947201,
+    "name": "General Mitchell International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KORD": {
+    "lat": -87.9048,
+    "lon": 41.9786,
+    "name": "Chicago O'Hare International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KPHL": {
+    "lat": -75.241096,
+    "lon": 39.871899,
+    "name": "Philadelphia International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KPVD": {
+    "lat": -71.425668,
+    "lon": 41.725038,
+    "name": "Rhode Island T. F. Green International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "KPWM": {
+    "lat": -70.309303,
+    "lon": 43.646198,
+    "name": "Portland International Jetport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LDZA": {
+    "lat": 16.0688,
+    "lon": 45.742901,
+    "name": "Zagreb Franjo Tuđman International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LEBL": {
+    "lat": 2.07846,
+    "lon": 41.2971,
+    "name": "Josep Tarradellas Barcelona-El Prat Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LEGE": {
+    "lat": 2.761774,
+    "lon": 41.904639,
+    "name": "Girona-Costa Brava Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LEIB": {
+    "lat": 1.37312,
+    "lon": 38.872898,
+    "name": "Ibiza Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LEMD": {
+    "lat": -3.572249,
+    "lon": 40.493407,
+    "name": "Adolfo Suárez Madrid–Barajas Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LEMG": {
+    "lat": -4.500208,
+    "lon": 36.678234,
+    "name": "Málaga-Costa del Sol Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LEPA": {
+    "lat": 2.73881,
+    "lon": 39.551701,
+    "name": "Palma de Mallorca Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LESO": {
+    "lat": -1.79061,
+    "lon": 43.356499,
+    "name": "San Sebastián Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LEZL": {
+    "lat": -5.89311,
+    "lon": 37.417999,
+    "name": "Seville Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LFBD": {
+    "lat": -0.715356,
+    "lon": 44.82865,
+    "name": "Bordeaux–Mérignac Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LFBO": {
+    "lat": 1.36382,
+    "lon": 43.629101,
+    "name": "Toulouse-Blagnac Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LFJL": {
+    "lat": 6.25132,
+    "lon": 48.982101,
+    "name": "Metz-Nancy-Lorraine Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LFKB": {
+    "lat": 9.48373,
+    "lon": 42.5527,
+    "name": "Bastia-Poretta International airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LFKC": {
+    "lat": 8.792984,
+    "lon": 42.530422,
+    "name": "Calvi Sainte Catherine Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LFKF": {
+    "lat": 9.097092,
+    "lon": 41.50185,
+    "name": "Figari Sud-Corse Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LFKJ": {
+    "lat": 8.80292,
+    "lon": 41.923599,
+    "name": "Ajaccio Napoléon Bonaparte airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LFMD": {
+    "lat": 6.955176,
+    "lon": 43.547998,
+    "name": "Cannes Mandelieu Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LFML": {
+    "lat": 5.2125,
+    "lon": 43.438088,
+    "name": "Marseille Provence Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LFMN": {
+    "lat": 7.21587,
+    "lon": 43.658401,
+    "name": "Nice-Côte d'Azur Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LFMT": {
+    "lat": 3.96301,
+    "lon": 43.576199,
+    "name": "Montpellier-Méditerranée Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LFNA": {
+    "lat": 6.03778,
+    "lon": 44.455002,
+    "name": "Gap-Tallard Airfield",
+    "source": "OurAirports / airport-codes"
+  },
+  "LFPO": {
+    "lat": 2.358963,
+    "lon": 48.729499,
+    "name": "Paris-Orly Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LFRN": {
+    "lat": -1.73479,
+    "lon": 48.0695,
+    "name": "Rennes-Saint-Jacques Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LFRS": {
+    "lat": -1.61073,
+    "lon": 47.153198,
+    "name": "Nantes Atlantique Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LFSB": {
+    "lat": 7.521117,
+    "lon": 47.60068,
+    "name": "EuroAirport Basel–Mulhouse–Freiburg",
+    "source": "OurAirports / airport-codes"
+  },
+  "LFST": {
+    "lat": 7.62823,
+    "lon": 48.5383,
+    "name": "Strasbourg Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LFTZ": {
+    "lat": 6.482,
+    "lon": 43.205399,
+    "name": "La Môle Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LGAV": {
+    "lat": 23.9445,
+    "lon": 37.936401,
+    "name": "Athens Eleftherios Venizelos International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LGMK": {
+    "lat": 25.348101,
+    "lon": 37.435101,
+    "name": "Mykonos Island National Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LGRP": {
+    "lat": 28.086201,
+    "lon": 36.405399,
+    "name": "Rhodes International Airport \"Diagoras\"",
+    "source": "OurAirports / airport-codes"
+  },
+  "LGSR": {
+    "lat": 25.478638,
+    "lon": 36.400045,
+    "name": "Santorini International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LHBP": {
+    "lat": 19.262393,
+    "lon": 47.43018,
+    "name": "Budapest Liszt Ferenc International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LICJ": {
+    "lat": 13.091,
+    "lon": 38.175999,
+    "name": "Falcone–Borsellino Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LIMC": {
+    "lat": 8.72811,
+    "lon": 45.6306,
+    "name": "Milan Malpensa International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LIML": {
+    "lat": 9.27674,
+    "lon": 45.445099,
+    "name": "Milano Linate Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LIPE": {
+    "lat": 11.2887,
+    "lon": 44.5354,
+    "name": "Bologna Guglielmo Marconi Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LIPZ": {
+    "lat": 12.3519,
+    "lon": 45.505299,
+    "name": "Venice Marco Polo Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LIRF": {
+    "lat": 12.251998,
+    "lon": 41.804532,
+    "name": "Rome–Fiumicino Leonardo da Vinci International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LIRN": {
+    "lat": 14.2908,
+    "lon": 40.886002,
+    "name": "Naples International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LMML": {
+    "lat": 14.491546,
+    "lon": 35.845932,
+    "name": "Malta International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LOWI": {
+    "lat": 11.344,
+    "lon": 47.260201,
+    "name": "Innsbruck Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LOWS": {
+    "lat": 13.0043,
+    "lon": 47.793301,
+    "name": "Salzburg Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LPFR": {
+    "lat": -7.970939,
+    "lon": 37.015909,
+    "name": "Faro - Gago Coutinho International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LPPR": {
+    "lat": -8.68138980865,
+    "lon": 41.2481002808,
+    "name": "Francisco de Sá Carneiro Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LPPT": {
+    "lat": -9.13592,
+    "lon": 38.7813,
+    "name": "Lisbon Humberto Delgado Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LSGG": {
+    "lat": 6.10895,
+    "lon": 46.238098,
+    "name": "Geneva International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LSZH": {
+    "lat": 8.548056,
+    "lon": 47.458056,
+    "name": "Zürich Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LTFM": {
+    "lat": 28.732136,
+    "lon": 41.274874,
+    "name": "İstanbul Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "LXGB": {
+    "lat": -5.34978,
+    "lon": 36.151679,
+    "name": "Gibraltar Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "MDSD": {
+    "lat": -69.668899536133,
+    "lon": 18.42970085144,
+    "name": "Las Américas International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "MUHA": {
+    "lat": -82.40910339355469,
+    "lon": 22.989200592041016,
+    "name": "José Martí International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "OERK": {
+    "lat": 46.698799,
+    "lon": 24.9576,
+    "name": "King Khalid International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "OMDB": {
+    "lat": 55.370992,
+    "lon": 25.24979,
+    "name": "Dubai International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "OOMS": {
+    "lat": 58.285268,
+    "lon": 23.600218,
+    "name": "Muscat International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "SBGL": {
+    "lat": -43.250557,
+    "lon": -22.809999,
+    "name": "Rio de Janeiro Galeão – Tom Jobim International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "TFFF": {
+    "lat": -61.003201,
+    "lon": 14.591,
+    "name": "Martinique Aimé Césaire International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "TFFR": {
+    "lat": -61.532754,
+    "lon": 16.265443,
+    "name": "Maryse Condé International Airport",
+    "source": "OurAirports / airport-codes"
+  },
+  "TJSJ": {
+    "lat": -66.001801,
+    "lon": 18.4394,
+    "name": "Luis Munoz Marin International Airport",
+    "source": "OurAirports / airport-codes"
+  }
+}
