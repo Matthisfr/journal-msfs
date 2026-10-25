@@ -71,7 +71,15 @@ def news_topic(a):
         return "WC", "winctrl"
     if "gsx" in s:
         return "GSX", "gsx"
+    if "navigraph" in s:
+        return "NAV", "navigraph"
     if "fshud" in s:
+        return "ATC", "fshud"
+    if "fsltl" in s or "aig" in s:
+        return "AI", "traffic"
+    if "santiluib3" in s or "s3" in s:
+        return "S3", "s3"
+    if "atc" in s:
         return "ATC", "atc"
     if "metar" in s or "stratawx" in s:
         return "WX", "weather"
@@ -95,7 +103,7 @@ def build_news(status, editorial):
     homes = []
     for a in news:
         label, kind = news_topic(a)
-        icon = f'<span class="topic-icon topic-{kind}" aria-hidden="true">{h(label)}</span>'
+        icon = f'<span class="topic-icon topic-{kind}" aria-hidden="true"><img src="icons/{kind}.svg" width="42" height="42" alt="" decoding="async"></span>'
         title = h(a.get("title") or "")
         date = h(a.get("date") or "")
         category = h(a.get("category") or "ACTUALITÉS")
@@ -190,6 +198,8 @@ body{{background:#f5f5f1}}
     assert index.count("<tr>") >= len(airports), "Lignes statiques manquantes"
     assert "id=\"home-updated\">Le " in index, "Horodatage accueil absent"
     assert index.count('class="news-card"') >= 4, "Actualités officielles manquantes"
+    assert index.count('src="icons/') >= 15, "Pictogrammes graphiques manquants"
+    assert all((PUBLIC / "icons" / (k + ".svg")).is_file() for k in ("si","fenix","mf","winctrl","msfs","airport","weather","s3","generic")), "Un fichier d'icône est absent"
     assert independent.count("<tr>") >= len(airports), "Page indépendante incomplète"
     print(f"Publication : {len(airports)} scènes HTML statiques + page indépendante ; rev={rev}")
 
