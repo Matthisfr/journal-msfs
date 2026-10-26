@@ -20,6 +20,14 @@ class VersionTests(unittest.TestCase):
         self.assertEqual(v.parse_version(page('BGSF Kangerlussuaq Airport Version v1.2.0 Supported Operating System Windows'),store='contrail.shop'),'1.2.0')
     def test_inibuilds(self):
         self.assertEqual(v.parse_version(page('iniBuilds Hooper 58CA Product Size 1.5GB Product Version v1.01 Supported Simulator Version Microsoft Flight Simulator 2020'),store='inibuilds.com'),'1.01')
+    def test_additional_explicit_store_fields(self):
+        self.assertEqual(v.parse_version(page('iniBuilds LOWI Current Version: 1.3.2'),store='inibuilds.com'),'1.3.2')
+        self.assertEqual(v.parse_version(page('Contrail LGAV Product Version: 2.4.1'),store='contrail.shop'),'2.4.1')
+        self.assertIsNone(v.parse_version(page('Contrail LGAV Updated October 2026'),store='contrail.shop'))
+    def test_aerosoft_explicit_edition_only(self):
+        html=page('Current version: 3.4 (MSFS 2024) | 2.4 (MSFS 2020)')
+        self.assertEqual(v.parse_version(html,store='www.aerosoft.com',edition='MSFS 2024'),'3.4')
+        self.assertIsNone(v.parse_version(html,store='www.aerosoft.com',edition='MSFS 2020 / 2024'))
     def test_simmarket(self):
         self.assertEqual(v.parse_version(page('TORONTO CYYZ FLYTAMPA Published by FLYTAMPA Size 430MB Version v1.2 PID 16345'),store='secure.simmarket.com'),'1.2')
         self.assertIsNone(v.parse_version(page('KFSD SIOUX FALLS FSXCENERY Size 43MB Available since 2020-10-11 PID 13893'),store='secure.simmarket.com'))
