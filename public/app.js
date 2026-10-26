@@ -295,5 +295,5 @@ async function refreshBuildStatus(){
     badge.setAttribute('aria-label','État de publication indisponible');
   }
 }
-refreshBuildStatus();
-setInterval(refreshBuildStatus,90000);
+if(typeof window!=='undefined'&&typeof window.fetch==='function')refreshBuildStatus();
+if(typeof window!=='undefined'&&typeof window.setInterval==='function')window.setInterval(refreshBuildStatus,90000);
