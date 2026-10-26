@@ -100,7 +100,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           persist-credentials: true
-          fetch-depth: 0
 
       - name: Python
         if: steps.gate.outputs.run == 'true'
@@ -129,22 +128,12 @@ jobs:
         run: |
           # La vérification des versions se fait chaque matin sur les fiches
           # existantes. Les catalogues entiers sont rescannés le samedi.
-          excel_changed=false
-          if [[ "${{ github.event_name }}" == "push" ]]; then
-            before="${{ github.event.before }}"
-            if [[ -n "$before" ]] && git cat-file -e "$before^{commit}" 2>/dev/null; then
-              if git diff --name-only "$before" "${{ github.sha }}" -- data/airports/ | grep -Eq "[.]xlsx$"; then
-                excel_changed=true
-                echo "Nouvel inventaire Excel : recherche complète immédiate."
-              fi
-            fi
-          fi
-          if [[ "$excel_changed" == "true" ]] || [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.mode }}" == "totale" ]] || [[ "$(TZ=Europe/Paris date +%u)" == "6" && "${{ github.event_name }}" == "schedule" ]]; then
+          if git show --pretty="" --name-only HEAD -- data/airports/ | grep -Eq '[.]xlsx [[ "$(TZ=Europe/Paris date +%u)" == "6" && "${{ github.event_name }}" == "schedule" ]]; then
             python scripts/discover_airports.py || echo "Catalogue Contrail / iniBuilds indisponible"
             python scripts/discover_simmarket.py || echo "Recherche simMarket indisponible"
             python scripts/apply_airport_sources.py
           else
-            echo "Recherche catalogue complète : nouvel Excel, samedi automatique ou lancement manuel en mode totale."
+            echo "Recherche catalogue complète : samedi automatique ou lancement manuel en mode totale."
           fi
 
       - name: Collecter METAR, TAF, actualités et versions de scènes
@@ -246,13 +235,7 @@ jobs:
       - name: Vérifier le vrai site public après publication
         if: steps.gate.outputs.run == 'true'
         run: python scripts/smoke_live.py "${{ steps.deployment.outputs.page_url }}"
-; then
-                excel_changed=true
-                echo "Nouvel inventaire Excel détecté : recherche complète immédiate."
-              fi
-            fi
-          fi
-          if [[ "$excel_changed" == "true" ]] || [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.mode }}" == "totale" ]] || [[ "$(TZ=Europe/Paris date +%u)" == "6" && "${{ github.event_name }}" == "schedule" ]]; then
+ || [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.mode }}" == "totale" ]] || [[ "$(TZ=Europe/Paris date +%u)" == "6" && "${{ github.event_name }}" == "schedule" ]]; then
             python scripts/discover_airports.py || echo "Catalogue Contrail / iniBuilds indisponible"
             python scripts/discover_simmarket.py || echo "Recherche simMarket indisponible"
             python scripts/apply_airport_sources.py
