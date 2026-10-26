@@ -50,7 +50,7 @@ def main():
 
         airport_ids={}
         for row in remote_rows("airports.csv"):
-            keys={str(row.get(field) or "").strip().upper() for field in ("ident","gps_code")}
+            keys={str(row.get(field) or "").strip().upper() for field in ("ident","gps_code","icao_code")}
             for code in keys.intersection(result):
                 airport_ids.setdefault(str(row.get("id") or ""),set()).add(code)
         best={}
