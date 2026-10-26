@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-26",
-  "last_run": "2026-10-26T10:40:33.535090+00:00",
-  "weather_checked_at": "2026-10-26T10:40:33.535090+00:00",
-  "news_checked_at": "2026-10-26T10:40:33.535090+00:00",
+  "last_run": "2026-10-26T10:44:56.451308+00:00",
+  "weather_checked_at": "2026-10-26T10:44:56.451308+00:00",
+  "news_checked_at": "2026-10-26T10:44:56.451308+00:00",
   "weather": [
     {
       "icao": "LGRP",
@@ -59,8 +59,8 @@
     {
       "icao": "KDEN",
       "name": "KDEN Denver International Airport",
-      "observed_at": "2026-10-26T10:23:00+00:00",
-      "raw": "SPECI KDEN 261023Z 35010KT 1 1/2SM -RA SCT005 OVC039 05/04 A3024 RMK AO2 SFC VIS 9 P0005 T00500044 $",
+      "observed_at": "2026-10-26T10:39:00+00:00",
+      "raw": "SPECI KDEN 261039Z 34007KT 2 1/2SM -RA BKN004 BKN050 OVC095 05/04 A3024 RMK AO2 SFC VIS 10 P0006 T00500044 $",
       "score": 57,
       "summary": "visibilité < 3 SM, précipitations",
       "icon": "🌧️",
@@ -269,15 +269,15 @@
     "without_official_url": 5,
     "manual_source": 5,
     "unverified": 36,
-    "audited_at": "2026-10-26T10:40:33.535090+00:00"
+    "audited_at": "2026-10-26T10:44:56.451308+00:00"
   },
-  "versions_checked_at": "2026-10-26T10:40:33.535090+00:00",
-  "releases_checked_at": "2026-10-26T10:40:33.535090+00:00",
+  "versions_checked_at": "2026-10-26T10:44:56.451308+00:00",
+  "releases_checked_at": "2026-10-26T10:44:56.451308+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-26T10:41:00.075398+00:00",
+    "checked_at": "2026-10-26T10:45:31.842126+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
