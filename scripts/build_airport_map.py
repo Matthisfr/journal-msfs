@@ -70,11 +70,15 @@ def main():
                 found.add(code)
                 if length>=1800 and width>=30 and paved:
                     best[code]=True
+        # Aéroports commerciaux à pistes courtes : ne pas les confondre avec des aérodromes légers.
+        commercial_airports={"LGMK","LGSR","EKVG","LESO"}
         for code in result:
             if code in found:
-                result[code]["aircraft_marker"]="airliner" if best.get(code) else "cessna"
+                result[code]["aircraft_marker"]="airliner" if best.get(code) or code in commercial_airports else "cessna"
             else:
                 result[code]["aircraft_marker"]="unknown"
+        for code in commercial_airports.intersection(result):
+            result[code]["aircraft_marker"]="airliner"
         print(f"Silhouettes : {sum(v.get('aircraft_marker')=='airliner' for v in result.values())} A320 indicatifs, {sum(v.get('aircraft_marker')=='cessna' for v in result.values())} avions légers")
     except Exception as exc:
         # Ne pas bloquer la publication ni inventer de catégories en cas de panne.
