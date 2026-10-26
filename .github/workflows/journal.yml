@@ -131,12 +131,17 @@ jobs:
           # existantes. Les catalogues entiers sont rescannés le samedi.
           excel_changed=false
           if [[ "$GITHUB_EVENT_NAME" == "push" ]]; then
-            if git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" -- data/airports/ | grep -Eq '[.]xlsx          if [[ "$excel_changed" == "true" ]] || [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.mode }}" == "totale" ]] || [[ "$(TZ=Europe/Paris date +%u)" == "6" && "${{ github.event_name }}" == "schedule" ]]; then
+            if git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" -- data/airports/ | grep -Fq '.xlsx'; then
+              excel_changed=true
+              echo "Nouvel inventaire Excel : recherche complète."
+            fi
+          fi
+          if [[ "$excel_changed" == "true" ]] || [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.mode }}" == "totale" ]] || [[ "$(TZ=Europe/Paris date +%u)" == "6" && "${{ github.event_name }}" == "schedule" ]]; then
             python scripts/discover_airports.py || echo "Catalogue Contrail / iniBuilds indisponible"
             python scripts/discover_simmarket.py || echo "Recherche simMarket indisponible"
             python scripts/apply_airport_sources.py
           else
-            echo "Recherche catalogue complète : samedi automatique ou lancement manuel en mode totale."
+            echo "Recherche catalogue complète : nouvel Excel, samedi ou lancement manuel total."
           fi
 
       - name: Collecter METAR, TAF, actualités et versions de scènes
