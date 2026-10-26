@@ -221,7 +221,7 @@
     "lon": -7.275782,
     "name": "Vágar Airport",
     "source": "OurAirports / airport-codes",
-    "aircraft_marker": "cessna"
+    "aircraft_marker": "airliner"
   },
   "ENGM": {
     "lat": 60.193901,
@@ -501,7 +501,7 @@
     "lon": -1.79061,
     "name": "San Sebastián Airport",
     "source": "OurAirports / airport-codes",
-    "aircraft_marker": "cessna"
+    "aircraft_marker": "airliner"
   },
   "LEZL": {
     "lat": 37.417999,
@@ -648,7 +648,7 @@
     "lon": 25.348101,
     "name": "Mykonos Island National Airport",
     "source": "OurAirports / airport-codes",
-    "aircraft_marker": "cessna"
+    "aircraft_marker": "airliner"
   },
   "LGRP": {
     "lat": 36.405399,
@@ -662,7 +662,7 @@
     "lon": 25.478638,
     "name": "Santorini International Airport",
     "source": "OurAirports / airport-codes",
-    "aircraft_marker": "cessna"
+    "aircraft_marker": "airliner"
   },
   "LHBP": {
     "lat": 47.43018,
