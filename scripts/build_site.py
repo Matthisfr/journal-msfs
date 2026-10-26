@@ -203,14 +203,18 @@ def build_news(status, editorial, manifest):
             continue
         seen.add(url)
         news.append(a)
-    today = dt.datetime.now(dt.timezone.utc).date()
-    def age_days(item):
+    now = dt.datetime.now(dt.timezone.utc)
+    def published_at(item):
+        raw = str(item.get("published_at") or item.get("date") or "")
         try:
-            return (today - dt.date.fromisoformat(str(item.get("date") or "")[:10])).days
+            parsed = dt.datetime.fromisoformat(raw.replace("Z", "+00:00"))
+            return parsed.replace(tzinfo=dt.timezone.utc) if parsed.tzinfo is None else parsed.astimezone(dt.timezone.utc)
         except (ValueError, TypeError):
-            return 9999
-    # NEWS en premier, archives de plus de 7 jours à la fin.
-    news.sort(key=lambda a: (age_days(a) > 7, -max(0, 9999 - age_days(a))))
+            return dt.datetime(1970, 1, 1, tzinfo=dt.timezone.utc)
+    def is_old(item):
+        return now - published_at(item) > dt.timedelta(hours=24)
+    # Priorité stricte : nouvelles de moins de 24 h, puis anciennes par date décroissante.
+    news.sort(key=lambda item: (is_old(item), -published_at(item).timestamp()))
     cards = []
     homes = []
     for a in news:
@@ -221,10 +225,10 @@ def build_news(status, editorial, manifest):
         category = h(a.get("category") or "ACTUALITÉS")
         url = h(a["url"])
         source = h(a.get("source") or "Source officielle")
-        old = age_days(a) > 7
+        old = is_old(a)
         cards.append(
             '<article class="news-card' + (' news-old' if old else '') + '"><div class="news-meta">' + category + ' · ' + date +
-            ('<span class="old-tag">OLD</span>' if old else '<span class="new-tag">NEWS</span>' if a.get("new") else "") +
+            ('<span class="old-tag">OLD</span>' if old else '<span class="new-tag">NEWS</span>') +
             '</div><div class="news-heading">' + icon + '<h3>' + title + '</h3></div>' +
             ('<p>' + h(a["summary"]) + '</p>' if a.get("summary") else "") +
             ('<div class="news-impact"><b>Impact / action :</b> ' + h(a["impact"]) + '</div>' if a.get("impact") else "") +
