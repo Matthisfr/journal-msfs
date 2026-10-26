@@ -211,13 +211,23 @@ def build_news(status, editorial, manifest):
             return parsed.replace(tzinfo=dt.timezone.utc) if parsed.tzinfo is None else parsed.astimezone(dt.timezone.utc)
         except (ValueError, TypeError):
             return dt.datetime(1970, 1, 1, tzinfo=dt.timezone.utc)
-    def is_old(item):
-        return now - published_at(item) > dt.timedelta(hours=24)
-    # Priorité stricte : nouvelles de moins de 24 h, puis anciennes par date décroissante.
-    news.sort(key=lambda item: (is_old(item), -published_at(item).timestamp()))
+    def age_group(item):
+        age = now - published_at(item)
+        if age <= dt.timedelta(hours=24):
+            return 0
+        if age <= dt.timedelta(hours=72):
+            return 1
+        if age <= dt.timedelta(days=7):
+            return 2
+        return 3
+    # Trois groupes : NEWS 0-24 h, normales 24-72 h, OLD 72 h-7 j.
+    news.sort(key=lambda item: (age_group(item), -published_at(item).timestamp()))
     cards = []
     homes = []
     for a in news:
+        group = age_group(a)
+        if group == 3:
+            continue
         label, kind = news_topic(a)
         icon = brand_icon(kind, manifest)
         title = h(a.get("title") or "")
@@ -225,16 +235,16 @@ def build_news(status, editorial, manifest):
         category = h(a.get("category") or "ACTUALITÉS")
         url = h(a["url"])
         source = h(a.get("source") or "Source officielle")
-        old = is_old(a)
+        old = group == 2
         cards.append(
             '<article class="news-card' + (' news-old' if old else '') + '"><div class="news-meta">' + category + ' · ' + date +
-            ('<span class="old-tag">OLD</span>' if old else '<span class="new-tag">NEWS</span>') +
+            ('<span class="old-tag">OLD</span>' if old else '<span class="new-tag">NEWS</span>' if group == 0 else '') +
             '</div><div class="news-heading">' + icon + '<h3>' + title + '</h3></div>' +
             ('<p>' + h(a["summary"]) + '</p>' if a.get("summary") else "") +
             ('<div class="news-impact"><b>Impact / action :</b> ' + h(a["impact"]) + '</div>' if a.get("impact") else "") +
             '<div class="news-source"><a href="' + url + '" target="_blank" rel="noopener noreferrer">' + source + ' ↗</a></div></article>'
         )
-        if old:
+        if group != 0:
             continue
         homes.append(
             '<article><div class="home-news-row">' + icon + '<div class="home-news-content"><small>' +
