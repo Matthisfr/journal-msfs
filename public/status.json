@@ -1,9 +1,22 @@
 {
   "edition": "2026-10-26",
-  "last_run": "2026-10-26T10:09:04.709213+00:00",
-  "weather_checked_at": "2026-10-26T10:09:04.709213+00:00",
-  "news_checked_at": "2026-10-26T10:09:04.709213+00:00",
+  "last_run": "2026-10-26T10:26:55.052150+00:00",
+  "weather_checked_at": "2026-10-26T10:26:55.052150+00:00",
+  "news_checked_at": "2026-10-26T10:26:55.052150+00:00",
   "weather": [
+    {
+      "icao": "LGRP",
+      "name": "LGRP Rhodes International Airport \"Diagoras\"",
+      "observed_at": "2026-10-26T10:20:00+00:00",
+      "raw": "METAR LGRP 261020Z 11007KT 060V190 9999 -TSRA FEW012 FEW016CB SCT018 22/17 Q1011 NOSIG",
+      "score": 110,
+      "summary": "orage",
+      "icon": "⛈️",
+      "phenomenon": "Orage",
+      "level": "Très dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF LGRP 260500Z 2606/2706 16010KT 9999 SCT025 TEMPO 2606/2706 4000 SHRA FEW018TCU BKN020 PROB40 TEMPO 2606/2706 3000 TSRA FEW018CB BKN018 BKN050 BECMG 2616/2618 26012KT"
+    },
     {
       "icao": "LPPT",
       "name": "LPPT Lisbon International Airport",
@@ -46,8 +59,8 @@
     {
       "icao": "KDEN",
       "name": "KDEN Denver International Airport",
-      "observed_at": "2026-10-26T10:04:00+00:00",
-      "raw": "SPECI KDEN 261004Z 34009KT 1 1/2SM -RA BR FEW005 OVC020 05/05 A3025 RMK AO2 SFC VIS 6 P0002 T00500050 $",
+      "observed_at": "2026-10-26T10:23:00+00:00",
+      "raw": "SPECI KDEN 261023Z 35010KT 1 1/2SM -RA SCT005 OVC039 05/04 A3024 RMK AO2 SFC VIS 9 P0005 T00500044 $",
       "score": 57,
       "summary": "visibilité < 3 SM, précipitations",
       "icon": "🌧️",
@@ -57,17 +70,17 @@
       "taf_raw": "TAF KDEN 260858Z 2609/2712 35007KT 3SM -RA BR SCT002 BKN004 OVC008 PROB30 2609/2611 1SM RA BR BKN002 FM261100 34008KT 3SM BR OVC004 TEMPO 2611/2614 3/4SM BR OVC002 FM261600 34006KT P6SM BKN015 FM262000 04007KT P6SM SCT025 SCT070 FM262300 09009KT P6SM FEW030 FM270300 14009KT P6SM FEW050 FM270900 VRB05KT P6SM VCFG FEW002"
     },
     {
-      "icao": "LIML",
-      "name": "LIML Milan Linate Airport",
-      "observed_at": "2026-10-26T09:50:00+00:00",
-      "raw": "METAR LIML 260950Z 09006KT 010V150 3000 BR BKN004 08/08 Q1022 NOSIG",
-      "score": 45,
-      "summary": "visibilité < 3 SM",
-      "icon": "☁️",
-      "phenomenon": "Ciel couvert",
-      "level": "À surveiller",
+      "icao": "SBGL",
+      "name": "Rio-de-Janeiro",
+      "observed_at": "2026-10-26T10:13:00+00:00",
+      "raw": "SPECI SBGL 261013Z 25006KT 4000 -RA BR BKN007 BKN015 OVC050 22/20 Q1012",
+      "score": 57,
+      "summary": "visibilité < 3 SM, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "Dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF AMD LIML 260743Z 2607/2706 VRB05KT 0500 FG BKN003 BECMG 2607/2609 1200 BCFG FEW010 BECMG 2608/2610 9999 TEMPO 2700/2706 2000 BCFG BKN007"
+      "taf_raw": "TAF SBGL 260800Z 2612/2718 28005KT 7000 BKN015 TN20/2706Z TX26/2716Z BECMG 2613/2615 23010KT 9999 SCT020 BECMG 2623/2701 27005KT PROB30 2706/2710 4000 BR SCT010 BECMG 2714/2716 14010KT RMK PHD"
     },
     {
       "icao": "EINN",
@@ -85,8 +98,8 @@
     {
       "icao": "LGAV",
       "name": "LGAV Flytampa Athens",
-      "observed_at": "2026-10-26T09:50:00+00:00",
-      "raw": "METAR LGAV 260950Z 03015KT 6000 -RA SCT012 BKN025 17/15 Q1009 NOSIG",
+      "observed_at": "2026-10-26T10:20:00+00:00",
+      "raw": "METAR LGAV 261020Z 02013KT 5000 RA SCT012 BKN025 18/15 Q1009 NOSIG",
       "score": 32,
       "summary": "visibilité < 5 SM, précipitations",
       "icon": "🌧️",
@@ -98,8 +111,8 @@
     {
       "icao": "ESGG",
       "name": "ESGG Gothenburg Landvetter",
-      "observed_at": "2026-10-26T09:50:00+00:00",
-      "raw": "METAR ESGG 260950Z 23020G31KT 9999 FEW004 BKN011 09/08 Q0997",
+      "observed_at": "2026-10-26T10:20:00+00:00",
+      "raw": "METAR ESGG 261020Z 23018G30KT 9000 BKN007 OVC011 09/08 Q0998 RERA",
       "score": 22,
       "summary": "rafales ≥ 25 kt",
       "icon": "💨",
@@ -120,19 +133,6 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF DTMB 260500Z 2606/2706 27010KT 9999 SCT026 PROB40 TEMPO 2610/2618 35020G35KT"
-    },
-    {
-      "icao": "MUHA",
-      "name": "Habana Jose Marti Intl Airport",
-      "observed_at": "2026-10-26T09:50:00+00:00",
-      "raw": "METAR MUHA 260950Z 02008KT 8000 SCT030 24/22 Q1013",
-      "score": 20,
-      "summary": "visibilité < 5 SM",
-      "icon": "🌤️",
-      "phenomenon": "Éclaircies",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF MUHA 260500Z 2606/2706 02010KT 9000 SCT030 TEMPO 2618/2623 01015KT 5000 TSRA RA FEW018CB BKN020"
     }
   ],
   "weather_coverage": {
@@ -269,15 +269,15 @@
     "without_official_url": 5,
     "manual_source": 5,
     "unverified": 36,
-    "audited_at": "2026-10-26T10:09:04.709213+00:00"
+    "audited_at": "2026-10-26T10:26:55.052150+00:00"
   },
-  "versions_checked_at": "2026-10-26T10:09:04.709213+00:00",
-  "releases_checked_at": "2026-10-26T10:09:04.709213+00:00",
+  "versions_checked_at": "2026-10-26T10:26:55.052150+00:00",
+  "releases_checked_at": "2026-10-26T10:26:55.052150+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-26T10:09:36.456472+00:00",
+    "checked_at": "2026-10-26T10:27:42.726241+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"

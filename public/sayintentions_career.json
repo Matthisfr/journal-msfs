@@ -23,7 +23,7 @@
     {
       "id": "IFR-883907560",
       "aircraft": "F-FENX",
-      "when": "yesterday",
+      "when": "2 days ago",
       "origin": "DTTJ",
       "destination": "LGMK",
       "rules": "IFR",
@@ -102,7 +102,7 @@
       "duration": "1h 46m"
     }
   ],
-  "flights_checked_at": "2026-10-26T10:10:03.796603+00:00",
-  "verified_at": "2026-10-26T10:10:03.796603+00:00",
-  "checked_at": "2026-10-26T10:10:03.796603+00:00"
+  "flights_checked_at": "2026-10-26T10:38:33.610222+00:00",
+  "verified_at": "2026-10-26T10:38:33.610222+00:00",
+  "checked_at": "2026-10-26T10:38:33.610222+00:00"
 }
