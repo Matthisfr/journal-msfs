@@ -14,13 +14,15 @@ on:
           - normale
           - totale
   schedule:
-    # 07:08 en France : 05:08 UTC l'été, 06:08 UTC l'hiver.
-    # GitHub Actions ne gère pas directement le fuseau Europe/Paris :
-    # le contrôle ci-dessous ignore l'un des deux créneaux selon la saison.
-    - cron: '8 5 * * *'
-    - cron: '8 6 * * *'
+    # Deux passages hors minute 0 pour limiter les retards GitHub Actions.
+    # 07:17 France : principal ; 08:17 France : secours.
+    # UTC été/hiver : la porte ci-dessous valide le bon créneau.
+    - cron: '17 5 * * *'
+    - cron: '17 6 * * *'
+    - cron: '17 7 * * *'
 
 permissions:
+  actions: read
   contents: write
   pages: write
   id-token: write
@@ -36,27 +38,61 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Choisir le créneau de 07 h Europe/Paris
+      - name: Vérifier créneau quotidien et secours
         id: gate
         shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPOSITORY: ${{ github.repository }}
+          GH_RUN_ID: ${{ github.run_id }}
+          TRIGGER: ${{ github.event_name }}
+          CRON: ${{ github.event.schedule }}
         run: |
-          if [[ "${{ github.event_name }}" != "schedule" ]]; then
+          if [[ "$TRIGGER" != "schedule" ]]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
             echo "Déclenchement manuel ou commit : collecte autorisée"
             exit 0
           fi
+
           offset=$(TZ=Europe/Paris date +%z)
           if [[ "$offset" == "+0200" ]]; then
-            expected="8 5 * * *"
+            primary="17 5 * * *"
+            backup="17 6 * * *"
           else
-            expected="8 6 * * *"
+            primary="17 6 * * *"
+            backup="17 7 * * *"
           fi
-          if [[ "${{ github.event.schedule }}" == "$expected" ]]; then
+
+          if [[ "$CRON" == "$primary" ]]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
-            echo "Créneau 07:08 France confirmé : $offset"
-          else
+            echo "Actualisation principale à 07:17 Europe/Paris"
+            exit 0
+          fi
+          if [[ "$CRON" != "$backup" ]]; then
             echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "Créneau UTC secondaire ignoré pour le changement d'heure : $offset"
+            echo "Créneau UTC hors saison ignoré"
+            exit 0
+          fi
+
+          # Le secours ne relance pas le journal si une exécution programmée
+          # a déjà réussi aujourd'hui. En cas d'erreur API, lancer le secours.
+          today=$(TZ=Europe/Paris date +%F)
+          api="https://api.github.com/repos/$GH_REPOSITORY/actions/workflows/journal.yml/runs?event=schedule&per_page=30"
+          if ! payload=$(curl -fsSL --retry 2 -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "$api"); then
+            echo "API indisponible : secours autorisé"
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if printf '%s' "$payload" | jq -e --arg today "$today" --arg self "$GH_RUN_ID" '
+            [.workflow_runs[] | select((.id|tostring) != $self)
+              | select(.event == "schedule" and .conclusion == "success")
+              | select((.created_at[0:10]) >= $today)] | length > 0
+          ' >/dev/null; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "Publication programmée déjà réussie aujourd'hui : secours ignoré"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "Aucune réussite programmée aujourd'hui : secours lancé"
           fi
 
       - name: Récupérer le dépôt
