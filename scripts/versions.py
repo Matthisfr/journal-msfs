@@ -70,7 +70,7 @@ def parse_version(raw, expected_name=None, store=None, edition=None, icao=None):
         if not icao or not re.fullmatch(r"[A-Z0-9]{4}",str(icao).upper()):
             return None
         code=re.escape(str(icao).upper())
-        pattern=rf"\\[\\s*{code}\\s*\\].{{0,110}}?\\bVersion\\s*:?\\s*[vV]?(\\d+(?:\\.\\d+){{1,4}})\\b"
+        pattern=rf"\[\s*{code}\s*\].{0,110}?\bVersion\s*:?\s*[vV]?(\d+(?:\.\d+){{1,4}})\b"
         matches=re.findall(pattern,text,re.I)
         return matches[0] if len(set(matches))==1 and matches else None
     if store=="orbxdirect.com":
