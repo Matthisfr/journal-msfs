@@ -24,7 +24,7 @@ UA = "Mozilla/5.0 (compatible; JournalMSFS/1.1; +https://matthisfr.github.io/jou
 # l'accès automatique. Ces entrées restent visibles avec leur statut d'échec.
 SOURCES = [
     ("si", "SayIntentions — site", "SayIntentions", "https://sayintentions.ai/"),
-    ("si-kb", "SayIntentions — documentation", "SayIntentions", "https://kb.sayintentions.ai/knowledgebase"),
+    ("si-kb", "SayIntentions — documentation", "SayIntentions", "https://kb.sayintentions.ai/"),
     ("si-blog", "SayIntentions — annonces et nouveautés", "SayIntentions", "https://www.sayintentions.ai/blog"),
     ("si-pocket", "SayIntentions — PocketSky / Windows App", "SayIntentions", "https://sayintentions.ai/"),
     ("fenix", "Fenix — annonces et V3 / CIDS / FAP", "Fenix", "https://fenixsim.com/blog/"),
@@ -43,6 +43,8 @@ SOURCES = [
     ("aig", "AIG — Alpha India Group", "Trafic IA", "https://www.alpha-india.net/"),
     ("winctrl", "WINCTRL / WINWING — ACP32 / OVHD32 / AGP32 / SimAppPro", "WINCTRL", "https://winwingsim.com/"),
     ("navigraph", "Navigraph — site officiel", "Navigraph", "https://navigraph.com/"),
+    ("simbrief-changelog", "SimBrief — changelog officiel", "Navigraph", "https://www.simbrief.com/home/?page=changelog"),
+    ("navigraph-charts", "Navigraph Charts — actualités", "Navigraph", "https://navigraph.com/blog"),
     ("navigraph-blog", "Navigraph — blog", "Navigraph", "https://navigraph.com/blog"),
     ("fcr", "FlightControlReplay — FlightControlTools", "Utilitaires", "https://flightcontroltools.com/"),
     ("fsipanel", "FSIPanel — site officiel", "Utilitaires", "https://www.fsipanel.com/"),
