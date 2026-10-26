@@ -73,7 +73,7 @@ def parse_version(raw, expected_name=None, store=None, edition=None):
         match=re.search(r"\bProduct\s+version\s*:?\s*([vV]?\d+(?:\.\d+){1,4})\b",text,re.I)
         return match.group(1).lstrip("vV") if match else None
     if store in ("inibuilds.com","www.inibuilds.com"):
-        match=re.search(r"\bProduct\s+Version\s*:?\s*([vV]?\d+(?:\.\d+){1,4})\b",text,re.I)
+        match=re.search(r"\b(?:Product\s+Version|Current\s+Version)\s*:?\s*([vV]?\d+(?:\.\d+){1,4})\b",text,re.I)
         return match.group(1).lstrip("vV") if match else None
     if store in ("www.aerosoft.com","aerosoft.com"):
         # Deux éditions peuvent figurer dans le même champ (EDLW).
@@ -98,7 +98,7 @@ def parse_version(raw, expected_name=None, store=None, edition=None):
         match=re.search(r"\b(?:Version|Version actuelle)\s*:?\s*([vV]?\d+(?:\.\d+){0,4})\b",main,re.I)
         return match.group(1).lstrip("vV") if match else None
     if store=="contrail.shop":
-        match=re.search(r"\bVersion\s*:?\s*([vV]?\d+(?:\.\d+){1,4})\b",text,re.I)
+        match=re.search(r"\b(?:Product\s+Version|Current\s+Version|Version)\s*:?\s*([vV]?\d+(?:\.\d+){1,4})\b",text,re.I)
         return match.group(1).lstrip("vV") if match else None
     if store=="fsdg-online.com":
         match=re.search(r"\bVersion\s*:\s*([vV]?\d+(?:\.\d+){1,4})\b",text,re.I)
