@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-26",
-  "last_run": "2026-10-26T17:45:45.426493+00:00",
-  "weather_checked_at": "2026-10-26T17:45:45.426493+00:00",
-  "news_checked_at": "2026-10-26T17:45:45.426493+00:00",
+  "last_run": "2026-10-26T17:49:52.062797+00:00",
+  "weather_checked_at": "2026-10-26T17:49:52.062797+00:00",
+  "news_checked_at": "2026-10-26T17:49:52.062797+00:00",
   "weather": [
     {
       "icao": "EICK",
@@ -14,8 +14,7 @@
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EICK 261700Z 2618/2718 19028G42KT 1500 -RA BR BKN003 TEMPO 2618/2622 3000 RA BKN006 PROB30 TEMPO 2618/2621 20030G55KT BECMG 2621/2623 24020G40KT 9999 NSW BKN020 BECMG 2623/2701 24013KT PROB30 TEMPO 2701/2705 24015G27KT -SHRA FEW018CB PROB40 TEMPO 2712/2716 24015G25KT -SHRA FEW020CB"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "LGMK",
@@ -27,8 +26,7 @@
       "icon": "⛈️",
       "phenomenon": "Orage",
       "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LGMK 261700Z 2618/2703 17010KT 9999 SCT025 SCT050 PROB40 TEMPO 2618/2703 5000 RA FEW010 BKN020 PROB30 TEMPO 2618/2703 3000 TSRA FEW018CB BKN020"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "EHRD",
@@ -40,8 +38,7 @@
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EHRD 261706Z 2618/2724 19015KT 9999 -RADZ BKN012 BECMG 2618/2620 6000 -DZRA BKN008 PROB30 TEMPO 2620/2701 4000 DZ BKN004 BECMG 2623/2702 9999 NSW SCT012 BKN035 TEMPO 2701/2705 6000 -DZ BKN008 BECMG 2713/2715 24010KT TEMPO 2713/2715 6000 RADZ BKN014"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "KBZN",
@@ -53,8 +50,7 @@
       "icon": "☁️",
       "phenomenon": "Ciel couvert",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KBZN 261742Z 2618/2724 VRB06KT 2SM BR BKN004 TEMPO 2618/2621 1/2SM FZFG BKN002 FM262300 VRB06KT P6SM SCT006 BKN035 PROB30 2703/2706 4SM -RASN BR BKN015 FM270600 VRB06KT 3SM -SNRA BR BKN015 FM271000 VRB06KT P6SM SCT025 BKN035 FM271500 23009KT P6SM SCT090 BKN120"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "KMIA",
@@ -66,8 +62,7 @@
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KMIA 261720Z 2618/2724 04017G27KT P6SM VCSH SCT030 BKN060 FM270400 03012G22KT P6SM VCSH SCT030 BKN060 FM271400 03015G25KT P6SM VCSH SCT030 BKN060"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "EINN",
@@ -79,8 +74,7 @@
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EINN 261700Z 2618/2718 18015KT 9999 FEW018 BKN025 PROB40 TEMPO 2618/2622 4000 RA BKN012 BECMG 2621/2623 23025G40KT BECMG 2623/2701 23022G35KT TEMPO 2700/2714 -SHRA SCT018CB PROB30 TEMPO 2708/2713 4000 SHRA BECMG 2710/2712 26020G32KT BECMG 2712/2714 26015KT TEMPO 2712/2718 25018G30KT"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "LFPO",
@@ -92,8 +86,7 @@
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LFPO 261700Z 2618/2724 19008KT 9999 OVC006 TEMPO 2619/2702 -DZ BKN004 PROB30 TEMPO 2620/2624 4000 -DZ BKN002 BECMG 2705/2707 BKN016 TEMPO 2714/2717 -SHRA BKN012 FM271600 27010KT CAVOK"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "LFRS",
@@ -105,8 +98,7 @@
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LFRS 261700Z 2618/2724 21010KT 9999 SCT013 BKN018 PROB30 TEMPO 2618/2620 BKN007 BECMG 2623/2701 15007KT 3000 BR BKN004 PROB30 TEMPO 2706/2708 0800 FG OVC002 BECMG 2708/2709 9999 -RA BKN015 BECMG 2709/2711 29010KT NSW SCT015 BKN040 BECMG 2721/2723 VRB03KT"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "EIDW",
@@ -118,8 +110,7 @@
       "icon": "💨",
       "phenomenon": "Vent fort",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EIDW 261700Z 2618/2718 20015G25KT 9999 FEW015 BKN020 PROB40 TEMPO 2618/2622 BKN012 PROB30 TEMPO 2620/2701 4000 RA BECMG 2621/2623 21020G35KT PROB40 TEMPO 2622/2701 21022G40KT BECMG 2708/2710 24025G40KT PROB40 TEMPO 2709/2716 -SHRA FEW020CB BECMG 2710/2712 23012KT PROB40 TEMPO 2710/2718 24015G25KT PROB30 TEMPO 2714/2716 4000 SHRA"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "GMMX",
@@ -131,8 +122,7 @@
       "icon": "☀️",
       "phenomenon": "Ciel dégagé",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF GMMX 261700Z 2618/2724 24006KT 8000 NSC TEMPO 2618/2622 34017KT"
+      "source_url": "https://aviationweather.gov/"
     }
   ],
   "weather_coverage": {
@@ -234,14 +224,15 @@
   ],
   "hardware": [],
   "source_status": {
-    "metar": "ok",
-    "taf": "ok",
+    "metar": "partial",
+    "taf": "error",
     "official_news": "ok",
     "airport_versions": "partial",
     "official_releases": "ok",
     "software_versions": "partial"
   },
   "errors": [
+    "TAF : HTTP Error 504: Gateway Time-out",
     "Versions : GMMX / PERFECTSOFT : Fiche 1.1.0 plus ancienne que l'installation 1.2.0 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : DTTA / prealsoft : Fiche 1.00 plus ancienne que l'installation 1.0.1 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : CYYZ / FlyTampa : Fiche 1.2 plus ancienne que l'installation 1.5.0 : vérifier le canal éditeur, ne pas rétrograder",
@@ -269,15 +260,15 @@
     "without_official_url": 4,
     "manual_source": 5,
     "unverified": 35,
-    "audited_at": "2026-10-26T17:45:45.426493+00:00"
+    "audited_at": "2026-10-26T17:49:52.062797+00:00"
   },
-  "versions_checked_at": "2026-10-26T17:45:45.426493+00:00",
-  "releases_checked_at": "2026-10-26T17:45:45.426493+00:00",
+  "versions_checked_at": "2026-10-26T17:49:52.062797+00:00",
+  "releases_checked_at": "2026-10-26T17:49:52.062797+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-26T17:46:11.927334+00:00",
+    "checked_at": "2026-10-26T17:50:54.145094+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
