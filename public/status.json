@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-26",
-  "last_run": "2026-10-26T15:23:59.002569+00:00",
-  "weather_checked_at": "2026-10-26T15:23:59.002569+00:00",
-  "news_checked_at": "2026-10-26T15:23:59.002569+00:00",
+  "last_run": "2026-10-26T15:34:17.557576+00:00",
+  "weather_checked_at": "2026-10-26T15:34:17.557576+00:00",
+  "news_checked_at": "2026-10-26T15:34:17.557576+00:00",
   "weather": [
     {
       "icao": "MDSD",
@@ -20,8 +20,8 @@
     {
       "icao": "EICK",
       "name": "Cork Airport",
-      "observed_at": "2026-10-26T15:00:00+00:00",
-      "raw": "METAR EICK 261500Z 20022G35KT 1800 -RADZ BR BKN003 BKN004 14/14 Q0993 WS RWY16 TEMPO 6000 BKN006",
+      "observed_at": "2026-10-26T15:30:00+00:00",
+      "raw": "METAR EICK 261530Z 20022G36KT 1800 -RADZ BR SCT002 BKN003 14/14 Q0993 WS RWY16 TEMPO 6000 BKN006",
       "score": 102,
       "summary": "visibilité < 3 SM, rafales ≥ 35 kt, précipitations",
       "icon": "🌧️",
@@ -31,23 +31,10 @@
       "taf_raw": "TAF AMD EICK 261420Z 2614/2712 20022G35KT 6000 -RA BKN005 TEMPO 2614/2617 2000 -RADZ BR BKN003 BECMG 2616/2618 19028G45KT TEMPO 2617/2622 3000 RA BKN003 PROB30 TEMPO 2618/2620 20030G55KT BECMG 2620/2622 24020G40KT BKN020 BECMG 2623/2701 24013KT PROB30 TEMPO 2701/2705 24015G27KT -SHRA FEW018CB"
     },
     {
-      "icao": "EGKK",
-      "name": "EGKK London Gatwick International",
-      "observed_at": "2026-10-26T14:50:00+00:00",
-      "raw": "METAR EGKK 261450Z 21014KT 4000 -RADZ SCT008 BKN014 15/15 Q1007",
-      "score": 57,
-      "summary": "visibilité < 3 SM, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF AMD EGKK 261430Z 2614/2718 20012KT 9999 FEW010 BKN016 TEMPO 2614/2616 6000 -RADZ BKN010 PROB40 TEMPO 2614/2621 21015G26KT PROB40 TEMPO 2614/2616 4000 RADZ BKN007 PROB40 TEMPO 2616/2704 7000 -DZ BKN010 BECMG 2621/2624 20020G32KT TEMPO 2704/2710 6000 RA BECMG 2706/2709 25010KT PROB40 TEMPO 2706/2708 3000 +SHRA +RA BKN012 PROB30 TEMPO 2710/2716 25015G25KT 7000 SHRA"
-    },
-    {
       "icao": "EGPF",
       "name": "EGPF Glasgow Airport",
-      "observed_at": "2026-10-26T14:50:00+00:00",
-      "raw": "METAR EGPF 261450Z 06008KT 4700 -RA BKN015TCU OVC019 09/09 Q0991",
+      "observed_at": "2026-10-26T15:20:00+00:00",
+      "raw": "METAR EGPF 261520Z 06008KT 4600 -RA BKN011TCU OVC022 09/09 Q0991",
       "score": 57,
       "summary": "visibilité < 3 SM, précipitations",
       "icon": "🌧️",
@@ -57,17 +44,17 @@
       "taf_raw": "TAF EGPF 261103Z 2612/2712 10010KT 9999 BKN020 TEMPO 2612/2621 5000 RA BKN012 PROB40 TEMPO 2612/2619 3000 +RADZ BKN008 BECMG 2615/2619 20015G28KT BECMG 2621/2624 19025G38KT TEMPO 2621/2703 3000 +RA +SHRA BKN014 BECMG 2700/2703 22025G38KT TEMPO 2707/2712 4500 +SHRA BECMG 2710/2712 23018G28KT"
     },
     {
-      "icao": "SBGL",
-      "name": "Rio-de-Janeiro",
-      "observed_at": "2026-10-26T15:00:00+00:00",
-      "raw": "METAR SBGL 261500Z 23016KT 190V260 4000 -RA BR SCT017 BKN026 OVC033 21/18 Q1014",
+      "icao": "MUHA",
+      "name": "Habana Jose Marti Intl Airport",
+      "observed_at": "2026-10-26T15:28:00+00:00",
+      "raw": "SPECI MUHA 261528Z 02014KT 3000 SHRA FEW018TCU BKN020 26/23 Q1015",
       "score": 57,
       "summary": "visibilité < 3 SM, précipitations",
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "Dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF SBGL 261450Z 2618/2724 23015KT 8000 DZ SCT015 BKN030 TN18/2708Z TX23/2716Z TEMPO 2618/2703 4500 RA SCT010 BKN020 BECMG 2703/2705 23007KT NSW BECMG 2710/2712 19010KT 9999 SCT018 BECMG 2715/2717 16012KT 8000 BKN023 BECMG 2721/2723 10010KT BKN017 RMK PGB"
+      "taf_raw": "TAF MUHA 261100Z 2612/2712 02010KT 9000 SCT030 TEMPO 2618/2623 01015KT 5000 TSRA RA FEW018CB BKN020"
     },
     {
       "icao": "KDEN",
@@ -83,30 +70,43 @@
       "taf_raw": "TAF KDEN 261456Z 2615/2718 02005KT 6SM BR SCT005 BKN009 OVC013 TEMPO 2615/2616 2SM -SHRA BR BKN005 FM261600 VRB06KT P6SM SCT007 BKN013 TEMPO 2618/2620 SCT015 FM262000 09007KT P6SM SCT015 FM262300 10009KT P6SM FEW025 FM270300 14009KT P6SM FEW050 FM270900 VRB05KT P6SM VCFG FEW002 SCT004 TEMPO 2710/2714 1/2SM FG VV002 FM271600 10006KT P6SM FEW005"
     },
     {
-      "icao": "LGRP",
-      "name": "LGRP Rhodes International Airport \"Diagoras\"",
-      "observed_at": "2026-10-26T14:50:00+00:00",
-      "raw": "METAR LGRP 261450Z VRB03KT 8000 -RA FEW010 FEW016TCU SCT018 17/17 Q1011 NOSIG",
+      "icao": "BIKF",
+      "name": "BIKF Keflavik Airport",
+      "observed_at": "2026-10-26T15:30:00+00:00",
+      "raw": "METAR BIKF 261530Z 14008KT 8000 -DZ BR FEW003 SCT011 BKN030 03/03 Q0982",
       "score": 32,
       "summary": "visibilité < 5 SM, précipitations",
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LGRP 261100Z 2612/2712 14010KT 9999 SCT020 PROB30 TEMPO 2612/2712 4000 SHRA FEW018TCU BKN020 PROB30 TEMPO 2612/2712 3000 TSRA FEW018CB BKN018 BKN050 BECMG 2619/2621 VRB03KT"
+      "taf_raw": "TAF BIKF 261334Z 2615/2715 16005KT 9999 SCT013 BKN020 TX06/2712Z TN02/2620Z TEMPO 2615/2621 3000 DZ BR SCT003 BKN010 BECMG 2621/2623 36010KT TEMPO 2705/2713 3000 DZRA BR OVC012"
     },
     {
-      "icao": "EIDW",
-      "name": "EIDW Dublin International Airport",
-      "observed_at": "2026-10-26T15:00:00+00:00",
-      "raw": "METAR EIDW 261500Z 20016G26KT 170V230 9999 FEW014 SCT021 BKN026 17/13 Q0992 NOSIG",
+      "icao": "EGKK",
+      "name": "EGKK London Gatwick International",
+      "observed_at": "2026-10-26T15:20:00+00:00",
+      "raw": "METAR EGKK 261520Z 22013KT 5000 -RADZ SCT009 BKN017 16/15 Q1007",
+      "score": 32,
+      "summary": "visibilité < 5 SM, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF AMD EGKK 261430Z 2614/2718 20012KT 9999 FEW010 BKN016 TEMPO 2614/2616 6000 -RADZ BKN010 PROB40 TEMPO 2614/2621 21015G26KT PROB40 TEMPO 2614/2616 4000 RADZ BKN007 PROB40 TEMPO 2616/2704 7000 -DZ BKN010 BECMG 2621/2624 20020G32KT TEMPO 2704/2710 6000 RA BECMG 2706/2709 25010KT PROB40 TEMPO 2706/2708 3000 +SHRA +RA BKN012 PROB30 TEMPO 2710/2716 25015G25KT 7000 SHRA"
+    },
+    {
+      "icao": "EGPK",
+      "name": "EGPK Prestwick Airport",
+      "observed_at": "2026-10-26T15:20:00+00:00",
+      "raw": "METAR EGPK 261520Z 16014G27KT 080V180 9999 FEW015 BKN023 14/12 Q0990",
       "score": 22,
       "summary": "rafales ≥ 25 kt",
       "icon": "💨",
       "phenomenon": "Vent fort",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EIDW 261100Z 2612/2712 20012KT 9999 FEW012 SCT014 BKN020 BECMG 2612/2614 20017G30KT PROB40 TEMPO 2612/2613 -RA BKN014 PROB40 TEMPO 2616/2622 BKN012 PROB30 TEMPO 2620/2701 4000 RA BECMG 2621/2623 21020G35KT PROB40 TEMPO 2621/2701 21022G40KT BECMG 2708/2710 24025G40KT"
+      "taf_raw": "TAF EGPK 261103Z 2612/2712 15018G28KT 9999 BKN016 TEMPO 2612/2621 6000 RA BKN012 PROB40 TEMPO 2612/2615 3000 +RADZ BKN008 BECMG 2620/2623 19025G40KT TEMPO 2621/2703 3000 +RA +SHRA BKN014 BECMG 2623/2703 22025G38KT TEMPO 2707/2712 4500 +SHRA BECMG 2709/2712 25020G35KT"
     },
     {
       "icao": "KMIA",
@@ -248,7 +248,7 @@
     "Versions : CYVR / fsdreamteam : Fiche 1.0.7 plus ancienne que l'installation 1.3.1 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : TFFR / Shaequan Hanley : Fiche 1.5.0 plus ancienne que l'installation 1.5.1 : vérifier le canal éditeur, ne pas rétrograder",
     "Logiciels : fenix: Source inaccessible : ValueError Branche Fenix non explicitement publiée sur le blog",
-    "Logiciels : simapppro: Source inaccessible : ValueError Changelog SimAppPro absent"
+    "Logiciels : simapppro: Source inaccessible : HTTPError HTTP Error 502: Bad Gateway"
   ],
   "note": "Collecte quotidienne automatique : METAR/TAF NOAA, flux officiel MSFS, versions GitHub publiées, audit des scènes répertoriées, extraction des versions des boutiques publiques reconnues et surveillance des sites publics. Les versions non publiées ou inaccessibles restent UNKNOWN ; une page modifiée n’est pas une mise à jour confirmée.",
   "version_coverage": {
@@ -269,15 +269,15 @@
     "without_official_url": 5,
     "manual_source": 5,
     "unverified": 36,
-    "audited_at": "2026-10-26T15:23:59.002569+00:00"
+    "audited_at": "2026-10-26T15:34:17.557576+00:00"
   },
-  "versions_checked_at": "2026-10-26T15:23:59.002569+00:00",
-  "releases_checked_at": "2026-10-26T15:23:59.002569+00:00",
+  "versions_checked_at": "2026-10-26T15:34:17.557576+00:00",
+  "releases_checked_at": "2026-10-26T15:34:17.557576+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-26T15:24:50.401860+00:00",
+    "checked_at": "2026-10-26T15:34:48.637147+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
