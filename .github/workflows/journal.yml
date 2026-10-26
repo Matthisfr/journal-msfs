@@ -100,6 +100,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           persist-credentials: true
+          fetch-depth: 0
 
       - name: Python
         if: steps.gate.outputs.run == 'true'
@@ -128,7 +129,124 @@ jobs:
         run: |
           # La vérification des versions se fait chaque matin sur les fiches
           # existantes. Les catalogues entiers sont rescannés le samedi.
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.mode }}" == "totale" ]] || [[ "$(TZ=Europe/Paris date +%u)" == "6" && "${{ github.event_name }}" == "schedule" ]]; then
+          excel_changed=false
+          if [[ "${{ github.event_name }}" == "push" ]]; then
+            before="${{ github.event.before }}"
+            if [[ -n "$before" ]] && git cat-file -e "$before^{commit}" 2>/dev/null; then
+              if git diff --name-only "$before" "${{ github.sha }}" -- data/airports/ | grep -Eq '\\.xlsx
+            python scripts/discover_airports.py || echo "Catalogue Contrail / iniBuilds indisponible"
+            python scripts/discover_simmarket.py || echo "Recherche simMarket indisponible"
+            python scripts/apply_airport_sources.py
+          else
+            echo "Recherche catalogue complète : nouvel Excel, samedi automatique ou lancement manuel en mode totale."
+          fi
+
+      - name: Collecter METAR, TAF, actualités et versions de scènes
+        if: steps.gate.outputs.run == 'true'
+        run: python scripts/update.py
+
+      - name: Récupérer le dernier plan de vol SimBrief Matthis
+        if: steps.gate.outputs.run == 'true'
+        run: python scripts/fetch_simbrief.py
+
+      - name: Installer Chromium pour le profil pilote public
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          python -m pip install playwright==1.56.0
+          python -m playwright install --with-deps chromium
+
+      - name: Lire le profil public SayIntentions Gate 404 Mathis
+        if: steps.gate.outputs.run == 'true'
+        run: python scripts/fetch_sayintentions_career.py
+
+      - name: Mettre à jour les photos réelles du matériel
+        if: steps.gate.outputs.run == 'true'
+        run: python scripts/fetch_hardware_photos.py
+
+      - name: Vérifier les sites des éditeurs et logiciels surveillés
+        if: steps.gate.outputs.run == 'true'
+        run: python scripts/watch_sources.py
+
+      - name: Récupérer les logos originaux des éditeurs
+        if: steps.gate.outputs.run == 'true'
+        run: python scripts/fetch_brand_assets.py
+
+      - name: Construire le site, la veille et la liste indépendante
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          python scripts/build_airport_map.py
+          python scripts/build_site.py
+          python -c "from pathlib import Path; import json; p=Path('public/index.html').read_text(); a=Path('public/airports.html').read_text(); w=json.loads(Path('public/watch.json').read_text()); s=json.loads(Path('public/status.json').read_text()); assert p.count('<tr>')>=len(json.loads(Path('public/airports.json').read_text())) and a.count('<tr>')>=len(json.loads(Path('public/airports.json').read_text())); assert w['total']>=30; assert s['version_coverage']['inventory_total']==len(json.loads(Path('public/airports.json').read_text())); assert json.loads(Path('public/software_versions.json').read_text())['total']>=20; assert json.loads(Path('public/hardware-images.json').read_text()); assert 'id=\"logiciels\"' in p; assert 'app.js?rev=' in p; print('Tests OK : inventaire complet, surveillance des sources, météo/news, carte et JS')"
+
+      - name: Enregistrer les données collectées
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          git config user.name "journal-msfs-bot"
+          git config user.email "journal-msfs-bot@users.noreply.github.com"
+          git add public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/hardware/
+          if [[ -f public/sayintentions-rank.svg ]]; then git add public/sayintentions-rank.svg; fi
+          if ! git diff --cached --quiet; then
+            git commit -m "Journal: collecte automatique $(date -u +%Y-%m-%d)"
+            if ! git push origin HEAD:main; then
+              echo "Dépôt modifié pendant la collecte : conserver les données puis repartir du dernier main."
+              mkdir -p "$RUNNER_TEMP/journal-sync"
+              cp public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json "$RUNNER_TEMP/journal-sync/"
+              mkdir -p "$RUNNER_TEMP/journal-sync/hardware"
+              if [[ -d public/hardware ]]; then cp -a public/hardware/. "$RUNNER_TEMP/journal-sync/hardware/"; fi
+              success=false
+              for attempt in 1 2 3; do
+                git fetch origin main
+                git reset --hard origin/main
+                cp "$RUNNER_TEMP/journal-sync/"*.json public/
+                mkdir -p public/hardware
+                cp -a "$RUNNER_TEMP/journal-sync/hardware/." public/hardware/
+                git add public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/hardware/
+                if git diff --cached --quiet; then
+                  success=true
+                  break
+                fi
+                git commit -m "Journal: collecte automatique $(date -u +%Y-%m-%d) [synchronisation]"
+                if git push origin HEAD:main; then
+                  success=true
+                  break
+                fi
+                echo "Nouvelle tentative de synchronisation $attempt/3"
+              done
+              if [[ "$success" != true ]]; then
+                echo "Échec de synchronisation : ne pas publier un site avec des données non enregistrées."
+                exit 1
+              fi
+              python scripts/build_site.py
+            fi
+          fi
+
+      - name: Configurer GitHub Pages
+        if: steps.gate.outputs.run == 'true'
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Préparer le site statique
+        if: steps.gate.outputs.run == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Publier le site
+        if: steps.gate.outputs.run == 'true'
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Vérifier le vrai site public après publication
+        if: steps.gate.outputs.run == 'true'
+        run: python scripts/smoke_live.py "${{ steps.deployment.outputs.page_url }}"
+; then
+                excel_changed=true
+                echo "Nouvel inventaire Excel détecté : recherche complète immédiate."
+              fi
+            fi
+          fi
+          if [[ "$excel_changed" == "true" ]] || [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.mode }}" == "totale" ]] || [[ "$(TZ=Europe/Paris date +%u)" == "6" && "${{ github.event_name }}" == "schedule" ]]; then
             python scripts/discover_airports.py || echo "Catalogue Contrail / iniBuilds indisponible"
             python scripts/discover_simmarket.py || echo "Recherche simMarket indisponible"
             python scripts/apply_airport_sources.py
