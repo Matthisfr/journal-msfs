@@ -277,7 +277,7 @@ async function refreshBuildStatus(){
     const response=await fetch('https://api.github.com/repos/Matthisfr/journal-msfs/actions/workflows/journal.yml/runs?per_page=5',{cache:'no-store',headers:{Accept:'application/vnd.github+json'}});
     if(!response.ok)throw new Error('GitHub API '+response.status);
     const data=await response.json();
-    const run=(data.workflow_runs||[]).find(r=>r.status!=='completed')||(data.workflow_runs||[])[0];
+    const run=(data.workflow_runs||[])[0];
     if(!run)throw new Error('Aucune exécution disponible');
     const running=run.status!=='completed';
     const ok=!running&&run.conclusion==='success';
