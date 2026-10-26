@@ -243,6 +243,7 @@ def run():
         threshold=(NOW-dt.timedelta(days=60)).date().isoformat()
         status['news']=sorted((x for x in unique.values() if x.get('date','')>=threshold),
                               key=lambda x:x.get('date',''),reverse=True)[:35]
+        status['errors'].extend(translate_news_to_french(status['news']))
     try:
         from versions import update_versions
         coverage,version_errors=update_versions(airports)
