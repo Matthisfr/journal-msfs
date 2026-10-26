@@ -137,12 +137,19 @@ function topicBadge(a){
   const [code,kind,label]=topicInfo(a);
   return brandIcon(kind,label);
 }
+function newsAgeGroup(a){
+  const raw=String(a.published_at||a.date||'');
+  const d=new Date(raw.length===10?raw+'T00:00:00Z':raw);
+  if(!Number.isFinite(d.getTime()))return 3;
+  const hours=(Date.now()-d.getTime())/3600000;
+  return hours<=24?0:hours<=72?1:hours<=168?2:3;
+}
 function newsMarkup(a){
   const change=a.changelog_url?'<div class="news-impact"><b>Version : '+esc(a.version_before||'—')+' → '+esc(a.version_after||'—')+'</b>'+
     (a.details?'<details class="changelog-details"><summary>Afficher les modifications détaillées</summary><p>'+esc(a.details)+'</p></details>':'')+
     '<a href="'+esc(isSafeUrl(a.changelog_url))+'" target="_blank" rel="noopener noreferrer">Consulter le changelog officiel complet ↗</a></div>':'';
-  return '<article class="news-card"><div class="news-meta">'+esc(a.category||'ACTUALITÉS')+' · '+esc(localDate(a.date))+
-    (a.new?'<span class="new-tag">NEWS</span>':'')+'</div><div class="news-heading">'+topicBadge(a)+
+  return '<article class="news-card'+(newsAgeGroup(a)===2?' news-old':'')+'"><div class="news-meta">'+esc(a.category||'ACTUALITÉS')+' · '+esc(localDate(a.date))+
+    (newsAgeGroup(a)===0?'<span class="new-tag">NEWS</span>':newsAgeGroup(a)===2?'<span class="old-tag">OLD</span>':'')+'</div><div class="news-heading">'+topicBadge(a)+
     '<h3>'+esc(a.title)+'</h3></div>'+(a.summary?'<p>'+esc(a.summary)+'</p>':'')+
     (a.impact?'<div class="news-impact"><b>Impact / action :</b> '+esc(a.impact)+'</div>':'')+change+
     '<div class="news-source"><a href="'+esc(isSafeUrl(a.url))+'" target="_blank" rel="noopener noreferrer">'+esc(a.source||'Source officielle')+' ↗</a></div></article>';
@@ -152,9 +159,10 @@ function renderNews(){
   const superseded=new Set(editorialNews.flatMap(a=>a.supersedes||[]));
   const a=[...editorialNews,...(status.news||[]).filter(x=>!superseded.has(x.url))]
     .filter((x,i,all)=>all.findIndex(y=>(y.id||y.url+' '+y.title)===(x.id||x.url+' '+x.title))===i)
-    .sort((x,y)=>String(y.date||'').localeCompare(String(x.date||'')));
+    .filter(x=>newsAgeGroup(x)<3)
+    .sort((x,y)=>newsAgeGroup(x)-newsAgeGroup(y) || (new Date(y.published_at||y.date)-new Date(x.published_at||x.date)));
   $('#news-container').innerHTML=a.length?a.map(newsMarkup).join(''):'<div class="empty"><strong>Aucune nouveauté vérifiée</strong>Le site ne publie pas d’annonce sans date ni source vérifiable.</div>';
-  $('#home-news').innerHTML=a.slice(0,3).map(x=>'<article><div class="home-news-row">'+topicBadge(x)+'<div class="home-news-content"><small>'+esc(x.category||'Actualités')+' · '+esc(localDate(x.date))+'</small><strong>'+esc(x.title)+'</strong><a href="'+esc(isSafeUrl(x.url))+'" target="_blank" rel="noopener noreferrer">Source officielle ↗</a></div></div></article>').join('')||'<p class="muted">Aucune actualité sourcée pour le moment.</p>';
+  $('#home-news').innerHTML=a.filter(x=>newsAgeGroup(x)===0).slice(0,3).map(x=>'<article><div class="home-news-row">'+topicBadge(x)+'<div class="home-news-content"><small>'+esc(x.category||'Actualités')+' · '+esc(localDate(x.date))+'</small><strong>'+esc(x.title)+'</strong><a href="'+esc(isSafeUrl(x.url))+'" target="_blank" rel="noopener noreferrer">Source officielle ↗</a></div></div></article>').join('')||'<p class="muted">Aucune actualité sourcée pour le moment.</p>';
 }
 
 function renderSoftware(){
