@@ -28,6 +28,11 @@ class VersionTests(unittest.TestCase):
         html=page('Current version: 3.4 (MSFS 2024) | 2.4 (MSFS 2020)')
         self.assertEqual(v.parse_version(html,store='www.aerosoft.com',edition='MSFS 2024'),'3.4')
         self.assertIsNone(v.parse_version(html,store='www.aerosoft.com',edition='MSFS 2020 / 2024'))
+    def test_inibuilds_official_update_bulletins(self):
+        self.assertEqual(v.parse_version(page("iniBuilds Detroit (KDTW) for MSFS v1.0.5 Released"),store="forum.inibuilds.com",icao="KDTW"),"1.0.5")
+        self.assertEqual(v.parse_version(page("iniBuilds Innsbruck(LOWI) for MSFS 2024 v1.0.3 Released"),store="forum.inibuilds.com",icao="LOWI"),"1.0.3")
+        self.assertIsNone(v.parse_version(page("iniBuilds Detroit (KDTW) for MSFS v1.0.5 Released"),store="forum.inibuilds.com",icao="LOWI"))
+
     def test_beautiful_model_world_catalogue(self):
         html=page('Burbank Hollywood [KBUR] 10.04.2026 Version 1.4.7 Venice Marco Polo [LIPZ] 25.07.2021 VERSION 4.2.2 Genoa [LIMJ] VERSION 4.2.0')
         self.assertEqual(v.parse_version(html,store='beautifulmodelworld.com',icao='LIPZ'),'4.2.2')
