@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-26",
-  "last_run": "2026-10-26T15:39:54.491888+00:00",
-  "weather_checked_at": "2026-10-26T15:39:54.491888+00:00",
-  "news_checked_at": "2026-10-26T15:39:54.491888+00:00",
+  "last_run": "2026-10-26T15:42:08.235307+00:00",
+  "weather_checked_at": "2026-10-26T15:42:08.235307+00:00",
+  "news_checked_at": "2026-10-26T15:42:08.235307+00:00",
   "weather": [
     {
       "icao": "MDSD",
@@ -42,19 +42,6 @@
       "level": "Dégradé",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF EGPF 261103Z 2612/2712 10010KT 9999 BKN020 TEMPO 2612/2621 5000 RA BKN012 PROB40 TEMPO 2612/2619 3000 +RADZ BKN008 BECMG 2615/2619 20015G28KT BECMG 2621/2624 19025G38KT TEMPO 2621/2703 3000 +RA +SHRA BKN014 BECMG 2700/2703 22025G38KT TEMPO 2707/2712 4500 +SHRA BECMG 2710/2712 23018G28KT"
-    },
-    {
-      "icao": "MUHA",
-      "name": "Habana Jose Marti Intl Airport",
-      "observed_at": "2026-10-26T15:28:00+00:00",
-      "raw": "SPECI MUHA 261528Z 02014KT 3000 SHRA FEW018TCU BKN020 26/23 Q1015",
-      "score": 57,
-      "summary": "visibilité < 3 SM, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF MUHA 261100Z 2612/2712 02010KT 9000 SCT030 TEMPO 2618/2623 01015KT 5000 TSRA RA FEW018CB BKN020"
     },
     {
       "icao": "KDEN",
@@ -122,6 +109,19 @@
       "taf_raw": "TAF KMIA 261453Z 2615/2718 03016G26KT P6SM VCSH SCT030 BKN060"
     },
     {
+      "icao": "MUHA",
+      "name": "Habana Jose Marti Intl Airport",
+      "observed_at": "2026-10-26T15:38:00+00:00",
+      "raw": "SPECI MUHA 261538Z 03015KT 8000 FEW018TCU SCT025 25/23 Q1015",
+      "score": 20,
+      "summary": "visibilité < 5 SM",
+      "icon": "🌤️",
+      "phenomenon": "Éclaircies",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF MUHA 261100Z 2612/2712 02010KT 9000 SCT030 TEMPO 2618/2623 01015KT 5000 TSRA RA FEW018CB BKN020"
+    },
+    {
       "icao": "CYUL",
       "name": "CYUL Montreal Airport",
       "observed_at": "2026-10-26T15:00:00+00:00",
@@ -137,8 +137,8 @@
   ],
   "weather_coverage": {
     "eligible": 153,
-    "received": 150,
-    "fresh": 150
+    "received": 107,
+    "fresh": 107
   },
   "news": [
     {
@@ -234,7 +234,7 @@
   ],
   "hardware": [],
   "source_status": {
-    "metar": "ok",
+    "metar": "partial",
     "taf": "ok",
     "official_news": "ok",
     "airport_versions": "partial",
@@ -242,6 +242,7 @@
     "software_versions": "partial"
   },
   "errors": [
+    "HTTP Error 502: Bad Gateway",
     "Versions : GMMX / PERFECTSOFT : Fiche 1.1.0 plus ancienne que l'installation 1.2.0 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : DTTA / prealsoft : Fiche 1.00 plus ancienne que l'installation 1.0.1 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : CYYZ / FlyTampa : Fiche 1.2 plus ancienne que l'installation 1.5.0 : vérifier le canal éditeur, ne pas rétrograder",
@@ -269,15 +270,15 @@
     "without_official_url": 5,
     "manual_source": 5,
     "unverified": 36,
-    "audited_at": "2026-10-26T15:39:54.491888+00:00"
+    "audited_at": "2026-10-26T15:42:08.235307+00:00"
   },
-  "versions_checked_at": "2026-10-26T15:39:54.491888+00:00",
-  "releases_checked_at": "2026-10-26T15:39:54.491888+00:00",
+  "versions_checked_at": "2026-10-26T15:42:08.235307+00:00",
+  "releases_checked_at": "2026-10-26T15:42:08.235307+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-26T15:41:00.074568+00:00",
+    "checked_at": "2026-10-26T15:42:46.299819+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
