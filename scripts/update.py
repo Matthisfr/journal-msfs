@@ -135,6 +135,40 @@ def collect_weather(airports):
 def text_from_html(value):
     return re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>',' ',value or ''))).strip()
 
+def translate_news_to_french(items):
+    """Traduit les champs éditoriaux, sans modifier les sources ni les métadonnées.
+
+    Service public de traduction : en cas d'indisponibilité, conserver le
+    texte original et signaler l'échec, plutôt que fabriquer une traduction.
+    """
+    cache = {}
+    errors = []
+    for item in items:
+        for field in ('title', 'summary'):
+            original = item.get(field, '')
+            if not original or not re.search(r'[A-Za-z]{3}', original):
+                continue
+            if original not in cache:
+                try:
+                    params = urllib.parse.urlencode({
+                        'client': 'gtx', 'sl': 'auto', 'tl': 'fr',
+                        'dt': 't', 'q': original,
+                    })
+                    request = urllib.request.Request(
+                        'https://translate.googleapis.com/translate_a/single?' + params,
+                        headers={'User-Agent': USER_AGENT})
+                    with urllib.request.urlopen(request, timeout=12) as response:
+                        data = json.loads(response.read(200_000))
+                    translated = ''.join(part[0] for part in data[0] if part and part[0])
+                    if not translated.strip():
+                        raise ValueError('Traduction vide')
+                    cache[original] = translated.strip()
+                except (OSError, ValueError, IndexError, TypeError, KeyError) as exc:
+                    cache[original] = original
+                    errors.append(f"Traduction FR ({item.get('id', '?')}/{field}): {type(exc).__name__}")
+            item[field] = cache[original]
+    return errors
+
 def collect_news(previous):
     blob=get(OFFICIAL_RSS)
     if not blob: raise ValueError('Flux officiel vide')
@@ -203,6 +237,7 @@ def run():
         src['official_releases']='error'
         status['errors'].append('Versions GitHub: '+str(e)[:250])
     if news_from_sources:
+        status['errors'].extend(translate_news_to_french(news_from_sources))
         unique={x['url']:x for x in status.get('news',[]) if x.get('url')}
         for x in news_from_sources: unique[x['url']]=x
         threshold=(NOW-dt.timedelta(days=60)).date().isoformat()
