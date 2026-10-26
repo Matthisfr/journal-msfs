@@ -211,3 +211,14 @@
 .hero-news-item .topic-icon{flex:0 0 20px;width:20px;height:20px;min-width:20px}
 .hero-news-item .topic-icon img{width:20px;height:20px;object-fit:contain}
 .hero-news-empty{font-size:12px;color:#c6d7e6}
+
+/* Voyant compact d'état de publication GitHub Actions */
+.top-status-wrap{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+.build-status{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:.04em;text-decoration:none;color:inherit;white-space:nowrap;opacity:.95}
+.build-status:hover{text-decoration:underline}
+.build-status-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#8c97a3;box-shadow:0 0 0 2px rgba(140,151,163,.14);flex:none}
+.build-status-ok .build-status-dot{background:#36c981;box-shadow:0 0 0 2px rgba(54,201,129,.18)}
+.build-status-running .build-status-dot{background:#ffb347;box-shadow:0 0 0 2px rgba(255,179,71,.18);animation:build-pulse 1.6s ease-in-out infinite}
+.build-status-error .build-status-dot{background:#f25f64;box-shadow:0 0 0 2px rgba(242,95,100,.18)}
+@keyframes build-pulse{50%{opacity:.4}}
+@media(max-width:700px){.top-status-wrap{gap:6px}.build-status{font-size:9px}}
