@@ -198,3 +198,8 @@
 #sayintentions-career .si-flights>.fineprint{padding:0 16px 13px}
 
 #airport-leaflet-map{height:690px;width:100%;z-index:1}.airport-pin{background:transparent;border:0}.airport-pin svg{filter:drop-shadow(0 2px 3px #0005)}.leaflet-popup-content{max-height:360px;overflow:auto}.leaflet-popup-content p{border-top:1px solid #ddd;padding-top:5px}
+
+/* AIRAC en tête ; OLD discret pour les informations de plus d'une semaine. */
+.airac-banner{padding:12px 16px;margin:12px 0 20px;background:#10283b;color:#f7f9fc;border-left:4px solid #c6a073;border-radius:5px;font-size:14px}
+.old-tag{display:inline-block;margin-left:8px;padding:2px 6px;border-radius:4px;background:#596579;color:white;font-size:10px;font-weight:800;letter-spacing:.07em}
+.news-old{opacity:.78;border-left:3px solid #69788a}
