@@ -1,9 +1,22 @@
 {
   "edition": "2026-10-26",
-  "last_run": "2026-10-26T16:48:25.990590+00:00",
-  "weather_checked_at": "2026-10-26T16:48:25.990590+00:00",
-  "news_checked_at": "2026-10-26T16:48:25.990590+00:00",
+  "last_run": "2026-10-26T16:58:43.575372+00:00",
+  "weather_checked_at": "2026-10-26T16:58:43.575372+00:00",
+  "news_checked_at": "2026-10-26T16:58:43.575372+00:00",
   "weather": [
+    {
+      "icao": "LGMK",
+      "name": "LGMK Mykonos Airport",
+      "observed_at": "2026-10-26T16:50:00+00:00",
+      "raw": "METAR LGMK 261650Z VRB05KT 9999 TS FEW010 FEW016CB SCT020 17/14 Q1009",
+      "score": 110,
+      "summary": "orage",
+      "icon": "⛈️",
+      "phenomenon": "Orage",
+      "level": "Très dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF LGMK 261400Z 2615/2624 17010KT 9999 SCT025 SCT050 PROB40 TEMPO 2615/2624 5000 RA FEW010 BKN020 PROB30 TEMPO 2615/2624 3000 TSRA FEW018CB BKN020"
+    },
     {
       "icao": "EICK",
       "name": "Cork Airport",
@@ -14,7 +27,8 @@
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/"
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF AMD EICK 261420Z 2614/2712 20022G35KT 6000 -RA BKN005 TEMPO 2614/2617 2000 -RADZ BR BKN003 BECMG 2616/2618 19028G45KT TEMPO 2617/2622 3000 RA BKN003 PROB30 TEMPO 2618/2620 20030G55KT BECMG 2620/2622 24020G40KT BKN020 BECMG 2623/2701 24013KT PROB30 TEMPO 2701/2705 24015G27KT -SHRA FEW018CB"
     },
     {
       "icao": "KBZN",
@@ -26,19 +40,21 @@
       "icon": "☁️",
       "phenomenon": "Ciel couvert",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/"
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KBZN 261131Z 2612/2718 VRB03KT P6SM BKN004 TEMPO 2612/2616 3SM BR BKN002 FM261600 VRB03KT P6SM BKN004 TEMPO 2616/2619 3SM BR BKN002 FM262100 VRB04KT P6SM SCT006 BKN035 PROB30 2703/2706 4SM -RASN BR BKN015 FM270600 VRB06KT 3SM -SNRA BR BKN015 FM271200 VRB05KT P6SM SCT020 BKN040"
     },
     {
       "icao": "KMIA",
       "name": "KMIA Miami International Airport",
-      "observed_at": "2026-10-26T15:53:00+00:00",
-      "raw": "METAR KMIA 261553Z 05015G29KT 10SM BKN032 BKN250 28/21 A2997 RMK AO2 PK WND 06032/1456 RAB22E47 SLP150 P0000 T02830211 $",
+      "observed_at": "2026-10-26T16:53:00+00:00",
+      "raw": "METAR KMIA 261653Z 05015G30KT 10SM -RA BKN032 BKN250 27/21 A2996 RMK AO2 PK WND 05035/1607 RAB11E21B50 SLP145 P0000 T02720211 $",
       "score": 34,
       "summary": "rafales ≥ 25 kt, précipitations",
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/"
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KMIA 261453Z 2615/2718 03016G26KT P6SM VCSH SCT030 BKN060"
     },
     {
       "icao": "MUHA",
@@ -50,7 +66,8 @@
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/"
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF MUHA 261100Z 2612/2712 02010KT 9000 SCT030 TEMPO 2618/2623 01015KT 5000 TSRA RA FEW018CB BKN020"
     },
     {
       "icao": "SBGL",
@@ -62,19 +79,8 @@
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/"
-    },
-    {
-      "icao": "PANC",
-      "name": "sim-wings Anchorage",
-      "observed_at": "2026-10-26T15:53:00+00:00",
-      "raw": "METAR PANC 261553Z 15012G25KT 10SM CLR 06/01 A3010 RMK AO2 SLP196 T00560011",
-      "score": 22,
-      "summary": "rafales ≥ 25 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/"
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF SBGL 261450Z 2618/2724 23015KT 8000 DZ SCT015 BKN030 TN18/2708Z TX23/2716Z TEMPO 2618/2703 4500 RA SCT010 BKN020 BECMG 2703/2705 23007KT NSW BECMG 2710/2712 19010KT 9999 SCT018 BECMG 2715/2717 16012KT 8000 BKN023 BECMG 2721/2723 10010KT BKN017 RMK PGB"
     },
     {
       "icao": "HECA",
@@ -86,7 +92,8 @@
       "icon": "☀️",
       "phenomenon": "Ciel dégagé",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/"
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF HECA 261700Z 2618/2724 04009KT 6000 NSC TEMPO 2701/2708 VRB03KT 4000 HZ PROB40 2702/2706 1500 BR BECMG 2709/2711 24010KT"
     },
     {
       "icao": "LFKB",
@@ -98,7 +105,8 @@
       "icon": "☀️",
       "phenomenon": "Ciel dégagé",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/"
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF LFKB 261400Z 2615/2715 13006KT CAVOK TX22/2711Z TN14/2705Z TEMPO 2615/2707 BKN022 BECMG 2619/2621 24004KT BECMG 2710/2712 10005KT"
     },
     {
       "icao": "MDSD",
@@ -110,19 +118,21 @@
       "icon": "☁️",
       "phenomenon": "Ciel couvert",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/"
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF MDSD 261600Z 2618/2718 16012KT 9999 FEW016CB SCT018 SCT080 TEMPO 2618/2623 7000 -TSRA FEW010CB BKN012 BKN070"
     },
     {
-      "icao": "CYUL",
-      "name": "CYUL Montreal Airport",
-      "observed_at": "2026-10-26T16:15:00+00:00",
-      "raw": "SPECI CYUL 261615Z 27008KT 12SM -DZ BKN008 OVC075 10/09 A3016 RMK SF5AC3 SLP214",
+      "icao": "EBBR",
+      "name": "Aerosoft Brussels Airport",
+      "observed_at": "2026-10-26T16:50:00+00:00",
+      "raw": "METAR EBBR 261650Z 19013KT 9999 -RA BKN022 BKN045 12/08 Q1014 NOSIG",
       "score": 12,
       "summary": "précipitations",
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "Faible contrainte",
-      "source_url": "https://aviationweather.gov/"
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EBBR 261100Z 2612/2718 19012KT 9999 FEW020 SCT030 BECMG 2615/2617 SCT010 BKN014 PROB30 TEMPO 2616/2621 19015G25KT 4000 -RADZ SCT006 BKN009 PROB30 TEMPO 2621/2707 SCT004 BKN006 BECMG 2704/2706 FEW010 SCT015 BECMG 2712/2714 25010KT PROB30 TEMPO 2714/2716 25015G25KT 4500 SHRA SCT010 BKN014TCU"
     }
   ],
   "weather_coverage": {
@@ -224,15 +234,14 @@
   ],
   "hardware": [],
   "source_status": {
-    "metar": "partial",
-    "taf": "error",
+    "metar": "ok",
+    "taf": "ok",
     "official_news": "ok",
     "airport_versions": "partial",
     "official_releases": "ok",
     "software_versions": "partial"
   },
   "errors": [
-    "TAF : HTTP Error 504: Gateway Time-out",
     "Versions : GMMX / PERFECTSOFT : Fiche 1.1.0 plus ancienne que l'installation 1.2.0 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : DTTA / prealsoft : Fiche 1.00 plus ancienne que l'installation 1.0.1 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : CYYZ / FlyTampa : Fiche 1.2 plus ancienne que l'installation 1.5.0 : vérifier le canal éditeur, ne pas rétrograder",
@@ -260,15 +269,15 @@
     "without_official_url": 5,
     "manual_source": 5,
     "unverified": 35,
-    "audited_at": "2026-10-26T16:48:25.990590+00:00"
+    "audited_at": "2026-10-26T16:58:43.575372+00:00"
   },
-  "versions_checked_at": "2026-10-26T16:48:25.990590+00:00",
-  "releases_checked_at": "2026-10-26T16:48:25.990590+00:00",
+  "versions_checked_at": "2026-10-26T16:58:43.575372+00:00",
+  "releases_checked_at": "2026-10-26T16:58:43.575372+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-26T16:49:31.279560+00:00",
+    "checked_at": "2026-10-26T16:59:15.051653+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
