@@ -1,21 +1,20 @@
 {
   "edition": "2026-10-26",
-  "last_run": "2026-10-26T16:29:20.992225+00:00",
-  "weather_checked_at": "2026-10-26T16:29:20.992225+00:00",
-  "news_checked_at": "2026-10-26T16:29:20.992225+00:00",
+  "last_run": "2026-10-26T16:48:25.990590+00:00",
+  "weather_checked_at": "2026-10-26T16:48:25.990590+00:00",
+  "news_checked_at": "2026-10-26T16:48:25.990590+00:00",
   "weather": [
     {
       "icao": "EICK",
       "name": "Cork Airport",
-      "observed_at": "2026-10-26T16:00:00+00:00",
-      "raw": "METAR EICK 261600Z 19022G33KT 1800 -RADZ BR BKN002 BKN003 14/14 Q0992 WS RWY16 TEMPO 6000 BKN006",
+      "observed_at": "2026-10-26T16:30:00+00:00",
+      "raw": "METAR EICK 261630Z 20023G34KT 1800 -RADZ BR BKN002 BKN003 14/14 Q0992 WS RWY16 TEMPO 6000 BKN006",
       "score": 79,
       "summary": "visibilité < 3 SM, rafales ≥ 25 kt, précipitations",
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF AMD EICK 261420Z 2614/2712 20022G35KT 6000 -RA BKN005 TEMPO 2614/2617 2000 -RADZ BR BKN003 BECMG 2616/2618 19028G45KT TEMPO 2617/2622 3000 RA BKN003 PROB30 TEMPO 2618/2620 20030G55KT BECMG 2620/2622 24020G40KT BKN020 BECMG 2623/2701 24013KT PROB30 TEMPO 2701/2705 24015G27KT -SHRA FEW018CB"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "KBZN",
@@ -27,8 +26,7 @@
       "icon": "☁️",
       "phenomenon": "Ciel couvert",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KBZN 261131Z 2612/2718 VRB03KT P6SM BKN004 TEMPO 2612/2616 3SM BR BKN002 FM261600 VRB03KT P6SM BKN004 TEMPO 2616/2619 3SM BR BKN002 FM262100 VRB04KT P6SM SCT006 BKN035 PROB30 2703/2706 4SM -RASN BR BKN015 FM270600 VRB06KT 3SM -SNRA BR BKN015 FM271200 VRB05KT P6SM SCT020 BKN040"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "KMIA",
@@ -40,8 +38,7 @@
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KMIA 261453Z 2615/2718 03016G26KT P6SM VCSH SCT030 BKN060"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "MUHA",
@@ -53,8 +50,7 @@
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF MUHA 261100Z 2612/2712 02010KT 9000 SCT030 TEMPO 2618/2623 01015KT 5000 TSRA RA FEW018CB BKN020"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "SBGL",
@@ -66,21 +62,7 @@
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF SBGL 261450Z 2618/2724 23015KT 8000 DZ SCT015 BKN030 TN18/2708Z TX23/2716Z TEMPO 2618/2703 4500 RA SCT010 BKN020 BECMG 2703/2705 23007KT NSW BECMG 2710/2712 19010KT 9999 SCT018 BECMG 2715/2717 16012KT 8000 BKN023 BECMG 2721/2723 10010KT BKN017 RMK PGB"
-    },
-    {
-      "icao": "EIDW",
-      "name": "EIDW Dublin International Airport",
-      "observed_at": "2026-10-26T16:00:00+00:00",
-      "raw": "METAR EIDW 261600Z 20016G26KT 150V230 9999 FEW022 SCT027 BKN030 17/13 Q0991 NOSIG",
-      "score": 22,
-      "summary": "rafales ≥ 25 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EIDW 261100Z 2612/2712 20012KT 9999 FEW012 SCT014 BKN020 BECMG 2612/2614 20017G30KT PROB40 TEMPO 2612/2613 -RA BKN014 PROB40 TEMPO 2616/2622 BKN012 PROB30 TEMPO 2620/2701 4000 RA BECMG 2621/2623 21020G35KT PROB40 TEMPO 2621/2701 21022G40KT BECMG 2708/2710 24025G40KT"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "PANC",
@@ -92,21 +74,31 @@
       "icon": "💨",
       "phenomenon": "Vent fort",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF PANC 261450Z 2615/2718 16015G28KT P6SM VCSH SCT050 FM262000 18012KT P6SM FEW020 BKN050 FM270300 VRB05KT P6SM FEW020 SCT050 FM271200 36004KT P6SM VCFG FEW002"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "HECA",
       "name": "cairo International Airport",
-      "observed_at": "2026-10-26T16:00:00+00:00",
-      "raw": "METAR HECA 261600Z 35007KT 6000 NSC 25/11 Q1013 NOSIG",
+      "observed_at": "2026-10-26T16:30:00+00:00",
+      "raw": "METAR HECA 261630Z 01007KT 6000 NSC 25/11 Q1013 NOSIG",
       "score": 20,
       "summary": "visibilité < 5 SM",
       "icon": "☀️",
       "phenomenon": "Ciel dégagé",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF AMD HECA 261120Z 2612/2718 35009KT 6000 FEW025 BECMG 2615/2617 CAVOK TEMPO 2700/2707 08006KT 3000 BR NSC PROB40 TEMPO 2702/2706 14006KT 0800 FG"
+      "source_url": "https://aviationweather.gov/"
+    },
+    {
+      "icao": "LFKB",
+      "name": "LFKB Bastia Poretta Airport",
+      "observed_at": "2026-10-26T16:30:00+00:00",
+      "raw": "METAR LFKB 261630Z AUTO VRB02KT 6000 NSC 18/14 Q1018 NOSIG",
+      "score": 20,
+      "summary": "visibilité < 5 SM",
+      "icon": "☀️",
+      "phenomenon": "Ciel dégagé",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "MDSD",
@@ -118,8 +110,7 @@
       "icon": "☁️",
       "phenomenon": "Ciel couvert",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF MDSD 261600Z 2618/2718 16012KT 9999 FEW016CB SCT018 SCT080 TEMPO 2618/2623 7000 -TSRA FEW010CB BKN012 BKN070"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "CYUL",
@@ -131,8 +122,7 @@
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "Faible contrainte",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF AMD CYUL 261624Z 2616/2718 27008KT P6SM -SHRA BKN008 OVC070 TEMPO 2616/2618 P6SM NSW FEW008 OVC100 FM261800 27008KT P6SM FEW008 BKN120 BECMG 2618/2620 30010G20KT FM262100 30010G20KT P6SM FEW180 FM262300 31008KT P6SM FEW040 FM270200 34008KT P6SM SKC BECMG 2712/2714 02008KT RMK NXT FCST BY 261800Z"
+      "source_url": "https://aviationweather.gov/"
     }
   ],
   "weather_coverage": {
@@ -234,14 +224,15 @@
   ],
   "hardware": [],
   "source_status": {
-    "metar": "ok",
-    "taf": "ok",
+    "metar": "partial",
+    "taf": "error",
     "official_news": "ok",
     "airport_versions": "partial",
     "official_releases": "ok",
     "software_versions": "partial"
   },
   "errors": [
+    "TAF : HTTP Error 504: Gateway Time-out",
     "Versions : GMMX / PERFECTSOFT : Fiche 1.1.0 plus ancienne que l'installation 1.2.0 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : DTTA / prealsoft : Fiche 1.00 plus ancienne que l'installation 1.0.1 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : CYYZ / FlyTampa : Fiche 1.2 plus ancienne que l'installation 1.5.0 : vérifier le canal éditeur, ne pas rétrograder",
@@ -252,10 +243,10 @@
   ],
   "note": "Collecte quotidienne automatique : METAR/TAF NOAA, flux officiel MSFS, versions GitHub publiées, audit des scènes répertoriées, extraction des versions des boutiques publiques reconnues et surveillance des sites publics. Les versions non publiées ou inaccessibles restent UNKNOWN ; une page modifiée n’est pas une mise à jour confirmée.",
   "version_coverage": {
-    "verified_today": 136,
+    "verified_today": 137,
     "eligible": 163,
     "unavailable": 0,
-    "no_version": 14,
+    "no_version": 13,
     "inconsistent": 4,
     "not_automatable": 5,
     "no_source": 4,
@@ -268,16 +259,16 @@
     "official_url_known": 167,
     "without_official_url": 5,
     "manual_source": 5,
-    "unverified": 36,
-    "audited_at": "2026-10-26T16:29:20.992225+00:00"
+    "unverified": 35,
+    "audited_at": "2026-10-26T16:48:25.990590+00:00"
   },
-  "versions_checked_at": "2026-10-26T16:29:20.992225+00:00",
-  "releases_checked_at": "2026-10-26T16:29:20.992225+00:00",
+  "versions_checked_at": "2026-10-26T16:48:25.990590+00:00",
+  "releases_checked_at": "2026-10-26T16:48:25.990590+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-26T16:30:14.253926+00:00",
+    "checked_at": "2026-10-26T16:49:31.279560+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
