@@ -1,26 +1,14 @@
 {
   "edition": "2026-10-26",
-  "last_run": "2026-10-26T17:49:52.062797+00:00",
-  "weather_checked_at": "2026-10-26T17:49:52.062797+00:00",
-  "news_checked_at": "2026-10-26T17:49:52.062797+00:00",
+  "last_run": "2026-10-26T18:05:00.198380+00:00",
+  "weather_checked_at": "2026-10-26T18:05:00.198380+00:00",
+  "news_checked_at": "2026-10-26T18:05:00.198380+00:00",
   "weather": [
-    {
-      "icao": "EICK",
-      "name": "Cork Airport",
-      "observed_at": "2026-10-26T17:30:00+00:00",
-      "raw": "METAR EICK 261730Z 19023G37KT 1600 -RADZ BR BKN002 BKN003 14/14 Q0990 TEMPO 3000 RA",
-      "score": 137,
-      "summary": "visibilité < 1 SM, rafales ≥ 35 kt, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/"
-    },
     {
       "icao": "LGMK",
       "name": "LGMK Mykonos Airport",
-      "observed_at": "2026-10-26T17:20:00+00:00",
-      "raw": "METAR LGMK 261720Z VRB04KT 9999 TS FEW010 FEW016CB SCT020 17/14 Q1009",
+      "observed_at": "2026-10-26T17:50:00+00:00",
+      "raw": "METAR LGMK 261750Z VRB02KT 9999 FEW010 FEW016TCU SCT020 17/15 Q1010 RETS",
       "score": 110,
       "summary": "orage",
       "icon": "⛈️",
@@ -29,10 +17,22 @@
       "source_url": "https://aviationweather.gov/"
     },
     {
+      "icao": "EICK",
+      "name": "Cork Airport",
+      "observed_at": "2026-10-26T18:00:00+00:00",
+      "raw": "METAR EICK 261800Z 19023G34KT 1800 RADZ BR BKN002 BKN003 14/14 Q0990 TEMPO 3000 RA",
+      "score": 79,
+      "summary": "visibilité < 3 SM, rafales ≥ 25 kt, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/"
+    },
+    {
       "icao": "EHRD",
       "name": "EHRD Rotterdam The Hague",
-      "observed_at": "2026-10-26T17:25:00+00:00",
-      "raw": "METAR EHRD 261725Z AUTO 18014KT 140V230 4800 DZ BKN015 OVC018 11/09 Q1011 NOSIG",
+      "observed_at": "2026-10-26T17:55:00+00:00",
+      "raw": "METAR EHRD 261755Z AUTO 18014KT 150V220 4100 +DZ FEW006/// SCT007/// BKN008/// 11/10 Q1011 TEMPO 6000",
       "score": 57,
       "summary": "visibilité < 3 SM, précipitations",
       "icon": "🌧️",
@@ -41,22 +41,10 @@
       "source_url": "https://aviationweather.gov/"
     },
     {
-      "icao": "KBZN",
-      "name": "KBZN Bozeman Yellowstone Airport",
-      "observed_at": "2026-10-26T16:56:00+00:00",
-      "raw": "METAR KBZN 261656Z 00000KT 2 1/2SM BR OVC002 M01/M01 A3014 RMK AO2 SLP239 T10061006",
-      "score": 45,
-      "summary": "visibilité < 3 SM",
-      "icon": "☁️",
-      "phenomenon": "Ciel couvert",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/"
-    },
-    {
       "icao": "KMIA",
       "name": "KMIA Miami International Airport",
-      "observed_at": "2026-10-26T16:53:00+00:00",
-      "raw": "METAR KMIA 261653Z 05015G30KT 10SM -RA BKN032 BKN250 27/21 A2996 RMK AO2 PK WND 05035/1607 RAB11E21B50 SLP145 P0000 T02720211 $",
+      "observed_at": "2026-10-26T17:53:00+00:00",
+      "raw": "METAR KMIA 261753Z 05017G32KT 10SM -RA SCT035 SCT050 SCT250 27/21 A2993 RMK AO2 PK WND 06032/1729 RAE15B48 SLP137 P0000 60019 T02720211 10283 20239 58015 $",
       "score": 34,
       "summary": "rafales ≥ 25 kt, précipitations",
       "icon": "🌧️",
@@ -65,10 +53,10 @@
       "source_url": "https://aviationweather.gov/"
     },
     {
-      "icao": "EINN",
-      "name": "EINN Shannon Airport",
-      "observed_at": "2026-10-26T17:30:00+00:00",
-      "raw": "METAR EINN 261730Z 17016KT 8000 -RA FEW015 BKN024 15/14 Q0986 TEMPO 4000 -RA BKN012",
+      "icao": "EBBR",
+      "name": "Aerosoft Brussels Airport",
+      "observed_at": "2026-10-26T17:50:00+00:00",
+      "raw": "METAR EBBR 261750Z 20014KT 8000 -RA BKN016 BKN025 11/09 Q1014 BECMG BKN012 TEMPO 4000 -RADZ",
       "score": 32,
       "summary": "visibilité < 5 SM, précipitations",
       "icon": "🌧️",
@@ -79,8 +67,8 @@
     {
       "icao": "LFPO",
       "name": "Paris Orly LFPO",
-      "observed_at": "2026-10-26T17:30:00+00:00",
-      "raw": "METAR LFPO 261730Z 19005KT 8000 -DZ OVC004 12/12 Q1016 NOSIG",
+      "observed_at": "2026-10-26T18:00:00+00:00",
+      "raw": "METAR LFPO 261800Z 19004KT 150V220 8000 -DZ OVC004 13/12 Q1017 NOSIG",
       "score": 32,
       "summary": "visibilité < 5 SM, précipitations",
       "icon": "🌧️",
@@ -89,22 +77,10 @@
       "source_url": "https://aviationweather.gov/"
     },
     {
-      "icao": "LFRS",
-      "name": "LFRS Nantes",
-      "observed_at": "2026-10-26T17:30:00+00:00",
-      "raw": "METAR LFRS 261730Z AUTO 21009KT 5000 -DZ BR OVC006 16/16 Q1016 BECMG SCT012 OVC015",
-      "score": 32,
-      "summary": "visibilité < 5 SM, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/"
-    },
-    {
-      "icao": "EIDW",
-      "name": "EIDW Dublin International Airport",
-      "observed_at": "2026-10-26T17:30:00+00:00",
-      "raw": "METAR EIDW 261730Z 19017G28KT 160V220 9999 FEW015 SCT017 BKN019 16/14 Q0990 NOSIG",
+      "icao": "EGPK",
+      "name": "EGPK Prestwick Airport",
+      "observed_at": "2026-10-26T17:50:00+00:00",
+      "raw": "METAR EGPK 261750Z 18016G26KT 9999 FEW015 BKN019 16/13 Q0988",
       "score": 22,
       "summary": "rafales ≥ 25 kt",
       "icon": "💨",
@@ -115,12 +91,36 @@
     {
       "icao": "GMMX",
       "name": "PERFECTSOFT STUDIO - GMMX - MARRAKECH MENARA",
-      "observed_at": "2026-10-26T17:30:00+00:00",
-      "raw": "METAR GMMX 261730Z 26005KT 8000 NSC 29/08 Q1019 NOSIG",
+      "observed_at": "2026-10-26T18:00:00+00:00",
+      "raw": "METAR GMMX 261800Z 25004KT 220V290 8000 NSC 28/08 Q1019 NOSIG",
       "score": 20,
       "summary": "visibilité < 5 SM",
       "icon": "☀️",
       "phenomenon": "Ciel dégagé",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/"
+    },
+    {
+      "icao": "HECA",
+      "name": "cairo International Airport",
+      "observed_at": "2026-10-26T18:00:00+00:00",
+      "raw": "METAR HECA 261800Z 01008KT 6000 NSC 24/12 Q1014 NOSIG",
+      "score": 20,
+      "summary": "visibilité < 5 SM",
+      "icon": "☀️",
+      "phenomenon": "Ciel dégagé",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/"
+    },
+    {
+      "icao": "KBZN",
+      "name": "KBZN Bozeman Yellowstone Airport",
+      "observed_at": "2026-10-26T17:56:00+00:00",
+      "raw": "METAR KBZN 261756Z 25003KT 3SM BR OVC002 00/M01 A3012 RMK AO2 SLP231 T00001011 10000 21006 58019",
+      "score": 20,
+      "summary": "visibilité < 5 SM",
+      "icon": "☁️",
+      "phenomenon": "Ciel couvert",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/"
     }
@@ -131,6 +131,28 @@
     "fresh": 150
   },
   "news": [
+    {
+      "id": "779816",
+      "title": "Local Legend 23: Antonov An-28 Available Now",
+      "category": "MSFS officiel",
+      "date": "2026-10-26",
+      "source": "Forum officiel Microsoft Flight Simulator",
+      "url": "https://forums.flightsimulator.com/t/local-legend-23-antonov-an-28-available-now/779816",
+      "summary": "The An-28 is a twin-turboprop light utility short take-off and landing (STOL) airplane developed by Ukrainian aerospace firm Antonov. Piloted by two, it can carry up to 17 passengers, 4,000 pounds of cargo, or some combination. The…",
+      "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
+      "new": true
+    },
+    {
+      "id": "779815",
+      "title": "World Update 23: Poland and the Baltics Available Now",
+      "category": "MSFS officiel",
+      "date": "2026-10-26",
+      "source": "Forum officiel Microsoft Flight Simulator",
+      "url": "https://forums.flightsimulator.com/t/world-update-23-poland-and-the-baltics-available-now/779815",
+      "summary": "World Update 23: Poland and the Baltics adds stunning detail to regions throughout Estonia, Latvia, Lithuania, and Poland! Microsoft Flight Simulator World Update 23: Poland and the Baltics is FREE to all owners of Microsoft Flight…",
+      "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
+      "new": true
+    },
     {
       "id": "779387",
       "title": "Release Notes - Microsoft Flight Simulator 2024 Sim Update 7.1 [1.9.21.0]",
@@ -232,7 +254,7 @@
     "software_versions": "partial"
   },
   "errors": [
-    "TAF : HTTP Error 504: Gateway Time-out",
+    "TAF : HTTP Error 502: Bad Gateway",
     "Versions : GMMX / PERFECTSOFT : Fiche 1.1.0 plus ancienne que l'installation 1.2.0 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : DTTA / prealsoft : Fiche 1.00 plus ancienne que l'installation 1.0.1 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : CYYZ / FlyTampa : Fiche 1.2 plus ancienne que l'installation 1.5.0 : vérifier le canal éditeur, ne pas rétrograder",
@@ -243,9 +265,9 @@
   ],
   "note": "Collecte quotidienne automatique : METAR/TAF NOAA, flux officiel MSFS, versions GitHub publiées, audit des scènes répertoriées, extraction des versions des boutiques publiques reconnues et surveillance des sites publics. Les versions non publiées ou inaccessibles restent UNKNOWN ; une page modifiée n’est pas une mise à jour confirmée.",
   "version_coverage": {
-    "verified_today": 137,
+    "verified_today": 136,
     "eligible": 164,
-    "unavailable": 0,
+    "unavailable": 1,
     "no_version": 13,
     "inconsistent": 5,
     "not_automatable": 5,
@@ -259,16 +281,16 @@
     "official_url_known": 168,
     "without_official_url": 4,
     "manual_source": 5,
-    "unverified": 35,
-    "audited_at": "2026-10-26T17:49:52.062797+00:00"
+    "unverified": 36,
+    "audited_at": "2026-10-26T18:05:00.198380+00:00"
   },
-  "versions_checked_at": "2026-10-26T17:49:52.062797+00:00",
-  "releases_checked_at": "2026-10-26T17:49:52.062797+00:00",
+  "versions_checked_at": "2026-10-26T18:05:00.198380+00:00",
+  "releases_checked_at": "2026-10-26T18:05:00.198380+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-26T17:50:54.145094+00:00",
+    "checked_at": "2026-10-26T18:05:46.394041+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
