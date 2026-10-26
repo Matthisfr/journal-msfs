@@ -205,9 +205,9 @@
 .news-old{opacity:.78;border-left:3px solid #69788a}
 
 /* Flash info compact : maximum deux lignes, avec icônes de rubrique. */
-.hero-news-summary{display:flex;flex-direction:column;gap:4px;margin:12px 0;max-height:52px;overflow:hidden}
-.hero-news-item{display:flex;align-items:center;gap:7px;min-width:0;line-height:20px;font-size:12px;color:#e9f3fa}
-.hero-news-item>span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hero-news-summary{display:flex;flex-direction:column;gap:4px;margin:12px 0;max-height:none;overflow:visible}
+.hero-news-item{display:flex;align-items:flex-start;gap:7px;min-width:0;line-height:1.4;font-size:12px;color:#e9f3fa}
+.hero-news-item>span:last-child{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;white-space:normal}
 .hero-news-item .topic-icon{flex:0 0 20px;width:20px;height:20px;min-width:20px}
 .hero-news-item .topic-icon img{width:20px;height:20px;object-fit:contain}
 .hero-news-empty{font-size:12px;color:#c6d7e6}
