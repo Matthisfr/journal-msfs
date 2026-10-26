@@ -363,11 +363,10 @@ def build():
         if item.get("url") in hero_seen:
             continue
         hero_seen.add(item.get("url"))
-        hero_items.append('<span class="hero-news-item">' +
+        summary = str(item.get("summary") or item.get("title") or "").strip()
+        hero_items.append('<div class="hero-news-item">' +
                           brand_icon(news_topic(item)[1], manifest) +
-                          '<span>' + h(item.get("title") or "") + '</span></span>')
-        if len(hero_items) == 2:
-            break
+                          '<span>' + h(summary) + '</span></div>')
     hero_summary = '<div class="hero-news-summary" aria-label="Actualités des dernières 24 heures">' + (
         "".join(hero_items) if hero_items else '<span class="hero-news-empty">Aucune nouvelle publication officielle ces dernières 24 h</span>'
     ) + '</div>'
