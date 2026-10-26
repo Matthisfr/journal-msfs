@@ -1,14 +1,14 @@
 {
   "edition": "2026-10-26",
-  "last_run": "2026-10-26T08:14:28.666387+00:00",
-  "weather_checked_at": "2026-10-26T08:14:28.666387+00:00",
-  "news_checked_at": "2026-10-26T08:14:28.666387+00:00",
+  "last_run": "2026-10-26T08:26:24.095137+00:00",
+  "weather_checked_at": "2026-10-26T08:26:24.095137+00:00",
+  "news_checked_at": "2026-10-26T08:26:24.095137+00:00",
   "weather": [
     {
       "icao": "LIML",
       "name": "LIML Milan Linate Airport",
-      "observed_at": "2026-10-26T07:50:00+00:00",
-      "raw": "METAR LIML 260750Z 11007KT 070V130 0200 R35/0325D FG VV015 06/06 Q1020 NOSIG",
+      "observed_at": "2026-10-26T08:20:00+00:00",
+      "raw": "METAR LIML 260820Z 08005KT 040V110 0500 R35/0700N FG VV002 07/07 Q1021 NOSIG",
       "score": 145,
       "summary": "brouillard, visibilité < 1 SM",
       "icon": "🌫️",
@@ -111,8 +111,8 @@
     {
       "icao": "ESGG",
       "name": "ESGG Gothenburg Landvetter",
-      "observed_at": "2026-10-26T07:50:00+00:00",
-      "raw": "METAR ESGG 260750Z 22022G32KT 5000 DZ BKN007 09/08 Q0994",
+      "observed_at": "2026-10-26T08:20:00+00:00",
+      "raw": "METAR ESGG 260820Z 23023G34KT 6000 -RA BKN006 09/08 Q0995",
       "score": 54,
       "summary": "visibilité < 5 SM, rafales ≥ 25 kt, précipitations",
       "icon": "🌧️",
@@ -124,8 +124,8 @@
     {
       "icao": "EGKK",
       "name": "EGKK London Gatwick International",
-      "observed_at": "2026-10-26T07:50:00+00:00",
-      "raw": "METAR EGKK 260750Z 20006KT 170V230 8000 -RA FEW018 BKN035 11/10 Q1012",
+      "observed_at": "2026-10-26T08:20:00+00:00",
+      "raw": "METAR EGKK 260820Z 20009KT 8000 -RA FEW020 BKN036 12/10 Q1012",
       "score": 32,
       "summary": "visibilité < 5 SM, précipitations",
       "icon": "🌧️",
@@ -269,15 +269,15 @@
     "without_official_url": 5,
     "manual_source": 5,
     "unverified": 36,
-    "audited_at": "2026-10-26T08:14:28.666387+00:00"
+    "audited_at": "2026-10-26T08:26:24.095137+00:00"
   },
-  "versions_checked_at": "2026-10-26T08:14:28.666387+00:00",
-  "releases_checked_at": "2026-10-26T08:14:28.666387+00:00",
+  "versions_checked_at": "2026-10-26T08:26:24.095137+00:00",
+  "releases_checked_at": "2026-10-26T08:26:24.095137+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-26T08:15:00.105777+00:00",
+    "checked_at": "2026-10-26T08:26:48.757640+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
