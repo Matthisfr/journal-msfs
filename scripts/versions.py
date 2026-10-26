@@ -221,17 +221,39 @@ def check_page(url):
         except Exception as exc:
             return None, f"{type(exc).__name__}: {str(exc)[:95]}"
 
+
+def find_official_bulletins(raw, icao):
+    """Découvre des annonces iniBuilds liées depuis une fiche, sans liste d'aéroports.
+
+    L'ICAO doit être présent dans le titre ou l'URL, et le lien doit appartenir
+    au forum officiel. Un simple lien de discussion ne suffit pas.
+    """
+    if not re.fullmatch(r"[A-Z0-9]{4}",str(icao or "").upper()): return []
+    from html.parser import HTMLParser
+    class Links(HTMLParser):
+        def __init__(self):
+            super().__init__();self.links=[];self.href=None;self.words=[]
+        def handle_starttag(self,tag,attrs):
+            if tag=="a": self.href=dict(attrs).get("href");self.words=[]
+        def handle_data(self,data):
+            if self.href is not None:self.words.append(data)
+        def handle_endtag(self,tag):
+            if tag=="a" and self.href is not None:
+                self.links.append((self.href," ".join(self.words)))
+                self.href=None;self.words=[]
+    parser=Links();parser.feed(raw)
+    found=[]
+    for href,title in parser.links:
+        url=urllib.parse.urljoin("https://inibuilds.com/",href)
+        parsed=urllib.parse.urlparse(url)
+        if parsed.scheme!="https" or parsed.hostname!="forum.inibuilds.com":continue
+        if not parsed.path.startswith("/topic/"):continue
+        if str(icao).upper() not in (title+" "+parsed.path).upper():continue
+        if not re.search(r"released|update|version|v\\d",title+" "+parsed.path,re.I):continue
+        found.append(url.split("?")[0].split("#")[0])
+    return list(dict.fromkeys(found))[:5]
+
 def update_versions(airports):
-    # Bulletins officiels iniBuilds, plus récents que les métadonnées boutique.
-    official_updates={
-        "inibuilds-airport-kdtw-detroit":("https://forum.inibuilds.com/topic/23514-inibuilds-detroit-kdtw-for-msfs-v105-released/","MSFS 2020 compatible 2024"),
-        "inibuilds-airport-lowi-innsbruck":("https://forum.inibuilds.com/topic/36615-inibuilds-innsbrucklowi-for-msfs-2024-v103-released/","MSFS 2024"),
-    }
-    for airport in airports:
-        reference=official_updates.get(airport.get("folder"))
-        if reference:
-            airport["source_url"],airport["source_edition"]=reference
-            airport["source_store"]="iniBuilds — annonce officielle de mise à jour"
     # Référence produit officielle EDDB : l'annonce de blog ne contient pas
     # nécessairement le champ « Current version » de la fiche commerciale.
     for airport in airports:
@@ -252,6 +274,21 @@ def update_versions(airports):
     # Une requête par fiche, même quand plusieurs scènes y font référence.
     with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool:
         fetched=dict(zip(unique,pool.map(check_page,unique)))
+    # Découverte générique : chercher les annonces officielles liées par la
+    # boutique, puis comparer uniquement les versions explicitement annoncées.
+    bulletin_urls={}
+    for a in airports:
+        url=a.get("source_url") or ""
+        host=urllib.parse.urlparse(url).hostname
+        if host not in ("inibuilds.com","www.inibuilds.com"):continue
+        body,error=fetched.get(url,(None,None))
+        if not body or error:continue
+        for bulletin in find_official_bulletins(body,a.get("icao")):
+            bulletin_urls.setdefault(bulletin,[]).append(a)
+    if bulletin_urls:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
+            bulletin_pages=dict(zip(bulletin_urls,pool.map(check_page,bulletin_urls)))
+    else: bulletin_pages={}
     counters={"verified_today":0,"eligible":len(unique),"unavailable":0,
               "no_version":0,"inconsistent":0,"not_automatable":0,
               "no_source":0,"source_older":0,"total_checked":len(airports)}
@@ -295,12 +332,28 @@ def update_versions(airports):
                     state,reason="inconsistent","Code de scène absent de la fiche produit : association à revoir"
                 else:
                     version=parse_version(body,store=host,edition=a.get("source_edition"),icao=code)
+                    # Une annonce liée à la fiche peut corriger une version
+                    # boutique obsolète, jamais une version d'un autre produit.
+                    candidates=[]
+                    for bulletin,linked in bulletin_urls.items():
+                        if a not in linked:continue
+                        bulletin_body,bulletin_error=bulletin_pages[bulletin]
+                        if bulletin_error or not bulletin_body:continue
+                        candidate=parse_version(bulletin_body,store="forum.inibuilds.com",icao=code)
+                        if candidate and compare_versions(a.get("installed"),candidate,a.get("folder",""))!="incomparable":
+                            candidates.append((candidate,bulletin))
+                    if candidates:
+                        candidates.sort(key=lambda item:version_parts(item[0]) or (),reverse=True)
+                        candidate,bulletin=candidates[0]
+                        if not version or compare_versions(version,candidate,a.get("folder",""))=="update":
+                            version=candidate
+                            a["version_source_url"]=bulletin
                     if not version:
                         state,reason="no_version",("Version visible uniquement dans Orbx Central (connexion au compte requise)" if host=="orbxdirect.com" else "Fiche accessible, mais aucun numéro de version public fiable ou édition ambiguë")
                     else:
                         a["server_version"]=version
                         a["version_checked_at"]=TODAY
-                        a["version_source_url"]=url
+                        a["version_source_url"]=a.get("version_source_url") or url
                         comparison=compare_versions(a.get("installed"),version,a.get("folder",""))
                         a["version_comparison"]=comparison
                         if comparison=="incomparable":
