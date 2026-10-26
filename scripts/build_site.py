@@ -413,8 +413,7 @@ def build():
             stamp = ""
         date_label = dt.datetime.fromisoformat(stamp).strftime("%d/%m/%Y") if stamp else "date inconnue"
         source_line = f'Dernier inventaire Excel : <strong>{h(excel.name)}</strong> — <strong>{date_label}</strong>. Toutes les scènes et versions installées sont conservées, y compris les doublons.'
-        index = re.sub(r'Issu de ton fichier «[^»]+»\\. Toutes les scènes et versions installées sont conservées, y compris les doublons\\.', source_line, index)
-        index = index.replace('id="airport-update-digest"', 'id="airport-update-digest"')
+        index = re.sub(r'Issu de ton fichier «[^»]+»\. Toutes les scènes et versions installées sont conservées, y compris les doublons\.', source_line, index)
     (PUBLIC / "index.html").write_text(index, encoding="utf-8")
 
     css = (PUBLIC / "styles.css").read_text(encoding="utf-8")
