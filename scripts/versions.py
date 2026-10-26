@@ -24,6 +24,7 @@ ALLOWED = {
     "www.inibuilds.com", "secure.simmarket.com", "orbxdirect.com",
     "glideslope.pro", "www.glideslope.pro", "flightsim.to",
     "www.flightsim.to", "fr.flightsim.to", "fsdg-online.com", "www.fsdg-online.com",
+    "beautifulmodelworld.com", "www.beautifulmodelworld.com",
 }
 VERSION = r"([vV]?\d+(?:\.\d+){0,4})"
 LABELS = [
@@ -58,11 +59,20 @@ def visible_text(raw):
     parser.feed(raw)
     return re.sub(r"\s+"," ",html.unescape(" ".join(parser.parts))).strip()
 
-def parse_version(raw, expected_name=None, store=None, edition=None):
+def parse_version(raw, expected_name=None, store=None, edition=None, icao=None):
     """Retourne la version affichée dans la fiche, pas une version inférée."""
     text=visible_text(raw)
     if expected_name and expected_name.lower() not in text.lower():
         return None
+    if store in ("beautifulmodelworld.com","www.beautifulmodelworld.com"):
+        # Le catalogue liste chaque ICAO suivi de sa propre version.
+        # Ne jamais prendre la version d'une autre scène du catalogue.
+        if not icao or not re.fullmatch(r"[A-Z0-9]{4}",str(icao).upper()):
+            return None
+        code=re.escape(str(icao).upper())
+        pattern=rf"\\[\\s*{code}\\s*\\].{{0,110}}?\\bVersion\\s*:?\\s*[vV]?(\\d+(?:\\.\\d+){{1,4}})\\b"
+        matches=re.findall(pattern,text,re.I)
+        return matches[0] if len(set(matches))==1 and matches else None
     if store=="orbxdirect.com":
         # Orbx Central a les versions; les pages OrbxDirect ne les publient pas.
         return None
@@ -212,6 +222,10 @@ def update_versions(airports):
             airport["source_url"]="https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/3252/aerosoft-mega-airport-berlin-brandenburg-v3"
             airport["source_edition"]="MSFS 2024"
             airport["source_store"]="Aerosoft"
+    for airport in airports:
+        if airport.get("folder")=="bmw-airport-lipz-venice-marco-polo":
+            airport["source_url"]="https://beautifulmodelworld.com/"
+            airport["source_store"]="Beautiful Model of the World"
     unique={}
     for a in airports:
         url=str(a.get("source_url") or "")
@@ -261,7 +275,7 @@ def update_versions(airports):
                 if not identity:
                     state,reason="inconsistent","Code de scène absent de la fiche produit : association à revoir"
                 else:
-                    version=parse_version(body,store=host,edition=a.get("source_edition"))
+                    version=parse_version(body,store=host,edition=a.get("source_edition"),icao=code)
                     if not version:
                         state,reason="no_version",("Version visible uniquement dans Orbx Central (connexion au compte requise)" if host=="orbxdirect.com" else "Fiche accessible, mais aucun numéro de version public fiable ou édition ambiguë")
                     else:
