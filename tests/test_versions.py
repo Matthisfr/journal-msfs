@@ -28,6 +28,12 @@ class VersionTests(unittest.TestCase):
         html=page('Current version: 3.4 (MSFS 2024) | 2.4 (MSFS 2020)')
         self.assertEqual(v.parse_version(html,store='www.aerosoft.com',edition='MSFS 2024'),'3.4')
         self.assertIsNone(v.parse_version(html,store='www.aerosoft.com',edition='MSFS 2020 / 2024'))
+    def test_beautiful_model_world_catalogue(self):
+        html=page('Burbank Hollywood [KBUR] 10.04.2026 Version 1.4.7 Venice Marco Polo [LIPZ] 25.07.2021 VERSION 4.2.2 Genoa [LIMJ] VERSION 4.2.0')
+        self.assertEqual(v.parse_version(html,store='beautifulmodelworld.com',icao='LIPZ'),'4.2.2')
+        self.assertEqual(v.parse_version(html,store='beautifulmodelworld.com',icao='KBUR'),'1.4.7')
+        self.assertIsNone(v.parse_version(html,store='beautifulmodelworld.com',icao='LFML'))
+        self.assertIsNone(v.parse_version(html,store='beautifulmodelworld.com'))
     def test_simmarket(self):
         self.assertEqual(v.parse_version(page('TORONTO CYYZ FLYTAMPA Published by FLYTAMPA Size 430MB Version v1.2 PID 16345'),store='secure.simmarket.com'),'1.2')
         self.assertIsNone(v.parse_version(page('KFSD SIOUX FALLS FSXCENERY Size 43MB Available since 2020-10-11 PID 13893'),store='secure.simmarket.com'))
