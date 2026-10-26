@@ -15,11 +15,11 @@ on:
           - totale
   schedule:
     # Deux passages hors minute 0 pour limiter les retards GitHub Actions.
-    # 07:17 France : principal ; 08:17 France : secours.
+    # 05:17 France : principal ; 06:17 France : secours.
     # UTC été/hiver : la porte ci-dessous valide le bon créneau.
+    - cron: '17 3 * * *'
+    - cron: '17 4 * * *'
     - cron: '17 5 * * *'
-    - cron: '17 6 * * *'
-    - cron: '17 7 * * *'
 
 permissions:
   actions: read
@@ -56,16 +56,16 @@ jobs:
 
           offset=$(TZ=Europe/Paris date +%z)
           if [[ "$offset" == "+0200" ]]; then
-            primary="17 5 * * *"
-            backup="17 6 * * *"
+            primary="17 3 * * *"
+            backup="17 4 * * *"
           else
-            primary="17 6 * * *"
-            backup="17 7 * * *"
+            primary="17 4 * * *"
+            backup="17 5 * * *"
           fi
 
           if [[ "$CRON" == "$primary" ]]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
-            echo "Actualisation principale à 07:17 Europe/Paris"
+            echo "Actualisation principale à 05:17 Europe/Paris"
             exit 0
           fi
           if [[ "$CRON" != "$backup" ]]; then
