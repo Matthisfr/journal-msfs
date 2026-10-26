@@ -105,7 +105,7 @@ async function renderMap(){
    const current=items.every(a=>valid(a)&&a.version_comparison==='equal');
    const color=outdated?'#f29a25':current?'#249c63':'#9299a3';
    const lightAircraft=data[code].aircraft_marker==='cessna';
-   const silhouette=lightAircraft?'icons/cessna.svg':'icons/a320.svg';
+   const silhouette=lightAircraft?'icons/cessna.png':'icons/a320.svg';
    const svg='<div style="position:relative;width:36px;height:46px"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="46" viewBox="0 0 36 46"><path d="M18 44C13 35 2 26 2 18a16 16 0 1 1 32 0c0 8-11 18-16 26" fill="'+color+'" stroke="white" stroke-width="2"/></svg><img alt="" src="'+silhouette+'" style="position:absolute;left:5px;top:6px;width:26px;height:29px;object-fit:contain;pointer-events:none"></div>';
    const icon=L.divIcon({className:'airport-pin',html:svg,iconSize:[36,46],iconAnchor:[18,44]});
    const details=items.map(a=>'<p><b>'+esc(a.name||a.folder)+'</b><br>'+esc(a.publisher)+' · '+esc(a.installed||'—')+' / '+esc(a.server_version||'inconnue')+'</p>').join('');
