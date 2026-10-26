@@ -38,6 +38,49 @@ def main():
     for code,loc in result.items():
         if not (-90 <= loc["lat"] <= 90 and -180 <= loc["lon"] <= 180):
             raise ValueError(f"Coordonnées invalides : {code}")
+    # Classification indicative pour la seule silhouette des repères.
+    # OurAirports: identifiants aéroport et caractéristiques des pistes.
+    # Ne constitue PAS une validation opérationnelle des performances A320.
+    try:
+        def remote_rows(filename):
+            url="https://raw.githubusercontent.com/davidmegginson/ourairports-data/main/" + filename
+            request=urllib.request.Request(url,headers={"User-Agent":"MSFS-Journal-Map/1.0"})
+            with urllib.request.urlopen(request,timeout=35) as response:
+                return list(csv.DictReader(io.TextIOWrapper(response,encoding="utf-8-sig")))
+
+        airport_ids={}
+        for row in remote_rows("airports.csv"):
+            keys={str(row.get(field) or "").strip().upper() for field in ("ident","gps_code")}
+            for code in keys.intersection(result):
+                airport_ids.setdefault(str(row.get("id") or ""),set()).add(code)
+        best={}
+        found=set()
+        for row in remote_rows("runways.csv"):
+            codes=airport_ids.get(str(row.get("airport_ref") or ""),())
+            if not codes or str(row.get("closed") or "0").strip()=="1":
+                continue
+            try:
+                length=float(row.get("length_ft") or 0)*0.3048
+                width=float(row.get("width_ft") or 0)*0.3048
+            except ValueError:
+                continue
+            surface=str(row.get("surface") or "").upper()
+            paved=any(t in surface for t in ("ASP","CON","PEM","BIT","TAR","PAV"))
+            for code in codes:
+                found.add(code)
+                if length>=1800 and width>=30 and paved:
+                    best[code]=True
+        for code in result:
+            if code in found:
+                result[code]["aircraft_marker"]="airliner" if best.get(code) else "cessna"
+            else:
+                result[code]["aircraft_marker"]="unknown"
+        print(f"Silhouettes : {sum(v.get('aircraft_marker')=='airliner' for v in result.values())} A320 indicatifs, {sum(v.get('aircraft_marker')=='cessna' for v in result.values())} avions légers")
+    except Exception as exc:
+        # Ne pas bloquer la publication ni inventer de catégories en cas de panne.
+        print(f"Classification pistes indisponible : {exc}; données précédentes conservées")
+        for code in result:
+            result[code]["aircraft_marker"]=existing.get(code,{}).get("aircraft_marker","unknown")
     OUT.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(f"Carte : {len(result)}/{len(codes)} codes géolocalisés, aucun point inventé")
 if __name__=="__main__": main()
