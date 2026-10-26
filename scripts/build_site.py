@@ -335,7 +335,7 @@ def build():
     previous = status.get("airac_cycle")
     changed = previous is not None and previous != cycle
     status["airac_cycle"] = cycle
-    (PUBLIC / "status.json").write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    (PUBLIC / "status.json").write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     airac = ('<div class="airac-banner"><b>NAVIGRAPH AIRAC ' + h(cycle) + '</b> ' +
              ('<span class="new-tag">NEWS</span> ' if changed else '') +
              h(start.strftime("%d/%m/%Y")) + ' – ' + h(end.strftime("%d/%m/%Y")) + '</div>')
