@@ -9,6 +9,7 @@ import html
 import json
 import pathlib
 import re
+import subprocess
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public"
@@ -399,6 +400,21 @@ def build():
         f'<p class="standalone-link"><a href="airports.html">↗ Afficher les {len(airports)} scènes sur une page indépendante (sans JavaScript)</a></p><div class="tablebox"><table>',
         1,
     )
+    # Source Excel : date du dernier commit qui a modifié le classeur.
+    excel_files = list((ROOT / "data" / "airports").glob("*.xlsx"))
+    if len(excel_files) == 1:
+        excel = excel_files[0]
+        try:
+            stamp = subprocess.check_output(
+                ["git", "log", "-1", "--format=%cI", "--", str(excel.relative_to(ROOT))],
+                cwd=ROOT, text=True, timeout=10
+            ).strip()
+        except (subprocess.SubprocessError, OSError):
+            stamp = ""
+        date_label = dt.datetime.fromisoformat(stamp).strftime("%d/%m/%Y") if stamp else "date inconnue"
+        source_line = f'Dernier inventaire Excel : <strong>{h(excel.name)}</strong> — <strong>{date_label}</strong>. Toutes les scènes et versions installées sont conservées, y compris les doublons.'
+        index = re.sub(r'Issu de ton fichier «[^»]+»\\. Toutes les scènes et versions installées sont conservées, y compris les doublons\\.', source_line, index)
+        index = index.replace('id="airport-update-digest"', 'id="airport-update-digest"')
     (PUBLIC / "index.html").write_text(index, encoding="utf-8")
 
     css = (PUBLIC / "styles.css").read_text(encoding="utf-8")
