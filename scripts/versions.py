@@ -204,6 +204,13 @@ def check_page(url):
             return None, f"{type(exc).__name__}: {str(exc)[:95]}"
 
 def update_versions(airports):
+    # Référence produit officielle EDDB : l'annonce de blog ne contient pas
+    # nécessairement le champ « Current version » de la fiche commerciale.
+    for airport in airports:
+        if airport.get("folder")=="aerosoft-airport-eddb-berlin-brandenburg":
+            airport["source_url"]="https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/3252/aerosoft-mega-airport-berlin-brandenburg-v3"
+            airport["source_edition"]="MSFS 2024"
+            airport["source_store"]="Aerosoft"
     unique={}
     for a in airports:
         url=str(a.get("source_url") or "")
