@@ -203,7 +203,14 @@ def build_news(status, editorial, manifest):
             continue
         seen.add(url)
         news.append(a)
-    news.sort(key=lambda a: str(a.get("date") or ""), reverse=True)
+    today = dt.datetime.now(dt.timezone.utc).date()
+    def age_days(item):
+        try:
+            return (today - dt.date.fromisoformat(str(item.get("date") or "")[:10])).days
+        except (ValueError, TypeError):
+            return 9999
+    # NEWS en premier, archives de plus de 7 jours à la fin.
+    news.sort(key=lambda a: (age_days(a) > 7, -max(0, 9999 - age_days(a))))
     cards = []
     homes = []
     for a in news:
@@ -214,14 +221,17 @@ def build_news(status, editorial, manifest):
         category = h(a.get("category") or "ACTUALITÉS")
         url = h(a["url"])
         source = h(a.get("source") or "Source officielle")
+        old = age_days(a) > 7
         cards.append(
-            '<article class="news-card"><div class="news-meta">' + category + ' · ' + date +
-            ('<span class="new-tag">NEWS</span>' if a.get("new") else "") +
+            '<article class="news-card' + (' news-old' if old else '') + '"><div class="news-meta">' + category + ' · ' + date +
+            ('<span class="old-tag">OLD</span>' if old else '<span class="new-tag">NEWS</span>' if a.get("new") else "") +
             '</div><div class="news-heading">' + icon + '<h3>' + title + '</h3></div>' +
             ('<p>' + h(a["summary"]) + '</p>' if a.get("summary") else "") +
             ('<div class="news-impact"><b>Impact / action :</b> ' + h(a["impact"]) + '</div>' if a.get("impact") else "") +
             '<div class="news-source"><a href="' + url + '" target="_blank" rel="noopener noreferrer">' + source + ' ↗</a></div></article>'
         )
+        if old:
+            continue
         homes.append(
             '<article><div class="home-news-row">' + icon + '<div class="home-news-content"><small>' +
             category + ' · ' + date + '</small><strong>' + title +
@@ -312,6 +322,24 @@ def build():
     cards, home_cards = build_news(status, editorial, manifest)
     index = index.replace('<div id="news-container" class="news-grid"></div>',
                           '<div id="news-container" class="news-grid">' + cards + '</div>')
+    # AIRAC : référence officielle 2610, entrée en vigueur le 01/10/2026.
+    # Cycles de 28 jours. Ne pas assimiler un premier affichage à NEWS.
+    today_airac = dt.datetime.now(dt.timezone.utc).date()
+    anchor = dt.date(2026, 10, 1)
+    step = (today_airac - anchor).days // 28
+    start = anchor + dt.timedelta(days=step * 28)
+    end = start + dt.timedelta(days=27)
+    cycle_month = 10 + step
+    cycle_year = 2026 + (cycle_month - 1) // 13
+    cycle = f"{cycle_year % 100:02d}{(cycle_month - 1) % 13 + 1:02d}"
+    previous = status.get("airac_cycle")
+    changed = previous is not None and previous != cycle
+    status["airac_cycle"] = cycle
+    (PUBLIC / "status.json").write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    airac = ('<div class="airac-banner"><b>NAVIGRAPH AIRAC ' + h(cycle) + '</b> ' +
+             ('<span class="new-tag">NEWS</span> ' if changed else '') +
+             h(start.strftime("%d/%m/%Y")) + ' – ' + h(end.strftime("%d/%m/%Y")) + '</div>')
+    index = index.replace('<main id="main" class="shell main">', '<main id="main" class="shell main">' + airac, 1)
     index = index.replace('<div id="home-news" class="home-news"></div>',
                           '<div id="home-news" class="home-news">' + home_cards + '</div>')
     index = index.replace('id="home-updated">En attente de la première collecte</strong>',
