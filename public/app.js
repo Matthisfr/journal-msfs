@@ -104,7 +104,11 @@ async function renderMap(){
    const outdated=items.some(a=>valid(a)&&a.version_comparison==='update');
    const current=items.every(a=>valid(a)&&a.version_comparison==='equal');
    const color=outdated?'#f29a25':current?'#249c63':'#9299a3';
-   const svg='<svg xmlns="http://www.w3.org/2000/svg" width="36" height="46" viewBox="0 0 36 46"><path d="M18 44C13 35 2 26 2 18a16 16 0 1 1 32 0c0 8-11 18-16 26" fill="'+color+'" stroke="white" stroke-width="2"/><path d="M18 7l3 9 9 4v3l-9-2-1 8 3 3v2l-5-2-5 2v-2l3-3-1-8-9 2v-3l9-4z" fill="white"/></svg>';
+   const lightAircraft=data[code].aircraft_marker==='cessna';
+   const plane=lightAircraft
+    ? '<path d="M18 8l2 1 1 8 9 2v3l-9-1-1 11 4 2v2l-6-1-6 1v-2l4-2-1-11-9 1v-3l9-2 1-8z" fill="white"/>'
+    : '<path d="M18 7l3 9 9 4v3l-9-2-1 8 3 3v2l-5-2-5 2v-2l3-3-1-8-9 2v-3l9-4z" fill="white"/>';
+   const svg='<svg xmlns="http://www.w3.org/2000/svg" width="36" height="46" viewBox="0 0 36 46"><path d="M18 44C13 35 2 26 2 18a16 16 0 1 1 32 0c0 8-11 18-16 26" fill="'+color+'" stroke="white" stroke-width="2"/>'+plane+'</svg>';
    const icon=L.divIcon({className:'airport-pin',html:svg,iconSize:[36,46],iconAnchor:[18,44]});
    const details=items.map(a=>'<p><b>'+esc(a.name||a.folder)+'</b><br>'+esc(a.publisher)+' · '+esc(a.installed||'—')+' / '+esc(a.server_version||'inconnue')+'</p>').join('');
    const m=L.marker([data[code].lat,data[code].lon],{icon}).bindPopup('<strong>'+esc(code)+' — '+esc(data[code].name||'')+'</strong>'+details).addTo(airportMap);
