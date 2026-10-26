@@ -337,13 +337,41 @@ def build():
     cycle_year = 2026 + (cycle_month - 1) // 13
     cycle = f"{cycle_year % 100:02d}{(cycle_month - 1) % 13 + 1:02d}"
     previous = status.get("airac_cycle")
-    changed = previous is not None and previous != cycle
+    changed = today_airac == start
     status["airac_cycle"] = cycle
     (PUBLIC / "status.json").write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     airac = ('<div class="airac-banner"><b>NAVIGRAPH AIRAC ' + h(cycle) + '</b> ' +
              ('<span class="new-tag">NEWS</span> ' if changed else '') +
              h(start.strftime("%d/%m/%Y")) + ' – ' + h(end.strftime("%d/%m/%Y")) + '</div>')
     index = index.replace('<main id="main" class="shell main">', '<main id="main" class="shell main">' + airac, 1)
+    # Résumé très compact des actualités du jour dans le bandeau héro.
+    recent_hero = []
+    for item in (editorial.get("news") or []) + (status.get("news") or []):
+        raw = str(item.get("published_at") or item.get("date") or "")
+        try:
+            published = dt.datetime.fromisoformat(raw.replace("Z", "+00:00"))
+            if published.tzinfo is None:
+                published = published.replace(tzinfo=dt.timezone.utc)
+        except (ValueError, TypeError):
+            continue
+        if dt.timedelta(0) <= dt.datetime.now(dt.timezone.utc) - published <= dt.timedelta(hours=24):
+            recent_hero.append(item)
+    recent_hero.sort(key=lambda item: str(item.get("published_at") or item.get("date") or ""), reverse=True)
+    hero_items = []
+    hero_seen = set()
+    for item in recent_hero:
+        if item.get("url") in hero_seen:
+            continue
+        hero_seen.add(item.get("url"))
+        hero_items.append('<span class="hero-news-item">' +
+                          brand_icon(news_topic(item)[1], manifest) +
+                          '<span>' + h(item.get("title") or "") + '</span></span>')
+        if len(hero_items) == 2:
+            break
+    hero_summary = '<div class="hero-news-summary" aria-label="Actualités des dernières 24 heures">' + (
+        "".join(hero_items) if hero_items else '<span class="hero-news-empty">Aucune nouvelle publication officielle ces dernières 24 h</span>'
+    ) + '</div>'
+    index = index.replace('<button class="cta" data-goto="nouveautes">', hero_summary + '<button class="cta" data-goto="nouveautes">', 1)
     index = index.replace('<div id="home-news" class="home-news"></div>',
                           '<div id="home-news" class="home-news">' + home_cards + '</div>')
     index = index.replace('id="home-updated">En attente de la première collecte</strong>',
@@ -396,7 +424,7 @@ body{{background:#f5f5f1}}
     (PUBLIC / "airports.html").write_text(independent, encoding="utf-8")
     assert index.count("<tr>") >= len(airports), "Lignes statiques manquantes"
     assert "id=\"home-updated\">Le " in index, "Horodatage accueil absent"
-    assert index.count('class="news-card"') >= 4, "Actualités officielles manquantes"
+    assert index.count('class="news-card') >= 4, "Actualités officielles manquantes"
     assert index.count('class="watch-source"') >= 30, "Surveillance des sources manquante"
     assert 'id="airport-update-digest"' in index, "Bilan des mises à jour de scènes absent"
     assert 'class="airport-update-digest"' in independent, "Bilan de secours absent"
