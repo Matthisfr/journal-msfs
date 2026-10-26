@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-26",
-  "last_run": "2026-10-26T14:20:33.364072+00:00",
-  "weather_checked_at": "2026-10-26T14:20:33.364072+00:00",
-  "news_checked_at": "2026-10-26T14:20:33.364072+00:00",
+  "last_run": "2026-10-26T14:22:22.700335+00:00",
+  "weather_checked_at": "2026-10-26T14:22:22.700335+00:00",
+  "news_checked_at": "2026-10-26T14:22:22.700335+00:00",
   "weather": [
     {
       "icao": "MDSD",
@@ -28,7 +28,7 @@
       "phenomenon": "Précipitations",
       "level": "Dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EICK 261100Z 2612/2712 20022G35KT 6000 -RA BKN005 PROB30 TEMPO 2612/2617 3000 -RADZ BKN003 BECMG 2616/2618 19028G45KT TEMPO 2617/2622 3000 RA BKN003 PROB30 TEMPO 2618/2620 20030G55KT BECMG 2620/2622 24020G40KT BKN020 BECMG 2623/2701 24013KT PROB30 TEMPO 2701/2705 24015G27KT -SHRA FEW018CB"
+      "taf_raw": "TAF AMD EICK 261420Z 2614/2712 20022G35KT 6000 -RA BKN005 TEMPO 2614/2617 2000 -RADZ BR BKN003 BECMG 2616/2618 19028G45KT TEMPO 2617/2622 3000 RA BKN003 PROB30 TEMPO 2618/2620 20030G55KT BECMG 2620/2622 24020G40KT BKN020 BECMG 2623/2701 24013KT PROB30 TEMPO 2701/2705 24015G27KT -SHRA FEW018CB"
     },
     {
       "icao": "CYUL",
@@ -109,19 +109,6 @@
       "taf_raw": "TAF MUHA 261100Z 2612/2712 02010KT 9000 SCT030 TEMPO 2618/2623 01015KT 5000 TSRA RA FEW018CB BKN020"
     },
     {
-      "icao": "EFHK",
-      "name": "EFHK Helsinki Vantaa",
-      "observed_at": "2026-10-26T13:50:00+00:00",
-      "raw": "METAR EFHK 261350Z 17013KT 9999 -RADZ BKN014 11/09 Q1007 TEMPO BKN015 FEW025TCU",
-      "score": 12,
-      "summary": "précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "Faible contrainte",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EFHK 261125Z 2612/2712 17013KT 9999 BKN013 TEMPO 2612/2621 BKN015 PROB40 TEMPO 2613/2618 FEW025TCU TEMPO 2621/2701 18018G28KT 7000 -SHRA SCT008 BKN012 FEW020CB TEMPO 2701/2708 18018G28KT 6000 SHRA BKN006 FEW020CB BECMG 2708/2710 23014KT BKN020"
-    },
-    {
       "icao": "EGPF",
       "name": "EGPF Glasgow Airport",
       "observed_at": "2026-10-26T13:50:00+00:00",
@@ -133,6 +120,19 @@
       "level": "Faible contrainte",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF EGPF 261103Z 2612/2712 10010KT 9999 BKN020 TEMPO 2612/2621 5000 RA BKN012 PROB40 TEMPO 2612/2619 3000 +RADZ BKN008 BECMG 2615/2619 20015G28KT BECMG 2621/2624 19025G38KT TEMPO 2621/2703 3000 +RA +SHRA BKN014 BECMG 2700/2703 22025G38KT TEMPO 2707/2712 4500 +SHRA BECMG 2710/2712 23018G28KT"
+    },
+    {
+      "icao": "EGPK",
+      "name": "EGPK Prestwick Airport",
+      "observed_at": "2026-10-26T13:50:00+00:00",
+      "raw": "METAR EGPK 261350Z 16014KT 9999 -RA FEW018 SCT031 BKN038 12/09 Q0991",
+      "score": 12,
+      "summary": "précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "Faible contrainte",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EGPK 261103Z 2612/2712 15018G28KT 9999 BKN016 TEMPO 2612/2621 6000 RA BKN012 PROB40 TEMPO 2612/2615 3000 +RADZ BKN008 BECMG 2620/2623 19025G40KT TEMPO 2621/2703 3000 +RA +SHRA BKN014 BECMG 2623/2703 22025G38KT TEMPO 2707/2712 4500 +SHRA BECMG 2709/2712 25020G35KT"
     }
   ],
   "weather_coverage": {
@@ -269,15 +269,15 @@
     "without_official_url": 5,
     "manual_source": 5,
     "unverified": 36,
-    "audited_at": "2026-10-26T14:20:33.364072+00:00"
+    "audited_at": "2026-10-26T14:22:22.700335+00:00"
   },
-  "versions_checked_at": "2026-10-26T14:20:33.364072+00:00",
-  "releases_checked_at": "2026-10-26T14:20:33.364072+00:00",
+  "versions_checked_at": "2026-10-26T14:22:22.700335+00:00",
+  "releases_checked_at": "2026-10-26T14:22:22.700335+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-26T14:21:10.320679+00:00",
+    "checked_at": "2026-10-26T14:23:06.108197+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
