@@ -133,7 +133,13 @@ jobs:
           if [[ "${{ github.event_name }}" == "push" ]]; then
             before="${{ github.event.before }}"
             if [[ -n "$before" ]] && git cat-file -e "$before^{commit}" 2>/dev/null; then
-              if git diff --name-only "$before" "${{ github.sha }}" -- data/airports/ | grep -Eq '\\.xlsx
+              if git diff --name-only "$before" "${{ github.sha }}" -- data/airports/ | grep -Eq "[.]xlsx$"; then
+                excel_changed=true
+                echo "Nouvel inventaire Excel : recherche complète immédiate."
+              fi
+            fi
+          fi
+          if [[ "$excel_changed" == "true" ]] || [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.mode }}" == "totale" ]] || [[ "$(TZ=Europe/Paris date +%u)" == "6" && "${{ github.event_name }}" == "schedule" ]]; then
             python scripts/discover_airports.py || echo "Catalogue Contrail / iniBuilds indisponible"
             python scripts/discover_simmarket.py || echo "Recherche simMarket indisponible"
             python scripts/apply_airport_sources.py
