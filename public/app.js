@@ -268,3 +268,32 @@ showSayIntentionsCareer();
 showPublishedSimbrief();
 
 ['airport-search','region-filter','status-filter'].forEach(id=>$('#'+id).addEventListener(id==='airport-search'?'input':'change',renderAirports));['software-search','software-filter'].forEach(id=>{const el=$('#'+id);if(el)el.addEventListener(id==='software-search'?'input':'change',renderSoftware)});init();
+
+/* État de la publication : interroge les dernières exécutions publiques du workflow. */
+async function refreshBuildStatus(){
+  const badge=document.getElementById('build-status'), label=document.getElementById('build-status-text');
+  if(!badge||!label)return;
+  try{
+    const response=await fetch('https://api.github.com/repos/Matthisfr/journal-msfs/actions/workflows/journal.yml/runs?per_page=5',{cache:'no-store',headers:{Accept:'application/vnd.github+json'}});
+    if(!response.ok)throw new Error('GitHub API '+response.status);
+    const data=await response.json();
+    const run=(data.workflow_runs||[]).find(r=>r.status!=='completed')||(data.workflow_runs||[])[0];
+    if(!run)throw new Error('Aucune exécution disponible');
+    const running=run.status!=='completed';
+    const ok=!running&&run.conclusion==='success';
+    const kind=running?'running':ok?'ok':'error';
+    const wording=running?'Mise à jour…':ok?'Journal à jour':'Échec mise à jour';
+    badge.className='build-status build-status-'+kind;
+    label.textContent=wording;
+    badge.title=wording+' — '+new Date(run.created_at).toLocaleString('fr-FR')+' — ouvrir GitHub Actions';
+    badge.setAttribute('aria-label',wording);
+    badge.href=run.html_url||'https://github.com/Matthisfr/journal-msfs/actions/workflows/journal.yml';
+  }catch(err){
+    badge.className='build-status build-status-unknown';
+    label.textContent='État indisponible';
+    badge.title='Impossible de consulter GitHub Actions pour le moment';
+    badge.setAttribute('aria-label','État de publication indisponible');
+  }
+}
+refreshBuildStatus();
+setInterval(refreshBuildStatus,90000);
