@@ -28,6 +28,12 @@ class VersionTests(unittest.TestCase):
         html=page('Current version: 3.4 (MSFS 2024) | 2.4 (MSFS 2020)')
         self.assertEqual(v.parse_version(html,store='www.aerosoft.com',edition='MSFS 2024'),'3.4')
         self.assertIsNone(v.parse_version(html,store='www.aerosoft.com',edition='MSFS 2020 / 2024'))
+    def test_generic_official_bulletin_discovery(self):
+        html=page('<a href="https://forum.inibuilds.com/topic/123-detroit-kdtw-v105-released/">KDTW v1.0.5 Released</a><a href="https://forum.inibuilds.com/topic/456-lowi-v103-released/">LOWI Released</a><a href="https://example.com/topic/kdtw-released">KDTW released</a>')
+        self.assertEqual(v.find_official_bulletins(html,"KDTW"),["https://forum.inibuilds.com/topic/123-detroit-kdtw-v105-released/"])
+        self.assertEqual(v.find_official_bulletins(html,"LOWI"),["https://forum.inibuilds.com/topic/456-lowi-v103-released/"])
+        self.assertEqual(v.find_official_bulletins(html,"OMDU"),[])
+
     def test_inibuilds_official_update_bulletins(self):
         self.assertEqual(v.parse_version(page("iniBuilds Detroit (KDTW) for MSFS v1.0.5 Released"),store="forum.inibuilds.com",icao="KDTW"),"1.0.5")
         self.assertEqual(v.parse_version(page("iniBuilds Innsbruck(LOWI) for MSFS 2024 v1.0.3 Released"),store="forum.inibuilds.com",icao="LOWI"),"1.0.3")
