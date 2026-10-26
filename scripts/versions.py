@@ -78,7 +78,7 @@ def parse_version(raw, expected_name=None, store=None, edition=None, icao=None):
         # Bulletin officiel de mise à jour : le titre annonce explicitement
         # l'ICAO et la version du produit, contrairement aux posts utilisateurs.
         if not icao: return None
-        match=re.search(r"iniBuilds\\s+.{0,95}?\\(\\s*"+re.escape(str(icao))+r"\\s*\\)\\s+for\\s+MSFS(?:\\s+2024)?\\s+v(\\d+(?:\\.\\d+){1,4})\\s+Released",text,re.I)
+        match=re.search(r"iniBuilds\s+.{0,95}?\(\s*"+re.escape(str(icao))+r"\s*\)\s+for\s+MSFS(?:\s+2024)?\s+v(\d+(?:\.\d+){1,4})\s+Released",text,re.I)
         return match.group(1) if match else None
     if store=="orbxdirect.com":
         # Orbx Central a les versions; les pages OrbxDirect ne les publient pas.
