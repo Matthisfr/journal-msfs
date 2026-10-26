@@ -25,6 +25,7 @@ ALLOWED = {
     "glideslope.pro", "www.glideslope.pro", "flightsim.to",
     "www.flightsim.to", "fr.flightsim.to", "fsdg-online.com", "www.fsdg-online.com",
     "beautifulmodelworld.com", "www.beautifulmodelworld.com",
+    "forum.inibuilds.com",
 }
 VERSION = r"([vV]?\d+(?:\.\d+){0,4})"
 LABELS = [
@@ -73,6 +74,12 @@ def parse_version(raw, expected_name=None, store=None, edition=None, icao=None):
         pattern=rf"\[\s*{code}\s*\].{{0,110}}?\bVersion\s*:?\s*[vV]?(\d+(?:\.\d+){{1,4}})\b"
         matches=re.findall(pattern,text,re.I)
         return matches[0] if len(set(matches))==1 and matches else None
+    if store=="forum.inibuilds.com":
+        # Bulletin officiel de mise à jour : le titre annonce explicitement
+        # l'ICAO et la version du produit, contrairement aux posts utilisateurs.
+        if not icao: return None
+        match=re.search(r"iniBuilds\\s+.{0,95}?\\(\\s*"+re.escape(str(icao))+r"\\s*\\)\\s+for\\s+MSFS(?:\\s+2024)?\\s+v(\\d+(?:\\.\\d+){1,4})\\s+Released",text,re.I)
+        return match.group(1) if match else None
     if store=="orbxdirect.com":
         # Orbx Central a les versions; les pages OrbxDirect ne les publient pas.
         return None
@@ -215,6 +222,16 @@ def check_page(url):
             return None, f"{type(exc).__name__}: {str(exc)[:95]}"
 
 def update_versions(airports):
+    # Bulletins officiels iniBuilds, plus récents que les métadonnées boutique.
+    official_updates={
+        "inibuilds-airport-kdtw-detroit":("https://forum.inibuilds.com/topic/23514-inibuilds-detroit-kdtw-for-msfs-v105-released/","MSFS 2020 compatible 2024"),
+        "inibuilds-airport-lowi-innsbruck":("https://forum.inibuilds.com/topic/36615-inibuilds-innsbrucklowi-for-msfs-2024-v103-released/","MSFS 2024"),
+    }
+    for airport in airports:
+        reference=official_updates.get(airport.get("folder"))
+        if reference:
+            airport["source_url"],airport["source_edition"]=reference
+            airport["source_store"]="iniBuilds — annonce officielle de mise à jour"
     # Référence produit officielle EDDB : l'annonce de blog ne contient pas
     # nécessairement le champ « Current version » de la fiche commerciale.
     for airport in airports:
@@ -266,6 +283,8 @@ def update_versions(airports):
                 # produit et l'éditeur sont alors recoupés séparément.
                 title=visible_text(body)[:3500].lower()
                 identity_alias={
+                    "inibuilds-airport-kdtw-detroit":("detroit","kdtw"),
+                    "inibuilds-airport-lowi-innsbruck":("innsbruck","lowi"),
                     "simwings-airport-eddm-munich":("munich","sim-wings"),
                     "aerosoft-airport-eddb-berlin-brandenburg":("berlin","brandenburg"),
                     "dfflyerdirect-city-rio-de-janeiro":("rio de janeiro","dfflyer"),
