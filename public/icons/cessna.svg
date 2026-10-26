@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path fill="white" d="M19.2 3.5h1.6l.6 2.4v11.2L37 19.7v3.7l-15.6-.5v9.6l5.6 2v2.1l-7-1.1-7 1.1v-2.1l5.6-2v-9.6L3 23.4v-3.7l15.6-2.6V5.9z"/><rect x="13" y="17.8" width="14" height="1.5" rx=".7" fill="white"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<!-- Cessna 172 vu du dessus : aile haute parfaitement droite, train et empennage distincts -->
+<g fill="#fff">
+<path d="M30.8 7.5Q32 5.5 33.2 7.5L34.3 13.5V29.5L35.3 47.5L34.1 54H29.9L28.7 47.5L29.7 29.5V13.5Z"/>
+<path d="M5 27.4Q4 27.4 4 29.2V34.8Q4 36.3 5.4 36.3L58.6 36.3Q60 36.3 60 34.8V29.2Q60 27.4 59 27.4Z"/>
+<path d="M22 51.3L42 51.3L44.7 55.2L44.7 57L19.3 57L19.3 55.2Z"/>
+<path d="M30.4 54L33.6 54L35.5 61L28.5 61Z"/>
+</g></svg>
