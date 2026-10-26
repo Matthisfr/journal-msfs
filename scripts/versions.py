@@ -83,9 +83,10 @@ def parse_version(raw, expected_name=None, store=None, edition=None):
         line=m.group(1)
         pair=re.findall(r"(\d+(?:\.\d+){1,4})\s*\(\s*MSFS\s*(2020|2024)\s*\)",line,re.I)
         if len(pair)>1:
-            if edition in ("2020","2024"):
+            target="2024" if "2024" in str(edition or "") else "2020" if "2020" in str(edition or "") else None
+            if target:
                 for version,sim in pair:
-                    if sim==edition: return version
+                    if sim==target: return version
             return None  # édition installée non identifiée
         match=re.match(r"\s*[vV]?\s*(\d+(?:\.\d+){1,4})\b",line)
         return match.group(1) if match else None
