@@ -82,7 +82,17 @@ async function renderMap(){
   if(!window.L){await new Promise((ok,no)=>{const s=document.createElement('script');s.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';s.onload=ok;s.onerror=no;document.head.appendChild(s)})}
   slot.innerHTML='<div id="airport-leaflet-map"></div><p class="map-caption">Vert : à jour · Orange : mise à jour disponible · Gris : non vérifié</p>';
   airportMap=L.map('airport-leaflet-map').setView([43.7,7.2],5);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(airportMap);
+  const baseMaps={
+    'Plan':L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}),
+    'Satellite':L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Tiles &copy; Esri and contributors'}),
+    'Relief':L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',{maxZoom:17,attribution:'&copy; OpenTopoMap contributors &copy; OpenStreetMap'}),
+    'Sombre':L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:'&copy; CARTO &copy; OpenStreetMap'})
+  };
+  const selectedStyle=(()=>{try{return localStorage.getItem('msfs-airport-map-style')||'Plan'}catch{return 'Plan'}})();
+  (baseMaps[selectedStyle]||baseMaps.Plan).addTo(airportMap);
+  const mapStyles=L.control.layers(baseMaps,null,{position:'topright',collapsed:true}).addTo(airportMap);
+  airportMap.on('baselayerchange',e=>{try{localStorage.setItem('msfs-airport-map-style',e.name)}catch{}});
+
   const groups={};for(const a of airports){const k=a.icao;if(data[k])(groups[k]??=[]).push(a)}
   const bounds=[];
   const mappedSceneCount=Object.values(groups).reduce((sum,items)=>sum+items.length,0);
