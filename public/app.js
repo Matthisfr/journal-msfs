@@ -81,6 +81,20 @@ async function renderMap(){
   const data=await fetch('airport_coordinates.json').then(r=>r.json());
   if(!window.L){await new Promise((ok,no)=>{const s=document.createElement('script');s.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';s.onload=ok;s.onerror=no;document.head.appendChild(s)})}
   slot.innerHTML='<div id="airport-leaflet-map"></div><p class="map-caption">Vert : à jour · Orange : mise à jour disponible · Gris : non vérifié</p>';
+  const mapElement=slot.querySelector('#airport-leaflet-map');
+  const fullscreenButton=document.createElement('button');
+  fullscreenButton.type='button';fullscreenButton.className='map-fullscreen-button';fullscreenButton.textContent='⛶ Plein écran';
+  fullscreenButton.setAttribute('aria-label','Afficher la carte en plein écran');
+  slot.appendChild(fullscreenButton);
+  const updateMapSize=()=>setTimeout(()=>airportMap&&airportMap.invalidateSize(),120);
+  const updateFullscreenLabel=()=>{const active=document.fullscreenElement===slot||slot.classList.contains('map-fullscreen-fallback');fullscreenButton.textContent=active?'✕ Quitter le plein écran':'⛶ Plein écran';fullscreenButton.setAttribute('aria-label',active?'Quitter le plein écran':'Afficher la carte en plein écran');updateMapSize()};
+  fullscreenButton.addEventListener('click',async()=>{
+   if(document.fullscreenElement===slot){await document.exitFullscreen();return}
+   if(slot.classList.contains('map-fullscreen-fallback')){slot.classList.remove('map-fullscreen-fallback');document.body.style.overflow='';updateFullscreenLabel();return}
+   try{if(!slot.requestFullscreen)throw new Error('fullscreen unsupported');await slot.requestFullscreen()}catch(_){slot.classList.add('map-fullscreen-fallback');document.body.style.overflow='hidden';updateFullscreenLabel()}
+  });
+  document.addEventListener('fullscreenchange',updateFullscreenLabel);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&slot.classList.contains('map-fullscreen-fallback')){slot.classList.remove('map-fullscreen-fallback');document.body.style.overflow='';updateFullscreenLabel()}});
   airportMap=L.map('airport-leaflet-map').setView([43.7,7.2],5);
   const baseMaps={
     'Plan':L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}),
