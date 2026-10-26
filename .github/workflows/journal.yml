@@ -127,13 +127,13 @@ jobs:
         if: steps.gate.outputs.run == 'true'
         run: |
           # La vérification des versions se fait chaque matin sur les fiches
-          # existantes. Les catalogues entiers sont rescannés le dimanche.
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.mode }}" == "totale" ]] || [[ "$(TZ=Europe/Paris date +%u)" == "7" && "${{ github.event_name }}" == "schedule" ]]; then
+          # existantes. Les catalogues entiers sont rescannés le samedi.
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.mode }}" == "totale" ]] || [[ "$(TZ=Europe/Paris date +%u)" == "6" && "${{ github.event_name }}" == "schedule" ]]; then
             python scripts/discover_airports.py || echo "Catalogue Contrail / iniBuilds indisponible"
             python scripts/discover_simmarket.py || echo "Recherche simMarket indisponible"
             python scripts/apply_airport_sources.py
           else
-            echo "Recherche catalogue complète : dimanche automatique ou lancement manuel en mode totale."
+            echo "Recherche catalogue complète : samedi automatique ou lancement manuel en mode totale."
           fi
 
       - name: Collecter METAR, TAF, actualités et versions de scènes
