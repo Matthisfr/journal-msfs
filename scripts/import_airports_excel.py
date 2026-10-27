@@ -24,7 +24,7 @@ def colmap(row):
  labels=[norm(x) for x in row]
  return {key:next((i for i,label in enumerate(labels) if label in names),None) for key,names in ALIASES.items()}
 def is_sub_scene(*values):
- return any(re.search(r"\\(\\s*sub\\b",str(value or ""),re.I) for value in values)
+ return any(re.search(r"\(\s*sub\b",str(value or ""),re.I) for value in values)
 
 def scene_type(code,name,folder):
  value=norm(" ".join(str(x or "") for x in (name,folder)))
