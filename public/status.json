@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-27",
-  "last_run": "2026-10-27T15:37:48.888794+00:00",
-  "weather_checked_at": "2026-10-27T15:37:48.888794+00:00",
-  "news_checked_at": "2026-10-27T15:37:48.888794+00:00",
+  "last_run": "2026-10-27T15:41:23.276127+00:00",
+  "weather_checked_at": "2026-10-27T15:41:23.276127+00:00",
+  "news_checked_at": "2026-10-27T15:41:23.276127+00:00",
   "weather": [
     {
       "icao": "PANC",
@@ -106,7 +106,7 @@
       "phenomenon": "Précipitations",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF MDSD 271600Z 2718/2818 17008KT 9999 FEW014CB SCT016 SCT070 BKN300 TEMPO 2718/2723 7000-RA FEW014CB BKN015 BKN070"
+      "taf_raw": "TAF MDSD COR 271600Z 2718/2818 17008KT 9999 FEW014CB SCT016 SCT070 BKN300 TEMPO 2718/2800 7000 -TSRA FEW014CB BKN015 BKN070"
     },
     {
       "icao": "EGPK",
@@ -137,8 +137,8 @@
   ],
   "weather_coverage": {
     "eligible": 190,
-    "received": 185,
-    "fresh": 185
+    "received": 176,
+    "fresh": 176
   },
   "news": [
     {
@@ -199,7 +199,7 @@
     },
     {
       "id": "779510",
-      "title": "[Blog] Briefing hebdomadaire du 22/10/2026",
+      "title": "[Blog] Briefing hebdomadaire du 2026-10-22",
       "category": "MSFS officiel",
       "date": "2026-10-22",
       "source": "Forum officiel Microsoft Flight Simulator",
@@ -267,7 +267,7 @@
   ],
   "hardware": [],
   "source_status": {
-    "metar": "ok",
+    "metar": "partial",
     "taf": "ok",
     "official_news": "ok",
     "airport_versions": "partial",
@@ -275,6 +275,7 @@
     "software_versions": "partial"
   },
   "errors": [
+    "HTTP Error 504: Gateway Time-out",
     "Versions : GMMX / PERFECTSOFT : Fiche 1.1.0 plus ancienne que l'installation 1.2.0 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : DTTA / prealsoft : Fiche 1.00 plus ancienne que l'installation 1.0.1 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : SLLP / Sierrasim Simulation : Fiche 1.0.0 plus ancienne que l'installation 1.0.2 : vérifier le canal éditeur, ne pas rétrograder",
@@ -302,15 +303,15 @@
     "without_official_url": 19,
     "manual_source": 1,
     "unverified": 49,
-    "audited_at": "2026-10-27T15:37:48.888794+00:00"
+    "audited_at": "2026-10-27T15:41:23.276127+00:00"
   },
-  "versions_checked_at": "2026-10-27T15:37:48.888794+00:00",
-  "releases_checked_at": "2026-10-27T15:37:48.888794+00:00",
+  "versions_checked_at": "2026-10-27T15:41:23.276127+00:00",
+  "releases_checked_at": "2026-10-27T15:41:23.276127+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-27T15:38:51.168127+00:00",
+    "checked_at": "2026-10-27T15:42:35.285555+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
