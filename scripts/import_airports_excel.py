@@ -52,7 +52,7 @@ def parse_addons_linker(sheet):
   code=str(row[6] or "").strip().upper()
   # Only heading rows (no ICAO) can change the active category.
   if not code:
-   for cell in (row[3],row[4],row[5]):
+   for cell in row[:6]:
     kind=section_kind(cell)
     if kind:
      section=kind
@@ -65,7 +65,8 @@ def parse_addons_linker(sheet):
   version=str(row[9] or "").strip()
   name=str(row[11] or folder).strip()
   if is_sub_scene(code,name,folder): continue
-  if section!="airports": continue
+  if section=="other": continue
+  if section is None and not re.search(r"(?:^|[-_])(airport|airports|heliport|helipad)(?:[-_]|$)",folder,re.I): continue
   if not re.fullmatch(r"[A-Z0-9]{4}",code) or not version or not folder or not name: continue
   original=code
   code=CORRECTIONS.get(code,code)
@@ -73,7 +74,7 @@ def parse_addons_linker(sheet):
                   "installed":version,"publisher":str(row[12] or "").strip(),
                   "region":region or country,"scene_type":scene_type(code,name,folder)})
  if not records:
-  raise ValueError("Section Aéroports absente ou vide dans l'export Addons Linker : import annulé")
+  raise ValueError("Aucune scène aéroport/héliport valide dans l'export Addons Linker : import annulé")
  return records
 
 def parse(book):
