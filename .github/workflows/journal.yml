@@ -14,13 +14,15 @@ on:
           - normale
           - totale
   schedule:
-    # Deux passages hors minute 0 pour limiter les retards GitHub Actions.
-    # Relance de diagnostic 2026-10-27 : un push sur main déclenche aussi la collecte.
-    # 05:17 France : principal ; 06:17 France : secours.
-    # UTC été/hiver : la porte ci-dessous valide le bon créneau.
+    # Cinq tentatives quotidiennes, 05:17-09:17 heure française.
+    # Les créneaux hors saison sont écartés par la porte ci-dessous.
+    # Plusieurs chances protègent des déclenchements GitHub retardés ou omis.
     - cron: '17 3 * * *'
     - cron: '17 4 * * *'
     - cron: '17 5 * * *'
+    - cron: '17 6 * * *'
+    - cron: '17 7 * * *'
+    - cron: '17 8 * * *'
 
 permissions:
   actions: read
@@ -39,15 +41,13 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Vérifier créneau quotidien et secours
+      - name: Vérifier fraîcheur réelle du journal et créneau de rattrapage
         id: gate
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPOSITORY: ${{ github.repository }}
-          GH_RUN_ID: ${{ github.run_id }}
           TRIGGER: ${{ github.event_name }}
-          CRON: ${{ github.event.schedule }}
         run: |
           if [[ "$TRIGGER" != "schedule" ]]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
@@ -55,47 +55,29 @@ jobs:
             exit 0
           fi
 
-          offset=$(TZ=Europe/Paris date +%z)
-          if [[ "$offset" == "+0200" ]]; then
-            primary="17 3 * * *"
-            backup="17 4 * * *"
-          else
-            primary="17 4 * * *"
-            backup="17 5 * * *"
-          fi
-
-          if [[ "$CRON" == "$primary" ]]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-            echo "Actualisation principale à 05:17 Europe/Paris"
-            exit 0
-          fi
-          if [[ "$CRON" != "$backup" ]]; then
-            echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "Créneau UTC hors saison ignoré"
-            exit 0
-          fi
-
-          # Le secours ne relance pas le journal si une exécution programmée
-          # a déjà réussi aujourd'hui. En cas d'erreur API, lancer le secours.
+          hour=$(TZ=Europe/Paris date +%H)
           today=$(TZ=Europe/Paris date +%F)
-          api="https://api.github.com/repos/$GH_REPOSITORY/actions/workflows/journal.yml/runs?event=schedule&per_page=30"
-          if ! payload=$(curl -fsSL --retry 2 -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "$api"); then
-            echo "API indisponible : secours autorisé"
-            echo "run=true" >> "$GITHUB_OUTPUT"
+          if (( 10#$hour < 5 || 10#$hour > 9 )); then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "Créneau hors fenêtre française 05h-09h"
             exit 0
           fi
-          if printf '%s' "$payload" | jq -e --arg today "$today" --arg self "$GH_RUN_ID" '
-            [.workflow_runs[] | select((.id|tostring) != $self)
-              | select(.event == "schedule" and .conclusion == "success")
-              | select((.created_at[0:10]) >= $today)] | length > 0
-          ' >/dev/null; then
-            echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "Publication programmée déjà réussie aujourd'hui : secours ignoré"
-          else
-            echo "run=true" >> "$GITHUB_OUTPUT"
-            echo "Aucune réussite programmée aujourd'hui : secours lancé"
-          fi
 
+          # Contrôler la date des DONNÉES réellement enregistrées, et non
+          # la conclusion success d'un workflow qui aurait sauté la collecte.
+          api="https://api.github.com/repos/$GH_REPOSITORY/contents/public/status.json?ref=main"
+          if payload=$(curl -fsSL --retry 2 -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "$api"); then
+            if printf '%s' "$payload" | jq -er '.content' | base64 -d | jq -e --arg today "$today" '
+              (.last_run // "" | split("T")[0]) == $today
+            ' >/dev/null; then
+              echo "run=false" >> "$GITHUB_OUTPUT"
+              echo "Collecte du $today déjà enregistrée : rattrapage inutile"
+              exit 0
+            fi
+          fi
+          echo "run=true" >> "$GITHUB_OUTPUT"
+          echo "Journal absent ou ancien pour $today : collecte/rattrapage lancé"
+          
       - name: Récupérer le dépôt
         if: steps.gate.outputs.run == 'true'
         uses: actions/checkout@v4
