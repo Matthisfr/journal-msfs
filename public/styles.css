@@ -230,3 +230,6 @@
 #google-map:fullscreen #airport-leaflet-map,#google-map.map-fullscreen-fallback #airport-leaflet-map{flex:1;min-height:0;height:100%!important;width:100%}
 #google-map:fullscreen .map-caption,#google-map.map-fullscreen-fallback .map-caption{display:none}
 #google-map.map-fullscreen-fallback{position:fixed!important;inset:0!important;width:100vw!important;height:100dvh!important;z-index:99999!important}
+
+/* Repère discret des aéroports possédant plusieurs scènes */
+.duplicate-badge{display:block;width:max-content;max-width:100%;margin-top:5px;padding:3px 5px;border:1px solid #bf7c0d;border-radius:5px;background:#ffbf4c;color:#171f2a;font-size:9px;line-height:1.2;font-weight:900;letter-spacing:.015em;white-space:nowrap}
