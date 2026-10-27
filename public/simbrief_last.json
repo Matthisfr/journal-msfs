@@ -1,7 +1,7 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-10-27T16:30:44.381633+00:00",
+  "retrieved_at": "2026-10-27T17:13:15.272858+00:00",
   "origin": {
     "icao": "HECA",
     "name": "CAIRO INTL"
@@ -15,6 +15,8 @@
   "route": "DCT CVO L677 MENLI N697 SISIK W976 TAKSU L550 KARIK B411 DEESA Y415 NIMAR G662 KUNEK KUNE1C",
   "altitude": "35000",
   "enroute_time": "02:00:17",
+  "scheduled_departure": "2026-10-27T14:25:00Z",
+  "scheduled_arrival": "2026-10-27T17:00:00Z",
   "generated_at": "2026-10-27T13:52:09Z",
   "route_points": [
     {
