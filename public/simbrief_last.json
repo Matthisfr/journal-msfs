@@ -1,7 +1,7 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-10-27T12:02:31.844014+00:00",
+  "retrieved_at": "2026-10-27T15:38:53.337657+00:00",
   "origin": {
     "icao": "HECA",
     "name": "CAIRO INTL"
@@ -13,7 +13,7 @@
   "flight_number": "2809",
   "aircraft": "A320",
   "route": "DCT CVO L677 MENLI N697 SISIK W976 TAKSU L550 KARIK B411 DEESA Y415 NIMAR G662 KUNEK KUNE1C",
-  "altitude": "37000",
-  "enroute_time": "02:01:52",
-  "generated_at": "2026-10-26T19:28:13Z"
+  "altitude": "35000",
+  "enroute_time": "02:00:17",
+  "generated_at": "2026-10-27T13:52:09Z"
 }
