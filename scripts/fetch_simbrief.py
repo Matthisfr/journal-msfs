@@ -50,6 +50,8 @@ def run():
             "aircraft": aircraft.get("icaocode") or aircraft.get("name"),
             "route": general.get("route"), "altitude": general.get("initial_altitude"),
             "enroute_time": times.get("est_time_enroute"),
+            "scheduled_departure": times.get("sched_out") or times.get("sched_off"),
+            "scheduled_arrival": times.get("sched_in") or times.get("sched_on"),
             "generated_at": (data.get("params") or {}).get("time_generated"),
             "route_points": route_points(data),
         }
