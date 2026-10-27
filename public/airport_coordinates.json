@@ -825,13 +825,6 @@
     "source": "OurAirports / airport-codes",
     "aircraft_marker": "airliner"
   },
-  "SBGL": {
-    "lat": -22.809999,
-    "lon": -43.250557,
-    "name": "Rio de Janeiro Galeão – Tom Jobim International Airport",
-    "source": "OurAirports / airport-codes",
-    "aircraft_marker": "airliner"
-  },
   "TFFF": {
     "lat": 14.591,
     "lon": -61.003201,
@@ -1286,5 +1279,61 @@
     "name": "Paro International Airport",
     "source": "OurAirports / airport-codes",
     "aircraft_marker": "cessna"
+  },
+  "ENTC": {
+    "lat": 69.683296,
+    "lon": 18.9189,
+    "name": "Tromsø Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "LFKT": {
+    "lat": 42.2919,
+    "lon": 9.189,
+    "name": "Aérodrome de Corte",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "cessna"
+  },
+  "LFLB": {
+    "lat": 45.6381,
+    "lon": 5.88023,
+    "name": "Chambéry Aix les Bains airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "LFNC": {
+    "lat": 44.701698,
+    "lon": 6.60028,
+    "name": "Mont-Dauphin Saint-Crépin Airfield",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "cessna"
+  },
+  "LGSK": {
+    "lat": 39.177101,
+    "lon": 23.5037,
+    "name": "Skiathos Island National Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "cessna"
+  },
+  "LGSM": {
+    "lat": 37.689999,
+    "lon": 26.911699,
+    "name": "Samos Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SBRJ": {
+    "lat": -22.910397,
+    "lon": -43.16282,
+    "name": "Santos Dumont Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "cessna"
+  },
+  "SLLP": {
+    "lat": -16.510272,
+    "lon": -68.189416,
+    "name": "El Alto International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
   }
 }
