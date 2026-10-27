@@ -71,6 +71,29 @@ function renderAirports(){
   }).join('')||'<tr><td colspan="5">Aucune scène correspondant à ces filtres.</td></tr>';
 }
 let airportMap=null;
+let simbriefRouteBounds=null;
+let focusSimbriefOnOpen=false;
+function focusSimbriefRoute(){
+ if(!airportMap||!simbriefRouteBounds)return;
+ airportMap.invalidateSize();
+ airportMap.fitBounds(simbriefRouteBounds,{padding:[65,65],maxZoom:9,animate:true});
+}
+function openSimbriefMap(){
+ focusSimbriefOnOpen=true;
+ switchView('aeroports');
+ if(airportMap&&simbriefRouteBounds){focusSimbriefOnOpen=false;setTimeout(focusSimbriefRoute,120)}
+}
+const simbriefHeader=document.querySelector('#simbrief-last-flight .sectionbar');
+if(simbriefHeader){
+ const eye=document.createElement('button');
+ eye.type='button';eye.className='textlink';eye.id='simbrief-map-eye';
+ eye.textContent='◉ Voir sur la carte';eye.title='Afficher et zoomer sur le dernier plan de vol SimBrief';
+ eye.setAttribute('aria-label','Voir le plan de vol SimBrief sur la carte');
+ eye.addEventListener('click',openSimbriefMap);
+ const refresh=document.querySelector('#simbrief-refresh');
+ if(refresh)refresh.before(eye);else simbriefHeader.appendChild(eye);
+}
+
 let airportMapMarkers=[];
 let airportMapCaption=null;
 function updateAirportMap(matches){
@@ -84,6 +107,11 @@ function updateAirportMap(matches){
  if(airportMapCaption)airportMapCaption.textContent=shown+' aéroports affichés sur '+airportMapMarkers.length+' géolocalisés · '+matches.length+' scènes filtrées · Vert : à jour · Orange : MAJ disponible · Gris : non vérifié';
 }
 
+function fromSimbriefBounds(fixes,start,end){
+ const coords=[];
+ for(const p of [start,...fixes,end])if(p&&Number.isFinite(Number(p.lat))&&Number.isFinite(Number(p.lon)))coords.push([Number(p.lat),Number(p.lon)]);
+ return coords.length>=2?L.latLngBounds(coords):null;
+}
 async function addSimbriefRoute(map, airportData, slot){
  try{
   const flight=await fetch('simbrief_last.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.json());
@@ -96,6 +124,7 @@ async function addSimbriefRoute(map, airportData, slot){
   const utc=t=>{if(!t)return '—';const s=String(t);const d=/^[0-9]{10,13}$/.test(s)?new Date(Number(s)*(s.length===10?1000:1)):new Date(s);return Number.isNaN(d.getTime())?'—':d.toISOString().slice(11,16)+'Z'};
   const duration=t=>{const s=String(t||'');const m=s.match(/^([0-9]+):([0-9]{2})/);return m?Number(m[1])+'h'+m[2]:'—'};
   const routeLabel=(t,placement='center')=>{const width=Math.max(110,Math.ceil(String(t).length*7.5)+22);const offset=placement==='right'?[-25,17]:placement==='left'?[width+25,17]:[width/2,17];return L.divIcon({className:'simbrief-label',html:'<div style="box-sizing:border-box;width:'+width+'px;background:#102c42;color:white;border:1px solid white;border-radius:6px;padding:7px 10px;white-space:nowrap;font-size:12px;font-weight:bold;text-align:center;box-shadow:0 2px 5px #0007">'+esc(t)+'</div>',iconSize:[width,32],iconAnchor:offset});};
+  simbriefRouteBounds=fromSimbriefBounds(fixes,start,end);
   const layer=L.layerGroup().addTo(map);
   const icon=(type)=>L.divIcon({className:'simbrief-aircraft',html:'<span style="display:grid;place-items:center;background:#102c42;border:2px solid white;color:white;border-radius:50%;width:38px;height:38px;font-size:23px">'+(type==='departure'?'🛫':'🛬')+'</span>',iconSize:[38,38],iconAnchor:[19,19]});
   const from=valid(start)?[Number(start.lat),Number(start.lon)]:points[0];
@@ -184,7 +213,8 @@ async function renderMap(){
   }
   updateAirportMap(airports.filter(a=>{const q=$('#airport-search').value.trim().toLowerCase(),region=$('#region-filter').value,st=$('#status-filter').value;const code=String(a.icao||'').trim().toUpperCase();const counts=airports.filter(x=>String(x.icao||'').trim().toUpperCase()===code).length;const verified=!!a.server_version&&a.version_check_state==='verified'&&a.version_checked_at===String(status.versions_checked_at||'').slice(0,10);return (!q||[a.icao,a.original,a.name,a.publisher,a.folder,a.country,a.region,a.installed,a.server_version].join(' ').toLowerCase().includes(q))&&(!region||(a.region||a.country)===region)&&(!st||(st==='duplicates'?counts>1:st==='verified'?verified:st==='current'?verified&&a.version_comparison==='equal':st==='update'?verified&&a.version_comparison==='update':a.status===st))}));
   await addSimbriefRoute(airportMap,data,slot);
-  if(bounds.length)airportMap.fitBounds(bounds,{padding:[20,20],maxZoom:7});
+  if(focusSimbriefOnOpen&&simbriefRouteBounds){focusSimbriefOnOpen=false;focusSimbriefRoute();}
+  else if(bounds.length)airportMap.fitBounds(bounds,{padding:[20,20],maxZoom:7});
   setTimeout(()=>airportMap.invalidateSize(),100);
  }catch(e){slot.textContent='Carte momentanément indisponible : '+e.message}
 }
