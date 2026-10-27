@@ -71,7 +71,7 @@ def main():
                 if length>=1800 and width>=30 and paved:
                     best[code]=True
         # Aéroports commerciaux à pistes courtes : ne pas les confondre avec des aérodromes légers.
-        commercial_airports={"LGMK","LGSR","EKVG","LESO"}
+        commercial_airports={"LGMK","LGSR","EKVG","LESO","VQPR"}
         for code in result:
             if code in found:
                 result[code]["aircraft_marker"]="airliner" if best.get(code) or code in commercial_airports else "cessna"
