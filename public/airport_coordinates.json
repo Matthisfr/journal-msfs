@@ -1335,5 +1335,12 @@
     "name": "El Alto International Airport",
     "source": "OurAirports / airport-codes",
     "aircraft_marker": "airliner"
+  },
+  "LDSP": {
+    "lat": 43.538898,
+    "lon": 16.298,
+    "name": "Split Saint Jerome Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
   }
 }
