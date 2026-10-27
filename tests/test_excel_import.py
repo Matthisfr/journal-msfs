@@ -27,7 +27,7 @@ class ExcelImportTests(unittest.TestCase):
   rows[0]["installed"]="1.3.0"
   updated=module.merge(rows,old)
   self.assertNotIn("server_version",updated[0])
- def test_reject_duplicate_folder(self):
+ def test_ignore_identical_duplicate_folder(self):
   row={"icao":"LFPG","original":"LFPG","name":"Paris","folder":"same","installed":"1","publisher":"A","region":"EUROPE"}
-  with self.assertRaises(ValueError): module.merge([row,row],[])
+  self.assertEqual(len(module.merge([row,row],[])),1)
 if __name__=="__main__":unittest.main()
