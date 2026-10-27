@@ -1,7 +1,7 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-10-27T16:05:43.868289+00:00",
+  "retrieved_at": "2026-10-27T16:30:44.381633+00:00",
   "origin": {
     "icao": "HECA",
     "name": "CAIRO INTL"
@@ -15,5 +15,147 @@
   "route": "DCT CVO L677 MENLI N697 SISIK W976 TAKSU L550 KARIK B411 DEESA Y415 NIMAR G662 KUNEK KUNE1C",
   "altitude": "35000",
   "enroute_time": "02:00:17",
-  "generated_at": "2026-10-27T13:52:09Z"
+  "generated_at": "2026-10-27T13:52:09Z",
+  "route_points": [
+    {
+      "lat": 30.092306,
+      "lon": 31.388417,
+      "name": "CVO"
+    },
+    {
+      "lat": 29.915,
+      "lon": 31.663056,
+      "name": "GESON"
+    },
+    {
+      "lat": 29.783333,
+      "lon": 31.868333,
+      "name": "MENLI"
+    },
+    {
+      "lat": 29.6,
+      "lon": 32.685,
+      "name": "SISIK"
+    },
+    {
+      "lat": 29.6075,
+      "lon": 33.816944,
+      "name": "VUTAR"
+    },
+    {
+      "lat": 29.606667,
+      "lon": 34.233333,
+      "name": "DATOK"
+    },
+    {
+      "lat": 29.606971,
+      "lon": 34.539838,
+      "name": "TOC"
+    },
+    {
+      "lat": 29.606944,
+      "lon": 34.606389,
+      "name": "TAKSU"
+    },
+    {
+      "lat": 29.4425,
+      "lon": 34.761389,
+      "name": "KARIK"
+    },
+    {
+      "lat": 29.414167,
+      "lon": 34.971667,
+      "name": "ULINA"
+    },
+    {
+      "lat": 29.533556,
+      "lon": 35.483361,
+      "name": "ELETA"
+    },
+    {
+      "lat": 29.611111,
+      "lon": 35.811111,
+      "name": "TAMIM"
+    },
+    {
+      "lat": 29.701667,
+      "lon": 36.369444,
+      "name": "PETRA"
+    },
+    {
+      "lat": 29.7525,
+      "lon": 36.683889,
+      "name": "DEESA"
+    },
+    {
+      "lat": 29.486667,
+      "lon": 37.9925,
+      "name": "BOSAL"
+    },
+    {
+      "lat": 29.322778,
+      "lon": 38.903056,
+      "name": "LABAD"
+    },
+    {
+      "lat": 29.109722,
+      "lon": 39.906944,
+      "name": "NIMAR"
+    },
+    {
+      "lat": 27.916111,
+      "lon": 41.173333,
+      "name": "EGVOP"
+    },
+    {
+      "lat": 27.425056,
+      "lon": 41.682917,
+      "name": "HIL"
+    },
+    {
+      "lat": 27.084722,
+      "lon": 42.326667,
+      "name": "DAROP"
+    },
+    {
+      "lat": 26.645,
+      "lon": 43.144444,
+      "name": "MODIV"
+    },
+    {
+      "lat": 26.298083,
+      "lon": 43.779611,
+      "name": "GAS"
+    },
+    {
+      "lat": 25.860556,
+      "lon": 44.724444,
+      "name": "KUSRO"
+    },
+    {
+      "lat": 25.690853,
+      "lon": 45.085078,
+      "name": "TOD"
+    },
+    {
+      "lat": 25.667778,
+      "lon": 45.133889,
+      "name": "SIVIS"
+    },
+    {
+      "lat": 25.357222,
+      "lon": 45.786667,
+      "name": "KUNEK"
+    },
+    {
+      "lat": 25.101667,
+      "lon": 46.386806,
+      "name": "KITAM"
+    },
+    {
+      "lat": 24.962778,
+      "lon": 46.708056,
+      "name": "OERK"
+    }
+  ]
 }
