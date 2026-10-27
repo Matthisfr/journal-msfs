@@ -23,7 +23,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/netdesign-daag-algiers-intl-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "OMDU",
@@ -45,7 +46,8 @@
     "source_match": "Identité du produit et édition vérifiées par recherche du 25 octobre 2026",
     "version_check_reason": "Sous-scène : la version du produit parent n'est pas la version de ce module",
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
-    "source_scope": "parent_reference_only"
+    "source_scope": "parent_reference_only",
+    "scene_type": "airport"
   },
   {
     "icao": "OMDB",
@@ -71,7 +73,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/inibuilds-dubai-omdb-msfs-2024",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "OERK",
@@ -97,7 +100,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/azrsim-riyadh-oerk-for-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "HECA",
@@ -123,7 +127,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/sim-design-group-cairo-heca-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "GMMX",
@@ -149,7 +154,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/perfectsoft-marrakech-menara-gmmx-msfs",
     "version_comparison": "source_older",
-    "version_check_reason": "Fiche 1.1.0 plus ancienne que l'installation 1.2.0 : vérifier le canal éditeur, ne pas rétrograder"
+    "version_check_reason": "Fiche 1.1.0 plus ancienne que l'installation 1.2.0 : vérifier le canal éditeur, ne pas rétrograder",
+    "scene_type": "airport"
   },
   {
     "icao": "GMMN",
@@ -175,7 +181,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/prealsoft-casablanca-gmmn-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "OOMS",
@@ -199,7 +206,8 @@
     "source_match": "Fiche officielle du produit exact",
     "version_checked_at": "2026-10-27",
     "version_source_url": "https://inibuilds.com/products/double-t-muscat-ooms-msfs",
-    "version_comparison": "equal"
+    "version_comparison": "equal",
+    "scene_type": "airport"
   },
   {
     "icao": "ROAH",
@@ -225,7 +233,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/mk-studios-roah-naha-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "DTTJ",
@@ -249,7 +258,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_checked_at": "2026-10-27",
     "version_source_url": "https://www.aerosoft.com/fr/boutique/flight/microsoft-flight-simulator/msfs-2020/msfs-scenes/msfs-afrique/4162/fsdg-djerba-msfs",
-    "version_comparison": "equal"
+    "version_comparison": "equal",
+    "scene_type": "airport"
   },
   {
     "icao": "DTTA",
@@ -275,7 +285,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/prealsoft-tunis-carthage-dtta-msfs",
     "version_comparison": "source_older",
-    "version_check_reason": "Fiche 1.00 plus ancienne que l'installation 1.0.1 : vérifier le canal éditeur, ne pas rétrograder"
+    "version_check_reason": "Fiche 1.00 plus ancienne que l'installation 1.0.1 : vérifier le canal éditeur, ne pas rétrograder",
+    "scene_type": "airport"
   },
   {
     "icao": "DTMB",
@@ -299,7 +310,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_checked_at": "2026-10-27",
     "version_source_url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-africa/4498/fsdg-monastir-msfs",
-    "version_comparison": "equal"
+    "version_comparison": "equal",
+    "scene_type": "airport"
   },
   {
     "icao": "SBGL",
@@ -323,7 +335,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_checked_at": "2026-10-27",
     "version_source_url": "https://contrail.shop/collections/dfflyer-direct/products/dfflyer-rio-de-janeiro-msfs-2020-2024",
-    "version_comparison": "equal"
+    "version_comparison": "equal",
+    "scene_type": "airport"
   },
   {
     "icao": "CYYZ",
@@ -349,7 +362,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/flytampa-toronto-msfs.phtml",
     "version_comparison": "source_older",
-    "version_check_reason": "Fiche 1.2 plus ancienne que l'installation 1.5.0 : vérifier le canal éditeur, ne pas rétrograder"
+    "version_check_reason": "Fiche 1.2 plus ancienne que l'installation 1.5.0 : vérifier le canal éditeur, ne pas rétrograder",
+    "scene_type": "airport"
   },
   {
     "icao": "CYVR",
@@ -374,7 +388,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_checked_at": "2026-10-27",
     "version_source_url": "https://secure.simmarket.com/fsdreamteam-vancouver-v2-msfs.phtml",
-    "version_comparison": "source_older"
+    "version_comparison": "source_older",
+    "scene_type": "airport"
   },
   {
     "icao": "CYUL",
@@ -400,7 +415,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/cyul-montreal-trudeau-international-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "TJSJ",
@@ -421,7 +437,8 @@
     "source_edition": "2024",
     "source_match": "Identité du produit et édition vérifiées par recherche du 25 octobre 2026",
     "version_check_reason": "Version visible uniquement dans Orbx Central (connexion au compte requise)",
-    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00"
+    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
+    "scene_type": "airport"
   },
   {
     "icao": "TFFR",
@@ -447,7 +464,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/tffr-pointe-a-pitre-international-airport-msfs",
     "version_comparison": "source_older",
-    "version_check_reason": "Fiche 1.5.0 plus ancienne que l'installation 1.5.1 : vérifier le canal éditeur, ne pas rétrograder"
+    "version_check_reason": "Fiche 1.5.0 plus ancienne que l'installation 1.5.1 : vérifier le canal éditeur, ne pas rétrograder",
+    "scene_type": "airport"
   },
   {
     "icao": "TFFF",
@@ -473,7 +491,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/tropicalsim-fort-de-france-martinique-tfff-v2-msfs.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "MUHA",
@@ -497,7 +516,8 @@
     "server_version": "2",
     "version_checked_at": "2026-10-27",
     "version_source_url": "https://secure.simmarket.com/mex-high-flight-muha-la-habana-jose-marti-international-airport-msfs.phtml",
-    "version_comparison": "equal"
+    "version_comparison": "equal",
+    "scene_type": "airport"
   },
   {
     "icao": "MDSD",
@@ -517,7 +537,8 @@
     "source_edition": "2020+2024",
     "source_match": "Identité du produit et édition vérifiées par recherche du 25 octobre 2026",
     "version_check_reason": "Fiche accessible, mais aucun numéro de version public fiable ou édition ambiguë",
-    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00"
+    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
+    "scene_type": "airport"
   },
   {
     "icao": "LATI",
@@ -542,7 +563,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/mxi-design-tirana-nene-tereza-lati-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LATI",
@@ -567,7 +589,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/salvuz-tirana-lati-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EDLW",
@@ -588,7 +611,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "source_store": "Aerosoft / Pavel Movzer",
     "source_edition": "2020+2024",
-    "source_match": "Fiche officielle du produit exact"
+    "source_match": "Fiche officielle du produit exact",
+    "scene_type": "airport"
   },
   {
     "icao": "EDDV",
@@ -614,7 +638,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/sofly-eddv-hannover-airport-msfs-2020-2024",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EDDS",
@@ -640,7 +665,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/rdpresets-edds-stuttgart-int.-airport-msfs.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EDDM",
@@ -662,7 +688,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_check_reason": "Version équivalente publiée sur la fiche exacte",
     "version_source_url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/3253/sim-wings-munich-v2",
-    "version_comparison": "equal"
+    "version_comparison": "equal",
+    "scene_type": "airport"
   },
   {
     "icao": "EDDL",
@@ -684,7 +711,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/4547/aerosoft-airport-dusseldorf",
     "version_check_reason": "Version équivalente publiée sur la fiche exacte",
-    "version_comparison": "equal"
+    "version_comparison": "equal",
+    "scene_type": "airport"
   },
   {
     "icao": "EDDL",
@@ -711,7 +739,8 @@
     "version_source_url": "https://contrail.shop/products/mk-studios-eddl-dusseldorf-airport-msfs-2020-2024",
     "version_comparison": "equal",
     "installed_source": "Export APT 4(3).xlsx — 2026-10-25",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EDDK",
@@ -733,7 +762,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/3237/aerosoft-airport-cologne/bonn",
     "version_check_reason": "Version équivalente publiée sur la fiche exacte",
-    "version_comparison": "equal"
+    "version_comparison": "equal",
+    "scene_type": "airport"
   },
   {
     "icao": "EDDH",
@@ -755,7 +785,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://www.aerosoft.com/us/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/3254/sim-wings-hamburg",
     "version_check_reason": "Version équivalente publiée sur la fiche exacte",
-    "version_comparison": "equal"
+    "version_comparison": "equal",
+    "scene_type": "airport"
   },
   {
     "icao": "EDDG",
@@ -781,7 +812,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/mm-simulations-eddg-munster-osnabruck-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EDDF",
@@ -803,7 +835,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://www.aerosoft.com/us/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/4398/aerosoft-mega-airport-frankfurt",
     "version_check_reason": "Version équivalente publiée sur la fiche exacte",
-    "version_comparison": "equal"
+    "version_comparison": "equal",
+    "scene_type": "airport"
   },
   {
     "icao": "EDDB",
@@ -832,7 +865,8 @@
     "source_edition": "MSFS 2024",
     "source_store": "Aerosoft",
     "version_source_url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/3252/aerosoft-mega-airport-berlin-brandenburg-v3",
-    "version_comparison": "equal"
+    "version_comparison": "equal",
+    "scene_type": "airport"
   },
   {
     "icao": "EINN",
@@ -858,7 +892,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/einn-shannon-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EIDW",
@@ -884,7 +919,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/eidw-dublin-airport-v2-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EICK",
@@ -910,7 +946,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/eick-cork-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EGPK",
@@ -935,7 +972,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/uk2000-scenery-glasgow-prestwick-airport-msfs.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EGPF",
@@ -960,7 +998,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/uk2000-scenery-glasgow-2020hd-msfs.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EGLL",
@@ -986,7 +1025,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/inibuilds-london-heathrow-egll-msfs-2024",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EGKK",
@@ -1012,7 +1052,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/inibuilds-london-gatwick-egkk-msfs-2024",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EGCC",
@@ -1036,7 +1077,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_checked_at": "2026-10-27",
     "version_source_url": "https://secure.simmarket.com/taimodels-manchester-intl-airport-msfs.phtml",
-    "version_comparison": "update"
+    "version_comparison": "update",
+    "scene_type": "airport"
   },
   {
     "icao": "LOWS",
@@ -1062,7 +1104,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/lows-salzburg-airport",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LOWS",
@@ -1088,7 +1131,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/rdpresets-lows-salzburg-airport-msfs.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LOWI",
@@ -1114,7 +1158,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/inibuilds-innsbruck-lowi-msfs",
     "version_comparison": "source_older",
-    "version_check_reason": "Fiche 1.0.2 plus ancienne que l'installation 1.0.3 : vérifier le canal éditeur, ne pas rétrograder"
+    "version_check_reason": "Fiche 1.0.2 plus ancienne que l'installation 1.0.3 : vérifier le canal éditeur, ne pas rétrograder",
+    "scene_type": "airport"
   },
   {
     "icao": "EBBR",
@@ -1136,7 +1181,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/3238/aerosoft-mega-airport-brussels",
     "version_check_reason": "Version équivalente publiée sur la fiche exacte",
-    "version_comparison": "equal"
+    "version_comparison": "equal",
+    "scene_type": "airport"
   },
   {
     "icao": "LBSF",
@@ -1161,7 +1207,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/aflosim-lbsf-sofia-airport-msfs.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LBSF",
@@ -1186,7 +1233,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/fly2high-sofia-lbsf-msfs",
     "version_comparison": "incomparable",
-    "version_check_reason": "Numérotation / édition différente : installée 1.0.0, boutique 2.0.0 ; comparaison interdite"
+    "version_check_reason": "Numérotation / édition différente : installée 1.0.0, boutique 2.0.0 ; comparaison interdite",
+    "scene_type": "airport"
   },
   {
     "icao": "LCLK",
@@ -1211,7 +1259,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/inibuilds-larnaca-lclk-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LDZA",
@@ -1237,7 +1286,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/ldza-zagreb-intl",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EKCH",
@@ -1263,7 +1313,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/simnord-ekch-copenhagen-airport-msfs2420.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LXGB",
@@ -1289,7 +1340,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/lxgb-gibraltar-msfs",
     "version_comparison": "update",
-    "version_check_reason": "Version plus récente publiée sur la fiche exacte"
+    "version_check_reason": "Version plus récente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LEZL",
@@ -1315,7 +1367,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/lezl-seville-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LESO",
@@ -1341,7 +1394,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/leso-san-sebastian-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LEPA",
@@ -1367,7 +1421,8 @@
     "reference_version": "2026.09.14",
     "reference_source_url": "https://fr.flightsim.to/addon/84186/lepa-palma-de-mallorca-airport",
     "reference_confidence": "publisher_page_human_checked",
-    "reference_checked_at": "2026-10-25"
+    "reference_checked_at": "2026-10-25",
+    "scene_type": "airport"
   },
   {
     "icao": "LEMG",
@@ -1393,7 +1448,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/lemg-malaga-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LEMD",
@@ -1419,7 +1475,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/lemd-madrid-barajas-intl",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LEIB",
@@ -1446,7 +1503,8 @@
     "version_source_url": "https://inibuilds.com/products/inibuilds-ibiza-leib-msfs2024",
     "version_comparison": "equal",
     "installed_source": "Export APT 4(3).xlsx — 2026-10-25",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LEGE",
@@ -1472,7 +1530,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/lege-girona-costa-brava-airport-msfs-1",
     "version_comparison": "update",
-    "version_check_reason": "Version plus récente publiée sur la fiche exacte"
+    "version_check_reason": "Version plus récente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LEBL",
@@ -1498,7 +1557,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/mk-studios-lebl-barcelona-intl-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "GCFV",
@@ -1524,7 +1584,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/gcfv-fuerteventura-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EETN",
@@ -1549,7 +1610,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/eetn-tallinn-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EFRO",
@@ -1576,7 +1638,8 @@
     "version_source_url": "https://contrail.shop/products/mk-studios-efro-rovaniemi-airport-v2-msfs-2020-2024",
     "version_comparison": "equal",
     "installed_source": "Export APT 4(3).xlsx — 2026-10-25",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EFHK",
@@ -1602,7 +1665,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/mk-studios-efhk-helsinki-airport-v2-msfs-2020-2024",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LFTZ",
@@ -1629,7 +1693,8 @@
     "version_source_url": "https://inibuilds.com/products/pilot-experience-sim-saint-tropez-lftz-msfs",
     "version_comparison": "equal",
     "installed_source": "Export APT 4(3).xlsx — 2026-10-25",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LFST",
@@ -1655,7 +1720,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/france-vfr-lfst-strasbourg-entzheim-msfs.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LFSB",
@@ -1681,7 +1747,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/france-vfr-lfsb-basel-mulhouse-freiburg-msfs.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LFRS",
@@ -1707,7 +1774,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/france-vfr-lfrs-nantes-atlantique-msfs.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LFRN",
@@ -1733,7 +1801,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/france-vfr-lfrn-rennes-bretagne-msfs.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LFPO",
@@ -1760,7 +1829,8 @@
     "version_source_url": "https://contrail.shop/products/lfpo-paris-orly-intl",
     "version_comparison": "equal",
     "installed_source": "Export APT 4(3).xlsx — 2026-10-25",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LFNA",
@@ -1786,7 +1856,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/fsx3d-gap-tallard-lfna-msfs.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LFMT",
@@ -1813,7 +1884,8 @@
     "version_source_url": "https://inibuilds.com/products/pilot-experience-sim-montpellier-lfmt-msfs",
     "version_comparison": "equal",
     "installed_source": "Export APT 4(3).xlsx — 2026-10-25",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LFMN",
@@ -1832,7 +1904,8 @@
     "version_check_reason": "Aucune fiche officielle du produit exact identifiée",
     "installed_source": "Export APT 4(3).xlsx — 2026-10-25",
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
-    "last_audited_at": "2026-10-27T08:11:03.679738+00:00"
+    "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
+    "scene_type": "airport"
   },
   {
     "icao": "LFMN",
@@ -1859,7 +1932,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_checked_at": "2026-10-27",
     "version_source_url": "https://secure.simmarket.com/justsim-nice-cote-dazur-airport-msfs24.phtml",
-    "version_comparison": "incomparable"
+    "version_comparison": "incomparable",
+    "scene_type": "airport"
   },
   {
     "icao": "LFML",
@@ -1885,7 +1959,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/lfml-marseille-provence-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LFMD",
@@ -1911,7 +1986,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/flydesign-lfmdceq-cannes-mandelieu-airport-msfs.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LFKJ",
@@ -1937,7 +2013,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/france-vfr-lfkj-ajaccio-msfs2420.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LFKJ",
@@ -1964,7 +2041,8 @@
     "version_source_url": "https://inibuilds.com/products/pilot-experience-sim-ajaccio-lfkj-msfs",
     "version_comparison": "equal",
     "installed_source": "Export APT 4(3).xlsx — 2026-10-25",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LFKF",
@@ -1990,7 +2068,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/france-vfr-lfkf-figari-sud-corse-msfs2420.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LFKC",
@@ -2016,7 +2095,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/france-vfr-lfkc-calvi-sainte-catherine-msfs2420.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LFKC",
@@ -2042,7 +2122,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/fsx3d-calvi-st-catherine-airport-lfkc-msfs.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LFKC",
@@ -2068,7 +2149,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/vref-simulations-lfkc-calvi-st.catherine-airport-msfs.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LFKB",
@@ -2094,7 +2176,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/france-vfr-lfkb-bastia-poretta-msfs2420-(en_20850).phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LFJL",
@@ -2120,7 +2203,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/france-vfr-lfjl-metz-nancy-lorraine-msfs.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LFBO",
@@ -2146,7 +2230,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/lfbo-toulouse-blagnac-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LFBD",
@@ -2173,7 +2258,8 @@
     "version_source_url": "https://inibuilds.com/products/pilot-experience-sim-bordeaux-lfbd-msfs",
     "version_comparison": "equal",
     "installed_source": "Export APT 4(3).xlsx — 2026-10-25",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LGSR",
@@ -2199,7 +2285,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/lgsr-santorini-airport-island-msfs24",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LGRP",
@@ -2224,7 +2311,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/justsim-rhodes-international-airport-diagoras-(en_19773).phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LGMK",
@@ -2250,7 +2338,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/29palms-lgmk-mykonos-airport-msfs-2024",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LGAV",
@@ -2276,28 +2365,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/lgav-athens-msfs",
     "version_comparison": "incomparable",
-    "version_check_reason": "Numérotation / édition différente : installée 1.7.0, boutique 2.2.0 ; comparaison interdite"
-  },
-  {
-    "icao": "(SUB LGSR)",
-    "original": "(SUB LGSR)",
-    "name": "FixTrees",
-    "folder": "29palms-airport-lgsr-santorini-fixtrees",
-    "publisher": "E. Stefanakis, L. Pinkenburg",
-    "installed": "1.0.1",
-    "region": "EUROPE",
-    "country": "EUROPE",
-    "status": "UNK-C",
-    "note": "",
-    "source_url": "https://contrail.shop/products/lgsr-santorini-airport-island-msfs24",
-    "server_version": null,
-    "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
-    "version_check_state": "not_automatable",
-    "version_check_reason": "Sous-scène : la version du produit parent n'est pas la version de ce module",
-    "source_store": "Référence au produit principal : LGSR 29Palms parent",
-    "source_scope": "parent_reference_only",
-    "source_match": "Sous-package : version autonome non publiée sur cette fiche",
-    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00"
+    "version_check_reason": "Numérotation / édition différente : installée 1.7.0, boutique 2.2.0 ; comparaison interdite",
+    "scene_type": "airport"
   },
   {
     "icao": "BGSF",
@@ -2323,7 +2392,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/bgsf-kangerlussuaq-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EHRD",
@@ -2349,7 +2419,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/ehrd-rotterdam-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EHAM",
@@ -2374,7 +2445,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/flytampa-eham-amsterdam-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LHBP",
@@ -2400,7 +2472,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/sofly-lhbp-budapest-airport-msfs2024",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EKVG",
@@ -2426,7 +2499,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/mkstudios-ekvg-vagar-airport-v2-msfs2024",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "BIKF",
@@ -2452,7 +2526,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/mk-studios-keflavik-reykjavik-airports-v2-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LIRN",
@@ -2478,7 +2553,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/lirn-naples-airport",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LIRF",
@@ -2505,7 +2581,8 @@
     "version_source_url": "https://contrail.shop/products/mk-studios-lirf-rome-fiumicino-v2-msfs-2020-2024",
     "version_comparison": "equal",
     "installed_source": "Export APT 4(3).xlsx — 2026-10-25",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LIPZ",
@@ -2532,7 +2609,8 @@
     "source_store": "Beautiful Model of the World",
     "version_checked_at": "2026-10-27",
     "version_source_url": "https://beautifulmodelworld.com/",
-    "version_comparison": "incomparable"
+    "version_comparison": "incomparable",
+    "scene_type": "airport"
   },
   {
     "icao": "LIPE",
@@ -2558,7 +2636,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/lipe-bologna-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LIML",
@@ -2584,7 +2663,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/liml-milan-linate-intl",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LIMC",
@@ -2611,7 +2691,8 @@
     "version_source_url": "https://contrail.shop/products/aerosoft-limc-milan-malpensa-msfs",
     "version_comparison": "equal",
     "installed_source": "Export APT 4(3).xlsx — 2026-10-25",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LICJ",
@@ -2637,7 +2718,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/licj-palermo-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EVRA",
@@ -2662,7 +2744,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/justsim-riga-latvia-evra-msfs.phtml",
     "version_comparison": "update",
-    "version_check_reason": "Version plus récente publiée sur la fiche exacte"
+    "version_check_reason": "Version plus récente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EVRA",
@@ -2687,7 +2770,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/lisium-evra-riga-international.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EYVI",
@@ -2712,7 +2796,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/lisium-eyvi-vilnius-msfs2024.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "EYVI",
@@ -2737,7 +2822,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/mm-simulations-eyvi-vilnius-international-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "ELLX",
@@ -2762,7 +2848,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/atelic-ellx-luxembourg-airport-msfs-2020-2024",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "ELLX",
@@ -2787,7 +2874,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/justsim-ellx-luxemburg-airport-ng-series-msfs24.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LMML",
@@ -2813,7 +2901,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/inibuilds-malta-lmml-msfs-2024",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LMML",
@@ -2838,7 +2927,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/justsim-malta-international-airport-msfs.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "ENGM",
@@ -2860,7 +2950,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/4286/aerosoft-mega-airport-oslo-gardermoen",
     "version_check_reason": "Version équivalente publiée sur la fiche exacte",
-    "version_comparison": "equal"
+    "version_comparison": "equal",
+    "scene_type": "airport"
   },
   {
     "icao": "EPWA",
@@ -2885,7 +2976,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/fly2high-warsaw-chopin-epwa-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LPPT",
@@ -2911,7 +3003,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/mk-studios-lisbon-lppt-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LPPR",
@@ -2932,7 +3025,8 @@
     "source_edition": "2020",
     "source_match": "Identité du produit et édition vérifiées par recherche du 25 octobre 2026",
     "version_check_reason": "Fiche accessible, mais aucun numéro de version public fiable ou édition ambiguë",
-    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00"
+    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
+    "scene_type": "airport"
   },
   {
     "icao": "LPFR",
@@ -2958,7 +3052,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/lpfr-faro-international-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LROP",
@@ -2983,7 +3078,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/barelli-msfs-addon-bucharest-otopeni-lrop-v2-msfs2024.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LKPR",
@@ -2998,7 +3094,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_check_state": "no_source",
-    "version_check_reason": "Aucune fiche officielle du produit exact identifiée"
+    "version_check_reason": "Aucune fiche officielle du produit exact identifiée",
+    "scene_type": "airport"
   },
   {
     "icao": "LKPR",
@@ -3023,7 +3120,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/lkpr-prague-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LYBE",
@@ -3048,7 +3146,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/fly2high-belgrade-lybe-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "ESSA",
@@ -3070,7 +3169,8 @@
     "source_edition": "MSFS 2020",
     "source_title": "ESSA Stockholm-Arlanda Airport",
     "source_note": "Une édition MSFS 2024 distincte existe ; vérifier dans Orbx Central",
-    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00"
+    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
+    "scene_type": "airport"
   },
   {
     "icao": "ESGG",
@@ -3092,7 +3192,8 @@
     "source_edition": "MSFS 2020 / compatible 2024",
     "source_title": "ESGG Gothenburg Landvetter",
     "source_note": "Orbx Central est nécessaire ; numéro de version non publié sur la page",
-    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00"
+    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
+    "scene_type": "airport"
   },
   {
     "icao": "LSZH",
@@ -3117,7 +3218,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_checked_at": "2026-10-27",
     "version_source_url": "https://secure.simmarket.com/fsdreamteam-zurich-airport-msfs.phtml",
-    "version_comparison": "source_older"
+    "version_comparison": "source_older",
+    "scene_type": "airport"
   },
   {
     "icao": "LSZH",
@@ -3144,7 +3246,8 @@
     "version_source_url": "https://contrail.shop/products/mk-studios-lszh-zurich-airport-msfs",
     "version_comparison": "equal",
     "installed_source": "Export APT 4(3).xlsx — 2026-10-25",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LSGG",
@@ -3171,7 +3274,8 @@
     "version_source_url": "https://contrail.shop/products/jetstream-designs-lsgg-geneva-airport-msfs",
     "version_comparison": "equal",
     "installed_source": "Export APT 4(3).xlsx — 2026-10-25",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "LTFM",
@@ -3195,7 +3299,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_checked_at": "2026-10-27",
     "version_source_url": "https://secure.simmarket.com/scenerytr-istanbul-airport-ltfm_msfs.phtml",
-    "version_comparison": "equal"
+    "version_comparison": "equal",
+    "scene_type": "airport"
   },
   {
     "icao": "YPAD",
@@ -3222,7 +3327,8 @@
     "version_source_url": "https://contrail.shop/products/mk-studios-ypad-adelaide-airport-msfs-2020-2024",
     "version_comparison": "equal",
     "installed_source": "Export APT 4(3).xlsx — 2026-10-25",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "UUWW",
@@ -3247,7 +3353,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/justsim-uuww-moscow-vnukovo-international-airport-msfs.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "UUEE",
@@ -3272,7 +3379,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/uuee-moscow-sheremetyevo-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "UUDD",
@@ -3297,7 +3405,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/uudd-moscow-domodedovo-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "URSS",
@@ -3322,7 +3431,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/urss-sochi-international",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "ULLI",
@@ -3347,7 +3457,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/digital-design-ulli-saint-petersburg-pulkovo-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "PHNL",
@@ -3373,7 +3484,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/inibuilds-honolulu-phnl-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "PANC",
@@ -3395,7 +3507,8 @@
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-north-america/3812/sim-wings-anchorage",
     "version_check_reason": "Version équivalente publiée sur la fiche exacte",
-    "version_comparison": "equal"
+    "version_comparison": "equal",
+    "scene_type": "airport"
   },
   {
     "icao": "KTUS",
@@ -3421,7 +3534,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/feelthere-ktus-tucson-airport-msfs.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KSLC",
@@ -3444,7 +3558,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "reference_edition": "KSLC V2 (2026)",
     "reference_source_url": "https://www.simflight.com/2026/06/03/review-kslc-salt-lake-city-v2-from-pacsim/",
-    "reference_confidence": "third_party_edition_only"
+    "reference_confidence": "third_party_edition_only",
+    "scene_type": "airport"
   },
   {
     "icao": "KSFO",
@@ -3470,7 +3585,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/flightbeam-ksfo-san-francisco-captains-edition-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KSEA",
@@ -3496,7 +3612,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/mk-studios-ksea-seattle-tacoma-airport-msfs-2020-2024",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KPWM",
@@ -3522,7 +3639,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/kpwm-portland-intl-jetport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KPVD",
@@ -3548,7 +3666,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/dreamflight-kpvd-providence-airport-msfs-2020-2024",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KPVD",
@@ -3574,7 +3693,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/fly2high-providence-kpvd-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KPVD",
@@ -3600,7 +3720,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/inibuilds-providence-kpvd-msfs-2024",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KPHX",
@@ -3624,7 +3745,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_checked_at": "2026-10-27",
     "version_source_url": "https://glideslope.pro/product/kphx-sky-harbor-phoenix-international-airport-msfs-2024/",
-    "version_comparison": "equal"
+    "version_comparison": "equal",
+    "scene_type": "airport"
   },
   {
     "icao": "KPHL",
@@ -3650,7 +3772,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/kphl-philadelphia-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KPDX",
@@ -3676,7 +3799,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/iblueyonder-kpdx-portland-intl-v2-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KORD",
@@ -3702,7 +3826,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/inibuilds-chicago-ohare-kord-msfs-2024",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KOMA",
@@ -3728,7 +3853,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/koma-omaha-eppley-airfield-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KOKC",
@@ -3754,7 +3880,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/inibuilds-oklahoma-city-kokc-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KMSY",
@@ -3780,7 +3907,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/kmsy-new-orleans-intl",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KMSP",
@@ -3806,7 +3934,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/kmsp-minneapolis-saint-paul-intl-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KMKE",
@@ -3832,7 +3961,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/fsxcenery-kmke-milwaukee-international-airport-msfs.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KMIA",
@@ -3856,7 +3986,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_checked_at": "2026-10-27",
     "version_source_url": "https://glideslope.pro/product/kmia-miami-international-airport-msfs-2024/",
-    "version_comparison": "update"
+    "version_comparison": "update",
+    "scene_type": "airport"
   },
   {
     "icao": "KMIA",
@@ -3883,7 +4014,8 @@
     "version_source_url": "https://contrail.shop/products/mk-studios-kmia-miami-intl-airport-msfs-2024",
     "version_comparison": "equal",
     "installed_source": "Export APT 4(3).xlsx — 2026-10-25",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KMHT",
@@ -3909,7 +4041,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/aerodesigns-kmht-manchester-boston-regional-airport-msfs-2020-2024",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KMDW",
@@ -3935,7 +4068,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/kmdw-chicago-midway-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KMCI",
@@ -3961,7 +4095,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/taimodels-kmci-kansas-city-airport-msfs2020-2024",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KMCI",
@@ -3987,7 +4122,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/tropicalsim-2-kansas-city-intl-kmci-v2-msfs24.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KLVB",
@@ -4002,7 +4138,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
     "version_check_state": "not_automatable",
-    "version_check_reason": "Piste fictive : hors contrôle des aéroports réels"
+    "version_check_reason": "Piste fictive : hors contrôle des aéroports réels",
+    "scene_type": "airport"
   },
   {
     "icao": "KLIT",
@@ -4028,7 +4165,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/propair-flight-ltd.-klit-clinton-national-airport-msfs24.phtml",
     "version_comparison": "incomparable",
-    "version_check_reason": "Numérotation / édition différente : installée 1.2.0, boutique 0.1.1 ; comparaison interdite"
+    "version_check_reason": "Numérotation / édition différente : installée 1.2.0, boutique 0.1.1 ; comparaison interdite",
+    "scene_type": "airport"
   },
   {
     "icao": "KLGA",
@@ -4054,7 +4192,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/mk-studios-klga-new-york-laguardia-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KLAX",
@@ -4080,7 +4219,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/inibuilds-los-angeles-klax-msfs-2024",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KLAS",
@@ -4106,7 +4246,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/flytampa-klas-las-vegas-v3-msfs-2024",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KLAS",
@@ -4127,7 +4268,8 @@
     "source_edition": "2020",
     "source_match": "Identité du produit et édition vérifiées par recherche du 25 octobre 2026",
     "version_check_reason": "Fiche accessible, mais aucun numéro de version public fiable ou édition ambiguë",
-    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00"
+    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
+    "scene_type": "airport"
   },
   {
     "icao": "KJFK",
@@ -4153,7 +4295,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/inibuilds-new-york-john-f-kennedy-kjfk-msfs-2024",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KJAN",
@@ -4179,7 +4322,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/fly2high-jackson-medgar-wiley-evers-kjan-msfs",
     "version_comparison": "incomparable",
-    "version_check_reason": "Numérotation / édition différente : installée 1.5.0, boutique 0.0.5 ; comparaison interdite"
+    "version_check_reason": "Numérotation / édition différente : installée 1.5.0, boutique 0.0.5 ; comparaison interdite",
+    "scene_type": "airport"
   },
   {
     "icao": "KJAC",
@@ -4205,7 +4349,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/dreamflight-kjac-jackson-hole-airport-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KIND",
@@ -4231,7 +4376,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/dominicdesignteam-indianapolis-v2-kind-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KICT",
@@ -4257,7 +4403,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/fsxcenery-kict-wichita-ks-msfs.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KIAH",
@@ -4278,7 +4425,8 @@
     "source_edition": "2020+2024",
     "source_match": "Identité du produit et édition vérifiées par recherche du 25 octobre 2026",
     "version_check_reason": "Fiche accessible, mais aucun numéro de version public fiable ou édition ambiguë",
-    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00"
+    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
+    "scene_type": "airport"
   },
   {
     "icao": "KIAD",
@@ -4302,7 +4450,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_checked_at": "2026-10-27",
     "version_source_url": "https://glideslope.pro/product/kiad-washington-dulles-international-airport-msfs-2024/",
-    "version_comparison": "equal"
+    "version_comparison": "equal",
+    "scene_type": "airport"
   },
   {
     "icao": "KFSD",
@@ -4323,7 +4472,8 @@
     "source_edition": "2020",
     "source_match": "Identité du produit et édition vérifiées par recherche du 25 octobre 2026",
     "version_check_reason": "Fiche accessible, mais aucun numéro de version public fiable ou édition ambiguë",
-    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00"
+    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
+    "scene_type": "airport"
   },
   {
     "icao": "KEWR",
@@ -4349,7 +4499,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/kewr-newark-liberty-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KEWR",
@@ -4375,7 +4526,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/final-approach-simulations-newark-liberty-kewr-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KDTW",
@@ -4401,7 +4553,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/inibuilds-detroit-kdtw-msfs",
     "version_comparison": "source_older",
-    "version_check_reason": "Fiche 1.03 plus ancienne que l'installation 1.0.5 : vérifier le canal éditeur, ne pas rétrograder"
+    "version_check_reason": "Fiche 1.03 plus ancienne que l'installation 1.0.5 : vérifier le canal éditeur, ne pas rétrograder",
+    "scene_type": "airport"
   },
   {
     "icao": "KDFW",
@@ -4427,7 +4580,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/inibuilds-dallas-fort-worth-kdfw-msfs-2024",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KDEN",
@@ -4448,7 +4602,8 @@
     "source_edition": "2024",
     "source_match": "Identité du produit et édition vérifiées par recherche du 25 octobre 2026",
     "version_check_reason": "Version visible uniquement dans Orbx Central (connexion au compte requise)",
-    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00"
+    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
+    "scene_type": "airport"
   },
   {
     "icao": "KCRW",
@@ -4470,7 +4625,8 @@
     "source_edition": "MSFS 2020",
     "source_title": "KCRW West Virginia International Yeager Airport",
     "source_note": "Version disponible via Orbx Central, non publiée sur la page",
-    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00"
+    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
+    "scene_type": "airport"
   },
   {
     "icao": "KCLT",
@@ -4495,7 +4651,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_checked_at": "2026-10-27",
     "version_source_url": "https://secure.simmarket.com/fsdreamteam-charlotte-douglas-msfs.phtml",
-    "version_comparison": "update"
+    "version_comparison": "update",
+    "scene_type": "airport"
   },
   {
     "icao": "KCLE",
@@ -4518,7 +4675,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "reference_version": "1.0.0",
     "reference_source_url": "https://sceneryaddons.org/pacsim-kcle-cleveland-hopkins-international-airport/",
-    "reference_confidence": "third_party_unverified"
+    "reference_confidence": "third_party_unverified",
+    "scene_type": "airport"
   },
   {
     "icao": "KCHS",
@@ -4544,7 +4702,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/dominicdesignteam-charleston-kchs-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KBZN",
@@ -4570,7 +4729,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/taimodels-kbzn-bozeman-yellowstone-airport-msfs2020-2024",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KBWI",
@@ -4596,7 +4756,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/latinvfr-kbwi-baltimore-washington-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KBTV",
@@ -4622,7 +4783,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://secure.simmarket.com/fsxcenery-kbtv-burlington-international-msfs.phtml",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KBOS",
@@ -4648,7 +4810,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/kbos-boston-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KBOI",
@@ -4674,7 +4837,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/kboi-boise-air-terminal-gowen-field-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KBNA",
@@ -4700,7 +4864,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/dominicdesignteam-nashville-kbna-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KBHM",
@@ -4726,7 +4891,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/fly2high-birmingham-shuttlesworth-kbhm-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KBDL",
@@ -4752,7 +4918,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://contrail.shop/products/kbdl-hartford-bradley-international",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KATL",
@@ -4774,7 +4941,8 @@
     "source_edition": "MSFS 2024",
     "source_title": "KATL Atlanta International Airport",
     "source_note": "Édition 2024 : vérifier la correspondance avec la scène installée dans Orbx Central",
-    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00"
+    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
+    "scene_type": "airport"
   },
   {
     "icao": "KASE",
@@ -4800,7 +4968,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/fly2high-aspen-pitkin-county-kase-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "KABQ",
@@ -4826,7 +4995,8 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/dominicdesignteam-albuquerque-kabq-msfs",
     "version_comparison": "equal",
-    "version_check_reason": "Version équivalente publiée sur la fiche exacte"
+    "version_check_reason": "Version équivalente publiée sur la fiche exacte",
+    "scene_type": "airport"
   },
   {
     "icao": "58CA",
@@ -4852,48 +5022,7 @@
     "last_attempt_at": "2026-10-27T08:11:03.679738+00:00",
     "version_source_url": "https://inibuilds.com/products/inibuilds-hooper-heliport-58ca-msfs",
     "version_comparison": "source_older",
-    "version_check_reason": "Fiche 1.01 plus ancienne que l'installation 1.0.2 : vérifier le canal éditeur, ne pas rétrograder"
-  },
-  {
-    "icao": "(SUB KMCI)",
-    "original": "(SUB KMCI)",
-    "name": "TropicalSim KMCIjetways",
-    "folder": "tropicalsim-airport-kmci-kansas-city-jetways",
-    "publisher": "TropicalSim",
-    "installed": "2.5.0",
-    "region": "USA",
-    "country": "USA",
-    "status": "UNK-C",
-    "note": "",
-    "source_url": "https://secure.simmarket.com/tropicalsim-2-kansas-city-intl-kmci-v2-msfs24.phtml",
-    "server_version": null,
-    "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
-    "version_check_state": "not_automatable",
-    "version_check_reason": "Sous-scène : la version du produit parent n'est pas la version de ce module",
-    "source_store": "Référence au produit principal : KMCI TropicalSim parent",
-    "source_scope": "parent_reference_only",
-    "source_match": "Sous-package : version autonome non publiée sur cette fiche",
-    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00"
-  },
-  {
-    "icao": "(SUB KLAS)",
-    "original": "(SUB KLAS)",
-    "name": "FlyTampa LasVegas City",
-    "folder": "flytampa-city-las-vegas",
-    "publisher": "FlyTampa",
-    "installed": "3.2.0",
-    "region": "USA",
-    "country": "USA",
-    "status": "UNK-C",
-    "note": "Sous-scène de KLAS — non utilisée comme station METAR",
-    "source_url": "https://contrail.shop/products/flytampa-klas-las-vegas-v3-msfs-2024",
-    "server_version": null,
-    "last_audited_at": "2026-10-27T08:11:03.679738+00:00",
-    "version_check_state": "not_automatable",
-    "version_check_reason": "Sous-scène : la version du produit parent n'est pas la version de ce module",
-    "source_store": "Référence au produit principal : KLAS FlyTampa v3",
-    "source_scope": "parent_reference_only",
-    "source_match": "Sous-package : version autonome non publiée sur cette fiche",
-    "last_attempt_at": "2026-10-27T08:11:03.679738+00:00"
+    "version_check_reason": "Fiche 1.01 plus ancienne que l'installation 1.0.2 : vérifier le canal éditeur, ne pas rétrograder",
+    "scene_type": "heliport"
   }
 ]
