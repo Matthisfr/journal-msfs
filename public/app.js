@@ -145,16 +145,20 @@ async function addSimbriefRoute(map, airportData, slot){
    const fl=Number(flight.altitude);
    L.marker(middle,{icon:routeLabel('Vol '+duration(flight.enroute_time)+' · '+(fl>0?'FL'+Math.round(fl/100):'FL —')),interactive:false}).addTo(layer);
   }
-  const control=L.control({position:'topleft'});
-  control.onAdd=()=>{
-   const button=L.DomUtil.create('button','simbrief-route-toggle');
-   button.type='button';button.textContent='✈ Plan SimBrief';button.title='Afficher ou masquer le dernier itinéraire SimBrief';
-   button.style.cssText='background:#102c42;color:white;border:2px solid white;border-radius:5px;padding:7px 10px;font-weight:bold;cursor:pointer';
-   L.DomEvent.disableClickPropagation(button);
-   L.DomEvent.on(button,'click',()=>{if(map.hasLayer(layer)){map.removeLayer(layer);button.style.opacity='.55'}else{layer.addTo(map);button.style.opacity='1'}});
-   return button;
-  };
-  control.addTo(map);
+  const button=L.DomUtil.create('button','simbrief-route-toggle',map.getContainer());
+  button.type='button';
+  button.textContent='👁 Masquer le dernier vol';
+  button.title='Afficher ou masquer le dernier vol SimBrief';
+  button.setAttribute('aria-pressed','true');
+  button.style.cssText='position:absolute;top:12px;left:50%;transform:translateX(-50%);z-index:1000;background:#102c42;color:white;border:2px solid white;border-radius:7px;padding:8px 12px;font-weight:bold;cursor:pointer;white-space:nowrap;box-shadow:0 2px 8px #0006';
+  L.DomEvent.disableClickPropagation(button);
+  L.DomEvent.disableScrollPropagation(button);
+  L.DomEvent.on(button,'click',()=>{
+   const visible=map.hasLayer(layer);
+   if(visible)map.removeLayer(layer);else layer.addTo(map);
+   button.textContent=visible?'👁 Voir le dernier vol':'👁 Masquer le dernier vol';
+   button.setAttribute('aria-pressed',String(!visible));
+  });
   const label=document.createElement('p');
   label.className='map-caption';
   label.textContent='SimBrief : '+(flight.origin?.icao||'?')+' → '+(flight.destination?.icao||'?')+(fixes.length>=2?' · tracé via '+fixes.length+' points de navigation':' · coordonnées des points de navigation indisponibles : aucun faux tracé affiché');
