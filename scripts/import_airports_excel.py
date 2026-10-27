@@ -23,28 +23,58 @@ def norm(value):
 def colmap(row):
  labels=[norm(x) for x in row]
  return {key:next((i for i,label in enumerate(labels) if label in names),None) for key,names in ALIASES.items()}
+def is_sub_scene(*values):
+ return any(re.search(r"\\(\\s*sub\\b",str(value or ""),re.I) for value in values)
+
+def scene_type(code,name,folder):
+ value=norm(" ".join(str(x or "") for x in (name,folder)))
+ return "heliport" if re.search(r"\\b(heliport|heliports|helipad|helipads|helistop|helisurface|helisurfaces)\\b",value) else "airport"
+
+def section_kind(value):
+ # Addons Linker headings may contain totals: "AIRPORTS (123)".
+ value=norm(value)
+ value=re.sub(r"\\s+\\d+(?:\\s+\\d+)*$","",value)
+ if value in {"aeroport","aeroports","airport","airports","airfield","airfields","aerodrome","aerodromes","heliport","heliports"}:
+  return "airports"
+ if value in {"decor","decors","scenery","sceneries","city","cities","ville","villes","landmark","landmarks","divers","other","autres"}:
+  return "other"
+ return None
+
 def parse_addons_linker(sheet):
  records=[]
  region=""
  country=""
- for row in sheet.iter_rows(values_only=True):
+ section=None
+ rows=sheet.iter_rows(values_only=True)
+ for row in rows:
   if len(row)<13: continue
+  code=str(row[6] or "").strip().upper()
+  # Only heading rows (no ICAO) can change the active category.
+  if not code:
+   for cell in (row[3],row[4],row[5]):
+    kind=section_kind(cell)
+    if kind:
+     section=kind
+     break
   if row[3] and not row[4] and not row[5]:
    region=str(row[3]).split(" (")[0].strip()
   if row[4] and not row[5]:
    country=str(row[4]).split(" (")[0].strip()
   folder=str(row[5] or row[4] or "").strip()
-  code=str(row[6] or "").strip().upper()
   version=str(row[9] or "").strip()
   name=str(row[11] or folder).strip()
-  if not code or not version or not folder or not name: continue
-  if not (re.fullmatch(r"[A-Z0-9]{4}",code) or code.startswith("(SUB ")): continue
+  if is_sub_scene(code,name,folder): continue
+  if section!="airports": continue
+  if not re.fullmatch(r"[A-Z0-9]{4}",code) or not version or not folder or not name: continue
   original=code
   code=CORRECTIONS.get(code,code)
   records.append({"icao":code,"original":original,"name":name,"folder":folder,
                   "installed":version,"publisher":str(row[12] or "").strip(),
-                  "region":region or country})
+                  "region":region or country,"scene_type":scene_type(code,name,folder)})
+ if not records:
+  raise ValueError("Section Aéroports absente ou vide dans l'export Addons Linker : import annulé")
  return records
+
 def parse(book):
  from openpyxl import load_workbook
  wb=load_workbook(book,read_only=True,data_only=True)
@@ -67,12 +97,14 @@ def parse(book):
    folder=get("folder")
    name=get("name")
    version=get("installed")
+   if is_sub_scene(code,name,folder): continue
    if not code and not folder and not name: continue
    if not code or not version or not (folder or name):
     raise ValueError(f"{sheet.title}: ligne incomplète : ICAO, scène/dossier et version requis")
+   if not re.fullmatch(r"[A-Z0-9]{4}",code): continue
    original=code
    code=CORRECTIONS.get(code,code)
-   records.append({"icao":code,"original":original,"name":name or folder,"folder":folder,"installed":version,"publisher":get("publisher"),"region":get("region")})
+   records.append({"icao":code,"original":original,"name":name or folder,"folder":folder,"installed":version,"publisher":get("publisher"),"region":get("region"),"scene_type":scene_type(code,name,folder)})
  return records
 def merge(records,old):
  by_folder={norm(a.get("folder")):a for a in old if a.get("folder")}
@@ -91,6 +123,7 @@ def merge(records,old):
    for field in ("version_checked_at","version_comparison","version_check_state","server_version"):
     entry.pop(field,None)
    entry["status"]="UNK-V"
+  entry["scene_type"]=rec.get("scene_type","airport")
   entry.setdefault("status","UNK-V")
   entry.setdefault("country",entry.get("region",""))
   output.append(entry)
