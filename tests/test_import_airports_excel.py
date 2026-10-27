@@ -43,6 +43,18 @@ class AirportImportTests(unittest.TestCase):
  def test_sub_marker(self):
   self.assertTrue(mod.is_sub_scene("(sub LFMN)"))
   self.assertFalse(mod.is_sub_scene("airport-lfmn"))
+ def test_identical_duplicate_is_ignored(self):
+  rec={"icao":"LXGB","name":"Gibraltar LXGB International Airport","folder":"airport-lxgb","installed":"1.0","publisher":"Example"}
+  self.assertEqual(len(mod.merge([rec,dict(rec)],[])),1)
+ def test_same_icao_distinct_scenes_are_kept(self):
+  base={"icao":"LXGB","name":"Gibraltar","installed":"1.0"}
+  recs=[dict(base,folder="publisher-a-lxgb"),dict(base,folder="publisher-b-lxgb")]
+  self.assertEqual(len(mod.merge(recs,[])),2)
+ def test_conflicting_duplicate_fails(self):
+  base={"icao":"LXGB","name":"Gibraltar","folder":"airport-lxgb","installed":"1.0"}
+  with self.assertRaisesRegex(ValueError,"contradictoires"):
+   mod.merge([base,dict(base,installed="2.0")],[])
+
  def test_merge_retains_metadata(self):
   old=[{"icao":"58CA","name":"Hooper","folder":"hooper-heliport","installed":"1.0","server_version":"1.1","source_url":"https://example.com"}]
   rec=[{"icao":"58CA","name":"Hooper","folder":"hooper-heliport","installed":"1.0","scene_type":"heliport"}]
