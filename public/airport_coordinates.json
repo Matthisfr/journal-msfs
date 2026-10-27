@@ -1188,5 +1188,103 @@
     "name": "Vnukovo International Airport",
     "source": "OurAirports / airport-codes",
     "aircraft_marker": "airliner"
+  },
+  "CYAW": {
+    "lat": 44.636782,
+    "lon": -63.502107,
+    "name": "CFB Shearwater Heliport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "cessna"
+  },
+  "CYEG": {
+    "lat": 53.3097,
+    "lon": -113.580002,
+    "name": "Edmonton International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "CYHZ": {
+    "lat": 44.8807983398,
+    "lon": -63.5085983276,
+    "name": "Halifax / Stanfield International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "CYOW": {
+    "lat": 45.322498,
+    "lon": -75.669197,
+    "name": "Ottawa Macdonald-Cartier International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "CYQB": {
+    "lat": 46.7911,
+    "lon": -71.393303,
+    "name": "Quebec Jean Lesage International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "CYWG": {
+    "lat": 49.909999847399995,
+    "lon": -97.2398986816,
+    "name": "Winnipeg / James Armstrong Richardson International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "CYYC": {
+    "lat": 51.118822,
+    "lon": -114.009933,
+    "name": "Calgary International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "KGFK": {
+    "lat": 47.949299,
+    "lon": -97.176102,
+    "name": "Grand Forks International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "LDDU": {
+    "lat": 42.562247,
+    "lon": 18.265543,
+    "name": "Dubrovnik Ruđer Bošković Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "LPMA": {
+    "lat": 32.697812,
+    "lon": -16.774613,
+    "name": "Cristiano Ronaldo International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "LSGS": {
+    "lat": 46.219166,
+    "lon": 7.326944,
+    "name": "Sion Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "NZQN": {
+    "lat": -45.019205,
+    "lon": 168.746379,
+    "name": "Queenstown Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "TFFJ": {
+    "lat": 17.904398,
+    "lon": -62.843333,
+    "name": "St. Jean Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "cessna"
+  },
+  "VQPR": {
+    "lat": 27.4032,
+    "lon": 89.424599,
+    "name": "Paro International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "cessna"
   }
 }

@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-27T07:40:10.481988+00:00",
+  "generated_at": "2026-10-27T10:57:56.810513+00:00",
   "stores": {
     "Contrail": 832,
     "iniBuilds": 1217,
-    "simMarket": 122
+    "simMarket": 129
   },
   "catalog_errors": {},
   "counts": {
-    "source_found": 153,
-    "needs_research": 42,
-    "pages_verified": 220
+    "source_found": 162,
+    "needs_research": 54,
+    "pages_verified": 235
   },
   "airports": [
     {
@@ -27,7 +27,7 @@
           "url": "https://contrail.shop/products/netdesign-daag-algiers-intl-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "2.4.0",
-          "checked_at": "2026-10-27T07:40:00.948945+00:00",
+          "checked_at": "2026-10-27T10:57:49.684225+00:00",
           "state": "verified"
         },
         {
@@ -38,7 +38,7 @@
           "url": "https://inibuilds.com/products/netdesign-algiers-daag-msfs",
           "edition": "2020",
           "version": "2.4.0",
-          "checked_at": "2026-10-27T07:40:00.900171+00:00",
+          "checked_at": "2026-10-27T10:57:49.753859+00:00",
           "state": "verified"
         }
       ],
@@ -50,7 +50,7 @@
         "url": "https://contrail.shop/products/netdesign-daag-algiers-intl-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "2.4.0",
-        "checked_at": "2026-10-27T07:40:00.948945+00:00",
+        "checked_at": "2026-10-27T10:57:49.684225+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -93,7 +93,7 @@
           "url": "https://inibuilds.com/products/inibuilds-dubai-omdb-msfs-2024",
           "edition": "2020+2024",
           "version": "2.0.2",
-          "checked_at": "2026-10-27T07:40:00.793633+00:00",
+          "checked_at": "2026-10-27T10:57:49.566641+00:00",
           "state": "verified"
         },
         {
@@ -104,7 +104,7 @@
           "url": "https://inibuilds.com/products/inibuilds-dubai-omdb-msfs",
           "edition": "2020",
           "version": "1.0.3",
-          "checked_at": "2026-10-27T07:40:00.958500+00:00",
+          "checked_at": "2026-10-27T10:57:49.677554+00:00",
           "state": "verified"
         }
       ],
@@ -116,7 +116,7 @@
         "url": "https://inibuilds.com/products/inibuilds-dubai-omdb-msfs-2024",
         "edition": "2020+2024",
         "version": "2.0.2",
-        "checked_at": "2026-10-27T07:40:00.793633+00:00",
+        "checked_at": "2026-10-27T10:57:49.566641+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -136,7 +136,7 @@
           "url": "https://inibuilds.com/products/azrsim-riyadh-oerk-for-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "3.7.0",
-          "checked_at": "2026-10-27T07:40:00.780916+00:00",
+          "checked_at": "2026-10-27T10:57:49.694604+00:00",
           "state": "verified"
         }
       ],
@@ -148,7 +148,39 @@
         "url": "https://inibuilds.com/products/azrsim-riyadh-oerk-for-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "3.7.0",
-        "checked_at": "2026-10-27T07:40:00.780916+00:00",
+        "checked_at": "2026-10-27T10:57:49.694604+00:00",
+        "state": "verified"
+      },
+      "state": "source_found"
+    },
+    {
+      "folder": "ironsim-airport-vqpr-paro",
+      "icao": "VQPR",
+      "name": "VQPR Paro Airport",
+      "publisher": "IronSim",
+      "installed": "1.0.2",
+      "matches": [
+        {
+          "score": 21,
+          "store": "iniBuilds",
+          "title": "Iron Sim Paro (VQPR) for MSFS-2020",
+          "vendor": "Iron Sim",
+          "url": "https://inibuilds.com/products/iron-sim-paro-vqpr-msfs-2020",
+          "edition": "2020",
+          "version": "1.0.2",
+          "checked_at": "2026-10-27T10:57:49.704307+00:00",
+          "state": "verified"
+        }
+      ],
+      "selected": {
+        "score": 21,
+        "store": "iniBuilds",
+        "title": "Iron Sim Paro (VQPR) for MSFS-2020",
+        "vendor": "Iron Sim",
+        "url": "https://inibuilds.com/products/iron-sim-paro-vqpr-msfs-2020",
+        "edition": "2020",
+        "version": "1.0.2",
+        "checked_at": "2026-10-27T10:57:49.704307+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -168,7 +200,7 @@
           "url": "https://inibuilds.com/products/sim-design-group-cairo-heca-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.3",
-          "checked_at": "2026-10-27T07:40:00.755027+00:00",
+          "checked_at": "2026-10-27T10:57:49.720573+00:00",
           "state": "verified"
         }
       ],
@@ -180,7 +212,7 @@
         "url": "https://inibuilds.com/products/sim-design-group-cairo-heca-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.0.3",
-        "checked_at": "2026-10-27T07:40:00.755027+00:00",
+        "checked_at": "2026-10-27T10:57:49.720573+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -200,7 +232,7 @@
           "url": "https://inibuilds.com/products/perfectsoft-marrakech-menara-gmmx-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:00.882091+00:00",
+          "checked_at": "2026-10-27T10:57:49.852414+00:00",
           "state": "verified"
         }
       ],
@@ -212,7 +244,7 @@
         "url": "https://inibuilds.com/products/perfectsoft-marrakech-menara-gmmx-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.1.0",
-        "checked_at": "2026-10-27T07:40:00.882091+00:00",
+        "checked_at": "2026-10-27T10:57:49.852414+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -232,7 +264,7 @@
           "url": "https://inibuilds.com/products/prealsoft-casablanca-gmmn-msfs",
           "edition": "2020",
           "version": "1.2.1",
-          "checked_at": "2026-10-27T07:40:01.141535+00:00",
+          "checked_at": "2026-10-27T10:57:50.058489+00:00",
           "state": "verified"
         }
       ],
@@ -244,7 +276,7 @@
         "url": "https://inibuilds.com/products/prealsoft-casablanca-gmmn-msfs",
         "edition": "2020",
         "version": "1.2.1",
-        "checked_at": "2026-10-27T07:40:01.141535+00:00",
+        "checked_at": "2026-10-27T10:57:50.058489+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -275,7 +307,7 @@
           "url": "https://contrail.shop/products/mk-studios-roah-naha-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.2",
-          "checked_at": "2026-10-27T07:40:01.249734+00:00",
+          "checked_at": "2026-10-27T10:57:49.948414+00:00",
           "state": "verified"
         },
         {
@@ -286,7 +318,7 @@
           "url": "https://inibuilds.com/products/mk-studios-naha-roah-msfs",
           "edition": "2020",
           "version": "1.0.2",
-          "checked_at": "2026-10-27T07:40:01.175481+00:00",
+          "checked_at": "2026-10-27T10:57:49.989094+00:00",
           "state": "verified"
         }
       ],
@@ -298,7 +330,7 @@
         "url": "https://contrail.shop/products/mk-studios-roah-naha-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.0.2",
-        "checked_at": "2026-10-27T07:40:01.249734+00:00",
+        "checked_at": "2026-10-27T10:57:49.948414+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -329,7 +361,7 @@
           "url": "https://inibuilds.com/products/prealsoft-tunis-carthage-dtta-msfs",
           "edition": "2020",
           "version": "1.00",
-          "checked_at": "2026-10-27T07:40:01.194679+00:00",
+          "checked_at": "2026-10-27T10:57:50.052779+00:00",
           "state": "verified"
         }
       ],
@@ -341,7 +373,7 @@
         "url": "https://inibuilds.com/products/prealsoft-tunis-carthage-dtta-msfs",
         "edition": "2020",
         "version": "1.00",
-        "checked_at": "2026-10-27T07:40:01.194679+00:00",
+        "checked_at": "2026-10-27T10:57:50.052779+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -383,7 +415,7 @@
           "url": "https://secure.simmarket.com/flytampa-toronto-msfs.phtml",
           "edition": "2020+2024",
           "version": "1.2",
-          "checked_at": "2026-10-27T07:40:22.883480+00:00",
+          "checked_at": "2026-10-27T10:58:08.253804+00:00",
           "state": "verified"
         }
       ],
@@ -395,11 +427,119 @@
         "url": "https://secure.simmarket.com/flytampa-toronto-msfs.phtml",
         "edition": "2020+2024",
         "version": "1.2",
-        "checked_at": "2026-10-27T07:40:22.883480+00:00",
+        "checked_at": "2026-10-27T10:58:08.253804+00:00",
         "state": "verified"
       },
       "state": "source_found",
       "simmarket_search_count": 2
+    },
+    {
+      "folder": "fsimstudios-airport-cyyc-calgary",
+      "icao": "CYYC",
+      "name": "CYYC Calgary International Airport",
+      "publisher": "FSimstudios",
+      "installed": "1.2.0",
+      "matches": [
+        {
+          "score": 25,
+          "store": "Contrail",
+          "title": "CYYC - Calgary International Airport MSFS",
+          "vendor": "FSimStudios",
+          "url": "https://contrail.shop/products/cyyc-calgary-international-airport-msfs",
+          "edition": "MSFS (édition non précisée)",
+          "version": "1.2.0",
+          "checked_at": "2026-10-27T10:57:49.995421+00:00",
+          "state": "verified"
+        },
+        {
+          "score": 21,
+          "store": "iniBuilds",
+          "title": "FSimStudios Calgary (CYYC) for MSFS-2020",
+          "vendor": "FSimStudios",
+          "url": "https://inibuilds.com/products/fsimstudios-calgary-cyyc-msfs",
+          "edition": "2020",
+          "version": "1.2.0",
+          "checked_at": "2026-10-27T10:57:50.088863+00:00",
+          "state": "verified"
+        }
+      ],
+      "selected": {
+        "score": 25,
+        "store": "Contrail",
+        "title": "CYYC - Calgary International Airport MSFS",
+        "vendor": "FSimStudios",
+        "url": "https://contrail.shop/products/cyyc-calgary-international-airport-msfs",
+        "edition": "MSFS (édition non précisée)",
+        "version": "1.2.0",
+        "checked_at": "2026-10-27T10:57:49.995421+00:00",
+        "state": "verified"
+      },
+      "state": "source_found"
+    },
+    {
+      "folder": "simaddons-airport-cyyc-calgary",
+      "icao": "CYYC",
+      "name": "CYYC - Calgary Airport",
+      "publisher": "Simaddons",
+      "installed": "1.0.1",
+      "matches": [],
+      "selected": null,
+      "state": "needs_research",
+      "simmarket_search_count": 0
+    },
+    {
+      "folder": "fsimstudios-airport-cywg-winnipeg",
+      "icao": "CYWG",
+      "name": "CYWG Winnipeg International Airport",
+      "publisher": "FSimstudios",
+      "installed": "1.3.0",
+      "matches": [
+        {
+          "score": 25,
+          "store": "Contrail",
+          "title": "CYWG - Winnipeg International Airport MSFS",
+          "vendor": "FSimStudios",
+          "url": "https://contrail.shop/products/cywg-winnipeg-international-airport-msfs",
+          "edition": "MSFS (édition non précisée)",
+          "version": "1.3.0",
+          "checked_at": "2026-10-27T10:57:50.112115+00:00",
+          "state": "verified"
+        },
+        {
+          "score": 23,
+          "store": "iniBuilds",
+          "title": "FSimStudios Winnipeg (CYWG) for MSFS",
+          "vendor": "FSimStudios",
+          "url": "https://inibuilds.com/products/fsimstudios-winnipeg-cywg-msfs",
+          "edition": "MSFS (édition non précisée)",
+          "version": "1.2.0",
+          "checked_at": "2026-10-27T10:57:50.208729+00:00",
+          "state": "verified"
+        }
+      ],
+      "selected": {
+        "score": 25,
+        "store": "Contrail",
+        "title": "CYWG - Winnipeg International Airport MSFS",
+        "vendor": "FSimStudios",
+        "url": "https://contrail.shop/products/cywg-winnipeg-international-airport-msfs",
+        "edition": "MSFS (édition non précisée)",
+        "version": "1.3.0",
+        "checked_at": "2026-10-27T10:57:50.112115+00:00",
+        "state": "verified"
+      },
+      "state": "source_found"
+    },
+    {
+      "folder": "simaddons-airport-cywg-winnipeg",
+      "icao": "CYWG",
+      "name": "CYWG - Winnipeg Airport",
+      "publisher": "Simaddons",
+      "installed": "1.0.1",
+      "matches": [],
+      "selected": null,
+      "state": "needs_research",
+      "simmarket_search_count": 0
     },
     {
       "folder": "fsdreamteam-airport-cyvr-vancouver",
@@ -427,7 +567,7 @@
           "url": "https://contrail.shop/products/cyul-montreal-trudeau-international-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.3.2",
-          "checked_at": "2026-10-27T07:40:01.308960+00:00",
+          "checked_at": "2026-10-27T10:57:50.229881+00:00",
           "state": "verified"
         },
         {
@@ -438,7 +578,7 @@
           "url": "https://inibuilds.com/products/mk-studios-montreal-cyul-msfs",
           "edition": "2020",
           "version": "1.3.2",
-          "checked_at": "2026-10-27T07:40:01.404196+00:00",
+          "checked_at": "2026-10-27T10:57:50.327158+00:00",
           "state": "verified"
         }
       ],
@@ -450,10 +590,148 @@
         "url": "https://contrail.shop/products/cyul-montreal-trudeau-international-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.3.2",
-        "checked_at": "2026-10-27T07:40:01.308960+00:00",
+        "checked_at": "2026-10-27T10:57:50.229881+00:00",
         "state": "verified"
       },
       "state": "source_found"
+    },
+    {
+      "folder": "tms-airport-cyqb-quebec",
+      "icao": "CYQB",
+      "name": "CYQB Quebec International Airport",
+      "publisher": "Taimodels",
+      "installed": "1.3.0",
+      "matches": [
+        {
+          "score": 28,
+          "store": "Contrail",
+          "title": "CYQB - Québec City Jean Lesage Airport MSFS20/24",
+          "vendor": "Taimodels",
+          "url": "https://contrail.shop/products/taimodels-cyqb-quebec-city-airport-msfs2020-2024",
+          "edition": "2020+2024",
+          "version": "1.3.0",
+          "checked_at": "2026-10-27T10:57:50.314931+00:00",
+          "state": "verified"
+        }
+      ],
+      "selected": {
+        "score": 28,
+        "store": "Contrail",
+        "title": "CYQB - Québec City Jean Lesage Airport MSFS20/24",
+        "vendor": "Taimodels",
+        "url": "https://contrail.shop/products/taimodels-cyqb-quebec-city-airport-msfs2020-2024",
+        "edition": "2020+2024",
+        "version": "1.3.0",
+        "checked_at": "2026-10-27T10:57:50.314931+00:00",
+        "state": "verified"
+      },
+      "state": "source_found"
+    },
+    {
+      "folder": "simaddons-airport-cyow-ottawa",
+      "icao": "CYOW",
+      "name": "CYOW - Ottawa Airport",
+      "publisher": "Simaddons",
+      "installed": "1.0.1",
+      "matches": [],
+      "selected": null,
+      "state": "needs_research",
+      "simmarket_search_count": 0
+    },
+    {
+      "folder": "fsimstudios-airport-cyhz-halifax-stanfield",
+      "icao": "CYHZ",
+      "name": "Halifax-International-Airport-CYHZ",
+      "publisher": "FSimStudios",
+      "installed": "2.2.0",
+      "matches": [
+        {
+          "score": 30,
+          "store": "Contrail",
+          "title": "CYHZ - Halifax Stanfield Intl. v2 MSFS",
+          "vendor": "FSimStudios",
+          "url": "https://contrail.shop/products/fsimstudios-cyhz-halifax-stanfield-intl-v2-msfs",
+          "edition": "MSFS (édition non précisée)",
+          "version": "2.2.0",
+          "checked_at": "2026-10-27T10:57:50.354019+00:00",
+          "state": "verified"
+        },
+        {
+          "score": 23,
+          "store": "iniBuilds",
+          "title": "FSimStudios Halifax Stanfield (CYHZ) for MSFS",
+          "vendor": "FSimStudios",
+          "url": "https://inibuilds.com/products/fsimstudios-halifax-stanfield-cyhz-msfs",
+          "edition": "MSFS (édition non précisée)",
+          "version": "2.0.0",
+          "checked_at": "2026-10-27T10:57:50.312207+00:00",
+          "state": "verified"
+        },
+        {
+          "score": 20,
+          "store": "Contrail",
+          "title": "CYHZ - Halifax Stanfield Intl. P3D",
+          "vendor": "FSimStudios",
+          "url": "https://contrail.shop/products/cyhz-halifax-stanfield-intl-p3d",
+          "edition": "unknown"
+        }
+      ],
+      "selected": {
+        "score": 30,
+        "store": "Contrail",
+        "title": "CYHZ - Halifax Stanfield Intl. v2 MSFS",
+        "vendor": "FSimStudios",
+        "url": "https://contrail.shop/products/fsimstudios-cyhz-halifax-stanfield-intl-v2-msfs",
+        "edition": "MSFS (édition non précisée)",
+        "version": "2.2.0",
+        "checked_at": "2026-10-27T10:57:50.354019+00:00",
+        "state": "verified"
+      },
+      "state": "source_found"
+    },
+    {
+      "folder": "simaddons-airport-cyhz-halifax",
+      "icao": "CYHZ",
+      "name": "CYHZ - Halifax Airport",
+      "publisher": "Simaddons",
+      "installed": "1.0.1",
+      "matches": [],
+      "selected": null,
+      "state": "needs_research",
+      "simmarket_search_count": 0
+    },
+    {
+      "folder": "simaddons-airport-cyeg-edmonton",
+      "icao": "CYEG",
+      "name": "CYEG - Edmonton Airport",
+      "publisher": "Simaddons",
+      "installed": "1.0.1",
+      "matches": [],
+      "selected": null,
+      "state": "needs_research",
+      "simmarket_search_count": 0
+    },
+    {
+      "folder": "simaddons-heliport-cyaw-shearwater",
+      "icao": "CYAW",
+      "name": "CYAW - CFB Shearwater Heliport",
+      "publisher": "Simaddons",
+      "installed": "1.0.1",
+      "matches": [],
+      "selected": null,
+      "state": "needs_research",
+      "simmarket_search_count": 0
+    },
+    {
+      "folder": "simaddons-city-halifax",
+      "icao": "(SUB CYHZ)",
+      "name": "Simaddons Halifax City",
+      "publisher": "Simaddons",
+      "installed": "1.0.1",
+      "matches": [],
+      "selected": null,
+      "state": "needs_research",
+      "simmarket_search_count": 0
     },
     {
       "folder": "photorico-airport-tjsj-luis-munoz-marin",
@@ -481,7 +759,7 @@
           "url": "https://contrail.shop/products/tffr-pointe-a-pitre-international-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.5.0",
-          "checked_at": "2026-10-27T07:40:01.319402+00:00",
+          "checked_at": "2026-10-27T10:57:50.343003+00:00",
           "state": "verified"
         },
         {
@@ -492,7 +770,7 @@
           "url": "https://inibuilds.com/products/slh-sim-designs-pointe-pitre-tffr-msfs",
           "edition": "2020",
           "version": "1.51",
-          "checked_at": "2026-10-27T07:40:01.613157+00:00",
+          "checked_at": "2026-10-27T10:57:50.434656+00:00",
           "state": "verified"
         }
       ],
@@ -504,7 +782,50 @@
         "url": "https://contrail.shop/products/tffr-pointe-a-pitre-international-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.5.0",
-        "checked_at": "2026-10-27T07:40:01.319402+00:00",
+        "checked_at": "2026-10-27T10:57:50.343003+00:00",
+        "state": "verified"
+      },
+      "state": "source_found"
+    },
+    {
+      "folder": "slhsimdesigns-airport-tffj-st-barts",
+      "icao": "TFFJ",
+      "name": "Saint Barths Airport",
+      "publisher": "Slhsimdesigns",
+      "installed": "1.0.0",
+      "matches": [
+        {
+          "score": 28,
+          "store": "Contrail",
+          "title": "TFFJ - Saint Barthélemy Airport MSFS20/24",
+          "vendor": "SLH Sim Designs",
+          "url": "https://contrail.shop/products/slh-sim-designs-tffj-saint-barthelemy-airport-msfs-2020-2024",
+          "edition": "2020+2024",
+          "version": "1.0.1",
+          "checked_at": "2026-10-27T10:57:50.527654+00:00",
+          "state": "verified"
+        },
+        {
+          "score": 23,
+          "store": "iniBuilds",
+          "title": "SLH Sim Designs Saint Barths (TFFJ) for MSFS",
+          "vendor": "SLH Sim Designs",
+          "url": "https://inibuilds.com/products/slh-sim-designs-saint-barths-tffj-msfs",
+          "edition": "MSFS (édition non précisée)",
+          "version": "1.0.0",
+          "checked_at": "2026-10-27T10:57:50.515040+00:00",
+          "state": "verified"
+        }
+      ],
+      "selected": {
+        "score": 28,
+        "store": "Contrail",
+        "title": "TFFJ - Saint Barthélemy Airport MSFS20/24",
+        "vendor": "SLH Sim Designs",
+        "url": "https://contrail.shop/products/slh-sim-designs-tffj-saint-barthelemy-airport-msfs-2020-2024",
+        "edition": "2020+2024",
+        "version": "1.0.1",
+        "checked_at": "2026-10-27T10:57:50.527654+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -524,7 +845,7 @@
           "url": "https://secure.simmarket.com/tropicalsim-fort-de-france-martinique-tfff-v2-msfs.phtml",
           "edition": "MSFS (édition non précisée)",
           "version": "2.0.0",
-          "checked_at": "2026-10-27T07:40:22.458973+00:00",
+          "checked_at": "2026-10-27T10:58:08.255586+00:00",
           "state": "verified"
         }
       ],
@@ -536,7 +857,7 @@
         "url": "https://secure.simmarket.com/tropicalsim-fort-de-france-martinique-tfff-v2-msfs.phtml",
         "edition": "MSFS (édition non précisée)",
         "version": "2.0.0",
-        "checked_at": "2026-10-27T07:40:22.458973+00:00",
+        "checked_at": "2026-10-27T10:58:08.255586+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -579,7 +900,7 @@
           "url": "https://inibuilds.com/products/mxi-design-tirana-nene-tereza-lati-msfs",
           "edition": "2020",
           "version": "1.00",
-          "checked_at": "2026-10-27T07:40:01.657271+00:00",
+          "checked_at": "2026-10-27T10:57:50.607280+00:00",
           "state": "verified"
         }
       ],
@@ -591,7 +912,7 @@
         "url": "https://inibuilds.com/products/mxi-design-tirana-nene-tereza-lati-msfs",
         "edition": "2020",
         "version": "1.00",
-        "checked_at": "2026-10-27T07:40:01.657271+00:00",
+        "checked_at": "2026-10-27T10:57:50.607280+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -611,7 +932,7 @@
           "url": "https://inibuilds.com/products/salvuz-tirana-lati-msfs",
           "edition": "2020",
           "version": "1.2.0",
-          "checked_at": "2026-10-27T07:40:01.566766+00:00",
+          "checked_at": "2026-10-27T10:57:50.627567+00:00",
           "state": "verified"
         }
       ],
@@ -623,7 +944,7 @@
         "url": "https://inibuilds.com/products/salvuz-tirana-lati-msfs",
         "edition": "2020",
         "version": "1.2.0",
-        "checked_at": "2026-10-27T07:40:01.566766+00:00",
+        "checked_at": "2026-10-27T10:57:50.627567+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -666,7 +987,7 @@
           "url": "https://contrail.shop/products/sofly-eddv-hannover-airport-msfs-2020-2024",
           "edition": "2020+2024",
           "version": "1.2.1",
-          "checked_at": "2026-10-27T07:40:01.837086+00:00",
+          "checked_at": "2026-10-27T10:57:50.722519+00:00",
           "state": "verified"
         },
         {
@@ -677,7 +998,7 @@
           "url": "https://inibuilds.com/products/sofly-hannover-eddv-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.2.1",
-          "checked_at": "2026-10-27T07:40:01.907672+00:00",
+          "checked_at": "2026-10-27T10:57:50.676115+00:00",
           "state": "verified"
         }
       ],
@@ -689,7 +1010,7 @@
         "url": "https://contrail.shop/products/sofly-eddv-hannover-airport-msfs-2020-2024",
         "edition": "2020+2024",
         "version": "1.2.1",
-        "checked_at": "2026-10-27T07:40:01.837086+00:00",
+        "checked_at": "2026-10-27T10:57:50.722519+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -709,7 +1030,7 @@
           "url": "https://secure.simmarket.com/rdpresets-edds-stuttgart-int.-airport-msfs.phtml",
           "edition": "MSFS (édition non précisée)",
           "version": "1.3.1",
-          "checked_at": "2026-10-27T07:40:24.230526+00:00",
+          "checked_at": "2026-10-27T10:58:09.529982+00:00",
           "state": "verified"
         }
       ],
@@ -721,7 +1042,7 @@
         "url": "https://secure.simmarket.com/rdpresets-edds-stuttgart-int.-airport-msfs.phtml",
         "edition": "MSFS (édition non précisée)",
         "version": "1.3.1",
-        "checked_at": "2026-10-27T07:40:24.230526+00:00",
+        "checked_at": "2026-10-27T10:58:09.529982+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -742,7 +1063,7 @@
           "url": "https://contrail.shop/products/eddm-munich-intl",
           "edition": "MSFS (édition non précisée)",
           "version": "2.5.1",
-          "checked_at": "2026-10-27T07:40:01.669772+00:00",
+          "checked_at": "2026-10-27T10:57:50.668736+00:00",
           "state": "verified"
         }
       ],
@@ -754,7 +1075,7 @@
         "url": "https://contrail.shop/products/eddm-munich-intl",
         "edition": "MSFS (édition non précisée)",
         "version": "2.5.1",
-        "checked_at": "2026-10-27T07:40:01.669772+00:00",
+        "checked_at": "2026-10-27T10:57:50.668736+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -774,7 +1095,7 @@
           "url": "https://contrail.shop/products/aerosoft-eddl-dusseldorf-airport-msfs-2020-2024",
           "edition": "2020+2024",
           "version": "1.0.3",
-          "checked_at": "2026-10-27T07:40:01.812408+00:00",
+          "checked_at": "2026-10-27T10:57:50.881063+00:00",
           "state": "verified"
         }
       ],
@@ -786,7 +1107,7 @@
         "url": "https://contrail.shop/products/aerosoft-eddl-dusseldorf-airport-msfs-2020-2024",
         "edition": "2020+2024",
         "version": "1.0.3",
-        "checked_at": "2026-10-27T07:40:01.812408+00:00",
+        "checked_at": "2026-10-27T10:57:50.881063+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -806,7 +1127,7 @@
           "url": "https://contrail.shop/products/mk-studios-eddl-dusseldorf-airport-msfs-2020-2024",
           "edition": "2020+2024",
           "version": "1.1.1",
-          "checked_at": "2026-10-27T07:40:01.961807+00:00",
+          "checked_at": "2026-10-27T10:57:50.837320+00:00",
           "state": "verified"
         },
         {
@@ -817,7 +1138,7 @@
           "url": "https://inibuilds.com/products/mk-studios-dusseldorf-eddl-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.1.1",
-          "checked_at": "2026-10-27T07:40:01.981962+00:00",
+          "checked_at": "2026-10-27T10:57:50.964544+00:00",
           "state": "verified"
         }
       ],
@@ -829,7 +1150,7 @@
         "url": "https://contrail.shop/products/mk-studios-eddl-dusseldorf-airport-msfs-2020-2024",
         "edition": "2020+2024",
         "version": "1.1.1",
-        "checked_at": "2026-10-27T07:40:01.961807+00:00",
+        "checked_at": "2026-10-27T10:57:50.837320+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -849,7 +1170,7 @@
           "url": "https://contrail.shop/products/eddk-cologne-bonn-intl",
           "edition": "MSFS (édition non précisée)",
           "version": "1.1.1",
-          "checked_at": "2026-10-27T07:40:01.982788+00:00",
+          "checked_at": "2026-10-27T10:57:50.915023+00:00",
           "state": "verified"
         }
       ],
@@ -861,7 +1182,7 @@
         "url": "https://contrail.shop/products/eddk-cologne-bonn-intl",
         "edition": "MSFS (édition non précisée)",
         "version": "1.1.1",
-        "checked_at": "2026-10-27T07:40:01.982788+00:00",
+        "checked_at": "2026-10-27T10:57:50.915023+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -881,7 +1202,7 @@
           "url": "https://contrail.shop/products/eddh-hamburg-intl",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.4",
-          "checked_at": "2026-10-27T07:40:01.989026+00:00",
+          "checked_at": "2026-10-27T10:57:50.874336+00:00",
           "state": "verified"
         }
       ],
@@ -893,7 +1214,7 @@
         "url": "https://contrail.shop/products/eddh-hamburg-intl",
         "edition": "MSFS (édition non précisée)",
         "version": "1.0.4",
-        "checked_at": "2026-10-27T07:40:01.989026+00:00",
+        "checked_at": "2026-10-27T10:57:50.874336+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -913,7 +1234,7 @@
           "url": "https://contrail.shop/products/mm-simulations-eddg-munster-osnabruck-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.5",
-          "checked_at": "2026-10-27T07:40:02.037265+00:00",
+          "checked_at": "2026-10-27T10:57:51.041930+00:00",
           "state": "verified"
         },
         {
@@ -924,7 +1245,7 @@
           "url": "https://inibuilds.com/products/mm-simulations-munster-osnabruck-eddg-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.5",
-          "checked_at": "2026-10-27T07:40:02.247204+00:00",
+          "checked_at": "2026-10-27T10:57:51.024112+00:00",
           "state": "verified"
         }
       ],
@@ -936,7 +1257,7 @@
         "url": "https://contrail.shop/products/mm-simulations-eddg-munster-osnabruck-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.0.5",
-        "checked_at": "2026-10-27T07:40:02.037265+00:00",
+        "checked_at": "2026-10-27T10:57:51.041930+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -979,7 +1300,7 @@
           "url": "https://contrail.shop/products/aerosoft-eddb-berlin-brandenburg-intl",
           "edition": "MSFS (édition non précisée)",
           "version": "3.4.0",
-          "checked_at": "2026-10-27T07:40:02.299352+00:00",
+          "checked_at": "2026-10-27T10:57:51.103315+00:00",
           "state": "verified"
         }
       ],
@@ -991,7 +1312,7 @@
         "url": "https://contrail.shop/products/aerosoft-eddb-berlin-brandenburg-intl",
         "edition": "MSFS (édition non précisée)",
         "version": "3.4.0",
-        "checked_at": "2026-10-27T07:40:02.299352+00:00",
+        "checked_at": "2026-10-27T10:57:51.103315+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1011,7 +1332,7 @@
           "url": "https://contrail.shop/products/einn-shannon-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.3.0",
-          "checked_at": "2026-10-27T07:40:02.871823+00:00",
+          "checked_at": "2026-10-27T10:57:51.137393+00:00",
           "state": "verified"
         },
         {
@@ -1022,7 +1343,7 @@
           "url": "https://inibuilds.com/products/mk-studios-shannon-einn-msfs",
           "edition": "2020",
           "version": "1.3.0",
-          "checked_at": "2026-10-27T07:40:02.413498+00:00",
+          "checked_at": "2026-10-27T10:57:51.177683+00:00",
           "state": "verified"
         }
       ],
@@ -1034,7 +1355,7 @@
         "url": "https://contrail.shop/products/einn-shannon-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.3.0",
-        "checked_at": "2026-10-27T07:40:02.871823+00:00",
+        "checked_at": "2026-10-27T10:57:51.137393+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1054,7 +1375,7 @@
           "url": "https://contrail.shop/products/eidw-dublin-airport-v2-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "2.3.3",
-          "checked_at": "2026-10-27T07:40:02.400812+00:00",
+          "checked_at": "2026-10-27T10:57:51.201798+00:00",
           "state": "verified"
         },
         {
@@ -1065,7 +1386,7 @@
           "url": "https://inibuilds.com/products/mk-studios-dublin-eidw-msfs",
           "edition": "2020",
           "version": "2.3.3",
-          "checked_at": "2026-10-27T07:40:02.397949+00:00",
+          "checked_at": "2026-10-27T10:57:51.233312+00:00",
           "state": "verified"
         }
       ],
@@ -1077,7 +1398,7 @@
         "url": "https://contrail.shop/products/eidw-dublin-airport-v2-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "2.3.3",
-        "checked_at": "2026-10-27T07:40:02.400812+00:00",
+        "checked_at": "2026-10-27T10:57:51.201798+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1097,7 +1418,7 @@
           "url": "https://contrail.shop/products/eick-cork-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.4.0",
-          "checked_at": "2026-10-27T07:40:02.401407+00:00",
+          "checked_at": "2026-10-27T10:57:51.254106+00:00",
           "state": "verified"
         },
         {
@@ -1108,7 +1429,7 @@
           "url": "https://inibuilds.com/products/mk-studios-cork-eick-msfs",
           "edition": "2020",
           "version": "1.4.0",
-          "checked_at": "2026-10-27T07:40:02.666403+00:00",
+          "checked_at": "2026-10-27T10:57:51.294667+00:00",
           "state": "verified"
         }
       ],
@@ -1120,7 +1441,7 @@
         "url": "https://contrail.shop/products/eick-cork-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.4.0",
-        "checked_at": "2026-10-27T07:40:02.401407+00:00",
+        "checked_at": "2026-10-27T10:57:51.254106+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1162,7 +1483,7 @@
           "url": "https://inibuilds.com/products/inibuilds-london-heathrow-egll-msfs-2024",
           "edition": "2020+2024",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:02.512799+00:00",
+          "checked_at": "2026-10-27T10:57:51.326644+00:00",
           "state": "verified"
         },
         {
@@ -1173,7 +1494,7 @@
           "url": "https://inibuilds.com/products/inibuilds-london-heathrow-egll-msfs",
           "edition": "2020",
           "version": "3.1.4",
-          "checked_at": "2026-10-27T07:40:02.683706+00:00",
+          "checked_at": "2026-10-27T10:57:51.397076+00:00",
           "state": "verified"
         }
       ],
@@ -1185,7 +1506,7 @@
         "url": "https://inibuilds.com/products/inibuilds-london-heathrow-egll-msfs-2024",
         "edition": "2020+2024",
         "version": "1.1.0",
-        "checked_at": "2026-10-27T07:40:02.512799+00:00",
+        "checked_at": "2026-10-27T10:57:51.326644+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1205,7 +1526,7 @@
           "url": "https://inibuilds.com/products/inibuilds-london-gatwick-egkk-msfs-2024",
           "edition": "2020+2024",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:02.625139+00:00",
+          "checked_at": "2026-10-27T10:57:51.480865+00:00",
           "state": "verified"
         },
         {
@@ -1216,7 +1537,7 @@
           "url": "https://inibuilds.com/products/origami-studios-london-gatwick-egkk-msfs",
           "edition": "2020",
           "version": "1.00",
-          "checked_at": "2026-10-27T07:40:02.792118+00:00",
+          "checked_at": "2026-10-27T10:57:51.486386+00:00",
           "state": "verified"
         }
       ],
@@ -1228,7 +1549,7 @@
         "url": "https://inibuilds.com/products/inibuilds-london-gatwick-egkk-msfs-2024",
         "edition": "2020+2024",
         "version": "1.1.0",
-        "checked_at": "2026-10-27T07:40:02.625139+00:00",
+        "checked_at": "2026-10-27T10:57:51.480865+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1259,7 +1580,7 @@
           "url": "https://contrail.shop/products/lows-salzburg-airport",
           "edition": "MSFS (édition non précisée)",
           "version": "1.2.1",
-          "checked_at": "2026-10-27T07:40:02.860536+00:00",
+          "checked_at": "2026-10-27T10:57:51.457226+00:00",
           "state": "verified"
         },
         {
@@ -1270,7 +1591,7 @@
           "url": "https://inibuilds.com/products/digital-design-slazburg-lows-msfs",
           "edition": "2020",
           "version": "1.2.1",
-          "checked_at": "2026-10-27T07:40:02.828324+00:00",
+          "checked_at": "2026-10-27T10:57:51.561594+00:00",
           "state": "verified"
         }
       ],
@@ -1282,7 +1603,7 @@
         "url": "https://contrail.shop/products/lows-salzburg-airport",
         "edition": "MSFS (édition non précisée)",
         "version": "1.2.1",
-        "checked_at": "2026-10-27T07:40:02.860536+00:00",
+        "checked_at": "2026-10-27T10:57:51.457226+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1302,7 +1623,7 @@
           "url": "https://secure.simmarket.com/rdpresets-lows-salzburg-airport-msfs.phtml",
           "edition": "MSFS (édition non précisée)",
           "version": "1.2",
-          "checked_at": "2026-10-27T07:40:26.374938+00:00",
+          "checked_at": "2026-10-27T10:58:11.543290+00:00",
           "state": "verified"
         }
       ],
@@ -1314,7 +1635,7 @@
         "url": "https://secure.simmarket.com/rdpresets-lows-salzburg-airport-msfs.phtml",
         "edition": "MSFS (édition non précisée)",
         "version": "1.2",
-        "checked_at": "2026-10-27T07:40:26.374938+00:00",
+        "checked_at": "2026-10-27T10:58:11.543290+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -1335,7 +1656,7 @@
           "url": "https://inibuilds.com/products/inibuilds-innsbruck-lowi-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.2",
-          "checked_at": "2026-10-27T07:40:02.755193+00:00",
+          "checked_at": "2026-10-27T10:57:51.584800+00:00",
           "state": "verified"
         }
       ],
@@ -1347,7 +1668,7 @@
         "url": "https://inibuilds.com/products/inibuilds-innsbruck-lowi-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.0.2",
-        "checked_at": "2026-10-27T07:40:02.755193+00:00",
+        "checked_at": "2026-10-27T10:57:51.584800+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1367,7 +1688,7 @@
           "url": "https://contrail.shop/products/ebbr-brussels-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.5",
-          "checked_at": "2026-10-27T07:40:02.989693+00:00",
+          "checked_at": "2026-10-27T10:57:51.563512+00:00",
           "state": "verified"
         }
       ],
@@ -1379,7 +1700,7 @@
         "url": "https://contrail.shop/products/ebbr-brussels-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.0.5",
-        "checked_at": "2026-10-27T07:40:02.989693+00:00",
+        "checked_at": "2026-10-27T10:57:51.563512+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1399,7 +1720,7 @@
           "url": "https://secure.simmarket.com/aflosim-lbsf-sofia-airport-msfs.phtml",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0",
-          "checked_at": "2026-10-27T07:40:26.521583+00:00",
+          "checked_at": "2026-10-27T10:58:11.609884+00:00",
           "state": "verified"
         }
       ],
@@ -1411,7 +1732,7 @@
         "url": "https://secure.simmarket.com/aflosim-lbsf-sofia-airport-msfs.phtml",
         "edition": "MSFS (édition non précisée)",
         "version": "1.0",
-        "checked_at": "2026-10-27T07:40:26.521583+00:00",
+        "checked_at": "2026-10-27T10:58:11.609884+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -1432,7 +1753,7 @@
           "url": "https://inibuilds.com/products/fly2high-sofia-lbsf-msfs",
           "edition": "2020",
           "version": "2.0.0",
-          "checked_at": "2026-10-27T07:40:03.075422+00:00",
+          "checked_at": "2026-10-27T10:57:51.571011+00:00",
           "state": "verified"
         }
       ],
@@ -1444,7 +1765,7 @@
         "url": "https://inibuilds.com/products/fly2high-sofia-lbsf-msfs",
         "edition": "2020",
         "version": "2.0.0",
-        "checked_at": "2026-10-27T07:40:03.075422+00:00",
+        "checked_at": "2026-10-27T10:57:51.571011+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1464,7 +1785,7 @@
           "url": "https://inibuilds.com/products/inibuilds-larnaca-lclk-msfs",
           "edition": "2020+2024",
           "version": "1.0.3",
-          "checked_at": "2026-10-27T07:40:03.106143+00:00",
+          "checked_at": "2026-10-27T10:57:51.678617+00:00",
           "state": "verified"
         }
       ],
@@ -1476,7 +1797,7 @@
         "url": "https://inibuilds.com/products/inibuilds-larnaca-lclk-msfs",
         "edition": "2020+2024",
         "version": "1.0.3",
-        "checked_at": "2026-10-27T07:40:03.106143+00:00",
+        "checked_at": "2026-10-27T10:57:51.678617+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1496,7 +1817,7 @@
           "url": "https://contrail.shop/products/ldza-zagreb-intl",
           "edition": "MSFS (édition non précisée)",
           "version": "2.5.4",
-          "checked_at": "2026-10-27T07:40:03.159911+00:00",
+          "checked_at": "2026-10-27T10:57:51.771195+00:00",
           "state": "verified"
         }
       ],
@@ -1508,7 +1829,50 @@
         "url": "https://contrail.shop/products/ldza-zagreb-intl",
         "edition": "MSFS (édition non précisée)",
         "version": "2.5.4",
-        "checked_at": "2026-10-27T07:40:03.159911+00:00",
+        "checked_at": "2026-10-27T10:57:51.771195+00:00",
+        "state": "verified"
+      },
+      "state": "source_found"
+    },
+    {
+      "folder": "davorpuljevic-airport-lddu-dubrovnik",
+      "icao": "LDDU",
+      "name": "LDDU",
+      "publisher": "Puljevic",
+      "installed": "2.0.0",
+      "matches": [],
+      "selected": null,
+      "state": "needs_research",
+      "simmarket_search_count": 3
+    },
+    {
+      "folder": "inibuilds-airport-lddu-dubrovnik",
+      "icao": "LDDU",
+      "name": "LDDU Dubrovnik",
+      "publisher": "inibuilds",
+      "installed": "1.0.2",
+      "matches": [
+        {
+          "score": 24,
+          "store": "iniBuilds",
+          "title": "iniBuilds Dubrovnik (LDDU) for MSFS-2020",
+          "vendor": "iniBuilds",
+          "url": "https://inibuilds.com/products/inibuilds-dubrovnik-lddu-msfs",
+          "edition": "2020",
+          "version": "1.0.2",
+          "checked_at": "2026-10-27T10:57:51.797420+00:00",
+          "state": "verified"
+        }
+      ],
+      "selected": {
+        "score": 24,
+        "store": "iniBuilds",
+        "title": "iniBuilds Dubrovnik (LDDU) for MSFS-2020",
+        "vendor": "iniBuilds",
+        "url": "https://inibuilds.com/products/inibuilds-dubrovnik-lddu-msfs",
+        "edition": "2020",
+        "version": "1.0.2",
+        "checked_at": "2026-10-27T10:57:51.797420+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1528,7 +1892,7 @@
           "url": "https://secure.simmarket.com/simnord-ekch-copenhagen-airport-msfs2420.phtml",
           "edition": "2020+2024",
           "version": "1.0.7",
-          "checked_at": "2026-10-27T07:40:26.570574+00:00",
+          "checked_at": "2026-10-27T10:58:12.327628+00:00",
           "state": "verified"
         }
       ],
@@ -1540,7 +1904,7 @@
         "url": "https://secure.simmarket.com/simnord-ekch-copenhagen-airport-msfs2420.phtml",
         "edition": "2020+2024",
         "version": "1.0.7",
-        "checked_at": "2026-10-27T07:40:26.570574+00:00",
+        "checked_at": "2026-10-27T10:58:12.327628+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -1561,7 +1925,7 @@
           "url": "https://contrail.shop/products/lxgb-gibraltar-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.1.1",
-          "checked_at": "2026-10-27T07:40:03.125586+00:00",
+          "checked_at": "2026-10-27T10:57:51.778191+00:00",
           "state": "verified"
         }
       ],
@@ -1573,7 +1937,7 @@
         "url": "https://contrail.shop/products/lxgb-gibraltar-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.1.1",
-        "checked_at": "2026-10-27T07:40:03.125586+00:00",
+        "checked_at": "2026-10-27T10:57:51.778191+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1593,7 +1957,7 @@
           "url": "https://contrail.shop/products/lezl-seville-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.3.0",
-          "checked_at": "2026-10-27T07:40:03.230477+00:00",
+          "checked_at": "2026-10-27T10:57:51.821500+00:00",
           "state": "verified"
         },
         {
@@ -1604,7 +1968,7 @@
           "url": "https://inibuilds.com/products/mk-studios-seville-lezl-msfs",
           "edition": "2020",
           "version": "1.3.0",
-          "checked_at": "2026-10-27T07:40:03.437697+00:00",
+          "checked_at": "2026-10-27T10:57:51.861585+00:00",
           "state": "verified"
         }
       ],
@@ -1616,7 +1980,7 @@
         "url": "https://contrail.shop/products/lezl-seville-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.3.0",
-        "checked_at": "2026-10-27T07:40:03.230477+00:00",
+        "checked_at": "2026-10-27T10:57:51.821500+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1636,7 +2000,7 @@
           "url": "https://contrail.shop/products/leso-san-sebastian-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.2.0",
-          "checked_at": "2026-10-27T07:40:03.305740+00:00",
+          "checked_at": "2026-10-27T10:57:51.880041+00:00",
           "state": "verified"
         },
         {
@@ -1647,7 +2011,7 @@
           "url": "https://inibuilds.com/products/mk-studios-san-sebastian-leso-msfs",
           "edition": "2020",
           "version": "1.2.0",
-          "checked_at": "2026-10-27T07:40:03.366500+00:00",
+          "checked_at": "2026-10-27T10:57:51.928362+00:00",
           "state": "verified"
         }
       ],
@@ -1659,7 +2023,7 @@
         "url": "https://contrail.shop/products/leso-san-sebastian-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.2.0",
-        "checked_at": "2026-10-27T07:40:03.305740+00:00",
+        "checked_at": "2026-10-27T10:57:51.880041+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1690,7 +2054,7 @@
           "url": "https://contrail.shop/products/lemg-malaga-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.2.2",
-          "checked_at": "2026-10-27T07:40:03.504995+00:00",
+          "checked_at": "2026-10-27T10:57:51.975909+00:00",
           "state": "verified"
         },
         {
@@ -1701,7 +2065,7 @@
           "url": "https://inibuilds.com/products/mk-studios-malaga-lemg-msfs",
           "edition": "2020",
           "version": "1.2.2",
-          "checked_at": "2026-10-27T07:40:03.543281+00:00",
+          "checked_at": "2026-10-27T10:57:52.099214+00:00",
           "state": "verified"
         }
       ],
@@ -1713,7 +2077,7 @@
         "url": "https://contrail.shop/products/lemg-malaga-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.2.2",
-        "checked_at": "2026-10-27T07:40:03.504995+00:00",
+        "checked_at": "2026-10-27T10:57:51.975909+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1733,7 +2097,7 @@
           "url": "https://contrail.shop/products/lemd-madrid-barajas-intl",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.10",
-          "checked_at": "2026-10-27T07:40:03.510739+00:00",
+          "checked_at": "2026-10-27T10:57:52.011751+00:00",
           "state": "verified"
         }
       ],
@@ -1745,7 +2109,7 @@
         "url": "https://contrail.shop/products/lemd-madrid-barajas-intl",
         "edition": "MSFS (édition non précisée)",
         "version": "1.0.10",
-        "checked_at": "2026-10-27T07:40:03.510739+00:00",
+        "checked_at": "2026-10-27T10:57:52.011751+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1765,7 +2129,7 @@
           "url": "https://inibuilds.com/products/inibuilds-ibiza-leib-msfs2024",
           "edition": "2020+2024",
           "version": "1.0.2",
-          "checked_at": "2026-10-27T07:40:03.450046+00:00",
+          "checked_at": "2026-10-27T10:57:52.079277+00:00",
           "state": "verified"
         },
         {
@@ -1776,7 +2140,7 @@
           "url": "https://inibuilds.com/products/inibuilds-ibiza-leib-msfs",
           "edition": "2020",
           "version": "1.2.1",
-          "checked_at": "2026-10-27T07:40:03.625371+00:00",
+          "checked_at": "2026-10-27T10:57:52.207297+00:00",
           "state": "verified"
         }
       ],
@@ -1788,7 +2152,7 @@
         "url": "https://inibuilds.com/products/inibuilds-ibiza-leib-msfs2024",
         "edition": "2020+2024",
         "version": "1.0.2",
-        "checked_at": "2026-10-27T07:40:03.450046+00:00",
+        "checked_at": "2026-10-27T10:57:52.079277+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1808,7 +2172,7 @@
           "url": "https://contrail.shop/products/lege-girona-costa-brava-airport-msfs-1",
           "edition": "MSFS (édition non précisée)",
           "version": "1.2.2",
-          "checked_at": "2026-10-27T07:40:03.731723+00:00",
+          "checked_at": "2026-10-27T10:57:52.172395+00:00",
           "state": "verified"
         }
       ],
@@ -1820,7 +2184,7 @@
         "url": "https://contrail.shop/products/lege-girona-costa-brava-airport-msfs-1",
         "edition": "MSFS (édition non précisée)",
         "version": "1.2.2",
-        "checked_at": "2026-10-27T07:40:03.731723+00:00",
+        "checked_at": "2026-10-27T10:57:52.172395+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1840,7 +2204,7 @@
           "url": "https://contrail.shop/products/mk-studios-lebl-barcelona-intl-msfs",
           "edition": "2020+2024",
           "version": "1.4.0",
-          "checked_at": "2026-10-27T07:40:03.764725+00:00",
+          "checked_at": "2026-10-27T10:57:52.143659+00:00",
           "state": "verified"
         },
         {
@@ -1851,7 +2215,7 @@
           "url": "https://inibuilds.com/products/mk-studios-barcelona-lebl-msfs",
           "edition": "2020",
           "version": "1.4.0",
-          "checked_at": "2026-10-27T07:40:03.791690+00:00",
+          "checked_at": "2026-10-27T10:57:52.250220+00:00",
           "state": "verified"
         }
       ],
@@ -1863,7 +2227,7 @@
         "url": "https://contrail.shop/products/mk-studios-lebl-barcelona-intl-msfs",
         "edition": "2020+2024",
         "version": "1.4.0",
-        "checked_at": "2026-10-27T07:40:03.764725+00:00",
+        "checked_at": "2026-10-27T10:57:52.143659+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1883,7 +2247,7 @@
           "url": "https://contrail.shop/products/gcfv-fuerteventura-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.3.0",
-          "checked_at": "2026-10-27T07:40:03.819549+00:00",
+          "checked_at": "2026-10-27T10:57:52.317791+00:00",
           "state": "verified"
         },
         {
@@ -1894,7 +2258,7 @@
           "url": "https://inibuilds.com/products/mk-studios-fuerteventura-gcfv-msfs",
           "edition": "2020",
           "version": "1.3.0",
-          "checked_at": "2026-10-27T07:40:04.051062+00:00",
+          "checked_at": "2026-10-27T10:57:52.304894+00:00",
           "state": "verified"
         }
       ],
@@ -1906,7 +2270,7 @@
         "url": "https://contrail.shop/products/gcfv-fuerteventura-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.3.0",
-        "checked_at": "2026-10-27T07:40:03.819549+00:00",
+        "checked_at": "2026-10-27T10:57:52.317791+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1926,7 +2290,7 @@
           "url": "https://contrail.shop/products/eetn-tallinn-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.2.0",
-          "checked_at": "2026-10-27T07:40:03.875561+00:00",
+          "checked_at": "2026-10-27T10:57:52.397900+00:00",
           "state": "verified"
         },
         {
@@ -1937,7 +2301,7 @@
           "url": "https://inibuilds.com/products/drzewiecki-design-tallinn-eetn-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.2.0",
-          "checked_at": "2026-10-27T07:40:04.034998+00:00",
+          "checked_at": "2026-10-27T10:57:52.377926+00:00",
           "state": "verified"
         }
       ],
@@ -1949,7 +2313,7 @@
         "url": "https://contrail.shop/products/eetn-tallinn-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.2.0",
-        "checked_at": "2026-10-27T07:40:03.875561+00:00",
+        "checked_at": "2026-10-27T10:57:52.397900+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -1969,7 +2333,7 @@
           "url": "https://contrail.shop/products/mk-studios-efro-rovaniemi-airport-v2-msfs-2020-2024",
           "edition": "2020+2024",
           "version": "2.0.4",
-          "checked_at": "2026-10-27T07:40:03.989994+00:00",
+          "checked_at": "2026-10-27T10:57:52.460986+00:00",
           "state": "verified"
         },
         {
@@ -1980,7 +2344,7 @@
           "url": "https://inibuilds.com/products/mk-studios-rovaniemi-v2-efro-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "2.0.4",
-          "checked_at": "2026-10-27T07:40:04.134855+00:00",
+          "checked_at": "2026-10-27T10:57:52.485294+00:00",
           "state": "verified"
         }
       ],
@@ -1992,7 +2356,7 @@
         "url": "https://contrail.shop/products/mk-studios-efro-rovaniemi-airport-v2-msfs-2020-2024",
         "edition": "2020+2024",
         "version": "2.0.4",
-        "checked_at": "2026-10-27T07:40:03.989994+00:00",
+        "checked_at": "2026-10-27T10:57:52.460986+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -2012,7 +2376,7 @@
           "url": "https://contrail.shop/products/mk-studios-efhk-helsinki-airport-v2-msfs-2020-2024",
           "edition": "2020+2024",
           "version": "2.0.2",
-          "checked_at": "2026-10-27T07:40:04.355656+00:00",
+          "checked_at": "2026-10-27T10:57:52.558226+00:00",
           "state": "verified"
         },
         {
@@ -2023,7 +2387,7 @@
           "url": "https://inibuilds.com/products/mk-studios-helsinki-vantaa-efhk-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "2.0.2",
-          "checked_at": "2026-10-27T07:40:04.210656+00:00",
+          "checked_at": "2026-10-27T10:57:52.555684+00:00",
           "state": "verified"
         }
       ],
@@ -2035,7 +2399,7 @@
         "url": "https://contrail.shop/products/mk-studios-efhk-helsinki-airport-v2-msfs-2020-2024",
         "edition": "2020+2024",
         "version": "2.0.2",
-        "checked_at": "2026-10-27T07:40:04.355656+00:00",
+        "checked_at": "2026-10-27T10:57:52.558226+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -2055,7 +2419,7 @@
           "url": "https://inibuilds.com/products/pilot-experience-sim-saint-tropez-lftz-msfs",
           "edition": "2020",
           "version": "1.4.1",
-          "checked_at": "2026-10-27T07:40:04.082998+00:00",
+          "checked_at": "2026-10-27T10:57:52.621238+00:00",
           "state": "verified"
         }
       ],
@@ -2067,7 +2431,7 @@
         "url": "https://inibuilds.com/products/pilot-experience-sim-saint-tropez-lftz-msfs",
         "edition": "2020",
         "version": "1.4.1",
-        "checked_at": "2026-10-27T07:40:04.082998+00:00",
+        "checked_at": "2026-10-27T10:57:52.621238+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -2087,7 +2451,7 @@
           "url": "https://secure.simmarket.com/france-vfr-lfst-strasbourg-entzheim-msfs.phtml",
           "edition": "2020+2024",
           "version": "1.3.3",
-          "checked_at": "2026-10-27T07:40:26.692383+00:00",
+          "checked_at": "2026-10-27T10:58:12.573830+00:00",
           "state": "verified"
         }
       ],
@@ -2099,7 +2463,7 @@
         "url": "https://secure.simmarket.com/france-vfr-lfst-strasbourg-entzheim-msfs.phtml",
         "edition": "2020+2024",
         "version": "1.3.3",
-        "checked_at": "2026-10-27T07:40:26.692383+00:00",
+        "checked_at": "2026-10-27T10:58:12.573830+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -2120,7 +2484,7 @@
           "url": "https://secure.simmarket.com/france-vfr-lfsb-basel-mulhouse-freiburg-msfs.phtml",
           "edition": "2020+2024",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:27.623240+00:00",
+          "checked_at": "2026-10-27T10:58:12.637946+00:00",
           "state": "verified"
         }
       ],
@@ -2132,7 +2496,7 @@
         "url": "https://secure.simmarket.com/france-vfr-lfsb-basel-mulhouse-freiburg-msfs.phtml",
         "edition": "2020+2024",
         "version": "1.1.0",
-        "checked_at": "2026-10-27T07:40:27.623240+00:00",
+        "checked_at": "2026-10-27T10:58:12.637946+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -2153,7 +2517,7 @@
           "url": "https://secure.simmarket.com/france-vfr-lfrs-nantes-atlantique-msfs.phtml",
           "edition": "2020+2024",
           "version": "1.00",
-          "checked_at": "2026-10-27T07:40:27.701412+00:00",
+          "checked_at": "2026-10-27T10:58:12.985517+00:00",
           "state": "verified"
         }
       ],
@@ -2165,7 +2529,7 @@
         "url": "https://secure.simmarket.com/france-vfr-lfrs-nantes-atlantique-msfs.phtml",
         "edition": "2020+2024",
         "version": "1.00",
-        "checked_at": "2026-10-27T07:40:27.701412+00:00",
+        "checked_at": "2026-10-27T10:58:12.985517+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -2186,7 +2550,7 @@
           "url": "https://secure.simmarket.com/france-vfr-lfrn-rennes-bretagne-msfs.phtml",
           "edition": "2020+2024",
           "version": "1.31",
-          "checked_at": "2026-10-27T07:40:27.797988+00:00",
+          "checked_at": "2026-10-27T10:58:13.568956+00:00",
           "state": "verified"
         }
       ],
@@ -2198,7 +2562,7 @@
         "url": "https://secure.simmarket.com/france-vfr-lfrn-rennes-bretagne-msfs.phtml",
         "edition": "2020+2024",
         "version": "1.31",
-        "checked_at": "2026-10-27T07:40:27.797988+00:00",
+        "checked_at": "2026-10-27T10:58:13.568956+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -2219,7 +2583,7 @@
           "url": "https://contrail.shop/products/lfpo-paris-orly-intl",
           "edition": "MSFS (édition non précisée)",
           "version": "1.5.0",
-          "checked_at": "2026-10-27T07:40:04.247384+00:00",
+          "checked_at": "2026-10-27T10:57:52.603139+00:00",
           "state": "verified"
         }
       ],
@@ -2231,7 +2595,7 @@
         "url": "https://contrail.shop/products/lfpo-paris-orly-intl",
         "edition": "MSFS (édition non précisée)",
         "version": "1.5.0",
-        "checked_at": "2026-10-27T07:40:04.247384+00:00",
+        "checked_at": "2026-10-27T10:57:52.603139+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -2251,7 +2615,7 @@
           "url": "https://secure.simmarket.com/fsx3d-gap-tallard-lfna-msfs.phtml",
           "edition": "MSFS (édition non précisée)",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:29.007154+00:00",
+          "checked_at": "2026-10-27T10:58:14.379981+00:00",
           "state": "verified"
         }
       ],
@@ -2263,7 +2627,7 @@
         "url": "https://secure.simmarket.com/fsx3d-gap-tallard-lfna-msfs.phtml",
         "edition": "MSFS (édition non précisée)",
         "version": "1.1.0",
-        "checked_at": "2026-10-27T07:40:29.007154+00:00",
+        "checked_at": "2026-10-27T10:58:14.379981+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -2284,7 +2648,7 @@
           "url": "https://inibuilds.com/products/pilot-experience-sim-montpellier-lfmt-msfs",
           "edition": "2020",
           "version": "2.1.1",
-          "checked_at": "2026-10-27T07:40:04.230661+00:00",
+          "checked_at": "2026-10-27T10:57:52.665936+00:00",
           "state": "verified"
         }
       ],
@@ -2296,7 +2660,7 @@
         "url": "https://inibuilds.com/products/pilot-experience-sim-montpellier-lfmt-msfs",
         "edition": "2020",
         "version": "2.1.1",
-        "checked_at": "2026-10-27T07:40:04.230661+00:00",
+        "checked_at": "2026-10-27T10:57:52.665936+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -2338,7 +2702,7 @@
           "url": "https://contrail.shop/products/lfml-marseille-provence-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.0",
-          "checked_at": "2026-10-27T07:40:04.461042+00:00",
+          "checked_at": "2026-10-27T10:57:52.692886+00:00",
           "state": "verified"
         }
       ],
@@ -2350,7 +2714,7 @@
         "url": "https://contrail.shop/products/lfml-marseille-provence-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.0.0",
-        "checked_at": "2026-10-27T07:40:04.461042+00:00",
+        "checked_at": "2026-10-27T10:57:52.692886+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -2370,7 +2734,7 @@
           "url": "https://secure.simmarket.com/flydesign-lfmdceq-cannes-mandelieu-airport-msfs.phtml",
           "edition": "MSFS (édition non précisée)",
           "version": "1.3",
-          "checked_at": "2026-10-27T07:40:30.011501+00:00",
+          "checked_at": "2026-10-27T10:58:14.891796+00:00",
           "state": "verified"
         }
       ],
@@ -2382,7 +2746,7 @@
         "url": "https://secure.simmarket.com/flydesign-lfmdceq-cannes-mandelieu-airport-msfs.phtml",
         "edition": "MSFS (édition non précisée)",
         "version": "1.3",
-        "checked_at": "2026-10-27T07:40:30.011501+00:00",
+        "checked_at": "2026-10-27T10:58:14.891796+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -2403,7 +2767,7 @@
           "url": "https://secure.simmarket.com/france-vfr-lfkj-ajaccio-msfs2420.phtml",
           "edition": "2020+2024",
           "version": "1.01",
-          "checked_at": "2026-10-27T07:40:30.227975+00:00",
+          "checked_at": "2026-10-27T10:58:15.513606+00:00",
           "state": "verified"
         }
       ],
@@ -2415,7 +2779,7 @@
         "url": "https://secure.simmarket.com/france-vfr-lfkj-ajaccio-msfs2420.phtml",
         "edition": "2020+2024",
         "version": "1.01",
-        "checked_at": "2026-10-27T07:40:30.227975+00:00",
+        "checked_at": "2026-10-27T10:58:15.513606+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -2436,7 +2800,7 @@
           "url": "https://inibuilds.com/products/pilot-experience-sim-ajaccio-lfkj-msfs",
           "edition": "2020",
           "version": "1.3.2",
-          "checked_at": "2026-10-27T07:40:04.325140+00:00",
+          "checked_at": "2026-10-27T10:57:52.709294+00:00",
           "state": "verified"
         }
       ],
@@ -2448,7 +2812,7 @@
         "url": "https://inibuilds.com/products/pilot-experience-sim-ajaccio-lfkj-msfs",
         "edition": "2020",
         "version": "1.3.2",
-        "checked_at": "2026-10-27T07:40:04.325140+00:00",
+        "checked_at": "2026-10-27T10:57:52.709294+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -2468,7 +2832,7 @@
           "url": "https://secure.simmarket.com/france-vfr-lfkf-figari-sud-corse-msfs2420.phtml",
           "edition": "2020+2024",
           "version": "1.00",
-          "checked_at": "2026-10-27T07:40:30.428325+00:00",
+          "checked_at": "2026-10-27T10:58:15.604704+00:00",
           "state": "verified"
         }
       ],
@@ -2480,7 +2844,7 @@
         "url": "https://secure.simmarket.com/france-vfr-lfkf-figari-sud-corse-msfs2420.phtml",
         "edition": "2020+2024",
         "version": "1.00",
-        "checked_at": "2026-10-27T07:40:30.428325+00:00",
+        "checked_at": "2026-10-27T10:58:15.604704+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -2501,7 +2865,7 @@
           "url": "https://secure.simmarket.com/france-vfr-lfkc-calvi-sainte-catherine-msfs2420.phtml",
           "edition": "2020+2024",
           "version": "1.10",
-          "checked_at": "2026-10-27T07:40:30.442058+00:00",
+          "checked_at": "2026-10-27T10:58:15.734039+00:00",
           "state": "verified"
         }
       ],
@@ -2513,7 +2877,7 @@
         "url": "https://secure.simmarket.com/france-vfr-lfkc-calvi-sainte-catherine-msfs2420.phtml",
         "edition": "2020+2024",
         "version": "1.10",
-        "checked_at": "2026-10-27T07:40:30.442058+00:00",
+        "checked_at": "2026-10-27T10:58:15.734039+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -2534,7 +2898,7 @@
           "url": "https://secure.simmarket.com/fsx3d-calvi-st-catherine-airport-lfkc-msfs.phtml",
           "edition": "2020",
           "version": "1.5",
-          "checked_at": "2026-10-27T07:40:31.228524+00:00",
+          "checked_at": "2026-10-27T10:58:15.968857+00:00",
           "state": "verified"
         }
       ],
@@ -2546,7 +2910,7 @@
         "url": "https://secure.simmarket.com/fsx3d-calvi-st-catherine-airport-lfkc-msfs.phtml",
         "edition": "2020",
         "version": "1.5",
-        "checked_at": "2026-10-27T07:40:31.228524+00:00",
+        "checked_at": "2026-10-27T10:58:15.968857+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -2567,7 +2931,7 @@
           "url": "https://secure.simmarket.com/vref-simulations-lfkc-calvi-st.catherine-airport-msfs.phtml",
           "edition": "MSFS (édition non précisée)",
           "version": "2.0",
-          "checked_at": "2026-10-27T07:40:31.470506+00:00",
+          "checked_at": "2026-10-27T10:58:16.603755+00:00",
           "state": "verified"
         }
       ],
@@ -2579,7 +2943,7 @@
         "url": "https://secure.simmarket.com/vref-simulations-lfkc-calvi-st.catherine-airport-msfs.phtml",
         "edition": "MSFS (édition non précisée)",
         "version": "2.0",
-        "checked_at": "2026-10-27T07:40:31.470506+00:00",
+        "checked_at": "2026-10-27T10:58:16.603755+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -2600,7 +2964,7 @@
           "url": "https://secure.simmarket.com/france-vfr-lfkb-bastia-poretta-msfs2420-(en_20850).phtml",
           "edition": "2020+2024",
           "version": "1.10",
-          "checked_at": "2026-10-27T07:40:31.478041+00:00",
+          "checked_at": "2026-10-27T10:58:16.613006+00:00",
           "state": "verified"
         }
       ],
@@ -2612,7 +2976,7 @@
         "url": "https://secure.simmarket.com/france-vfr-lfkb-bastia-poretta-msfs2420-(en_20850).phtml",
         "edition": "2020+2024",
         "version": "1.10",
-        "checked_at": "2026-10-27T07:40:31.478041+00:00",
+        "checked_at": "2026-10-27T10:58:16.613006+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -2633,7 +2997,7 @@
           "url": "https://secure.simmarket.com/france-vfr-lfjl-metz-nancy-lorraine-msfs.phtml",
           "edition": "2020+2024",
           "version": "1.00",
-          "checked_at": "2026-10-27T07:40:31.634835+00:00",
+          "checked_at": "2026-10-27T10:58:16.731206+00:00",
           "state": "verified"
         }
       ],
@@ -2645,7 +3009,7 @@
         "url": "https://secure.simmarket.com/france-vfr-lfjl-metz-nancy-lorraine-msfs.phtml",
         "edition": "2020+2024",
         "version": "1.00",
-        "checked_at": "2026-10-27T07:40:31.634835+00:00",
+        "checked_at": "2026-10-27T10:58:16.731206+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -2666,7 +3030,7 @@
           "url": "https://contrail.shop/products/lfbo-toulouse-blagnac-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:04.529762+00:00",
+          "checked_at": "2026-10-27T10:57:52.760531+00:00",
           "state": "verified"
         }
       ],
@@ -2678,7 +3042,7 @@
         "url": "https://contrail.shop/products/lfbo-toulouse-blagnac-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.1.0",
-        "checked_at": "2026-10-27T07:40:04.529762+00:00",
+        "checked_at": "2026-10-27T10:57:52.760531+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -2698,7 +3062,7 @@
           "url": "https://inibuilds.com/products/pilot-experience-sim-bordeaux-lfbd-msfs",
           "edition": "2020",
           "version": "2.1.1",
-          "checked_at": "2026-10-27T07:40:04.402295+00:00",
+          "checked_at": "2026-10-27T10:57:52.841266+00:00",
           "state": "verified"
         }
       ],
@@ -2710,7 +3074,7 @@
         "url": "https://inibuilds.com/products/pilot-experience-sim-bordeaux-lfbd-msfs",
         "edition": "2020",
         "version": "2.1.1",
-        "checked_at": "2026-10-27T07:40:04.402295+00:00",
+        "checked_at": "2026-10-27T10:57:52.841266+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -2730,7 +3094,7 @@
           "url": "https://contrail.shop/products/lgsr-santorini-airport-island-msfs24",
           "edition": "2024",
           "version": "1.0.1",
-          "checked_at": "2026-10-27T07:40:04.693197+00:00",
+          "checked_at": "2026-10-27T10:57:53.154851+00:00",
           "state": "verified"
         },
         {
@@ -2741,7 +3105,7 @@
           "url": "https://contrail.shop/products/29palms-lgsr-santorini-airport-island-msfs",
           "edition": "2020",
           "version": "1.0.2",
-          "checked_at": "2026-10-27T07:40:04.624350+00:00",
+          "checked_at": "2026-10-27T10:57:52.892701+00:00",
           "state": "verified"
         }
       ],
@@ -2753,7 +3117,7 @@
         "url": "https://contrail.shop/products/lgsr-santorini-airport-island-msfs24",
         "edition": "2024",
         "version": "1.0.1",
-        "checked_at": "2026-10-27T07:40:04.693197+00:00",
+        "checked_at": "2026-10-27T10:57:53.154851+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -2784,7 +3148,7 @@
           "url": "https://contrail.shop/products/29palms-lgmk-mykonos-airport-msfs-2024",
           "edition": "2020+2024",
           "version": "1.0.0",
-          "checked_at": "2026-10-27T07:40:04.685720+00:00",
+          "checked_at": "2026-10-27T10:57:52.917754+00:00",
           "state": "verified"
         },
         {
@@ -2795,7 +3159,7 @@
           "url": "https://contrail.shop/products/lgmk-mykonos-airport",
           "edition": "2020",
           "version": "2.0.2",
-          "checked_at": "2026-10-27T07:40:04.749456+00:00",
+          "checked_at": "2026-10-27T10:57:52.927058+00:00",
           "state": "verified"
         }
       ],
@@ -2807,7 +3171,7 @@
         "url": "https://contrail.shop/products/29palms-lgmk-mykonos-airport-msfs-2024",
         "edition": "2020+2024",
         "version": "1.0.0",
-        "checked_at": "2026-10-27T07:40:04.685720+00:00",
+        "checked_at": "2026-10-27T10:57:52.917754+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -2827,7 +3191,7 @@
           "url": "https://contrail.shop/products/lgav-athens-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "2.2.0",
-          "checked_at": "2026-10-27T07:40:04.955413+00:00",
+          "checked_at": "2026-10-27T10:57:52.907562+00:00",
           "state": "verified"
         }
       ],
@@ -2839,7 +3203,7 @@
         "url": "https://contrail.shop/products/lgav-athens-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "2.2.0",
-        "checked_at": "2026-10-27T07:40:04.955413+00:00",
+        "checked_at": "2026-10-27T10:57:52.907562+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -2870,7 +3234,7 @@
           "url": "https://contrail.shop/products/bgsf-kangerlussuaq-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.2.0",
-          "checked_at": "2026-10-27T07:40:04.805915+00:00",
+          "checked_at": "2026-10-27T10:57:52.970071+00:00",
           "state": "verified"
         },
         {
@@ -2881,7 +3245,7 @@
           "url": "https://inibuilds.com/products/mk-studios-kangerlussuaq-bgsf-msfs",
           "edition": "2020",
           "version": "1.2.0",
-          "checked_at": "2026-10-27T07:40:04.894093+00:00",
+          "checked_at": "2026-10-27T10:57:53.044691+00:00",
           "state": "verified"
         }
       ],
@@ -2893,7 +3257,7 @@
         "url": "https://contrail.shop/products/bgsf-kangerlussuaq-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.2.0",
-        "checked_at": "2026-10-27T07:40:04.805915+00:00",
+        "checked_at": "2026-10-27T10:57:52.970071+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -2913,7 +3277,7 @@
           "url": "https://contrail.shop/products/ehrd-rotterdam-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "2.2.0",
-          "checked_at": "2026-10-27T07:40:04.876465+00:00",
+          "checked_at": "2026-10-27T10:57:53.109970+00:00",
           "state": "verified"
         }
       ],
@@ -2925,7 +3289,7 @@
         "url": "https://contrail.shop/products/ehrd-rotterdam-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "2.2.0",
-        "checked_at": "2026-10-27T07:40:04.876465+00:00",
+        "checked_at": "2026-10-27T10:57:53.109970+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -2945,7 +3309,7 @@
           "url": "https://contrail.shop/products/flytampa-eham-amsterdam-msfs",
           "edition": "2020+2024",
           "version": "1.3.2",
-          "checked_at": "2026-10-27T07:40:04.981598+00:00",
+          "checked_at": "2026-10-27T10:57:53.140677+00:00",
           "state": "verified"
         }
       ],
@@ -2957,7 +3321,7 @@
         "url": "https://contrail.shop/products/flytampa-eham-amsterdam-msfs",
         "edition": "2020+2024",
         "version": "1.3.2",
-        "checked_at": "2026-10-27T07:40:04.981598+00:00",
+        "checked_at": "2026-10-27T10:57:53.140677+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -2977,7 +3341,7 @@
           "url": "https://contrail.shop/products/sofly-lhbp-budapest-airport-msfs2024",
           "edition": "2020+2024",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:05.239468+00:00",
+          "checked_at": "2026-10-27T10:57:53.202647+00:00",
           "state": "verified"
         },
         {
@@ -2988,7 +3352,7 @@
           "url": "https://inibuilds.com/products/sofly-budapest-lhbp-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:05.084085+00:00",
+          "checked_at": "2026-10-27T10:57:53.193406+00:00",
           "state": "verified"
         }
       ],
@@ -3000,7 +3364,7 @@
         "url": "https://contrail.shop/products/sofly-lhbp-budapest-airport-msfs2024",
         "edition": "2020+2024",
         "version": "1.1.0",
-        "checked_at": "2026-10-27T07:40:05.239468+00:00",
+        "checked_at": "2026-10-27T10:57:53.202647+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -3020,7 +3384,7 @@
           "url": "https://contrail.shop/products/mkstudios-ekvg-vagar-airport-v2-msfs2024",
           "edition": "2020+2024",
           "version": "2.0.0",
-          "checked_at": "2026-10-27T07:40:05.233345+00:00",
+          "checked_at": "2026-10-27T10:57:53.231062+00:00",
           "state": "verified"
         },
         {
@@ -3031,7 +3395,7 @@
           "url": "https://inibuilds.com/products/mk-studios-vagar-airport-ekvg-msfs-2024",
           "edition": "2020+2024",
           "version": "2.0.0",
-          "checked_at": "2026-10-27T07:40:05.222146+00:00",
+          "checked_at": "2026-10-27T10:57:53.328064+00:00",
           "state": "verified"
         }
       ],
@@ -3043,7 +3407,7 @@
         "url": "https://contrail.shop/products/mkstudios-ekvg-vagar-airport-v2-msfs2024",
         "edition": "2020+2024",
         "version": "2.0.0",
-        "checked_at": "2026-10-27T07:40:05.233345+00:00",
+        "checked_at": "2026-10-27T10:57:53.231062+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -3063,7 +3427,7 @@
           "url": "https://contrail.shop/products/mk-studios-keflavik-reykjavik-airports-v2-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "2.0.5",
-          "checked_at": "2026-10-27T07:40:05.246869+00:00",
+          "checked_at": "2026-10-27T10:57:53.317799+00:00",
           "state": "verified"
         },
         {
@@ -3074,7 +3438,7 @@
           "url": "https://inibuilds.com/products/mk-studios-keflavik-bikf-msfs",
           "edition": "2020",
           "version": "2.0.5",
-          "checked_at": "2026-10-27T07:40:05.351056+00:00",
+          "checked_at": "2026-10-27T10:57:53.471047+00:00",
           "state": "verified"
         }
       ],
@@ -3086,7 +3450,7 @@
         "url": "https://contrail.shop/products/mk-studios-keflavik-reykjavik-airports-v2-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "2.0.5",
-        "checked_at": "2026-10-27T07:40:05.246869+00:00",
+        "checked_at": "2026-10-27T10:57:53.317799+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -3106,7 +3470,7 @@
           "url": "https://contrail.shop/products/lirn-naples-airport",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.0",
-          "checked_at": "2026-10-27T07:40:05.318146+00:00",
+          "checked_at": "2026-10-27T10:57:53.449033+00:00",
           "state": "verified"
         }
       ],
@@ -3118,7 +3482,7 @@
         "url": "https://contrail.shop/products/lirn-naples-airport",
         "edition": "MSFS (édition non précisée)",
         "version": "1.0.0",
-        "checked_at": "2026-10-27T07:40:05.318146+00:00",
+        "checked_at": "2026-10-27T10:57:53.449033+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -3138,7 +3502,7 @@
           "url": "https://contrail.shop/products/mk-studios-lirf-rome-fiumicino-v2-msfs-2020-2024",
           "edition": "2020+2024",
           "version": "2.0.2",
-          "checked_at": "2026-10-27T07:40:05.383978+00:00",
+          "checked_at": "2026-10-27T10:57:53.480409+00:00",
           "state": "verified"
         },
         {
@@ -3149,7 +3513,7 @@
           "url": "https://inibuilds.com/products/mk-studios-rome-fiumicino-lirf-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "2.0.2",
-          "checked_at": "2026-10-27T07:40:05.551935+00:00",
+          "checked_at": "2026-10-27T10:57:53.435043+00:00",
           "state": "verified"
         }
       ],
@@ -3161,7 +3525,7 @@
         "url": "https://contrail.shop/products/mk-studios-lirf-rome-fiumicino-v2-msfs-2020-2024",
         "edition": "2020+2024",
         "version": "2.0.2",
-        "checked_at": "2026-10-27T07:40:05.383978+00:00",
+        "checked_at": "2026-10-27T10:57:53.480409+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -3192,7 +3556,7 @@
           "url": "https://contrail.shop/products/lipe-bologna-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.2",
-          "checked_at": "2026-10-27T07:40:05.596813+00:00",
+          "checked_at": "2026-10-27T10:57:53.590618+00:00",
           "state": "verified"
         },
         {
@@ -3203,7 +3567,7 @@
           "url": "https://inibuilds.com/products/mk-studios-bologna-lipe-msfs",
           "edition": "2020",
           "version": "1.0.2",
-          "checked_at": "2026-10-27T07:40:05.600316+00:00",
+          "checked_at": "2026-10-27T10:57:53.503691+00:00",
           "state": "verified"
         }
       ],
@@ -3215,7 +3579,7 @@
         "url": "https://contrail.shop/products/lipe-bologna-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.0.2",
-        "checked_at": "2026-10-27T07:40:05.596813+00:00",
+        "checked_at": "2026-10-27T10:57:53.590618+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -3235,7 +3599,7 @@
           "url": "https://contrail.shop/products/liml-milan-linate-intl",
           "edition": "MSFS (édition non précisée)",
           "version": "1.3.0",
-          "checked_at": "2026-10-27T07:40:05.665055+00:00",
+          "checked_at": "2026-10-27T10:57:53.648118+00:00",
           "state": "verified"
         }
       ],
@@ -3247,7 +3611,7 @@
         "url": "https://contrail.shop/products/liml-milan-linate-intl",
         "edition": "MSFS (édition non précisée)",
         "version": "1.3.0",
-        "checked_at": "2026-10-27T07:40:05.665055+00:00",
+        "checked_at": "2026-10-27T10:57:53.648118+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -3267,7 +3631,7 @@
           "url": "https://contrail.shop/products/aerosoft-limc-milan-malpensa-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.6.1",
-          "checked_at": "2026-10-27T07:40:05.649318+00:00",
+          "checked_at": "2026-10-27T10:57:53.626650+00:00",
           "state": "verified"
         }
       ],
@@ -3279,7 +3643,7 @@
         "url": "https://contrail.shop/products/aerosoft-limc-milan-malpensa-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.6.1",
-        "checked_at": "2026-10-27T07:40:05.649318+00:00",
+        "checked_at": "2026-10-27T10:57:53.626650+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -3299,7 +3663,7 @@
           "url": "https://contrail.shop/products/licj-palermo-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.3",
-          "checked_at": "2026-10-27T07:40:05.685204+00:00",
+          "checked_at": "2026-10-27T10:57:53.743008+00:00",
           "state": "verified"
         }
       ],
@@ -3311,7 +3675,7 @@
         "url": "https://contrail.shop/products/licj-palermo-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.0.3",
-        "checked_at": "2026-10-27T07:40:05.685204+00:00",
+        "checked_at": "2026-10-27T10:57:53.743008+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -3331,7 +3695,7 @@
           "url": "https://secure.simmarket.com/justsim-riga-latvia-evra-msfs.phtml",
           "edition": "MSFS (édition non précisée)",
           "version": "1.1",
-          "checked_at": "2026-10-27T07:40:33.477041+00:00",
+          "checked_at": "2026-10-27T10:58:17.971738+00:00",
           "state": "verified"
         }
       ],
@@ -3343,7 +3707,7 @@
         "url": "https://secure.simmarket.com/justsim-riga-latvia-evra-msfs.phtml",
         "edition": "MSFS (édition non précisée)",
         "version": "1.1",
-        "checked_at": "2026-10-27T07:40:33.477041+00:00",
+        "checked_at": "2026-10-27T10:58:17.971738+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -3364,7 +3728,7 @@
           "url": "https://secure.simmarket.com/lisium-evra-riga-international.phtml",
           "edition": "2020+2024",
           "version": "1.5",
-          "checked_at": "2026-10-27T07:40:33.860475+00:00",
+          "checked_at": "2026-10-27T10:58:18.264821+00:00",
           "state": "verified"
         }
       ],
@@ -3376,7 +3740,7 @@
         "url": "https://secure.simmarket.com/lisium-evra-riga-international.phtml",
         "edition": "2020+2024",
         "version": "1.5",
-        "checked_at": "2026-10-27T07:40:33.860475+00:00",
+        "checked_at": "2026-10-27T10:58:18.264821+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -3397,7 +3761,7 @@
           "url": "https://secure.simmarket.com/lisium-eyvi-vilnius-msfs2024.phtml",
           "edition": "2020+2024",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:33.822238+00:00",
+          "checked_at": "2026-10-27T10:58:18.630279+00:00",
           "state": "verified"
         }
       ],
@@ -3409,7 +3773,7 @@
         "url": "https://secure.simmarket.com/lisium-eyvi-vilnius-msfs2024.phtml",
         "edition": "2020+2024",
         "version": "1.1.0",
-        "checked_at": "2026-10-27T07:40:33.822238+00:00",
+        "checked_at": "2026-10-27T10:58:18.630279+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -3430,7 +3794,7 @@
           "url": "https://contrail.shop/products/mm-simulations-eyvi-vilnius-international-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.1.3",
-          "checked_at": "2026-10-27T07:40:05.742807+00:00",
+          "checked_at": "2026-10-27T10:57:53.788084+00:00",
           "state": "verified"
         },
         {
@@ -3441,7 +3805,7 @@
           "url": "https://inibuilds.com/products/mm-simulations-vilnius-eyvi-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.1.3",
-          "checked_at": "2026-10-27T07:40:05.754074+00:00",
+          "checked_at": "2026-10-27T10:57:53.761944+00:00",
           "state": "verified"
         }
       ],
@@ -3453,7 +3817,7 @@
         "url": "https://contrail.shop/products/mm-simulations-eyvi-vilnius-international-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.1.3",
-        "checked_at": "2026-10-27T07:40:05.742807+00:00",
+        "checked_at": "2026-10-27T10:57:53.788084+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -3473,7 +3837,7 @@
           "url": "https://contrail.shop/products/atelic-ellx-luxembourg-airport-msfs-2020-2024",
           "edition": "2020+2024",
           "version": "1.0.2",
-          "checked_at": "2026-10-27T07:40:06.440358+00:00",
+          "checked_at": "2026-10-27T10:57:53.838940+00:00",
           "state": "verified"
         },
         {
@@ -3484,7 +3848,7 @@
           "url": "https://inibuilds.com/products/atelic-luxembourg-ellx-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.2",
-          "checked_at": "2026-10-27T07:40:05.980528+00:00",
+          "checked_at": "2026-10-27T10:57:53.805436+00:00",
           "state": "verified"
         }
       ],
@@ -3496,7 +3860,7 @@
         "url": "https://contrail.shop/products/atelic-ellx-luxembourg-airport-msfs-2020-2024",
         "edition": "2020+2024",
         "version": "1.0.2",
-        "checked_at": "2026-10-27T07:40:06.440358+00:00",
+        "checked_at": "2026-10-27T10:57:53.838940+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -3516,7 +3880,7 @@
           "url": "https://secure.simmarket.com/justsim-ellx-luxemburg-airport-ng-series-msfs24.phtml",
           "edition": "2024",
           "version": "1.4.3",
-          "checked_at": "2026-10-27T07:40:34.351092+00:00",
+          "checked_at": "2026-10-27T10:58:18.793198+00:00",
           "state": "verified"
         }
       ],
@@ -3528,7 +3892,7 @@
         "url": "https://secure.simmarket.com/justsim-ellx-luxemburg-airport-ng-series-msfs24.phtml",
         "edition": "2024",
         "version": "1.4.3",
-        "checked_at": "2026-10-27T07:40:34.351092+00:00",
+        "checked_at": "2026-10-27T10:58:18.793198+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -3549,7 +3913,7 @@
           "url": "https://inibuilds.com/products/inibuilds-malta-lmml-msfs-2024",
           "edition": "2020+2024",
           "version": "1.0.1",
-          "checked_at": "2026-10-27T07:40:06.167538+00:00",
+          "checked_at": "2026-10-27T10:57:53.917472+00:00",
           "state": "verified"
         }
       ],
@@ -3561,7 +3925,7 @@
         "url": "https://inibuilds.com/products/inibuilds-malta-lmml-msfs-2024",
         "edition": "2020+2024",
         "version": "1.0.1",
-        "checked_at": "2026-10-27T07:40:06.167538+00:00",
+        "checked_at": "2026-10-27T10:57:53.917472+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -3592,7 +3956,7 @@
           "url": "https://contrail.shop/products/aerosoft-engm-oslo-gardermoen-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.2",
-          "checked_at": "2026-10-27T07:40:06.066680+00:00",
+          "checked_at": "2026-10-27T10:57:53.932639+00:00",
           "state": "verified"
         }
       ],
@@ -3604,7 +3968,7 @@
         "url": "https://contrail.shop/products/aerosoft-engm-oslo-gardermoen-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.0.2",
-        "checked_at": "2026-10-27T07:40:06.066680+00:00",
+        "checked_at": "2026-10-27T10:57:53.932639+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -3624,7 +3988,7 @@
           "url": "https://inibuilds.com/products/fly2high-warsaw-chopin-epwa-msfs",
           "edition": "2020",
           "version": "4.0.0",
-          "checked_at": "2026-10-27T07:40:06.056479+00:00",
+          "checked_at": "2026-10-27T10:57:54.004190+00:00",
           "state": "verified"
         }
       ],
@@ -3636,7 +4000,7 @@
         "url": "https://inibuilds.com/products/fly2high-warsaw-chopin-epwa-msfs",
         "edition": "2020",
         "version": "4.0.0",
-        "checked_at": "2026-10-27T07:40:06.056479+00:00",
+        "checked_at": "2026-10-27T10:57:54.004190+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -3656,7 +4020,7 @@
           "url": "https://inibuilds.com/products/mk-studios-lisbon-lppt-msfs",
           "edition": "2020",
           "version": "1.0.3",
-          "checked_at": "2026-10-27T07:40:05.935269+00:00",
+          "checked_at": "2026-10-27T10:57:54.016767+00:00",
           "state": "verified"
         }
       ],
@@ -3668,7 +4032,7 @@
         "url": "https://inibuilds.com/products/mk-studios-lisbon-lppt-msfs",
         "edition": "2020",
         "version": "1.0.3",
-        "checked_at": "2026-10-27T07:40:05.935269+00:00",
+        "checked_at": "2026-10-27T10:57:54.016767+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -3685,6 +4049,60 @@
       "simmarket_search_count": 3
     },
     {
+      "folder": "amsim-airport-lpma-madeira",
+      "icao": "LPMA",
+      "name": "LPMA MADEIRA C. Ronaldo International Airport",
+      "publisher": "AmSim",
+      "installed": "1.4.1",
+      "matches": [],
+      "selected": null,
+      "state": "needs_research",
+      "simmarket_search_count": 0
+    },
+    {
+      "folder": "atelic-airport-lpma-madeira",
+      "icao": "LPMA",
+      "name": "Madeira-LPMA",
+      "publisher": "Atelic",
+      "installed": "1.1.0",
+      "matches": [
+        {
+          "score": 25,
+          "store": "Contrail",
+          "title": "LPMA - Madeira Airport MSFS",
+          "vendor": "Atelic",
+          "url": "https://contrail.shop/products/atelic-lpma-madeira-airport-msfs",
+          "edition": "MSFS (édition non précisée)",
+          "version": "1.1.0",
+          "checked_at": "2026-10-27T10:57:54.068330+00:00",
+          "state": "verified"
+        },
+        {
+          "score": 23,
+          "store": "iniBuilds",
+          "title": "Atelic Madeira (LPMA) for MSFS",
+          "vendor": "Atelic",
+          "url": "https://inibuilds.com/products/atelic-madeira-lpma-msfs",
+          "edition": "MSFS (édition non précisée)",
+          "version": "1.1.0",
+          "checked_at": "2026-10-27T10:57:54.078375+00:00",
+          "state": "verified"
+        }
+      ],
+      "selected": {
+        "score": 25,
+        "store": "Contrail",
+        "title": "LPMA - Madeira Airport MSFS",
+        "vendor": "Atelic",
+        "url": "https://contrail.shop/products/atelic-lpma-madeira-airport-msfs",
+        "edition": "MSFS (édition non précisée)",
+        "version": "1.1.0",
+        "checked_at": "2026-10-27T10:57:54.068330+00:00",
+        "state": "verified"
+      },
+      "state": "source_found"
+    },
+    {
       "folder": "rdpresets-airport-lpfr-faro",
       "icao": "LPFR",
       "name": "LPFR Faro International Airport",
@@ -3699,7 +4117,7 @@
           "url": "https://contrail.shop/products/lpfr-faro-international-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.3.0",
-          "checked_at": "2026-10-27T07:40:06.139014+00:00",
+          "checked_at": "2026-10-27T10:57:54.063182+00:00",
           "state": "verified"
         }
       ],
@@ -3711,7 +4129,7 @@
         "url": "https://contrail.shop/products/lpfr-faro-international-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.3.0",
-        "checked_at": "2026-10-27T07:40:06.139014+00:00",
+        "checked_at": "2026-10-27T10:57:54.063182+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -3731,7 +4149,7 @@
           "url": "https://secure.simmarket.com/barelli-msfs-addon-bucharest-otopeni-lrop-v2-msfs2024.phtml",
           "edition": "2024",
           "version": "2.6.0",
-          "checked_at": "2026-10-27T07:40:36.513404+00:00",
+          "checked_at": "2026-10-27T10:58:20.620416+00:00",
           "state": "verified"
         }
       ],
@@ -3743,7 +4161,7 @@
         "url": "https://secure.simmarket.com/barelli-msfs-addon-bucharest-otopeni-lrop-v2-msfs2024.phtml",
         "edition": "2024",
         "version": "2.6.0",
-        "checked_at": "2026-10-27T07:40:36.513404+00:00",
+        "checked_at": "2026-10-27T10:58:20.620416+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -3775,7 +4193,7 @@
           "url": "https://contrail.shop/products/lkpr-prague-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.4",
-          "checked_at": "2026-10-27T07:40:06.142407+00:00",
+          "checked_at": "2026-10-27T10:57:54.114093+00:00",
           "state": "verified"
         }
       ],
@@ -3787,7 +4205,7 @@
         "url": "https://contrail.shop/products/lkpr-prague-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.0.4",
-        "checked_at": "2026-10-27T07:40:06.142407+00:00",
+        "checked_at": "2026-10-27T10:57:54.114093+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -3807,7 +4225,7 @@
           "url": "https://inibuilds.com/products/fly2high-belgrade-lybe-msfs",
           "edition": "2020",
           "version": "3.5.0",
-          "checked_at": "2026-10-27T07:40:07.080809+00:00",
+          "checked_at": "2026-10-27T10:57:54.175519+00:00",
           "state": "verified"
         }
       ],
@@ -3819,7 +4237,7 @@
         "url": "https://inibuilds.com/products/fly2high-belgrade-lybe-msfs",
         "edition": "2020",
         "version": "3.5.0",
-        "checked_at": "2026-10-27T07:40:07.080809+00:00",
+        "checked_at": "2026-10-27T10:57:54.175519+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -3872,7 +4290,7 @@
           "url": "https://contrail.shop/products/mk-studios-lszh-zurich-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.1.2",
-          "checked_at": "2026-10-27T07:40:06.445352+00:00",
+          "checked_at": "2026-10-27T10:57:54.202967+00:00",
           "state": "verified"
         },
         {
@@ -3883,7 +4301,7 @@
           "url": "https://inibuilds.com/products/mk-studios-zurich-lszh-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.1.2",
-          "checked_at": "2026-10-27T07:40:06.448985+00:00",
+          "checked_at": "2026-10-27T10:57:54.350808+00:00",
           "state": "verified"
         }
       ],
@@ -3895,10 +4313,32 @@
         "url": "https://contrail.shop/products/mk-studios-lszh-zurich-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.1.2",
-        "checked_at": "2026-10-27T07:40:06.445352+00:00",
+        "checked_at": "2026-10-27T10:57:54.202967+00:00",
         "state": "verified"
       },
       "state": "source_found"
+    },
+    {
+      "folder": "redwing-airport-lsgs-sion",
+      "icao": "LSGS",
+      "name": "SION AIRPORT",
+      "publisher": "REDWING",
+      "installed": "0.3.4",
+      "matches": [],
+      "selected": null,
+      "state": "needs_research",
+      "simmarket_search_count": 1
+    },
+    {
+      "folder": "simaddons-airport-lsgs-sion",
+      "icao": "LSGS",
+      "name": "LSGS - Sion Airport",
+      "publisher": "Simaddons",
+      "installed": "1.0.1",
+      "matches": [],
+      "selected": null,
+      "state": "needs_research",
+      "simmarket_search_count": 0
     },
     {
       "folder": "jetstream-airport-lsgg-geneva",
@@ -3915,7 +4355,7 @@
           "url": "https://contrail.shop/products/jetstream-designs-lsgg-geneva-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.1.5",
-          "checked_at": "2026-10-27T07:40:06.724176+00:00",
+          "checked_at": "2026-10-27T10:57:54.310541+00:00",
           "state": "verified"
         }
       ],
@@ -3927,7 +4367,7 @@
         "url": "https://contrail.shop/products/jetstream-designs-lsgg-geneva-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.1.5",
-        "checked_at": "2026-10-27T07:40:06.724176+00:00",
+        "checked_at": "2026-10-27T10:57:54.310541+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -3958,7 +4398,7 @@
           "url": "https://contrail.shop/products/mk-studios-ypad-adelaide-airport-msfs-2020-2024",
           "edition": "2020+2024",
           "version": "1.0.4",
-          "checked_at": "2026-10-27T07:40:06.504649+00:00",
+          "checked_at": "2026-10-27T10:57:54.379464+00:00",
           "state": "verified"
         },
         {
@@ -3969,7 +4409,7 @@
           "url": "https://inibuilds.com/products/mk-studios-adelaide-ypad-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.4",
-          "checked_at": "2026-10-27T07:40:06.637054+00:00",
+          "checked_at": "2026-10-27T10:57:54.356645+00:00",
           "state": "verified"
         }
       ],
@@ -3981,7 +4421,50 @@
         "url": "https://contrail.shop/products/mk-studios-ypad-adelaide-airport-msfs-2020-2024",
         "edition": "2020+2024",
         "version": "1.0.4",
-        "checked_at": "2026-10-27T07:40:06.504649+00:00",
+        "checked_at": "2026-10-27T10:57:54.379464+00:00",
+        "state": "verified"
+      },
+      "state": "source_found"
+    },
+    {
+      "folder": "inibuilds-airport-nzqn-queenstown",
+      "icao": "NZQN",
+      "name": "NZQN Queenstown Airport",
+      "publisher": "iniBuilds",
+      "installed": "1.0.3",
+      "matches": [
+        {
+          "score": 24,
+          "store": "iniBuilds",
+          "title": "iniBuilds Queenstown (NZQN) for MSFS-2020",
+          "vendor": "iniBuilds",
+          "url": "https://inibuilds.com/products/inibuilds-queenstown-nzqn-msfs",
+          "edition": "2020",
+          "version": "1.0.3",
+          "checked_at": "2026-10-27T10:57:54.372127+00:00",
+          "state": "verified"
+        },
+        {
+          "score": 21,
+          "store": "iniBuilds",
+          "title": "iniBuilds Queenstown (NZQN)",
+          "vendor": "iniBuilds",
+          "url": "https://inibuilds.com/products/inibuilds-queenstown-nzqn-xp",
+          "edition": "unknown",
+          "version": "1.00",
+          "checked_at": "2026-10-27T10:57:54.387513+00:00",
+          "state": "verified"
+        }
+      ],
+      "selected": {
+        "score": 24,
+        "store": "iniBuilds",
+        "title": "iniBuilds Queenstown (NZQN) for MSFS-2020",
+        "vendor": "iniBuilds",
+        "url": "https://inibuilds.com/products/inibuilds-queenstown-nzqn-msfs",
+        "edition": "2020",
+        "version": "1.0.3",
+        "checked_at": "2026-10-27T10:57:54.372127+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4001,7 +4484,7 @@
           "url": "https://secure.simmarket.com/justsim-uuww-moscow-vnukovo-international-airport-msfs.phtml",
           "edition": "MSFS (édition non précisée)",
           "version": "1.2",
-          "checked_at": "2026-10-27T07:40:36.942644+00:00",
+          "checked_at": "2026-10-27T10:58:20.887898+00:00",
           "state": "verified"
         }
       ],
@@ -4013,7 +4496,7 @@
         "url": "https://secure.simmarket.com/justsim-uuww-moscow-vnukovo-international-airport-msfs.phtml",
         "edition": "MSFS (édition non précisée)",
         "version": "1.2",
-        "checked_at": "2026-10-27T07:40:36.942644+00:00",
+        "checked_at": "2026-10-27T10:58:20.887898+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -4034,7 +4517,7 @@
           "url": "https://contrail.shop/products/uuee-moscow-sheremetyevo-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.4.0",
-          "checked_at": "2026-10-27T07:40:06.631315+00:00",
+          "checked_at": "2026-10-27T10:57:54.409618+00:00",
           "state": "verified"
         },
         {
@@ -4045,7 +4528,7 @@
           "url": "https://inibuilds.com/products/drzewiecki-design-moscow-sheremetyevo-uuee-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.40",
-          "checked_at": "2026-10-27T07:40:06.824839+00:00",
+          "checked_at": "2026-10-27T10:57:54.473402+00:00",
           "state": "verified"
         }
       ],
@@ -4057,7 +4540,7 @@
         "url": "https://contrail.shop/products/uuee-moscow-sheremetyevo-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.4.0",
-        "checked_at": "2026-10-27T07:40:06.631315+00:00",
+        "checked_at": "2026-10-27T10:57:54.409618+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4077,7 +4560,7 @@
           "url": "https://contrail.shop/products/uudd-moscow-domodedovo-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "2.2.0",
-          "checked_at": "2026-10-27T07:40:06.861062+00:00",
+          "checked_at": "2026-10-27T10:57:54.543267+00:00",
           "state": "verified"
         },
         {
@@ -4088,7 +4571,7 @@
           "url": "https://inibuilds.com/products/digital-design-moscow-domodedovo-uudd-msfs",
           "edition": "2020",
           "version": "2.2.0",
-          "checked_at": "2026-10-27T07:40:06.909360+00:00",
+          "checked_at": "2026-10-27T10:57:54.658802+00:00",
           "state": "verified"
         }
       ],
@@ -4100,7 +4583,7 @@
         "url": "https://contrail.shop/products/uudd-moscow-domodedovo-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "2.2.0",
-        "checked_at": "2026-10-27T07:40:06.861062+00:00",
+        "checked_at": "2026-10-27T10:57:54.543267+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4120,7 +4603,7 @@
           "url": "https://contrail.shop/products/urss-sochi-international",
           "edition": "MSFS (édition non précisée)",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:06.905284+00:00",
+          "checked_at": "2026-10-27T10:57:54.638956+00:00",
           "state": "verified"
         },
         {
@@ -4131,7 +4614,7 @@
           "url": "https://inibuilds.com/products/digital-design-sochi-urss-msfs",
           "edition": "2020",
           "version": "1.10",
-          "checked_at": "2026-10-27T07:40:07.040487+00:00",
+          "checked_at": "2026-10-27T10:57:54.686500+00:00",
           "state": "verified"
         }
       ],
@@ -4143,7 +4626,7 @@
         "url": "https://contrail.shop/products/urss-sochi-international",
         "edition": "MSFS (édition non précisée)",
         "version": "1.1.0",
-        "checked_at": "2026-10-27T07:40:06.905284+00:00",
+        "checked_at": "2026-10-27T10:57:54.638956+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4163,7 +4646,7 @@
           "url": "https://contrail.shop/products/digital-design-ulli-saint-petersburg-pulkovo-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.1",
-          "checked_at": "2026-10-27T07:40:07.270996+00:00",
+          "checked_at": "2026-10-27T10:57:54.677504+00:00",
           "state": "verified"
         },
         {
@@ -4174,7 +4657,7 @@
           "url": "https://inibuilds.com/products/digital-design-saint-petersburg-pulkovo-ulli-msfs",
           "edition": "2020",
           "version": "1.0.0",
-          "checked_at": "2026-10-27T07:40:07.299724+00:00",
+          "checked_at": "2026-10-27T10:57:54.983316+00:00",
           "state": "verified"
         }
       ],
@@ -4186,7 +4669,7 @@
         "url": "https://contrail.shop/products/digital-design-ulli-saint-petersburg-pulkovo-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.0.1",
-        "checked_at": "2026-10-27T07:40:07.270996+00:00",
+        "checked_at": "2026-10-27T10:57:54.677504+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4206,7 +4689,7 @@
           "url": "https://inibuilds.com/products/inibuilds-honolulu-phnl-msfs",
           "edition": "2020",
           "version": "1.2.3",
-          "checked_at": "2026-10-27T07:40:07.145505+00:00",
+          "checked_at": "2026-10-27T10:57:54.669113+00:00",
           "state": "verified"
         }
       ],
@@ -4218,7 +4701,7 @@
         "url": "https://inibuilds.com/products/inibuilds-honolulu-phnl-msfs",
         "edition": "2020",
         "version": "1.2.3",
-        "checked_at": "2026-10-27T07:40:07.145505+00:00",
+        "checked_at": "2026-10-27T10:57:54.669113+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4238,7 +4721,7 @@
           "url": "https://contrail.shop/products/panc-ted-stevens-anchorage-intl-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:07.369585+00:00",
+          "checked_at": "2026-10-27T10:57:54.749786+00:00",
           "state": "verified"
         }
       ],
@@ -4250,7 +4733,7 @@
         "url": "https://contrail.shop/products/panc-ted-stevens-anchorage-intl-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.1.0",
-        "checked_at": "2026-10-27T07:40:07.369585+00:00",
+        "checked_at": "2026-10-27T10:57:54.749786+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4270,7 +4753,7 @@
           "url": "https://secure.simmarket.com/feelthere-ktus-tucson-airport-msfs.phtml",
           "edition": "MSFS (édition non précisée)",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:37.277987+00:00",
+          "checked_at": "2026-10-27T10:58:21.400922+00:00",
           "state": "verified"
         }
       ],
@@ -4282,7 +4765,7 @@
         "url": "https://secure.simmarket.com/feelthere-ktus-tucson-airport-msfs.phtml",
         "edition": "MSFS (édition non précisée)",
         "version": "1.1.0",
-        "checked_at": "2026-10-27T07:40:37.277987+00:00",
+        "checked_at": "2026-10-27T10:58:21.400922+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -4314,7 +4797,7 @@
           "url": "https://contrail.shop/products/flightbeam-ksfo-san-francisco-captains-edition-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.3.5",
-          "checked_at": "2026-10-27T07:40:07.277477+00:00",
+          "checked_at": "2026-10-27T10:57:54.864518+00:00",
           "state": "verified"
         }
       ],
@@ -4326,7 +4809,7 @@
         "url": "https://contrail.shop/products/flightbeam-ksfo-san-francisco-captains-edition-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.3.5",
-        "checked_at": "2026-10-27T07:40:07.277477+00:00",
+        "checked_at": "2026-10-27T10:57:54.864518+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4346,7 +4829,7 @@
           "url": "https://contrail.shop/products/mk-studios-ksea-seattle-tacoma-airport-msfs-2020-2024",
           "edition": "2020+2024",
           "version": "1.0.2",
-          "checked_at": "2026-10-27T07:40:07.362676+00:00",
+          "checked_at": "2026-10-27T10:57:55.006916+00:00",
           "state": "verified"
         },
         {
@@ -4357,7 +4840,7 @@
           "url": "https://inibuilds.com/products/mk-studios-seattle-tacoma-ksea-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.2",
-          "checked_at": "2026-10-27T07:40:07.808629+00:00",
+          "checked_at": "2026-10-27T10:57:54.934497+00:00",
           "state": "verified"
         }
       ],
@@ -4369,7 +4852,7 @@
         "url": "https://contrail.shop/products/mk-studios-ksea-seattle-tacoma-airport-msfs-2020-2024",
         "edition": "2020+2024",
         "version": "1.0.2",
-        "checked_at": "2026-10-27T07:40:07.362676+00:00",
+        "checked_at": "2026-10-27T10:57:55.006916+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4389,7 +4872,7 @@
           "url": "https://contrail.shop/products/kpwm-portland-intl-jetport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:07.858617+00:00",
+          "checked_at": "2026-10-27T10:57:54.944491+00:00",
           "state": "verified"
         },
         {
@@ -4400,7 +4883,7 @@
           "url": "https://inibuilds.com/products/aerodesigns-portland-jetport-kpwm-msfs",
           "edition": "2020",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:07.600183+00:00",
+          "checked_at": "2026-10-27T10:57:54.997237+00:00",
           "state": "verified"
         }
       ],
@@ -4412,7 +4895,7 @@
         "url": "https://contrail.shop/products/kpwm-portland-intl-jetport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.1.0",
-        "checked_at": "2026-10-27T07:40:07.858617+00:00",
+        "checked_at": "2026-10-27T10:57:54.944491+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4432,7 +4915,7 @@
           "url": "https://contrail.shop/products/dreamflight-kpvd-providence-airport-msfs-2020-2024",
           "edition": "2020+2024",
           "version": "1.0.0",
-          "checked_at": "2026-10-27T07:40:07.664733+00:00",
+          "checked_at": "2026-10-27T10:57:54.999116+00:00",
           "state": "verified"
         }
       ],
@@ -4444,7 +4927,7 @@
         "url": "https://contrail.shop/products/dreamflight-kpvd-providence-airport-msfs-2020-2024",
         "edition": "2020+2024",
         "version": "1.0.0",
-        "checked_at": "2026-10-27T07:40:07.664733+00:00",
+        "checked_at": "2026-10-27T10:57:54.999116+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4464,7 +4947,7 @@
           "url": "https://inibuilds.com/products/fly2high-providence-kpvd-msfs",
           "edition": "2020",
           "version": "4.5.0",
-          "checked_at": "2026-10-27T07:40:07.530773+00:00",
+          "checked_at": "2026-10-27T10:57:55.024589+00:00",
           "state": "verified"
         }
       ],
@@ -4476,7 +4959,7 @@
         "url": "https://inibuilds.com/products/fly2high-providence-kpvd-msfs",
         "edition": "2020",
         "version": "4.5.0",
-        "checked_at": "2026-10-27T07:40:07.530773+00:00",
+        "checked_at": "2026-10-27T10:57:55.024589+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4496,7 +4979,7 @@
           "url": "https://inibuilds.com/products/inibuilds-providence-kpvd-msfs-2024",
           "edition": "2020+2024",
           "version": "1.0.2",
-          "checked_at": "2026-10-27T07:40:07.615927+00:00",
+          "checked_at": "2026-10-27T10:57:55.218135+00:00",
           "state": "verified"
         }
       ],
@@ -4508,7 +4991,7 @@
         "url": "https://inibuilds.com/products/inibuilds-providence-kpvd-msfs-2024",
         "edition": "2020+2024",
         "version": "1.0.2",
-        "checked_at": "2026-10-27T07:40:07.615927+00:00",
+        "checked_at": "2026-10-27T10:57:55.218135+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4539,7 +5022,7 @@
           "url": "https://contrail.shop/products/kphl-philadelphia-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.4.0",
-          "checked_at": "2026-10-27T07:40:07.809512+00:00",
+          "checked_at": "2026-10-27T10:57:55.209556+00:00",
           "state": "verified"
         },
         {
@@ -4550,7 +5033,7 @@
           "url": "https://inibuilds.com/products/mk-studios-philadelphia-kphl-msfs",
           "edition": "2020",
           "version": "1.4.0",
-          "checked_at": "2026-10-27T07:40:07.759313+00:00",
+          "checked_at": "2026-10-27T10:57:55.184123+00:00",
           "state": "verified"
         }
       ],
@@ -4562,7 +5045,7 @@
         "url": "https://contrail.shop/products/kphl-philadelphia-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.4.0",
-        "checked_at": "2026-10-27T07:40:07.809512+00:00",
+        "checked_at": "2026-10-27T10:57:55.209556+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4582,7 +5065,7 @@
           "url": "https://contrail.shop/products/iblueyonder-kpdx-portland-intl-v2-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "2.3.0",
-          "checked_at": "2026-10-27T07:40:07.922454+00:00",
+          "checked_at": "2026-10-27T10:57:55.293221+00:00",
           "state": "verified"
         }
       ],
@@ -4594,7 +5077,7 @@
         "url": "https://contrail.shop/products/iblueyonder-kpdx-portland-intl-v2-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "2.3.0",
-        "checked_at": "2026-10-27T07:40:07.922454+00:00",
+        "checked_at": "2026-10-27T10:57:55.293221+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4614,7 +5097,7 @@
           "url": "https://inibuilds.com/products/inibuilds-chicago-ohare-kord-msfs-2024",
           "edition": "2020+2024",
           "version": "1.0.2",
-          "checked_at": "2026-10-27T07:40:07.824540+00:00",
+          "checked_at": "2026-10-27T10:57:55.325507+00:00",
           "state": "verified"
         }
       ],
@@ -4626,7 +5109,7 @@
         "url": "https://inibuilds.com/products/inibuilds-chicago-ohare-kord-msfs-2024",
         "edition": "2020+2024",
         "version": "1.0.2",
-        "checked_at": "2026-10-27T07:40:07.824540+00:00",
+        "checked_at": "2026-10-27T10:57:55.325507+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4646,7 +5129,7 @@
           "url": "https://contrail.shop/products/koma-omaha-eppley-airfield-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "2.0.1",
-          "checked_at": "2026-10-27T07:40:08.078759+00:00",
+          "checked_at": "2026-10-27T10:57:55.257798+00:00",
           "state": "verified"
         },
         {
@@ -4657,7 +5140,7 @@
           "url": "https://inibuilds.com/products/verticalsim-omaha-eppely-airfield-koma-msfs",
           "edition": "2020",
           "version": "2.0.0",
-          "checked_at": "2026-10-27T07:40:08.077949+00:00",
+          "checked_at": "2026-10-27T10:57:55.285923+00:00",
           "state": "verified"
         }
       ],
@@ -4669,7 +5152,7 @@
         "url": "https://contrail.shop/products/koma-omaha-eppley-airfield-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "2.0.1",
-        "checked_at": "2026-10-27T07:40:08.078759+00:00",
+        "checked_at": "2026-10-27T10:57:55.257798+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4689,7 +5172,7 @@
           "url": "https://inibuilds.com/products/inibuilds-oklahoma-city-kokc-msfs",
           "edition": "2020",
           "version": "1.0.4",
-          "checked_at": "2026-10-27T07:40:08.768187+00:00",
+          "checked_at": "2026-10-27T10:57:55.372952+00:00",
           "state": "verified"
         },
         {
@@ -4700,7 +5183,7 @@
           "url": "https://inibuilds.com/products/xometry-oklahoma-city-kokc-xp",
           "edition": "unknown",
           "version": "1.10",
-          "checked_at": "2026-10-27T07:40:08.237185+00:00",
+          "checked_at": "2026-10-27T10:57:55.458240+00:00",
           "state": "verified"
         }
       ],
@@ -4712,7 +5195,7 @@
         "url": "https://inibuilds.com/products/inibuilds-oklahoma-city-kokc-msfs",
         "edition": "2020",
         "version": "1.0.4",
-        "checked_at": "2026-10-27T07:40:08.768187+00:00",
+        "checked_at": "2026-10-27T10:57:55.372952+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4732,7 +5215,7 @@
           "url": "https://contrail.shop/products/kmsy-new-orleans-intl",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.7",
-          "checked_at": "2026-10-27T07:40:08.205363+00:00",
+          "checked_at": "2026-10-27T10:57:55.489435+00:00",
           "state": "verified"
         }
       ],
@@ -4744,7 +5227,7 @@
         "url": "https://contrail.shop/products/kmsy-new-orleans-intl",
         "edition": "MSFS (édition non précisée)",
         "version": "1.0.7",
-        "checked_at": "2026-10-27T07:40:08.205363+00:00",
+        "checked_at": "2026-10-27T10:57:55.489435+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4764,7 +5247,7 @@
           "url": "https://contrail.shop/products/kmsp-minneapolis-saint-paul-intl-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.5",
-          "checked_at": "2026-10-27T07:40:08.190815+00:00",
+          "checked_at": "2026-10-27T10:57:55.568862+00:00",
           "state": "verified"
         }
       ],
@@ -4776,7 +5259,7 @@
         "url": "https://contrail.shop/products/kmsp-minneapolis-saint-paul-intl-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.0.5",
-        "checked_at": "2026-10-27T07:40:08.190815+00:00",
+        "checked_at": "2026-10-27T10:57:55.568862+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4796,7 +5279,7 @@
           "url": "https://secure.simmarket.com/fsxcenery-kmke-milwaukee-international-airport-msfs.phtml",
           "edition": "MSFS (édition non précisée)",
           "version": "2.0",
-          "checked_at": "2026-10-27T07:40:37.472310+00:00",
+          "checked_at": "2026-10-27T10:58:21.518697+00:00",
           "state": "verified"
         }
       ],
@@ -4808,7 +5291,7 @@
         "url": "https://secure.simmarket.com/fsxcenery-kmke-milwaukee-international-airport-msfs.phtml",
         "edition": "MSFS (édition non précisée)",
         "version": "2.0",
-        "checked_at": "2026-10-27T07:40:37.472310+00:00",
+        "checked_at": "2026-10-27T10:58:21.518697+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -4840,7 +5323,7 @@
           "url": "https://contrail.shop/products/mk-studios-kmia-miami-intl-airport-msfs-2024",
           "edition": "2020+2024",
           "version": "1.0.2",
-          "checked_at": "2026-10-27T07:40:08.231754+00:00",
+          "checked_at": "2026-10-27T10:57:55.547695+00:00",
           "state": "verified"
         },
         {
@@ -4851,7 +5334,7 @@
           "url": "https://inibuilds.com/products/mk-studios-miami-international-kmia-msfs-2024",
           "edition": "2020+2024",
           "version": "1.0.2",
-          "checked_at": "2026-10-27T07:40:08.430089+00:00",
+          "checked_at": "2026-10-27T10:57:55.537587+00:00",
           "state": "verified"
         }
       ],
@@ -4863,7 +5346,7 @@
         "url": "https://contrail.shop/products/mk-studios-kmia-miami-intl-airport-msfs-2024",
         "edition": "2020+2024",
         "version": "1.0.2",
-        "checked_at": "2026-10-27T07:40:08.231754+00:00",
+        "checked_at": "2026-10-27T10:57:55.547695+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4883,7 +5366,7 @@
           "url": "https://contrail.shop/products/aerodesigns-kmht-manchester-boston-regional-airport-msfs-2020-2024",
           "edition": "2020+2024",
           "version": "1.0.1",
-          "checked_at": "2026-10-27T07:40:08.552468+00:00",
+          "checked_at": "2026-10-27T10:57:55.580485+00:00",
           "state": "verified"
         },
         {
@@ -4894,7 +5377,7 @@
           "url": "https://inibuilds.com/products/aerodesigns-manchester-boston-regional-kmht-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.1",
-          "checked_at": "2026-10-27T07:40:08.569859+00:00",
+          "checked_at": "2026-10-27T10:57:55.631896+00:00",
           "state": "verified"
         }
       ],
@@ -4906,7 +5389,7 @@
         "url": "https://contrail.shop/products/aerodesigns-kmht-manchester-boston-regional-airport-msfs-2020-2024",
         "edition": "2020+2024",
         "version": "1.0.1",
-        "checked_at": "2026-10-27T07:40:08.552468+00:00",
+        "checked_at": "2026-10-27T10:57:55.580485+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4926,7 +5409,7 @@
           "url": "https://contrail.shop/products/kmdw-chicago-midway-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.3.0",
-          "checked_at": "2026-10-27T07:40:08.596441+00:00",
+          "checked_at": "2026-10-27T10:57:55.664411+00:00",
           "state": "verified"
         },
         {
@@ -4937,7 +5420,7 @@
           "url": "https://inibuilds.com/products/drzewiecki-design-chicago-midway-kmdw-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.3.0",
-          "checked_at": "2026-10-27T07:40:08.615041+00:00",
+          "checked_at": "2026-10-27T10:57:55.718893+00:00",
           "state": "verified"
         }
       ],
@@ -4949,7 +5432,7 @@
         "url": "https://contrail.shop/products/kmdw-chicago-midway-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.3.0",
-        "checked_at": "2026-10-27T07:40:08.596441+00:00",
+        "checked_at": "2026-10-27T10:57:55.664411+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -4969,7 +5452,7 @@
           "url": "https://contrail.shop/products/taimodels-kmci-kansas-city-airport-msfs2020-2024",
           "edition": "2020+2024",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:09.206500+00:00",
+          "checked_at": "2026-10-27T10:57:55.817747+00:00",
           "state": "verified"
         }
       ],
@@ -4981,7 +5464,7 @@
         "url": "https://contrail.shop/products/taimodels-kmci-kansas-city-airport-msfs2020-2024",
         "edition": "2020+2024",
         "version": "1.1.0",
-        "checked_at": "2026-10-27T07:40:09.206500+00:00",
+        "checked_at": "2026-10-27T10:57:55.817747+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5001,7 +5484,7 @@
           "url": "https://secure.simmarket.com/tropicalsim-2-kansas-city-intl-kmci-v2-msfs24.phtml",
           "edition": "2024",
           "version": "2.5.0",
-          "checked_at": "2026-10-27T07:40:37.914838+00:00",
+          "checked_at": "2026-10-27T10:58:21.890599+00:00",
           "state": "verified"
         }
       ],
@@ -5013,7 +5496,7 @@
         "url": "https://secure.simmarket.com/tropicalsim-2-kansas-city-intl-kmci-v2-msfs24.phtml",
         "edition": "2024",
         "version": "2.5.0",
-        "checked_at": "2026-10-27T07:40:37.914838+00:00",
+        "checked_at": "2026-10-27T10:58:21.890599+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -5045,7 +5528,7 @@
           "url": "https://secure.simmarket.com/propair-flight-ltd.-klit-clinton-national-airport-msfs24.phtml",
           "edition": "2024",
           "version": "0.1.1",
-          "checked_at": "2026-10-27T07:40:38.449884+00:00",
+          "checked_at": "2026-10-27T10:58:22.225044+00:00",
           "state": "verified"
         }
       ],
@@ -5057,7 +5540,7 @@
         "url": "https://secure.simmarket.com/propair-flight-ltd.-klit-clinton-national-airport-msfs24.phtml",
         "edition": "2024",
         "version": "0.1.1",
-        "checked_at": "2026-10-27T07:40:38.449884+00:00",
+        "checked_at": "2026-10-27T10:58:22.225044+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -5078,7 +5561,7 @@
           "url": "https://contrail.shop/products/mk-studios-klga-new-york-laguardia-airport-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:09.546997+00:00",
+          "checked_at": "2026-10-27T10:57:55.767054+00:00",
           "state": "verified"
         },
         {
@@ -5089,7 +5572,7 @@
           "url": "https://inibuilds.com/products/mk-studios-laguardia-klga-msfs",
           "edition": "2020",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:08.810180+00:00",
+          "checked_at": "2026-10-27T10:57:55.913786+00:00",
           "state": "verified"
         }
       ],
@@ -5101,7 +5584,7 @@
         "url": "https://contrail.shop/products/mk-studios-klga-new-york-laguardia-airport-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.1.0",
-        "checked_at": "2026-10-27T07:40:09.546997+00:00",
+        "checked_at": "2026-10-27T10:57:55.767054+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5121,7 +5604,7 @@
           "url": "https://inibuilds.com/products/inibuilds-los-angeles-klax-msfs-2024",
           "edition": "2020+2024",
           "version": "1.0.2",
-          "checked_at": "2026-10-27T07:40:08.813636+00:00",
+          "checked_at": "2026-10-27T10:57:55.921773+00:00",
           "state": "verified"
         },
         {
@@ -5132,7 +5615,7 @@
           "url": "https://inibuilds.com/products/inibuilds-los-angeles-klax-msfs",
           "edition": "2020",
           "version": "1.3.1",
-          "checked_at": "2026-10-27T07:40:08.969618+00:00",
+          "checked_at": "2026-10-27T10:57:55.861031+00:00",
           "state": "verified"
         }
       ],
@@ -5144,7 +5627,7 @@
         "url": "https://inibuilds.com/products/inibuilds-los-angeles-klax-msfs-2024",
         "edition": "2020+2024",
         "version": "1.0.2",
-        "checked_at": "2026-10-27T07:40:08.813636+00:00",
+        "checked_at": "2026-10-27T10:57:55.921773+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5164,7 +5647,7 @@
           "url": "https://contrail.shop/products/flytampa-klas-las-vegas-v3-msfs-2024",
           "edition": "2020+2024",
           "version": "3.2.0",
-          "checked_at": "2026-10-27T07:40:08.933567+00:00",
+          "checked_at": "2026-10-27T10:57:55.915327+00:00",
           "state": "verified"
         }
       ],
@@ -5176,7 +5659,7 @@
         "url": "https://contrail.shop/products/flytampa-klas-las-vegas-v3-msfs-2024",
         "edition": "2020+2024",
         "version": "3.2.0",
-        "checked_at": "2026-10-27T07:40:08.933567+00:00",
+        "checked_at": "2026-10-27T10:57:55.915327+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5207,7 +5690,7 @@
           "url": "https://inibuilds.com/products/inibuilds-new-york-john-f-kennedy-kjfk-msfs-2024",
           "edition": "2020+2024",
           "version": "1.1.1",
-          "checked_at": "2026-10-27T07:40:08.870434+00:00",
+          "checked_at": "2026-10-27T10:57:55.973094+00:00",
           "state": "verified"
         },
         {
@@ -5218,7 +5701,7 @@
           "url": "https://inibuilds.com/products/inibuilds-new-york-john-f-kennedy-kjfk-msfs",
           "edition": "2020",
           "version": "1.2.0",
-          "checked_at": "2026-10-27T07:40:09.150352+00:00",
+          "checked_at": "2026-10-27T10:57:56.009205+00:00",
           "state": "verified"
         }
       ],
@@ -5230,7 +5713,7 @@
         "url": "https://inibuilds.com/products/inibuilds-new-york-john-f-kennedy-kjfk-msfs-2024",
         "edition": "2020+2024",
         "version": "1.1.1",
-        "checked_at": "2026-10-27T07:40:08.870434+00:00",
+        "checked_at": "2026-10-27T10:57:55.973094+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5250,7 +5733,7 @@
           "url": "https://inibuilds.com/products/fly2high-jackson-medgar-wiley-evers-kjan-msfs",
           "edition": "2020",
           "version": "0.0.5",
-          "checked_at": "2026-10-27T07:40:09.057137+00:00",
+          "checked_at": "2026-10-27T10:57:56.069074+00:00",
           "state": "verified"
         }
       ],
@@ -5262,7 +5745,7 @@
         "url": "https://inibuilds.com/products/fly2high-jackson-medgar-wiley-evers-kjan-msfs",
         "edition": "2020",
         "version": "0.0.5",
-        "checked_at": "2026-10-27T07:40:09.057137+00:00",
+        "checked_at": "2026-10-27T10:57:56.069074+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5282,7 +5765,7 @@
           "url": "https://contrail.shop/products/dreamflight-kjac-jackson-hole-airport-msfs",
           "edition": "2020+2024",
           "version": "2.0.0",
-          "checked_at": "2026-10-27T07:40:09.300264+00:00",
+          "checked_at": "2026-10-27T10:57:56.078021+00:00",
           "state": "verified"
         }
       ],
@@ -5294,7 +5777,7 @@
         "url": "https://contrail.shop/products/dreamflight-kjac-jackson-hole-airport-msfs",
         "edition": "2020+2024",
         "version": "2.0.0",
-        "checked_at": "2026-10-27T07:40:09.300264+00:00",
+        "checked_at": "2026-10-27T10:57:56.078021+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5314,7 +5797,7 @@
           "url": "https://inibuilds.com/products/dominicdesignteam-indianapolis-v2-kind-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "2.4.0",
-          "checked_at": "2026-10-27T07:40:09.118159+00:00",
+          "checked_at": "2026-10-27T10:57:56.140305+00:00",
           "state": "verified"
         },
         {
@@ -5325,7 +5808,7 @@
           "url": "https://inibuilds.com/products/dominicdesignteam-indianapolis-kind-msfs",
           "edition": "2020",
           "version": "1.00",
-          "checked_at": "2026-10-27T07:40:09.345468+00:00",
+          "checked_at": "2026-10-27T10:57:56.230838+00:00",
           "state": "verified"
         }
       ],
@@ -5337,7 +5820,7 @@
         "url": "https://inibuilds.com/products/dominicdesignteam-indianapolis-v2-kind-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "2.4.0",
-        "checked_at": "2026-10-27T07:40:09.118159+00:00",
+        "checked_at": "2026-10-27T10:57:56.140305+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5357,7 +5840,7 @@
           "url": "https://secure.simmarket.com/fsxcenery-kict-wichita-ks-msfs.phtml",
           "edition": "MSFS (édition non précisée)",
           "version": "2.2",
-          "checked_at": "2026-10-27T07:40:38.578846+00:00",
+          "checked_at": "2026-10-27T10:58:22.421409+00:00",
           "state": "verified"
         }
       ],
@@ -5369,7 +5852,7 @@
         "url": "https://secure.simmarket.com/fsxcenery-kict-wichita-ks-msfs.phtml",
         "edition": "MSFS (édition non précisée)",
         "version": "2.2",
-        "checked_at": "2026-10-27T07:40:38.578846+00:00",
+        "checked_at": "2026-10-27T10:58:22.421409+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -5398,6 +5881,17 @@
       "simmarket_search_count": 0
     },
     {
+      "folder": "fsxcenery-airport-kgfk-grand-forks",
+      "icao": "KGFK",
+      "name": "kgfk",
+      "publisher": "msfscenerybuilders",
+      "installed": "1.0.0",
+      "matches": [],
+      "selected": null,
+      "state": "needs_research",
+      "simmarket_search_count": 3
+    },
+    {
       "folder": "fsxcenery-airport-kfsd-sioux-falls",
       "icao": "KFSD",
       "name": "KFSD Sioux falls Regional Airport",
@@ -5423,7 +5917,7 @@
           "url": "https://contrail.shop/products/kewr-newark-liberty-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:09.368002+00:00",
+          "checked_at": "2026-10-27T10:57:56.171683+00:00",
           "state": "verified"
         },
         {
@@ -5446,7 +5940,7 @@
         "url": "https://contrail.shop/products/kewr-newark-liberty-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.1.0",
-        "checked_at": "2026-10-27T07:40:09.368002+00:00",
+        "checked_at": "2026-10-27T10:57:56.171683+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5466,7 +5960,7 @@
           "url": "https://inibuilds.com/products/final-approach-simulations-newark-liberty-kewr-msfs",
           "edition": "2020",
           "version": "1.6.0",
-          "checked_at": "2026-10-27T07:40:09.364997+00:00",
+          "checked_at": "2026-10-27T10:57:56.298073+00:00",
           "state": "verified"
         }
       ],
@@ -5478,7 +5972,7 @@
         "url": "https://inibuilds.com/products/final-approach-simulations-newark-liberty-kewr-msfs",
         "edition": "2020",
         "version": "1.6.0",
-        "checked_at": "2026-10-27T07:40:09.364997+00:00",
+        "checked_at": "2026-10-27T10:57:56.298073+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5498,7 +5992,7 @@
           "url": "https://inibuilds.com/products/inibuilds-detroit-kdtw-msfs",
           "edition": "2020",
           "version": "1.03",
-          "checked_at": "2026-10-27T07:40:09.409020+00:00",
+          "checked_at": "2026-10-27T10:57:56.280298+00:00",
           "state": "verified"
         }
       ],
@@ -5510,7 +6004,7 @@
         "url": "https://inibuilds.com/products/inibuilds-detroit-kdtw-msfs",
         "edition": "2020",
         "version": "1.03",
-        "checked_at": "2026-10-27T07:40:09.409020+00:00",
+        "checked_at": "2026-10-27T10:57:56.280298+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5530,7 +6024,7 @@
           "url": "https://inibuilds.com/products/inibuilds-dallas-fort-worth-kdfw-msfs-2024",
           "edition": "2020+2024",
           "version": "1.0.3",
-          "checked_at": "2026-10-27T07:40:09.458889+00:00",
+          "checked_at": "2026-10-27T10:57:56.397646+00:00",
           "state": "verified"
         }
       ],
@@ -5542,7 +6036,7 @@
         "url": "https://inibuilds.com/products/inibuilds-dallas-fort-worth-kdfw-msfs-2024",
         "edition": "2020+2024",
         "version": "1.0.3",
-        "checked_at": "2026-10-27T07:40:09.458889+00:00",
+        "checked_at": "2026-10-27T10:57:56.397646+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5606,7 +6100,7 @@
           "url": "https://inibuilds.com/products/dominicdesignteam-charleston-kchs-msfs",
           "edition": "2020",
           "version": "1.4.0",
-          "checked_at": "2026-10-27T07:40:10.481242+00:00",
+          "checked_at": "2026-10-27T10:57:56.186020+00:00",
           "state": "verified"
         }
       ],
@@ -5618,7 +6112,7 @@
         "url": "https://inibuilds.com/products/dominicdesignteam-charleston-kchs-msfs",
         "edition": "2020",
         "version": "1.4.0",
-        "checked_at": "2026-10-27T07:40:10.481242+00:00",
+        "checked_at": "2026-10-27T10:57:56.186020+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5638,7 +6132,7 @@
           "url": "https://contrail.shop/products/taimodels-kbzn-bozeman-yellowstone-airport-msfs2020-2024",
           "edition": "2020+2024",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:09.736337+00:00",
+          "checked_at": "2026-10-27T10:57:56.385181+00:00",
           "state": "verified"
         }
       ],
@@ -5650,7 +6144,7 @@
         "url": "https://contrail.shop/products/taimodels-kbzn-bozeman-yellowstone-airport-msfs2020-2024",
         "edition": "2020+2024",
         "version": "1.1.0",
-        "checked_at": "2026-10-27T07:40:09.736337+00:00",
+        "checked_at": "2026-10-27T10:57:56.385181+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5670,7 +6164,7 @@
           "url": "https://contrail.shop/products/latinvfr-kbwi-baltimore-washington-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.3",
-          "checked_at": "2026-10-27T07:40:09.777011+00:00",
+          "checked_at": "2026-10-27T10:57:56.512917+00:00",
           "state": "verified"
         }
       ],
@@ -5682,7 +6176,7 @@
         "url": "https://contrail.shop/products/latinvfr-kbwi-baltimore-washington-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.0.3",
-        "checked_at": "2026-10-27T07:40:09.777011+00:00",
+        "checked_at": "2026-10-27T10:57:56.512917+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5702,7 +6196,7 @@
           "url": "https://secure.simmarket.com/fsxcenery-kbtv-burlington-international-msfs.phtml",
           "edition": "MSFS (édition non précisée)",
           "version": "2.0",
-          "checked_at": "2026-10-27T07:40:39.659709+00:00",
+          "checked_at": "2026-10-27T10:58:23.653530+00:00",
           "state": "verified"
         }
       ],
@@ -5714,7 +6208,7 @@
         "url": "https://secure.simmarket.com/fsxcenery-kbtv-burlington-international-msfs.phtml",
         "edition": "MSFS (édition non précisée)",
         "version": "2.0",
-        "checked_at": "2026-10-27T07:40:39.659709+00:00",
+        "checked_at": "2026-10-27T10:58:23.653530+00:00",
         "state": "verified"
       },
       "state": "source_found",
@@ -5735,7 +6229,7 @@
           "url": "https://contrail.shop/products/kbos-boston-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.9.0",
-          "checked_at": "2026-10-27T07:40:09.776331+00:00",
+          "checked_at": "2026-10-27T10:57:56.705544+00:00",
           "state": "verified"
         }
       ],
@@ -5747,7 +6241,7 @@
         "url": "https://contrail.shop/products/kbos-boston-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.9.0",
-        "checked_at": "2026-10-27T07:40:09.776331+00:00",
+        "checked_at": "2026-10-27T10:57:56.705544+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5767,7 +6261,7 @@
           "url": "https://contrail.shop/products/kboi-boise-air-terminal-gowen-field-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:09.785856+00:00",
+          "checked_at": "2026-10-27T10:57:56.446716+00:00",
           "state": "verified"
         },
         {
@@ -5778,7 +6272,7 @@
           "url": "https://inibuilds.com/products/verticalsim-boise-air-terminal-kboi-msfs",
           "edition": "2020",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:09.868119+00:00",
+          "checked_at": "2026-10-27T10:57:56.542297+00:00",
           "state": "verified"
         }
       ],
@@ -5790,7 +6284,7 @@
         "url": "https://contrail.shop/products/kboi-boise-air-terminal-gowen-field-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.1.0",
-        "checked_at": "2026-10-27T07:40:09.785856+00:00",
+        "checked_at": "2026-10-27T10:57:56.446716+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5810,7 +6304,7 @@
           "url": "https://inibuilds.com/products/dominicdesignteam-nashville-kbna-msfs",
           "edition": "2020",
           "version": "1.4.0",
-          "checked_at": "2026-10-27T07:40:09.775626+00:00",
+          "checked_at": "2026-10-27T10:57:56.566855+00:00",
           "state": "verified"
         }
       ],
@@ -5822,7 +6316,7 @@
         "url": "https://inibuilds.com/products/dominicdesignteam-nashville-kbna-msfs",
         "edition": "2020",
         "version": "1.4.0",
-        "checked_at": "2026-10-27T07:40:09.775626+00:00",
+        "checked_at": "2026-10-27T10:57:56.566855+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5842,7 +6336,7 @@
           "url": "https://inibuilds.com/products/fly2high-birmingham-shuttlesworth-kbhm-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.2.1",
-          "checked_at": "2026-10-27T07:40:09.821917+00:00",
+          "checked_at": "2026-10-27T10:57:56.579522+00:00",
           "state": "verified"
         }
       ],
@@ -5854,7 +6348,7 @@
         "url": "https://inibuilds.com/products/fly2high-birmingham-shuttlesworth-kbhm-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.2.1",
-        "checked_at": "2026-10-27T07:40:09.821917+00:00",
+        "checked_at": "2026-10-27T10:57:56.579522+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5874,7 +6368,7 @@
           "url": "https://contrail.shop/products/kbdl-hartford-bradley-international",
           "edition": "MSFS (édition non précisée)",
           "version": "1.0.3",
-          "checked_at": "2026-10-27T07:40:10.167656+00:00",
+          "checked_at": "2026-10-27T10:57:56.663918+00:00",
           "state": "verified"
         }
       ],
@@ -5886,7 +6380,7 @@
         "url": "https://contrail.shop/products/kbdl-hartford-bradley-international",
         "edition": "MSFS (édition non précisée)",
         "version": "1.0.3",
-        "checked_at": "2026-10-27T07:40:10.167656+00:00",
+        "checked_at": "2026-10-27T10:57:56.663918+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5917,7 +6411,7 @@
           "url": "https://inibuilds.com/products/fly2high-aspen-pitkin-county-kase-msfs",
           "edition": "2020",
           "version": "2.0.0",
-          "checked_at": "2026-10-27T07:40:10.032011+00:00",
+          "checked_at": "2026-10-27T10:57:56.526725+00:00",
           "state": "verified"
         }
       ],
@@ -5929,7 +6423,7 @@
         "url": "https://inibuilds.com/products/fly2high-aspen-pitkin-county-kase-msfs",
         "edition": "2020",
         "version": "2.0.0",
-        "checked_at": "2026-10-27T07:40:10.032011+00:00",
+        "checked_at": "2026-10-27T10:57:56.526725+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5949,7 +6443,7 @@
           "url": "https://inibuilds.com/products/dominicdesignteam-albuquerque-kabq-msfs",
           "edition": "MSFS (édition non précisée)",
           "version": "1.1.0",
-          "checked_at": "2026-10-27T07:40:10.051048+00:00",
+          "checked_at": "2026-10-27T10:57:56.587230+00:00",
           "state": "verified"
         }
       ],
@@ -5961,7 +6455,7 @@
         "url": "https://inibuilds.com/products/dominicdesignteam-albuquerque-kabq-msfs",
         "edition": "MSFS (édition non précisée)",
         "version": "1.1.0",
-        "checked_at": "2026-10-27T07:40:10.051048+00:00",
+        "checked_at": "2026-10-27T10:57:56.587230+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -5981,7 +6475,7 @@
           "url": "https://inibuilds.com/products/inibuilds-hooper-heliport-58ca-msfs",
           "edition": "2020",
           "version": "1.01",
-          "checked_at": "2026-10-27T07:40:10.041186+00:00",
+          "checked_at": "2026-10-27T10:57:56.809477+00:00",
           "state": "verified"
         },
         {
@@ -5992,7 +6486,7 @@
           "url": "https://inibuilds.com/products/inibuilds-hooper-heliport-58ca-xp",
           "edition": "unknown",
           "version": "1.00",
-          "checked_at": "2026-10-27T07:40:10.272006+00:00",
+          "checked_at": "2026-10-27T10:57:56.800599+00:00",
           "state": "verified"
         }
       ],
@@ -6004,7 +6498,7 @@
         "url": "https://inibuilds.com/products/inibuilds-hooper-heliport-58ca-msfs",
         "edition": "2020",
         "version": "1.01",
-        "checked_at": "2026-10-27T07:40:10.041186+00:00",
+        "checked_at": "2026-10-27T10:57:56.809477+00:00",
         "state": "verified"
       },
       "state": "source_found"
@@ -6032,5 +6526,5 @@
       "simmarket_search_count": 0
     }
   ],
-  "simmarket_checked_at": "2026-10-27T07:40:39.710456+00:00"
+  "simmarket_checked_at": "2026-10-27T10:58:23.945452+00:00"
 }
