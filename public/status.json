@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-27",
-  "last_run": "2026-10-27T16:04:52.293080+00:00",
-  "weather_checked_at": "2026-10-27T16:04:52.293080+00:00",
-  "news_checked_at": "2026-10-27T16:04:52.293080+00:00",
+  "last_run": "2026-10-27T16:06:46.795985+00:00",
+  "weather_checked_at": "2026-10-27T16:06:46.795985+00:00",
+  "news_checked_at": "2026-10-27T16:06:46.795985+00:00",
   "weather": [
     {
       "icao": "PANC",
@@ -34,7 +34,7 @@
       "icao": "SLLP",
       "name": "SLLP El Alto International Airport",
       "observed_at": "2026-10-27T16:00:00+00:00",
-      "raw": "METAR SLLP 271600Z 03013KT 8000 -TSRA SCT015 SCT017CB BKN070 11/03 Q1036 NOSIG",
+      "raw": "METAR SLLP 271600Z 03013KT 8000 -TSRA SCT015 SCT017CB BKN070 11/03 Q1036 NOSIG RMK A3061 QFE627.1 HR57 P7784 CI",
       "score": 130,
       "summary": "orage, visibilité < 5 SM",
       "icon": "⛈️",
@@ -302,15 +302,15 @@
     "without_official_url": 20,
     "manual_source": 1,
     "unverified": 50,
-    "audited_at": "2026-10-27T16:04:52.293080+00:00"
+    "audited_at": "2026-10-27T16:06:46.795985+00:00"
   },
-  "versions_checked_at": "2026-10-27T16:04:52.293080+00:00",
-  "releases_checked_at": "2026-10-27T16:04:52.293080+00:00",
+  "versions_checked_at": "2026-10-27T16:06:46.795985+00:00",
+  "releases_checked_at": "2026-10-27T16:06:46.795985+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-27T16:05:40.084252+00:00",
+    "checked_at": "2026-10-27T16:07:32.460423+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
