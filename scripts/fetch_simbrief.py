@@ -13,9 +13,11 @@ URL = "https://www.simbrief.com/api/xml.fetcher.php?" + urllib.parse.urlencode({
 def route_points(data):
     """Ordered OFP navlog coordinates; omit unlocated fixes, never invent them."""
     navlog = data.get("navlog") or {}
-    fixes = navlog.get("fix") or []
+    fixes = navlog.get("fix") or [] if isinstance(navlog, dict) else navlog
     if isinstance(fixes, dict):
         fixes = [fixes]
+    if not isinstance(fixes, list):
+        return []
     points = []
     for fix in fixes:
         try:
