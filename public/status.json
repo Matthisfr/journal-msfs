@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-27",
-  "last_run": "2026-10-27T17:48:42.105485+00:00",
-  "weather_checked_at": "2026-10-27T17:48:42.105485+00:00",
-  "news_checked_at": "2026-10-27T17:48:42.105485+00:00",
+  "last_run": "2026-10-27T17:52:07.262704+00:00",
+  "weather_checked_at": "2026-10-27T17:52:07.262704+00:00",
+  "news_checked_at": "2026-10-27T17:52:07.262704+00:00",
   "weather": [
     {
       "icao": "PANC",
@@ -46,8 +46,8 @@
     {
       "icao": "EKVG",
       "name": "Vagar Airport",
-      "observed_at": "2026-10-27T17:20:00+00:00",
-      "raw": "METAR EKVG 271720Z AUTO 27030G56KT 9999 -RA OVC013/// 08/06 Q0969 RMK OVC010/// WIND SKEID 28037G66KT 230V310",
+      "observed_at": "2026-10-27T17:50:00+00:00",
+      "raw": "METAR EKVG 271750Z AUTO 26028G57KT 220V290 9999 -RA OVC013/// 08/06 Q0970 RMK OVC012/// WIND SKEID 28036G61KT 230V310",
       "score": 57,
       "summary": "rafales ≥ 35 kt, précipitations",
       "icon": "🌧️",
@@ -109,19 +109,6 @@
       "taf_raw": "TAF LROP 271700Z 2718/2818 28008KT 5000 -RADZ BR BKN015 OVC025 TEMPO 2718/2723 1500 -RADZ BR BKN005 OVC015 BECMG 2721/2723 04014KT BECMG 2803/2805 9999 -RA BKN020 BKN040 BECMG 2809/2811 NSW"
     },
     {
-      "icao": "EYVI",
-      "name": "EYVI International Vilnius Ciurlionis Airport",
-      "observed_at": "2026-10-27T17:20:00+00:00",
-      "raw": "METAR EYVI 271720Z 14004KT 8000 FEW006 05/05 Q1027 TEMPO 3000 BR SCT005",
-      "score": 20,
-      "summary": "visibilité < 5 SM",
-      "icon": "🌤️",
-      "phenomenon": "Éclaircies",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EYVI 271714Z 2718/2818 VRB03KT 5000 BR SCT005 TEMPO 2718/2721 0800 FG VV002 BECMG 2721/2722 3000 SCT005 BKN015 TEMPO 2722/2807 0600 FG VV002 BECMG 2807/2710 7000 NSW BKN015"
-    },
-    {
       "icao": "LPPR",
       "name": "LPPR Porto",
       "observed_at": "2026-10-27T17:30:00+00:00",
@@ -133,6 +120,19 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF LPPR 271710Z 2718/2818 VRB02KT 9999 BKN020 TEMPO 2718/2809 2000 DZRA BR SCT004 BKN008 PROB40 TEMPO 2718/2809 1200 DZ PRFG SCT000 BKN002 BECMG 2812/2814 26008KT"
+    },
+    {
+      "icao": "OMDB",
+      "name": "OMDB Dubai International Airport",
+      "observed_at": "2026-10-27T17:30:00+00:00",
+      "raw": "METAR OMDB 271730Z 03004KT 340V080 8000 FEW025 31/23 Q1015 NOSIG",
+      "score": 20,
+      "summary": "visibilité < 5 SM",
+      "icon": "🌤️",
+      "phenomenon": "Éclaircies",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF OMDB 271700Z 2718/2900 12005KT 8000 NSC PROB30 2800/2805 4000 HZ BECMG 2807/2809 33012KT BECMG 2816/2818 04005KT"
     }
   ],
   "weather_coverage": {
@@ -199,7 +199,7 @@
     },
     {
       "id": "779510",
-      "title": "[Blog] Briefing hebdomadaire du 22/10/2026",
+      "title": "[Blog] Briefing hebdomadaire du 2026-10-22",
       "category": "MSFS officiel",
       "date": "2026-10-22",
       "source": "Forum officiel Microsoft Flight Simulator",
@@ -302,15 +302,15 @@
     "without_official_url": 20,
     "manual_source": 1,
     "unverified": 50,
-    "audited_at": "2026-10-27T17:48:42.105485+00:00"
+    "audited_at": "2026-10-27T17:52:07.262704+00:00"
   },
-  "versions_checked_at": "2026-10-27T17:48:42.105485+00:00",
-  "releases_checked_at": "2026-10-27T17:48:42.105485+00:00",
+  "versions_checked_at": "2026-10-27T17:52:07.262704+00:00",
+  "releases_checked_at": "2026-10-27T17:52:07.262704+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-27T17:49:33.418810+00:00",
+    "checked_at": "2026-10-27T17:52:55.322663+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
