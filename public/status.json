@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-27",
-  "last_run": "2026-10-27T17:12:29.675887+00:00",
-  "weather_checked_at": "2026-10-27T17:12:29.675887+00:00",
-  "news_checked_at": "2026-10-27T17:12:29.675887+00:00",
+  "last_run": "2026-10-27T17:14:39.188019+00:00",
+  "weather_checked_at": "2026-10-27T17:14:39.188019+00:00",
+  "news_checked_at": "2026-10-27T17:14:39.188019+00:00",
   "weather": [
     {
       "icao": "PANC",
@@ -199,7 +199,7 @@
     },
     {
       "id": "779510",
-      "title": "[Blog] Briefing hebdomadaire du 22/10/2026",
+      "title": "[Blog] Briefing hebdomadaire du 2026-10-22",
       "category": "MSFS officiel",
       "date": "2026-10-22",
       "source": "Forum officiel Microsoft Flight Simulator",
@@ -302,15 +302,15 @@
     "without_official_url": 20,
     "manual_source": 1,
     "unverified": 50,
-    "audited_at": "2026-10-27T17:12:29.675887+00:00"
+    "audited_at": "2026-10-27T17:14:39.188019+00:00"
   },
-  "versions_checked_at": "2026-10-27T17:12:29.675887+00:00",
-  "releases_checked_at": "2026-10-27T17:12:29.675887+00:00",
+  "versions_checked_at": "2026-10-27T17:14:39.188019+00:00",
+  "releases_checked_at": "2026-10-27T17:14:39.188019+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-27T17:13:12.941615+00:00",
+    "checked_at": "2026-10-27T17:15:35.932309+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
