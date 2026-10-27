@@ -83,16 +83,7 @@ function openSimbriefMap(){
  switchView('aeroports');
  if(airportMap&&simbriefRouteBounds){focusSimbriefOnOpen=false;setTimeout(focusSimbriefRoute,120)}
 }
-const simbriefHeader=document.querySelector('#simbrief-last-flight .sectionbar');
-if(simbriefHeader){
- const eye=document.createElement('button');
- eye.type='button';eye.className='textlink';eye.id='simbrief-map-eye';
- eye.textContent='👁 Voir sur la carte';eye.title='Afficher et zoomer sur le dernier plan de vol SimBrief';
- eye.setAttribute('aria-label','Voir le plan de vol SimBrief sur la carte');
- eye.addEventListener('click',openSimbriefMap);
- const refresh=document.querySelector('#simbrief-refresh');
- if(refresh)refresh.before(eye);else simbriefHeader.appendChild(eye);
-}
+$('#simbrief-map-eye')?.addEventListener('click',openSimbriefMap);
 
 let airportMapMarkers=[];
 let airportMapCaption=null;
