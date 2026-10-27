@@ -97,7 +97,13 @@ jobs:
 
       - name: Importer le nouvel inventaire Excel
         if: steps.gate.outputs.run == 'true'
-        run: python scripts/import_airports_excel.py
+        run: |
+          # Une structure Excel inconnue ne doit jamais bloquer le journal.
+          # L'importateur valide d'abord les sections; en cas de refus,
+          # l'inventaire publié reste intact et la collecte continue.
+          if ! python scripts/import_airports_excel.py; then
+            echo "::warning::Import Excel refusé : inventaire précédent conservé. Vérifier les sections de l'export."
+          fi
 
       - name: Vérifier le code et les scripts du site
         if: steps.gate.outputs.run == 'true'
