@@ -1278,7 +1278,7 @@
     "lon": 89.424599,
     "name": "Paro International Airport",
     "source": "OurAirports / airport-codes",
-    "aircraft_marker": "cessna"
+    "aircraft_marker": "airliner"
   },
   "ENTC": {
     "lat": 69.683296,
