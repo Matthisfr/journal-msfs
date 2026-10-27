@@ -72,6 +72,15 @@ function renderAirports(){
 }
 let airportMap=null;
 let simbriefRouteBounds=null;
+let simbriefRouteLayer=null;
+let simbriefRouteButton=null;
+let showSimbriefOnLoad=false;
+function setSimbriefRouteVisible(visible){
+ if(!airportMap||!simbriefRouteLayer)return;
+ if(visible&&!airportMap.hasLayer(simbriefRouteLayer))simbriefRouteLayer.addTo(airportMap);
+ if(!visible&&airportMap.hasLayer(simbriefRouteLayer))airportMap.removeLayer(simbriefRouteLayer);
+ if(simbriefRouteButton){simbriefRouteButton.textContent=visible?'👁 Masquer le dernier vol':'👁 Voir le dernier vol';simbriefRouteButton.setAttribute('aria-pressed',String(visible));}
+}
 let focusSimbriefOnOpen=false;
 function focusSimbriefRoute(){
  if(!airportMap||!simbriefRouteBounds)return;
@@ -86,7 +95,9 @@ function scrollToAirportMap(){
  window.scrollTo({top:target,behavior:'auto'});
 }
 function openSimbriefMap(){
+ showSimbriefOnLoad=true;
  focusSimbriefOnOpen=true;
+ setSimbriefRouteVisible(true);
  switchView('aeroports');
  // Le scroll en haut de switchView est asynchrone : attendre sa fin.
  setTimeout(scrollToAirportMap,500);
@@ -129,7 +140,9 @@ async function addSimbriefRoute(map, airportData, slot){
   const duration=t=>{const s=String(t||'');const m=s.match(/^([0-9]+):([0-9]{2})/);return m?Number(m[1])+'h'+m[2]:'—'};
   const routeLabel=(t,placement='center')=>{const width=Math.max(110,Math.ceil(String(t).length*7.5)+22);const offset=placement==='right'?[-25,17]:placement==='left'?[width+25,17]:[width/2,17];return L.divIcon({className:'simbrief-label',html:'<div style="box-sizing:border-box;width:'+width+'px;background:#102c42;color:white;border:1px solid white;border-radius:6px;padding:7px 10px;white-space:nowrap;font-size:12px;font-weight:bold;text-align:center;box-shadow:0 2px 5px #0007">'+esc(t)+'</div>',iconSize:[width,32],iconAnchor:offset});};
   simbriefRouteBounds=fromSimbriefBounds(fixes,start,end);
-  const layer=L.layerGroup().addTo(map);
+  const layer=L.layerGroup();
+  simbriefRouteLayer=layer;
+  if(showSimbriefOnLoad)layer.addTo(map);
   const icon=(type)=>L.divIcon({className:'simbrief-aircraft',html:'<span style="display:grid;place-items:center;background:#102c42;border:2px solid white;color:white;border-radius:50%;width:38px;height:38px;font-size:23px">'+(type==='departure'?'🛫':'🛬')+'</span>',iconSize:[38,38],iconAnchor:[19,19]});
   const from=valid(start)?[Number(start.lat),Number(start.lon)]:points[0];
   const to=valid(end)?[Number(end.lat),Number(end.lon)]:points[points.length-1];
@@ -147,18 +160,15 @@ async function addSimbriefRoute(map, airportData, slot){
   }
   const button=L.DomUtil.create('button','simbrief-route-toggle',slot);
   button.type='button';
-  button.textContent='👁 Masquer le dernier vol';
+  button.textContent=showSimbriefOnLoad?'👁 Masquer le dernier vol':'👁 Voir le dernier vol';
   button.title='Afficher ou masquer le dernier vol SimBrief';
-  button.setAttribute('aria-pressed','true');
+  button.setAttribute('aria-pressed',String(showSimbriefOnLoad));
   button.style.cssText='position:absolute;top:8px;left:50%;transform:translateX(-50%);z-index:1200;background:#102c42;color:white;border:2px solid white;border-radius:7px;padding:8px 12px;font-weight:bold;cursor:pointer;white-space:nowrap;box-shadow:0 2px 8px #0006';
   L.DomEvent.disableClickPropagation(button);
   L.DomEvent.disableScrollPropagation(button);
-  L.DomEvent.on(button,'click',()=>{
-   const visible=map.hasLayer(layer);
-   if(visible)map.removeLayer(layer);else layer.addTo(map);
-   button.textContent=visible?'👁 Voir le dernier vol':'👁 Masquer le dernier vol';
-   button.setAttribute('aria-pressed',String(!visible));
-  });
+  simbriefRouteButton=button;
+  L.DomEvent.on(button,'click',()=>setSimbriefRouteVisible(!map.hasLayer(layer)));
+  showSimbriefOnLoad=false;
   const label=document.createElement('p');
   label.className='map-caption';
   label.textContent='SimBrief : '+(flight.origin?.icao||'?')+' → '+(flight.destination?.icao||'?')+(fixes.length>=2?' · tracé via '+fixes.length+' points de navigation':' · coordonnées des points de navigation indisponibles : aucun faux tracé affiché');
