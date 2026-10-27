@@ -1069,5 +1069,124 @@
     "name": "Adelaide International Airport",
     "source": "OurAirports / airport-codes",
     "aircraft_marker": "airliner"
+  },
+  "EETN": {
+    "lat": 59.413246,
+    "lon": 24.83264,
+    "name": "Lennart Meri Tallinn Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "EHAM": {
+    "lat": 52.308601,
+    "lon": 4.76389,
+    "name": "Amsterdam Airport Schiphol",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "ELLX": {
+    "lat": 49.626845,
+    "lon": 6.212134,
+    "name": "Luxembourg-Findel International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "EPWA": {
+    "lat": 52.165699,
+    "lon": 20.9671,
+    "name": "Warsaw Chopin Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "EVRA": {
+    "lat": 56.920752,
+    "lon": 23.970711,
+    "name": "Riga International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "EYVI": {
+    "lat": 54.634102,
+    "lon": 25.285801,
+    "name": "Vilnius International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "LATI": {
+    "lat": 41.4147,
+    "lon": 19.7206,
+    "name": "Tirana International Airport Mother Teresa",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "LBSF": {
+    "lat": 42.696357,
+    "lon": 23.417671,
+    "name": "Sofia Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "LCLK": {
+    "lat": 34.875099,
+    "lon": 33.624901,
+    "name": "Larnaca International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "LKPR": {
+    "lat": 50.100874,
+    "lon": 14.259911,
+    "name": "Václav Havel Airport Prague",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "LROP": {
+    "lat": 44.571792,
+    "lon": 26.103285,
+    "name": "Bucharest Henri Coandă International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "LYBE": {
+    "lat": 44.818401,
+    "lon": 20.309099,
+    "name": "Belgrade Nikola Tesla Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "ULLI": {
+    "lat": 59.800301,
+    "lon": 30.262501,
+    "name": "Pulkovo Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "URSS": {
+    "lat": 43.449902,
+    "lon": 39.9566,
+    "name": "Sochi International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "UUDD": {
+    "lat": 55.408798,
+    "lon": 37.9063,
+    "name": "Domodedovo International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "UUEE": {
+    "lat": 55.977486,
+    "lon": 37.386677,
+    "name": "Sheremetyevo International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "UUWW": {
+    "lat": 55.591499,
+    "lon": 37.261501,
+    "name": "Vnukovo International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
   }
 }
