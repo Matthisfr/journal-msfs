@@ -15,6 +15,7 @@ on:
           - totale
   schedule:
     # Deux passages hors minute 0 pour limiter les retards GitHub Actions.
+    # Relance de diagnostic 2026-10-27 : un push sur main déclenche aussi la collecte.
     # 05:17 France : principal ; 06:17 France : secours.
     # UTC été/hiver : la porte ci-dessous valide le bon créneau.
     - cron: '17 3 * * *'
