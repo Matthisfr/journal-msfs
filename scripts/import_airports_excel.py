@@ -28,12 +28,12 @@ def is_sub_scene(*values):
 
 def scene_type(code,name,folder):
  value=norm(" ".join(str(x or "") for x in (name,folder)))
- return "heliport" if re.search(r"\\b(heliport|heliports|helipad|helipads|helistop|helisurface|helisurfaces)\\b",value) else "airport"
+ return "heliport" if re.search(r"\b(heliport|heliports|helipad|helipads|helistop|helisurface|helisurfaces)\b",value) else "airport"
 
 def section_kind(value):
  # Les titres Addons Linker peuvent porter des compteurs : (4 / 4), (0/62).
  raw=str(value or "").strip()
- raw=re.sub(r"\\s*\\(\\s*\\d+\\s*(?:/\\s*\\d+)?\\s*\\)\\s*$","",raw)
+ raw=re.sub(r"\s*\(\s*\d+\s*(?:/\s*\d+)?\s*\)\s*$","",raw)
  label=norm(raw)
  if label in {"aeroport","aeroports","airport","airports","airfield","airfields","aerodrome","aerodromes","heliport","heliports"}:
   return "airports"
