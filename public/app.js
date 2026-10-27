@@ -150,7 +150,7 @@ async function addSimbriefRoute(map, airportData, slot){
   button.textContent='👁 Masquer le dernier vol';
   button.title='Afficher ou masquer le dernier vol SimBrief';
   button.setAttribute('aria-pressed','true');
-  button.style.cssText='position:absolute;top:12px;left:50%;transform:translateX(-50%);z-index:1000;background:#102c42;color:white;border:2px solid white;border-radius:7px;padding:8px 12px;font-weight:bold;cursor:pointer;white-space:nowrap;box-shadow:0 2px 8px #0006';
+  button.style.cssText='position:absolute;top:58px;left:50%;transform:translateX(-50%);z-index:1000;background:#102c42;color:white;border:2px solid white;border-radius:7px;padding:8px 12px;font-weight:bold;cursor:pointer;white-space:nowrap;box-shadow:0 2px 8px #0006';
   L.DomEvent.disableClickPropagation(button);
   L.DomEvent.disableScrollPropagation(button);
   L.DomEvent.on(button,'click',()=>{
