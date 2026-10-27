@@ -233,3 +233,5 @@
 
 /* Repère discret des aéroports possédant plusieurs scènes */
 .duplicate-badge{display:block;width:max-content;max-width:100%;margin-top:5px;padding:3px 5px;border:1px solid #bf7c0d;border-radius:5px;background:#ffbf4c;color:#171f2a;font-size:9px;line-height:1.2;font-weight:900;letter-spacing:.015em;white-space:nowrap}
+
+.heliport-badge{display:block;width:max-content;max-width:100%;margin-top:5px;padding:3px 6px;border:1px solid #357b8d;border-radius:5px;background:#e1f4f8;color:#15546a;font-size:9px;line-height:1.2;font-weight:900;letter-spacing:.02em;white-space:nowrap}
