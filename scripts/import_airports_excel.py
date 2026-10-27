@@ -115,7 +115,7 @@ def merge(records,old):
  seen={}
  duplicates=0
  for rec in records:
-  key=("folder",norm(rec["folder"])) if rec["folder"] else ("identity",rec["icao"],norm(rec["name"]),norm(rec["publisher"]))
+  key=("folder",norm(rec["folder"])) if rec["folder"] else ("identity",rec["icao"],norm(rec["name"]),norm(rec.get("publisher")))
   if key in seen:
    prior=seen[key]
    comparable=("icao","installed","name","publisher","folder","scene_type")
