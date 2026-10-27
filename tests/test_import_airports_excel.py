@@ -37,9 +37,9 @@ class AirportImportTests(unittest.TestCase):
   self.assertEqual([x["icao"] for x in records],["LFMN","LFMN","58CA"])
   self.assertEqual(records[-1]["scene_type"],"heliport")
   self.assertEqual(records[0]["scene_type"],"airport")
- def test_missing_section_fails_closed(self):
-  with self.assertRaisesRegex(ValueError,"Section Aéroports"):
-   mod.parse_addons_linker(FakeSheet([row(code="LFPG",folder="airport",name="Paris",version="1.0")]))
+ def test_missing_section_without_airport_folder_fails_closed(self):
+  with self.assertRaisesRegex(ValueError,"Aucune scène aéroport"):
+   mod.parse_addons_linker(FakeSheet([row(code="LFPG",folder="city-paris",name="Paris City",version="1.0")]))
  def test_sub_marker(self):
   self.assertTrue(mod.is_sub_scene("(sub LFMN)"))
   self.assertFalse(mod.is_sub_scene("airport-lfmn"))
