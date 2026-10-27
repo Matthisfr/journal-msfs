@@ -145,12 +145,12 @@ async function addSimbriefRoute(map, airportData, slot){
    const fl=Number(flight.altitude);
    L.marker(middle,{icon:routeLabel('Vol '+duration(flight.enroute_time)+' · '+(fl>0?'FL'+Math.round(fl/100):'FL —')),interactive:false}).addTo(layer);
   }
-  const button=L.DomUtil.create('button','simbrief-route-toggle',map.getContainer());
+  const button=L.DomUtil.create('button','simbrief-route-toggle',slot);
   button.type='button';
   button.textContent='👁 Masquer le dernier vol';
   button.title='Afficher ou masquer le dernier vol SimBrief';
   button.setAttribute('aria-pressed','true');
-  button.style.cssText='position:absolute;top:12px;left:50%;transform:translateX(-50%);z-index:1000;background:#102c42;color:white;border:2px solid white;border-radius:7px;padding:8px 12px;font-weight:bold;cursor:pointer;white-space:nowrap;box-shadow:0 2px 8px #0006';
+  button.style.cssText='position:absolute;top:8px;left:50%;transform:translateX(-50%);z-index:1200;background:#102c42;color:white;border:2px solid white;border-radius:7px;padding:8px 12px;font-weight:bold;cursor:pointer;white-space:nowrap;box-shadow:0 2px 8px #0006';
   L.DomEvent.disableClickPropagation(button);
   L.DomEvent.disableScrollPropagation(button);
   L.DomEvent.on(button,'click',()=>{
