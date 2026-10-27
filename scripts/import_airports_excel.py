@@ -32,11 +32,12 @@ def scene_type(code,name,folder):
 
 def section_kind(value):
  label=norm(value)
+ label=re.sub(r"\\s+\\d+\\s+\\d+$","",label)
  if label in ("aeroport","aeroports","airport","airports","airfields","aerodromes","aerodrome"):
   return "airports"
  if label in ("heliport","heliports","helipad","helipads","helistop","helisurfaces"):
   return "airports"
- if label in ("scenery","sceneries","decors","decor","cities","city","villes","ville","landmarks","other","autres","divers"):
+ if label in ("scenery","sceneries","decors","decor","cities","city","villes","ville","landmarks","other","autres","divers","world","landscape","landscapes"):
   return "other"
  return None
 
