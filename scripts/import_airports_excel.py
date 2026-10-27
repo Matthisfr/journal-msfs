@@ -44,8 +44,15 @@ def parse_addons_linker(sheet):
  records=[]
  region=""
  country=""
- for row in sheet.iter_rows(values_only=True):
+ section=None
+ rows=list(sheet.iter_rows(values_only=True))
+ # Reconnaître les sections si l'export les fournit; ne jamais importer SUB.
+ has_sections=any(section_kind(v) for row in rows for v in row[:5] if v is not None)
+ for row in rows:
   if len(row)<13: continue
+  heading=next((section_kind(v) for v in row[:5] if section_kind(v)),None)
+  if heading and not row[6]: section=heading
+  if has_sections and section!="airports": continue
   if row[3] and not row[4] and not row[5]:
    region=str(row[3]).split(" (")[0].strip()
   if row[4] and not row[5]:
@@ -54,14 +61,16 @@ def parse_addons_linker(sheet):
   code=str(row[6] or "").strip().upper()
   version=str(row[9] or "").strip()
   name=str(row[11] or folder).strip()
+  if is_sub_scene(code,name,folder): continue
   if not code or not version or not folder or not name: continue
-  if not (re.fullmatch(r"[A-Z0-9]{4}",code) or code.startswith("(SUB ")): continue
+  if not re.fullmatch(r"[A-Z0-9]{4}",code): continue
   original=code
   code=CORRECTIONS.get(code,code)
   records.append({"icao":code,"original":original,"name":name,"folder":folder,
                   "installed":version,"publisher":str(row[12] or "").strip(),
-                  "region":region or country})
+                  "region":region or country,"scene_type":scene_type(code,name,folder)})
  return records
+
 def parse(book):
  from openpyxl import load_workbook
  wb=load_workbook(book,read_only=True,data_only=True)
@@ -84,12 +93,14 @@ def parse(book):
    folder=get("folder")
    name=get("name")
    version=get("installed")
-   if is_sub_scene(code,name,folder): continue\n   if not code and not folder and not name: continue
+   if is_sub_scene(code,name,folder): continue
+   if not code and not folder and not name: continue
    if not code or not version or not (folder or name):
     raise ValueError(f"{sheet.title}: ligne incomplète : ICAO, scène/dossier et version requis")
+   if not re.fullmatch(r"[A-Z0-9]{4}",code): continue
    original=code
    code=CORRECTIONS.get(code,code)
-   records.append({"icao":code,"original":original,"name":name or folder,"folder":folder,"installed":version,"publisher":get("publisher"),"region":get("region")})
+   records.append({"icao":code,"original":original,"name":name or folder,"folder":folder,"installed":version,"publisher":get("publisher"),"region":get("region"),"scene_type":scene_type(code,name,folder)})
  return records
 def merge(records,old):
  by_folder={norm(a.get("folder")):a for a in old if a.get("folder")}
@@ -108,7 +119,8 @@ def merge(records,old):
    for field in ("version_checked_at","version_comparison","version_check_state","server_version"):
     entry.pop(field,None)
    entry["status"]="UNK-V"
-  entry["scene_type"]=rec.get("scene_type","airport")\n  entry.setdefault("status","UNK-V")
+  entry["scene_type"]=rec.get("scene_type","airport")
+  entry.setdefault("status","UNK-V")
   entry.setdefault("country",entry.get("region",""))
   output.append(entry)
  return output
