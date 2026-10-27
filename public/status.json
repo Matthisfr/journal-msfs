@@ -1,48 +1,9 @@
 {
   "edition": "2026-10-27",
-  "last_run": "2026-10-27T16:08:38.558241+00:00",
-  "weather_checked_at": "2026-10-27T16:08:38.558241+00:00",
-  "news_checked_at": "2026-10-27T16:08:38.558241+00:00",
+  "last_run": "2026-10-27T16:16:31.278367+00:00",
+  "weather_checked_at": "2026-10-27T16:16:31.278367+00:00",
+  "news_checked_at": "2026-10-27T16:16:31.278367+00:00",
   "weather": [
-    {
-      "icao": "PANC",
-      "name": "sim-wings Anchorage",
-      "observed_at": "2026-10-27T16:00:00+00:00",
-      "raw": "SPECI PANC 271600Z 01003KT 1/4SM R07R/P6000FT FG VV002 00/00 A3048 RMK AO2 SFC VIS 1/2 T00000000 $",
-      "score": 145,
-      "summary": "brouillard, visibilité < 1 SM",
-      "icon": "🌫️",
-      "phenomenon": "Brouillard",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF PANC 271351Z 2714/2818 00000KT 1SM BR SCT001 TEMPO 2714/2717 1/4SM FG VV001 FM271700 VRB03KT P6SM VCFG FEW001 SCT200 FM272000 01006KT P6SM FEW200"
-    },
-    {
-      "icao": "MDSD",
-      "name": "MDSD Las Americas International Airport",
-      "observed_at": "2026-10-27T16:00:00+00:00",
-      "raw": "METAR MDSD 271600Z 21004KT 8000 TSVCSH FEW012CB BKN014 BKN070 26/25 Q1014 RERA CB/NE/E/S/W/NW/N",
-      "score": 130,
-      "summary": "orage, visibilité < 5 SM",
-      "icon": "⛈️",
-      "phenomenon": "Orage",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF MDSD COR 271600Z 2718/2818 17008KT 9999 FEW014CB SCT016 SCT070 BKN300 TEMPO 2718/2800 7000 -TSRA FEW014CB BKN015 BKN070"
-    },
-    {
-      "icao": "SLLP",
-      "name": "SLLP El Alto International Airport",
-      "observed_at": "2026-10-27T16:00:00+00:00",
-      "raw": "METAR SLLP 271600Z 03013KT 8000 -TSRA SCT015 SCT017CB BKN070 11/03 Q1036 NOSIG RMK A3061 QFE627.1 HR57 P7784 CI",
-      "score": 130,
-      "summary": "orage, visibilité < 5 SM",
-      "icon": "⛈️",
-      "phenomenon": "Orage",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF SLLP 271000Z 2712/2812 VRB02KT 9999 SCT015 TX13/2719Z TN01/2810Z BECMG 2713/2715 29010KT SCT015 FEW020CB SCT070 TEMPO 2715/2719 TSRA TEMPO 2723/2803 10010KT TSRA BECMG 2804/2808 VRB02KT 5000 RA BKN004 OVC070 PROB30 TEMPO 2809/2812 SN"
-    },
     {
       "icao": "EBBR",
       "name": "Aerosoft Brussels Airport",
@@ -70,17 +31,17 @@
       "taf_raw": "TAF KGFK 271441Z 2715/2812 08006KT 3SM -DZ BR OVC007 TEMPO 2715/2717 1SM -DZ BR BKN004 FM271700 13008KT P6SM OVC007 FM280000 17006KT P6SM OVC013 FM280400 19009KT P6SM BKN045"
     },
     {
-      "icao": "LPPR",
-      "name": "LPPR Porto",
-      "observed_at": "2026-10-27T16:00:00+00:00",
-      "raw": "METAR LPPR 271600Z 23003KT 170V260 4000 -DZ BR OVC003 17/16 Q1022",
-      "score": 57,
-      "summary": "visibilité < 3 SM, précipitations",
+      "icao": "KIAH",
+      "name": "KIAH George Bush Intercontinental/Houston Airport",
+      "observed_at": "2026-10-27T16:07:00+00:00",
+      "raw": "SPECI KIAH 271607Z 19005KT 3SM +RA SCT022 BKN027CB OVC090 20/17 A3022 RMK AO2 RAB02 P0000 T02000172",
+      "score": 32,
+      "summary": "visibilité < 5 SM, précipitations",
       "icon": "🌧️",
       "phenomenon": "Précipitations",
-      "level": "Dégradé",
+      "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LPPR 271100Z 2712/2812 19010KT 9999 SCT012 BKN025 BECMG 2712/2714 SCT006 BKN012 TEMPO 2714/2724 2000 DZRA BR SCT002 BKN004 BECMG 2714/2716 VRB05KT PROB40 TEMPO 2718/2806 1200 DZ PRFG SCT000 BKN002"
+      "taf_raw": "TAF KIAH 271521Z 2715/2818 10007KT P6SM VCSH SCT090 OVC250 FM280400 VRB03KT P6SM BKN250"
     },
     {
       "icao": "LFPO",
@@ -133,12 +94,51 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF KDEN 271601Z 2716/2818 VRB05KT 5SM BR SCT002 BKN008 BKN060 FM271730 VRB05KT P6SM SCT008 FM271900 07007KT P6SM FEW200 FM272100 09010KT P6SM SKC FM280100 12008KT P6SM SCT200 FM280400 22007KT P6SM FEW020 SCT200"
+    },
+    {
+      "icao": "BIKF",
+      "name": "BIKF Keflavik Airport",
+      "observed_at": "2026-10-27T16:00:00+00:00",
+      "raw": "METAR BIKF 271600Z 34008KT 9999 -DZRA FEW022 BKN035 BKN070 06/04 Q0973",
+      "score": 12,
+      "summary": "précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "Faible contrainte",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF BIKF 271339Z 2715/2815 36010KT 9999 SCT015 BKN030 TX07/2815Z TN03/2805Z PROB40 TEMPO 2715/2802 RADZ BKN014"
+    },
+    {
+      "icao": "EGPF",
+      "name": "EGPF Glasgow Airport",
+      "observed_at": "2026-10-27T15:50:00+00:00",
+      "raw": "METAR EGPF 271550Z AUTO 24018KT 9999 -RA FEW042/// //////TCU 09/05 Q1001",
+      "score": 12,
+      "summary": "précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "Faible contrainte",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EGPF 271101Z 2712/2812 24025G40KT 9999 BKN030 BECMG 2712/2715 25018G30KT TEMPO 2712/2718 4000 +SHRA PROB30 TEMPO 2718/2724 7000 SHRA TEMPO 2801/2808 5000 RA -RADZ BKN012 PROB30 TEMPO 2802/2808 BKN009 BECMG 2808/2811 24012KT PROB30 TEMPO 2808/2812 5000 SHRA PROB40 TEMPO 2811/2812 26018G28KT"
+    },
+    {
+      "icao": "EHAM",
+      "name": "EHAM Amsterdam Airport",
+      "observed_at": "2026-10-27T15:55:00+00:00",
+      "raw": "METAR EHAM 271555Z 23011KT 9999 -DZRA FEW022 14/11 Q1012 NOSIG",
+      "score": 12,
+      "summary": "précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "Faible contrainte",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EHAM 271115Z 2712/2818 19015KT 9999 FEW014 BKN030 BECMG 2713/2715 24012KT TEMPO 2714/2717 6000 RA BKN014 BECMG 2800/2803 21006KT BECMG 2809/2812 24012KT BECMG 2815/2818 21008KT"
     }
   ],
   "weather_coverage": {
     "eligible": 191,
-    "received": 186,
-    "fresh": 186
+    "received": 142,
+    "fresh": 142
   },
   "news": [
     {
@@ -204,7 +204,7 @@
       "date": "2026-10-22",
       "source": "Forum officiel Microsoft Flight Simulator",
       "url": "https://forums.flightsimulator.com/t/blog-weekly-briefing-for-2026-10-22/779510",
-      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Lisez la suite pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
+      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Poursuivez votre lecture pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
       "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
       "new": false
     },
@@ -267,7 +267,7 @@
   ],
   "hardware": [],
   "source_status": {
-    "metar": "ok",
+    "metar": "partial",
     "taf": "ok",
     "official_news": "ok",
     "airport_versions": "partial",
@@ -275,6 +275,7 @@
     "software_versions": "partial"
   },
   "errors": [
+    "HTTP Error 504: Gateway Time-out",
     "Versions : GMMX / PERFECTSOFT : Fiche 1.1.0 plus ancienne que l'installation 1.2.0 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : DTTA / prealsoft : Fiche 1.00 plus ancienne que l'installation 1.0.1 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : SLLP / Sierrasim Simulation : Fiche 1.0.0 plus ancienne que l'installation 1.0.2 : vérifier le canal éditeur, ne pas rétrograder",
@@ -302,15 +303,15 @@
     "without_official_url": 20,
     "manual_source": 1,
     "unverified": 50,
-    "audited_at": "2026-10-27T16:08:38.558241+00:00"
+    "audited_at": "2026-10-27T16:16:31.278367+00:00"
   },
-  "versions_checked_at": "2026-10-27T16:08:38.558241+00:00",
-  "releases_checked_at": "2026-10-27T16:08:38.558241+00:00",
+  "versions_checked_at": "2026-10-27T16:16:31.278367+00:00",
+  "releases_checked_at": "2026-10-27T16:16:31.278367+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-27T16:09:38.596460+00:00",
+    "checked_at": "2026-10-27T16:17:36.314759+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
