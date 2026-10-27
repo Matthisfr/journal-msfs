@@ -112,11 +112,18 @@ def merge(records,old):
  by_folder={norm(a.get("folder")):a for a in old if a.get("folder")}
  by_identity={(a.get("icao"),norm(a.get("name")),norm(a.get("publisher"))):a for a in old}
  output=[]
- seen=set()
+ seen={}
+ duplicates=0
  for rec in records:
-  key=norm(rec["folder"]) if rec["folder"] else (rec["icao"],norm(rec["name"]),norm(rec["publisher"]))
-  if key in seen: raise ValueError(f"Doublon exact de scène dans Excel : {rec['name']}")
-  seen.add(key)
+  key=("folder",norm(rec["folder"])) if rec["folder"] else ("identity",rec["icao"],norm(rec["name"]),norm(rec["publisher"]))
+  if key in seen:
+   prior=seen[key]
+   comparable=("icao","installed","name","publisher","folder","scene_type")
+   if any(norm(prior.get(field))!=norm(rec.get(field)) for field in comparable):
+    raise ValueError(f"Scène répétée avec données contradictoires : {rec['name']}")
+   duplicates+=1
+   continue
+  seen[key]=rec
   previous=by_folder.get(norm(rec["folder"])) if rec["folder"] else None
   if previous is None: previous=by_identity.get((rec["icao"],norm(rec["name"]),norm(rec["publisher"])))
   entry=dict(previous or {})
@@ -129,6 +136,7 @@ def merge(records,old):
   entry.setdefault("status","UNK-V")
   entry.setdefault("country",entry.get("region",""))
   output.append(entry)
+ if duplicates: print(f"Doublons identiques ignorés : {duplicates}")
  return output
 def main():
  files=sorted(DIR.glob("*.xlsx"),key=lambda p:(p.stat().st_mtime,p.name),reverse=True) if DIR.exists() else []
