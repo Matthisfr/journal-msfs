@@ -31,12 +31,13 @@ def scene_type(code,name,folder):
  return "heliport" if re.search(r"\\b(heliport|heliports|helipad|helipads|helistop|helisurface|helisurfaces)\\b",value) else "airport"
 
 def section_kind(value):
- # Addons Linker headings may contain totals: "AIRPORTS (123)".
- value=norm(value)
- value=re.sub(r"\\s+\\d+(?:\\s+\\d+)*$","",value)
- if value in {"aeroport","aeroports","airport","airports","airfield","airfields","aerodrome","aerodromes","heliport","heliports"}:
+ # Les titres Addons Linker peuvent porter des compteurs : (4 / 4), (0/62).
+ raw=str(value or "").strip()
+ raw=re.sub(r"\\s*\\(\\s*\\d+\\s*(?:/\\s*\\d+)?\\s*\\)\\s*$","",raw)
+ label=norm(raw)
+ if label in {"aeroport","aeroports","airport","airports","airfield","airfields","aerodrome","aerodromes","heliport","heliports"}:
   return "airports"
- if value in {"decor","decors","scenery","sceneries","city","cities","ville","villes","landmark","landmarks","divers","other","autres"}:
+ if label in {"decor","decors","scenery","sceneries","city","cities","ville","villes","landmark","landmarks","divers","other","autres"}:
   return "other"
  return None
 
