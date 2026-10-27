@@ -125,7 +125,7 @@ def merge(records,old):
    continue
   seen[key]=rec
   previous=by_folder.get(norm(rec["folder"])) if rec["folder"] else None
-  if previous is None: previous=by_identity.get((rec["icao"],norm(rec["name"]),norm(rec["publisher"])))
+  if previous is None: previous=by_identity.get((rec["icao"],norm(rec["name"]),norm(rec.get("publisher"))))
   entry=dict(previous or {})
   entry.update({k:v for k,v in rec.items() if v or k in ("icao","original","installed")})
   if previous and previous.get("installed")!=entry["installed"]:
