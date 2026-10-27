@@ -95,13 +95,13 @@ async function addSimbriefRoute(map, airportData, slot){
   const points=fixes.map(p=>[Number(p.lat),Number(p.lon)]);
   const utc=t=>{if(!t)return '—';const s=String(t);const d=/^[0-9]{10,13}$/.test(s)?new Date(Number(s)*(s.length===10?1000:1)):new Date(s);return Number.isNaN(d.getTime())?'—':d.toISOString().slice(11,16)+'Z'};
   const duration=t=>{const s=String(t||'');const m=s.match(/^([0-9]+):([0-9]{2})/);return m?Number(m[1])+'h'+m[2]:'—'};
-  const routeLabel=t=>L.divIcon({className:'simbrief-label',html:'<div style="background:#102c42;color:white;border:1px solid white;border-radius:5px;padding:5px 9px;white-space:nowrap;font-size:12px;font-weight:bold">'+esc(t)+'</div>',iconSize:[0,0]});
+  const routeLabel=(t,placement='center')=>{const width=Math.max(110,Math.ceil(String(t).length*7.5)+22);const offset=placement==='right'?[-25,17]:placement==='left'?[width+25,17]:[width/2,17];return L.divIcon({className:'simbrief-label',html:'<div style="box-sizing:border-box;width:'+width+'px;background:#102c42;color:white;border:1px solid white;border-radius:6px;padding:7px 10px;white-space:nowrap;font-size:12px;font-weight:bold;text-align:center;box-shadow:0 2px 5px #0007">'+esc(t)+'</div>',iconSize:[width,32],iconAnchor:offset});};
   const layer=L.layerGroup().addTo(map);
   const icon=(type)=>L.divIcon({className:'simbrief-aircraft',html:'<span style="display:grid;place-items:center;background:#102c42;border:2px solid white;color:white;border-radius:50%;width:38px;height:38px;font-size:23px">'+(type==='departure'?'🛫':'🛬')+'</span>',iconSize:[38,38],iconAnchor:[19,19]});
   const from=valid(start)?[Number(start.lat),Number(start.lon)]:points[0];
   const to=valid(end)?[Number(end.lat),Number(end.lon)]:points[points.length-1];
-  if(from){L.marker(from,{icon:icon('departure')}).bindPopup('🛫 Départ : '+esc(flight.origin?.icao||'')).addTo(layer);L.marker(from,{icon:routeLabel('Départ '+utc(flight.scheduled_departure)),interactive:false}).addTo(layer);}
-  if(to){L.marker(to,{icon:icon('arrival')}).bindPopup('🛬 Arrivée : '+esc(flight.destination?.icao||'')).addTo(layer);L.marker(to,{icon:routeLabel('Arrivée '+utc(flight.scheduled_arrival)),interactive:false}).addTo(layer);}
+  if(from){L.marker(from,{icon:icon('departure')}).bindPopup('🛫 Départ : '+esc(flight.origin?.icao||'')).addTo(layer);L.marker(from,{icon:routeLabel('Départ '+utc(flight.scheduled_departure),'right'),interactive:false}).addTo(layer);}
+  if(to){L.marker(to,{icon:icon('arrival')}).bindPopup('🛬 Arrivée : '+esc(flight.destination?.icao||'')).addTo(layer);L.marker(to,{icon:routeLabel('Arrivée '+utc(flight.scheduled_arrival),'left'),interactive:false}).addTo(layer);}
   // Ne jamais transformer une route SimBrief non géocodée en ligne directe.
   if(fixes.length>=2){
    if(valid(start))points.unshift(from);
