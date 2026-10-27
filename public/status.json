@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-27",
-  "last_run": "2026-10-27T07:54:09.549194+00:00",
-  "weather_checked_at": "2026-10-27T07:54:09.549194+00:00",
-  "news_checked_at": "2026-10-27T07:54:09.549194+00:00",
+  "last_run": "2026-10-27T07:55:52.855219+00:00",
+  "weather_checked_at": "2026-10-27T07:55:52.855219+00:00",
+  "news_checked_at": "2026-10-27T07:55:52.855219+00:00",
   "weather": [
     {
       "icao": "EYVI",
@@ -20,8 +20,8 @@
     {
       "icao": "KDEN",
       "name": "KDEN Denver International Airport",
-      "observed_at": "2026-10-27T07:37:00+00:00",
-      "raw": "SPECI KDEN 270737Z 32005KT 1/8SM R35L/P6000FT FG OVC002 06/04 A3004 RMK AO2 TWR VIS 3 T00560044",
+      "observed_at": "2026-10-27T07:53:00+00:00",
+      "raw": "METAR KDEN 270753Z 31004KT 1/8SM R35L/1000VP6000FT FG VV001 04/04 A3004 RMK AO2 TWR VIS 3 SLP147 T00440039",
       "score": 145,
       "summary": "brouillard, visibilité < 1 SM",
       "icon": "🌫️",
@@ -29,19 +29,6 @@
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF KDEN 270750Z 2708/2812 VRB06KT 1/4SM FG OVC002 TEMPO 2708/2710 VV001 FM271000 29006KT P6SM VCFG FEW002 SCT010 TEMPO 2710/2714 1/4SM FG VV002 FM271400 22005KT P6SM FEW005 SCT250 TEMPO 2714/2715 4SM BR BKN005 FM271700 VRB06KT P6SM FEW250 FM271900 09007KT P6SM SCT200 FM272100 08011KT P6SM SKC FM280100 11009KT P6SM SCT200 FM280400 22007KT P6SM FEW020 SCT200"
-    },
-    {
-      "icao": "ELLX",
-      "name": "ELLX LUXEMBOURG FINDEL AIRPORT",
-      "observed_at": "2026-10-27T07:20:00+00:00",
-      "raw": "METAR ELLX 270720Z 17006KT 130V200 1500 BR SCT001 BKN002 10/10 Q1017 BECMG 3000 BR BKN005",
-      "score": 80,
-      "summary": "visibilité < 1 SM",
-      "icon": "☁️",
-      "phenomenon": "Ciel couvert",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF ELLX 270500Z 2706/2812 17008KT 0300 FG BKN001 PROB40 TEMPO 2706/2708 0100 FG VV001 BECMG 2708/2711 5000 BR BKN005 BECMG 2720/2722 30006KT TEMPO 2722/2803 2000 -RADZ BKN003 TEMPO 2803/2809 0500 FG BKN002"
     },
     {
       "icao": "EINN",
@@ -70,49 +57,10 @@
       "taf_raw": "TAF KCRW 270520Z 2706/2806 00000KT P6SM SCT230"
     },
     {
-      "icao": "EGKK",
-      "name": "EGKK London Gatwick International",
-      "observed_at": "2026-10-27T07:20:00+00:00",
-      "raw": "METAR EGKK 270720Z COR 23013KT 4000 -RA BKN009 15/14 Q1006",
-      "score": 57,
-      "summary": "visibilité < 3 SM, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EGKK 270457Z 2706/2812 21014KT 9999 SCT018 BKN035 TEMPO 2706/2710 7000 RA BKN012 TEMPO 2706/2708 20017G32KT PROB40 TEMPO 2706/2708 3000 +SHRA +RA PROB30 TEMPO 2710/2715 25015G25KT 7000 SHRA BECMG 2802/2805 19004KT BECMG 2810/2812 26013KT"
-    },
-    {
-      "icao": "EGLL",
-      "name": "EGLL London Heathrow",
-      "observed_at": "2026-10-27T07:20:00+00:00",
-      "raw": "METAR EGLL 270720Z AUTO 27021KT 2000 +RA FEW007/// BKN011/// BKN027/// //////TCU 14/13 Q1006 RERA",
-      "score": 57,
-      "summary": "visibilité < 3 SM, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF AMD EGLL 270706Z 2707/2812 23018G28KT 9999 SCT018 BECMG 2707/2710 25012KT TEMPO 2707/2709 4000 RADZ BKN009 PROB30 TEMPO 2710/2716 25016G26KT 7000 SHRA"
-    },
-    {
-      "icao": "ENGM",
-      "name": "Aerosoft Oslo Airport",
-      "observed_at": "2026-10-27T07:20:00+00:00",
-      "raw": "METAR ENGM 270720Z 18017KT 4700 -DZRA OVC005 09/08 Q1003 TEMPO 6000 -DZRA BKN004",
-      "score": 57,
-      "summary": "visibilité < 3 SM, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF ENGM 270500Z 2706/2806 18005KT 6000 -DZRA BKN007 TEMPO 2706/2719 2000 DZRA BR OVC003 BECMG 2706/2708 18015KT TEMPO 2708/2718 18018G30KT BECMG 2718/2720 BKN020 BECMG 2802/2804 20005KT"
-    },
-    {
       "icao": "ESGG",
       "name": "ESGG Gothenburg Landvetter",
-      "observed_at": "2026-10-27T07:20:00+00:00",
-      "raw": "METAR ESGG 270720Z 18016KT 2800 -RA BKN006 09/08 Q1010",
+      "observed_at": "2026-10-27T07:50:00+00:00",
+      "raw": "METAR ESGG 270750Z 18017KT 2600 -RA BKN007 09/08 Q1010",
       "score": 57,
       "summary": "visibilité < 3 SM, précipitations",
       "icon": "🌧️",
@@ -133,6 +81,58 @@
       "level": "Dégradé",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF LFRN 270500Z 2706/2806 19013KT 9999 OVC008 TEMPO 2707/2711 3000 RA BECMG 2708/2710 27010KT BKN030 PROB30 TEMPO 2712/2716 27015G25KT 4000 -SHRA BECMG 2718/2721 VRB05KT PROB40 TEMPO 2802/2806 3000 BR"
+    },
+    {
+      "icao": "EGPF",
+      "name": "EGPF Glasgow Airport",
+      "observed_at": "2026-10-27T07:50:00+00:00",
+      "raw": "METAR EGPF 270750Z AUTO 22027G37KT 9999 OVC030 11/06 Q0989",
+      "score": 45,
+      "summary": "rafales ≥ 35 kt",
+      "icon": "💨",
+      "phenomenon": "Vent fort",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EGPF 270456Z 2706/2806 22025G40KT 9999 BKN030 TEMPO 2707/2718 6000 SHRA BECMG 2712/2715 23018G30KT PROB30 TEMPO 2718/2724 7000 SHRA TEMPO 2801/2806 5000 RA -RADZ BKN012 PROB30 TEMPO 2802/2806 BKN009"
+    },
+    {
+      "icao": "EGPK",
+      "name": "EGPK Prestwick Airport",
+      "observed_at": "2026-10-27T07:50:00+00:00",
+      "raw": "METAR EGPK 270750Z 22025G35KT 190V250 9999 FEW018 SCT038 11/06 Q0991",
+      "score": 45,
+      "summary": "rafales ≥ 35 kt",
+      "icon": "💨",
+      "phenomenon": "Vent fort",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EGPK 270456Z 2706/2806 22020G35KT 9999 SCT025 BECMG 2706/2709 23025G45KT TEMPO 2707/2718 6000 SHRA BECMG 2712/2715 25020G35KT PROB30 TEMPO 2718/2724 7000 SHRA TEMPO 2802/2806 5000 RA -RADZ BKN010"
+    },
+    {
+      "icao": "ELLX",
+      "name": "ELLX LUXEMBOURG FINDEL AIRPORT",
+      "observed_at": "2026-10-27T07:50:00+00:00",
+      "raw": "METAR ELLX 270750Z 17008KT 140V200 3000 BR BKN002 10/10 Q1017 BECMG 5000 BR BKN005",
+      "score": 45,
+      "summary": "visibilité < 3 SM",
+      "icon": "☁️",
+      "phenomenon": "Ciel couvert",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF ELLX 270500Z 2706/2812 17008KT 0300 FG BKN001 PROB40 TEMPO 2706/2708 0100 FG VV001 BECMG 2708/2711 5000 BR BKN005 BECMG 2720/2722 30006KT TEMPO 2722/2803 2000 -RADZ BKN003 TEMPO 2803/2809 0500 FG BKN002"
+    },
+    {
+      "icao": "EKVG",
+      "name": "Vagar Airport",
+      "observed_at": "2026-10-27T07:50:00+00:00",
+      "raw": "METAR EKVG 270750Z AUTO 15012G27KT 120V190 8000 OVC013/// 09/07 Q0965 RMK BKN012/// WIND SKEID 14024G38KT 110V180",
+      "score": 42,
+      "summary": "visibilité < 5 SM, rafales ≥ 25 kt",
+      "icon": "💨",
+      "phenomenon": "Vent fort",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF AMD EKVG 270552Z 2706/2715 14015KT 9999 BKN020 TEMPO 2706/2712 14018G28KT 3000 SHRA BKN008 SCT025CB TEMPO 2712/2715 3000 SHRA BKN012 SCT025CB BECMG 2713/2715 21010KT"
     }
   ],
   "weather_coverage": {
@@ -204,7 +204,7 @@
       "date": "2026-10-22",
       "source": "Forum officiel Microsoft Flight Simulator",
       "url": "https://forums.flightsimulator.com/t/blog-weekly-briefing-for-2026-10-22/779510",
-      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Poursuivez votre lecture pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
+      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Lisez la suite pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
       "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
       "new": false
     },
@@ -302,15 +302,15 @@
     "without_official_url": 5,
     "manual_source": 5,
     "unverified": 37,
-    "audited_at": "2026-10-27T07:54:09.549194+00:00"
+    "audited_at": "2026-10-27T07:55:52.855219+00:00"
   },
-  "versions_checked_at": "2026-10-27T07:54:09.549194+00:00",
-  "releases_checked_at": "2026-10-27T07:54:09.549194+00:00",
+  "versions_checked_at": "2026-10-27T07:55:52.855219+00:00",
+  "releases_checked_at": "2026-10-27T07:55:52.855219+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-27T07:54:57.111026+00:00",
+    "checked_at": "2026-10-27T07:56:47.084311+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
