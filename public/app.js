@@ -35,6 +35,10 @@ function renderAirports(){
   const updates=verified.filter(a=>a.version_comparison==='update');
   $('#verified-count').textContent=verified.length;
   $('#updates-count').textContent=updates.length;
+  const airportCodeCounts=new Map();
+  airports.forEach(a=>{const code=String(a.icao||'').trim().toUpperCase();if(code)airportCodeCounts.set(code,(airportCodeCounts.get(code)||0)+1)});
+  const duplicatedAirports=[...airportCodeCounts.values()].filter(count=>count>1).length;
+  const duplicateSummary=$('#duplicates-count');if(duplicateSummary)duplicateSummary.textContent=duplicatedAirports;
   const issues={
     "Version non publiée":airports.filter(a=>a.version_check_state==='no_version').length,
     "Boutique en retard":airports.filter(a=>a.version_check_state==='source_older').length,
