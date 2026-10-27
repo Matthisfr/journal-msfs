@@ -1,14 +1,14 @@
 {
   "edition": "2026-10-27",
-  "last_run": "2026-10-27T17:39:35.903998+00:00",
-  "weather_checked_at": "2026-10-27T17:39:35.903998+00:00",
-  "news_checked_at": "2026-10-27T17:39:35.903998+00:00",
+  "last_run": "2026-10-27T17:46:08.937417+00:00",
+  "weather_checked_at": "2026-10-27T17:46:08.937417+00:00",
+  "news_checked_at": "2026-10-27T17:46:08.937417+00:00",
   "weather": [
     {
       "icao": "PANC",
       "name": "sim-wings Anchorage",
-      "observed_at": "2026-10-27T17:00:00+00:00",
-      "raw": "SPECI PANC 271700Z 06004KT 1/4SM R07R/1600V2800FT FG VV002 00/00 A3049 RMK AO2 T00000000 $",
+      "observed_at": "2026-10-27T17:15:00+00:00",
+      "raw": "SPECI PANC 271715Z VRB03KT 1/2SM R07R/2200VP6000FT FG VV002 00/00 A3049 RMK AO2 T00000000 $",
       "score": 145,
       "summary": "brouillard, visibilité < 1 SM",
       "icon": "🌫️",
@@ -98,8 +98,8 @@
     {
       "icao": "LROP",
       "name": "bma LROP Bucharest 2024 v2-6-0",
-      "observed_at": "2026-10-27T17:00:00+00:00",
-      "raw": "METAR LROP 271700Z 29006KT 5000 -RADZ FEW004 BKN013 OVC018 10/10 Q1017 NOSIG",
+      "observed_at": "2026-10-27T17:30:00+00:00",
+      "raw": "METAR LROP 271730Z 28006KT 8000 -DZ BKN017 OVC020 10/10 Q1017 NOSIG",
       "score": 32,
       "summary": "visibilité < 5 SM, précipitations",
       "icon": "🌧️",
@@ -124,8 +124,8 @@
     {
       "icao": "LPPR",
       "name": "LPPR Porto",
-      "observed_at": "2026-10-27T17:00:00+00:00",
-      "raw": "METAR LPPR 271700Z 31002KT 6000 SCT004 BKN023 17/16 Q1022",
+      "observed_at": "2026-10-27T17:30:00+00:00",
+      "raw": "METAR LPPR 271730Z VRB01KT 6000 FEW004 SCT018 BKN030 16/16 Q1022",
       "score": 20,
       "summary": "visibilité < 5 SM",
       "icon": "☁️",
@@ -302,15 +302,15 @@
     "without_official_url": 20,
     "manual_source": 1,
     "unverified": 50,
-    "audited_at": "2026-10-27T17:39:35.903998+00:00"
+    "audited_at": "2026-10-27T17:46:08.937417+00:00"
   },
-  "versions_checked_at": "2026-10-27T17:39:35.903998+00:00",
-  "releases_checked_at": "2026-10-27T17:39:35.903998+00:00",
+  "versions_checked_at": "2026-10-27T17:46:08.937417+00:00",
+  "releases_checked_at": "2026-10-27T17:46:08.937417+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-27T17:40:44.626747+00:00",
+    "checked_at": "2026-10-27T17:46:57.995455+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
