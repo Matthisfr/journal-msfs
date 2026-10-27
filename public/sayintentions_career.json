@@ -23,7 +23,7 @@
     {
       "id": "IFR-883907560",
       "aircraft": "F-FENX",
-      "when": "2 days ago",
+      "when": "3 days ago",
       "origin": "DTTJ",
       "destination": "LGMK",
       "rules": "IFR",
@@ -41,7 +41,7 @@
     {
       "id": "IFR-883854493",
       "aircraft": "F-FENX",
-      "when": "4 days ago",
+      "when": "5 days ago",
       "origin": "GMMX",
       "destination": "DAAG",
       "rules": "IFR",
@@ -102,7 +102,7 @@
       "duration": "1h 46m"
     }
   ],
-  "flights_checked_at": "2026-10-27T08:13:23.236552+00:00",
-  "verified_at": "2026-10-27T08:13:23.236552+00:00",
-  "checked_at": "2026-10-27T08:13:23.236552+00:00"
+  "flights_checked_at": "2026-10-27T10:56:52.051000+00:00",
+  "verified_at": "2026-10-27T10:56:52.051000+00:00",
+  "checked_at": "2026-10-27T10:56:52.051000+00:00"
 }
