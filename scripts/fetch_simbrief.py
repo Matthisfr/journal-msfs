@@ -10,6 +10,27 @@ OUT = ROOT / "public" / "simbrief_last.json"
 URL = "https://www.simbrief.com/api/xml.fetcher.php?" + urllib.parse.urlencode({"username": "Matthis", "json": "v2"})
 
 
+def route_points(data):
+    """Ordered OFP navlog coordinates; omit unlocated fixes, never invent them."""
+    navlog = data.get("navlog") or {}
+    fixes = navlog.get("fix") or []
+    if isinstance(fixes, dict):
+        fixes = [fixes]
+    points = []
+    for fix in fixes:
+        try:
+            lat = float(fix.get("pos_lat"))
+            lon = float(fix.get("pos_long"))
+            if not (-90 <= lat <= 90 and -180 <= lon <= 180):
+                continue
+            point = {"lat": lat, "lon": lon, "name": str(fix.get("ident") or "")}
+            if not points or (lat, lon) != (points[-1]["lat"], points[-1]["lon"]):
+                points.append(point)
+        except (TypeError, ValueError, AttributeError):
+            continue
+    return points
+
+
 def run():
     try:
         req = urllib.request.Request(URL, headers={"User-Agent": "JournalMSFS/1.0", "Accept": "application/json"})
@@ -28,6 +49,7 @@ def run():
             "route": general.get("route"), "altitude": general.get("initial_altitude"),
             "enroute_time": times.get("est_time_enroute"),
             "generated_at": (data.get("params") or {}).get("time_generated"),
+            "route_points": route_points(data),
         }
         OUT.write_text(json.dumps(record, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print("SimBrief OFP captured:", record["origin"]["icao"], record["destination"]["icao"])
