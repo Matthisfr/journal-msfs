@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-27",
-  "last_run": "2026-10-27T07:55:52.855219+00:00",
-  "weather_checked_at": "2026-10-27T07:55:52.855219+00:00",
-  "news_checked_at": "2026-10-27T07:55:52.855219+00:00",
+  "last_run": "2026-10-27T08:09:12.178513+00:00",
+  "weather_checked_at": "2026-10-27T08:09:12.178513+00:00",
+  "news_checked_at": "2026-10-27T08:09:12.178513+00:00",
   "weather": [
     {
       "icao": "EYVI",
@@ -31,23 +31,10 @@
       "taf_raw": "TAF KDEN 270750Z 2708/2812 VRB06KT 1/4SM FG OVC002 TEMPO 2708/2710 VV001 FM271000 29006KT P6SM VCFG FEW002 SCT010 TEMPO 2710/2714 1/4SM FG VV002 FM271400 22005KT P6SM FEW005 SCT250 TEMPO 2714/2715 4SM BR BKN005 FM271700 VRB06KT P6SM FEW250 FM271900 09007KT P6SM SCT200 FM272100 08011KT P6SM SKC FM280100 11009KT P6SM SCT200 FM280400 22007KT P6SM FEW020 SCT200"
     },
     {
-      "icao": "EINN",
-      "name": "EINN Shannon Airport",
-      "observed_at": "2026-10-27T07:30:00+00:00",
-      "raw": "METAR EINN 270730Z 24028G38KT 5000 -SHRAGS FEW018CB SCT025 BKN050 09/06 Q1000 BECMG 9999 NSW",
-      "score": 77,
-      "summary": "visibilité < 5 SM, rafales ≥ 35 kt, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EINN 270500Z 2706/2806 23015G25KT 9999 FEW018 BKN030 PROB40 TEMPO 2706/2713 25020G35KT 4000 SHRA SCT018CB PROB30 TEMPO 2722/2803 23020G35KT -SHRA BKN014"
-    },
-    {
       "icao": "KCRW",
       "name": "KCRW West Virginia International Yeager Airport",
-      "observed_at": "2026-10-27T06:54:00+00:00",
-      "raw": "METAR KCRW 270654Z 00000KT 10SM FEW070 07/07 A3030 RMK AO2 SLP256 VLY FG T00720072",
+      "observed_at": "2026-10-27T07:54:00+00:00",
+      "raw": "METAR KCRW 270754Z 00000KT 10SM FEW070 06/06 A3029 RMK AO2 SLP255 VLY FG T00610061",
       "score": 65,
       "summary": "brouillard",
       "icon": "🌫️",
@@ -72,8 +59,8 @@
     {
       "icao": "LFRN",
       "name": "LFRN Rennes Bretagne Airport",
-      "observed_at": "2026-10-27T07:30:00+00:00",
-      "raw": "METAR LFRN 270730Z AUTO 19011KT 4000 -DZ BR OVC008 16/15 Q1012 TEMPO RA BECMG 27010KT BKN030",
+      "observed_at": "2026-10-27T08:00:00+00:00",
+      "raw": "METAR LFRN 270800Z AUTO 20010KT 3500 -DZ BR OVC006 16/15 Q1012 TEMPO RA BECMG 27010KT BKN030",
       "score": 57,
       "summary": "visibilité < 3 SM, précipitations",
       "icon": "🌧️",
@@ -133,6 +120,19 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF AMD EKVG 270552Z 2706/2715 14015KT 9999 BKN020 TEMPO 2706/2712 14018G28KT 3000 SHRA BKN008 SCT025CB TEMPO 2712/2715 3000 SHRA BKN012 SCT025CB BECMG 2713/2715 21010KT"
+    },
+    {
+      "icao": "EFRO",
+      "name": "EFRO Rovaniemi Airport",
+      "observed_at": "2026-10-27T07:50:00+00:00",
+      "raw": "METAR EFRO 270750Z AUTO 20010KT 5000 -SHRA OVC004 08/07 Q1001 REDZ",
+      "score": 32,
+      "summary": "visibilité < 5 SM, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF AMD EFRO 270715Z 2707/2806 18010KT 8000 BKN003 TEMPO 2707/2710 1500 DZRA BKN001 BECMG 2710/2711 BKN005 TEMPO 2713/2717 4500 -DZ BECMG 2720/2722 3000 BR OVC002 TEMPO 2722/2806 0400 DZ VV001"
     }
   ],
   "weather_coverage": {
@@ -204,7 +204,7 @@
       "date": "2026-10-22",
       "source": "Forum officiel Microsoft Flight Simulator",
       "url": "https://forums.flightsimulator.com/t/blog-weekly-briefing-for-2026-10-22/779510",
-      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Lisez la suite pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
+      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Poursuivez votre lecture pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
       "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
       "new": false
     },
@@ -302,15 +302,15 @@
     "without_official_url": 5,
     "manual_source": 5,
     "unverified": 37,
-    "audited_at": "2026-10-27T07:55:52.855219+00:00"
+    "audited_at": "2026-10-27T08:09:12.178513+00:00"
   },
-  "versions_checked_at": "2026-10-27T07:55:52.855219+00:00",
-  "releases_checked_at": "2026-10-27T07:55:52.855219+00:00",
+  "versions_checked_at": "2026-10-27T08:09:12.178513+00:00",
+  "releases_checked_at": "2026-10-27T08:09:12.178513+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-27T07:56:47.084311+00:00",
+    "checked_at": "2026-10-27T08:09:52.596629+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
