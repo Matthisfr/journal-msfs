@@ -23,6 +23,23 @@ def norm(value):
 def colmap(row):
  labels=[norm(x) for x in row]
  return {key:next((i for i,label in enumerate(labels) if label in names),None) for key,names in ALIASES.items()}
+def is_sub_scene(*values):
+ return any(re.search(r"\\(\\s*sub\\b",str(v or ""),re.I) for v in values)
+
+def scene_type(code,name,folder):
+ text=norm(" ".join((str(name or ""),str(folder or ""))))
+ return "heliport" if re.search(r"\\b(heliport|heliports|helipad|helipads|heliportuaire|helisurface|helistop)\\b",text) or str(code).upper()=="58CA" else "airport"
+
+def section_kind(value):
+ label=norm(value)
+ if label in ("aeroport","aeroports","airport","airports","airfields","aerodromes","aerodrome"):
+  return "airports"
+ if label in ("heliport","heliports","helipad","helipads","helistop","helisurfaces"):
+  return "airports"
+ if label in ("scenery","sceneries","decors","decor","cities","city","villes","ville","landmarks","other","autres","divers"):
+  return "other"
+ return None
+
 def parse_addons_linker(sheet):
  records=[]
  region=""
@@ -67,7 +84,7 @@ def parse(book):
    folder=get("folder")
    name=get("name")
    version=get("installed")
-   if not code and not folder and not name: continue
+   if is_sub_scene(code,name,folder): continue\n   if not code and not folder and not name: continue
    if not code or not version or not (folder or name):
     raise ValueError(f"{sheet.title}: ligne incomplète : ICAO, scène/dossier et version requis")
    original=code
@@ -91,7 +108,7 @@ def merge(records,old):
    for field in ("version_checked_at","version_comparison","version_check_state","server_version"):
     entry.pop(field,None)
    entry["status"]="UNK-V"
-  entry.setdefault("status","UNK-V")
+  entry["scene_type"]=rec.get("scene_type","airport")\n  entry.setdefault("status","UNK-V")
   entry.setdefault("country",entry.get("region",""))
   output.append(entry)
  return output
