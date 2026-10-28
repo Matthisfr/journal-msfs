@@ -10,7 +10,7 @@ from urllib.request import Request,urlopen
 
 SOURCES=[
     {"id":"gsx_fselite_news","url":"https://fselite.net/developer/fsdreamteam/","host":"fselite.net","category":"GSX Pro","topic":"GSX","source":"FSElite — FSDreamTeam","keywords":("gsx","ground services","fsdreamteam")},
-    {"id":"aig_fselite_news","url":"https://fselite.net/developer/alpha-india-group/","host":"fselite.net","category":"Trafic AI","topic":"AIG","source":"FSElite — Alpha India Group","keywords":("aig","alpha india group","alphaindiagroup","ai manager","traffic controller","traffic models","ai traffic","liveries")},
+    {"id":"msfs_fselite_news","url":"https://fselite.net/simulator/msfs/","host":"fselite.net","category":"MSFS 2024","topic":"MSFS","source":"FSElite — MSFS","keywords":("msfs 2024","microsoft flight simulator 2024","fenix","sayintentions","gsx","fsdreamteam","mobiflight","winwing","winctrl","navigraph","simbrief","chaseplane","flightcontrolreplay","fshud","inibuilds","parallel 42","air manager","fsipanel","aig","alpha india group","fslivetraffic liveries","fsltl","santiluib3")},
 ]
 
 class Page(HTMLParser):
