@@ -1,14 +1,14 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T22:51:04.328487+00:00",
-  "weather_checked_at": "2026-10-28T22:51:04.328487+00:00",
-  "news_checked_at": "2026-10-28T22:51:04.328487+00:00",
+  "last_run": "2026-10-28T22:55:37.773355+00:00",
+  "weather_checked_at": "2026-10-28T22:55:37.773355+00:00",
+  "news_checked_at": "2026-10-28T22:55:37.773355+00:00",
   "weather": [
     {
       "icao": "EDDB",
       "name": "Aerosoft Airport Berlin Brandenburg",
-      "observed_at": "2026-10-28T22:20:00+00:00",
-      "raw": "METAR EDDB 282220Z AUTO 25004KT 0450 0350 R24R/0600N R24L/0600N FG NCD 05/05 Q1028 TEMPO 0300 FG",
+      "observed_at": "2026-10-28T22:50:00+00:00",
+      "raw": "METAR EDDB 282250Z AUTO 24004KT 0550 0450 R24R/0900D R24L/0700N FG NCD 05/05 Q1028 TEMPO 0300 FG BKN001",
       "score": 145,
       "summary": "brouillard, visibilité < 1 SM",
       "icon": "🌫️",
@@ -70,23 +70,10 @@
       "taf_raw": "TAF AMD LFRN 282211Z 2822/2918 VRB03KT CAVOK TEMPO 2822/2907 3000 BR PROB40 TEMPO 2822/2906 0500 FG VV/// BECMG 2910/2912 10010KT BECMG 2915/2918 VRB05KT"
     },
     {
-      "icao": "EDDM",
-      "name": "sim-wings Munich",
-      "observed_at": "2026-10-28T22:20:00+00:00",
-      "raw": "METAR EDDM 282220Z AUTO 26003KT 1200 0450 R26R/P2000N R26L/P2000N BCFG SCT023 BKN035 BKN045 06/06 Q1029 TEMPO 3000 BCFG",
-      "score": 80,
-      "summary": "visibilité < 1 SM",
-      "icon": "☁️",
-      "phenomenon": "Ciel couvert",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF AMD EDDM 282100Z 2821/2924 28004KT 1200 BCFG NSC TEMPO 2822/2902 9000 BECMG 2902/2905 0400 FG VV002 BECMG 2907/2910 06005KT 9999 BECMG 2910/2912 OVC005 BECMG 2912/2914 SCT015 BECMG 2918/2922 1200 BCFG BECMG 2922/2924 0600 FG VV002"
-    },
-    {
       "icao": "PANC",
       "name": "sim-wings Anchorage",
-      "observed_at": "2026-10-28T22:42:00+00:00",
-      "raw": "SPECI PANC 282242Z 04006KT 3/4SM R07R/1400V2200FT BR VV002 00/00 A3026 RMK AO2 T00000000",
+      "observed_at": "2026-10-28T22:53:00+00:00",
+      "raw": "METAR PANC 282253Z 05005KT 3/4SM R07R/1400V3000FT BR VV002 00/00 A3026 RMK AO2 SLP248 T00000000",
       "score": 80,
       "summary": "visibilité < 1 SM",
       "icon": "☁️",
@@ -96,43 +83,56 @@
       "taf_raw": "TAF PANC 282226Z 2822/2924 VRB02KT 4SM BR VCFG SCT003 TEMPO 2822/2824 1/2SM FZFG BKN002 FM290000 04004KT P6SM FEW045 SCT100 WS020/15030KT FM291000 01008KT P6SM -RA SCT020 OVC035 WS020/15030KT FM291400 02007KT 6SM -RA BR BKN020 WS020/15030KT FM292000 VRB05KT P6SM VCSH SCT020 OVC040 WS020/15030KT"
     },
     {
-      "icao": "KFSD",
-      "name": "KFSD Sioux falls Regional Airport",
-      "observed_at": "2026-10-28T22:17:00+00:00",
-      "raw": "SPECI KFSD 282217Z 30006KT 3SM -RA BR SCT008 BKN017 OVC021 15/14 A2994 RMK AO2 SFC VIS 4 DZE05RAB05 P0000 T01500139 $",
+      "icao": "CYYC",
+      "name": "CYYC Calgary International Airport",
+      "observed_at": "2026-10-28T22:48:00+00:00",
+      "raw": "SPECI CYYC 282248Z CCA 35010KT 5SM -SN BR SCT015 OVC027 M02/M05 A3003 RMK SF3NS5 SLP220",
+      "score": 75,
+      "summary": "neige",
+      "icon": "🌨️",
+      "phenomenon": "Neige",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF CYYC 282040Z 2821/2918 36012KT 6SM -SN SCT012 OVC060 TEMPO 2821/2902 5SM -SN BR SCT008 BKN012 PROB30 2821/2902 2 1/2SM -SN VV010 FM290200 02006KT P6SM SCT012 OVC030 TEMPO 2902/2908 4SM -SN BR OVC012 FM290800 VRB03KT 1 1/2SM -SN BR OVC008 TEMPO 2908/2918 6SM -SN SCT008 OVC012 PROB30 2910/2916 3/4SM -SN BR OVC004 RMK NXT FCST BY 290000Z"
+    },
+    {
+      "icao": "EDDM",
+      "name": "sim-wings Munich",
+      "observed_at": "2026-10-28T22:50:00+00:00",
+      "raw": "METAR EDDM 282250Z AUTO 25004KT 4400 0650 R26R/P2000N R26L/P2000N BCFG FEW026 BKN039 04/03 Q1029 TEMPO 6000",
+      "score": 45,
+      "summary": "visibilité < 3 SM",
+      "icon": "☁️",
+      "phenomenon": "Ciel couvert",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF AMD EDDM 282100Z 2821/2924 28004KT 1200 BCFG NSC TEMPO 2822/2902 9000 BECMG 2902/2905 0400 FG VV002 BECMG 2907/2910 06005KT 9999 BECMG 2910/2912 OVC005 BECMG 2912/2914 SCT015 BECMG 2918/2922 1200 BCFG BECMG 2922/2924 0600 FG VV002"
+    },
+    {
+      "icao": "LIML",
+      "name": "LIML Milan Linate Airport",
+      "observed_at": "2026-10-28T22:50:00+00:00",
+      "raw": "METAR LIML 282250Z VRB01KT 3000 R35/0450D BCFG NSC 09/09 Q1022 BECMG 1200 BCFG",
+      "score": 45,
+      "summary": "visibilité < 3 SM",
+      "icon": "☀️",
+      "phenomenon": "Ciel dégagé",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF LIML 281700Z 2818/2918 VRB04KT 8000 FEW040 BECMG 2900/2902 3000 BR TEMPO 2904/2908 1200 BCFG BKN014 BECMG 2908/2910 9999"
+    },
+    {
+      "icao": "ENGM",
+      "name": "Aerosoft Oslo Airport",
+      "observed_at": "2026-10-28T22:50:00+00:00",
+      "raw": "METAR ENGM 282250Z 17006KT 8000 -DZ BKN004 09/07 Q1016",
       "score": 32,
       "summary": "visibilité < 5 SM, précipitations",
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KFSD 281721Z 2817/2918 19008KT P6SM OVC015 TEMPO 2818/2821 4SM -SHRA OVC008 FM282100 25008KT P6SM BKN008 TEMPO 2821/2823 4SM -SHRA OVC004 FM282300 32008KT P6SM BKN045 FM290500 VRB03KT P6SM SCT250"
-    },
-    {
-      "icao": "LROP",
-      "name": "bma LROP Bucharest 2024 v2-6-0",
-      "observed_at": "2026-10-28T22:30:00+00:00",
-      "raw": "METAR LROP 282230Z 28005KT 6000 FEW003 OVC017 12/12 Q1019 TEMPO 3000 -RADZ BKN003 OVC015",
-      "score": 32,
-      "summary": "visibilité < 5 SM, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LROP 281700Z 2818/2918 VRB04KT 9999 SCT010 OVC025 BECMG 2818/2820 5000 -RA BR BKN010 OVC025 BECMG 2820/2822 3000 -RA BR BKN005 OVC010 TEMPO 2900/2906 1500 -RADZ BR OVC002 BECMG 2909/2911 5000 BKN010 OVC020 TEMPO 2911/2918 9999 NSW SCT015 OVC030"
-    },
-    {
-      "icao": "KICT",
-      "name": "KICT Dwight D. Eisenhower Nat Airport",
-      "observed_at": "2026-10-28T21:53:00+00:00",
-      "raw": "METAR KICT 282153Z 19019G29KT 10SM FEW049 FEW070 27/16 A2997 RMK AO2 PK WND 20032/2108 SLP136 T02670156",
-      "score": 22,
-      "summary": "rafales ≥ 25 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KICT 281720Z 2818/2918 19018G28KT P6SM SKC FM290000 18010KT P6SM FEW040"
+      "taf_raw": "TAF ENGM 281700Z 2818/2918 19010KT 9999 BKN025 BECMG 2819/2821 BKN012 BECMG 2900/2902 FEW002 PROB40 2903/2909 1200 BR OVC002 BECMG 2912/2914 35005KT"
     }
   ],
   "weather_coverage": {
@@ -556,15 +556,15 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 57,
-    "audited_at": "2026-10-28T22:51:04.328487+00:00"
+    "audited_at": "2026-10-28T22:55:37.773355+00:00"
   },
-  "versions_checked_at": "2026-10-28T22:51:04.328487+00:00",
-  "releases_checked_at": "2026-10-28T22:51:04.328487+00:00",
+  "versions_checked_at": "2026-10-28T22:55:37.773355+00:00",
+  "releases_checked_at": "2026-10-28T22:55:37.773355+00:00",
   "software_coverage": {
     "total": 23,
     "verified": 5,
     "changed": 0,
-    "checked_at": "2026-10-28T22:52:17.695932+00:00",
+    "checked_at": "2026-10-28T22:56:43.242269+00:00",
     "unverified": 18
   },
   "airac_cycle": "2610"
