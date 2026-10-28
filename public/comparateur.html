@@ -5,7 +5,7 @@ const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'
 const source=s=>s.url?'<a href="'+safe(s.url)+'" target="_blank" rel="noopener noreferrer">Voir photos, descriptif et avis officiels ↗</a>':'<span>Fiche produit non référencée</span>';
 function populate(){
  select.replaceChildren();
- records.forEach(x=>select.add(new Option(x.code+' — '+x.name+' ('+x.scenes.length+' scènes)',x.code)));
+ records.sort((a,b)=>a.code.localeCompare(b.code,'en')).forEach(x=>select.add(new Option(x.code+' — '+x.name+' ('+x.scenes.length+' scènes)',x.code)));
  const q=new URLSearchParams(location.search).get('icao');
  if(records.some(x=>x.code===q))select.value=q;
  render();
