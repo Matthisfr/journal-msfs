@@ -42,7 +42,9 @@ def render_rows(airports):
         code = f'<span class="code">{h(icao)}</span>'
         if original != icao:
             code += f'<small>Source : {h(original)}</small>'
-        name = f'<b>{h(a.get("name") or "")}</b><small>{h(a.get("note") or a.get("folder") or "")}</small>'
+        description = str(a.get("description") or "").strip()
+        info = (f' <span class="airport-description-info" tabindex="0" title="{h(description)}" aria-label="Description : {h(description)}">ⓘ</span>' if description else "")
+        name = f'<b>{h(a.get("name") or "")}</b>{info}<small>{h(a.get("note") or a.get("folder") or "")}</small>'
         installed = h(a.get("installed") or "Non renseignée")
         url = str(a.get("source_url") or "")
         store = str(a.get("source_store") or "Éditeur")
