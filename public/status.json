@@ -1,27 +1,14 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T12:40:29.167278+00:00",
-  "weather_checked_at": "2026-10-28T12:40:29.167278+00:00",
-  "news_checked_at": "2026-10-28T12:40:29.167278+00:00",
+  "last_run": "2026-10-28T13:50:49.875578+00:00",
+  "weather_checked_at": "2026-10-28T13:50:49.875578+00:00",
+  "news_checked_at": "2026-10-28T13:50:49.875578+00:00",
   "weather": [
-    {
-      "icao": "LGRP",
-      "name": "LGRP Rhodes International Airport \"Diagoras\"",
-      "observed_at": "2026-10-28T12:20:00+00:00",
-      "raw": "METAR LGRP 281220Z VRB03KT 4000 +TSRA SCT010 FEW016CB BKN018 17/16 Q1010 NOSIG",
-      "score": 155,
-      "summary": "orage, visibilité < 3 SM",
-      "icon": "⛈️",
-      "phenomenon": "Orage",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LGRP 281100Z 2812/2912 13006KT 9999 SCT018 SCT050 PROB30 TEMPO 2812/2912 4000 RA FEW018TCU BKN020 PROB30 TEMPO 2812/2912 3000 TSRA FEW018CB BKN018 BKN050"
-    },
     {
       "icao": "PANC",
       "name": "sim-wings Anchorage",
-      "observed_at": "2026-10-28T11:53:00+00:00",
-      "raw": "METAR PANC 281153Z 13003KT 1/4SM R07R/1000V1200FT FZFG VV001 M01/M01 A3041 RMK AO2 SLP301 I1002 I6004 T10061006 10011 21028 58005 $",
+      "observed_at": "2026-10-28T13:22:00+00:00",
+      "raw": "SPECI PANC 281322Z 12004KT 1/4SM R07R/1800V2600FT FZFG VV002 M02/M02 A3039 RMK AO2 I1001 T10171017 $",
       "score": 145,
       "summary": "brouillard, visibilité < 1 SM",
       "icon": "🌫️",
@@ -31,23 +18,23 @@
       "taf_raw": "TAF PANC 281142Z 2812/2918 06005KT 1/4SM FZFG VV002 FM281800 03004KT 3SM BR SCT002 BKN020 TEMPO 2818/2821 1SM BR BKN002 FM282100 VRB03KT P6SM VCFG SCT003 FM290000 04004KT P6SM SCT100 WS020/15030KT FM291000 01008KT P6SM -RA SCT020 OVC035 WS020/15030KT FM291400 02007KT 6SM -RA BR BKN020 WS020/15030KT"
     },
     {
-      "icao": "CYEG",
-      "name": "CYEG - Edmonton Airport",
-      "observed_at": "2026-10-28T12:17:00+00:00",
-      "raw": "SPECI CYEG 281217Z 32013G19KT 3SM -SN DRSN FEW009 BKN010 OVC015 M02/M03 A2992 RMK SF2ST5SC1 CIG RAG MOON DIMLY VISBL SLP169",
-      "score": 107,
-      "summary": "neige, visibilité < 5 SM, précipitations",
-      "icon": "🌨️",
-      "phenomenon": "Neige",
-      "level": "Dégradé",
+      "icao": "LGRP",
+      "name": "LGRP Rhodes International Airport \"Diagoras\"",
+      "observed_at": "2026-10-28T13:20:00+00:00",
+      "raw": "METAR LGRP 281320Z 11005KT 070V140 8000 -TSRA SCT010 FEW016CB BKN018 17/16 Q1009 NOSIG",
+      "score": 130,
+      "summary": "orage, visibilité < 5 SM",
+      "icon": "⛈️",
+      "phenomenon": "Orage",
+      "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF CYEG 281140Z 2812/2912 32012G22KT P6SM -SN FEW008 SCT015 OVC030 TEMPO 2812/2902 1SM -SN BKN006 OVC012 PROB40 2812/2818 1/2SM SHSN OVC004 FM290200 32010KT 4SM -SN OVC006 TEMPO 2902/2912 1SM -SN OVC003 RMK NXT FCST BY 281500Z"
+      "taf_raw": "TAF LGRP 281100Z 2812/2912 13006KT 9999 SCT018 SCT050 PROB30 TEMPO 2812/2912 4000 RA FEW018TCU BKN020 PROB30 TEMPO 2812/2912 3000 TSRA FEW018CB BKN018 BKN050"
     },
     {
       "icao": "CYYC",
       "name": "CYYC Calgary International Airport",
-      "observed_at": "2026-10-28T12:27:00+00:00",
-      "raw": "SPECI CYYC 281227Z 34006KT 3SM -SN FEW009 OVC013 M00/M01 A2988 RMK SF1SC7 SLP162",
+      "observed_at": "2026-10-28T13:20:00+00:00",
+      "raw": "SPECI CYYC 281320Z 35004KT 3SM -SN FEW004 OVC008 M00/M01 A2989 RMK SF1SC8 CIG VRB 005-010 SLP168",
       "score": 95,
       "summary": "neige, visibilité < 5 SM",
       "icon": "🌨️",
@@ -55,6 +42,32 @@
       "level": "Dégradé",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF CYYC 281140Z 2812/2912 35007KT P6SM SCT007 OVC012 TEMPO 2812/2818 2SM -SHSN BKN006 OVC010 FM281800 36012KT P6SM BKN030 BKN050 TEMPO 2818/2823 2SM -SHSN OVC020 FM282300 02008KT P6SM SCT030 BKN050 TEMPO 2823/2912 5SM -SN BKN012 OVC030 RMK NXT FCST BY 281500Z"
+    },
+    {
+      "icao": "KFSD",
+      "name": "KFSD Sioux falls Regional Airport",
+      "observed_at": "2026-10-28T13:14:00+00:00",
+      "raw": "SPECI KFSD 281314Z 16008KT 3/4SM R03/P6000FT BR OVC002 12/12 A2994 RMK AO2 T01220117",
+      "score": 80,
+      "summary": "visibilité < 1 SM",
+      "icon": "☁️",
+      "phenomenon": "Ciel couvert",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KFSD 281134Z 2812/2912 16006KT 5SM BR BKN005 TEMPO 2812/2814 1SM BR BKN004 FM281500 17010G17KT P6SM SCT007 OVC011 FM281800 21011G19KT P6SM BKN015 PROB30 2818/2822 4SM -SHRA OVC008 FM282200 25008KT P6SM BKN022 FM282300 30008KT P6SM SCT025"
+    },
+    {
+      "icao": "CYEG",
+      "name": "CYEG - Edmonton Airport",
+      "observed_at": "2026-10-28T13:43:00+00:00",
+      "raw": "SPECI CYEG 281343Z 33013G18KT 8SM -SN DRSN FEW009 BKN013 OVC034 M02/M03 A2995 RMK SF1SC6SC1 SLP178",
+      "score": 75,
+      "summary": "neige",
+      "icon": "🌨️",
+      "phenomenon": "Neige",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF CYEG 281140Z 2812/2912 32012G22KT P6SM -SN FEW008 SCT015 OVC030 TEMPO 2812/2902 1SM -SN BKN006 OVC012 PROB40 2812/2818 1/2SM SHSN OVC004 FM290200 32010KT 4SM -SN OVC006 TEMPO 2902/2912 1SM -SN OVC003 RMK NXT FCST BY 281500Z"
     },
     {
       "icao": "LGSK",
@@ -70,69 +83,56 @@
       "taf_raw": "TAF LGSK 281100Z 2812/2821 04015G25KT 9999 FEW008 BKN018 BKN060 TEMPO 2812/2821 5000 RA SCT008 BKN020 BKN050 PROB40 TEMPO 2812/2821 3000 TSRA SCT008 FEW018CB BKN020 BKN050"
     },
     {
-      "icao": "LROP",
-      "name": "bma LROP Bucharest 2024 v2-6-0",
-      "observed_at": "2026-10-28T12:30:00+00:00",
-      "raw": "METAR LROP 281230Z 01003KT 3800 -DZ BR SCT004 OVC008 13/12 Q1018 NOSIG",
+      "icao": "LOWS",
+      "name": "LOWS Salzburg Airport",
+      "observed_at": "2026-10-28T13:20:00+00:00",
+      "raw": "METAR LOWS 281320Z 33008KT 3200 -RADZ BR FEW004 BKN006 12/11 Q1025 TEMPO 2500 SHRA BKN012",
       "score": 57,
       "summary": "visibilité < 3 SM, précipitations",
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "Dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LROP 281100Z 2812/2912 VRB04KT 9999 SCT015 OVC030 TEMPO 2812/2817 04010KT 5000 -RA BR BKN010 OVC030 BECMG 2817/2819 5000 -RA BR BKN010 OVC030 BECMG 2822/2824 3000 -RA BR BKN005 OVC025 TEMPO 2900/2906 1500 -RADZ BR OVC002 BECMG 2909/2911 5000 BKN010 OVC020"
+      "taf_raw": "TAF AMD LOWS 281347Z 2813/2912 32008KT 9999 -RA BKN030 TX14/2813Z TN06/2906Z TEMPO 2813/2819 2000 SHRA BKN006 BECMG 2819/2821 VRB04KT NSW TEMPO 2821/2909 2000 BR BKN008"
     },
     {
-      "icao": "EFRO",
-      "name": "EFRO Rovaniemi Airport",
-      "observed_at": "2026-10-28T12:20:00+00:00",
-      "raw": "METAR EFRO 281220Z AUTO 22018G29KT 6000 -SHRA OVC003 09/08 Q1008",
-      "score": 54,
-      "summary": "visibilité < 5 SM, rafales ≥ 25 kt, précipitations",
+      "icao": "LROP",
+      "name": "bma LROP Bucharest 2024 v2-6-0",
+      "observed_at": "2026-10-28T13:30:00+00:00",
+      "raw": "METAR LROP 281330Z 02003KT 350V050 2500 -DZ BR FEW003 SCT005 OVC008 12/12 Q1018 TEMPO BKN003 OVC010",
+      "score": 57,
+      "summary": "visibilité < 3 SM, précipitations",
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "Dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EFRO 281136Z 2812/2912 20015KT 9999 OVC005 TEMPO 2812/2814 21015G25KT 1500 -RA OVC004 TEMPO 2814/2818 1500 BR TEMPO 2906/2909 BKN010"
+      "taf_raw": "TAF AMD LROP 281336Z 2813/2912 VRB04KT 5000 -RA BR BKN010 OVC025 TEMPO 2813/2817 1500 -RADZ BR BKN002 OVC010 BECMG 2817/2819 3000 -RA BR BKN005 OVC010 TEMPO 2900/2906 1500 -RADZ BR OVC002 BECMG 2909/2911 5000 BKN010 OVC020"
     },
     {
-      "icao": "KFSD",
-      "name": "KFSD Sioux falls Regional Airport",
-      "observed_at": "2026-10-28T11:56:00+00:00",
-      "raw": "METAR KFSD 281156Z 14006KT 1 1/2SM BR OVC003 13/12 A2995 RMK AO2 SFC VIS 1 3/4 SLP146 T01280122 10128 20117 57011",
+      "icao": "EKVG",
+      "name": "Vagar Airport",
+      "observed_at": "2026-10-28T13:50:00+00:00",
+      "raw": "METAR EKVG 281350Z AUTO 27023G39KT 9999 BKN030/// 09/03 Q0999 RMK BKN033/// WIND SKEID 28037G52KT",
+      "score": 45,
+      "summary": "rafales ≥ 35 kt",
+      "icon": "💨",
+      "phenomenon": "Vent fort",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EKVG 281127Z 2812/2821 26025G48KT 9999 BKN020 BECMG 2812/2813 26025G40KT BECMG 2818/2821 26015G30KT"
+    },
+    {
+      "icao": "KCHS",
+      "name": "KCHS Charleston International Airport",
+      "observed_at": "2026-10-28T13:46:00+00:00",
+      "raw": "SPECI KCHS 281346Z 02007KT 1SM R15/P6000FT BR OVC003 15/14 A3027 RMK AO2 TWR VIS 3 T01500144",
       "score": 45,
       "summary": "visibilité < 3 SM",
       "icon": "☁️",
       "phenomenon": "Ciel couvert",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KFSD 281134Z 2812/2912 16006KT 5SM BR BKN005 TEMPO 2812/2814 1SM BR BKN004 FM281500 17010G17KT P6SM SCT007 OVC011 FM281800 21011G19KT P6SM BKN015 PROB30 2818/2822 4SM -SHRA OVC008 FM282200 25008KT P6SM BKN022 FM282300 30008KT P6SM SCT025"
-    },
-    {
-      "icao": "EDDB",
-      "name": "Aerosoft Airport Berlin Brandenburg",
-      "observed_at": "2026-10-28T12:20:00+00:00",
-      "raw": "METAR EDDB 281220Z AUTO 31007KT 8000 3700 BR OVC010 12/10 Q1024 TEMPO 4000 -DZ BKN009",
-      "score": 32,
-      "summary": "visibilité < 5 SM, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EDDB 281100Z 2812/2912 30008KT 9999 BKN008 BECMG 2812/2815 SCT015 BECMG 2815/2817 VRB03KT TEMPO 2821/2907 1400 BCFG PROB40 TEMPO 2823/2907 0600 FG BKN001 BECMG 2907/2910 22005KT BECMG 2910/2912 BKN012 TEMPO 2910/2912 4000 -DZ BR BKN008"
-    },
-    {
-      "icao": "SLLP",
-      "name": "SLLP El Alto International Airport",
-      "observed_at": "2026-10-28T12:00:00+00:00",
-      "raw": "METAR SLLP 281200Z VRB02KT 8000 -RA FEW002 SCT010 BKN070 03/02 Q1039 BECMG NSW",
-      "score": 32,
-      "summary": "visibilité < 5 SM, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF SLLP 281000Z 2812/2912 VRB02KT 9999 FEW006 BKN010 BKN070 TX12/2819Z TN00/2910Z BECMG 2813/2815 32010KT BKN015 FEW017CB BKN070 TEMPO 2817/2821 06010KT 5000 TSRA BECMG 2900/2902 VRB02KT SCT013"
+      "taf_raw": "TAF KCHS 281241Z 2813/2912 03008KT P6SM BKN006 FM281400 03008KT P6SM SCT008 BKN250 FM281500 04011G20KT P6SM SCT050 BKN250 FM282000 06012KT P6SM BKN250 FM290300 04006KT P6SM BKN050 BKN250 FM290900 03006KT P6SM BKN030"
     }
   ],
   "weather_coverage": {
@@ -211,12 +211,12 @@
     },
     {
       "id": "779510",
-      "title": "[Blog] Briefing hebdomadaire du 2026-10-22",
+      "title": "[Blog] Briefing hebdomadaire du 22/10/2026",
       "category": "MSFS officiel",
       "date": "2026-10-22",
       "source": "Forum officiel Microsoft Flight Simulator",
       "url": "https://forums.flightsimulator.com/t/blog-weekly-briefing-for-2026-10-22/779510",
-      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Poursuivez votre lecture pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
+      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Lisez la suite pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
       "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
       "new": false
     },
@@ -314,15 +314,15 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 56,
-    "audited_at": "2026-10-28T12:40:29.167278+00:00"
+    "audited_at": "2026-10-28T13:50:49.875578+00:00"
   },
-  "versions_checked_at": "2026-10-28T12:40:29.167278+00:00",
-  "releases_checked_at": "2026-10-28T12:40:29.167278+00:00",
+  "versions_checked_at": "2026-10-28T13:50:49.875578+00:00",
+  "releases_checked_at": "2026-10-28T13:50:49.875578+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-28T12:41:42.563360+00:00",
+    "checked_at": "2026-10-28T13:51:29.389091+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
