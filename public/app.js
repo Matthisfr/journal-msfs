@@ -278,45 +278,28 @@ async function renderMap(){
      shops.map(([label,url])=>'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(label)+' ↗</a>').join('')+'</div>';
    L.popup({maxWidth:300}).setLatLng(position).setContent(html).openOn(airportMap);
   };
+  let worldAirportIndexPromise=null;
   const searchPopupForPoint=async latlng=>{
    const point=airportMap.latLngToContainerPoint(latlng);
    const nearest=airportMapMarkers.map(item=>({item,distance:point.distanceTo(airportMap.latLngToContainerPoint(item.marker.getLatLng()))})).sort((a,b)=>a.distance-b.distance)[0];
-   // Sur un repère connu, aucune requête réseau n'est nécessaire.
-   if(nearest&&nearest.distance<45){
+   if(nearest&&nearest.distance<35){
     const code=nearest.item.code;
-    showAirportShops(code,(data[code]&&data[code].name)||code,nearest.item.marker.getLatLng());
-    return;
+    showAirportShops(code,(data[code]&&data[code].name)||code,nearest.item.marker.getLatLng());return;
    }
-   const manualHtml='<div class="airport-shop-popup"><strong>Aéroport non répertorié</strong><p>Identification automatique en cours…</p><label>Code ICAO <input id="map-airport-icao" type="text" maxlength="4" autocapitalize="characters" placeholder="Ex. SBRJ" style="width:90px;text-transform:uppercase"></label> <button type="button" id="map-airport-search">Rechercher</button></div>';
-   const loading=L.popup({maxWidth:290}).setLatLng(latlng).setContent(manualHtml).openOn(airportMap);
-   const enableManual=()=>{
-    const node=loading.getElement();
-    const button=node?.querySelector('#map-airport-search');
-    const input=node?.querySelector('#map-airport-icao');
-    if(button&&input)button.addEventListener('click',()=>{
-     const code=input.value.trim().toUpperCase();
-     if(/^[A-Z0-9]{4}$/.test(code))showAirportShops(code,code,latlng);
-     else input.setCustomValidity('Saisis un code ICAO de quatre caractères');
-    });
-   };
-   enableManual();
+   const loading=L.popup({maxWidth:290}).setLatLng(latlng).setContent('Identification automatique de l’aéroport…').openOn(airportMap);
    try{
-    // OpenStreetMap / Overpass : recherche géographique ponctuelle, pas de scraping de boutiques.
-    const query='[out:json][timeout:12];(nwr["aeroway"="aerodrome"](around:9000,'+latlng.lat+','+latlng.lng+'););out center tags;';
-    const response=await fetch('https://overpass.kumi.systems/api/interpreter',{method:'POST',body:'data='+encodeURIComponent(query),headers:{'Content-Type':'application/x-www-form-urlencoded'},signal:AbortSignal.timeout(16000)});
-    if(!response.ok)throw new Error('Service cartographique indisponible');
-    const result=await response.json();
-    const candidates=(result.elements||[]).map(x=>{
-     const tags=x.tags||{},lat=x.lat??x.center?.lat,lon=x.lon??x.center?.lon;
-     return {code:tags['icao']||tags['ref:icao']||'',name:tags.name||'',lat,lon,distance:lat!=null&&lon!=null?airportMap.distance(latlng,[lat,lon]):Infinity};
-    }).filter(x=>/^[A-Z0-9]{4}$/.test(x.code.toUpperCase())&&x.distance<9000).sort((a,b)=>a.distance-b.distance);
-    const found=candidates[0];
-    if(found){showAirportShops(found.code.toUpperCase(),found.name,[found.lat,found.lon]);return}
-    if(nearest&&nearest.distance<100){const code=nearest.item.code;showAirportShops(code,(data[code]&&data[code].name)||code,nearest.item.marker.getLatLng());return}
-    loading.getElement()?.querySelector('.airport-shop-popup p')?.replaceChildren(document.createTextNode('Code ICAO non trouvé automatiquement. Saisis-le ci-dessous.'));
-   }catch(error){
-    loading.getElement()?.querySelector('.airport-shop-popup p')?.replaceChildren(document.createTextNode('Service cartographique indisponible. Saisis le code ICAO ci-dessous.'));
-   }
+    if(!worldAirportIndexPromise)worldAirportIndexPromise=fetch('world_airports.json').then(r=>{if(!r.ok)throw Error('Index indisponible');return r.json()}).catch(e=>{worldAirportIndexPromise=null;throw e});
+    const index=await worldAirportIndexPromise;
+    let closest=null,minimum=Infinity;
+    for(const [code,entry] of Object.entries(index)){
+     const distance=airportMap.distance(latlng,[entry[0],entry[1]]);
+     if(distance<minimum){minimum=distance;closest={code,name:entry[2],lat:entry[0],lon:entry[1]}}
+    }
+    // Éviter de sélectionner un autre aéroport à plusieurs dizaines de kilomètres.
+    if(closest&&minimum<12000){
+     showAirportShops(closest.code,closest.name,[closest.lat,closest.lon]);
+    }else loading.setContent('Aucun aéroport identifié à proximité. Zoome sur les pistes et réessaie.');
+   }catch(e){loading.setContent('Index des aéroports non encore disponible. Réessaie après la prochaine publication.')}
   };
   // Safari iPad : empêcher le menu de sélection sans bloquer le déplacement de la carte.
   let longPressTimer=null,startPoint=null,activeTouch=null,handledLongPress=false;
