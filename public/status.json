@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T11:22:02.451652+00:00",
-  "weather_checked_at": "2026-10-28T11:22:02.451652+00:00",
-  "news_checked_at": "2026-10-28T11:22:02.451652+00:00",
+  "last_run": "2026-10-28T11:23:52.997658+00:00",
+  "weather_checked_at": "2026-10-28T11:23:52.997658+00:00",
+  "news_checked_at": "2026-10-28T11:23:52.997658+00:00",
   "weather": [
     {
       "icao": "LGSK",
@@ -302,15 +302,15 @@
     "without_official_url": 20,
     "manual_source": 1,
     "unverified": 50,
-    "audited_at": "2026-10-28T11:22:02.451652+00:00"
+    "audited_at": "2026-10-28T11:23:52.997658+00:00"
   },
-  "versions_checked_at": "2026-10-28T11:22:02.451652+00:00",
-  "releases_checked_at": "2026-10-28T11:22:02.451652+00:00",
+  "versions_checked_at": "2026-10-28T11:23:52.997658+00:00",
+  "releases_checked_at": "2026-10-28T11:23:52.997658+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-28T11:22:50.925511+00:00",
+    "checked_at": "2026-10-28T11:24:43.321843+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
