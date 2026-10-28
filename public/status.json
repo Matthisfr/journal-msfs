@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T18:01:31.323903+00:00",
-  "weather_checked_at": "2026-10-28T18:01:31.323903+00:00",
-  "news_checked_at": "2026-10-28T18:01:31.323903+00:00",
+  "last_run": "2026-10-28T18:04:29.438490+00:00",
+  "weather_checked_at": "2026-10-28T18:04:29.438490+00:00",
+  "news_checked_at": "2026-10-28T18:04:29.438490+00:00",
   "weather": [
     {
       "icao": "PANC",
@@ -14,8 +14,7 @@
       "icon": "🌫️",
       "phenomenon": "Brouillard",
       "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF PANC 281737Z 2818/2924 VRB02KT 4SM BR SCT003 BKN045 TEMPO 2818/2819 1/2SM FZFG BKN002 FM282100 VRB03KT P6SM VCFG SCT003 SCT045 BKN180 FM290000 04004KT P6SM FEW045 SCT100 WS020/15030KT FM291000 01008KT P6SM -RA SCT020 OVC035 WS020/15030KT FM291400 02007KT 6SM -RA BR BKN020 WS020/15030KT FM292000 VRB05KT P6SM VCSH SCT020 OVC040 WS020/15030KT"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "CYEG",
@@ -27,8 +26,7 @@
       "icon": "🌨️",
       "phenomenon": "Neige",
       "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF CYEG 281740Z 2818/2918 31012KT 1 1/2SM -SN OVC008 TEMPO 2818/2906 6SM -SN SCT008 OVC012 FM290600 32008KT 2SM -SN BR OVC004 TEMPO 2906/2912 6SM -SN SCT004 OVC010 FM291200 31006KT P6SM SCT008 OVC012 TEMPO 2912/2918 3SM -SN BR OVC008 RMK NXT FCST BY 282100Z"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "LGSM",
@@ -40,8 +38,7 @@
       "icon": "⛈️",
       "phenomenon": "Orage",
       "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LGSM 281700Z 2818/2903 22012KT 9999 FEW018TCU BKN025 TEMPO 2818/2903 5000 RA PROB40 TEMPO 2818/2903 3000 TSRA FEW018CB BKN020 BKN060 BECMG 2822/2824 02015KT"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "EFHK",
@@ -53,8 +50,7 @@
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EFHK 281735Z 2818/2918 19011KT 4000 -DZ BKN005 BECMG 2818/2820 BKN003 TEMPO 2818/2820 6000 TEMPO 2820/2902 2500 BKN005 TEMPO 2902/2912 2500 DZ BR BKN005 BECMG 2913/2915 9999 NSW SCT012"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "KICT",
@@ -66,21 +62,19 @@
       "icon": "💨",
       "phenomenon": "Vent fort",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KICT 281720Z 2818/2918 19018G28KT P6SM SKC FM290000 18010KT P6SM FEW040"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "LKPR",
       "name": "LKPR Václav Havel Airport Prague",
-      "observed_at": "2026-10-28T17:30:00+00:00",
-      "raw": "METAR LKPR 281730Z 30005KT 7000 -RA BKN023 OVC042 09/08 Q1026 NOSIG",
+      "observed_at": "2026-10-28T18:00:00+00:00",
+      "raw": "METAR LKPR 281800Z 29005KT 6000 -RA FEW005 SCT020 BKN045 09/08 Q1026 NOSIG",
       "score": 32,
       "summary": "visibilité < 5 SM, précipitations",
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LKPR 281700Z 2818/2924 31006KT 9999 BKN025 TEMPO 2818/2824 5000 -RA SCT009 BKN012 PROB40 TEMPO 2818/2822 2500 RA BR BKN007 BECMG 2900/2902 SCT020 BECMG 2908/2910 36006KT CAVOK BECMG 2920/2922 1200 BR SCT003 TEMPO 2922/2924 0700 FG BKN002"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "LOWS",
@@ -92,8 +86,7 @@
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LOWS 281715Z 2818/2918 32008KT 9999 -RA BKN030 TX10/2820Z TN06/2906Z TEMPO 2818/2820 2000 SHRA BKN006 BECMG 2819/2821 VRB04KT NSW TEMPO 2821/2909 2000 BR BKN008 TEMPO 2911/2916 03010KT"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "EKVG",
@@ -105,40 +98,37 @@
       "icon": "💨",
       "phenomenon": "Vent fort",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EKVG 281428Z 2815/2821 26025G40KT 9999 BKN020 BECMG 2818/2821 26015G30KT"
+      "source_url": "https://aviationweather.gov/"
     },
     {
-      "icao": "KOMA",
-      "name": "KOMA Omaha-Eppley Airfield",
-      "observed_at": "2026-10-28T17:52:00+00:00",
-      "raw": "METAR KOMA 281752Z 18014G25KT 10SM FEW035 SCT100 SCT250 23/15 A2993 RMK AO2 SLP131 CB MOV NE T02280150 10239 20150 58016",
-      "score": 22,
-      "summary": "rafales ≥ 25 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
+      "icao": "MMMX",
+      "name": "Mexico City International Airport",
+      "observed_at": "2026-10-28T17:48:00+00:00",
+      "raw": "METAR MMMX 281748Z 02006KT 4SM SKC 20/11 A3035 NOSIG RMK SLP128 57006 953 HZY ISOL CI",
+      "score": 20,
+      "summary": "visibilité < 5 SM",
+      "icon": "☀️",
+      "phenomenon": "Ciel dégagé",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KOMA 281720Z 2818/2918 20014G22KT P6SM SCT050 FM290000 30007KT P6SM BKN150 FM290400 35007KT P6SM BKN150 FM291200 04007KT P6SM SKC"
+      "source_url": "https://aviationweather.gov/"
     },
     {
-      "icao": "LDDU",
-      "name": "LDDU",
-      "observed_at": "2026-10-28T18:00:00+00:00",
-      "raw": "METAR LDDU 281800Z 03015G25KT 360V060 CAVOK 16/04 Q1016 NOSIG",
-      "score": 22,
-      "summary": "rafales ≥ 25 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
+      "icao": "MUHA",
+      "name": "Habana Jose Marti Intl Airport",
+      "observed_at": "2026-10-28T17:50:00+00:00",
+      "raw": "METAR MUHA 281750Z 01008KT 330V050 8000 BKN025 29/23 Q1012",
+      "score": 20,
+      "summary": "visibilité < 5 SM",
+      "icon": "☁️",
+      "phenomenon": "Ciel couvert",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LDDU 281725Z 2818/2918 03015KT CAVOK TX19/2911Z TN15/2905Z TEMPO 2818/2908 03020G30KT BECMG 2908/2910 20006KT PROB30 TEMPO 2911/2915 27007KT BECMG 2916/2918 03015KT"
+      "source_url": "https://aviationweather.gov/"
     }
   ],
   "weather_coverage": {
     "eligible": 211,
-    "received": 204,
-    "fresh": 204
+    "received": 161,
+    "fresh": 161
   },
   "news": [
     {
@@ -149,7 +139,7 @@
       "date": "2026-10-27",
       "source": "GitHub Releases officiel — FSLiveTrafficLiveries/base",
       "url": "https://github.com/FSLiveTrafficLiveries/base/releases/tag/1.7.0",
-      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - Plus de 150 livrées réelles et historiques nouvelles ou mises à jour - Plus de 250 livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
+      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - 150+ livrées réelles et historiques nouvelles ou mises à jour - 250+ livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
       "impact": "Vérifier le changelog officiel et sauvegarder les configurations avant installation.",
       "new": false
     },
@@ -211,7 +201,7 @@
     },
     {
       "id": "779510",
-      "title": "[Blog] Briefing hebdomadaire du 2026-10-22",
+      "title": "[Blog] Briefing hebdomadaire du 22/10/2026",
       "category": "MSFS officiel",
       "date": "2026-10-22",
       "source": "Forum officiel Microsoft Flight Simulator",
@@ -279,21 +269,24 @@
   ],
   "hardware": [],
   "source_status": {
-    "metar": "ok",
-    "taf": "ok",
+    "metar": "partial",
+    "taf": "error",
     "official_news": "ok",
     "airport_versions": "partial",
     "official_releases": "ok",
     "software_versions": "partial"
   },
   "errors": [
+    "HTTP Error 504: Gateway Time-out",
+    "TAF : HTTP Error 504: Gateway Time-out",
     "Versions : GMMX / PERFECTSOFT : Fiche 1.1.0 plus ancienne que l'installation 1.2.0 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : DTTA / prealsoft : Fiche 1.00 plus ancienne que l'installation 1.0.1 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : CYVR / fsdreamteam : Fiche 1.0.7 plus ancienne que l'installation 1.3.1 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : CYYZ / FlyTampa : Fiche 1.2 plus ancienne que l'installation 1.5.0 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : 58CA / inibuilds : Fiche 1.01 plus ancienne que l'installation 1.0.2 : vérifier le canal éditeur, ne pas rétrograder",
     "Logiciels : fenix: Source inaccessible : ValueError Branche Fenix non explicitement publiée sur le blog",
-    "Logiciels : simapppro: Source inaccessible : ValueError Changelog SimAppPro absent"
+    "Logiciels : simapppro: Source inaccessible : ValueError Changelog SimAppPro absent",
+    "Logiciels : fsltl: Source inaccessible : JSONDecodeError Unterminated string starting at: line 1 column 1199961 (char 1199960)"
   ],
   "note": "Collecte quotidienne automatique : METAR/TAF NOAA, flux officiel MSFS, versions GitHub publiées, audit des scènes répertoriées, extraction des versions des boutiques publiques reconnues et surveillance des sites publics. Les versions non publiées ou inaccessibles restent UNKNOWN ; une page modifiée n’est pas une mise à jour confirmée.",
   "version_coverage": {
@@ -314,15 +307,15 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 57,
-    "audited_at": "2026-10-28T18:01:31.323903+00:00"
+    "audited_at": "2026-10-28T18:04:29.438490+00:00"
   },
-  "versions_checked_at": "2026-10-28T18:01:31.323903+00:00",
-  "releases_checked_at": "2026-10-28T18:01:31.323903+00:00",
+  "versions_checked_at": "2026-10-28T18:04:29.438490+00:00",
+  "releases_checked_at": "2026-10-28T18:04:29.438490+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-28T18:02:27.842301+00:00",
+    "checked_at": "2026-10-28T18:06:02.370171+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
