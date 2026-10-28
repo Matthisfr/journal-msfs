@@ -41,7 +41,7 @@ missing=sorted(u for u in urls if u not in cache)
 if missing:
  with ThreadPoolExecutor(max_workers=6) as pool:
   for url,photo in zip(missing,pool.map(official_photo,missing)): cache[url]=photo
- cache_path.write_text(json.dumps(cache,ensure_ascii=False,indent=2)+'\\n',encoding='utf-8')
+ cache_path.write_text(json.dumps(cache,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 groups={}
 for a in airports:
  code=str(a.get('icao') or '').strip().upper()
