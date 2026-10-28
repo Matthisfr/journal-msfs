@@ -164,14 +164,14 @@ jobs:
         run: |
           git config user.name "journal-msfs-bot"
           git config user.email "journal-msfs-bot@users.noreply.github.com"
-          git add public/world_airports.json public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/hardware/
+          git add public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/hardware/
           if [[ -f public/sayintentions-rank.svg ]]; then git add public/sayintentions-rank.svg; fi
           if ! git diff --cached --quiet; then
             git commit -m "Journal: collecte automatique $(date -u +%Y-%m-%d)"
             if ! git push origin HEAD:main; then
               echo "Dépôt modifié pendant la collecte : conserver les données puis repartir du dernier main."
               mkdir -p "$RUNNER_TEMP/journal-sync"
-              cp public/world_airports.json public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json "$RUNNER_TEMP/journal-sync/"
+              cp public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json "$RUNNER_TEMP/journal-sync/"
               mkdir -p "$RUNNER_TEMP/journal-sync/hardware"
               if [[ -d public/hardware ]]; then cp -a public/hardware/. "$RUNNER_TEMP/journal-sync/hardware/"; fi
               success=false
@@ -181,7 +181,7 @@ jobs:
                 cp "$RUNNER_TEMP/journal-sync/"*.json public/
                 mkdir -p public/hardware
                 cp -a "$RUNNER_TEMP/journal-sync/hardware/." public/hardware/
-                git add public/world_airports.json public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/hardware/
+                git add public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/hardware/
                 if git diff --cached --quiet; then
                   success=true
                   break
