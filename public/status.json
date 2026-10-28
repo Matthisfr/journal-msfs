@@ -1,66 +1,105 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T20:30:54.987085+00:00",
-  "weather_checked_at": "2026-10-28T20:30:54.987085+00:00",
-  "news_checked_at": "2026-10-28T20:30:54.987085+00:00",
+  "last_run": "2026-10-28T22:39:08.526503+00:00",
+  "weather_checked_at": "2026-10-28T22:39:08.526503+00:00",
+  "news_checked_at": "2026-10-28T22:39:08.526503+00:00",
   "weather": [
     {
-      "icao": "PANC",
-      "name": "sim-wings Anchorage",
-      "observed_at": "2026-10-28T20:19:00+00:00",
-      "raw": "SPECI PANC 282019Z 07005KT 1/4SM R07R/0600V0800FT FZFG VV001 M01/M01 A3032 RMK AO2 I1000 T10061006",
+      "icao": "EDDB",
+      "name": "Aerosoft Airport Berlin Brandenburg",
+      "observed_at": "2026-10-28T22:20:00+00:00",
+      "raw": "METAR EDDB 282220Z AUTO 25004KT 0450 0350 R24R/0600N R24L/0600N FG NCD 05/05 Q1028 TEMPO 0300 FG",
       "score": 145,
       "summary": "brouillard, visibilité < 1 SM",
       "icon": "🌫️",
       "phenomenon": "Brouillard",
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF PANC 282006Z 2820/2924 VRB02KT 4SM BR SCT003 TEMPO 2820/2822 1/2SM FZFG BKN002 FM282200 VRB03KT P6SM VCFG SCT003 SCT045 BKN180 FM290000 04004KT P6SM FEW045 SCT100 WS020/15030KT FM291000 01008KT P6SM -RA SCT020 OVC035 WS020/15030KT FM291400 02007KT 6SM -RA BR BKN020 WS020/15030KT FM292000 VRB05KT P6SM VCSH SCT020 OVC040 WS020/15030KT"
+      "taf_raw": "TAF EDDB 281700Z 2818/2918 28006KT 9999 FEW030 BECMG 2822/2901 22003KT BECMG 2823/2903 4500 BR TEMPO 2823/2910 1200 BR PROB30 TEMPO 2823/2908 0700 FG BKN002 BECMG 2908/2911 9999"
     },
     {
-      "icao": "LGRP",
-      "name": "LGRP Rhodes International Airport \"Diagoras\"",
-      "observed_at": "2026-10-28T20:20:00+00:00",
-      "raw": "METAR LGRP 282020Z 27005G17KT 9000 -TSRA FEW010 FEW016CB SCT018 16/14 Q1009 NOSIG",
+      "icao": "PANC",
+      "name": "sim-wings Anchorage",
+      "observed_at": "2026-10-28T22:31:00+00:00",
+      "raw": "SPECI PANC 282231Z 05007KT 1/2SM R07R/1200V2800FT FG VV002 00/M01 A3026 RMK AO2 T00001006",
+      "score": 145,
+      "summary": "brouillard, visibilité < 1 SM",
+      "icon": "🌫️",
+      "phenomenon": "Brouillard",
+      "level": "Très dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF PANC 282226Z 2822/2924 VRB02KT 4SM BR VCFG SCT003 TEMPO 2822/2824 1/2SM FZFG BKN002 FM290000 04004KT P6SM FEW045 SCT100 WS020/15030KT FM291000 01008KT P6SM -RA SCT020 OVC035 WS020/15030KT FM291400 02007KT 6SM -RA BR BKN020 WS020/15030KT FM292000 VRB05KT P6SM VCSH SCT020 OVC040 WS020/15030KT"
+    },
+    {
+      "icao": "DAAG",
+      "name": "Houari-Boumediene Airport",
+      "observed_at": "2026-10-28T22:00:00+00:00",
+      "raw": "METAR DAAG 282200Z 20004KT 9999 SCT019 FEW023CB SCT036 19/18 Q1022 RETS",
       "score": 110,
       "summary": "orage",
       "icon": "⛈️",
       "phenomenon": "Orage",
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LGRP 281700Z 2818/2918 12006KT 9999 SCT018 SCT050 PROB30 TEMPO 2818/2918 4000 RA FEW018TCU BKN020 PROB30 TEMPO 2818/2906 3000 TSRA FEW018CB BKN018 BKN050"
+      "taf_raw": "TAF DAAG 281700Z 2818/2918 VRB02KT 9999 FEW020 SCT200 TEMPO 2818/2824 FEW026CB PROB40 TEMPO 2818/2823 VRB15G25KT -TSRA FEW023CB BECMG 2910/2912 08012KT"
     },
     {
       "icao": "CYEG",
       "name": "CYEG - Edmonton Airport",
-      "observed_at": "2026-10-28T20:11:00+00:00",
-      "raw": "SPECI CYEG 282011Z 32011KT 3SM -SN DRSN BKN012 OVC021 M02/M04 A3006 RMK SC6SC2 SLP216",
+      "observed_at": "2026-10-28T22:26:00+00:00",
+      "raw": "SPECI CYEG 282226Z 33008KT 3SM -SN DRSN BKN007 OVC011 M02/M04 A3007 RMK ST7ST1 SLP222",
       "score": 95,
       "summary": "neige, visibilité < 5 SM",
       "icon": "🌨️",
       "phenomenon": "Neige",
       "level": "Dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF CYEG 281740Z 2818/2918 31012KT 1 1/2SM -SN OVC008 TEMPO 2818/2906 6SM -SN SCT008 OVC012 FM290600 32008KT 2SM -SN BR OVC004 TEMPO 2906/2912 6SM -SN SCT004 OVC010 FM291200 31006KT P6SM SCT008 OVC012 TEMPO 2912/2918 3SM -SN BR OVC008 RMK NXT FCST BY 282100Z"
+      "taf_raw": "TAF CYEG 282040Z 2821/2918 32012KT 2 1/2SM -SN SCT008 BKN012 OVC030 TEMPO 2821/2906 P6SM -SN SCT012 BKN030 FM290600 32008KT 3SM -SN BR OVC008 TEMPO 2906/2914 6SM -SN SCT008 OVC012 PROB30 2909/2914 1 1/2SM -SN BR OVC004 FM291400 31006KT P6SM SCT012 OVC025 TEMPO 2914/2918 4SM -SN BR SCT008 OVC012 RMK NXT FCST BY 290000Z"
     },
     {
-      "icao": "EFHK",
-      "name": "EFHK Helsinki Vantaa",
-      "observed_at": "2026-10-28T20:20:00+00:00",
-      "raw": "METAR EFHK 282020Z 19012KT 6000 -DZ BKN004 09/08 Q1023 TEMPO 4500 DZ",
+      "icao": "LFRN",
+      "name": "LFRN Rennes Bretagne Airport",
+      "observed_at": "2026-10-28T22:30:00+00:00",
+      "raw": "METAR LFRN 282230Z AUTO 00000KT 5000 BR NSC 07/06 Q1028 TEMPO 0500 FG VV///",
+      "score": 85,
+      "summary": "brouillard, visibilité < 5 SM",
+      "icon": "🌫️",
+      "phenomenon": "Brouillard",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF AMD LFRN 282211Z 2822/2918 VRB03KT CAVOK TEMPO 2822/2907 3000 BR PROB40 TEMPO 2822/2906 0500 FG VV/// BECMG 2910/2912 10010KT BECMG 2915/2918 VRB05KT"
+    },
+    {
+      "icao": "EDDM",
+      "name": "sim-wings Munich",
+      "observed_at": "2026-10-28T22:20:00+00:00",
+      "raw": "METAR EDDM 282220Z AUTO 26003KT 1200 0450 R26R/P2000N R26L/P2000N BCFG SCT023 BKN035 BKN045 06/06 Q1029 TEMPO 3000 BCFG",
+      "score": 80,
+      "summary": "visibilité < 1 SM",
+      "icon": "☁️",
+      "phenomenon": "Ciel couvert",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF AMD EDDM 282100Z 2821/2924 28004KT 1200 BCFG NSC TEMPO 2822/2902 9000 BECMG 2902/2905 0400 FG VV002 BECMG 2907/2910 06005KT 9999 BECMG 2910/2912 OVC005 BECMG 2912/2914 SCT015 BECMG 2918/2922 1200 BCFG BECMG 2922/2924 0600 FG VV002"
+    },
+    {
+      "icao": "KFSD",
+      "name": "KFSD Sioux falls Regional Airport",
+      "observed_at": "2026-10-28T22:17:00+00:00",
+      "raw": "SPECI KFSD 282217Z 30006KT 3SM -RA BR SCT008 BKN017 OVC021 15/14 A2994 RMK AO2 SFC VIS 4 DZE05RAB05 P0000 T01500139 $",
       "score": 32,
       "summary": "visibilité < 5 SM, précipitations",
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF AMD EFHK 281804Z 2818/2918 19010KT 4000 -DZ BKN004 TEMPO 2818/2820 6000 DZ BKN005 TEMPO 2820/2902 2500 DZ BKN005 TEMPO 2902/2912 2500 DZ BR BKN005 BECMG 2913/2915 9999 NSW SCT012"
+      "taf_raw": "TAF KFSD 281721Z 2817/2918 19008KT P6SM OVC015 TEMPO 2818/2821 4SM -SHRA OVC008 FM282100 25008KT P6SM BKN008 TEMPO 2821/2823 4SM -SHRA OVC004 FM282300 32008KT P6SM BKN045 FM290500 VRB03KT P6SM SCT250"
     },
     {
       "icao": "LROP",
       "name": "bma LROP Bucharest 2024 v2-6-0",
-      "observed_at": "2026-10-28T20:00:00+00:00",
-      "raw": "METAR LROP 282000Z 02003KT 8000 -RA BKN006 OVC021 12/12 Q1020 TEMPO 5000 -RA BR",
+      "observed_at": "2026-10-28T22:30:00+00:00",
+      "raw": "METAR LROP 282230Z 28005KT 6000 FEW003 OVC017 12/12 Q1019 TEMPO 3000 -RADZ BKN003 OVC015",
       "score": 32,
       "summary": "visibilité < 5 SM, précipitations",
       "icon": "🌧️",
@@ -70,23 +109,10 @@
       "taf_raw": "TAF LROP 281700Z 2818/2918 VRB04KT 9999 SCT010 OVC025 BECMG 2818/2820 5000 -RA BR BKN010 OVC025 BECMG 2820/2822 3000 -RA BR BKN005 OVC010 TEMPO 2900/2906 1500 -RADZ BR OVC002 BECMG 2909/2911 5000 BKN010 OVC020 TEMPO 2911/2918 9999 NSW SCT015 OVC030"
     },
     {
-      "icao": "EKVG",
-      "name": "Vagar Airport",
-      "observed_at": "2026-10-28T20:20:00+00:00",
-      "raw": "METAR EKVG 282020Z AUTO 27022G32KT 9999 BKN019/// 09/06 Q1006 RMK BKN020/// WIND SKEID 28028G41KT",
-      "score": 22,
-      "summary": "rafales ≥ 25 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EKVG 281428Z 2815/2821 26025G40KT 9999 BKN020 BECMG 2818/2821 26015G30KT"
-    },
-    {
       "icao": "KICT",
       "name": "KICT Dwight D. Eisenhower Nat Airport",
-      "observed_at": "2026-10-28T19:53:00+00:00",
-      "raw": "METAR KICT 281953Z 21023G33KT 10SM FEW048 27/16 A2998 RMK AO2 PK WND 22034/1939 SLP139 T02720156",
+      "observed_at": "2026-10-28T21:53:00+00:00",
+      "raw": "METAR KICT 282153Z 19019G29KT 10SM FEW049 FEW070 27/16 A2997 RMK AO2 PK WND 20032/2108 SLP136 T02670156",
       "score": 22,
       "summary": "rafales ≥ 25 kt",
       "icon": "💨",
@@ -96,49 +122,23 @@
       "taf_raw": "TAF KICT 281720Z 2818/2918 19018G28KT P6SM SKC FM290000 18010KT P6SM FEW040"
     },
     {
-      "icao": "KJAX",
-      "name": "KJAX AIRPORT",
-      "observed_at": "2026-10-28T19:56:00+00:00",
-      "raw": "METAR KJAX 281956Z 04018G27KT 10SM FEW020 BKN065 24/18 A3010 RMK AO2 PK WND 03029/1925 SLP192 T02390183 $",
-      "score": 22,
-      "summary": "rafales ≥ 25 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
+      "icao": "LIML",
+      "name": "LIML Milan Linate Airport",
+      "observed_at": "2026-10-28T22:20:00+00:00",
+      "raw": "METAR LIML 282220Z 00000KT 5000 BCFG NSC 09/09 Q1022 BECMG 2000 BCFG",
+      "score": 20,
+      "summary": "visibilité < 5 SM",
+      "icon": "☀️",
+      "phenomenon": "Ciel dégagé",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KJAX 281741Z 2818/2918 03018G28KT P6SM FEW025 BKN050 FM282300 02013G21KT P6SM SCT015 OVC035 FM290300 03010KT P6SM OVC025 FM291300 03010G20KT P6SM VCSH OVC025 FM291700 03015G22KT P6SM BKN025 OVC040"
-    },
-    {
-      "icao": "KMCI",
-      "name": "KMCI Kansas City Airport",
-      "observed_at": "2026-10-28T19:53:00+00:00",
-      "raw": "METAR KMCI 281953Z 17019G25KT 10SM SCT085 26/14 A3001 RMK AO2 PK WND 18030/1912 SLP155 T02560144 $",
-      "score": 22,
-      "summary": "rafales ≥ 25 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KMCI 281816Z 2818/2918 19016G25KT P6SM SCT070 TEMPO 2818/2820 BKN070 FM290000 19011KT P6SM FEW250 FM291700 VRB05KT P6SM SCT030"
-    },
-    {
-      "icao": "KOKC",
-      "name": "KOKC Will Rogers World Airport",
-      "observed_at": "2026-10-28T19:52:00+00:00",
-      "raw": "METAR KOKC 281952Z 19017G25KT 10SM FEW040 27/16 A3006 RMK AO2 PK WND 18026/1918 SLP166 T02670156",
-      "score": 22,
-      "summary": "rafales ≥ 25 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KOKC 281723Z 2818/2918 19015KT P6SM FEW070 FM290000 17008KT P6SM SCT250 FM290600 18010KT P6SM BKN250 WS020/20035KT FM291600 20010G15KT P6SM BKN250"
+      "taf_raw": "TAF LIML 281700Z 2818/2918 VRB04KT 8000 FEW040 BECMG 2900/2902 3000 BR TEMPO 2904/2908 1200 BCFG BKN014 BECMG 2908/2910 9999"
     }
   ],
   "weather_coverage": {
     "eligible": 211,
-    "received": 204,
-    "fresh": 204
+    "received": 203,
+    "fresh": 203
   },
   "news": [
     {
@@ -149,9 +149,9 @@
       "date": "2026-10-28",
       "source": "FSElite — MSFS",
       "url": "https://fselite.net/content/bluebird-simulations-shares-post-launch-update/",
-      "summary": "28 octobre 2026 – BlueBird Simulations partage la mise à jour post-lancement et les prochaines étapes. Actualités MSFS MSFS 2024 var HYVOR_TALK_WEBSITE = 3490 ; window.addEventListener('load', function() { hyvorTalkCommentCounts.load({ \"website-id\": HYVOR_TALK_WEBSITE, }) });",
+      "summary": "28 octobre 2026 – BlueBird Simulations partage la mise à jour post-lancement et les prochaines étapes. Actualités MSFS MSFS 2024",
       "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
-      "new": true
+      "new": false
     },
     {
       "id": "msfs_fselite_news-content-microsoft-local-legend-26-released",
@@ -163,7 +163,7 @@
       "url": "https://fselite.net/content/microsoft-local-legend-26-released/",
       "summary": "28 octobre 2026 - Microsoft Local Legend 26 : L'Antonov An-28 est maintenant disponible. Actualités MSFS MSFS 2024 MSFS PS5 MSFS Xbox",
       "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
-      "new": true
+      "new": false
     },
     {
       "id": "msfs_fselite_news-content-ifly-schedules-enters-beta-with-major-redesign-and-new-desktop-app",
@@ -175,7 +175,7 @@
       "url": "https://fselite.net/content/ifly-schedules-enters-beta-with-major-redesign-and-new-desktop-app/",
       "summary": "28 octobre 2026 - La version 0.9 apporte une interface actualisée, une progression de carrière améliorée et une application Windows dédiée. Actualités MSFS MSFS 2024",
       "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
-      "new": true
+      "new": false
     },
     {
       "id": "msfs_fselite_news-content-microsoft-wu-23-poland-and-the-baltics-out-now",
@@ -187,7 +187,7 @@
       "url": "https://fselite.net/content/microsoft-wu-23-poland-and-the-baltics-out-now/",
       "summary": "28 octobre 2026 – Sortie de la mise à jour 23 de Microsoft Flight Simulator World. Actualités MSFS MSFS 2024 MSFS PS5 MSFS Xbox",
       "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
-      "new": true
+      "new": false
     },
     {
       "id": "msfs_fselite_news-content-navigraph-expands-academy-with-new-course-2",
@@ -199,6 +199,41 @@
       "url": "https://fselite.net/content/navigraph-expands-academy-with-new-course-2/",
       "summary": "28 octobre 2026 – Navigraph élargit son Académie avec un nouveau cours sur les approches IFR. Actualités MSFS MSFS 2024",
       "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
+      "new": false
+    },
+    {
+      "id": "780010",
+      "title": "Tournoi d'exhibition du championnat national de courses aériennes",
+      "category": "MSFS officiel",
+      "date": "2026-10-28",
+      "source": "Forum officiel Microsoft Flight Simulator",
+      "url": "https://forums.flightsimulator.com/t/national-championship-air-races-exhibition-tournament/780010",
+      "summary": "Rejoignez-nous ce vendredi 30 octobre alors que cinq de vos simmers préférés de Twitch et YouTube s'affrontent contre le Community Manager @Chewwy94 dans le mode National Championship Air Races ! Nous sommes ravis d'accueillir AvAngel, Cow Town,…",
+      "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
+      "new": true
+    },
+    {
+      "id": "msfs_fselite_news-content-headwind-a330-development-progress",
+      "title": "Headwind Simulations présente la mise à jour du développement de l'Airbus A330X",
+      "category": "MSFS 2024",
+      "topic": "MSFS",
+      "date": "2026-10-28",
+      "source": "FSElite — MSFS",
+      "url": "https://fselite.net/content/headwind-a330-development-progress/",
+      "summary": "28 octobre 2026 - Headwind Simulations partage une mise à jour sur le développement de sa série A330X Actualités MSFS MSFS 2024 var HYVOR_TALK_WEBSITE = 3490 ; window.addEventListener('load', function() { hyvorTalkCommentCounts.load({ \"website-id\": HYVOR_TALK_WEBSITE, }) });",
+      "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
+      "new": true
+    },
+    {
+      "id": "msfs_fselite_news-content-flytampa-boston-update",
+      "title": "Lance FlyTampa Boston Logan V2.0",
+      "category": "MSFS 2024",
+      "topic": "MSFS",
+      "date": "2026-10-28",
+      "source": "FSElite — MSFS",
+      "url": "https://fselite.net/content/flytampa-boston-update/",
+      "summary": "28 octobre 2026 - FlyTampa publie la mise à jour Boston Logan (KBOS) V2.0 Actualités MSFS MSFS 2024",
+      "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
       "new": true
     },
     {
@@ -209,7 +244,7 @@
       "date": "2026-10-27",
       "source": "GitHub Releases officiel — FSLiveTrafficLiveries/base",
       "url": "https://github.com/FSLiveTrafficLiveries/base/releases/tag/1.7.0",
-      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - 150+ livrées réelles et historiques nouvelles ou mises à jour - 250+ livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
+      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - Plus de 150 livrées réelles et historiques nouvelles ou mises à jour - Plus de 250 livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
       "impact": "Vérifier le changelog officiel et sauvegarder les configurations avant installation.",
       "new": false
     },
@@ -336,7 +371,7 @@
       "date": "2026-10-22",
       "source": "Forum officiel Microsoft Flight Simulator",
       "url": "https://forums.flightsimulator.com/t/blog-weekly-briefing-for-2026-10-22/779510",
-      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Lisez la suite pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
+      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Poursuivez votre lecture pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
       "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
       "new": false
     },
@@ -354,7 +389,7 @@
     },
     {
       "id": "msfs_fselite_news-content-pmdg-teases-747-news-and-updates-on-737-and-777-fleets",
-      "title": "PMDG taquine les nouvelles et les mises à jour du 747 sur les flottes 737 et 777",
+      "title": "PMDG dévoile les nouvelles et mises à jour du 747 sur les flottes 737 et 777",
       "category": "MSFS 2024",
       "topic": "MSFS",
       "date": "2026-10-20",
@@ -384,7 +419,7 @@
       "date": "2026-10-18",
       "source": "FSElite — MSFS",
       "url": "https://fselite.net/content/bluebird-shares-757-launch-update-as-creator-previews-go-live/",
-      "summary": "18 octobre 2026 – Le développeur présente le futur support du simulateur et les plans post-lancement avant le 23 octobre. Actualités MSFS MSFS 2024",
+      "summary": "18 octobre 2026 – Le développeur présente le futur support du simulateur et les plans post-lancement avant le 23 octobre. Actualités MSFS MSFS 2024 Suivant » 1 - 15 sur 239 messages .cls-1{fill:#f57f20;}.cls-1,.cls-2{Stroke-width:0px;}.cls-2{fill:#103a5e;} Célébration de la simulation de vol depuis 2016. © FSElite Media LLC 2016 - 2026 Flight Sim Conten",
       "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
       "new": false
     },
@@ -521,15 +556,15 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 57,
-    "audited_at": "2026-10-28T20:30:54.987085+00:00"
+    "audited_at": "2026-10-28T22:39:08.526503+00:00"
   },
-  "versions_checked_at": "2026-10-28T20:30:54.987085+00:00",
-  "releases_checked_at": "2026-10-28T20:30:54.987085+00:00",
+  "versions_checked_at": "2026-10-28T22:39:08.526503+00:00",
+  "releases_checked_at": "2026-10-28T22:39:08.526503+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 3,
     "changed": 0,
-    "checked_at": "2026-10-28T20:32:57.832920+00:00",
+    "checked_at": "2026-10-28T22:40:42.433954+00:00",
     "unverified": 19
   },
   "airac_cycle": "2610"
