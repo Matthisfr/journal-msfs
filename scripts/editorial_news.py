@@ -8,7 +8,10 @@ import re
 from urllib.parse import urljoin,urlparse
 from urllib.request import Request,urlopen
 
-SOURCES=[{"id":"gsx_fselite_news","url":"https://fselite.net/developer/fsdreamteam/","host":"fselite.net","category":"GSX Pro","topic":"GSX","source":"FSElite — FSDreamTeam","keywords":("gsx","ground services","fsdreamteam")}]
+SOURCES=[
+    {"id":"gsx_fselite_news","url":"https://fselite.net/developer/fsdreamteam/","host":"fselite.net","category":"GSX Pro","topic":"GSX","source":"FSElite — FSDreamTeam","keywords":("gsx","ground services","fsdreamteam")},
+    {"id":"aig_fselite_news","url":"https://fselite.net/developer/alpha-india-group/","host":"fselite.net","category":"Trafic AI","topic":"AIG","source":"FSElite — Alpha India Group","keywords":("aig","alpha india group","alphaindiagroup","ai manager","traffic controller","traffic models","ai traffic","liveries")},
+]
 
 class Page(HTMLParser):
     def __init__(self):
