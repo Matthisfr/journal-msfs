@@ -40,6 +40,7 @@ SOURCES = [
     ("fshud-kb", "FSHud — documentation et mises à jour", "ATC / Trafic", "https://www.fshud.com/site/knowledge"),
     ("gsx", "GSX Pro — FSDreamTeam", "GSX Pro", "https://www.fsdreamteam.com/products_gsxpro.html"),
     ("gsx-forum", "GSX — forum de l'éditeur", "GSX Pro", "https://www.fsdreamteam.com/forum/"),
+    ("gsx-fselite", "GSX / FSDreamTeam — actualités FSElite", "GSX Pro", "https://fselite.net/developer/fsdreamteam/"),
     ("fsltl", "FSLTL — versions officielles modèles et livrées", "Trafic IA", "https://github.com/FSLiveTrafficLiveries/base/releases"),
     ("fsltl-models", "FSLTL — paquets officiels Base Models", "Trafic IA", "https://github.com/FSLiveTrafficLiveries/FSLTL_BaseModels_Releases/releases"),
     ("aig", "AIG — forum officiel modèles, livrées et OCI", "Trafic IA", "https://www.alpha-india.net/forums"),
