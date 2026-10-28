@@ -39,7 +39,9 @@ def render_rows(airports):
     for a in airports:
         original = a.get("original") or ""
         icao = a.get("icao") or ""
-        code = f'<span class="code">{h(icao)}</span>'
+        code = (f'<span class="code">{h(icao)}</span> '
+                f'<button type="button" class="airport-map-eye" data-icao="{h(icao)}" '
+                f'aria-label="Voir {h(icao)} sur la carte" title="Voir sur la carte">👁</button>')
         if original != icao:
             code += f'<small>Source : {h(original)}</small>'
         description = str(a.get("description") or "").strip()
