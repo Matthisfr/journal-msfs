@@ -133,10 +133,10 @@
     "id": "navigraph",
     "name": "Navigraph / Charts / Simlink",
     "group": "Navigation",
-    "source_url": "https://navigraph.com/blog",
+    "source_url": "https://navigraph.com/products/charts/changelog",
     "method": "official_news",
     "installed_version": null,
-    "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
+    "tracking": "Changelog officiel Navigraph Charts ; version exacte seulement si publiée explicitement, autres produits Navigraph suivis séparément."
   },
   {
     "id": "flightcontrolreplay",
