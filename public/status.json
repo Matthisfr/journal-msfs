@@ -1,9 +1,22 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T15:04:45.888960+00:00",
-  "weather_checked_at": "2026-10-28T15:04:45.888960+00:00",
-  "news_checked_at": "2026-10-28T15:04:45.888960+00:00",
+  "last_run": "2026-10-28T15:12:19.091408+00:00",
+  "weather_checked_at": "2026-10-28T15:12:19.091408+00:00",
+  "news_checked_at": "2026-10-28T15:12:19.091408+00:00",
   "weather": [
+    {
+      "icao": "KGFK",
+      "name": "kgfk",
+      "observed_at": "2026-10-28T15:08:00+00:00",
+      "raw": "SPECI KGFK 281508Z 19018G24KT 1/2SM R35L/3500V5500FT FG OVC003 07/07 A2986 RMK AO2 T00720067",
+      "score": 145,
+      "summary": "brouillard, visibilité < 1 SM",
+      "icon": "🌫️",
+      "phenomenon": "Brouillard",
+      "level": "Très dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KGFK 281414Z 2814/2912 18012KT 6SM BR BKN007 FM281800 19009KT P6SM BKN025 FM282200 22009KT P6SM BKN060"
+    },
     {
       "icao": "PANC",
       "name": "sim-wings Anchorage",
@@ -33,8 +46,8 @@
     {
       "icao": "CYEG",
       "name": "CYEG - Edmonton Airport",
-      "observed_at": "2026-10-28T14:34:00+00:00",
-      "raw": "SPECI CYEG 281434Z 32011KT 2 1/2SM -SN DRSN FEW009 BKN012 OVC019 M02/M03 A2997 RMK SF1SC7SC1 SF TR SLP185",
+      "observed_at": "2026-10-28T15:00:00+00:00",
+      "raw": "METAR CYEG 281500Z 33013KT 1 1/2SM -SN DRSN FEW009 BKN011 OVC022 M02/M04 A2998 RMK SF1SC7SC1 SF TR SLP190",
       "score": 120,
       "summary": "neige, visibilité < 3 SM",
       "icon": "🌨️",
@@ -46,8 +59,8 @@
     {
       "icao": "CYYC",
       "name": "CYYC Calgary International Airport",
-      "observed_at": "2026-10-28T14:00:00+00:00",
-      "raw": "METAR CYYC 281400Z 01009KT 2 1/4SM -SN BR FEW004 OVC013 M01/M02 A2990 RMK SF1SC8 SF TR /S01/ SLP173",
+      "observed_at": "2026-10-28T15:07:00+00:00",
+      "raw": "SPECI CYYC 281507Z 02014KT 2 1/2SM -SN BR BKN006 BKN023 M02/M03 A2993 RMK SF6SC1 SLP185",
       "score": 120,
       "summary": "neige, visibilité < 3 SM",
       "icon": "🌨️",
@@ -68,19 +81,6 @@
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF LGRP 281100Z 2812/2912 13006KT 9999 SCT018 SCT050 PROB30 TEMPO 2812/2912 4000 RA FEW018TCU BKN020 PROB30 TEMPO 2812/2912 3000 TSRA FEW018CB BKN018 BKN050"
-    },
-    {
-      "icao": "KGFK",
-      "name": "kgfk",
-      "observed_at": "2026-10-28T14:53:00+00:00",
-      "raw": "METAR KGFK 281453Z 19017G25KT 1SM R35L/P6000FT BR OVC004 07/07 A2986 RMK AO2 SFC VIS 1 1/2 SLP118 T00720067 56003",
-      "score": 67,
-      "summary": "visibilité < 3 SM, rafales ≥ 25 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KGFK 281414Z 2814/2912 18012KT 6SM BR BKN007 FM281800 19009KT P6SM BKN025 FM282200 22009KT P6SM BKN060"
     },
     {
       "icao": "KFSD",
@@ -132,13 +132,13 @@
       "phenomenon": "Précipitations",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KIAH 281120Z 2812/2918 VRB03KT P6SM FEW050 FM281600 13008KT P6SM SCT035 OVC070 FM290000 VRB03KT P6SM FEW050 BKN250"
+      "taf_raw": "TAF KIAH 281457Z 2815/2918 11005KT P6SM VCSH BKN050 FM281700 13009KT P6SM SCT035 OVC070 FM290000 VRB03KT P6SM FEW050 BKN250"
     }
   ],
   "weather_coverage": {
     "eligible": 210,
-    "received": 160,
-    "fresh": 160
+    "received": 204,
+    "fresh": 204
   },
   "news": [
     {
@@ -149,7 +149,7 @@
       "date": "2026-10-27",
       "source": "GitHub Releases officiel — FSLiveTrafficLiveries/base",
       "url": "https://github.com/FSLiveTrafficLiveries/base/releases/tag/1.7.0",
-      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - 150+ livrées réelles et historiques nouvelles ou mises à jour - 250+ livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
+      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - Plus de 150 livrées réelles et historiques nouvelles ou mises à jour - Plus de 250 livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
       "impact": "Vérifier le changelog officiel et sauvegarder les configurations avant installation.",
       "new": false
     },
@@ -216,7 +216,7 @@
       "date": "2026-10-22",
       "source": "Forum officiel Microsoft Flight Simulator",
       "url": "https://forums.flightsimulator.com/t/blog-weekly-briefing-for-2026-10-22/779510",
-      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Poursuivez votre lecture pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
+      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Lisez la suite pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
       "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
       "new": false
     },
@@ -279,7 +279,7 @@
   ],
   "hardware": [],
   "source_status": {
-    "metar": "partial",
+    "metar": "ok",
     "taf": "ok",
     "official_news": "ok",
     "airport_versions": "partial",
@@ -287,7 +287,6 @@
     "software_versions": "partial"
   },
   "errors": [
-    "HTTP Error 504: Gateway Time-out",
     "Versions : GMMX / PERFECTSOFT : Fiche 1.1.0 plus ancienne que l'installation 1.2.0 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : DTTA / prealsoft : Fiche 1.00 plus ancienne que l'installation 1.0.1 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : CYVR / fsdreamteam : Fiche 1.0.7 plus ancienne que l'installation 1.3.1 : vérifier le canal éditeur, ne pas rétrograder",
@@ -315,15 +314,15 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 56,
-    "audited_at": "2026-10-28T15:04:45.888960+00:00"
+    "audited_at": "2026-10-28T15:12:19.091408+00:00"
   },
-  "versions_checked_at": "2026-10-28T15:04:45.888960+00:00",
-  "releases_checked_at": "2026-10-28T15:04:45.888960+00:00",
+  "versions_checked_at": "2026-10-28T15:12:19.091408+00:00",
+  "releases_checked_at": "2026-10-28T15:12:19.091408+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-28T15:06:03.448927+00:00",
+    "checked_at": "2026-10-28T15:13:21.070580+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
