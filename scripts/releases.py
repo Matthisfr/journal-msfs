@@ -13,7 +13,7 @@ UTC = dt.timezone.utc
 NOW = dt.datetime.now(UTC)
 REPOS = [
     ("MobiFlight/MobiFlight-Connector", "MOBIFLIGHT", "MobiFlight", "MF"),
-    ("Fragtality/Fenix2GSX", "FENIX / GSX", "Fenix2GSX (outil communautaire)", "GSX"),
+    ("FSLiveTrafficLiveries/base", "Trafic IA", "FSLTL Base Models (avions et livrées)", "FSLTL"),
 ]
 
 def release_items(previous=None):
