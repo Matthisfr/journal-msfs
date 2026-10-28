@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T19:48:28.324020+00:00",
-  "weather_checked_at": "2026-10-28T19:48:28.324020+00:00",
-  "news_checked_at": "2026-10-28T19:48:28.324020+00:00",
+  "last_run": "2026-10-28T19:50:42.814169+00:00",
+  "weather_checked_at": "2026-10-28T19:50:42.814169+00:00",
+  "news_checked_at": "2026-10-28T19:50:42.814169+00:00",
   "weather": [
     {
       "icao": "PANC",
@@ -96,6 +96,19 @@
       "taf_raw": "TAF LOWS 281715Z 2818/2918 32008KT 9999 -RA BKN030 TX10/2820Z TN06/2906Z TEMPO 2818/2820 2000 SHRA BKN006 BECMG 2819/2821 VRB04KT NSW TEMPO 2821/2909 2000 BR BKN008 TEMPO 2911/2916 03010KT"
     },
     {
+      "icao": "EKVG",
+      "name": "Vagar Airport",
+      "observed_at": "2026-10-28T19:50:00+00:00",
+      "raw": "METAR EKVG 281950Z AUTO 27024G37KT 9999 BKN020/// 10/06 Q1006 RMK FEW021/// OVC033/// WIND SKEID 28032G46KT",
+      "score": 45,
+      "summary": "rafales ≥ 35 kt",
+      "icon": "💨",
+      "phenomenon": "Vent fort",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EKVG 281428Z 2815/2821 26025G40KT 9999 BKN020 BECMG 2818/2821 26015G30KT"
+    },
+    {
       "icao": "LROP",
       "name": "bma LROP Bucharest 2024 v2-6-0",
       "observed_at": "2026-10-28T19:30:00+00:00",
@@ -120,19 +133,6 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF KICT 281720Z 2818/2918 19018G28KT P6SM SKC FM290000 18010KT P6SM FEW040"
-    },
-    {
-      "icao": "KJAX",
-      "name": "KJAX AIRPORT",
-      "observed_at": "2026-10-28T18:56:00+00:00",
-      "raw": "METAR KJAX 281856Z 05021G27KT 10SM FEW020 BKN060 BKN250 26/18 A3011 RMK AO2 PK WND 05029/1834 SLP196 T02560183 $",
-      "score": 22,
-      "summary": "rafales ≥ 25 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KJAX 281741Z 2818/2918 03018G28KT P6SM FEW025 BKN050 FM282300 02013G21KT P6SM SCT015 OVC035 FM290300 03010KT P6SM OVC025 FM291300 03010G20KT P6SM VCSH OVC025 FM291700 03015G22KT P6SM BKN025 OVC040"
     }
   ],
   "weather_coverage": {
@@ -223,7 +223,7 @@
     },
     {
       "id": "779510",
-      "title": "[Blog] Briefing hebdomadaire du 22/10/2026",
+      "title": "[Blog] Briefing hebdomadaire du 2026-10-22",
       "category": "MSFS officiel",
       "date": "2026-10-22",
       "source": "Forum officiel Microsoft Flight Simulator",
@@ -297,7 +297,7 @@
     "airport_versions": "partial",
     "official_releases": "ok",
     "software_versions": "partial",
-    "sayintentions_news": "no_public_feed"
+    "sayintentions_news": "no_dated_articles"
   },
   "errors": [
     "Versions : GMMX / PERFECTSOFT : Fiche 1.1.0 plus ancienne que l'installation 1.2.0 : vérifier le canal éditeur, ne pas rétrograder",
@@ -327,15 +327,15 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 57,
-    "audited_at": "2026-10-28T19:48:28.324020+00:00"
+    "audited_at": "2026-10-28T19:50:42.814169+00:00"
   },
-  "versions_checked_at": "2026-10-28T19:48:28.324020+00:00",
-  "releases_checked_at": "2026-10-28T19:48:28.324020+00:00",
+  "versions_checked_at": "2026-10-28T19:50:42.814169+00:00",
+  "releases_checked_at": "2026-10-28T19:50:42.814169+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 3,
     "changed": 0,
-    "checked_at": "2026-10-28T19:49:29.283878+00:00",
+    "checked_at": "2026-10-28T19:51:24.689814+00:00",
     "unverified": 19
   },
   "airac_cycle": "2610"
