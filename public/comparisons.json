@@ -8,6 +8,7 @@
         "installed": "2.2.0",
         "url": "https://contrail.shop/products/fsimstudios-cyhz-halifax-stanfield-intl-v2-msfs",
         "image": "https://contrail.shop/cdn/shop/files/thumb_062e5569-c50a-43de-828a-b37da1e43b02_1200x1200.jpg?v=1714050459",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "2.2.0",
         "version_state": "À jour"
@@ -17,6 +18,7 @@
         "installed": "1.0.1",
         "url": "",
         "image": "",
+        "image_checked": false,
         "comparison": "",
         "server_version": "",
         "version_state": "À vérifier"
@@ -36,6 +38,7 @@
         "installed": "1.3.0",
         "url": "https://contrail.shop/products/cywg-winnipeg-international-airport-msfs",
         "image": "https://contrail.shop/cdn/shop/files/thumb_7219f728-79ff-4493-aac4-85cf15208d60_1200x1200.jpg?v=1698351621",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.3.0",
         "version_state": "À jour"
@@ -45,6 +48,7 @@
         "installed": "1.0.1",
         "url": "",
         "image": "",
+        "image_checked": false,
         "comparison": "",
         "server_version": "",
         "version_state": "À vérifier"
@@ -64,6 +68,7 @@
         "installed": "1.2.0",
         "url": "https://contrail.shop/products/cyyc-calgary-international-airport-msfs",
         "image": "https://contrail.shop/cdn/shop/files/thumb_71b1d5bc-5fe7-4801-a448-892f0a90f92d_1200x1200.jpg?v=1685014810",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.2.0",
         "version_state": "À jour"
@@ -73,6 +78,7 @@
         "installed": "1.0.1",
         "url": "",
         "image": "",
+        "image_checked": false,
         "comparison": "",
         "server_version": "",
         "version_state": "À vérifier"
@@ -92,6 +98,7 @@
         "installed": "1.1.0",
         "url": "https://contrail.shop/products/kewr-newark-liberty-msfs",
         "image": "https://contrail.shop/cdn/shop/files/thumb_2003ed9d-141c-413a-8ea3-c34ce845afc9_1200x1200.jpg?v=1697803937",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.1.0",
         "version_state": "À jour"
@@ -101,6 +108,7 @@
         "installed": "1.6.0",
         "url": "https://inibuilds.com/products/final-approach-simulations-newark-liberty-kewr-msfs",
         "image": "",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.6.0",
         "version_state": "À jour"
@@ -120,6 +128,7 @@
         "installed": "3.2.0",
         "url": "https://contrail.shop/products/flytampa-klas-las-vegas-v3-msfs-2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_a6057ef1-2b10-42cb-94b5-875ab7d65ca0_1200x1200.jpg?v=1769107861",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "3.2.0",
         "version_state": "À jour"
@@ -129,6 +138,7 @@
         "installed": "2.2.0",
         "url": "https://secure.simmarket.com/flytampa-lasvegas-msfs.phtml",
         "image": "https://secure.simmarket.com/images/products/7/72/14200/flyvegas20_product_logo_200x282.png",
+        "image_checked": true,
         "comparison": "",
         "server_version": "",
         "version_state": "À vérifier"
@@ -148,6 +158,7 @@
         "installed": "1.1.0",
         "url": "https://contrail.shop/products/taimodels-kmci-kansas-city-airport-msfs2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/kmci_thumb_90e6d973-45bc-43ea-b091-3e453939fba0_1200x1200.png?v=1783371517",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.1.0",
         "version_state": "À jour"
@@ -157,6 +168,7 @@
         "installed": "2.5.0",
         "url": "https://secure.simmarket.com/tropicalsim-2-kansas-city-intl-kmci-v2-msfs24.phtml",
         "image": "https://secure.simmarket.com/images/products/a/ad/19794/KMCIv24_msfs24_cover.png",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "2.5.0",
         "version_state": "À jour"
@@ -176,6 +188,7 @@
         "installed": "2.2.0",
         "url": "https://glideslope.pro/product/kmia-miami-international-airport-msfs-2024/",
         "image": "https://glideslope.pro/wp-content/uploads/2025/05/MIA_T.webp",
+        "image_checked": true,
         "comparison": "update",
         "server_version": "2.3.0",
         "version_state": "Mise à jour disponible"
@@ -185,6 +198,7 @@
         "installed": "1.0.2",
         "url": "https://contrail.shop/products/mk-studios-kmia-miami-intl-airport-msfs-2024",
         "image": "https://contrail.shop/cdn/shop/files/kmia_thumb_9b9e57c6-d040-496e-8cd4-51dafee7a0e6_1200x1200.png?v=1791930878",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.0.2",
         "version_state": "À jour"
@@ -204,6 +218,7 @@
         "installed": "1.0.0",
         "url": "https://contrail.shop/products/dreamflight-kpvd-providence-airport-msfs-2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_7839d334-0e6b-457d-8041-be3f054de806_1200x1200.jpg?v=1763072048",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.0.0",
         "version_state": "À jour"
@@ -213,6 +228,7 @@
         "installed": "4.5.0",
         "url": "https://inibuilds.com/products/fly2high-providence-kpvd-msfs",
         "image": "",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "4.5.0",
         "version_state": "À jour"
@@ -222,6 +238,7 @@
         "installed": "1.0.2",
         "url": "https://inibuilds.com/products/inibuilds-providence-kpvd-msfs-2024",
         "image": "",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.0.2",
         "version_state": "À jour"
@@ -241,6 +258,7 @@
         "installed": "1.1.1",
         "url": "https://secure.simmarket.com/sky-additions-cayenne-flix-bou-airport-soca-msfs.phtml",
         "image": "https://secure.simmarket.com/images/products/f/f5/19207/affiche.png",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.1.1",
         "version_state": "À jour"
@@ -250,6 +268,7 @@
         "installed": "1.0.0",
         "url": "https://contrail.shop/products/slhsimdesigns-soca-cayenne-felix-eboue-msfs2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_6c674626-5a58-4613-a994-9244e18e925f_1200x1200.webp?v=1734207941",
+        "image_checked": true,
         "comparison": "update",
         "server_version": "1.1.0",
         "version_state": "Mise à jour disponible"
@@ -269,6 +288,7 @@
         "installed": "1.0.0",
         "url": "https://inibuilds.com/products/mxi-design-tirana-nene-tereza-lati-msfs",
         "image": "",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.00",
         "version_state": "À jour"
@@ -278,6 +298,7 @@
         "installed": "1.2.0",
         "url": "https://inibuilds.com/products/salvuz-tirana-lati-msfs",
         "image": "",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.2.0",
         "version_state": "À jour"
@@ -297,6 +318,7 @@
         "installed": "1.0.3",
         "url": "https://www.aerosoft.com/en/shop/flight/microsoft-flight-simulator/msfs-2020/msfs-sceneries/msfs-europe/4547/aerosoft-airport-dusseldorf",
         "image": "https://www.aerosoft.com/media/image/ef/41/66/Aerosoft-Airport-Dusseldorf.jpg",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.0.3",
         "version_state": "À jour"
@@ -306,6 +328,7 @@
         "installed": "1.1.1",
         "url": "https://contrail.shop/products/mk-studios-eddl-dusseldorf-airport-msfs-2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_0e1943d5-ff21-4979-b910-6a68e7adec37_1200x1200.webp?v=1748426034",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.1.1",
         "version_state": "À jour"
@@ -341,6 +364,7 @@
         "installed": "1.2.1",
         "url": "https://contrail.shop/products/lows-salzburg-airport",
         "image": "https://contrail.shop/cdn/shop/products/thumb_8e4fac6e-aa8d-4497-afd1-5a3ddacff502_1200x1200.jpg?v=1674664988",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.2.1",
         "version_state": "À jour"
@@ -350,6 +374,7 @@
         "installed": "1.2.0",
         "url": "https://secure.simmarket.com/rdpresets-lows-salzburg-airport-msfs.phtml",
         "image": "https://secure.simmarket.com/images/products/c/cb/18754/Simmarket_Pictogram_LOWS.jpg",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.2",
         "version_state": "À jour"
@@ -369,6 +394,7 @@
         "installed": "1.0.0",
         "url": "https://secure.simmarket.com/aflosim-lbsf-sofia-airport-msfs.phtml",
         "image": "https://secure.simmarket.com/images/products/1/16/18106/cover_282_MSFS2020.png",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.0",
         "version_state": "À jour"
@@ -378,6 +404,7 @@
         "installed": "1.0.0",
         "url": "https://inibuilds.com/products/fly2high-sofia-lbsf-msfs",
         "image": "",
+        "image_checked": true,
         "comparison": "incomparable",
         "server_version": "2.0.0",
         "version_state": "À vérifier"
@@ -397,6 +424,7 @@
         "installed": "2.0.0",
         "url": "",
         "image": "",
+        "image_checked": false,
         "comparison": "",
         "server_version": "",
         "version_state": "À vérifier"
@@ -406,6 +434,7 @@
         "installed": "1.0.2",
         "url": "https://inibuilds.com/products/inibuilds-dubrovnik-lddu-msfs",
         "image": "",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.0.2",
         "version_state": "À jour"
@@ -425,6 +454,7 @@
         "installed": "1.1.0",
         "url": "https://secure.simmarket.com/france-vfr-lfkc-calvi-sainte-catherine-msfs2420.phtml",
         "image": "https://secure.simmarket.com/images/products/e/e2/19709/APTLFKCMSFS_thumbnail.jpg",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.10",
         "version_state": "À jour"
@@ -434,6 +464,7 @@
         "installed": "1.6.0",
         "url": "https://secure.simmarket.com/fsx3d-calvi-st-catherine-airport-lfkc-msfs.phtml",
         "image": "https://secure.simmarket.com/images/products/4/4c/13862/FSX3D_LOGO_LFKC_MSFS_2___1.jpg",
+        "image_checked": true,
         "comparison": "source_older",
         "server_version": "1.5",
         "version_state": "Version installée plus récente"
@@ -443,6 +474,7 @@
         "installed": "2.0.0",
         "url": "https://secure.simmarket.com/vref-simulations-lfkc-calvi-st.catherine-airport-msfs.phtml",
         "image": "https://secure.simmarket.com/images/products/d/d8/14812/logo1.png",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "2.0",
         "version_state": "À jour"
@@ -462,6 +494,7 @@
         "installed": "1.0.1",
         "url": "https://secure.simmarket.com/france-vfr-lfkj-ajaccio-msfs2420.phtml",
         "image": "https://secure.simmarket.com/images/products/1/1f/20541/APTLFKJMSFS_thumbnail.jpg",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.01",
         "version_state": "À jour"
@@ -471,6 +504,7 @@
         "installed": "1.3.2",
         "url": "https://inibuilds.com/products/pilot-experience-sim-ajaccio-lfkj-msfs",
         "image": "",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.3.2",
         "version_state": "À jour"
@@ -506,6 +540,7 @@
         "installed": "1.3.0",
         "url": "https://secure.simmarket.com/france-vfr-lflb-chambery-aix-les-bains-msfs.phtml",
         "image": "https://secure.simmarket.com/images/products/a/a9/16796/APTLFLBMSFS_thumbnail.jpg",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.30",
         "version_state": "À jour"
@@ -515,6 +550,7 @@
         "installed": "1.0.0",
         "url": "",
         "image": "",
+        "image_checked": false,
         "comparison": "",
         "server_version": "",
         "version_state": "À vérifier"
@@ -534,6 +570,7 @@
         "installed": "1.0.0",
         "url": "",
         "image": "",
+        "image_checked": false,
         "comparison": "",
         "server_version": "",
         "version_state": "À vérifier"
@@ -543,6 +580,7 @@
         "installed": "1.1.0",
         "url": "https://secure.simmarket.com/fsx3d-mont-dauphin-saint-crepin-lfnc-msfs24.phtml",
         "image": "https://secure.simmarket.com/images/products/d/d6/20816/FSX3D_LOGO_LFNC_MSFS_2024.jpg",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.1",
         "version_state": "À jour"
@@ -562,6 +600,7 @@
         "installed": "1.0.0",
         "url": "",
         "image": "",
+        "image_checked": false,
         "comparison": "",
         "server_version": "",
         "version_state": "À vérifier"
@@ -571,6 +610,7 @@
         "installed": "1.1.0",
         "url": "https://secure.simmarket.com/france-vfr-lfrk-caen-carpiquet-msfs.phtml",
         "image": "https://secure.simmarket.com/images/products/f/fd/17237/APTLFRKMSFS_thumbnail.jpg",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.10",
         "version_state": "À jour"
@@ -580,6 +620,7 @@
         "installed": "2.0.5",
         "url": "",
         "image": "",
+        "image_checked": false,
         "comparison": "",
         "server_version": "",
         "version_state": "À vérifier"
@@ -599,6 +640,7 @@
         "installed": "1.0.1",
         "url": "https://contrail.shop/products/mm-simulations-lgsm-samos-intl-airport-msfs-2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_5aaf58f4-acf0-4cc6-bbbc-6710cac6cb6f_1200x1200.jpg?v=1751653726",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.0.1",
         "version_state": "À jour"
@@ -608,6 +650,7 @@
         "installed": "1.2.1",
         "url": "",
         "image": "",
+        "image_checked": false,
         "comparison": "",
         "server_version": "",
         "version_state": "À vérifier"
@@ -627,6 +670,7 @@
         "installed": "1.2.2",
         "url": "https://inibuilds.com/products/simpixel-bari-libd-msfs",
         "image": "",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.2.2",
         "version_state": "À jour"
@@ -636,6 +680,7 @@
         "installed": "1.1.0",
         "url": "https://secure.simmarket.com/supersonic-libd-bari-karol-wojtyla-airport-msfs.phtml",
         "image": "https://secure.simmarket.com/images/products/b/b9/16904/LIBD_Logo.png",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.1",
         "version_state": "À jour"
@@ -655,6 +700,7 @@
         "installed": "1.0.4",
         "url": "https://contrail.shop/products/atelic-lipz-venice-airport-msfs-2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/lipz_thumb_bab1d923-05df-43ee-b8ec-c19651319642_1200x1200.png?v=1791750658",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.0.4",
         "version_state": "À jour"
@@ -664,6 +710,7 @@
         "installed": "2.1.0",
         "url": "https://secure.simmarket.com/barelli-msfs-addon-venezia-lipz-intl-airport-msfs24.phtml",
         "image": "https://secure.simmarket.com/images/products/1/11/19869/Logo.jpg",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "2.1",
         "version_state": "À jour"
@@ -673,6 +720,7 @@
         "installed": "3.2.1",
         "url": "https://beautifulmodelworld.com/",
         "image": "",
+        "image_checked": true,
         "comparison": "incomparable",
         "server_version": "4.2.2",
         "version_state": "À vérifier"
@@ -692,6 +740,7 @@
         "installed": "1.0.1",
         "url": "https://secure.simmarket.com/justsim-riga-latvia-evra-msfs.phtml",
         "image": "https://secure.simmarket.com/images/products/f/f2/14849/for_cover_edds_evra.jpg",
+        "image_checked": true,
         "comparison": "update",
         "server_version": "1.1",
         "version_state": "Mise à jour disponible"
@@ -701,6 +750,7 @@
         "installed": "1.5.0",
         "url": "https://secure.simmarket.com/lisium-evra-riga-international.phtml",
         "image": "https://secure.simmarket.com/images/products/c/cd/19812/SCREEN_SIMMARKET.png",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.5",
         "version_state": "À jour"
@@ -741,6 +791,7 @@
         "installed": "1.1.0",
         "url": "https://secure.simmarket.com/lisium-eyvi-vilnius-msfs2024.phtml",
         "image": "https://secure.simmarket.com/images/products/5/57/20574/VNOLOGOSIMMARKET.jpg",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.1.0",
         "version_state": "À jour"
@@ -750,6 +801,7 @@
         "installed": "1.1.3",
         "url": "https://contrail.shop/products/mm-simulations-eyvi-vilnius-international-airport-msfs",
         "image": "https://contrail.shop/cdn/shop/files/thumb_fc0bad74-5a46-470d-a6ca-c0412a2a9921_1200x1200.webp?v=1719338418",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.1.3",
         "version_state": "À jour"
@@ -769,6 +821,7 @@
         "installed": "1.0.2",
         "url": "https://contrail.shop/products/atelic-ellx-luxembourg-airport-msfs-2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_dd69490c-405b-4afc-9f36-7d4fc447a80b_1200x1200.jpg?v=1757068199",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.0.2",
         "version_state": "À jour"
@@ -778,6 +831,7 @@
         "installed": "1.4.3",
         "url": "https://secure.simmarket.com/justsim-ellx-luxemburg-airport-ng-series-msfs24.phtml",
         "image": "https://secure.simmarket.com/images/products/b/b6/20247/cover_ellx_24.jpg",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.4.3",
         "version_state": "À jour"
@@ -797,6 +851,7 @@
         "installed": "1.0.1",
         "url": "https://inibuilds.com/products/inibuilds-malta-lmml-msfs-2024",
         "image": "",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.0.1",
         "version_state": "À jour"
@@ -806,6 +861,7 @@
         "installed": "1.3.0",
         "url": "https://secure.simmarket.com/justsim-malta-international-airport-msfs.phtml",
         "image": "https://secure.simmarket.com/images/products/8/88/15086/for_cover_LMML.jpg",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.3",
         "version_state": "À jour"
@@ -841,6 +897,7 @@
         "installed": "1.4.1",
         "url": "",
         "image": "",
+        "image_checked": false,
         "comparison": "",
         "server_version": "",
         "version_state": "À vérifier"
@@ -850,6 +907,7 @@
         "installed": "1.1.0",
         "url": "https://contrail.shop/products/atelic-lpma-madeira-airport-msfs",
         "image": "https://contrail.shop/cdn/shop/files/thumb_22d980c6-5d85-49e6-83c9-d113ab0d5d97_1200x1200.webp?v=1729290688",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.1.0",
         "version_state": "À jour"
@@ -869,6 +927,7 @@
         "installed": "1.0.2",
         "url": "",
         "image": "",
+        "image_checked": false,
         "comparison": "",
         "server_version": "",
         "version_state": "À vérifier"
@@ -878,6 +937,7 @@
         "installed": "1.0.4",
         "url": "https://contrail.shop/products/lkpr-prague-airport-msfs",
         "image": "https://contrail.shop/cdn/shop/products/thumb_e097aa56-30ab-4889-8dab-c85926625985_1200x1200.jpg?v=1674668259",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.0.4",
         "version_state": "À jour"
@@ -897,6 +957,7 @@
         "installed": "0.3.4",
         "url": "",
         "image": "",
+        "image_checked": false,
         "comparison": "",
         "server_version": "",
         "version_state": "À vérifier"
@@ -906,6 +967,7 @@
         "installed": "1.0.1",
         "url": "",
         "image": "",
+        "image_checked": false,
         "comparison": "",
         "server_version": "",
         "version_state": "À vérifier"
@@ -925,6 +987,7 @@
         "installed": "1.6.8",
         "url": "https://secure.simmarket.com/fsdreamteam-zurich-airport-msfs.phtml",
         "image": "https://secure.simmarket.com/images/products/2/2c/14044/simmarket_box.jpg",
+        "image_checked": true,
         "comparison": "source_older",
         "server_version": "1.6.5",
         "version_state": "Version installée plus récente"
@@ -934,6 +997,7 @@
         "installed": "1.1.2",
         "url": "https://contrail.shop/products/mk-studios-lszh-zurich-airport-msfs",
         "image": "https://contrail.shop/cdn/shop/files/thumb_3d6bc5c9-3cf7-45ba-bbb8-5e1a632c5c24_1200x1200.webp?v=1733858281",
+        "image_checked": true,
         "comparison": "equal",
         "server_version": "1.1.2",
         "version_state": "À jour"
