@@ -111,11 +111,11 @@
     "id": "fsltl",
     "name": "FSLTL (modèles et livrées)",
     "group": "Trafic",
-    "source_url": "https://github.com/FSLiveTrafficLiveries/base/releases",
+    "source_url": "https://github.com/FSLiveTrafficLiveries/FSLTL_BaseModels_Releases/releases",
     "method": "github_release",
     "installed_version": null,
     "tracking": "Versions officielles FSLTL Base Models : nouveaux avions, livrées, correctifs (injecteur exclu)",
-    "repo": "FSLiveTrafficLiveries/base"
+    "repo": "FSLiveTrafficLiveries/FSLTL_BaseModels_Releases"
   },
   {
     "id": "aig",
@@ -157,8 +157,8 @@
     "id": "airmanager",
     "name": "Sim Innovations — Air Manager",
     "group": "Cockpit",
-    "source_url": "https://www.siminnovations.com/",
-    "method": "official_news",
+    "source_url": "https://docs.siminnovations.com/air_manager_5/release_notes/",
+    "method": "siminnovations",
     "installed_version": null,
     "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
   },
