@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T22:55:37.773355+00:00",
-  "weather_checked_at": "2026-10-28T22:55:37.773355+00:00",
-  "news_checked_at": "2026-10-28T22:55:37.773355+00:00",
+  "last_run": "2026-10-28T23:10:52.547389+00:00",
+  "weather_checked_at": "2026-10-28T23:10:52.547389+00:00",
+  "news_checked_at": "2026-10-28T23:10:52.547389+00:00",
   "weather": [
     {
       "icao": "EDDB",
@@ -18,10 +18,36 @@
       "taf_raw": "TAF AMD EDDB 282241Z 2822/2918 25005KT 3000 BR NSC TEMPO 2822/2909 0700 FG PROB30 TEMPO 2823/2908 VRB03KT 0300 FG BKN001 BECMG 2908/2911 9000"
     },
     {
+      "icao": "LFRN",
+      "name": "LFRN Rennes Bretagne Airport",
+      "observed_at": "2026-10-28T23:00:00+00:00",
+      "raw": "METAR LFRN 282300Z AUTO 00000KT 0750 0700 R28/P2000 R10/0900D FG NSC 06/06 Q1028 TEMPO 0500 FG VV///",
+      "score": 145,
+      "summary": "brouillard, visibilité < 1 SM",
+      "icon": "🌫️",
+      "phenomenon": "Brouillard",
+      "level": "Très dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF AMD LFRN 282211Z 2822/2918 VRB03KT CAVOK TEMPO 2822/2907 3000 BR PROB40 TEMPO 2822/2906 0500 FG VV/// BECMG 2910/2912 10010KT BECMG 2915/2918 VRB05KT"
+    },
+    {
+      "icao": "PANC",
+      "name": "sim-wings Anchorage",
+      "observed_at": "2026-10-28T23:00:00+00:00",
+      "raw": "SPECI PANC 282300Z 03006KT 1/4SM R07R/2200VP6000FT FZFG VV002 M01/M01 A3025 RMK AO2 T10061006",
+      "score": 145,
+      "summary": "brouillard, visibilité < 1 SM",
+      "icon": "🌫️",
+      "phenomenon": "Brouillard",
+      "level": "Très dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF PANC 282226Z 2822/2924 VRB02KT 4SM BR VCFG SCT003 TEMPO 2822/2824 1/2SM FZFG BKN002 FM290000 04004KT P6SM FEW045 SCT100 WS020/15030KT FM291000 01008KT P6SM -RA SCT020 OVC035 WS020/15030KT FM291400 02007KT 6SM -RA BR BKN020 WS020/15030KT FM292000 VRB05KT P6SM VCSH SCT020 OVC040 WS020/15030KT"
+    },
+    {
       "icao": "SLLP",
       "name": "SLLP El Alto International Airport",
-      "observed_at": "2026-10-28T22:40:00+00:00",
-      "raw": "SPECI SLLP 282240Z 26014G30KT 9999 -TSRA SCT015 FEW017CB SCT070 BKN200 08/03 Q1036 NOSIG",
+      "observed_at": "2026-10-28T23:00:00+00:00",
+      "raw": "METAR SLLP 282300Z 21016G28KT 160V240 9999 SCT015 FEW017CB SCT070 BKN200 07/02 Q1035 RETSRA NOSIG",
       "score": 132,
       "summary": "orage, rafales ≥ 25 kt",
       "icon": "⛈️",
@@ -31,23 +57,23 @@
       "taf_raw": "TAF SLLP 281600Z 2818/2918 32010KT 9999 SCT015 FEW017CB BKN070 TX12/2819Z TN00/2910Z TEMPO 2818/2822 06010KT 5000 TSRA BECMG 2900/2903 VRB02KT TEMPO 2904/2908 3000 BCFG FEW002 BKN010 BECMG 2912/2915 29010KT"
     },
     {
-      "icao": "DAAG",
-      "name": "Houari-Boumediene Airport",
-      "observed_at": "2026-10-28T22:00:00+00:00",
-      "raw": "METAR DAAG 282200Z 20004KT 9999 SCT019 FEW023CB SCT036 19/18 Q1022 RETS",
-      "score": 110,
-      "summary": "orage",
-      "icon": "⛈️",
-      "phenomenon": "Orage",
+      "icao": "CYYC",
+      "name": "CYYC Calgary International Airport",
+      "observed_at": "2026-10-28T23:09:00+00:00",
+      "raw": "SPECI CYYC 282309Z 36008KT 2 1/4SM -SN BR FEW010 OVC027 M02/M04 A3004 RMK SF2NS6 SLP223",
+      "score": 120,
+      "summary": "neige, visibilité < 3 SM",
+      "icon": "🌨️",
+      "phenomenon": "Neige",
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF DAAG 281700Z 2818/2918 VRB02KT 9999 FEW020 SCT200 TEMPO 2818/2824 FEW026CB PROB40 TEMPO 2818/2823 VRB15G25KT -TSRA FEW023CB BECMG 2910/2912 08012KT"
+      "taf_raw": "TAF CYYC 282040Z 2821/2918 36012KT 6SM -SN SCT012 OVC060 TEMPO 2821/2902 5SM -SN BR SCT008 BKN012 PROB30 2821/2902 2 1/2SM -SN VV010 FM290200 02006KT P6SM SCT012 OVC030 TEMPO 2902/2908 4SM -SN BR OVC012 FM290800 VRB03KT 1 1/2SM -SN BR OVC008 TEMPO 2908/2918 6SM -SN SCT008 OVC012 PROB30 2910/2916 3/4SM -SN BR OVC004 RMK NXT FCST BY 290000Z"
     },
     {
       "icao": "CYEG",
       "name": "CYEG - Edmonton Airport",
-      "observed_at": "2026-10-28T22:44:00+00:00",
-      "raw": "SPECI CYEG 282244Z 34010KT 3SM -SN DRSN FEW009 OVC026 M02/M04 A3007 RMK SF1SC7 SLP223",
+      "observed_at": "2026-10-28T23:00:00+00:00",
+      "raw": "METAR CYEG 282300Z 32008KT 3SM -SN DRSN FEW009 SCT015 OVC032 M02/M04 A3008 RMK SF1SC4SC4 SF TR SLP224",
       "score": 95,
       "summary": "neige, visibilité < 5 SM",
       "icon": "🌨️",
@@ -55,45 +81,6 @@
       "level": "Dégradé",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF CYEG 282040Z 2821/2918 32012KT 2 1/2SM -SN SCT008 BKN012 OVC030 TEMPO 2821/2906 P6SM -SN SCT012 BKN030 FM290600 32008KT 3SM -SN BR OVC008 TEMPO 2906/2914 6SM -SN SCT008 OVC012 PROB30 2909/2914 1 1/2SM -SN BR OVC004 FM291400 31006KT P6SM SCT012 OVC025 TEMPO 2914/2918 4SM -SN BR SCT008 OVC012 RMK NXT FCST BY 290000Z"
-    },
-    {
-      "icao": "LFRN",
-      "name": "LFRN Rennes Bretagne Airport",
-      "observed_at": "2026-10-28T22:30:00+00:00",
-      "raw": "METAR LFRN 282230Z AUTO 00000KT 5000 BR NSC 07/06 Q1028 TEMPO 0500 FG VV///",
-      "score": 85,
-      "summary": "brouillard, visibilité < 5 SM",
-      "icon": "🌫️",
-      "phenomenon": "Brouillard",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF AMD LFRN 282211Z 2822/2918 VRB03KT CAVOK TEMPO 2822/2907 3000 BR PROB40 TEMPO 2822/2906 0500 FG VV/// BECMG 2910/2912 10010KT BECMG 2915/2918 VRB05KT"
-    },
-    {
-      "icao": "PANC",
-      "name": "sim-wings Anchorage",
-      "observed_at": "2026-10-28T22:53:00+00:00",
-      "raw": "METAR PANC 282253Z 05005KT 3/4SM R07R/1400V3000FT BR VV002 00/00 A3026 RMK AO2 SLP248 T00000000",
-      "score": 80,
-      "summary": "visibilité < 1 SM",
-      "icon": "☁️",
-      "phenomenon": "Ciel non précisé",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF PANC 282226Z 2822/2924 VRB02KT 4SM BR VCFG SCT003 TEMPO 2822/2824 1/2SM FZFG BKN002 FM290000 04004KT P6SM FEW045 SCT100 WS020/15030KT FM291000 01008KT P6SM -RA SCT020 OVC035 WS020/15030KT FM291400 02007KT 6SM -RA BR BKN020 WS020/15030KT FM292000 VRB05KT P6SM VCSH SCT020 OVC040 WS020/15030KT"
-    },
-    {
-      "icao": "CYYC",
-      "name": "CYYC Calgary International Airport",
-      "observed_at": "2026-10-28T22:48:00+00:00",
-      "raw": "SPECI CYYC 282248Z CCA 35010KT 5SM -SN BR SCT015 OVC027 M02/M05 A3003 RMK SF3NS5 SLP220",
-      "score": 75,
-      "summary": "neige",
-      "icon": "🌨️",
-      "phenomenon": "Neige",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF CYYC 282040Z 2821/2918 36012KT 6SM -SN SCT012 OVC060 TEMPO 2821/2902 5SM -SN BR SCT008 BKN012 PROB30 2821/2902 2 1/2SM -SN VV010 FM290200 02006KT P6SM SCT012 OVC030 TEMPO 2902/2908 4SM -SN BR OVC012 FM290800 VRB03KT 1 1/2SM -SN BR OVC008 TEMPO 2908/2918 6SM -SN SCT008 OVC012 PROB30 2910/2916 3/4SM -SN BR OVC004 RMK NXT FCST BY 290000Z"
     },
     {
       "icao": "EDDM",
@@ -122,17 +109,30 @@
       "taf_raw": "TAF LIML 281700Z 2818/2918 VRB04KT 8000 FEW040 BECMG 2900/2902 3000 BR TEMPO 2904/2908 1200 BCFG BKN014 BECMG 2908/2910 9999"
     },
     {
-      "icao": "ENGM",
-      "name": "Aerosoft Oslo Airport",
-      "observed_at": "2026-10-28T22:50:00+00:00",
-      "raw": "METAR ENGM 282250Z 17006KT 8000 -DZ BKN004 09/07 Q1016",
+      "icao": "DAAG",
+      "name": "Houari-Boumediene Airport",
+      "observed_at": "2026-10-28T23:00:00+00:00",
+      "raw": "METAR DAAG 282300Z 28003KT 250V330 8000 -RA SCT019 FEW023CB BKN040 19/18 Q1022",
       "score": 32,
       "summary": "visibilité < 5 SM, précipitations",
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF ENGM 281700Z 2818/2918 19010KT 9999 BKN025 BECMG 2819/2821 BKN012 BECMG 2900/2902 FEW002 PROB40 2903/2909 1200 BR OVC002 BECMG 2912/2914 35005KT"
+      "taf_raw": "TAF DAAG 281700Z 2818/2918 VRB02KT 9999 FEW020 SCT200 TEMPO 2818/2824 FEW026CB PROB40 TEMPO 2818/2823 VRB15G25KT -TSRA FEW023CB BECMG 2910/2912 08012KT"
+    },
+    {
+      "icao": "EICK",
+      "name": "Cork Airport",
+      "observed_at": "2026-10-28T23:00:00+00:00",
+      "raw": "METAR EICK 282300Z 21012KT 8000 -DZ BKN006 BKN013 11/10 Q1023 BECMG BKN010",
+      "score": 32,
+      "summary": "visibilité < 5 SM, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF AMD EICK 282148Z 2821/2918 20010KT 9999 BKN004 BECMG 2821/2823 FEW007 BKN020 BECMG 2900/2902 17012KT TEMPO 2909/2918 16015G25KT PROB30 TEMPO 2913/2916 BKN010 TEMPO 2916/2918 BKN008"
     }
   ],
   "weather_coverage": {
@@ -244,7 +244,7 @@
       "date": "2026-10-27",
       "source": "GitHub Releases officiel — FSLiveTrafficLiveries/base",
       "url": "https://github.com/FSLiveTrafficLiveries/base/releases/tag/1.7.0",
-      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - 150+ livrées réelles et historiques nouvelles ou mises à jour - 250+ livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
+      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - Plus de 150 livrées réelles et historiques nouvelles ou mises à jour - Plus de 250 livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
       "impact": "Vérifier le changelog officiel et sauvegarder les configurations avant installation.",
       "new": false
     },
@@ -283,7 +283,7 @@
     },
     {
       "id": "msfs_fselite_news-content-win-rowsfire-a117-a320-glareshield-panel-this-halloween",
-      "title": "GAGNEZ : Panneau anti-éblouissement Rowsfire A117 A320 cet Halloween",
+      "title": "GAGNEZ : Panneau anti-éblouissement Rowsfire A117 A320 cet Halloween",
       "category": "MSFS 2024",
       "topic": "MSFS",
       "date": "2026-10-26",
@@ -366,12 +366,12 @@
     },
     {
       "id": "779510",
-      "title": "[Blog] Briefing hebdomadaire du 22/10/2026",
+      "title": "[Blog] Briefing hebdomadaire du 2026-10-22",
       "category": "MSFS officiel",
       "date": "2026-10-22",
       "source": "Forum officiel Microsoft Flight Simulator",
       "url": "https://forums.flightsimulator.com/t/blog-weekly-briefing-for-2026-10-22/779510",
-      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Lisez la suite pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
+      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Poursuivez votre lecture pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
       "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
       "new": false
     },
@@ -511,7 +511,7 @@
       "date": "2026-09-03",
       "source": "FSElite — FSDreamTeam",
       "url": "https://fselite.net/content/cockpit2ground-announced-bringing-more-realistic-gsx-interaction-possible/",
-      "summary": "03 septembre 2026 - Cockpit2Ground veut amener la communication GSX au-delà du simple remplacement de la voix, avec des conversations dynamiques qui réagissent à votre avion, à votre plan de vol et à ce qui se passe réellement au sol. Actualités MSFS 2024 var HYVOR_TALK_WEBSITE = 3490 ; window.addEventListener('load', function() { hyvorTalkCommentCount",
+      "summary": "03 septembre 2026 - Cockpit2Ground veut amener la communication GSX au-delà du simple remplacement vocal, avec des conversations dynamiques qui réagissent à votre avion, à votre plan de vol et à ce qui se passe réellement au sol. Actualités MSFS 2024 var HYVOR_TALK_WEBSITE = 3490 ; window.addEventListener('load', function() { hyvorTalkCommentCount",
       "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
       "new": false
     }
@@ -556,15 +556,15 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 57,
-    "audited_at": "2026-10-28T22:55:37.773355+00:00"
+    "audited_at": "2026-10-28T23:10:52.547389+00:00"
   },
-  "versions_checked_at": "2026-10-28T22:55:37.773355+00:00",
-  "releases_checked_at": "2026-10-28T22:55:37.773355+00:00",
+  "versions_checked_at": "2026-10-28T23:10:52.547389+00:00",
+  "releases_checked_at": "2026-10-28T23:10:52.547389+00:00",
   "software_coverage": {
     "total": 23,
     "verified": 5,
     "changed": 0,
-    "checked_at": "2026-10-28T22:56:43.242269+00:00",
+    "checked_at": "2026-10-28T23:11:47.299398+00:00",
     "unverified": 18
   },
   "airac_cycle": "2610"

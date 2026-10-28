@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-28T22:56:43.242269+00:00",
+  "checked_at": "2026-10-28T23:11:47.299398+00:00",
   "total": 23,
   "verified": 5,
   "changed": 0,
@@ -15,7 +15,7 @@
       "version": "1.9.21.0",
       "preview_version": null,
       "state": "verified",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Version vérifiée sur le changelog officiel",
       "version_url": "https://www.flightsimulator.com/su71-release/",
       "published_at": null,
@@ -36,7 +36,7 @@
       "version": "V3 (branche)",
       "preview_version": null,
       "state": "unavailable",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Source inaccessible aujourd'hui ; dernière version confirmée conservée à titre historique, non revérifiée.",
       "version_url": "https://fenixsim.com/status/",
       "last_confirmed_at": "2026-10-25"
@@ -52,7 +52,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -66,7 +66,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -80,7 +80,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -94,7 +94,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -108,7 +108,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -122,7 +122,7 @@
       "version": "11.3.1",
       "preview_version": "11.3.1.2",
       "state": "verified",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Version vérifiée sur le changelog officiel",
       "version_url": "https://github.com/MobiFlight/MobiFlight-Connector/releases/tag/11.3.1",
       "published_at": "2026-10-06T10:51:23Z",
@@ -143,7 +143,7 @@
       "version": "1.17.1",
       "preview_version": null,
       "state": "unavailable",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Source inaccessible aujourd'hui ; dernière version confirmée conservée à titre historique, non revérifiée.",
       "version_url": "https://winwingsim.com/mobileview/simapppro.html",
       "last_confirmed_at": "2026-10-25"
@@ -159,7 +159,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -173,7 +173,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -191,7 +191,7 @@
       "version": "1.7.0",
       "preview_version": null,
       "state": "historical",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Référence vérifiée antérieurement (non revérifiée aujourd'hui) : FSLTL Base Models 1.7.0 sorti le 27 octobre 2026, version corroborée le 28 octobre ; dépôt GitHub releases en décalage.",
       "version_url": "https://www.simflight.de/2026/10/28/fsltl-1-7-0-fuenf-neue-flugzeugtypen/",
       "last_confirmed_at": "2026-10-28"
@@ -207,7 +207,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -221,22 +221,28 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
       "id": "flightcontrolreplay",
-      "name": "FlightControlReplay V5",
+      "name": "FlightControlReplay V6",
       "group": "Utilitaires",
-      "source_url": "https://flightcontroltools.com/",
-      "method": "official_news",
+      "source_url": "https://secure.simmarket.com/flightcontrolreplay-6-msfs-p3d-(fr_21441).phtml",
+      "method": "simmarket_fcr6",
       "installed_version": null,
       "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie",
-      "version": null,
+      "reference_version": "V6.0.2608.25",
+      "reference_checked_at": "2026-10-29",
+      "reference_source_url": "https://secure.simmarket.com/flightcontrolreplay-6-msfs-p3d-(fr_21441).phtml",
+      "reference_note": "Version indiquée sur la fiche SimMarket, historique daté du 26 août 2026.",
+      "version": "V6.0.2608.25",
       "preview_version": null,
-      "state": "not_public",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
-      "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
+      "state": "historical",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
+      "reason": "Référence vérifiée antérieurement (non revérifiée aujourd'hui) : Version indiquée sur la fiche SimMarket, historique daté du 26 août 2026.",
+      "version_url": "https://secure.simmarket.com/flightcontrolreplay-6-msfs-p3d-(fr_21441).phtml",
+      "last_confirmed_at": "2026-10-29"
     },
     {
       "id": "fsipanel",
@@ -249,7 +255,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -263,7 +269,7 @@
       "version": "5.2",
       "preview_version": null,
       "state": "verified",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Version vérifiée sur le changelog officiel",
       "version_url": "https://docs.siminnovations.com/air_manager_5/release_notes/",
       "published_at": null,
@@ -280,7 +286,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -294,7 +300,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -308,7 +314,7 @@
       "version": "2026.33.5.14",
       "preview_version": null,
       "state": "verified",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Version vérifiée sur le changelog officiel",
       "version_url": "https://parallel42.com/pages/is-it-out",
       "published_at": "2026-08-14T12:00:00+00:00",
@@ -325,7 +331,7 @@
       "version": "2026.33.5.13",
       "preview_version": null,
       "state": "verified",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Version vérifiée sur le changelog officiel",
       "version_url": "https://parallel42.com/pages/is-it-out",
       "published_at": "2026-08-14T12:00:00+00:00",
@@ -342,7 +348,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     },
     {
@@ -356,7 +362,7 @@
       "version": null,
       "preview_version": null,
       "state": "not_public",
-      "checked_at": "2026-10-28T22:56:43.242269+00:00",
+      "checked_at": "2026-10-28T23:11:47.299398+00:00",
       "reason": "Aucun numéro de version exploitable sur un flux public structuré. Site officiel suivi chaque jour."
     }
   ],
