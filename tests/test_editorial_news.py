@@ -24,6 +24,14 @@ class EditorialNewsTests(unittest.TestCase):
         self.assertEqual(state,"ok")
         self.assertEqual(len(news),1)
         self.assertEqual(news[0]["date"],"2026-10-27")
+    def test_fselite_listing_cards_without_jsonld(self):
+        landing='<h3><a href="https://fselite.net/2026/09/03/cockpit2ground/">Cockpit2Ground Announced, Bringing More Realistic GSX Interaction Possible</a></h3><p>03 Sep 2026 - A new GSX interaction tool</p>'
+        def fetcher(url,host):
+            return landing if url==SOURCE["url"] else "<html></html>"
+        news,state=collect_source(SOURCE,[],fetcher,NOW)
+        self.assertEqual(state,"ok")
+        self.assertEqual(len(news),1)
+        self.assertEqual(news[0]["date"],"2026-09-03")
     def test_missing_article_does_not_fake_news(self):
         news,state=collect_source(SOURCE,[],lambda url,host:"<html></html>",NOW)
         self.assertEqual((news,state),([],"no_dated_articles"))
