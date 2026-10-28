@@ -112,9 +112,10 @@
     "name": "FSLTL (modèles et livrées)",
     "group": "Trafic",
     "source_url": "https://github.com/FSLiveTrafficLiveries/base/releases",
-    "method": "official_news",
+    "method": "github_release",
     "installed_version": null,
-    "tracking": "Versions officielles FSLTL Base Models : nouveaux avions, livrées, correctifs (injecteur exclu)"
+    "tracking": "Versions officielles FSLTL Base Models : nouveaux avions, livrées, correctifs (injecteur exclu)",
+    "repo": "FSLiveTrafficLiveries/base"
   },
   {
     "id": "aig",
