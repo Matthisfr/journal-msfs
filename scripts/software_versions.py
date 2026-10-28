@@ -115,6 +115,10 @@ def update():
                 stable=fenix_official()
             elif entry["method"]=="siminnovations":
                 stable=siminnovations_version()
+            elif entry["method"]=="parallel42":
+                from parallel42_versions import extract
+                product={"chaseplane":"ChasePlane","flowpro":"Flow Pro"}[entry["id"]]
+                stable=extract(get("https://parallel42.com/pages/is-it-out"),product)
             if stable:
                 row.update({"version":stable["version"],"state":"verified","version_url":stable["url"],
                             "published_at":stable["published_at"],"reason":"Version vérifiée sur le changelog officiel"})
