@@ -236,6 +236,15 @@ def run():
     except Exception as e:
         src['official_releases']='error'
         status['errors'].append('Versions GitHub: '+str(e)[:250])
+    try:
+        from sayintentions_news import collect_sayintentions
+        si_news,si_state=collect_sayintentions(status.get('news',[]))
+        news_from_sources.extend(si_news)
+        src['sayintentions_news']=si_state
+        print('SayIntentions articles:',len(si_news),'status:',si_state)
+    except Exception as e:
+        src['sayintentions_news']='error'
+        status['errors'].append('SayIntentions blog: '+str(e)[:250])
     if news_from_sources:
         status['errors'].extend(translate_news_to_french(news_from_sources))
         unique={x['url']:x for x in status.get('news',[]) if x.get('url')}
