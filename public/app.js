@@ -298,6 +298,9 @@ function renderNews(){
     .filter(x=>newsAgeGroup(x)<3)
     .sort((x,y)=>newsAgeGroup(x)-newsAgeGroup(y) || (new Date(y.published_at||y.date)-new Date(x.published_at||x.date)));
   $('#news-container').innerHTML=a.length?a.map(newsMarkup).join(''):'<div class="empty"><strong>Aucune nouveauté vérifiée</strong>Le site ne publie pas d’annonce sans date ni source vérifiable.</div>';
+  const lead=a.find(x=>newsAgeGroup(x)<3);
+  const hero=document.querySelector('#accueil .hero-main p');
+  if(hero&&lead)hero.textContent='Dernière nouveauté vérifiée : '+lead.title+'. Consulte les actualités pour le détail et la source officielle.';
   $('#home-news').innerHTML=a.filter(x=>newsAgeGroup(x)<3).slice(0,6).map(x=>'<article><div class="home-news-row">'+topicBadge(x)+'<div class="home-news-content"><small>'+esc(x.category||'Actualités')+' · '+esc(localDate(x.date))+'</small><strong>'+esc(x.title)+'</strong><a href="'+esc(isSafeUrl(x.url))+'" target="_blank" rel="noopener noreferrer">Source officielle ↗</a></div></div></article>').join('')||'<p class="muted">Aucune actualité sourcée pour le moment.</p>';
 }
 
