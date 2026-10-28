@@ -81,6 +81,15 @@ def fenix_official():
     return {"version":"V"+m.group(1)+" (branche)","url":"https://fenixsim.com/blog/entries/2026-10-21_v3_update/" if m.group(1)=="3" else url,
             "published_at":None,"notes":"Version majeure confirmée. Numéro exact du launcher non public : consulter le journal des modifications Fenix."}
 
+def simmarket_fcr6_version():
+    url="https://secure.simmarket.com/flightcontrolreplay-6-msfs-p3d-(fr_21441).phtml"
+    raw=text_html(get(url))
+    m=re.search(r"\bVersion\s+([vV]6\.\d+\.\d+\.\d+)\b",raw,re.I)
+    if not m:raise ValueError("Version FCR6 absente de la fiche SimMarket")
+    notes_match=re.search(r"(?:Historique des modifications|Changelog)\s+(.{0,1500})",raw,re.I|re.S)
+    notes=notes_match.group(1)[:1100] if notes_match else "Version publiée sur la fiche SimMarket FlightControlReplay 6."
+    return {"version":m.group(1).upper(),"url":url,"published_at":None,"notes":notes}
+
 def siminnovations_version():
     url="https://docs.siminnovations.com/air_manager_5/release_notes/"
     raw=text_html(get(url))
@@ -115,6 +124,8 @@ def update():
                 stable=fenix_official()
             elif entry["method"]=="siminnovations":
                 stable=siminnovations_version()
+            elif entry["method"]=="simmarket_fcr6":
+                stable=simmarket_fcr6_version()
             elif entry["method"]=="parallel42":
                 from parallel42_versions import extract
                 product={"chaseplane":"ChasePlane","flowpro":"Flow Pro"}[entry["id"]]
