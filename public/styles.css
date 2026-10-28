@@ -243,3 +243,7 @@
 
 /* Bouton commentaire compatible tactile iPad, sans modifier les dimensions du tableau. */
 button.airport-description-info{border:0;background:transparent;padding:0 3px;margin:0;line-height:1;font:inherit;color:#417c9a;cursor:pointer;vertical-align:baseline}
+
+/* Commentaire tactile dans la cellule : panneau superposé sans agrandir la liste. */
+.airport-comment-popover{position:absolute;z-index:2000;max-width:min(330px,80vw);padding:12px 34px 12px 12px;background:#fff;color:#1c3445;border:1px solid #9bb4c5;border-radius:7px;box-shadow:0 4px 16px #0004;white-space:normal;overflow-wrap:anywhere;font-size:13px;line-height:1.45}
+.airport-comment-popover button{position:absolute;top:2px;right:5px;background:transparent;border:0;color:#1c3445;font-size:22px;cursor:pointer}
