@@ -12,10 +12,10 @@ SOURCES=[{"id":"gsx_fselite_news","url":"https://fselite.net/developer/fsdreamte
 
 class Page(HTMLParser):
     def __init__(self):
-        super().__init__();self.links=[];self.jsonld=[];self._ld=False;self._buf=[]
+        super().__init__();self.links=[];self.jsonld=[];self._ld=False;self._buf=[];self.headings=[];self._h3=False;self._heading=[];self._heading_url=None;self._after_heading=None
     def handle_starttag(self,tag,attrs):
         a=dict(attrs)
-        if tag=="a" and a.get("href"):self.links.append(a["href"])
+        if tag=="a" and a.get("href"):\n            self.links.append(a["href"])\n            if self._h3:self._heading_url=a["href"]\n        if tag=="h3":self._h3=True;self._heading=[];self._heading_url=None
         if tag=="script" and a.get("type","").lower()=="application/ld+json":
             self._ld=True;self._buf=[]
     def handle_data(self,data):
@@ -60,7 +60,7 @@ def normalize_article(a,source,now):
     if p.path.startswith(("/developer/","/category/","/tag/","/page/")) or p.path=="/":return None
     title=clean(a.get("headline") or a.get("name"))
     date=date_of(a.get("datePublished"))
-    if not title or not date or date>now+dt.timedelta(minutes=5) or now-date>dt.timedelta(days=45):return None
+    if not title or not date or date>now+dt.timedelta(minutes=5) or now-date>dt.timedelta(days=60):return None
     combined=(title+" "+clean(a.get("description"))).lower()
     if not any(k in combined for k in source["keywords"]):return None
     summary=clean(a.get("description"))[:320] or title
@@ -79,6 +79,15 @@ def collect_source(source,previous,fetcher=fetch,now=None):
     for o in page.jsonld:
         for a in articles(o):
             if a.get("url"):candidates[str(a["url"])]=a
+    # FSElite publie titre et date directement dans les cartes de sa page éditeur.
+    # Cette voie fonctionne même si les pages d'article n'exposent aucun JSON-LD.
+    for heading in page.headings:
+        m=re.search(r"\\b(\\d{1,2})\\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\\s+(20\\d{2})\\b",heading["nearby"],re.I)
+        if not m:continue
+        published=date_of(f"{m.group(3)}-{dict(Jan='01',Feb='02',Mar='03',Apr='04',May='05',Jun='06',Jul='07',Aug='08',Sep='09',Oct='10',Nov='11',Dec='12')[m.group(2).title()]}-{int(m.group(1)):02d}T12:00:00Z")
+        if published:
+            u=urljoin(source["url"],heading["url"])
+            candidates[u]={"url":u,"headline":heading["title"],"datePublished":published.isoformat(),"description":heading["nearby"]}
     urls=[]
     for link in page.links:
         u=urljoin(source["url"],link).split("#")[0].split("?")[0]
