@@ -264,6 +264,39 @@ async function renderMap(){
    airportMapMarkers.push({code:String(code).trim().toUpperCase(),marker:m});
    bounds.push(m.getLatLng());
   }
+  // Appui long (iPad) ou clic droit : raccourcis de recherche des scènes.
+  const searchPopupForPoint=latlng=>{
+   if(!airportMapMarkers.length)return;
+   const point=airportMap.latLngToContainerPoint(latlng);
+   const closest=airportMapMarkers.map(item=>({item,distance:point.distanceTo(airportMap.latLngToContainerPoint(item.marker.getLatLng()))})).sort((a,b)=>a.distance-b.distance)[0];
+   if(!closest||closest.distance>65)return;
+   const code=closest.item.code;
+   const name=(data[code]&&data[code].name)||code;
+   const query=encodeURIComponent(code);
+   const shops=[
+    ['SimMarket','https://secure.simmarket.com/advanced_search_result.php?keywords='+query],
+    ['iniBuilds','https://inibuilds.com/search?q='+query],
+    ['Contrail','https://contrail.shop/search?q='+query],
+    ['Flightsim.to','https://flightsim.to/search?q='+query]
+   ];
+   const html='<div class="airport-shop-popup"><strong>'+esc(code)+' — '+esc(name)+'</strong><p>Rechercher des scènes pour cet aéroport :</p>'+
+     shops.map(([label,url])=>'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(label)+' ↗</a>').join('')+'</div>';
+   L.popup({maxWidth:300}).setLatLng(closest.item.marker.getLatLng()).setContent(html).openOn(airportMap);
+  };
+  let longPressTimer=null,startPoint=null,handledLongPress=false;
+  const clearLongPress=()=>{if(longPressTimer!==null){clearTimeout(longPressTimer);longPressTimer=null}};
+  mapElement.addEventListener('pointerdown',e=>{
+   if(e.pointerType!=='touch'&&e.pointerType!=='pen')return;
+   if(e.target.closest('.leaflet-control,.leaflet-popup'))return;
+   clearLongPress();handledLongPress=false;startPoint={x:e.clientX,y:e.clientY};
+   const rect=mapElement.getBoundingClientRect();
+   const latlng=airportMap.containerPointToLatLng([e.clientX-rect.left,e.clientY-rect.top]);
+   longPressTimer=setTimeout(()=>{handledLongPress=true;searchPopupForPoint(latlng);clearLongPress()},850);
+  });
+  mapElement.addEventListener('pointermove',e=>{if(startPoint&&Math.hypot(e.clientX-startPoint.x,e.clientY-startPoint.y)>12)clearLongPress()});
+  ['pointerup','pointercancel','pointerleave'].forEach(type=>mapElement.addEventListener(type,()=>{clearLongPress();startPoint=null}));
+  airportMap.on('contextmenu',e=>searchPopupForPoint(e.latlng));
+  mapElement.addEventListener('contextmenu',e=>{if(handledLongPress)e.preventDefault()});
   updateAirportMap(airports.filter(a=>{const q=$('#airport-search').value.trim().toLowerCase(),region=$('#region-filter').value,st=$('#status-filter').value;const code=String(a.icao||'').trim().toUpperCase();const counts=airports.filter(x=>String(x.icao||'').trim().toUpperCase()===code).length;const verified=!!a.server_version&&a.version_check_state==='verified'&&a.version_checked_at===String(status.versions_checked_at||'').slice(0,10);return (!q||[a.icao,a.original,a.name,a.publisher,a.folder,a.country,a.region,a.installed,a.server_version].join(' ').toLowerCase().includes(q))&&(!region||(a.region||a.country)===region)&&(!st||(st==='duplicates'?counts>1:st==='verified'?verified:st==='current'?verified&&a.version_comparison==='equal':st==='update'?verified&&a.version_comparison==='update':a.status===st))}));
   await addSimbriefRoute(airportMap,data,slot);
   if(focusSimbriefOnOpen&&simbriefRouteBounds){focusSimbriefOnOpen=false;focusSimbriefRoute();setTimeout(scrollToAirportMap,600);}
