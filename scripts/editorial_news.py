@@ -17,7 +17,8 @@ class Page(HTMLParser):
         a=dict(attrs)
         if tag=="a" and a.get("href"):
             self.links.append(a["href"])
-            if self._h3:self._heading_url=a["href"]\n        if tag=="h3":self._h3=True;self._heading=[];self._heading_url=None
+            if self._h3:self._heading_url=a["href"]
+        if tag=="h3":self._h3=True;self._heading=[];self._heading_url=None
         if tag=="script" and a.get("type","").lower()=="application/ld+json":
             self._ld=True;self._buf=[]
     def handle_data(self,data):
