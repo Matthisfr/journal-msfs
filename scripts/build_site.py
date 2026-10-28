@@ -133,8 +133,14 @@ def render_airport_digest(airports):
     for a in airports:
         if a.get("version_check_state") != "verified" or a.get("version_checked_at") != today:
             continue
-        label, _ = compare(a.get("installed"), a.get("server_version"))
-        if label not in ("MISE À JOUR", "NOUVELLE ÉDITION"):
+        # Utiliser la comparaison validée par le moteur de versions,
+        # et non un second comparateur qui rejette 1.0.1 vs 1.1.
+        state = a.get("version_comparison")
+        if state == "update":
+            label = "MISE À JOUR"
+        elif state == "new_edition":
+            label = "NOUVELLE ÉDITION"
+        else:
             continue
         url = str(a.get("source_url") or "")
         source = (f'<a href="{h(url)}" target="_blank" rel="noopener noreferrer">'
