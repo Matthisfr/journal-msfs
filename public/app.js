@@ -269,7 +269,7 @@ async function renderMap(){
    if(!airportMapMarkers.length)return;
    const point=airportMap.latLngToContainerPoint(latlng);
    const closest=airportMapMarkers.map(item=>({item,distance:point.distanceTo(airportMap.latLngToContainerPoint(item.marker.getLatLng()))})).sort((a,b)=>a.distance-b.distance)[0];
-   if(!closest||closest.distance>65)return;
+   if(!closest||closest.distance>220)return;
    const code=closest.item.code;
    const name=(data[code]&&data[code].name)||code;
    const query=encodeURIComponent(code);
