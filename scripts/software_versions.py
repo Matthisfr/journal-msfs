@@ -90,6 +90,29 @@ def simmarket_fcr6_version():
     notes=notes_match.group(1)[:1100] if notes_match else "Version publiée sur la fiche SimMarket FlightControlReplay 6."
     return {"version":m.group(1).upper(),"url":url,"published_at":None,"notes":notes}
 
+def navigraph_charts_version():
+    """Read official Charts changelog; never mistake other Navigraph products for Charts."""
+    url="https://navigraph.com/products/charts/changelog"
+    raw=get(url)
+    page=text_html(raw)
+    # The changelog may be client-rendered. Only accept an explicitly labelled
+    # Charts version, not arbitrary numbers in bundled scripts or other products.
+    patterns=[
+        r"(?:Navigraph\s+)?Charts\s+(?:New\s+)?Version\s*[:#-]?\s*v?(8\.\d+\.\d+)",
+        r"v(8\.\d+\.\d+)\s*[-–:]\s*(?:Navigraph\s+)?Charts",
+    ]
+    matches=[]
+    for pattern in patterns:
+        matches.extend(re.finditer(pattern,page,re.I))
+    if not matches:
+        raise ValueError("Changelog Charts non lisible (page dynamique) : aucune version vérifiable")
+    versions=[m.group(1) for m in matches]
+    version=max(versions,key=lambda s:tuple(map(int,s.split("."))))
+    match=next(m for m in matches if m.group(1)==version)
+    notes=page[match.end():match.end()+2000].strip()
+    return {"version":version,"url":url,"published_at":None,
+            "notes":notes[:1200] or "Version officielle Navigraph Charts."}
+
 def siminnovations_version():
     url="https://docs.siminnovations.com/air_manager_5/release_notes/"
     raw=text_html(get(url))
@@ -124,6 +147,8 @@ def update():
                 stable=fenix_official()
             elif entry["method"]=="siminnovations":
                 stable=siminnovations_version()
+            elif entry["method"]=="navigraph_charts":
+                stable=navigraph_charts_version()
             elif entry["method"]=="simmarket_fcr6":
                 stable=simmarket_fcr6_version()
             elif entry["method"]=="parallel42":
