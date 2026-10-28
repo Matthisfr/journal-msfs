@@ -111,19 +111,19 @@
     "id": "fsltl",
     "name": "FSLTL (modèles et livrées)",
     "group": "Trafic",
-    "source_url": "https://www.fslivetrafficliveries.com/",
+    "source_url": "https://github.com/FSLiveTrafficLiveries/base/releases",
     "method": "official_news",
     "installed_version": null,
-    "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
+    "tracking": "Versions officielles FSLTL Base Models : nouveaux avions, livrées, correctifs (injecteur exclu)"
   },
   {
     "id": "aig",
     "name": "Alpha India Group / AIG",
     "group": "Trafic",
-    "source_url": "https://www.alpha-india.net/",
+    "source_url": "https://www.alpha-india.net/forums",
     "method": "official_news",
     "installed_version": null,
-    "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
+    "tracking": "Annonces officielles AIG : modèles, livrées et SimObjects via forum et AI Manager/OCI ; pas de changelog public exhaustif"
   },
   {
     "id": "navigraph",
