@@ -17,6 +17,16 @@ try:
  cache=json.loads(cache_path.read_text(encoding='utf-8')) if cache_path.exists() else {}
 except (ValueError, OSError):
  cache={}
+# Réutiliser les images déjà publiées : comparaisons.json est versionné.
+previous_path=ROOT/'public/comparisons.json'
+if previous_path.exists():
+ try:
+  for record in json.loads(previous_path.read_text(encoding='utf-8')):
+   for scene in record.get('scenes',[]):
+    if scene.get('url') and scene.get('image'):
+     cache.setdefault(scene['url'],scene['image'])
+ except (ValueError, OSError, TypeError):
+  pass
 class PhotoParser(HTMLParser):
  def __init__(self):
   super().__init__()
