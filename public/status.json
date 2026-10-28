@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T19:52:28.577734+00:00",
-  "weather_checked_at": "2026-10-28T19:52:28.577734+00:00",
-  "news_checked_at": "2026-10-28T19:52:28.577734+00:00",
+  "last_run": "2026-10-28T19:54:58.813450+00:00",
+  "weather_checked_at": "2026-10-28T19:54:58.813450+00:00",
+  "news_checked_at": "2026-10-28T19:54:58.813450+00:00",
   "weather": [
     {
       "icao": "PANC",
@@ -18,6 +18,19 @@
       "taf_raw": "TAF PANC 281910Z 2819/2924 VRB02KT 4SM BR SCT003 BKN045 TEMPO 2819/2821 1/2SM FZFG BKN002 FM282100 VRB03KT P6SM VCFG SCT003 SCT045 BKN180 FM290000 04004KT P6SM FEW045 SCT100 WS020/15030KT FM291000 01008KT P6SM -RA SCT020 OVC035 WS020/15030KT FM291400 02007KT 6SM -RA BR BKN020 WS020/15030KT FM292000 VRB05KT P6SM VCSH SCT020 OVC040 WS020/15030KT"
     },
     {
+      "icao": "LGRP",
+      "name": "LGRP Rhodes International Airport \"Diagoras\"",
+      "observed_at": "2026-10-28T19:50:00+00:00",
+      "raw": "METAR LGRP 281950Z COR 11006KT 090V200 8000 -TSRA FEW010 FEW016CB SCT018 17/16 Q1009 NOSIG",
+      "score": 130,
+      "summary": "orage, visibilité < 5 SM",
+      "icon": "⛈️",
+      "phenomenon": "Orage",
+      "level": "Très dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF LGRP 281700Z 2818/2918 12006KT 9999 SCT018 SCT050 PROB30 TEMPO 2818/2918 4000 RA FEW018TCU BKN020 PROB30 TEMPO 2818/2906 3000 TSRA FEW018CB BKN018 BKN050"
+    },
+    {
       "icao": "CYEG",
       "name": "CYEG - Edmonton Airport",
       "observed_at": "2026-10-28T19:27:00+00:00",
@@ -29,19 +42,6 @@
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF CYEG 281740Z 2818/2918 31012KT 1 1/2SM -SN OVC008 TEMPO 2818/2906 6SM -SN SCT008 OVC012 FM290600 32008KT 2SM -SN BR OVC004 TEMPO 2906/2912 6SM -SN SCT004 OVC010 FM291200 31006KT P6SM SCT008 OVC012 TEMPO 2912/2918 3SM -SN BR OVC008 RMK NXT FCST BY 282100Z"
-    },
-    {
-      "icao": "LGRP",
-      "name": "LGRP Rhodes International Airport \"Diagoras\"",
-      "observed_at": "2026-10-28T19:20:00+00:00",
-      "raw": "METAR LGRP 281920Z 14005KT 100V220 9000 -TSRA FEW010 FEW016CB SCT018 17/16 Q1009 NOSIG",
-      "score": 110,
-      "summary": "orage",
-      "icon": "⛈️",
-      "phenomenon": "Orage",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LGRP 281700Z 2818/2918 12006KT 9999 SCT018 SCT050 PROB30 TEMPO 2818/2918 4000 RA FEW018TCU BKN020 PROB30 TEMPO 2818/2906 3000 TSRA FEW018CB BKN018 BKN050"
     },
     {
       "icao": "LGSM",
@@ -149,7 +149,7 @@
       "date": "2026-10-27",
       "source": "GitHub Releases officiel — FSLiveTrafficLiveries/base",
       "url": "https://github.com/FSLiveTrafficLiveries/base/releases/tag/1.7.0",
-      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - Plus de 150 livrées réelles et historiques nouvelles ou mises à jour - Plus de 250 livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
+      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - 150+ livrées réelles et historiques nouvelles ou mises à jour - 250+ livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
       "impact": "Vérifier le changelog officiel et sauvegarder les configurations avant installation.",
       "new": false
     },
@@ -223,12 +223,12 @@
     },
     {
       "id": "779510",
-      "title": "[Blog] Briefing hebdomadaire du 2026-10-22",
+      "title": "[Blog] Briefing hebdomadaire du 22/10/2026",
       "category": "MSFS officiel",
       "date": "2026-10-22",
       "source": "Forum officiel Microsoft Flight Simulator",
       "url": "https://forums.flightsimulator.com/t/blog-weekly-briefing-for-2026-10-22/779510",
-      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Poursuivez votre lecture pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
+      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Lisez la suite pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
       "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
       "new": false
     },
@@ -297,9 +297,11 @@
     "airport_versions": "partial",
     "official_releases": "ok",
     "software_versions": "partial",
-    "sayintentions_news": "no_dated_articles"
+    "sayintentions_news": "no_dated_articles",
+    "gsx_fselite_news": "no_dated_articles"
   },
   "errors": [
+    "Traduction FR (779815/title): HTTPError",
     "Versions : GMMX / PERFECTSOFT : Fiche 1.1.0 plus ancienne que l'installation 1.2.0 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : DTTA / prealsoft : Fiche 1.00 plus ancienne que l'installation 1.0.1 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : CYVR / fsdreamteam : Fiche 1.0.7 plus ancienne que l'installation 1.3.1 : vérifier le canal éditeur, ne pas rétrograder",
@@ -327,15 +329,15 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 57,
-    "audited_at": "2026-10-28T19:52:28.577734+00:00"
+    "audited_at": "2026-10-28T19:54:58.813450+00:00"
   },
-  "versions_checked_at": "2026-10-28T19:52:28.577734+00:00",
-  "releases_checked_at": "2026-10-28T19:52:28.577734+00:00",
+  "versions_checked_at": "2026-10-28T19:54:58.813450+00:00",
+  "releases_checked_at": "2026-10-28T19:54:58.813450+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 3,
     "changed": 0,
-    "checked_at": "2026-10-28T19:53:34.041552+00:00",
+    "checked_at": "2026-10-28T19:56:23.557083+00:00",
     "unverified": 19
   },
   "airac_cycle": "2610"
