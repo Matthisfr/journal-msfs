@@ -444,6 +444,8 @@ body{{background:#f5f5f1}}
 .independent-content{{padding:30px 0}}
 .independent-content .tablebox{{max-height:none}}
 .standalone-note{{margin:12px 0 20px}}
+.doublons-button{{display:inline-block;padding:11px 18px;border-radius:9px;background:#123d5b;color:#fff!important;font-weight:700;text-decoration:none;border:1px solid #35779e}}
+.doublons-button:hover{{background:#205f86}}
 </style></head><body>
 <header class="independent-header"><div class="shell">
 <a href="./index.html#aeroports">← Retour au journal</a>
@@ -452,6 +454,7 @@ body{{background:#f5f5f1}}
 </div></header>
 <main class="shell independent-content">
 <p class="standalone-note">Cette page affiche toutes les scènes même si JavaScript est bloqué ou en cache dans Safari.</p>
+<p><a class="doublons-button" href="./comparateur.html" aria-label="Voir les scènes en doublon">👁️ Doublons</a></p>
 <div class="airport-update-digest">{render_airport_digest(airports)}</div>
 {table}
 <div class="map-section"><h2>Carte interactive des aéroports</h2><p><a href="./index.html#aeroports">Ouvrir la carte interactive avec repères colorés</a></p><div id="airport-leaflet-map" hidden></div></div></div></main></body></html>"""
