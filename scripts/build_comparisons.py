@@ -2,6 +2,7 @@
 Preserve editorial analyses separately; never invent ratings or winners.
 """
 import json
+import hashlib
 from concurrent.futures import ThreadPoolExecutor
 from html.parser import HTMLParser
 from urllib.parse import urljoin, urlparse
@@ -59,6 +60,30 @@ if missing:
  with ThreadPoolExecutor(max_workers=6) as pool:
   for url,photo in zip(missing,pool.map(official_photo,missing)): cache[url]=photo
  cache_path.write_text(json.dumps(cache,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+# Héberger une copie temporaire des images dans l'artefact Pages.
+photo_dir=ROOT/'public/comparison_photos'
+photo_dir.mkdir(parents=True,exist_ok=True)
+def local_photo(item):
+ page,url=item
+ if not url or not url.startswith('https://'):return (url,'')
+ name=hashlib.sha256(url.encode()).hexdigest()[:24]
+ try:
+  request=Request(url,headers={'User-Agent':'Mozilla/5.0','Referer':page})
+  with urlopen(request,timeout=7) as response:
+   mime=response.headers.get('Content-Type','').split(';')[0].lower()
+   ext={'image/jpeg':'.jpg','image/png':'.png','image/webp':'.webp','image/avif':'.avif'}.get(mime)
+   if not ext:return (url,'')
+   data=response.read(1500001)
+   if not 500<len(data)<=1500000:return (url,'')
+  path=photo_dir/(name+ext)
+  path.write_bytes(data)
+  return (url,'comparison_photos/'+path.name)
+ except Exception:
+  return (url,'')
+sources={a.get('source_url'):cache.get(a.get('source_url')) for a in airports if counts.get(str(a.get('icao') or '').upper(),0)>1 and a.get('source_url') and cache.get(a.get('source_url'))}
+with ThreadPoolExecutor(max_workers=6) as pool:
+ local_images=dict(pool.map(local_photo,[(page,url) for page,url in sources.items()]))
+print(f'Photos locales: {sum(bool(v) for v in local_images.values())}/{len(sources)}')
 groups={}
 for a in airports:
  code=str(a.get('icao') or '').strip().upper()
@@ -69,7 +94,7 @@ for code,scenes in groups.items():
  review=reviews.get(code,{})
  records.append({'code':code,'name':scenes[0].get('name') or code,
   'scenes':[{'publisher':a.get('publisher') or 'Éditeur inconnu','installed':a.get('installed') or '',
-             'url':a.get('source_url') or '', 'image':cache.get(a.get('source_url') or '', ''), 'image_checked':(a.get('source_url') or '') in cache, 'comparison':a.get('version_comparison') or '',
+             'url':a.get('source_url') or '', 'image':local_images.get(a.get('source_url') or '', '') or cache.get(a.get('source_url') or '', ''), 'image_checked':(a.get('source_url') or '') in cache, 'comparison':a.get('version_comparison') or '',
              'server_version':a.get('server_version') or '',
              'version_state':({'equal':'À jour','update':'Mise à jour disponible','source_older':'Version installée plus récente'}.get(a.get('version_comparison'),'À vérifier'))} for a in scenes],
   'winner':review.get('winner','Non déterminé'),'confidence':review.get('confidence','Avis insuffisants'),
