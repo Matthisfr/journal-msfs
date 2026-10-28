@@ -140,12 +140,16 @@
   },
   {
     "id": "flightcontrolreplay",
-    "name": "FlightControlReplay V5",
+    "name": "FlightControlReplay V6",
     "group": "Utilitaires",
-    "source_url": "https://flightcontroltools.com/",
-    "method": "official_news",
+    "source_url": "https://secure.simmarket.com/flightcontrolreplay-6-msfs-p3d-(fr_21441).phtml",
+    "method": "simmarket_fcr6",
     "installed_version": null,
-    "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
+    "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie",
+    "reference_version": "V6.0.2608.25",
+    "reference_checked_at": "2026-10-29",
+    "reference_source_url": "https://secure.simmarket.com/flightcontrolreplay-6-msfs-p3d-(fr_21441).phtml",
+    "reference_note": "Version indiquée sur la fiche SimMarket, historique daté du 26 août 2026."
   },
   {
     "id": "fsipanel",
