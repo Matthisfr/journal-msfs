@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T15:12:19.091408+00:00",
-  "weather_checked_at": "2026-10-28T15:12:19.091408+00:00",
-  "news_checked_at": "2026-10-28T15:12:19.091408+00:00",
+  "last_run": "2026-10-28T15:16:22.731722+00:00",
+  "weather_checked_at": "2026-10-28T15:16:22.731722+00:00",
+  "news_checked_at": "2026-10-28T15:16:22.731722+00:00",
   "weather": [
     {
       "icao": "KGFK",
@@ -15,7 +15,7 @@
       "phenomenon": "Brouillard",
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KGFK 281414Z 2814/2912 18012KT 6SM BR BKN007 FM281800 19009KT P6SM BKN025 FM282200 22009KT P6SM BKN060"
+      "taf_raw": "TAF KGFK 281511Z 2815/2912 18013G20KT 3SM BR BKN004 TEMPO 2815/2818 1/2SM FG VV003 FM281800 19009KT P6SM BKN025 FM282200 22009KT P6SM BKN060"
     },
     {
       "icao": "PANC",
@@ -70,45 +70,6 @@
       "taf_raw": "TAF CYYC 281440Z 2815/2912 35006KT P6SM SCT007 OVC012 TEMPO 2815/2818 2SM -SHSN BR BKN006 OVC010 PROB30 2815/2818 3/4SM -SHSN BR VV008 FM281800 36012KT P6SM BKN030 BKN050 TEMPO 2818/2823 2SM -SHSN OVC020 FM282300 02008KT P6SM SCT030 BKN050 TEMPO 2823/2912 5SM -SN BKN012 OVC030 RMK NXT FCST BY 281800Z"
     },
     {
-      "icao": "LGRP",
-      "name": "LGRP Rhodes International Airport \"Diagoras\"",
-      "observed_at": "2026-10-28T14:50:00+00:00",
-      "raw": "METAR LGRP 281450Z 06007KT 030V090 9999 SCT010 FEW016TCU BKN018 17/16 Q1009 RETS NOSIG",
-      "score": 110,
-      "summary": "orage",
-      "icon": "⛈️",
-      "phenomenon": "Orage",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LGRP 281100Z 2812/2912 13006KT 9999 SCT018 SCT050 PROB30 TEMPO 2812/2912 4000 RA FEW018TCU BKN020 PROB30 TEMPO 2812/2912 3000 TSRA FEW018CB BKN018 BKN050"
-    },
-    {
-      "icao": "KFSD",
-      "name": "KFSD Sioux falls Regional Airport",
-      "observed_at": "2026-10-28T14:56:00+00:00",
-      "raw": "METAR KFSD 281456Z 13004KT 2 1/2SM BR OVC004 13/12 A2993 RMK AO2 SFC VIS 3 RAB21E34 SLP138 P0002 60002 T01280122 58003",
-      "score": 57,
-      "summary": "visibilité < 3 SM, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KFSD 281415Z 2814/2912 16006KT 5SM BR VCTS BKN005CB FM281500 17010G17KT P6SM SCT007 OVC011 FM281800 21011G19KT P6SM BKN015 PROB30 2818/2822 4SM -SHRA OVC008 FM282200 25008KT P6SM BKN022 FM282300 30008KT P6SM SCT025"
-    },
-    {
-      "icao": "LKPR",
-      "name": "LKPR Václav Havel Airport Prague",
-      "observed_at": "2026-10-28T15:00:00+00:00",
-      "raw": "METAR LKPR 281500Z 26004KT 2800 -RADZ BR FEW007 BKN017 BKN025 08/08 Q1024 TEMPO 4000 RA BKN007",
-      "score": 57,
-      "summary": "visibilité < 3 SM, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LKPR 281400Z 2815/2921 31006KT 9999 BKN018 TEMPO 2815/2822 5000 -RA SCT009 BKN012 PROB40 TEMPO 2815/2821 2500 RA BR BKN007 BECMG 2822/2824 SCT020 BECMG 2906/2908 36006KT CAVOK"
-    },
-    {
       "icao": "EKVG",
       "name": "Vagar Airport",
       "observed_at": "2026-10-28T14:50:00+00:00",
@@ -133,12 +94,51 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF KIAH 281457Z 2815/2918 11005KT P6SM VCSH BKN050 FM281700 13009KT P6SM SCT035 OVC070 FM290000 VRB03KT P6SM FEW050 BKN250"
+    },
+    {
+      "icao": "EGPK",
+      "name": "EGPK Prestwick Airport",
+      "observed_at": "2026-10-28T14:50:00+00:00",
+      "raw": "METAR EGPK 281450Z 23014G25KT 200V270 9999 SCT033 14/11 Q1019",
+      "score": 22,
+      "summary": "rafales ≥ 25 kt",
+      "icon": "💨",
+      "phenomenon": "Vent fort",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EGPK 281101Z 2812/2912 24012KT 9999 SCT015 PROB30 TEMPO 2812/2814 25015G25KT PROB30 TEMPO 2812/2816 5000 SHRA BKN011 BECMG 2823/2902 17005KT PROB30 TEMPO 2900/2905 BKN007"
+    },
+    {
+      "icao": "KICT",
+      "name": "KICT Dwight D. Eisenhower Nat Airport",
+      "observed_at": "2026-10-28T14:53:00+00:00",
+      "raw": "METAR KICT 281453Z 18017G26KT 10SM FEW110 20/13 A3005 RMK AO2 PK WND 18026/1432 SLP166 T02000133 53002",
+      "score": 22,
+      "summary": "rafales ≥ 25 kt",
+      "icon": "💨",
+      "phenomenon": "Vent fort",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KICT 281120Z 2812/2912 17008KT P6SM SCT060 FM281500 18015G26KT P6SM FEW040 FM282200 18009KT P6SM FEW040"
+    },
+    {
+      "icao": "KJAX",
+      "name": "KJAX AIRPORT",
+      "observed_at": "2026-10-28T14:56:00+00:00",
+      "raw": "METAR KJAX 281456Z 03014G26KT 10SM FEW020 FEW045 FEW250 23/17 A3016 RMK AO2 PK WND 04026/1451 SLP213 T02330172 50007 $",
+      "score": 22,
+      "summary": "rafales ≥ 25 kt",
+      "icon": "💨",
+      "phenomenon": "Vent fort",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KJAX 281122Z 2812/2912 02011KT P6SM SCT015 BKN035 FM281330 03014G22KT P6SM SCT015 SCT025 BKN040 FM281700 03018G28KT P6SM BKN025 OVC040 FM282300 02013G21KT P6SM VCSH SCT015 OVC025 FM290300 03010G15KT P6SM VCSH OVC025"
     }
   ],
   "weather_coverage": {
     "eligible": 210,
-    "received": 204,
-    "fresh": 204
+    "received": 163,
+    "fresh": 163
   },
   "news": [
     {
@@ -279,7 +279,7 @@
   ],
   "hardware": [],
   "source_status": {
-    "metar": "ok",
+    "metar": "partial",
     "taf": "ok",
     "official_news": "ok",
     "airport_versions": "partial",
@@ -287,6 +287,7 @@
     "software_versions": "partial"
   },
   "errors": [
+    "HTTP Error 504: Gateway Time-out",
     "Versions : GMMX / PERFECTSOFT : Fiche 1.1.0 plus ancienne que l'installation 1.2.0 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : DTTA / prealsoft : Fiche 1.00 plus ancienne que l'installation 1.0.1 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : CYVR / fsdreamteam : Fiche 1.0.7 plus ancienne que l'installation 1.3.1 : vérifier le canal éditeur, ne pas rétrograder",
@@ -314,15 +315,15 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 56,
-    "audited_at": "2026-10-28T15:12:19.091408+00:00"
+    "audited_at": "2026-10-28T15:16:22.731722+00:00"
   },
-  "versions_checked_at": "2026-10-28T15:12:19.091408+00:00",
-  "releases_checked_at": "2026-10-28T15:12:19.091408+00:00",
+  "versions_checked_at": "2026-10-28T15:16:22.731722+00:00",
+  "releases_checked_at": "2026-10-28T15:16:22.731722+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-28T15:13:21.070580+00:00",
+    "checked_at": "2026-10-28T15:17:33.430371+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
