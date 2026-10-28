@@ -1,0 +1,109 @@
+"""Reusable public article ingestion for editorial sources (FSElite, etc.)."""
+from __future__ import annotations
+import datetime as dt
+import html
+from html.parser import HTMLParser
+import json
+import re
+from urllib.parse import urljoin,urlparse
+from urllib.request import Request,urlopen
+
+SOURCES=[{"id":"gsx_fselite_news","url":"https://fselite.net/developer/fsdreamteam/","host":"fselite.net","category":"GSX Pro","topic":"GSX","source":"FSElite — FSDreamTeam","keywords":("gsx","ground services","fsdreamteam")}]
+
+class Page(HTMLParser):
+    def __init__(self):
+        super().__init__();self.links=[];self.jsonld=[];self._ld=False;self._buf=[]
+    def handle_starttag(self,tag,attrs):
+        a=dict(attrs)
+        if tag=="a" and a.get("href"):self.links.append(a["href"])
+        if tag=="script" and a.get("type","").lower()=="application/ld+json":
+            self._ld=True;self._buf=[]
+    def handle_data(self,data):
+        if self._ld:self._buf.append(data)
+    def handle_endtag(self,tag):
+        if tag=="script" and self._ld:
+            try:self.jsonld.append(json.loads("".join(self._buf)))
+            except (ValueError,TypeError):pass
+            self._ld=False
+
+def articles(obj):
+    if isinstance(obj,list):
+        for x in obj:yield from articles(x)
+    elif isinstance(obj,dict):
+        kind=obj.get("@type",[])
+        if isinstance(kind,str):kind=[kind]
+        if any(t in ("Article","NewsArticle","BlogPosting") for t in kind):yield obj
+        for k in ("@graph","itemListElement","item"):
+            if k in obj:yield from articles(obj[k])
+
+def fetch(url,host):
+    p=urlparse(url)
+    if p.scheme!="https" or p.hostname not in (host,"www."+host):raise ValueError("untrusted host")
+    with urlopen(Request(url,headers={"User-Agent":"Mozilla/5.0 (JournalMSFS news collector)"}),timeout=12) as r:
+        return r.read(1200000).decode("utf-8","replace")
+
+def date_of(value):
+    if not value:return None
+    try:return dt.datetime.fromisoformat(str(value).replace("Z","+00:00")).astimezone(dt.timezone.utc)
+    except (ValueError,TypeError):return None
+
+def clean(s):
+    return re.sub(r"\s+"," ",html.unescape(re.sub(r"<[^>]*>"," ",str(s or "")))).strip()
+
+def normalize_article(a,source,now):
+    u=a.get("url") or a.get("mainEntityOfPage")
+    if isinstance(u,dict):u=u.get("@id") or u.get("url")
+    if not isinstance(u,str):return None
+    u=urljoin(source["url"],u).split("#")[0].split("?")[0]
+    p=urlparse(u)
+    if p.scheme!="https" or p.hostname not in (source["host"],"www."+source["host"]):return None
+    if p.path.startswith(("/developer/","/category/","/tag/","/page/")) or p.path=="/":return None
+    title=clean(a.get("headline") or a.get("name"))
+    date=date_of(a.get("datePublished"))
+    if not title or not date or date>now+dt.timedelta(minutes=5) or now-date>dt.timedelta(days=45):return None
+    combined=(title+" "+clean(a.get("description"))).lower()
+    if not any(k in combined for k in source["keywords"]):return None
+    summary=clean(a.get("description"))[:320] or title
+    return {"id":source["id"]+"-"+re.sub("[^a-z0-9]+","-",p.path.lower()).strip("-"),
+            "title":title,"category":source["category"],"topic":source["topic"],
+            "date":date.date().isoformat(),"source":source["source"],"url":u,
+            "summary":summary,"impact":"Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
+            "new":now-date<dt.timedelta(hours=48)}
+
+def collect_source(source,previous,fetcher=fetch,now=None):
+    now=now or dt.datetime.now(dt.timezone.utc)
+    try:landing=fetcher(source["url"],source["host"])
+    except Exception:return [],"unavailable"
+    page=Page();page.feed(landing)
+    candidates={}
+    for o in page.jsonld:
+        for a in articles(o):
+            if a.get("url"):candidates[str(a["url"])]=a
+    urls=[]
+    for link in page.links:
+        u=urljoin(source["url"],link).split("#")[0].split("?")[0]
+        p=urlparse(u)
+        if p.scheme=="https" and p.hostname in (source["host"],"www."+source["host"]) and re.search(r"/20\d\d/",p.path):
+            urls.append(u)
+    for u in list(dict.fromkeys(urls))[:20]:
+        try:
+            article_page=Page();article_page.feed(fetcher(u,source["host"]))
+            for o in article_page.jsonld:
+                for a in articles(o):
+                    candidates[str(a.get("url") or u)]=dict(a,url=a.get("url") or u)
+        except Exception:continue
+    records={}
+    for a in candidates.values():
+        item=normalize_article(a,source,now)
+        if item:records[item["url"]]=item
+    known={x.get("url") for x in previous}
+    for item in records.values():
+        if item["url"] in known:item["new"]=False
+    return sorted(records.values(),key=lambda x:x["date"],reverse=True)[:20],("ok" if records else "no_dated_articles")
+
+def collect_editorial_news(previous):
+    items=[];statuses={}
+    for source in SOURCES:
+        found,status=collect_source(source,previous)
+        items.extend(found);statuses[source["id"]]=status
+    return items,statuses
