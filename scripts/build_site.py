@@ -405,6 +405,17 @@ def build():
     rev = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%d%H%M%S")
     index = index.replace('src="app.js"', f'src="app.js?rev={rev}"')
     index = index.replace('href="styles.css"', f'href="styles.css?rev={rev}"')
+    # Bouton sur la rubrique AÉROPORTS du journal (celle visible sur iPad).
+    if '👁️ Doublons' not in index:
+        index = index.replace(
+            '<div id="airport-update-digest"',
+            '<p style="margin:16px 0"><a href="./comparateur.html" '
+            'style="display:inline-flex;align-items:center;gap:10px;'
+            'background:#123d5b;color:white;padding:13px 20px;'
+            'border-radius:10px;text-decoration:none;font-weight:700;'
+            'font-size:16px">👁️ Doublons</a></p><div id="airport-update-digest"',
+            1,
+        )
     index = index.replace(
         '<div class="tablebox"><table>',
         f'<p class="standalone-link"><a href="airports.html">↗ Afficher les {len(airports)} scènes sur une page indépendante (sans JavaScript)</a></p><div class="tablebox"><table>',
