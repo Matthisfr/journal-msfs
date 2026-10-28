@@ -29,7 +29,19 @@ function compareVersions(installed,online){
 }
 $('#airport-body')?.addEventListener('click',event=>{
  const button=event.target.closest?.('.airport-description-info');
- if(button)window.alert('Commentaire : '+(button.dataset.description||''));
+ if(button){
+  const existing=document.getElementById('airport-comment-popover');
+  if(existing){existing.remove();if(existing.dataset.source===button.dataset.description)return;}
+  const note=document.createElement('div');
+  note.id='airport-comment-popover';
+  note.className='airport-comment-popover';
+  note.dataset.source=button.dataset.description||'';
+  const label=document.createElement('strong');label.textContent='Commentaire : ';
+  const value=document.createElement('span');value.textContent=button.dataset.description||'';
+  const close=document.createElement('button');close.type='button';close.textContent='×';close.setAttribute('aria-label','Fermer le commentaire');close.addEventListener('click',()=>note.remove());
+  note.append(label,value,close);
+  button.closest('td')?.appendChild(note);
+ }
 });
 function renderAirports(){
   const q=$('#airport-search').value.trim().toLowerCase(),region=$('#region-filter').value,st=$('#status-filter').value;
