@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T15:21:06.101432+00:00",
-  "weather_checked_at": "2026-10-28T15:21:06.101432+00:00",
-  "news_checked_at": "2026-10-28T15:21:06.101432+00:00",
+  "last_run": "2026-10-28T15:29:20.807682+00:00",
+  "weather_checked_at": "2026-10-28T15:29:20.807682+00:00",
+  "news_checked_at": "2026-10-28T15:29:20.807682+00:00",
   "weather": [
     {
       "icao": "KGFK",
@@ -59,8 +59,8 @@
     {
       "icao": "CYYC",
       "name": "CYYC Calgary International Airport",
-      "observed_at": "2026-10-28T15:07:00+00:00",
-      "raw": "SPECI CYYC 281507Z 02014KT 2 1/2SM -SN BR BKN006 BKN023 M02/M03 A2993 RMK SF6SC1 SLP185",
+      "observed_at": "2026-10-28T15:24:00+00:00",
+      "raw": "SPECI CYYC 281524Z 01014KT 2 1/2SM -SN BR BKN010 BKN023 M02/M03 A2995 RMK SF7SC1 SC TR SLP190",
       "score": 120,
       "summary": "neige, visibilité < 3 SM",
       "icon": "🌨️",
@@ -68,19 +68,6 @@
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF CYYC 281440Z 2815/2912 35006KT P6SM SCT007 OVC012 TEMPO 2815/2818 2SM -SHSN BR BKN006 OVC010 PROB30 2815/2818 3/4SM -SHSN BR VV008 FM281800 36012KT P6SM BKN030 BKN050 TEMPO 2818/2823 2SM -SHSN OVC020 FM282300 02008KT P6SM SCT030 BKN050 TEMPO 2823/2912 5SM -SN BKN012 OVC030 RMK NXT FCST BY 281800Z"
-    },
-    {
-      "icao": "LGRP",
-      "name": "LGRP Rhodes International Airport \"Diagoras\"",
-      "observed_at": "2026-10-28T14:50:00+00:00",
-      "raw": "METAR LGRP 281450Z 06007KT 030V090 9999 SCT010 FEW016TCU BKN018 17/16 Q1009 RETS NOSIG",
-      "score": 110,
-      "summary": "orage",
-      "icon": "⛈️",
-      "phenomenon": "Orage",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LGRP 281100Z 2812/2912 13006KT 9999 SCT018 SCT050 PROB30 TEMPO 2812/2912 4000 RA FEW018TCU BKN020 PROB30 TEMPO 2812/2912 3000 TSRA FEW018CB BKN018 BKN050"
     },
     {
       "icao": "LKPR",
@@ -109,6 +96,19 @@
       "taf_raw": "TAF EKVG 281428Z 2815/2821 26025G40KT 9999 BKN020 BECMG 2818/2821 26015G30KT"
     },
     {
+      "icao": "EDDM",
+      "name": "sim-wings Munich",
+      "observed_at": "2026-10-28T15:20:00+00:00",
+      "raw": "METAR EDDM 281520Z AUTO 30005KT 270V330 8000 -RADZ BKN007 BKN011 BKN016 10/09 Q1027 NOSIG",
+      "score": 32,
+      "summary": "visibilité < 5 SM, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF AMD EDDM 281504Z 2815/2918 29005KT 8000 BKN015 TEMPO 2815/2818 4000 -RA BKN009 FM281900 VRB03KT 9999 SCT020 BECMG 2822/2824 1200 BCFG BECMG 2900/2904 0500 FG VV002 BECMG 2907/2911 04005KT 8000 BKN005 BECMG 2912/2914 FEW008"
+    },
+    {
       "icao": "KIAH",
       "name": "KIAH George Bush Intercontinental/Houston Airport",
       "observed_at": "2026-10-28T14:53:00+00:00",
@@ -122,17 +122,17 @@
       "taf_raw": "TAF KIAH 281457Z 2815/2918 11005KT P6SM VCSH BKN050 FM281700 13009KT P6SM SCT035 OVC070 FM290000 VRB03KT P6SM FEW050 BKN250"
     },
     {
-      "icao": "EGPK",
-      "name": "EGPK Prestwick Airport",
-      "observed_at": "2026-10-28T14:50:00+00:00",
-      "raw": "METAR EGPK 281450Z 23014G25KT 200V270 9999 SCT033 14/11 Q1019",
-      "score": 22,
-      "summary": "rafales ≥ 25 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
+      "icao": "LOWS",
+      "name": "LOWS Salzburg Airport",
+      "observed_at": "2026-10-28T15:20:00+00:00",
+      "raw": "METAR LOWS 281520Z 32008KT 6000 SHRA FEW004 BKN007 11/10 Q1026 RESHRA TEMPO 4000 -SHRA BKN012",
+      "score": 32,
+      "summary": "visibilité < 5 SM, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EGPK 281101Z 2812/2912 24012KT 9999 SCT015 PROB30 TEMPO 2812/2814 25015G25KT PROB30 TEMPO 2812/2816 5000 SHRA BKN011 BECMG 2823/2902 17005KT PROB30 TEMPO 2900/2905 BKN007"
+      "taf_raw": "TAF AMD LOWS 281347Z 2813/2912 32008KT 9999 -RA BKN030 TX14/2813Z TN06/2906Z TEMPO 2813/2819 2000 SHRA BKN006 BECMG 2819/2821 VRB04KT NSW TEMPO 2821/2909 2000 BR BKN008"
     }
   ],
   "weather_coverage": {
@@ -314,15 +314,15 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 56,
-    "audited_at": "2026-10-28T15:21:06.101432+00:00"
+    "audited_at": "2026-10-28T15:29:20.807682+00:00"
   },
-  "versions_checked_at": "2026-10-28T15:21:06.101432+00:00",
-  "releases_checked_at": "2026-10-28T15:21:06.101432+00:00",
+  "versions_checked_at": "2026-10-28T15:29:20.807682+00:00",
+  "releases_checked_at": "2026-10-28T15:29:20.807682+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-28T15:21:56.519523+00:00",
+    "checked_at": "2026-10-28T15:30:31.611831+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
