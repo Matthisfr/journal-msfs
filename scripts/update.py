@@ -245,6 +245,15 @@ def run():
     except Exception as e:
         src['sayintentions_news']='error'
         status['errors'].append('SayIntentions blog: '+str(e)[:250])
+    try:
+        from editorial_news import collect_editorial_news
+        editorial_items,editorial_states=collect_editorial_news(status.get('news',[]))
+        news_from_sources.extend(editorial_items)
+        src.update(editorial_states)
+        print('Articles FSElite / éditeurs:',len(editorial_items),editorial_states)
+    except Exception as e:
+        src['gsx_fselite_news']='error'
+        status['errors'].append('Articles éditoriaux: '+str(e)[:250])
     # Les annonces confirmées restent dans une source persistante distincte du status généré.
     try:
         confirmed_path=PUBLIC/'sayintentions_confirmed_news.json'
