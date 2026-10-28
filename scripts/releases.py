@@ -20,13 +20,13 @@ def release_items(previous=None):
     known = {x.get("url") for x in (previous or [])}
     found, errors = [], []
     for repo, category, product, topic in REPOS:
-        url = f"https://api.github.com/repos/{repo}/releases?per_page=6"
+        url = f"https://api.github.com/repos/{repo}/releases?per_page=2"
         try:
             req = urllib.request.Request(url, headers={
                 "User-Agent": "JournalMSFS/1.1",
                 "Accept": "application/vnd.github+json"})
             with urllib.request.urlopen(req, timeout=15) as resp:
-                releases = json.loads(resp.read(1_000_000))
+                releases = json.loads(resp.read(8_000_000))
             if not isinstance(releases, list):
                 raise ValueError("Format des versions inattendu")
             stable, preview = False, False
