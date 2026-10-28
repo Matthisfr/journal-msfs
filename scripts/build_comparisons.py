@@ -23,8 +23,8 @@ if previous_path.exists():
  try:
   for record in json.loads(previous_path.read_text(encoding='utf-8')):
    for scene in record.get('scenes',[]):
-    if scene.get('url') and scene.get('image'):
-     cache.setdefault(scene['url'],scene['image'])
+    if scene.get('url') and (scene.get('image') or scene.get('image_checked')):
+     cache.setdefault(scene['url'],scene.get('image',''))
  except (ValueError, OSError, TypeError):
   pass
 class PhotoParser(HTMLParser):
@@ -69,7 +69,7 @@ for code,scenes in groups.items():
  review=reviews.get(code,{})
  records.append({'code':code,'name':scenes[0].get('name') or code,
   'scenes':[{'publisher':a.get('publisher') or 'Éditeur inconnu','installed':a.get('installed') or '',
-             'url':a.get('source_url') or '', 'image':cache.get(a.get('source_url') or '', ''), 'comparison':a.get('version_comparison') or '',
+             'url':a.get('source_url') or '', 'image':cache.get(a.get('source_url') or '', ''), 'image_checked':(a.get('source_url') or '') in cache, 'comparison':a.get('version_comparison') or '',
              'server_version':a.get('server_version') or '',
              'version_state':({'equal':'À jour','update':'Mise à jour disponible','source_older':'Version installée plus récente'}.get(a.get('version_comparison'),'À vérifier'))} for a in scenes],
   'winner':review.get('winner','Non déterminé'),'confidence':review.get('confidence','Avis insuffisants'),
