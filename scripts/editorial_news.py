@@ -22,7 +22,16 @@ class Page(HTMLParser):
             self._ld=True;self._buf=[]
     def handle_data(self,data):
         if self._ld:self._buf.append(data)
+        if self._h3:self._heading.append(data)
+        elif self._after_heading is not None and data.strip():
+            self.headings[self._after_heading]["nearby"]+=" "+data.strip()
+            if len(self.headings[self._after_heading]["nearby"])>350:self._after_heading=None
     def handle_endtag(self,tag):
+        if tag=="h3" and self._h3:
+            self._h3=False
+            if self._heading_url:
+                self.headings.append({"url":self._heading_url,"title":" ".join(self._heading).strip(),"nearby":""})
+                self._after_heading=len(self.headings)-1
         if tag=="script" and self._ld:
             try:self.jsonld.append(json.loads("".join(self._buf)))
             except (ValueError,TypeError):pass
