@@ -15,7 +15,9 @@ class Page(HTMLParser):
         super().__init__();self.links=[];self.jsonld=[];self._ld=False;self._buf=[];self.headings=[];self._h3=False;self._heading=[];self._heading_url=None;self._after_heading=None
     def handle_starttag(self,tag,attrs):
         a=dict(attrs)
-        if tag=="a" and a.get("href"):\n            self.links.append(a["href"])\n            if self._h3:self._heading_url=a["href"]\n        if tag=="h3":self._h3=True;self._heading=[];self._heading_url=None
+        if tag=="a" and a.get("href"):
+            self.links.append(a["href"])
+            if self._h3:self._heading_url=a["href"]\n        if tag=="h3":self._h3=True;self._heading=[];self._heading_url=None
         if tag=="script" and a.get("type","").lower()=="application/ld+json":
             self._ld=True;self._buf=[]
     def handle_data(self,data):
