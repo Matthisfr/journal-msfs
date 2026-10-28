@@ -187,10 +187,19 @@
     "id": "chaseplane",
     "name": "Parallel 42 — ChasePlane",
     "group": "Utilitaires",
-    "source_url": "https://parallel42.com/blogs/news",
-    "method": "official_news",
+    "source_url": "https://parallel42.com/pages/is-it-out",
+    "method": "parallel42",
     "installed_version": null,
     "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
+  },
+  {
+    "id": "flowpro",
+    "name": "Parallel 42 — Flow Pro",
+    "group": "Utilitaires",
+    "source_url": "https://parallel42.com/pages/is-it-out",
+    "method": "parallel42",
+    "installed_version": null,
+    "tracking": "MSFS 2024 : version et notes officielles Parallel 42"
   },
   {
     "id": "stratawx",
