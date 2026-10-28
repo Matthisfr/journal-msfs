@@ -1475,5 +1475,12 @@
     "name": "El Salvador International Airport Saint Óscar Arnulfo Romero y Galdámez",
     "source": "OurAirports / airport-codes",
     "aircraft_marker": "airliner"
+  },
+  "LFMA": {
+    "lat": 43.506294,
+    "lon": 5.366426,
+    "name": "Aix Les Milles airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "cessna"
   }
 }

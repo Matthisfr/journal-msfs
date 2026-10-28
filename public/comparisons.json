@@ -356,6 +356,46 @@
     ]
   },
   {
+    "code": "EGCC",
+    "name": "EGCC Manchester International",
+    "scenes": [
+      {
+        "publisher": "iniBuilds",
+        "installed": "1.1.1",
+        "url": "https://inibuilds.com/products/inibuilds-manchester-egcc-msfs-2024",
+        "image": "",
+        "image_checked": true,
+        "comparison": "update",
+        "server_version": "1.2.0",
+        "version_state": "Mise à jour disponible"
+      },
+      {
+        "publisher": "Macco Simulations",
+        "installed": "1.2.0",
+        "url": "https://contrail.shop/products/egcc-manchester-airport",
+        "image": "https://contrail.shop/cdn/shop/products/thumb_a3ceaa8e-7e82-4fa6-9898-06e308c9264d_1200x1200.jpg?v=1674666915",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.2.0",
+        "version_state": "À jour"
+      },
+      {
+        "publisher": "TAIMODELS",
+        "installed": "1.8.0",
+        "url": "https://secure.simmarket.com/taimodels-manchester-intl-airport-msfs.phtml",
+        "image": "https://secure.simmarket.com/images/products/e/e5/18837/EGCC.png",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.8",
+        "version_state": "À jour"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
     "code": "LOWS",
     "name": "LOWS Salzburg Airport",
     "scenes": [
