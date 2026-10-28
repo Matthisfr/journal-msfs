@@ -94,7 +94,7 @@ def collect_source(source,previous,fetcher=fetch,now=None):
     # FSElite publie titre et date directement dans les cartes de sa page éditeur.
     # Cette voie fonctionne même si les pages d'article n'exposent aucun JSON-LD.
     for heading in page.headings:
-        m=re.search(r"\\b(\\d{1,2})\\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\\s+(20\\d{2})\\b",heading["nearby"],re.I)
+        m=re.search(r"\b(\d{1,2})\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(20\d{2})\b",heading["nearby"],re.I)
         if not m:continue
         published=date_of(f"{m.group(3)}-{dict(Jan='01',Feb='02',Mar='03',Apr='04',May='05',Jun='06',Jul='07',Aug='08',Sep='09',Oct='10',Nov='11',Dec='12')[m.group(2).title()]}-{int(m.group(1)):02d}T12:00:00Z")
         if published:
