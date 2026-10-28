@@ -265,13 +265,8 @@ async function renderMap(){
    bounds.push(m.getLatLng());
   }
   // Appui long (iPad) ou clic droit : raccourcis de recherche des scènes.
-  const searchPopupForPoint=latlng=>{
-   if(!airportMapMarkers.length)return;
-   const point=airportMap.latLngToContainerPoint(latlng);
-   const closest=airportMapMarkers.map(item=>({item,distance:point.distanceTo(airportMap.latLngToContainerPoint(item.marker.getLatLng()))})).sort((a,b)=>a.distance-b.distance)[0];
-   if(!closest||closest.distance>220)return;
-   const code=closest.item.code;
-   const name=(data[code]&&data[code].name)||code;
+  // Identifier l'aéroport réellement touché, y compris hors inventaire personnel.
+  const showAirportShops=(code,name,position)=>{
    const query=encodeURIComponent(code);
    const shops=[
     ['SimMarket','https://secure.simmarket.com/advanced_search_result.php?keywords='+query],
@@ -279,9 +274,37 @@ async function renderMap(){
     ['Contrail','https://contrail.shop/search?q='+query],
     ['Flightsim.to','https://flightsim.to/search?q='+query]
    ];
-   const html='<div class="airport-shop-popup"><strong>'+esc(code)+' — '+esc(name)+'</strong><p>Rechercher des scènes pour cet aéroport :</p>'+
+   const html='<div class="airport-shop-popup"><strong>'+esc(code)+' — '+esc(name||code)+'</strong><p>Rechercher des scènes pour cet aéroport :</p>'+
      shops.map(([label,url])=>'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(label)+' ↗</a>').join('')+'</div>';
-   L.popup({maxWidth:300}).setLatLng(closest.item.marker.getLatLng()).setContent(html).openOn(airportMap);
+   L.popup({maxWidth:300}).setLatLng(position).setContent(html).openOn(airportMap);
+  };
+  const searchPopupForPoint=async latlng=>{
+   const point=airportMap.latLngToContainerPoint(latlng);
+   const nearest=airportMapMarkers.map(item=>({item,distance:point.distanceTo(airportMap.latLngToContainerPoint(item.marker.getLatLng()))})).sort((a,b)=>a.distance-b.distance)[0];
+   // Sur un repère connu, aucune requête réseau n'est nécessaire.
+   if(nearest&&nearest.distance<45){
+    const code=nearest.item.code;
+    showAirportShops(code,(data[code]&&data[code].name)||code,nearest.item.marker.getLatLng());
+    return;
+   }
+   const loading=L.popup({maxWidth:290}).setLatLng(latlng).setContent('Recherche de l’aéroport sous le doigt…').openOn(airportMap);
+   try{
+    // OpenStreetMap / Overpass : recherche géographique ponctuelle, pas de scraping de boutiques.
+    const query='[out:json][timeout:12];(nwr["aeroway"="aerodrome"](around:9000,'+latlng.lat+','+latlng.lng+'););out center tags;';
+    const response=await fetch('https://overpass.kumi.systems/api/interpreter',{method:'POST',body:'data='+encodeURIComponent(query),headers:{'Content-Type':'application/x-www-form-urlencoded'},signal:AbortSignal.timeout(16000)});
+    if(!response.ok)throw new Error('Service cartographique indisponible');
+    const result=await response.json();
+    const candidates=(result.elements||[]).map(x=>{
+     const tags=x.tags||{},lat=x.lat??x.center?.lat,lon=x.lon??x.center?.lon;
+     return {code:tags['icao']||tags['ref:icao']||'',name:tags.name||'',lat,lon,distance:lat!=null&&lon!=null?airportMap.distance(latlng,[lat,lon]):Infinity};
+    }).filter(x=>/^[A-Z0-9]{4}$/.test(x.code.toUpperCase())&&x.distance<9000).sort((a,b)=>a.distance-b.distance);
+    const found=candidates[0];
+    if(found){showAirportShops(found.code.toUpperCase(),found.name,[found.lat,found.lon]);return}
+    if(nearest&&nearest.distance<100){const code=nearest.item.code;showAirportShops(code,(data[code]&&data[code].name)||code,nearest.item.marker.getLatLng());return}
+    loading.setContent('Aucun code ICAO confirmé à proximité. Zoome sur l’aéroport et réessaie.');
+   }catch(error){
+    loading.setContent('Recherche géographique momentanément indisponible. Réessaie dans quelques instants.');
+   }
   };
   // Safari iPad : empêcher le menu de sélection sans bloquer le déplacement de la carte.
   let longPressTimer=null,startPoint=null,activeTouch=null,handledLongPress=false;
