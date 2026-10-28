@@ -1398,5 +1398,82 @@
     "name": "Cayenne – Félix Eboué Airport",
     "source": "OurAirports / airport-codes",
     "aircraft_marker": "airliner"
+  },
+  "KJAX": {
+    "lat": 30.492469,
+    "lon": -81.687813,
+    "name": "Jacksonville International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "KORL": {
+    "lat": 28.5455,
+    "lon": -81.332901,
+    "name": "Orlando Executive Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "LFRK": {
+    "lat": 49.17678,
+    "lon": -0.454883,
+    "name": "Caen Carpiquet airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "MGGT": {
+    "lat": 14.582896,
+    "lon": -90.527515,
+    "name": "La Aurora International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "MHPR": {
+    "lat": 14.3824,
+    "lon": -87.621201,
+    "name": "Palmerola International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "MMAA": {
+    "lat": 16.757126,
+    "lon": -99.753113,
+    "name": "General Juan N. Álvarez International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "MMMX": {
+    "lat": 19.435822,
+    "lon": -99.07033,
+    "name": "Mexico City Benito Juárez International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "MNMG": {
+    "lat": 12.1415,
+    "lon": -86.168198,
+    "name": "Augusto C. Sandino (Managua) International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "MPTO": {
+    "lat": 9.07136,
+    "lon": -79.383499,
+    "name": "Tocumen International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "MROC": {
+    "lat": 9.99386,
+    "lon": -84.208801,
+    "name": "Juan Santamaría International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "MSLP": {
+    "lat": 13.44447,
+    "lon": -89.055784,
+    "name": "El Salvador International Airport Saint Óscar Arnulfo Romero y Galdámez",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
   }
 }
