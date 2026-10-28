@@ -54,7 +54,7 @@ for a in airports:
  code=str(a.get('icao') or '').upper()
  counts[code]=counts.get(code,0)+1
 urls={a.get('source_url') for a in airports if counts.get(str(a.get('icao') or '').upper(),0)>1 and (a.get('source_url') or '').startswith('https://')}
-missing=sorted(u for u in urls if not cache.get(u))
+missing=sorted(u for u in urls if u not in cache)
 if missing:
  with ThreadPoolExecutor(max_workers=6) as pool:
   for url,photo in zip(missing,pool.map(official_photo,missing)): cache[url]=photo
