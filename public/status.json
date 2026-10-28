@@ -1,14 +1,14 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T23:21:52.060554+00:00",
-  "weather_checked_at": "2026-10-28T23:21:52.060554+00:00",
-  "news_checked_at": "2026-10-28T23:21:52.060554+00:00",
+  "last_run": "2026-10-28T23:26:28.725764+00:00",
+  "weather_checked_at": "2026-10-28T23:26:28.725764+00:00",
+  "news_checked_at": "2026-10-28T23:26:28.725764+00:00",
   "weather": [
     {
       "icao": "EDDB",
       "name": "Aerosoft Airport Berlin Brandenburg",
-      "observed_at": "2026-10-28T22:50:00+00:00",
-      "raw": "METAR EDDB 282250Z AUTO 24004KT 0550 0450 R24R/0900D R24L/0700N FG NCD 05/05 Q1028 TEMPO 0300 FG BKN001",
+      "observed_at": "2026-10-28T23:20:00+00:00",
+      "raw": "METAR EDDB 282320Z AUTO 25004KT 0600 0350 R24R/0700N R24L/0900U FG NCD 04/03 Q1028 TEMPO 0300 FG BKN001",
       "score": 145,
       "summary": "brouillard, visibilité < 1 SM",
       "icon": "🌫️",
@@ -44,19 +44,6 @@
       "taf_raw": "TAF PANC 282226Z 2822/2924 VRB02KT 4SM BR VCFG SCT003 TEMPO 2822/2824 1/2SM FZFG BKN002 FM290000 04004KT P6SM FEW045 SCT100 WS020/15030KT FM291000 01008KT P6SM -RA SCT020 OVC035 WS020/15030KT FM291400 02007KT 6SM -RA BR BKN020 WS020/15030KT FM292000 VRB05KT P6SM VCSH SCT020 OVC040 WS020/15030KT"
     },
     {
-      "icao": "SLLP",
-      "name": "SLLP El Alto International Airport",
-      "observed_at": "2026-10-28T23:00:00+00:00",
-      "raw": "METAR SLLP 282300Z 21016G28KT 160V240 9999 SCT015 FEW017CB SCT070 BKN200 07/02 Q1035 RETSRA NOSIG",
-      "score": 132,
-      "summary": "orage, rafales ≥ 25 kt",
-      "icon": "⛈️",
-      "phenomenon": "Orage",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF SLLP 282200Z 2900/2924 10010KT 9999 SCT015 FEW017CB BKN070 TX15/2919Z TN00/2910Z TEMPO 2904/2908 3000 BCFG FEW002 BKN010 BECMG 2912/2915 29010KT TEMPO 2917/2921 5000 TSRA BKN015 FEW017CB"
-    },
-    {
       "icao": "CYYC",
       "name": "CYYC Calgary International Airport",
       "observed_at": "2026-10-28T23:13:00+00:00",
@@ -85,28 +72,15 @@
     {
       "icao": "EDDM",
       "name": "sim-wings Munich",
-      "observed_at": "2026-10-28T22:50:00+00:00",
-      "raw": "METAR EDDM 282250Z AUTO 25004KT 4400 0650 R26R/P2000N R26L/P2000N BCFG FEW026 BKN039 04/03 Q1029 TEMPO 6000",
-      "score": 45,
-      "summary": "visibilité < 3 SM",
-      "icon": "☁️",
-      "phenomenon": "Ciel couvert",
-      "level": "À surveiller",
+      "observed_at": "2026-10-28T23:20:00+00:00",
+      "raw": "METAR EDDM 282320Z AUTO 25005KT 1400 0600 R26R/0600N R26L/1800U BCFG FEW042 05/05 Q1029 TEMPO 6000",
+      "score": 80,
+      "summary": "visibilité < 1 SM",
+      "icon": "🌤️",
+      "phenomenon": "Éclaircies",
+      "level": "Dégradé",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF AMD EDDM 282100Z 2821/2924 28004KT 1200 BCFG NSC TEMPO 2822/2902 9000 BECMG 2902/2905 0400 FG VV002 BECMG 2907/2910 06005KT 9999 BECMG 2910/2912 OVC005 BECMG 2912/2914 SCT015 BECMG 2918/2922 1200 BCFG BECMG 2922/2924 0600 FG VV002"
-    },
-    {
-      "icao": "LIML",
-      "name": "LIML Milan Linate Airport",
-      "observed_at": "2026-10-28T22:50:00+00:00",
-      "raw": "METAR LIML 282250Z VRB01KT 3000 R35/0450D BCFG NSC 09/09 Q1022 BECMG 1200 BCFG",
-      "score": 45,
-      "summary": "visibilité < 3 SM",
-      "icon": "☀️",
-      "phenomenon": "Ciel dégagé",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LIML 281700Z 2818/2918 VRB04KT 8000 FEW040 BECMG 2900/2902 3000 BR TEMPO 2904/2908 1200 BCFG BKN014 BECMG 2908/2910 9999"
     },
     {
       "icao": "DAAG",
@@ -133,6 +107,32 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF EICK 282300Z 2900/2924 20010KT 9999 -DZ BKN007 BECMG 2900/2902 17012KT NSW BKN020 TEMPO 2909/2922 16015G25KT TEMPO 2916/2922 BKN008 BECMG 2922/2924 16015G25KT BKN008 PROB30 TEMPO 2922/2924 -DZ BKN004"
+    },
+    {
+      "icao": "KFSD",
+      "name": "KFSD Sioux falls Regional Airport",
+      "observed_at": "2026-10-28T22:56:00+00:00",
+      "raw": "METAR KFSD 282256Z 32010KT 3SM -RA BR FEW006 BKN017 OVC026 14/13 A2996 RMK AO2 DZE05RAB05 SLP146 P0001 T01440133 $",
+      "score": 32,
+      "summary": "visibilité < 5 SM, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KFSD 282324Z 2900/2924 32009KT P6SM BKN025 FM290300 VRB03KT P6SM SKC TEMPO 2911/2914 3SM BR SCT005 FM291700 15007KT P6SM FEW100"
+    },
+    {
+      "icao": "KMSP",
+      "name": "KMSP Minneapolis St. Paul Airport",
+      "observed_at": "2026-10-28T22:53:00+00:00",
+      "raw": "METAR KMSP 282253Z 22011G21KT 4SM -RA BR SCT033 BKN042 BKN055 18/17 A2983 RMK AO2 PK WND 19026/2158 LTG DSNT NW-E RAB2154E14B35 SLP100 CB DSNT NW-E MOV NE P0002 T01830167 $",
+      "score": 32,
+      "summary": "visibilité < 5 SM, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KMSP 282058Z 2821/2924 16008KT P6SM FEW050 SCT100 FM282130 16010G18KT P6SM VCTS SCT030 BKN100CB TEMPO 2822/2824 VRB20G35KT 2SM TSRA BR OVC025CB FM290000 24009KT 6SM -SHRA BKN019 FM290300 27008KT P6SM BKN024 FM290500 30008KT P6SM FEW030"
     }
   ],
   "weather_coverage": {
@@ -366,7 +366,7 @@
     },
     {
       "id": "779510",
-      "title": "[Blog] Briefing hebdomadaire du 22/10/2026",
+      "title": "[Blog] Briefing hebdomadaire du 2026-10-22",
       "category": "MSFS officiel",
       "date": "2026-10-22",
       "source": "Forum officiel Microsoft Flight Simulator",
@@ -389,7 +389,7 @@
     },
     {
       "id": "msfs_fselite_news-content-pmdg-teases-747-news-and-updates-on-737-and-777-fleets",
-      "title": "PMDG dévoile les nouvelles et mises à jour du 747 sur les flottes 737 et 777",
+      "title": "PMDG taquine les nouvelles et les mises à jour du 747 sur les flottes 737 et 777",
       "category": "MSFS 2024",
       "topic": "MSFS",
       "date": "2026-10-20",
@@ -511,7 +511,7 @@
       "date": "2026-09-03",
       "source": "FSElite — FSDreamTeam",
       "url": "https://fselite.net/content/cockpit2ground-announced-bringing-more-realistic-gsx-interaction-possible/",
-      "summary": "03 septembre 2026 - Cockpit2Ground veut amener la communication GSX au-delà du simple remplacement de la voix, avec des conversations dynamiques qui réagissent à votre avion, à votre plan de vol et à ce qui se passe réellement au sol. Actualités MSFS 2024 var HYVOR_TALK_WEBSITE = 3490 ; window.addEventListener('load', function() { hyvorTalkCommentCount",
+      "summary": "03 septembre 2026 - Cockpit2Ground veut amener la communication GSX au-delà du simple remplacement vocal, avec des conversations dynamiques qui réagissent à votre avion, à votre plan de vol et à ce qui se passe réellement au sol. Actualités MSFS 2024 var HYVOR_TALK_WEBSITE = 3490 ; window.addEventListener('load', function() { hyvorTalkCommentCount",
       "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
       "new": false
     }
@@ -556,15 +556,15 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 57,
-    "audited_at": "2026-10-28T23:21:52.060554+00:00"
+    "audited_at": "2026-10-28T23:26:28.725764+00:00"
   },
-  "versions_checked_at": "2026-10-28T23:21:52.060554+00:00",
-  "releases_checked_at": "2026-10-28T23:21:52.060554+00:00",
+  "versions_checked_at": "2026-10-28T23:26:28.725764+00:00",
+  "releases_checked_at": "2026-10-28T23:26:28.725764+00:00",
   "software_coverage": {
     "total": 23,
     "verified": 6,
     "changed": 0,
-    "checked_at": "2026-10-28T23:22:55.048187+00:00",
+    "checked_at": "2026-10-28T23:27:25.090149+00:00",
     "unverified": 17
   },
   "airac_cycle": "2610"
