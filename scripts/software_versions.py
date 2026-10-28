@@ -90,28 +90,38 @@ def simmarket_fcr6_version():
     notes=notes_match.group(1)[:1100] if notes_match else "Version publiée sur la fiche SimMarket FlightControlReplay 6."
     return {"version":m.group(1).upper(),"url":url,"published_at":None,"notes":notes}
 
-def navigraph_charts_version():
-    """Read official Charts changelog; never mistake other Navigraph products for Charts."""
-    url="https://navigraph.com/products/charts/changelog"
-    raw=get(url)
-    page=text_html(raw)
-    # The changelog may be client-rendered. Only accept an explicitly labelled
-    # Charts version, not arbitrary numbers in bundled scripts or other products.
+def parse_navigraph_charts_changelog(page, url):
+    """Accept a dated Charts release only; never infer a version from JS assets."""
     patterns=[
-        r"(?:Navigraph\s+)?Charts\s+(?:New\s+)?Version\s*[:#-]?\s*v?(8\.\d+\.\d+)",
-        r"v(8\.\d+\.\d+)\s*[-–:]\s*(?:Navigraph\s+)?Charts",
+        r"(?im)^\s*(?:Navigraph\s+)?Charts\s+(?:Version\s*)?v?(8\.\d+\.\d+)\s*(?:[-–|:]\s*([^\n]{0,100}))?",
+        r"(?im)^\s*(?:Version\s+)?v?(8\.\d+\.\d+)\s*[-–|:]\s*(?:Navigraph\s+)?Charts\b",
+        r"(?im)^\s*#{1,4}\s*(?:Version\s*)?v?(8\.\d+\.\d+)\b",
     ]
-    matches=[]
-    for pattern in patterns:
-        matches.extend(re.finditer(pattern,page,re.I))
+    matches=[m for pattern in patterns for m in re.finditer(pattern,page)]
     if not matches:
-        raise ValueError("Changelog Charts non lisible (page dynamique) : aucune version vérifiable")
-    versions=[m.group(1) for m in matches]
-    version=max(versions,key=lambda s:tuple(map(int,s.split("."))))
-    match=next(m for m in matches if m.group(1)==version)
-    notes=page[match.end():match.end()+2000].strip()
+        raise ValueError("Aucune version Charts explicite dans le changelog")
+    match=max(matches,key=lambda m:tuple(map(int,m.group(1).split("."))))
+    version=match.group(1)
+    following=page[match.end():match.end()+5000]
+    next_release=re.search(r"(?m)^\s*(?:#{1,4}\s*)?(?:Navigraph\s+Charts\s+)?(?:Version\s*)?v?8\.\d+\.\d+\b",following)
+    notes=(following[:next_release.start()] if next_release else following[:2400]).strip()
     return {"version":version,"url":url,"published_at":None,
-            "notes":notes[:1200] or "Version officielle Navigraph Charts."}
+            "notes":notes[:2000] or "Nouvelle version de Navigraph Charts."}
+
+def navigraph_charts_version():
+    url="https://navigraph.com/products/charts/changelog"
+    failures=[]
+    # The official page may render its release notes via JavaScript.
+    # A text-rendering relay is used only as a transport for that same URL.
+    for source in (url,"https://r.jina.ai/"+url):
+        try:
+            raw=get(source, "text/plain" if source!=url else "text/html")
+            page=raw if source!=url else text_html(raw)
+            return parse_navigraph_charts_changelog(page,url)
+        except Exception as exc:
+            failures.append(type(exc).__name__+": "+str(exc)[:80])
+    raise ValueError("Changelog Navigraph indisponible : "+" ; ".join(failures))
+
 
 def siminnovations_version():
     url="https://docs.siminnovations.com/air_manager_5/release_notes/"
