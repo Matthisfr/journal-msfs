@@ -2,9 +2,8 @@
 Preserve editorial analyses separately; never invent ratings or winners.
 """
 import json
-import re
 from concurrent.futures import ThreadPoolExecutor
-from html import unescape
+from html.parser import HTMLParser
 from urllib.parse import urljoin, urlparse
 from urllib.request import Request, urlopen
 from pathlib import Path
@@ -15,20 +14,28 @@ reviews=json.loads(reviews_path.read_text(encoding='utf-8')) if reviews_path.exi
 # Conserver les images officielles déjà trouvées pour éviter de rescanner les boutiques quotidiennement.
 cache_path=ROOT/'public/comparison_images.json'
 cache=json.loads(cache_path.read_text(encoding='utf-8')) if cache_path.exists() else {}
+class PhotoParser(HTMLParser):
+ def __init__(self):
+  super().__init__()
+  self.image=''
+ def handle_starttag(self,tag,attrs):
+  if tag!='meta' or self.image:return
+  data=dict(attrs)
+  if data.get('property','').lower()=='og:image' or data.get('name','').lower()=='twitter:image':
+   self.image=data.get('content','')
 def official_photo(url):
- if not url or not url.startswith('https://'): return ''
+ if not url or not url.startswith('https://'):return ''
  try:
   request=Request(url,headers={'User-Agent':'Mozilla/5.0 (compatible; JournalMSFS/1.0)'})
   with urlopen(request,timeout=6) as response:
    page=response.read(450000).decode('utf-8','replace')
-  for pattern in (r'<meta[^>]+property=["\\']og:image["\\'][^>]+content=["\\']([^"\\']+)',r'<meta[^>]+content=["\\']([^"\\']+)["\\'][^>]+property=["\\']og:image',r'<meta[^>]+name=["\\']twitter:image["\\'][^>]+content=["\\']([^"\\']+)'):
-   match=re.search(pattern,page,re.I)
-   if match:
-    image=urljoin(url,unescape(match.group(1)))
-    if image.startswith('https://') and urlparse(image).hostname: return image
+  parser=PhotoParser()
+  parser.feed(page)
+  image=urljoin(url,parser.image) if parser.image else ''
+  return image if image.startswith('https://') and urlparse(image).hostname else ''
  except Exception as error:
   print(f'Photo indisponible {url}: {type(error).__name__}')
- return ''
+  return ''
 urls={a.get('source_url') for a in airports if a.get('source_url','').startswith('https://')}
 missing=sorted(u for u in urls if u not in cache)
 if missing:
