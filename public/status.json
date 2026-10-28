@@ -1,9 +1,21 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T12:14:55.696315+00:00",
-  "weather_checked_at": "2026-10-28T12:14:55.696315+00:00",
-  "news_checked_at": "2026-10-28T12:14:55.696315+00:00",
+  "last_run": "2026-10-28T12:27:41.144734+00:00",
+  "weather_checked_at": "2026-10-28T12:27:41.144734+00:00",
+  "news_checked_at": "2026-10-28T12:27:41.144734+00:00",
   "weather": [
+    {
+      "icao": "LGRP",
+      "name": "LGRP Rhodes International Airport \"Diagoras\"",
+      "observed_at": "2026-10-28T12:20:00+00:00",
+      "raw": "METAR LGRP 281220Z VRB03KT 4000 +TSRA SCT010 FEW016CB BKN018 17/16 Q1010 NOSIG",
+      "score": 155,
+      "summary": "orage, visibilité < 3 SM",
+      "icon": "⛈️",
+      "phenomenon": "Orage",
+      "level": "Très dégradé",
+      "source_url": "https://aviationweather.gov/"
+    },
     {
       "icao": "PANC",
       "name": "sim-wings Anchorage",
@@ -14,21 +26,19 @@
       "icon": "🌫️",
       "phenomenon": "Brouillard",
       "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF PANC 281142Z 2812/2918 06005KT 1/4SM FZFG VV002 FM281800 03004KT 3SM BR SCT002 BKN020 TEMPO 2818/2821 1SM BR BKN002 FM282100 VRB03KT P6SM VCFG SCT003 FM290000 04004KT P6SM SCT100 WS020/15030KT FM291000 01008KT P6SM -RA SCT020 OVC035 WS020/15030KT FM291400 02007KT 6SM -RA BR BKN020 WS020/15030KT"
+      "source_url": "https://aviationweather.gov/"
     },
     {
-      "icao": "LGRP",
-      "name": "LGRP Rhodes International Airport \"Diagoras\"",
-      "observed_at": "2026-10-28T11:50:00+00:00",
-      "raw": "METAR LGRP 281150Z VRB02KT 9999 VCTS SCT010 FEW016CB BKN018 17/16 Q1009 NOSIG",
-      "score": 110,
-      "summary": "orage",
-      "icon": "⛈️",
-      "phenomenon": "Orage",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LGRP 281100Z 2812/2912 13006KT 9999 SCT018 SCT050 PROB30 TEMPO 2812/2912 4000 RA FEW018TCU BKN020 PROB30 TEMPO 2812/2912 3000 TSRA FEW018CB BKN018 BKN050"
+      "icao": "CYEG",
+      "name": "CYEG - Edmonton Airport",
+      "observed_at": "2026-10-28T12:17:00+00:00",
+      "raw": "SPECI CYEG 281217Z 32013G19KT 3SM -SN DRSN FEW009 BKN010 OVC015 M02/M03 A2992 RMK SF2ST5SC1 CIG RAG MOON DIMLY VISBL SLP169",
+      "score": 107,
+      "summary": "neige, visibilité < 5 SM, précipitations",
+      "icon": "🌨️",
+      "phenomenon": "Neige",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "CYYC",
@@ -40,21 +50,7 @@
       "icon": "🌨️",
       "phenomenon": "Neige",
       "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF CYYC 281140Z 2812/2912 35007KT P6SM SCT007 OVC012 TEMPO 2812/2818 2SM -SHSN BKN006 OVC010 FM281800 36012KT P6SM BKN030 BKN050 TEMPO 2818/2823 2SM -SHSN OVC020 FM282300 02008KT P6SM SCT030 BKN050 TEMPO 2823/2912 5SM -SN BKN012 OVC030 RMK NXT FCST BY 281500Z"
-    },
-    {
-      "icao": "CYEG",
-      "name": "CYEG - Edmonton Airport",
-      "observed_at": "2026-10-28T12:00:00+00:00",
-      "raw": "METAR CYEG 281200Z 32014KT 5SM -SN DRSN FEW009 BKN010 OVC017 M02/M03 A2991 RMK SF1ST6SC1 CIG RAG MOON DIMLY VISBL SLP165",
-      "score": 87,
-      "summary": "neige, précipitations",
-      "icon": "🌨️",
-      "phenomenon": "Neige",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF CYEG 281140Z 2812/2912 32012G22KT P6SM -SN FEW008 SCT015 OVC030 TEMPO 2812/2902 1SM -SN BKN006 OVC012 PROB40 2812/2818 1/2SM SHSN OVC004 FM290200 32010KT 4SM -SN OVC006 TEMPO 2902/2912 1SM -SN OVC003 RMK NXT FCST BY 281500Z"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "LGSK",
@@ -66,21 +62,19 @@
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LGSK 281100Z 2812/2821 04015G25KT 9999 FEW008 BKN018 BKN060 TEMPO 2812/2821 5000 RA SCT008 BKN020 BKN050 PROB40 TEMPO 2812/2821 3000 TSRA SCT008 FEW018CB BKN020 BKN050"
+      "source_url": "https://aviationweather.gov/"
     },
     {
-      "icao": "EKVG",
-      "name": "Vagar Airport",
-      "observed_at": "2026-10-28T11:50:00+00:00",
-      "raw": "METAR EKVG 281150Z AUTO 26024G38KT 230V290 9999 BKN042/// 09/02 Q0997 RMK OVC046/// WIND SKEID 28033G57KT 230V310",
-      "score": 45,
-      "summary": "rafales ≥ 35 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EKVG 281127Z 2812/2821 26025G48KT 9999 BKN020 BECMG 2812/2813 26025G40KT BECMG 2818/2821 26015G30KT"
+      "icao": "EFRO",
+      "name": "EFRO Rovaniemi Airport",
+      "observed_at": "2026-10-28T12:20:00+00:00",
+      "raw": "METAR EFRO 281220Z AUTO 22018G29KT 6000 -SHRA OVC003 09/08 Q1008",
+      "score": 54,
+      "summary": "visibilité < 5 SM, rafales ≥ 25 kt, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "KFSD",
@@ -92,8 +86,19 @@
       "icon": "☁️",
       "phenomenon": "Ciel couvert",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KFSD 281134Z 2812/2912 16006KT 5SM BR BKN005 TEMPO 2812/2814 1SM BR BKN004 FM281500 17010G17KT P6SM SCT007 OVC011 FM281800 21011G19KT P6SM BKN015 PROB30 2818/2822 4SM -SHRA OVC008 FM282200 25008KT P6SM BKN022 FM282300 30008KT P6SM SCT025"
+      "source_url": "https://aviationweather.gov/"
+    },
+    {
+      "icao": "EDDB",
+      "name": "Aerosoft Airport Berlin Brandenburg",
+      "observed_at": "2026-10-28T12:20:00+00:00",
+      "raw": "METAR EDDB 281220Z AUTO 31007KT 8000 3700 BR OVC010 12/10 Q1024 TEMPO 4000 -DZ BKN009",
+      "score": 32,
+      "summary": "visibilité < 5 SM, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "LROP",
@@ -105,8 +110,7 @@
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LROP 281100Z 2812/2912 VRB04KT 9999 SCT015 OVC030 TEMPO 2812/2817 04010KT 5000 -RA BR BKN010 OVC030 BECMG 2817/2819 5000 -RA BR BKN010 OVC030 BECMG 2822/2824 3000 -RA BR BKN005 OVC025 TEMPO 2900/2906 1500 -RADZ BR OVC002 BECMG 2909/2911 5000 BKN010 OVC020"
+      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "SLLP",
@@ -118,29 +122,27 @@
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF SLLP 281000Z 2812/2912 VRB02KT 9999 FEW006 BKN010 BKN070 TX12/2819Z TN00/2910Z BECMG 2813/2815 32010KT BKN015 FEW017CB BKN070 TEMPO 2817/2821 06010KT 5000 TSRA BECMG 2900/2902 VRB02KT SCT013"
-    },
-    {
-      "icao": "LEPA",
-      "name": "LEPA Palma de Mallorca",
-      "observed_at": "2026-10-28T12:00:00+00:00",
-      "raw": "METAR LEPA 281200Z 07016G27KT 030V110 9999 FEW024 23/15 Q1022 NOSIG",
-      "score": 22,
-      "summary": "rafales ≥ 25 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LEPA 281100Z 2812/2912 04012KT 9999 FEW030 TX24/2813Z TN14/2906Z TEMPO 2812/2816 04015G25KT BECMG 2816/2818 VRB04KT PROB30 TEMPO 2821/2908 4000 BR BECMG 2910/2912 25010KT"
+      "source_url": "https://aviationweather.gov/"
     }
   ],
   "weather_coverage": {
     "eligible": 210,
-    "received": 206,
-    "fresh": 206
+    "received": 162,
+    "fresh": 162
   },
   "news": [
+    {
+      "id": "github-FSLiveTrafficLiveries-base-1.7.0",
+      "title": "FSLTL Base Models (avions et livrées) : version stable 1.7.0",
+      "category": "Trafic IA",
+      "topic": "FSLTL",
+      "date": "2026-10-27",
+      "source": "GitHub Releases officiel — FSLiveTrafficLiveries/base",
+      "url": "https://github.com/FSLiveTrafficLiveries/base/releases/tag/1.7.0",
+      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - 150+ livrées réelles et historiques nouvelles ou mises à jour - 250+ livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
+      "impact": "Vérifier le changelog officiel et sauvegarder les configurations avant installation.",
+      "new": true
+    },
     {
       "id": "779816",
       "title": "Légende locale 23 : Antonov An-28 disponible dès maintenant",
@@ -204,7 +206,7 @@
       "date": "2026-10-22",
       "source": "Forum officiel Microsoft Flight Simulator",
       "url": "https://forums.flightsimulator.com/t/blog-weekly-briefing-for-2026-10-22/779510",
-      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Lisez la suite pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
+      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Poursuivez votre lecture pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
       "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
       "new": false
     },
@@ -267,15 +269,16 @@
   ],
   "hardware": [],
   "source_status": {
-    "metar": "ok",
-    "taf": "ok",
+    "metar": "partial",
+    "taf": "error",
     "official_news": "ok",
     "airport_versions": "partial",
-    "official_releases": "partial",
+    "official_releases": "ok",
     "software_versions": "partial"
   },
   "errors": [
-    "Versions GitHub: FSLiveTrafficLiveries/base : JSONDecodeError: Unterminated string starting at: line 1 column 999923 (char 999922)",
+    "HTTP Error 504: Gateway Time-out",
+    "TAF : HTTP Error 504: Gateway Time-out",
     "Versions : GMMX / PERFECTSOFT : Fiche 1.1.0 plus ancienne que l'installation 1.2.0 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : DTTA / prealsoft : Fiche 1.00 plus ancienne que l'installation 1.0.1 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : CYVR / fsdreamteam : Fiche 1.0.7 plus ancienne que l'installation 1.3.1 : vérifier le canal éditeur, ne pas rétrograder",
@@ -303,15 +306,15 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 56,
-    "audited_at": "2026-10-28T12:14:55.696315+00:00"
+    "audited_at": "2026-10-28T12:27:41.144734+00:00"
   },
-  "versions_checked_at": "2026-10-28T12:14:55.696315+00:00",
-  "releases_checked_at": "2026-10-28T12:14:55.696315+00:00",
+  "versions_checked_at": "2026-10-28T12:27:41.144734+00:00",
+  "releases_checked_at": "2026-10-28T12:27:41.144734+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-28T12:15:47.702272+00:00",
+    "checked_at": "2026-10-28T12:29:08.448615+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
