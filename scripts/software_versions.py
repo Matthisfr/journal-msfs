@@ -81,6 +81,14 @@ def fenix_official():
     return {"version":"V"+m.group(1)+" (branche)","url":"https://fenixsim.com/blog/entries/2026-10-21_v3_update/" if m.group(1)=="3" else url,
             "published_at":None,"notes":"Version majeure confirmée. Numéro exact du launcher non public : consulter le journal des modifications Fenix."}
 
+def siminnovations_version():
+    url="https://docs.siminnovations.com/air_manager_5/release_notes/"
+    raw=text_html(get(url))
+    m=re.search(r"\bV(5\.\d+(?:\.\d+)?)\b",raw,re.I)
+    if not m:raise ValueError("Version Air Manager 5 introuvable")
+    return {"version":m.group(1),"url":url,"published_at":None,
+            "notes":"Version publiée dans les notes officielles Air Manager 5."}
+
 def short_notes(text):
     lines=[re.sub(r"\s+"," ",line).strip(" -*#\t") for line in str(text).splitlines()]
     lines=[x for x in lines if x and not x.startswith("![")]
@@ -105,6 +113,8 @@ def update():
                 stable=msfs_official()
             elif entry["method"]=="fenix_official":
                 stable=fenix_official()
+            elif entry["method"]=="siminnovations":
+                stable=siminnovations_version()
             if stable:
                 row.update({"version":stable["version"],"state":"verified","version_url":stable["url"],
                             "published_at":stable["published_at"],"reason":"Version vérifiée sur le changelog officiel"})
@@ -166,6 +176,21 @@ def update():
                 row["last_confirmed_at"]=prior.get("checked_at")
                 row["reason"]="Dernière version confirmée conservée ; nouvelle vérification nécessaire."
                 row["state"]="historical"
+        # Afficher une version de référence sourcée plutôt qu'une cellule vide.
+        # Ne jamais présenter une référence historique comme une vérification du jour.
+        if not row.get("version") and entry.get("reference_version"):
+            row["version"]=entry["reference_version"]
+            row["version_url"]=entry.get("reference_source_url") or entry["source_url"]
+            row["last_confirmed_at"]=entry.get("reference_checked_at")
+            row["reason"]="Référence vérifiée antérieurement (non revérifiée aujourd'hui) : "+entry.get("reference_note","")
+            row["state"]="historical"
+        if not row.get("version") and old.get(entry["id"],{}).get("version"):
+            prior=old[entry["id"]]
+            row["version"]=prior["version"]
+            row["version_url"]=prior.get("version_url") or row["source_url"]
+            row["last_confirmed_at"]=prior.get("checked_at")
+            row["reason"]="Dernière version précédemment enregistrée, non revérifiée aujourd'hui."
+            row["state"]="historical"
         rows.append(row)
     data={"checked_at":NOW.isoformat(),"total":len(rows),
           "verified":sum(x["state"] in ("verified","changed") for x in rows),
