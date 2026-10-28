@@ -247,14 +247,14 @@ def build_news(status, editorial, manifest):
             ('<div class="news-impact"><b>Impact / action :</b> ' + h(a["impact"]) + '</div>' if a.get("impact") else "") +
             '<div class="news-source"><a href="' + url + '" target="_blank" rel="noopener noreferrer">' + source + ' ↗</a></div></article>'
         )
-        if group != 0:
+        if group == 3:
             continue
         homes.append(
             '<article><div class="home-news-row">' + icon + '<div class="home-news-content"><small>' +
             category + ' · ' + date + '</small><strong>' + title +
             '</strong><a href="' + url + '" target="_blank" rel="noopener noreferrer">Source officielle ↗</a></div></div></article>'
         )
-    return "\n".join(cards), "\n".join(homes[:3])
+    return "\n".join(cards), "\n".join(homes[:6])
 
 def render_watch(watch):
     rows = watch.get("sources", [])
