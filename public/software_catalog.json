@@ -134,9 +134,13 @@
     "name": "Navigraph / Charts / Simlink",
     "group": "Navigation",
     "source_url": "https://navigraph.com/products/charts/changelog",
-    "method": "official_news",
+    "method": "navigraph_charts",
     "installed_version": null,
-    "tracking": "Changelog officiel Navigraph Charts ; version exacte seulement si publiée explicitement, autres produits Navigraph suivis séparément."
+    "tracking": "Changelog officiel Navigraph Charts ; version exacte seulement si publiée explicitement, autres produits Navigraph suivis séparément.",
+    "reference_version": "8.43.1",
+    "reference_checked_at": "2026-05-31",
+    "reference_source_url": "https://forum.navigraph.com/t/cant-access-charts-since-installing-link-to-fsltl/23566/5",
+    "reference_note": "Version confirmée par Navigraph au 31 mai 2026 ; ne pas confondre avec une vérification actuelle."
   },
   {
     "id": "flightcontrolreplay",
