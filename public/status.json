@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T17:49:32.070552+00:00",
-  "weather_checked_at": "2026-10-28T17:49:32.070552+00:00",
-  "news_checked_at": "2026-10-28T17:49:32.070552+00:00",
+  "last_run": "2026-10-28T17:52:27.339549+00:00",
+  "weather_checked_at": "2026-10-28T17:52:27.339549+00:00",
+  "news_checked_at": "2026-10-28T17:52:27.339549+00:00",
   "weather": [
     {
       "icao": "PANC",
@@ -33,8 +33,8 @@
     {
       "icao": "EFHK",
       "name": "EFHK Helsinki Vantaa",
-      "observed_at": "2026-10-28T17:20:00+00:00",
-      "raw": "METAR EFHK 281720Z 18011KT 4000 -DZ FEW004 BKN005 09/08 Q1022 BECMG BKN004",
+      "observed_at": "2026-10-28T17:50:00+00:00",
+      "raw": "METAR EFHK 281750Z 18010KT 4500 DZ BKN004 09/08 Q1022 TEMPO -DZ",
       "score": 57,
       "summary": "visibilité < 3 SM, précipitations",
       "icon": "🌧️",
@@ -55,6 +55,19 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF LKPR 281700Z 2818/2924 31006KT 9999 BKN025 TEMPO 2818/2824 5000 -RA SCT009 BKN012 PROB40 TEMPO 2818/2822 2500 RA BR BKN007 BECMG 2900/2902 SCT020 BECMG 2908/2910 36006KT CAVOK BECMG 2920/2922 1200 BR SCT003 TEMPO 2922/2924 0700 FG BKN002"
+    },
+    {
+      "icao": "EKVG",
+      "name": "Vagar Airport",
+      "observed_at": "2026-10-28T17:50:00+00:00",
+      "raw": "METAR EKVG 281750Z AUTO 26022G32KT 9999 BKN042/// 09/05 Q1004 RMK FEW024/// BKN041/// WIND SKEID VRB24G48KT",
+      "score": 22,
+      "summary": "rafales ≥ 25 kt",
+      "icon": "💨",
+      "phenomenon": "Vent fort",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EKVG 281428Z 2815/2821 26025G40KT 9999 BKN020 BECMG 2818/2821 26015G30KT"
     },
     {
       "icao": "KICT",
@@ -120,19 +133,6 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF MUHA 281700Z 2818/2918 36008KT 9000 SCT030 TEMPO 2818/2824 FEW020TCU BKN030 BECMG 2900/2902 VRB02KT"
-    },
-    {
-      "icao": "OMDB",
-      "name": "OMDB Dubai International Airport",
-      "observed_at": "2026-10-28T17:30:00+00:00",
-      "raw": "METAR OMDB 281730Z 07006KT 010V100 8000 FEW025 31/24 Q1014 NOSIG",
-      "score": 20,
-      "summary": "visibilité < 5 SM",
-      "icon": "🌤️",
-      "phenomenon": "Éclaircies",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF OMDB 281700Z 2818/3000 09005KT 8000 FEW030 PROB30 2902/2905 4000 HZ BECMG 2909/2911 34012KT BECMG 2916/2918 10005KT"
     }
   ],
   "weather_coverage": {
@@ -314,15 +314,15 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 57,
-    "audited_at": "2026-10-28T17:49:32.070552+00:00"
+    "audited_at": "2026-10-28T17:52:27.339549+00:00"
   },
-  "versions_checked_at": "2026-10-28T17:49:32.070552+00:00",
-  "releases_checked_at": "2026-10-28T17:49:32.070552+00:00",
+  "versions_checked_at": "2026-10-28T17:52:27.339549+00:00",
+  "releases_checked_at": "2026-10-28T17:52:27.339549+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-28T17:50:21.706698+00:00",
+    "checked_at": "2026-10-28T17:53:43.722671+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
