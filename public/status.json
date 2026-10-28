@@ -1,14 +1,14 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T16:04:33.648089+00:00",
-  "weather_checked_at": "2026-10-28T16:04:33.648089+00:00",
-  "news_checked_at": "2026-10-28T16:04:33.648089+00:00",
+  "last_run": "2026-10-28T16:33:45.186281+00:00",
+  "weather_checked_at": "2026-10-28T16:33:45.186281+00:00",
+  "news_checked_at": "2026-10-28T16:33:45.186281+00:00",
   "weather": [
     {
       "icao": "PANC",
       "name": "sim-wings Anchorage",
-      "observed_at": "2026-10-28T15:53:00+00:00",
-      "raw": "METAR PANC 281553Z 10003KT 1/4SM R07R/1200V1400FT FZFG VV002 M02/M02 A3036 RMK AO2 SLP284 I1001 T10171017",
+      "observed_at": "2026-10-28T16:14:00+00:00",
+      "raw": "SPECI PANC 281614Z 09003KT 1/4SM R07R/1200V2200FT FZFG VV002 M02/M02 A3036 RMK AO2 TWR VIS 1/4 T10221022",
       "score": 145,
       "summary": "brouillard, visibilité < 1 SM",
       "icon": "🌫️",
@@ -20,8 +20,8 @@
     {
       "icao": "CYEG",
       "name": "CYEG - Edmonton Airport",
-      "observed_at": "2026-10-28T15:00:00+00:00",
-      "raw": "METAR CYEG 281500Z 33013KT 1 1/2SM -SN DRSN FEW009 BKN011 OVC022 M02/M04 A2998 RMK SF1SC7SC1 SF TR SLP190",
+      "observed_at": "2026-10-28T16:00:00+00:00",
+      "raw": "METAR CYEG 281600Z 33014KT 1 1/2SM -SN DRSN FEW009 BKN011 OVC016 M02/M04 A3000 RMK SF2SC5SC1 SLP197",
       "score": 120,
       "summary": "neige, visibilité < 3 SM",
       "icon": "🌨️",
@@ -31,10 +31,23 @@
       "taf_raw": "TAF CYEG 281440Z 2815/2912 32012G22KT P6SM -SN FEW008 SCT015 OVC030 TEMPO 2815/2902 2SM -SN BKN006 OVC012 PROB40 2815/2818 1/2SM SHSN OVC004 FM290200 32010KT 4SM -SN OVC006 TEMPO 2902/2912 1SM -SN OVC003 RMK NXT FCST BY 281800Z"
     },
     {
+      "icao": "LGRP",
+      "name": "LGRP Rhodes International Airport \"Diagoras\"",
+      "observed_at": "2026-10-28T14:50:00+00:00",
+      "raw": "METAR LGRP 281450Z 06007KT 030V090 9999 SCT010 FEW016TCU BKN018 17/16 Q1009 RETS NOSIG",
+      "score": 110,
+      "summary": "orage",
+      "icon": "⛈️",
+      "phenomenon": "Orage",
+      "level": "Très dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF LGRP 281100Z 2812/2912 13006KT 9999 SCT018 SCT050 PROB30 TEMPO 2812/2912 4000 RA FEW018TCU BKN020 PROB30 TEMPO 2812/2912 3000 TSRA FEW018CB BKN018 BKN050"
+    },
+    {
       "icao": "CYYC",
       "name": "CYYC Calgary International Airport",
-      "observed_at": "2026-10-28T15:36:00+00:00",
-      "raw": "SPECI CYYC 281536Z 01013KT 3SM -SN BR FEW012 BKN018 M02/M04 A2995 RMK SF1SC6 SLP193",
+      "observed_at": "2026-10-28T16:00:00+00:00",
+      "raw": "METAR CYYC 281600Z 36014KT 3SM -SN BR FEW010 BKN020 M02/M04 A2996 RMK SF1SC6 SLP196",
       "score": 95,
       "summary": "neige, visibilité < 5 SM",
       "icon": "🌨️",
@@ -44,23 +57,10 @@
       "taf_raw": "TAF CYYC 281440Z 2815/2912 35006KT P6SM SCT007 OVC012 TEMPO 2815/2818 2SM -SHSN BR BKN006 OVC010 PROB30 2815/2818 3/4SM -SHSN BR VV008 FM281800 36012KT P6SM BKN030 BKN050 TEMPO 2818/2823 2SM -SHSN OVC020 FM282300 02008KT P6SM SCT030 BKN050 TEMPO 2823/2912 5SM -SN BKN012 OVC030 RMK NXT FCST BY 281800Z"
     },
     {
-      "icao": "EKVG",
-      "name": "Vagar Airport",
-      "observed_at": "2026-10-28T15:50:00+00:00",
-      "raw": "METAR EKVG 281550Z AUTO 27025G40KT 9999 BKN020/// 09/05 Q1001 REDZRA RMK BKN022/// WIND SKEID 28032G44KT",
-      "score": 57,
-      "summary": "rafales ≥ 35 kt, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EKVG 281428Z 2815/2821 26025G40KT 9999 BKN020 BECMG 2818/2821 26015G30KT"
-    },
-    {
       "icao": "LKPR",
       "name": "LKPR Václav Havel Airport Prague",
-      "observed_at": "2026-10-28T16:00:00+00:00",
-      "raw": "METAR LKPR 281600Z 30005KT 4000 -RA BR FEW003 OVC035 09/08 Q1025 NOSIG",
+      "observed_at": "2026-10-28T15:00:00+00:00",
+      "raw": "METAR LKPR 281500Z 26004KT 2800 -RADZ BR FEW007 BKN017 BKN025 08/08 Q1024 TEMPO 4000 RA BKN007",
       "score": 57,
       "summary": "visibilité < 3 SM, précipitations",
       "icon": "🌧️",
@@ -81,6 +81,19 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF KGFK 281511Z 2815/2912 18013G20KT 3SM BR BKN004 TEMPO 2815/2818 1/2SM FG VV003 FM281800 19009KT P6SM BKN025 FM282200 22009KT P6SM BKN060"
+    },
+    {
+      "icao": "EKVG",
+      "name": "Vagar Airport",
+      "observed_at": "2026-10-28T16:20:00+00:00",
+      "raw": "METAR EKVG 281620Z AUTO 26020G30KT 9999 BKN024/// 09/05 Q1002 REDZRA RMK BKN023/// WIND SKEID 28030G45KT",
+      "score": 34,
+      "summary": "rafales ≥ 25 kt, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EKVG 281428Z 2815/2821 26025G40KT 9999 BKN020 BECMG 2818/2821 26015G30KT"
     },
     {
       "icao": "KICT",
@@ -106,7 +119,7 @@
       "phenomenon": "Vent fort",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KJAX 281122Z 2812/2912 02011KT P6SM SCT015 BKN035 FM281330 03014G22KT P6SM SCT015 SCT025 BKN040 FM281700 03018G28KT P6SM BKN025 OVC040 FM282300 02013G21KT P6SM VCSH SCT015 OVC025 FM290300 03010G15KT P6SM VCSH OVC025"
+      "taf_raw": "TAF KJAX 281613Z 2816/2912 03014G25KT P6SM SCT015 SCT025 BKN040 FM281700 03018G28KT P6SM BKN025 OVC040 FM282300 02013G21KT P6SM VCSH SCT015 OVC025 FM290300 03010G15KT P6SM VCSH OVC025"
     },
     {
       "icao": "MMMX",
@@ -119,20 +132,7 @@
       "phenomenon": "Ciel couvert",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF COR MMMX 281506Z 2812/2912 06006KT 5SM HZ BKN015 BKN080 TX24/2821Z TN13/2812Z TEMPO 2813/2816 3SM BR HZ FM281600 07005KT 6SM HZ SCT020 FM281900 12010KT P6SM SCT020 TEMPO 2822/2902 4SM TSRA BKN020CB FM290300 06008KT 6SM RA BKN020 BKN100 BECMG 2905/2906 6SM HZ BKN020 FM291100 00000KT 4SM HZ BKN015"
-    },
-    {
-      "icao": "MUHA",
-      "name": "Habana Jose Marti Intl Airport",
-      "observed_at": "2026-10-28T15:50:00+00:00",
-      "raw": "METAR MUHA 281550Z 01011KT 8000 FEW020TCU BKN025 27/23 Q1014",
-      "score": 20,
-      "summary": "visibilité < 5 SM",
-      "icon": "☁️",
-      "phenomenon": "Ciel couvert",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF MUHA 281100Z 2812/2912 36008KT 9000 SCT030 TEMPO 2817/2900 BKN030 BECMG 2900/2902 VRB03KT"
+      "taf_raw": "TAF COR MMMX 281619Z 2812/2912 06006KT 5SM HZ BKN015 BKN080 TX24/2821Z TN13/2812Z TEMPO 2813/2816 3SM BR HZ FM281600 07005KT 6SM HZ BKN020 FM281900 12010KT P6SM SCT020 TEMPO 2822/2902 4SM TSRA BKN020CB FM290300 06008KT 6SM RA BKN020 BKN100 BECMG 2905/2906 6SM HZ BKN020 FM291100 00000KT 4SM HZ BKN015"
     }
   ],
   "weather_coverage": {
@@ -314,15 +314,15 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 56,
-    "audited_at": "2026-10-28T16:04:33.648089+00:00"
+    "audited_at": "2026-10-28T16:33:45.186281+00:00"
   },
-  "versions_checked_at": "2026-10-28T16:04:33.648089+00:00",
-  "releases_checked_at": "2026-10-28T16:04:33.648089+00:00",
+  "versions_checked_at": "2026-10-28T16:33:45.186281+00:00",
+  "releases_checked_at": "2026-10-28T16:33:45.186281+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-28T16:05:20.651781+00:00",
+    "checked_at": "2026-10-28T16:35:34.902236+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
