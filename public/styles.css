@@ -240,3 +240,6 @@
 .airport-description-info{display:inline;color:#6da9c5;cursor:help;font-size:13px;vertical-align:baseline;white-space:nowrap}
 .airport-description-info:focus{outline:2px solid #6da9c5;border-radius:3px}
 .airport-popup-description{display:inline-block;margin-top:5px;white-space:pre-wrap;overflow-wrap:anywhere;max-width:260px}
+
+/* Bouton commentaire compatible tactile iPad, sans modifier les dimensions du tableau. */
+button.airport-description-info{border:0;background:transparent;padding:0 3px;margin:0;line-height:1;font:inherit;color:#417c9a;cursor:pointer;vertical-align:baseline}
