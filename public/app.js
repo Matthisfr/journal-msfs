@@ -287,7 +287,19 @@ async function renderMap(){
     showAirportShops(code,(data[code]&&data[code].name)||code,nearest.item.marker.getLatLng());
     return;
    }
-   const loading=L.popup({maxWidth:290}).setLatLng(latlng).setContent('Recherche de l’aéroport sous le doigt…').openOn(airportMap);
+   const manualHtml='<div class="airport-shop-popup"><strong>Aéroport non répertorié</strong><p>Identification automatique en cours…</p><label>Code ICAO <input id="map-airport-icao" type="text" maxlength="4" autocapitalize="characters" placeholder="Ex. SBRJ" style="width:90px;text-transform:uppercase"></label> <button type="button" id="map-airport-search">Rechercher</button></div>';
+   const loading=L.popup({maxWidth:290}).setLatLng(latlng).setContent(manualHtml).openOn(airportMap);
+   const enableManual=()=>{
+    const node=loading.getElement();
+    const button=node?.querySelector('#map-airport-search');
+    const input=node?.querySelector('#map-airport-icao');
+    if(button&&input)button.addEventListener('click',()=>{
+     const code=input.value.trim().toUpperCase();
+     if(/^[A-Z0-9]{4}$/.test(code))showAirportShops(code,code,latlng);
+     else input.setCustomValidity('Saisis un code ICAO de quatre caractères');
+    });
+   };
+   enableManual();
    try{
     // OpenStreetMap / Overpass : recherche géographique ponctuelle, pas de scraping de boutiques.
     const query='[out:json][timeout:12];(nwr["aeroway"="aerodrome"](around:9000,'+latlng.lat+','+latlng.lng+'););out center tags;';
@@ -301,9 +313,9 @@ async function renderMap(){
     const found=candidates[0];
     if(found){showAirportShops(found.code.toUpperCase(),found.name,[found.lat,found.lon]);return}
     if(nearest&&nearest.distance<100){const code=nearest.item.code;showAirportShops(code,(data[code]&&data[code].name)||code,nearest.item.marker.getLatLng());return}
-    loading.setContent('Aucun code ICAO confirmé à proximité. Zoome sur l’aéroport et réessaie.');
+    loading.getElement()?.querySelector('.airport-shop-popup p')?.replaceChildren(document.createTextNode('Code ICAO non trouvé automatiquement. Saisis-le ci-dessous.'));
    }catch(error){
-    loading.setContent('Recherche géographique momentanément indisponible. Réessaie dans quelques instants.');
+    loading.getElement()?.querySelector('.airport-shop-popup p')?.replaceChildren(document.createTextNode('Service cartographique indisponible. Saisis le code ICAO ci-dessous.'));
    }
   };
   // Safari iPad : empêcher le menu de sélection sans bloquer le déplacement de la carte.
