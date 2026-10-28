@@ -111,11 +111,14 @@
     "id": "fsltl",
     "name": "FSLTL (modèles et livrées)",
     "group": "Trafic",
-    "source_url": "https://github.com/FSLiveTrafficLiveries/FSLTL_BaseModels_Releases/releases",
-    "method": "github_release",
+    "source_url": "https://github.com/FSLiveTrafficLiveries/base/releases",
+    "method": "official_news",
     "installed_version": null,
     "tracking": "Versions officielles FSLTL Base Models : nouveaux avions, livrées, correctifs (injecteur exclu)",
-    "repo": "FSLiveTrafficLiveries/FSLTL_BaseModels_Releases"
+    "reference_version": "1.7.0",
+    "reference_checked_at": "2026-10-28",
+    "reference_source_url": "https://www.simflight.de/2026/10/28/fsltl-1-7-0-fuenf-neue-flugzeugtypen/",
+    "reference_note": "FSLTL Base Models 1.7.0 sorti le 27 octobre 2026, version corroborée le 28 octobre ; dépôt GitHub releases en décalage."
   },
   {
     "id": "aig",
