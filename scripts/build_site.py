@@ -405,17 +405,6 @@ def build():
     rev = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%d%H%M%S")
     index = index.replace('src="app.js"', f'src="app.js?rev={rev}"')
     index = index.replace('href="styles.css"', f'href="styles.css?rev={rev}"')
-    # Le bouton Doublons appartient à la page principale des aéroports,
-    # pas seulement à la page indépendante.
-    if 'class="airport-doublons-link"' not in index:
-        index = index.replace(
-            '<div class="filterbar">',
-            '<p><a class="airport-doublons-link" href="./comparateur.html" '
-            'style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;'
-            'border-radius:9px;background:#16496b;color:#fff;text-decoration:none;'
-            'font-weight:700">👁️ Doublons</a></p><div class="filterbar">',
-            1,
-        )
     index = index.replace(
         '<div class="tablebox"><table>',
         f'<p class="standalone-link"><a href="airports.html">↗ Afficher les {len(airports)} scènes sur une page indépendante (sans JavaScript)</a></p><div class="tablebox"><table>',
