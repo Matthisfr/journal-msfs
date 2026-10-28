@@ -14,15 +14,14 @@ on:
           - normale
           - totale
   schedule:
-    # Cinq tentatives quotidiennes, 05:17-09:17 heure française.
-    # Les créneaux hors saison sont écartés par la porte ci-dessous.
-    # Plusieurs chances protègent des déclenchements GitHub retardés ou omis.
-    - cron: '17 3 * * *'
-    - cron: '17 4 * * *'
-    - cron: '17 5 * * *'
-    - cron: '17 6 * * *'
-    - cron: '17 7 * * *'
-    - cron: '17 8 * * *'
+    # Tentatives réparties pour éviter les pics de charge GitHub Actions.
+    # UTC : couverture de la matinée française en heure d'hiver et d'été.
+    - cron: '7 3 * * *'
+    - cron: '23 4 * * *'
+    - cron: '41 5 * * *'
+    - cron: '11 6 * * *'
+    - cron: '37 7 * * *'
+    - cron: '53 8 * * *'
 
 permissions:
   actions: read
@@ -55,13 +54,9 @@ jobs:
             exit 0
           fi
 
-          hour=$(TZ=Europe/Paris date +%H)
           today=$(TZ=Europe/Paris date +%F)
-          if (( 10#$hour < 5 || 10#$hour > 9 )); then
-            echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "Créneau hors fenêtre française 05h-09h"
-            exit 0
-          fi
+          # Ne jamais rejeter un déclenchement GitHub retardé :
+          # seule la fraîcheur réelle des données décide de lancer la collecte.
 
           # Contrôler la date des DONNÉES réellement enregistrées, et non
           # la conclusion success d'un workflow qui aurait sauté la collecte.
