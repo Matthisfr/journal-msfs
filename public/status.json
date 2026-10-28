@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T14:56:25.388827+00:00",
-  "weather_checked_at": "2026-10-28T14:56:25.388827+00:00",
-  "news_checked_at": "2026-10-28T14:56:25.388827+00:00",
+  "last_run": "2026-10-28T15:02:12.915665+00:00",
+  "weather_checked_at": "2026-10-28T15:02:12.915665+00:00",
+  "news_checked_at": "2026-10-28T15:02:12.915665+00:00",
   "weather": [
     {
       "icao": "PANC",
@@ -85,8 +85,8 @@
     {
       "icao": "KFSD",
       "name": "KFSD Sioux falls Regional Airport",
-      "observed_at": "2026-10-28T14:41:00+00:00",
-      "raw": "SPECI KFSD 281441Z 14006KT 2SM BR OVC004 12/12 A2993 RMK AO2 RAB21E34 P0002 T01220122",
+      "observed_at": "2026-10-28T14:56:00+00:00",
+      "raw": "METAR KFSD 281456Z 13004KT 2 1/2SM BR OVC004 13/12 A2993 RMK AO2 SFC VIS 3 RAB21E34 SLP138 P0002 60002 T01280122 58003",
       "score": 57,
       "summary": "visibilité < 3 SM, précipitations",
       "icon": "🌧️",
@@ -98,8 +98,8 @@
     {
       "icao": "LKPR",
       "name": "LKPR Václav Havel Airport Prague",
-      "observed_at": "2026-10-28T14:30:00+00:00",
-      "raw": "METAR LKPR 281430Z 27004KT 2700 -DZRA BR FEW007 BKN020 OVC035 08/07 Q1024 TEMPO 4000 RA BKN007",
+      "observed_at": "2026-10-28T15:00:00+00:00",
+      "raw": "METAR LKPR 281500Z 26004KT 2800 -RADZ BR FEW007 BKN017 BKN025 08/08 Q1024 TEMPO 4000 RA BKN007",
       "score": 57,
       "summary": "visibilité < 3 SM, précipitations",
       "icon": "🌧️",
@@ -132,7 +132,7 @@
       "phenomenon": "Précipitations",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KIAH 281120Z 2812/2918 VRB03KT P6SM FEW050 FM281600 13008KT P6SM SCT035 OVC070 FM290000 VRB03KT P6SM FEW050 BKN250"
+      "taf_raw": "TAF KIAH 281457Z 2815/2918 11005KT P6SM VCSH BKN050 FM281700 13009KT P6SM SCT035 OVC070 FM290000 VRB03KT P6SM FEW050 BKN250"
     }
   ],
   "weather_coverage": {
@@ -149,7 +149,7 @@
       "date": "2026-10-27",
       "source": "GitHub Releases officiel — FSLiveTrafficLiveries/base",
       "url": "https://github.com/FSLiveTrafficLiveries/base/releases/tag/1.7.0",
-      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - 150+ livrées réelles et historiques nouvelles ou mises à jour - 250+ livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
+      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - Plus de 150 livrées réelles et historiques nouvelles ou mises à jour - Plus de 250 livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
       "impact": "Vérifier le changelog officiel et sauvegarder les configurations avant installation.",
       "new": false
     },
@@ -211,7 +211,7 @@
     },
     {
       "id": "779510",
-      "title": "[Blog] Briefing hebdomadaire du 22/10/2026",
+      "title": "[Blog] Briefing hebdomadaire du 2026-10-22",
       "category": "MSFS officiel",
       "date": "2026-10-22",
       "source": "Forum officiel Microsoft Flight Simulator",
@@ -314,15 +314,15 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 56,
-    "audited_at": "2026-10-28T14:56:25.388827+00:00"
+    "audited_at": "2026-10-28T15:02:12.915665+00:00"
   },
-  "versions_checked_at": "2026-10-28T14:56:25.388827+00:00",
-  "releases_checked_at": "2026-10-28T14:56:25.388827+00:00",
+  "versions_checked_at": "2026-10-28T15:02:12.915665+00:00",
+  "releases_checked_at": "2026-10-28T15:02:12.915665+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-28T14:57:37.835827+00:00",
+    "checked_at": "2026-10-28T15:03:23.206152+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
