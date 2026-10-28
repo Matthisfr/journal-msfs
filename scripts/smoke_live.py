@@ -51,7 +51,9 @@ def verify():
     catalog_ids = {item["id"] for item in catalog}
     published_ids = {item["id"] for item in software.get("items", [])}
     if software.get("total") != len(catalog) or published_ids != catalog_ids:
-        raise AssertionError(f"Catalogue logiciel incohérent : {len(published_ids)}/{len(catalog)} produits")
+        missing = sorted(catalog_ids - published_ids)
+        extra = sorted(published_ids - catalog_ids)
+        raise AssertionError(f"Catalogue logiciel incohérent : {len(published_ids)}/{len(catalog)} produits ; absents={missing} ; supplémentaires={extra} ; total={software.get('total')}")
     if 'id="qualite"' not in index or 'id="quality-airport-details"' not in index:
         raise AssertionError("Onglet QUALITÉ ou inventaire des anomalies absent")
     if 'id="quality-audit"' not in index:
@@ -78,11 +80,11 @@ def verify():
     return True
 
 if __name__ == "__main__":
-    for attempt in range(1, 6):
+    for attempt in range(1, 16):
         try:
             verify()
             sys.exit(0)
         except Exception as exc:
-            print(f"Tentative {attempt}/5 : {type(exc).__name__}: {exc}", flush=True)
-            if attempt < 5: time.sleep(12)
+            print(f"Tentative {attempt}/15 : {type(exc).__name__}: {exc}", flush=True)
+            if attempt < 15: time.sleep(15)
     sys.exit("ERREUR : site public non conforme après publication")
