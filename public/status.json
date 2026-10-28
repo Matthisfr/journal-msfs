@@ -1,14 +1,14 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T16:51:18.039198+00:00",
-  "weather_checked_at": "2026-10-28T16:51:18.039198+00:00",
-  "news_checked_at": "2026-10-28T16:51:18.039198+00:00",
+  "last_run": "2026-10-28T16:58:22.737809+00:00",
+  "weather_checked_at": "2026-10-28T16:58:22.737809+00:00",
+  "news_checked_at": "2026-10-28T16:58:22.737809+00:00",
   "weather": [
     {
       "icao": "PANC",
       "name": "sim-wings Anchorage",
-      "observed_at": "2026-10-28T16:14:00+00:00",
-      "raw": "SPECI PANC 281614Z 09003KT 1/4SM R07R/1200V2200FT FZFG VV002 M02/M02 A3036 RMK AO2 TWR VIS 1/4 T10221022",
+      "observed_at": "2026-10-28T16:53:00+00:00",
+      "raw": "METAR PANC 281653Z 00000KT 1/4SM R07R/1800V2200FT FZFG VV002 M02/M02 A3035 RMK AO2 SLP278 I1000 T10221022",
       "score": 145,
       "summary": "brouillard, visibilité < 1 SM",
       "icon": "🌫️",
@@ -34,20 +34,20 @@
       "icao": "CYYC",
       "name": "CYYC Calgary International Airport",
       "observed_at": "2026-10-28T16:33:00+00:00",
-      "raw": "SPECI CYYC 281633Z CCA 01013KT 2 1/2SM -SN BR FEW009 BKN047 BKN250 M02/M04 A2996 RMK SF1SC7CC1 SF TR CC TR SLP197",
-      "score": 120,
-      "summary": "neige, visibilité < 3 SM",
+      "raw": "SPECI CYYC 281633Z CCB 01013KT 3SM -SN BR FEW009 BKN047 BKN250 M02/M04 A2996 RMK SF1SC7CC1 SF TR CC TR SLP197",
+      "score": 95,
+      "summary": "neige, visibilité < 5 SM",
       "icon": "🌨️",
       "phenomenon": "Neige",
-      "level": "Très dégradé",
+      "level": "Dégradé",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF CYYC 281440Z 2815/2912 35006KT P6SM SCT007 OVC012 TEMPO 2815/2818 2SM -SHSN BR BKN006 OVC010 PROB30 2815/2818 3/4SM -SHSN BR VV008 FM281800 36012KT P6SM BKN030 BKN050 TEMPO 2818/2823 2SM -SHSN OVC020 FM282300 02008KT P6SM SCT030 BKN050 TEMPO 2823/2912 5SM -SN BKN012 OVC030 RMK NXT FCST BY 281800Z"
     },
     {
       "icao": "KGFK",
       "name": "kgfk",
-      "observed_at": "2026-10-28T15:53:00+00:00",
-      "raw": "METAR KGFK 281553Z 19014KT 2SM BR OVC004 08/07 A2986 RMK AO2 TWR VIS 2 1/2 SLP118 T00780072",
+      "observed_at": "2026-10-28T16:53:00+00:00",
+      "raw": "METAR KGFK 281653Z 20011KT 2 1/2SM BR OVC003 08/08 A2985 RMK AO2 SLP115 T00830078",
       "score": 45,
       "summary": "visibilité < 3 SM",
       "icon": "☁️",
@@ -55,6 +55,19 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF KGFK 281511Z 2815/2912 18013G20KT 3SM BR BKN004 TEMPO 2815/2818 1/2SM FG VV003 FM281800 19009KT P6SM BKN025 FM282200 22009KT P6SM BKN060"
+    },
+    {
+      "icao": "EFHK",
+      "name": "EFHK Helsinki Vantaa",
+      "observed_at": "2026-10-28T16:50:00+00:00",
+      "raw": "METAR EFHK 281650Z 18011KT 7000 -DZ FEW006 BKN007 09/08 Q1022 TEMPO 4000",
+      "score": 32,
+      "summary": "visibilité < 5 SM, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EFHK 281427Z 2815/2915 19014KT 9999 BKN011 TEMPO 2815/2818 6000 -DZRA BKN009 BECMG 2818/2820 BKN008 TEMPO 2820/2902 7000 RA TEMPO 2902/2910 2500 DZRA BR BKN004 BECMG 2911/2913 SCT012"
     },
     {
       "icao": "LKPR",
@@ -85,8 +98,8 @@
     {
       "icao": "KICT",
       "name": "KICT Dwight D. Eisenhower Nat Airport",
-      "observed_at": "2026-10-28T15:53:00+00:00",
-      "raw": "METAR KICT 281553Z 19018G29KT 10SM FEW110 22/14 A3004 RMK AO2 PK WND 18030/1540 SLP163 T02220144",
+      "observed_at": "2026-10-28T16:53:00+00:00",
+      "raw": "METAR KICT 281653Z 19022G28KT 10SM FEW110 23/15 A3003 RMK AO2 PK WND 20031/1554 SLP159 T02330150",
       "score": 22,
       "summary": "rafales ≥ 25 kt",
       "icon": "💨",
@@ -107,18 +120,6 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF KJAX 281613Z 2816/2912 03014G25KT P6SM SCT015 SCT025 BKN040 FM281700 03018G28KT P6SM BKN025 OVC040 FM282300 02013G21KT P6SM VCSH SCT015 OVC025 FM290300 03010G15KT P6SM VCSH OVC025"
-    },
-    {
-      "icao": "KORL",
-      "name": "KORL Orlando executive airport MSFS",
-      "observed_at": "2026-10-28T16:34:00+00:00",
-      "raw": "SPECI KORL 281634Z 03016G26KT 10SM BKN022 BKN034 OVC045 26/21 A3005 RMK AO2 PK WND 03026/1631 T02560206",
-      "score": 22,
-      "summary": "rafales ≥ 25 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/"
     },
     {
       "icao": "LDDU",
@@ -148,7 +149,7 @@
       "date": "2026-10-27",
       "source": "GitHub Releases officiel — FSLiveTrafficLiveries/base",
       "url": "https://github.com/FSLiveTrafficLiveries/base/releases/tag/1.7.0",
-      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - 150+ livrées réelles et historiques nouvelles ou mises à jour - 250+ livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
+      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - Plus de 150 livrées réelles et historiques nouvelles ou mises à jour - Plus de 250 livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
       "impact": "Vérifier le changelog officiel et sauvegarder les configurations avant installation.",
       "new": false
     },
@@ -215,7 +216,7 @@
       "date": "2026-10-22",
       "source": "Forum officiel Microsoft Flight Simulator",
       "url": "https://forums.flightsimulator.com/t/blog-weekly-briefing-for-2026-10-22/779510",
-      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Poursuivez votre lecture pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
+      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Lisez la suite pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
       "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
       "new": false
     },
@@ -292,13 +293,13 @@
     "Versions : CYYZ / FlyTampa : Fiche 1.2 plus ancienne que l'installation 1.5.0 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : 58CA / inibuilds : Fiche 1.01 plus ancienne que l'installation 1.0.2 : vérifier le canal éditeur, ne pas rétrograder",
     "Logiciels : fenix: Source inaccessible : ValueError Branche Fenix non explicitement publiée sur le blog",
-    "Logiciels : simapppro: Source inaccessible : ValueError Changelog SimAppPro absent"
+    "Logiciels : simapppro: Source inaccessible : HTTPError HTTP Error 502: Bad Gateway"
   ],
   "note": "Collecte quotidienne automatique : METAR/TAF NOAA, flux officiel MSFS, versions GitHub publiées, audit des scènes répertoriées, extraction des versions des boutiques publiques reconnues et surveillance des sites publics. Les versions non publiées ou inaccessibles restent UNKNOWN ; une page modifiée n’est pas une mise à jour confirmée.",
   "version_coverage": {
-    "verified_today": 190,
+    "verified_today": 189,
     "eligible": 219,
-    "unavailable": 0,
+    "unavailable": 1,
     "no_version": 13,
     "inconsistent": 5,
     "not_automatable": 1,
@@ -312,16 +313,16 @@
     "official_url_known": 219,
     "without_official_url": 27,
     "manual_source": 1,
-    "unverified": 56,
-    "audited_at": "2026-10-28T16:51:18.039198+00:00"
+    "unverified": 57,
+    "audited_at": "2026-10-28T16:58:22.737809+00:00"
   },
-  "versions_checked_at": "2026-10-28T16:51:18.039198+00:00",
-  "releases_checked_at": "2026-10-28T16:51:18.039198+00:00",
+  "versions_checked_at": "2026-10-28T16:58:22.737809+00:00",
+  "releases_checked_at": "2026-10-28T16:58:22.737809+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-28T16:52:11.118411+00:00",
+    "checked_at": "2026-10-28T16:59:19.384939+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
