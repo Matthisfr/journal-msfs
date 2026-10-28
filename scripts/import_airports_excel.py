@@ -15,6 +15,7 @@ ALIASES={
  "installed":{"installed","version","version installee","installed version","version locale","local version"},
  "publisher":{"publisher","editeur","developer","developpeur","auteur"},
  "region":{"region","continent","zone","category","categorie"},
+ "description":{"description","desceitption","desc","commentaire","commentaires","details","detail"},
 }
 CORRECTIONS={"BCGB":"LXGB","KABK":"KABQ"}
 def norm(value):
@@ -72,7 +73,8 @@ def parse_addons_linker(sheet):
   code=CORRECTIONS.get(code,code)
   records.append({"icao":code,"original":original,"name":name,"folder":folder,
                   "installed":version,"publisher":str(row[12] or "").strip(),
-                  "region":region or country,"scene_type":scene_type(code,name,folder)})
+                  "region":region or country,"description":str(row[10] or "").strip(),
+                  "scene_type":scene_type(code,name,folder)})
  if not records:
   raise ValueError("Aucune scène aéroport/héliport valide dans l'export Addons Linker : import annulé")
  return records
@@ -106,7 +108,7 @@ def parse(book):
    if not re.fullmatch(r"[A-Z0-9]{4}",code): continue
    original=code
    code=CORRECTIONS.get(code,code)
-   records.append({"icao":code,"original":original,"name":name or folder,"folder":folder,"installed":version,"publisher":get("publisher"),"region":get("region"),"scene_type":scene_type(code,name,folder)})
+   records.append({"icao":code,"original":original,"name":name or folder,"folder":folder,"installed":version,"publisher":get("publisher"),"region":get("region"),"description":get("description"),"scene_type":scene_type(code,name,folder)})
  return records
 def merge(records,old):
  by_folder={norm(a.get("folder")):a for a in old if a.get("folder")}
@@ -127,7 +129,7 @@ def merge(records,old):
   previous=by_folder.get(norm(rec["folder"])) if rec["folder"] else None
   if previous is None: previous=by_identity.get((rec["icao"],norm(rec["name"]),norm(rec.get("publisher"))))
   entry=dict(previous or {})
-  entry.update({k:v for k,v in rec.items() if v or k in ("icao","original","installed")})
+  entry.update({k:v for k,v in rec.items() if v or k in ("icao","original","installed","description")})
   if previous and previous.get("installed")!=entry["installed"]:
    for field in ("version_checked_at","version_comparison","version_check_state","server_version"):
     entry.pop(field,None)
