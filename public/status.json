@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T11:33:42.256118+00:00",
-  "weather_checked_at": "2026-10-28T11:33:42.256118+00:00",
-  "news_checked_at": "2026-10-28T11:33:42.256118+00:00",
+  "last_run": "2026-10-28T11:38:56.571661+00:00",
+  "weather_checked_at": "2026-10-28T11:38:56.571661+00:00",
+  "news_checked_at": "2026-10-28T11:38:56.571661+00:00",
   "weather": [
     {
       "icao": "PANC",
@@ -44,6 +44,19 @@
       "taf_raw": "TAF CYEG 280840Z 2809/2906 33018KT P6SM -SN SCT007 OVC030 TEMPO 2809/2812 1 1/2SM -SN BKN006 OVC012 FM281200 32012G22KT 1SM -SN OVC006 TEMPO 2812/2818 5SM -SN OVC012 PROB40 2812/2818 1/2SM SHSN OVC004 FM281800 33015KT P6SM -SN OVC015 TEMPO 2818/2902 2SM -SN OVC008 FM290200 32010KT 1SM -SN OVC003 TEMPO 2902/2906 4SM -SN OVC006 RMK NXT FCST BY 281200Z"
     },
     {
+      "icao": "CYYC",
+      "name": "CYYC Calgary International Airport",
+      "observed_at": "2026-10-28T11:29:00+00:00",
+      "raw": "SPECI CYYC 281129Z 36009KT 6SM -SN OVC011 00/M02 A2986 RMK SC8 SLP155",
+      "score": 75,
+      "summary": "neige",
+      "icon": "🌨️",
+      "phenomenon": "Neige",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF CYYC 280840Z 2809/2906 35007KT P6SM SCT007 OVC012 TEMPO 2809/2818 2SM -SHSN BKN006 OVC010 FM281800 36012KT P6SM BKN030 BKN050 TEMPO 2818/2823 2SM -SHSN OVC020 FM282300 02008KT P6SM SCT030 BKN050 TEMPO 2823/2906 5SM -SN BKN012 OVC030 RMK NXT FCST BY 281200Z"
+    },
+    {
       "icao": "LGSK",
       "name": "LGSK Skiathos International Airport",
       "observed_at": "2026-10-28T11:20:00+00:00",
@@ -80,7 +93,7 @@
       "phenomenon": "Ciel couvert",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KFSD 280522Z 2806/2906 19006KT P6SM OVC008 FM280800 VRB04KT 6SM BR BKN005 TEMPO 2809/2812 2SM BR OVC004 FM281400 17011G18KT P6SM OVC012 FM281800 21012G20KT P6SM BKN015 PROB30 2819/2822 4SM -SHRA OVC008 FM282200 26010G20KT P6SM SCT012 BKN025 FM290100 31007KT P6SM SCT025"
+      "taf_raw": "TAF KFSD 281134Z 2812/2912 16006KT 5SM BR BKN005 TEMPO 2812/2814 1SM BR BKN004 FM281500 17010G17KT P6SM SCT007 OVC011 FM281800 21011G19KT P6SM BKN015 PROB30 2818/2822 4SM -SHRA OVC008 FM282200 25008KT P6SM BKN022 FM282300 30008KT P6SM SCT025"
     },
     {
       "icao": "KPDX",
@@ -111,8 +124,8 @@
     {
       "icao": "LPPR",
       "name": "LPPR Porto",
-      "observed_at": "2026-10-28T11:00:00+00:00",
-      "raw": "METAR LPPR 281100Z 20007KT 7000 SCT003 BKN006 16/15 Q1024",
+      "observed_at": "2026-10-28T11:30:00+00:00",
+      "raw": "METAR LPPR 281130Z 19008KT 5000 BR SCT002 BKN004 16/15 Q1024",
       "score": 20,
       "summary": "visibilité < 5 SM",
       "icon": "☁️",
@@ -120,19 +133,6 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF LPPR 281100Z 2812/2912 20005KT 9999 SCT003 BKN006 BECMG 2812/2814 26010KT SCT012 TEMPO 2814/2817 BKN008 BECMG 2818/2820 VRB02KT PROB30 2823/2909 2000 BCFG BR BKN003"
-    },
-    {
-      "icao": "MUHA",
-      "name": "Habana Jose Marti Intl Airport",
-      "observed_at": "2026-10-28T10:50:00+00:00",
-      "raw": "METAR MUHA 281050Z 01006KT 8000 SCT030 24/23 Q1013",
-      "score": 20,
-      "summary": "visibilité < 5 SM",
-      "icon": "🌤️",
-      "phenomenon": "Éclaircies",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF MUHA 281100Z 2812/2912 36008KT 9000 SCT030 TEMPO 2817/2900 BKN030 BECMG 2900/2902 VRB03KT"
     }
   ],
   "weather_coverage": {
@@ -302,15 +302,15 @@
     "without_official_url": 21,
     "manual_source": 1,
     "unverified": 50,
-    "audited_at": "2026-10-28T11:33:42.256118+00:00"
+    "audited_at": "2026-10-28T11:38:56.571661+00:00"
   },
-  "versions_checked_at": "2026-10-28T11:33:42.256118+00:00",
-  "releases_checked_at": "2026-10-28T11:33:42.256118+00:00",
+  "versions_checked_at": "2026-10-28T11:38:56.571661+00:00",
+  "releases_checked_at": "2026-10-28T11:38:56.571661+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 2,
     "changed": 0,
-    "checked_at": "2026-10-28T11:34:33.805955+00:00",
+    "checked_at": "2026-10-28T11:39:57.429050+00:00",
     "unverified": 20
   },
   "airac_cycle": "2610"
