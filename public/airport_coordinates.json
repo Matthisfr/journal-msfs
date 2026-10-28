@@ -1342,5 +1342,61 @@
     "name": "Split Saint Jerome Airport",
     "source": "OurAirports / airport-codes",
     "aircraft_marker": "airliner"
+  },
+  "LFLL": {
+    "lat": 45.725996,
+    "lon": 5.090139,
+    "name": "Lyon Saint-Exupéry Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "LIBD": {
+    "lat": 41.138901,
+    "lon": 16.760599,
+    "name": "Bari Karol Wojtyła International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "LOWW": {
+    "lat": 48.110298,
+    "lon": 16.5697,
+    "name": "Vienna International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "MKJS": {
+    "lat": 18.50342,
+    "lon": -77.91323,
+    "name": "Sangster International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "MYGF": {
+    "lat": 26.557996,
+    "lon": -78.695583,
+    "name": "Grand Bahama International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "MYNN": {
+    "lat": 25.039,
+    "lon": -77.466202,
+    "name": "Lynden Pindling International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "OTHH": {
+    "lat": 25.273056,
+    "lon": 51.608056,
+    "name": "Hamad International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SOCA": {
+    "lat": 4.819964,
+    "lon": -52.361326,
+    "name": "Cayenne – Félix Eboué Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
   }
 }
