@@ -245,6 +245,14 @@ def run():
     except Exception as e:
         src['sayintentions_news']='error'
         status['errors'].append('SayIntentions blog: '+str(e)[:250])
+    # Les annonces confirmées restent dans une source persistante distincte du status généré.
+    try:
+        confirmed_path=PUBLIC/'sayintentions_confirmed_news.json'
+        if confirmed_path.exists():
+            confirmed=json.loads(confirmed_path.read_text(encoding='utf-8'))
+            news_from_sources.extend(confirmed.get('items',[]))
+    except (OSError,ValueError,TypeError) as e:
+        status['errors'].append('SayIntentions confirmed news: '+str(e)[:180])
     if news_from_sources:
         status['errors'].extend(translate_news_to_french(news_from_sources))
         unique={x['url']:x for x in status.get('news',[]) if x.get('url')}
