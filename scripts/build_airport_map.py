@@ -10,6 +10,7 @@ def main():
     codes={c for c in codes if len(c)==4 and c.isalnum() and not c.startswith("(") and c not in {"KLVB","OMDU"}}
     existing=json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
     result=dict(existing)
+    all_airports={}
     try:
         req=urllib.request.Request(URL,headers={"User-Agent":"MSFS-Journal-Map/1.0"})
         with urllib.request.urlopen(req,timeout=25) as response:
@@ -17,6 +18,14 @@ def main():
             for row in reader:
                 candidates=[str(row.get(key) or "").strip().upper() for key in ("gps_code","ident")]
                 code=next((value for value in candidates if value in codes),None)
+                icao=str(row.get("gps_code") or row.get("ident") or "").strip().upper()
+                world_coord=(row.get("coordinates") or "").split(",")
+                if len(icao)==4 and icao.isalpha() and len(world_coord)==2:
+                    try:
+                        la,lo=map(float,world_coord)
+                        if -90<=la<=90 and -180<=lo<=180:
+                            all_airports[icao]=[round(la,5),round(lo,5),str(row.get("name") or "")[:90]]
+                    except ValueError: pass
                 if code is None: continue
                 coord=(row.get("coordinates") or "").split(",")
                 if len(coord)!=2: continue
@@ -85,6 +94,9 @@ def main():
         print(f"Classification pistes indisponible : {exc}; données précédentes conservées")
         for code in result:
             result[code]["aircraft_marker"]=existing.get(code,{}).get("aircraft_marker","unknown")
+    if all_airports:
+        (PUBLIC/"world_airports.json").write_text(json.dumps(all_airports,ensure_ascii=False,separators=(",",":")),encoding="utf-8")
+        print(f"Index mondial : {len(all_airports)} aéroports ICAO")
     OUT.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(f"Carte : {len(result)}/{len(codes)} codes géolocalisés, aucun point inventé")
 if __name__=="__main__": main()
