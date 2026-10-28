@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T19:37:21.585490+00:00",
-  "weather_checked_at": "2026-10-28T19:37:21.585490+00:00",
-  "news_checked_at": "2026-10-28T19:37:21.585490+00:00",
+  "last_run": "2026-10-28T19:41:38.884970+00:00",
+  "weather_checked_at": "2026-10-28T19:41:38.884970+00:00",
+  "news_checked_at": "2026-10-28T19:41:38.884970+00:00",
   "weather": [
     {
       "icao": "PANC",
@@ -70,6 +70,19 @@
       "taf_raw": "TAF AMD EFHK 281804Z 2818/2918 19010KT 4000 -DZ BKN004 TEMPO 2818/2820 6000 DZ BKN005 TEMPO 2820/2902 2500 DZ BKN005 TEMPO 2902/2912 2500 DZ BR BKN005 BECMG 2913/2915 9999 NSW SCT012"
     },
     {
+      "icao": "KFSD",
+      "name": "KFSD Sioux falls Regional Airport",
+      "observed_at": "2026-10-28T19:31:00+00:00",
+      "raw": "SPECI KFSD 281931Z 21005KT 2SM -RA BR OVC006 14/14 A2989 RMK AO2 TWR VIS 2 1/2 P0002 T01440139",
+      "score": 57,
+      "summary": "visibilité < 3 SM, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KFSD 281721Z 2817/2918 19008KT P6SM OVC015 TEMPO 2818/2821 4SM -SHRA OVC008 FM282100 25008KT P6SM BKN008 TEMPO 2821/2823 4SM -SHRA OVC004 FM282300 32008KT P6SM BKN045 FM290500 VRB03KT P6SM SCT250"
+    },
+    {
       "icao": "LOWS",
       "name": "LOWS Salzburg Airport",
       "observed_at": "2026-10-28T19:20:00+00:00",
@@ -81,19 +94,6 @@
       "level": "Dégradé",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF LOWS 281715Z 2818/2918 32008KT 9999 -RA BKN030 TX10/2820Z TN06/2906Z TEMPO 2818/2820 2000 SHRA BKN006 BECMG 2819/2821 VRB04KT NSW TEMPO 2821/2909 2000 BR BKN008 TEMPO 2911/2916 03010KT"
-    },
-    {
-      "icao": "KICT",
-      "name": "KICT Dwight D. Eisenhower Nat Airport",
-      "observed_at": "2026-10-28T17:53:00+00:00",
-      "raw": "METAR KICT 281753Z 20021G36KT 10SM FEW110 25/16 A3002 RMK AO2 PK WND 19036/1745 SLP153 T02500156 10256 20172 58009",
-      "score": 45,
-      "summary": "rafales ≥ 35 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KICT 281720Z 2818/2918 19018G28KT P6SM SKC FM290000 18010KT P6SM FEW040"
     },
     {
       "icao": "LROP",
@@ -109,29 +109,30 @@
       "taf_raw": "TAF LROP 281700Z 2818/2918 VRB04KT 9999 SCT010 OVC025 BECMG 2818/2820 5000 -RA BR BKN010 OVC025 BECMG 2820/2822 3000 -RA BR BKN005 OVC010 TEMPO 2900/2906 1500 -RADZ BR OVC002 BECMG 2909/2911 5000 BKN010 OVC020 TEMPO 2911/2918 9999 NSW SCT015 OVC030"
     },
     {
-      "icao": "KORL",
-      "name": "KORL Orlando executive airport MSFS",
+      "icao": "KICT",
+      "name": "KICT Dwight D. Eisenhower Nat Airport",
       "observed_at": "2026-10-28T18:53:00+00:00",
-      "raw": "METAR KORL 281853Z 04016G25KT 10SM BKN026 OVC035 26/21 A3000 RMK AO2 SLP163 T02610206",
-      "score": 22,
-      "summary": "rafales ≥ 25 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/"
-    },
-    {
-      "icao": "LDDU",
-      "name": "LDDU",
-      "observed_at": "2026-10-28T19:30:00+00:00",
-      "raw": "METAR LDDU 281930Z 03021G32KT 350V070 CAVOK 15/04 Q1017 NOSIG",
+      "raw": "METAR KICT 281853Z 21019G32KT 10SM FEW110 27/16 A2999 RMK AO2 PK WND 18034/1826 SLP143 T02670156",
       "score": 22,
       "summary": "rafales ≥ 25 kt",
       "icon": "💨",
       "phenomenon": "Vent fort",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LDDU 281725Z 2818/2918 03015KT CAVOK TX19/2911Z TN15/2905Z TEMPO 2818/2908 03020G30KT BECMG 2908/2910 20006KT PROB30 TEMPO 2911/2915 27007KT BECMG 2916/2918 03015KT"
+      "taf_raw": "TAF KICT 281720Z 2818/2918 19018G28KT P6SM SKC FM290000 18010KT P6SM FEW040"
+    },
+    {
+      "icao": "KJAX",
+      "name": "KJAX AIRPORT",
+      "observed_at": "2026-10-28T18:56:00+00:00",
+      "raw": "METAR KJAX 281856Z 05021G27KT 10SM FEW020 BKN060 BKN250 26/18 A3011 RMK AO2 PK WND 05029/1834 SLP196 T02560183 $",
+      "score": 22,
+      "summary": "rafales ≥ 25 kt",
+      "icon": "💨",
+      "phenomenon": "Vent fort",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KJAX 281741Z 2818/2918 03018G28KT P6SM FEW025 BKN050 FM282300 02013G21KT P6SM SCT015 OVC035 FM290300 03010KT P6SM OVC025 FM291300 03010G20KT P6SM VCSH OVC025 FM291700 03015G22KT P6SM BKN025 OVC040"
     }
   ],
   "weather_coverage": {
@@ -186,18 +187,6 @@
       "new": false
     },
     {
-      "id": "si-community-crew-20261026",
-      "title": "SayIntentions : Community Crew disponible pour tous",
-      "date": "2026-10-26",
-      "summary": "Les abonnés peuvent utiliser des copilotes et membres d'équipage de cabine créés par la communauté, avec les voix réelles de leurs auteurs, et partager leurs propres créations.",
-      "impact": "Explorer les équipages communautaires pour le Fenix A320 et vérifier leur compatibilité avec les fonctions de copilote et de cabine.",
-      "category": "SayIntentions",
-      "topic": "SayIntentions",
-      "source": "SayIntentions — What's New (capture du Pilot Portal)",
-      "url": "https://p2.sayintentions.ai/p2/#news",
-      "new": false
-    },
-    {
       "id": "779387",
       "title": "Notes de version - Mise à jour 7.1 de Microsoft Flight Simulator 2024 Sim [1.9.21.0]",
       "category": "MSFS officiel",
@@ -221,11 +210,11 @@
       "new": false
     },
     {
-      "id": "si-progressive-taxi-20261023",
-      "title": "SayIntentions : Progressive Taxi accessible à tous",
-      "date": "2026-10-23",
-      "summary": "La fonction Progressive Taxi est désormais accessible à tous les utilisateurs, selon l'annonce affichée dans What's New.",
-      "impact": "Tester le guidage au roulage lors d'un prochain vol.",
+      "id": "si-atc-improvements-20261022",
+      "title": "SayIntentions : améliorations ATC pour les arrivées IFR et le sol",
+      "date": "2026-10-22",
+      "summary": "SayIntentions annonce des améliorations ATC concernant les arrivées IFR et les opérations au sol.",
+      "impact": "Vérifier les autorisations d'arrivée et la gestion du roulage en conditions réelles.",
       "category": "SayIntentions",
       "topic": "SayIntentions",
       "source": "SayIntentions — What's New (capture du Pilot Portal)",
@@ -241,18 +230,6 @@
       "url": "https://forums.flightsimulator.com/t/blog-weekly-briefing-for-2026-10-22/779510",
       "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Poursuivez votre lecture pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
       "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
-      "new": false
-    },
-    {
-      "id": "si-atc-improvements-20261022",
-      "title": "SayIntentions : améliorations ATC pour les arrivées IFR et le sol",
-      "date": "2026-10-22",
-      "summary": "SayIntentions annonce des améliorations ATC concernant les arrivées IFR et les opérations au sol.",
-      "impact": "Vérifier les autorisations d'arrivée et la gestion du roulage en conditions réelles.",
-      "category": "SayIntentions",
-      "topic": "SayIntentions",
-      "source": "SayIntentions — What's New (capture du Pilot Portal)",
-      "url": "https://p2.sayintentions.ai/p2/#news",
       "new": false
     },
     {
@@ -350,15 +327,15 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 57,
-    "audited_at": "2026-10-28T19:37:21.585490+00:00"
+    "audited_at": "2026-10-28T19:41:38.884970+00:00"
   },
-  "versions_checked_at": "2026-10-28T19:37:21.585490+00:00",
-  "releases_checked_at": "2026-10-28T19:37:21.585490+00:00",
+  "versions_checked_at": "2026-10-28T19:41:38.884970+00:00",
+  "releases_checked_at": "2026-10-28T19:41:38.884970+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 3,
     "changed": 0,
-    "checked_at": "2026-10-28T19:38:40.369492+00:00",
+    "checked_at": "2026-10-28T19:42:30.469190+00:00",
     "unverified": 19
   },
   "airac_cycle": "2610"
