@@ -150,6 +150,22 @@ def update():
                 row["version_url"]=prior.get("version_url",row["source_url"])
                 row["last_confirmed_at"]=prior.get("last_confirmed_at") or prior.get("checked_at")
                 row["reason"]="Source inaccessible aujourd'hui ; dernière version confirmée conservée à titre historique, non revérifiée."
+        # Ne pas masquer les versions déjà documentées quand le flux officiel
+        # n'est pas exploitable aujourd'hui : les afficher comme références datées.
+        if not row.get("version"):
+            prior=old.get(entry["id"],{})
+            reference=entry.get("reference_version") or prior.get("reference_version")
+            if reference:
+                row["reference_version"]=reference
+                row["reference_checked_at"]=entry.get("reference_checked_at") or prior.get("reference_checked_at")
+                row["reference_source_url"]=entry.get("reference_source_url") or prior.get("reference_source_url") or entry.get("source_url")
+                row["reference_note"]=entry.get("reference_note") or prior.get("reference_note") or "Dernière référence connue, non revérifiée aujourd'hui."
+            elif prior.get("version"):
+                row["version"]=prior["version"]
+                row["version_url"]=prior.get("version_url") or entry.get("source_url")
+                row["last_confirmed_at"]=prior.get("checked_at")
+                row["reason"]="Dernière version confirmée conservée ; nouvelle vérification nécessaire."
+                row["state"]="historical"
         rows.append(row)
     data={"checked_at":NOW.isoformat(),"total":len(rows),
           "verified":sum(x["state"] in ("verified","changed") for x in rows),
