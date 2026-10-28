@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T19:50:42.814169+00:00",
-  "weather_checked_at": "2026-10-28T19:50:42.814169+00:00",
-  "news_checked_at": "2026-10-28T19:50:42.814169+00:00",
+  "last_run": "2026-10-28T19:52:28.577734+00:00",
+  "weather_checked_at": "2026-10-28T19:52:28.577734+00:00",
+  "news_checked_at": "2026-10-28T19:52:28.577734+00:00",
   "weather": [
     {
       "icao": "PANC",
@@ -59,8 +59,8 @@
     {
       "icao": "EFHK",
       "name": "EFHK Helsinki Vantaa",
-      "observed_at": "2026-10-28T19:20:00+00:00",
-      "raw": "METAR EFHK 281920Z 19012KT 4500 DZ BKN004 09/08 Q1023 TEMPO 2500 -DZ",
+      "observed_at": "2026-10-28T19:50:00+00:00",
+      "raw": "METAR EFHK 281950Z 19011KT 4500 -DZ BKN004 09/08 Q1023 TEMPO 2500 DZ",
       "score": 57,
       "summary": "visibilité < 3 SM, précipitations",
       "icon": "🌧️",
@@ -327,15 +327,15 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 57,
-    "audited_at": "2026-10-28T19:50:42.814169+00:00"
+    "audited_at": "2026-10-28T19:52:28.577734+00:00"
   },
-  "versions_checked_at": "2026-10-28T19:50:42.814169+00:00",
-  "releases_checked_at": "2026-10-28T19:50:42.814169+00:00",
+  "versions_checked_at": "2026-10-28T19:52:28.577734+00:00",
+  "releases_checked_at": "2026-10-28T19:52:28.577734+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 3,
     "changed": 0,
-    "checked_at": "2026-10-28T19:51:24.689814+00:00",
+    "checked_at": "2026-10-28T19:53:34.041552+00:00",
     "unverified": 19
   },
   "airac_cycle": "2610"
