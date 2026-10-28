@@ -92,13 +92,13 @@ jobs:
 
       - name: Importer le nouvel inventaire Excel
         if: steps.gate.outputs.run == 'true'
-        run: python scripts/import_airports_excel.py
+        run: |\n          python scripts/import_airports_excel.py\n          python scripts/build_comparisons.py
 
       - name: Vérifier le code et les scripts du site
         if: steps.gate.outputs.run == 'true'
         run: |
           python -m unittest discover -s tests -v
-          python -m py_compile scripts/update.py scripts/versions.py scripts/releases.py scripts/watch_sources.py scripts/build_site.py scripts/build_airport_map.py scripts/import_airports_excel.py scripts/smoke_live.py scripts/discover_airports.py scripts/discover_simmarket.py scripts/apply_airport_sources.py scripts/software_versions.py scripts/fetch_hardware_photos.py scripts/fetch_simbrief.py scripts/fetch_sayintentions_career.py
+          python -m py_compile scripts/build_comparisons.py scripts/update.py scripts/versions.py scripts/releases.py scripts/watch_sources.py scripts/build_site.py scripts/build_airport_map.py scripts/import_airports_excel.py scripts/smoke_live.py scripts/discover_airports.py scripts/discover_simmarket.py scripts/apply_airport_sources.py scripts/software_versions.py scripts/fetch_hardware_photos.py scripts/fetch_simbrief.py scripts/fetch_sayintentions_career.py
           node --check public/app.js
           node tests/test_frontend.cjs
 
@@ -155,7 +155,7 @@ jobs:
       - name: Construire le site, la veille et la liste indépendante
         if: steps.gate.outputs.run == 'true'
         run: |
-          python scripts/build_airport_map.py
+          python scripts/build_comparisons.py\n          python scripts/build_airport_map.py
           python scripts/build_site.py
           python -c "from pathlib import Path; import json; p=Path('public/index.html').read_text(); a=Path('public/airports.html').read_text(); w=json.loads(Path('public/watch.json').read_text()); s=json.loads(Path('public/status.json').read_text()); assert p.count('<tr>')>=len(json.loads(Path('public/airports.json').read_text())) and a.count('<tr>')>=len(json.loads(Path('public/airports.json').read_text())); assert w['total']>=30; assert s['version_coverage']['inventory_total']==len(json.loads(Path('public/airports.json').read_text())); assert json.loads(Path('public/software_versions.json').read_text())['total']>=20; assert json.loads(Path('public/hardware-images.json').read_text()); assert 'id=\"logiciels\"' in p; assert 'app.js?rev=' in p; print('Tests OK : inventaire complet, surveillance des sources, météo/news, carte et JS')"
 
@@ -164,14 +164,14 @@ jobs:
         run: |
           git config user.name "journal-msfs-bot"
           git config user.email "journal-msfs-bot@users.noreply.github.com"
-          git add public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/hardware/
+          git add public/comparisons.json public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/hardware/
           if [[ -f public/sayintentions-rank.svg ]]; then git add public/sayintentions-rank.svg; fi
           if ! git diff --cached --quiet; then
             git commit -m "Journal: collecte automatique $(date -u +%Y-%m-%d)"
             if ! git push origin HEAD:main; then
               echo "Dépôt modifié pendant la collecte : conserver les données puis repartir du dernier main."
               mkdir -p "$RUNNER_TEMP/journal-sync"
-              cp public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json "$RUNNER_TEMP/journal-sync/"
+              cp public/comparisons.json public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json "$RUNNER_TEMP/journal-sync/"
               mkdir -p "$RUNNER_TEMP/journal-sync/hardware"
               if [[ -d public/hardware ]]; then cp -a public/hardware/. "$RUNNER_TEMP/journal-sync/hardware/"; fi
               success=false
@@ -181,7 +181,7 @@ jobs:
                 cp "$RUNNER_TEMP/journal-sync/"*.json public/
                 mkdir -p public/hardware
                 cp -a "$RUNNER_TEMP/journal-sync/hardware/." public/hardware/
-                git add public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/hardware/
+                git add public/comparisons.json public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/hardware/
                 if git diff --cached --quiet; then
                   success=true
                   break
