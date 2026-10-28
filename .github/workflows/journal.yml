@@ -92,7 +92,9 @@ jobs:
 
       - name: Importer le nouvel inventaire Excel
         if: steps.gate.outputs.run == 'true'
-        run: |\n          python scripts/import_airports_excel.py\n          python scripts/build_comparisons.py
+        run: |
+          python scripts/import_airports_excel.py
+          python scripts/build_comparisons.py
 
       - name: Vérifier le code et les scripts du site
         if: steps.gate.outputs.run == 'true'
