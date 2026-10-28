@@ -13,7 +13,7 @@ reviews_path=ROOT/'data/airport_comparisons.json'
 reviews=json.loads(reviews_path.read_text(encoding='utf-8')) if reviews_path.exists() else {}
 # Conserver les images officielles déjà trouvées pour éviter de rescanner les boutiques quotidiennement.
 cache_path=ROOT/'public/comparison_images.json'
-cache=json.loads(cache_path.read_text(encoding='utf-8')) if cache_path.exists() else {}
+try:\n cache=json.loads(cache_path.read_text(encoding='utf-8')) if cache_path.exists() else {}\nexcept (ValueError, OSError):\n cache={}
 class PhotoParser(HTMLParser):
  def __init__(self):
   super().__init__()
@@ -36,8 +36,8 @@ def official_photo(url):
  except Exception as error:
   print(f'Photo indisponible {url}: {type(error).__name__}')
   return ''
-urls={a.get('source_url') for a in airports if a.get('source_url','').startswith('https://')}
-missing=sorted(u for u in urls if u not in cache)
+counts={}\nfor a in airports:\n code=str(a.get('icao') or '').upper()\n counts[code]=counts.get(code,0)+1\nurls={a.get('source_url') for a in airports if counts.get(str(a.get('icao') or '').upper(),0)>1 and (a.get('source_url') or '').startswith('https://')}
+missing=sorted(u for u in urls if not cache.get(u))
 if missing:
  with ThreadPoolExecutor(max_workers=6) as pool:
   for url,photo in zip(missing,pool.map(official_photo,missing)): cache[url]=photo
