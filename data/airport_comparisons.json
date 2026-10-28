@@ -1,0 +1,27 @@
+{
+  "EDDL": {
+    "winner": "Partagé",
+    "confidence": "Moyenne",
+    "summary": "Aerosoft est apprécié pour certains détails d'exactitude, MK Studios pour la finesse des intérieurs. Les avis restent partagés."
+  },
+  "LFKJ": {
+    "winner": "Indéterminé",
+    "confidence": "Insuffisante",
+    "summary": "Pas assez d'avis indépendants pour départager ces deux scènes."
+  },
+  "EVRA": {
+    "winner": "Lisium",
+    "confidence": "Bonne",
+    "summary": "Les avis précédemment consultés favorisent Lisium pour les détails des terminaux. Vérifier GSX et les FPS."
+  },
+  "LMML": {
+    "winner": "iniBuilds",
+    "confidence": "Bonne",
+    "summary": "Les tests consultés favorisent iniBuilds pour la richesse visuelle. Les performances doivent être testées sur ton installation."
+  },
+  "LSZH": {
+    "winner": "MK Studios (visuel)",
+    "confidence": "Moyenne",
+    "summary": "Plusieurs avis favorisent MK Studios visuellement, mais les retours FPS sont contradictoires."
+  }
+}
