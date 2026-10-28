@@ -258,3 +258,6 @@ button.airport-map-eye:focus-visible{outline:2px solid #5ba6c9;border-radius:4px
 /* iPad Safari : ne pas sélectionner les tuiles et libellés de la carte lors d'un appui long. */
 #airport-leaflet-map,#airport-leaflet-map .leaflet-container,#airport-leaflet-map .leaflet-tile-pane,#airport-leaflet-map .leaflet-marker-pane{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
 #airport-leaflet-map .leaflet-popup-content,#airport-leaflet-map .leaflet-popup-content a{-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}
+
+/* Accès au comparateur depuis les doublons du tableau */
+.airport-compare-link{display:inline-block;margin:5px 0 2px 5px;padding:4px 8px;border:1px solid #6fa8c4;border-radius:6px;color:#b8e8ff;background:#17415a;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap}.airport-compare-link:hover,.airport-compare-link:focus-visible{background:#275e7b;color:#fff}
