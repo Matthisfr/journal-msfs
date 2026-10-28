@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T18:12:10.546694+00:00",
-  "weather_checked_at": "2026-10-28T18:12:10.546694+00:00",
-  "news_checked_at": "2026-10-28T18:12:10.546694+00:00",
+  "last_run": "2026-10-28T18:14:39.072790+00:00",
+  "weather_checked_at": "2026-10-28T18:14:39.072790+00:00",
+  "news_checked_at": "2026-10-28T18:14:39.072790+00:00",
   "weather": [
     {
       "icao": "PANC",
@@ -149,7 +149,7 @@
       "date": "2026-10-27",
       "source": "GitHub Releases officiel — FSLiveTrafficLiveries/base",
       "url": "https://github.com/FSLiveTrafficLiveries/base/releases/tag/1.7.0",
-      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - 150+ livrées réelles et historiques nouvelles ou mises à jour - 250+ livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
+      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - Plus de 150 livrées réelles et historiques nouvelles ou mises à jour - Plus de 250 livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
       "impact": "Vérifier le changelog officiel et sauvegarder les configurations avant installation.",
       "new": false
     },
@@ -211,7 +211,7 @@
     },
     {
       "id": "779510",
-      "title": "[Blog] Briefing hebdomadaire du 22/10/2026",
+      "title": "[Blog] Briefing hebdomadaire du 2026-10-22",
       "category": "MSFS officiel",
       "date": "2026-10-22",
       "source": "Forum officiel Microsoft Flight Simulator",
@@ -294,7 +294,7 @@
     "Versions : 58CA / inibuilds : Fiche 1.01 plus ancienne que l'installation 1.0.2 : vérifier le canal éditeur, ne pas rétrograder",
     "Logiciels : fenix: Source inaccessible : ValueError Branche Fenix non explicitement publiée sur le blog",
     "Logiciels : simapppro: Source inaccessible : ValueError Changelog SimAppPro absent",
-    "Logiciels : fsltl: Source inaccessible : JSONDecodeError Unterminated string starting at: line 1 column 1199961 (char 1199960)"
+    "Logiciels : fsltl: Source inaccessible : HTTPError HTTP Error 404: Not Found"
   ],
   "note": "Collecte quotidienne automatique : METAR/TAF NOAA, flux officiel MSFS, versions GitHub publiées, audit des scènes répertoriées, extraction des versions des boutiques publiques reconnues et surveillance des sites publics. Les versions non publiées ou inaccessibles restent UNKNOWN ; une page modifiée n’est pas une mise à jour confirmée.",
   "version_coverage": {
@@ -315,16 +315,16 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 57,
-    "audited_at": "2026-10-28T18:12:10.546694+00:00"
+    "audited_at": "2026-10-28T18:14:39.072790+00:00"
   },
-  "versions_checked_at": "2026-10-28T18:12:10.546694+00:00",
-  "releases_checked_at": "2026-10-28T18:12:10.546694+00:00",
+  "versions_checked_at": "2026-10-28T18:14:39.072790+00:00",
+  "releases_checked_at": "2026-10-28T18:14:39.072790+00:00",
   "software_coverage": {
     "total": 22,
-    "verified": 2,
+    "verified": 3,
     "changed": 0,
-    "checked_at": "2026-10-28T18:13:09.211521+00:00",
-    "unverified": 20
+    "checked_at": "2026-10-28T18:15:44.985573+00:00",
+    "unverified": 19
   },
   "airac_cycle": "2610"
 }
