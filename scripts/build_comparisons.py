@@ -102,3 +102,5 @@ for code,scenes in groups.items():
   'criteria':review.get('criteria',[])})
 (ROOT/'public/comparisons.json').write_text(json.dumps(records,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(f'Comparateur : {len(records)} aéroports doublons, {sum(len(x["scenes"]) for x in records)} scènes.')
+
+# Publication demandée : déclenchement de la collecte et du déploiement par push main.
