@@ -55,6 +55,7 @@ SOURCES = [
     ("siminnov", "Sim Innovations — Air Manager / Air Player / Knobster", "Utilitaires", "https://www.siminnovations.com/"),
     ("p42", "Parallel 42 — site officiel", "Utilitaires", "https://parallel42.com/"),
     ("p42-news", "Parallel 42 — actualités / ChasePlane", "Utilitaires", "https://parallel42.com/blogs/news"),
+    ("p42-releases", "Parallel 42 — tableau officiel des versions et changelogs (Flow Pro / ChasePlane)", "Utilitaires", "https://parallel42.com/pages/is-it-out"),
     ("s3", "S3 — santiluib3.com", "Cockpit Airbus", "https://santiluib3.com/"),
     ("stratawx", "StrataWx — météo", "Météo", "https://stratawx.com/"),
     ("aerosoft", "Aerosoft — scènes et produits", "Éditeurs de scènes", "https://www.aerosoft.com/"),
