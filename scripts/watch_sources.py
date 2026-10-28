@@ -26,6 +26,7 @@ SOURCES = [
     ("si", "SayIntentions — site", "SayIntentions", "https://sayintentions.ai/"),
     ("si-kb", "SayIntentions — documentation", "SayIntentions", "https://kb.sayintentions.ai/"),
     ("si-blog", "SayIntentions — annonces et nouveautés", "SayIntentions", "https://www.sayintentions.ai/blog"),
+    ("si-portal-news", "SayIntentions — Pilot Portal / What\'s New", "SayIntentions", "https://p2.sayintentions.ai/p2/#news"),
     ("si-pocket", "SayIntentions — PocketSky / Windows App", "SayIntentions", "https://sayintentions.ai/"),
     ("fenix", "Fenix — annonces et V3 / CIDS / FAP", "Fenix", "https://fenixsim.com/blog/"),
     ("fenix-status", "Fenix — état des produits A320 / A319 / A321 / NEO", "Fenix", "https://fenixsim.com/status/"),
