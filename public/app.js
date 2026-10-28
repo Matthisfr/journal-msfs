@@ -360,7 +360,7 @@ function newsAgeGroup(a){
   const d=new Date(raw.length===10?raw+'T00:00:00Z':raw);
   if(!Number.isFinite(d.getTime()))return 3;
   const hours=(Date.now()-d.getTime())/3600000;
-  return hours<=24?0:hours<=72?1:hours<=(a.category==='GSX Pro'?1440:168)?2:3;
+  return hours<=24?0:hours<=72?1:hours<=1440?2:3;
 }
 function newsMarkup(a){
   const change=a.changelog_url?'<div class="news-impact"><b>Version : '+esc(a.version_before||'—')+' → '+esc(a.version_after||'—')+'</b>'+
