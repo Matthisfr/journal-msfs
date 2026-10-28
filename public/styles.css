@@ -254,3 +254,7 @@ button.airport-map-eye:focus-visible{outline:2px solid #5ba6c9;border-radius:4px
 
 /* Raccourcis vers les boutiques depuis la carte des aéroports */
 .airport-shop-popup{min-width:195px}.airport-shop-popup p{margin:8px 0}.airport-shop-popup a{display:block;padding:9px 10px;margin:4px 0;border-radius:6px;background:#eaf2f7;color:#143c56;text-decoration:none;font-weight:650}.airport-shop-popup a:focus-visible{outline:2px solid #3179a4}
+
+/* iPad Safari : ne pas sélectionner les tuiles et libellés de la carte lors d'un appui long. */
+#airport-leaflet-map,#airport-leaflet-map .leaflet-container,#airport-leaflet-map .leaflet-tile-pane,#airport-leaflet-map .leaflet-marker-pane{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+#airport-leaflet-map .leaflet-popup-content,#airport-leaflet-map .leaflet-popup-content a{-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}
