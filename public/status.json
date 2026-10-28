@@ -1,14 +1,14 @@
 {
   "edition": "2026-10-28",
-  "last_run": "2026-10-28T20:13:21.739338+00:00",
-  "weather_checked_at": "2026-10-28T20:13:21.739338+00:00",
-  "news_checked_at": "2026-10-28T20:13:21.739338+00:00",
+  "last_run": "2026-10-28T20:28:45.987094+00:00",
+  "weather_checked_at": "2026-10-28T20:28:45.987094+00:00",
+  "news_checked_at": "2026-10-28T20:28:45.987094+00:00",
   "weather": [
     {
       "icao": "PANC",
       "name": "sim-wings Anchorage",
-      "observed_at": "2026-10-28T19:53:00+00:00",
-      "raw": "METAR PANC 281953Z 07004KT 1/4SM R07R/0700V1000FT FZFG VV002 M01/M01 A3032 RMK AO2 SLP271 I1000 T10111011",
+      "observed_at": "2026-10-28T20:19:00+00:00",
+      "raw": "SPECI PANC 282019Z 07005KT 1/4SM R07R/0600V0800FT FZFG VV001 M01/M01 A3032 RMK AO2 I1000 T10061006",
       "score": 145,
       "summary": "brouillard, visibilité < 1 SM",
       "icon": "🌫️",
@@ -20,10 +20,10 @@
     {
       "icao": "LGRP",
       "name": "LGRP Rhodes International Airport \"Diagoras\"",
-      "observed_at": "2026-10-28T19:50:00+00:00",
-      "raw": "METAR LGRP 281950Z COR 11006KT 090V200 8000 -TSRA FEW010 FEW016CB SCT018 17/16 Q1009 NOSIG",
-      "score": 130,
-      "summary": "orage, visibilité < 5 SM",
+      "observed_at": "2026-10-28T20:20:00+00:00",
+      "raw": "METAR LGRP 282020Z 27005G17KT 9000 -TSRA FEW010 FEW016CB SCT018 16/14 Q1009 NOSIG",
+      "score": 110,
+      "summary": "orage",
       "icon": "⛈️",
       "phenomenon": "Orage",
       "level": "Très dégradé",
@@ -46,28 +46,15 @@
     {
       "icao": "EFHK",
       "name": "EFHK Helsinki Vantaa",
-      "observed_at": "2026-10-28T19:50:00+00:00",
-      "raw": "METAR EFHK 281950Z 19011KT 4500 -DZ BKN004 09/08 Q1023 TEMPO 2500 DZ",
-      "score": 57,
-      "summary": "visibilité < 3 SM, précipitations",
+      "observed_at": "2026-10-28T20:20:00+00:00",
+      "raw": "METAR EFHK 282020Z 19012KT 6000 -DZ BKN004 09/08 Q1023 TEMPO 4500 DZ",
+      "score": 32,
+      "summary": "visibilité < 5 SM, précipitations",
       "icon": "🌧️",
       "phenomenon": "Précipitations",
-      "level": "Dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF AMD EFHK 281804Z 2818/2918 19010KT 4000 -DZ BKN004 TEMPO 2818/2820 6000 DZ BKN005 TEMPO 2820/2902 2500 DZ BKN005 TEMPO 2902/2912 2500 DZ BR BKN005 BECMG 2913/2915 9999 NSW SCT012"
-    },
-    {
-      "icao": "EKVG",
-      "name": "Vagar Airport",
-      "observed_at": "2026-10-28T19:50:00+00:00",
-      "raw": "METAR EKVG 281950Z AUTO 27024G37KT 9999 BKN020/// 10/06 Q1006 RMK FEW021/// OVC033/// WIND SKEID 28032G46KT",
-      "score": 45,
-      "summary": "rafales ≥ 35 kt",
-      "icon": "💨",
-      "phenomenon": "Vent fort",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EKVG 281428Z 2815/2821 26025G40KT 9999 BKN020 BECMG 2818/2821 26015G30KT"
+      "taf_raw": "TAF AMD EFHK 281804Z 2818/2918 19010KT 4000 -DZ BKN004 TEMPO 2818/2820 6000 DZ BKN005 TEMPO 2820/2902 2500 DZ BKN005 TEMPO 2902/2912 2500 DZ BR BKN005 BECMG 2913/2915 9999 NSW SCT012"
     },
     {
       "icao": "LROP",
@@ -81,6 +68,19 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF LROP 281700Z 2818/2918 VRB04KT 9999 SCT010 OVC025 BECMG 2818/2820 5000 -RA BR BKN010 OVC025 BECMG 2820/2822 3000 -RA BR BKN005 OVC010 TEMPO 2900/2906 1500 -RADZ BR OVC002 BECMG 2909/2911 5000 BKN010 OVC020 TEMPO 2911/2918 9999 NSW SCT015 OVC030"
+    },
+    {
+      "icao": "EKVG",
+      "name": "Vagar Airport",
+      "observed_at": "2026-10-28T20:20:00+00:00",
+      "raw": "METAR EKVG 282020Z AUTO 27022G32KT 9999 BKN019/// 09/06 Q1006 RMK BKN020/// WIND SKEID 28028G41KT",
+      "score": 22,
+      "summary": "rafales ≥ 25 kt",
+      "icon": "💨",
+      "phenomenon": "Vent fort",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF EKVG 281428Z 2815/2821 26025G40KT 9999 BKN020 BECMG 2818/2821 26015G30KT"
     },
     {
       "icao": "KICT",
@@ -310,7 +310,8 @@
     "official_releases": "ok",
     "software_versions": "partial",
     "sayintentions_news": "no_dated_articles",
-    "gsx_fselite_news": "ok"
+    "gsx_fselite_news": "ok",
+    "aig_fselite_news": "no_dated_articles"
   },
   "errors": [
     "Versions : GMMX / PERFECTSOFT : Fiche 1.1.0 plus ancienne que l'installation 1.2.0 : vérifier le canal éditeur, ne pas rétrograder",
@@ -340,15 +341,15 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 57,
-    "audited_at": "2026-10-28T20:13:21.739338+00:00"
+    "audited_at": "2026-10-28T20:28:45.987094+00:00"
   },
-  "versions_checked_at": "2026-10-28T20:13:21.739338+00:00",
-  "releases_checked_at": "2026-10-28T20:13:21.739338+00:00",
+  "versions_checked_at": "2026-10-28T20:28:45.987094+00:00",
+  "releases_checked_at": "2026-10-28T20:28:45.987094+00:00",
   "software_coverage": {
     "total": 22,
     "verified": 3,
     "changed": 0,
-    "checked_at": "2026-10-28T20:14:20.359450+00:00",
+    "checked_at": "2026-10-28T20:29:35.515820+00:00",
     "unverified": 19
   },
   "airac_cycle": "2610"
