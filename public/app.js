@@ -377,8 +377,9 @@ function renderNews(){
   const superseded=new Set(editorialNews.flatMap(a=>a.supersedes||[]));
   const a=[...editorialNews,...(status.news||[]).filter(x=>!superseded.has(x.url))]
     .filter((x,i,all)=>all.findIndex(y=>(y.id||y.url+' '+y.title)===(x.id||x.url+' '+x.title))===i)
-    .filter(x=>newsAgeGroup(x)<3)
-    .sort((x,y)=>newsAgeGroup(x)-newsAgeGroup(y) || (new Date(y.published_at||y.date)-new Date(x.published_at||x.date)));
+    .filter(x=>Number.isFinite(new Date(x.published_at||x.date).getTime()))
+    .sort((x,y)=>new Date(y.published_at||y.date)-new Date(x.published_at||x.date))
+    .slice(0,16);
   $('#news-container').innerHTML=a.length?a.map(newsMarkup).join(''):'<div class="empty"><strong>Aucune nouveauté vérifiée</strong>Le site ne publie pas d’annonce sans date ni source vérifiable.</div>';
   const lead=a.find(x=>newsAgeGroup(x)<3);
   const hero=document.querySelector('#accueil .hero-main p');
