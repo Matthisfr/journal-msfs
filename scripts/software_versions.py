@@ -143,6 +143,27 @@ def navigraph_charts_version():
     raise ValueError("Changelog Navigraph indisponible : "+" ; ".join(failures))
 
 
+
+def fsdreamteam_changelog():
+    """Version Couatl Live Update explicitement documentée par FSDreamTeam."""
+    url="https://www.fsdreamteam.com/couatl_liveupdate_notes.html"
+    page=text_html(get(url))
+    # Release headings only: do not infer versions from incidental references.
+    patterns=[
+        r"(?im)^\s*(?:GSX(?:\s+Pro)?|Couatl|Live\s*Update)?\s*(?:version|release|update)\s*[:#-]?\s*v?(\d+\.\d+\.\d+)\b",
+        r"(?im)^\s*v?(\d+\.\d+\.\d+)\s*(?:[-–:]|\(|$)"
+    ]
+    found=[m for pat in patterns for m in re.finditer(pat,page)]
+    if not found:
+        raise ValueError("Aucune version de mise à jour explicite sur FSDreamTeam")
+    match=max(found,key=lambda m:tuple(map(int,m.group(1).split("."))))
+    next_match=min((m.start() for m in found if m.start()>match.end()),default=len(page))
+    notes=page[match.end():min(next_match,match.end()+5000)].strip()
+    if len(notes)<15:
+        raise ValueError("Notes de mise à jour absentes pour cette version")
+    return {"version":match.group(1),"url":url,"published_at":None,
+            "notes":notes[:3500]}
+
 def siminnovations_version():
     url="https://docs.siminnovations.com/air_manager_5/release_notes/"
     raw=text_html(get(url))
@@ -175,6 +196,8 @@ def update():
                 stable=msfs_official()
             elif entry["method"]=="fenix_official":
                 stable=fenix_official()
+            elif entry["method"]=="fsdreamteam_changelog":
+                stable=fsdreamteam_changelog()
             elif entry["method"]=="siminnovations":
                 stable=siminnovations_version()
             elif entry["method"]=="navigraph_charts_ios":
