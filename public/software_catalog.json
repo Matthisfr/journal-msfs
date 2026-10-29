@@ -226,5 +226,14 @@
     "method": "official_news",
     "installed_version": null,
     "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
+  },
+  {
+    "id": "navigraph_charts_ios",
+    "name": "Navigraph Charts iOS",
+    "group": "Navigation",
+    "source_url": "https://apps.apple.com/dk/app/navigraph-charts/id999805677",
+    "method": "navigraph_charts_ios",
+    "installed_version": null,
+    "tracking": "Versions iOS et notes de sortie officielles Apple ; ne jamais assimiler à la version Windows."
   }
 ]
