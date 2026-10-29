@@ -70,7 +70,15 @@
     "verification": "non_verifiee_visuellement"
   },
   "s3": {
-    "state": "unavailable",
-    "reason": "KeyError : 's3'"
+    "state": "unpublished",
+    "reason": "Photo exacte non trouvée sur la fiche"
+  },
+  "sidestick-metal": {
+    "state": "unpublished",
+    "reason": "Photo exacte non trouvée sur la fiche"
+  },
+  "ecam": {
+    "state": "unpublished",
+    "reason": "Photo exacte non trouvée sur la fiche"
   }
 }
