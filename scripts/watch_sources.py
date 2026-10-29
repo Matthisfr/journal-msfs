@@ -48,6 +48,7 @@ SOURCES = [
     ("aig-msfs", "AIG — annonces développeurs sur le forum MSFS", "Trafic IA", "https://forums.flightsimulator.com/t/aig-ai-manager-and-traffic-controller-for-msfs/324219"),
     ("winctrl", "WINCTRL / WINWING — ACP32 / OVHD32 / AGP32 / SimAppPro", "WINCTRL", "https://winwingsim.com/"),
     ("winctrl-shop", "WINCTRL — catalogue nouveautés matériel", "Matériel cockpit Airbus A320", "https://winctrl.com/view/shopping.html"),
+    ("winctrl-msfsaddons-airbus", "WINCTRL — annonces Airbus, dates, prix et photos (MSFS Addons)", "Matériel cockpit Airbus A320", "https://msfsaddons.com/developer/winctrl/"),
     ("navigraph", "Navigraph — site officiel", "Navigraph", "https://navigraph.com/"),
     ("simbrief-changelog", "SimBrief — changelog officiel", "Navigraph", "https://www.simbrief.com/home/?page=changelog"),
     ("navigraph-charts", "Navigraph Charts — actualités", "Navigraph", "https://navigraph.com/blog"),
