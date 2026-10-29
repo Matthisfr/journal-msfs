@@ -129,7 +129,7 @@ def product_ids(title):
     t=title.lower()
     # Une actualité MOZA ou Boeing, même présente dans les liens associés,
     # ne devient jamais une actualité WINCTRL Airbus.
-    if not re.search(r"\\bwinctrl\\b|\\bwinwing\\b",t):return []
+    if not re.search(r"\bwinctrl\b|\bwinwing\b",t):return []
     # Décision basée sur le TITRE et non les recommandations au bas de l'article.
     if "boeing" in t and "airbus" not in t:return []
     if "sidestick" in t or "captain sticks" in t:return ["sidestick-metal"] if ("airbus" in t or "winctrl" in t) else []
