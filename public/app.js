@@ -11,7 +11,7 @@ function brandIcon(kind,label){
   const source=brandLogos[kind]?.path||'icons/'+kind+'.svg';
   const fallback='icons/'+kind+'.svg';
   const cls=brandLogos[kind]?' brand-original':'';
-  return '<span class="topic-icon topic-'+kind+cls+'" title="'+esc(label)+'" aria-label="'+esc(label)+'"><img src="'+esc(source)+'" width="42" height="42" alt="" decoding="async" onerror="this.onerror=null;this.src=&#39;'+esc(fallback)+'&#39;"></span>';
+  return '<span class="topic-icon topic-'+kind+cls+'" title="'+esc(label)+'" aria-label="'+esc(label)+'"><img src="'+esc(source)+'" width="42" height="42" alt="" decoding="async" onerror="this.onerror=null;this.src=&#39;icons/generic.svg&#39;"></span>';
 }
 window.MSFS_MAP_URL='https://www.google.com/maps/d/u/0/edit?mid=1smgM-lIXr_QPyWKxPrS68bmU0FsMjYM&usp=sharing';
 function switchView(view){if(!document.getElementById(view))view='accueil';$$('.view').forEach(e=>e.classList.toggle('active',e.id===view));$$('.navbtn').forEach(e=>{const sel=e.dataset.view===view;e.classList.toggle('selected',sel);if(sel)e.setAttribute('aria-current','page');else e.removeAttribute('aria-current')});history.replaceState(null,'','#'+view);if(view==='aeroports')renderMap();window.scrollTo({top:0,behavior:'smooth'})}
@@ -342,13 +342,14 @@ function topicInfo(a){
   if(/\bfenix\b|\ba32x\b|\bcids\b/.test(s))return ['FX','fenix','Fenix'];
   if(/\bwinctrl\b|\bwinwing\b|\bsimapppro\b/.test(s))return ['WC','winctrl','WINCTRL'];
   if(/\bgsx\b/.test(s))return ['GSX','gsx','GSX'];
-  if(/\bnavigraph\b/.test(s))return ['NAV','navigraph','Navigraph'];
+  if(/\bnavigraph\b|\bairac\b|\bsimlink\b/.test(s))return ['NAV','navigraph','Navigraph'];
   if(/\bfshud\b/.test(s))return ['ATC','fshud','FSHud'];
   if(/\bfsl tl\b|\bfsltl\b|\baig\b/.test(s))return ['AI','traffic','Trafic IA'];
   if(/\bsantiluib3\b|\bs3\b/.test(s))return ['S3','s3','Modules S3'];
   if(/\batc\b/.test(s))return ['ATC','atc','ATC'];
   if(/\bm[eé]t[eé]o\b|\bmetar\b|\bstratawx\b/.test(s))return ['WX','weather','Météo'];
   if(/\bmsfs\b|\bflight simulator\b|\bsim update\b/.test(s))return ['FS','msfs','MSFS 2024'];
+  if(/\bflytampa\b|\bairport\b|\ba[eé]roport\b/.test(s))return ['APT','airport','Aéroports'];
   return ['✈','generic','Actualités aviation'];
 }
 function topicBadge(a){
@@ -381,9 +382,7 @@ function renderNews(){
     .sort((x,y)=>new Date(y.published_at||y.date)-new Date(x.published_at||x.date))
     .slice(0,16);
   $('#news-container').innerHTML=a.length?a.map(newsMarkup).join(''):'<div class="empty"><strong>Aucune nouveauté vérifiée</strong>Le site ne publie pas d’annonce sans date ni source vérifiable.</div>';
-  const lead=a.find(x=>newsAgeGroup(x)<3);
   const hero=document.querySelector('#accueil .hero-main p');
-  if(hero&&lead)hero.textContent='Dernière nouveauté vérifiée : '+lead.title+'. Consulte les actualités pour le détail et la source officielle.';
   // Accueil : uniquement les annonces réellement publiées aujourd'hui (heure française).
   // Une découverte aujourd'hui d'une ancienne annonce ne la rend pas nouvelle.
   const todayParis=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
@@ -393,7 +392,7 @@ function renderNews(){
     const d=new Date(raw);
     return Number.isFinite(d.getTime())?new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(d):'';
   };
-  const airacNews=x=>/airac|navigraph/i.test([x.title,x.topic,x.source,x.category].join(' '));
+  const airacNews=x=>/\bairac\b/i.test([x.title,x.topic,x.category].join(' '));
   const homeItems=a.filter(x=>{
     const release=parisDay(x.published_at||x.date);
     if(release===todayParis)return true;
@@ -403,6 +402,7 @@ function renderNews(){
     const days=Math.round((today-start)/86400000);
     return days>=0&&days<3;
   }).sort((x,y)=>Number(airacNews(y))-Number(airacNews(x))).slice(0,6);
+  if(hero)hero.textContent=homeItems.length?'À la une aujourd’hui : '+homeItems[0].title+'. Consulte les actualités pour le détail et la source officielle.':'Aucune nouveauté publiée aujourd’hui. Retrouve les dernières actualités dans la rubrique Nouveautés.';
   $('#home-news').innerHTML=homeItems.map(x=>'<article class="'+(airacNews(x)?'home-airac-news':'')+'"><div class="home-news-row">'+topicBadge(x)+'<div class="home-news-content"><small>'+esc(x.category||'Actualités')+' · '+esc(localDate(x.date))+(airacNews(x)?' <span class="airac-news-label">NEWS AIRAC</span>':'')+'</small><strong>'+esc(x.title)+'</strong><a href="'+esc(isSafeUrl(x.url))+'" target="_blank" rel="noopener noreferrer">Source officielle ↗</a></div></div></article>').join('')||'<p class="muted">Aucune nouveauté publiée aujourd’hui.</p>';
 }
 
