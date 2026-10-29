@@ -60,11 +60,11 @@ SEEDS = [
 # Informations datées et vérifiées par produit. Ne sont jamais écrasées
 # par un prix extrait du texte d'une annonce qui traiterait de plusieurs modèles.
 PRODUCTS = {
-    "sidestick-metal":dict(price="$55.53",price_date="2026-10-22",availability="Précommande annoncée le 22/10/2026 ; vente prévue le 28/10/2026",
+    "sidestick-metal":dict(price="$55.53",price_eu="€53.31",price_date="2026-10-22",availability="Précommande annoncée le 22/10/2026 ; vente prévue le 28/10/2026",
         release_date="2026-10-28",release_kind="date de mise en vente annoncée",
         image_url="https://msfsaddons.com/wp-content/uploads/2026/10/WINCTRL-32-Sidestick-Controller-L-7.png.webp"),
-    "nws":dict(price="$82.30",price_date="2026-07-02",availability="Lancement annoncé le 02/07/2026"),
-    "tcas":dict(price="$77.50",price_date="2026-04-15",availability="Lancement annoncé le 15/04/2026"),
+    "nws":dict(price="$82.30",price_eu="€79.01",price_date="2026-07-02",availability="Lancement annoncé le 02/07/2026"),
+    "tcas":dict(price="$77.50",price_eu="€74.40",price_date="2026-04-15",availability="Lancement annoncé le 15/04/2026"),
     "ovhd":dict(price="$349.95",price_date="2026-03-21",availability="Présenté à FSWeekend ; expédition non confirmée",
         image_url="https://msfsaddons.com/wp-content/uploads/2026/03/winctrl-airbus-overhead-panel-2.webp"),
     "pedals":dict(price="€325.02",price_date="2026-01-26",availability="Prix européen annoncé pour version avec amortisseur"),
@@ -127,6 +127,9 @@ def fetch(url):
 
 def product_ids(title):
     t=title.lower()
+    # Une actualité MOZA ou Boeing, même présente dans les liens associés,
+    # ne devient jamais une actualité WINCTRL Airbus.
+    if not re.search(r"\\bwinctrl\\b|\\bwinwing\\b",t):return []
     # Décision basée sur le TITRE et non les recommandations au bas de l'article.
     if "boeing" in t and "airbus" not in t:return []
     if "sidestick" in t or "captain sticks" in t:return ["sidestick-metal"] if ("airbus" in t or "winctrl" in t) else []
