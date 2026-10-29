@@ -58,15 +58,6 @@
     "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
   },
   {
-    "id": "si-sidecar",
-    "name": "SayIntentions — SI-SIDECAR",
-    "group": "ATC / IA",
-    "source_url": "https://sayintentions.ai/",
-    "method": "official_news",
-    "installed_version": null,
-    "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
-  },
-  {
     "id": "mobiflight",
     "name": "MobiFlight Connector",
     "group": "Cockpit",
@@ -94,15 +85,6 @@
     "name": "GSX Pro",
     "group": "Sol / Trafic",
     "source_url": "https://www.fsdreamteam.com/products_gsxpro.html",
-    "method": "official_news",
-    "installed_version": null,
-    "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
-  },
-  {
-    "id": "fshud",
-    "name": "FSHud ATC",
-    "group": "ATC / IA",
-    "source_url": "https://www.fshud.com/",
     "method": "official_news",
     "installed_version": null,
     "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
@@ -174,24 +156,6 @@
     "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
   },
   {
-    "id": "airplayer",
-    "name": "Sim Innovations — Air Player",
-    "group": "Cockpit",
-    "source_url": "https://www.siminnovations.com/",
-    "method": "official_news",
-    "installed_version": null,
-    "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
-  },
-  {
-    "id": "knobster",
-    "name": "Sim Innovations — Knobster",
-    "group": "Cockpit",
-    "source_url": "https://www.siminnovations.com/",
-    "method": "official_news",
-    "installed_version": null,
-    "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
-  },
-  {
     "id": "chaseplane",
     "name": "Parallel 42 — ChasePlane",
     "group": "Utilitaires",
@@ -214,15 +178,6 @@
     "name": "StrataWx",
     "group": "Météo",
     "source_url": "https://stratawx.com/",
-    "method": "official_news",
-    "installed_version": null,
-    "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
-  },
-  {
-    "id": "s3",
-    "name": "S3 / santiluib3 (modules A320)",
-    "group": "Cockpit",
-    "source_url": "https://santiluib3.com/",
     "method": "official_news",
     "installed_version": null,
     "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
