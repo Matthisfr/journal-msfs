@@ -84,10 +84,10 @@
     "id": "gsx",
     "name": "GSX Pro",
     "group": "Sol / Trafic",
-    "source_url": "https://www.fsdreamteam.com/products_gsxpro.html",
-    "method": "official_news",
+    "source_url": "https://www.fsdreamteam.com/couatl_liveupdate_notes.html",
+    "method": "fsdreamteam_changelog",
     "installed_version": null,
-    "tracking": "Utilisé ou suivi dans le cockpit ; version installée non fournie"
+    "tracking": "Version et notes officielles Couatl Live Update / GSX ; vérifier que la version s'applique à GSX Pro."
   },
   {
     "id": "fsltl",
