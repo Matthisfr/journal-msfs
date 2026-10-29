@@ -71,6 +71,6 @@
   },
   "s3": {
     "state": "unavailable",
-    "reason": "KeyError : 's3'"
+    "reason": "URLError : <urlopen error [Errno 101] Network is unreachable>"
   }
 }
