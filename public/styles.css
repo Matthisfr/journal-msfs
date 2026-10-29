@@ -269,3 +269,6 @@ button.airport-map-eye:focus-visible{outline:2px solid #5ba6c9;border-radius:4px
 .home-news article.home-airac-news{background:#fff0f0;border-left:5px solid #c92332;padding:12px 14px;border-radius:5px}
 .home-airac-news .home-news-content strong{color:#a91626}
 .airac-news-label{display:inline-block;background:#c92332;color:#fff;border-radius:3px;padding:2px 6px;margin-left:6px;font-size:10px;font-weight:900;letter-spacing:.04em}
+
+/* Priorité au rouge pour les badges AIRAC, même si .new-tag est vert par défaut. */
+.new-tag.airac-red-news,.home-news .new-tag.airac-red-news{background:#c92332!important;color:#fff!important;border:1px solid #9d1524}
