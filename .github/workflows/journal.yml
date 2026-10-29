@@ -62,12 +62,18 @@ jobs:
           # la conclusion success d'un workflow qui aurait sauté la collecte.
           api="https://api.github.com/repos/$GH_REPOSITORY/contents/public/status.json?ref=main"
           if payload=$(curl -fsSL --retry 2 -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "$api"); then
-            if printf '%s' "$payload" | jq -er '.content' | base64 -d | jq -e --arg today "$today" '
-              (.last_run // "" | split("T")[0]) == $today
-            ' >/dev/null; then
-              echo "run=false" >> "$GITHUB_OUTPUT"
-              echo "Collecte du $today déjà enregistrée : rattrapage inutile"
-              exit 0
+            last_run=$(printf '%s' "$payload" | jq -er '.content' | base64 -d | jq -r '.last_run // empty' || true)
+            # Convertir l'horodatage UTC en Europe/Paris : une collecte
+            # à 00h35 locale ne doit pas remplacer le passage matinal.
+            last_local=$(TZ=Europe/Paris date -d "$last_run" +%Y-%m-%dT%H:%M:%S 2>/dev/null || true)
+            if [[ "$last_local" == "$today"T* ]]; then
+              last_hour="${last_local:11:2}"
+              if (( 10#$last_hour >= 4 )); then
+                echo "run=false" >> "$GITHUB_OUTPUT"
+                echo "Collecte matinale du $today déjà enregistrée à $last_local : rattrapage inutile"
+                exit 0
+              fi
+              echo "Collecte du jour à $last_local, trop tôt pour le contrôle matinal : relance"
             fi
           fi
           echo "run=true" >> "$GITHUB_OUTPUT"
