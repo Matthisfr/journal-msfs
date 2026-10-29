@@ -5,7 +5,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const isSafeUrl=u=>{try{const x=new URL(u);return ['https:','http:'].includes(x.protocol)?x.href:'#'}catch{return '#'}};
 const localDate=s=>{if(!s)return '—';const d=new Date(s.length===10?s+'T12:00:00Z':s);return isNaN(d)?s:new Intl.DateTimeFormat('fr-FR',{day:'2-digit',month:'short',year:'numeric',timeZone:'Europe/Paris'}).format(d)};
 const localDateTime=s=>{if(!s)return 'Non exécutée';const d=new Date(s);return isNaN(d)?s:new Intl.DateTimeFormat('fr-FR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit',timeZone:'Europe/Paris'}).format(d)};
-let airports=[], status={}, editorial={}, software={items:[]}, hardware=[], hardwareImages={}, airportCoordinates={};
+let airports=[], status={}, editorial={}, software={items:[]}, hardware=[], hardwareImages={}, winctrlAirbus={articles:[],products:{}}, airportCoordinates={};
 const brandLogos=(()=>{try{return JSON.parse(document.getElementById('brand-manifest')?.textContent||'{}')}catch{return {}}})();
 function brandIcon(kind,label){
   const source=brandLogos[kind]?.path||'icons/'+kind+'.svg';
@@ -435,22 +435,46 @@ function renderHardwareGallery(){
   const el=$('#hardware-gallery');if(!el)return;
   el.innerHTML=(Array.isArray(hardware)?hardware:[]).map(x=>{
     const photo=hardwareImages[x.id]||{};
+    const info=(winctrlAirbus.products||{})[x.id]||{};
     const picture=['photo','photo_remote'].includes(photo.state)&&photo.path?
-      '<img class="hardware-photo" loading="lazy" decoding="async" src="'+esc(photo.path)+'" alt="Photographie du matériel '+esc(x.name)+'" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.hidden=false">'+
-      '<span class="hardware-no-photo" hidden>Photographie momentanément indisponible</span>':
-      '<span class="hardware-no-photo">Photo produit non disponible</span>';
+      '<img class="hardware-photo" loading="lazy" decoding="async" src="'+esc(photo.path)+'" alt="Visuel du matériel '+esc(x.name)+'" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.hidden=false">'+
+      '<span class="hardware-no-photo" hidden>Visuel momentanément indisponible</span>':
+      '<span class="hardware-no-photo">Visuel de ce modèle non disponible</span>';
+    const owned=x.ownership==='Possédé',pending=x.ownership==='Attendu';
+    const announcement=info.article_date?'<div class="hardware-fact"><b>Annonce :</b> '+esc(localDate(info.article_date))+'</div>':'';
+    const price=info.price?'<div class="hardware-fact"><b>Prix annoncé :</b> '+esc(info.price)+' <small>(article du '+esc(localDate(info.price_date||info.article_date))+', non actualisé)</small></div>':'';
+    const release=info.release_date?'<div class="hardware-fact"><b>'+esc(info.release_kind||'Date annoncée')+' :</b> '+esc(localDate(info.release_date))+'</div>':'';
+    const availability=info.availability?'<div class="hardware-fact"><b>Situation à la date de l’annonce :</b> '+esc(info.availability)+'</div>':'';
+    const story=info.article_url?'<a href="'+esc(isSafeUrl(info.article_url))+'" target="_blank" rel="noopener noreferrer">Annonce et visuels ↗</a>':'';
     return '<article class="hardware-card hardware-device">'+
       '<div class="hardware-image">'+picture+'</div>'+
-      '<div class="overline">'+esc(x.ownership==='Possédé'?'DANS TON COCKPIT':'MATÉRIEL ATTENDU')+'</div>'+
+      '<div class="overline">'+esc(owned?'DANS TON COCKPIT':pending?'MATÉRIEL ATTENDU':'SURVEILLANCE AIRBUS')+'</div>'+
       '<h3>'+esc(x.name)+'</h3>'+
-      '<p>'+esc(x.ownership==='Possédé'?'Matériel possédé · suivi SimAppPro et Fenix.':'Sortie, disponibilité et révision à surveiller.')+'</p>'+
-      (x.preview_url?'<p><a href="'+esc(isSafeUrl(x.preview_url))+'" target="_blank" rel="noopener noreferrer">Voir les visuels du prototype ↗</a><small>'+esc(x.preview_note||'')+'</small></p>':'')+'<div class="hardware-card-bottom"><span class="flag '+(x.ownership==='Possédé'?'flag-ok':'flag-v')+'">'+esc(x.ownership)+'</span>'+
+      '<p>'+esc(owned?'Matériel possédé · suivi SimAppPro et Fenix.':pending?'Disponibilité et compatibilité à surveiller.':'Produit Airbus surveillé, non déclaré possédé.')+'</p>'+
+      announcement+price+release+availability+
+      (x.preview_url?'<p><a href="'+esc(isSafeUrl(x.preview_url))+'" target="_blank" rel="noopener noreferrer">Voir les visuels du prototype ↗</a><small>'+esc(x.preview_note||'')+'</small></p>':'')+
+      '<div class="hardware-card-bottom"><span class="flag '+(owned?'flag-ok':'flag-v')+'">'+esc(x.ownership)+'</span>'+
       '<a href="'+esc(isSafeUrl(x.official_url))+'" target="_blank" rel="noopener noreferrer">WINCTRL ↗</a></div>'+
-      (['photo','photo_remote'].includes(photo.state)?'<small class="photo-credit">'+esc(photo.source||'Photo de produit')+'</small>':'')+
+      (story?'<small>'+story+'</small>':'')+
+      (['photo','photo_remote'].includes(photo.state)?'<small class="photo-credit">'+esc(photo.source||'Visuel du produit')+'</small>':'')+
       '</article>';
   }).join('')||'<p>Inventaire matériel indisponible.</p>';
 }
-function renderHardwareNews(){const a=editorial.hardware||[];$('#hardware-news').innerHTML=a.length?'<div class="sectionbar"><h2>Actualités du matériel</h2></div><div class="news-grid">'+a.map(newsMarkup).join('')+'</div>':''}
+function renderHardwareNews(){
+  const extras=(winctrlAirbus.articles||[]).map(a=>({...a,category:'Matériel Airbus',
+    topic:'WINCTRL',source:'MSFS Addons — WINCTRL'}));
+  const fromEditorial=editorial.hardware||[];
+  const uniq=new Map();
+  for(const x of [...extras,...fromEditorial])if(x.url&&!uniq.has(x.url))uniq.set(x.url,x);
+  const a=[...uniq.values()].sort((x,y)=>String(y.date).localeCompare(String(x.date))).slice(0,10);
+  const markup=a.map(x=>{
+    const id=(x.products||[]).find(k=>hardwareImages[k]?.path);
+    const photo=id?hardwareImages[id]:null;
+    const img=photo&&photo.path?'<img class="hardware-news-photo" loading="lazy" decoding="async" src="'+esc(photo.path)+'" alt="Visuel '+esc((x.products||[]).join(', '))+'">':'';
+    return '<div class="hardware-news-entry">'+img+newsMarkup(x)+'</div>';
+  }).join('');
+  $('#hardware-news').innerHTML=a.length?'<div class="sectionbar"><h2>Actualités du matériel Airbus</h2></div><p class="muted">Les prix cités sont ceux des annonces datées, pas des tarifs en boutique vérifiés aujourd’hui.</p><div class="news-grid">'+markup+'</div>':'';
+}
 function renderStatus(){if(status.edition)$('#edition-date').textContent=new Date(status.edition+'T12:00:00Z').toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric',timeZone:'Europe/Paris'}).toUpperCase();const done=!!status.last_run;const dateTime=new Intl.DateTimeFormat('fr-FR',{day:'2-digit',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit',timeZone:'Europe/Paris'});$('#home-updated').textContent=done?'Le '+dateTime.format(new Date(status.last_run)):'En attente de la première collecte';$('#home-editorial-updated').textContent=editorial.last_updated?localDate(editorial.last_updated):'Non actualisées';$('#last-check').textContent=done?'Collecte : '+localDateTime(status.last_run):'Données de lancement · non actualisées';$('#sync-label').textContent=done?'DERNIÈRE COLLECTE : '+localDateTime(status.last_run):'COLLECTE AUTOMATIQUE NON ENCORE EXÉCUTÉE';$('#dashboard-timestamp').textContent=done?'Dernier passage : '+localDateTime(status.last_run):'Édition de lancement';$('#run-state').textContent=done?'Collecte exécutée':'Automatisation non encore exécutée';$('#run-detail').textContent=done?'Voir le détail des sources ci-dessous.':'La collecte doit être activée après publication sur GitHub.';$('#status-dot').classList.toggle('good',done&&status.source_status?.metar==='ok');$('#footer-updated').textContent=done?'Dernière collecte : '+localDateTime(status.last_run):'Publication et automatisation non encore activées';const src=status.source_status||{};const parts=[['Météo METAR',src.metar],['Prévisions TAF',src.taf],['Actualités officielles',src.official_news],['Versions des scènes',airports.some(a=>a.server_version)?'partial':src.airport_versions],['Éditorial ChatGPT',editorial.last_updated?'ok':'non_executed']];$('#source-health').innerHTML=parts.map(([name,s])=>`<div class="health ${s==='ok'?'ok':''}"><strong>${esc(name)}</strong><span>${s==='ok'?'Collecte réussie':s==='non_verified'?'Non vérifiées':s==='error'?'Échec de collecte':s==='partial'?'Partiellement vérifiées':'En attente'}</span></div>`).join('')}
 function renderQualityAudit(){
  const el=$('#quality-audit-body');if(!el)return;
@@ -464,7 +488,7 @@ function renderQualityAudit(){
  const hardwareDetails=$('#quality-hardware-details');if(hardwareDetails)hardwareDetails.innerHTML=unknownHardware.map(h=>'<p><strong>'+esc(h.name)+'</strong> — '+esc(hardwareImages[h.id]?.reason||'Photo présente mais modèle exact non vérifié visuellement')+'</p>').join('')||'<p>Toutes les photographies ont un fichier référencé. Leur exactitude doit encore être vérifiée individuellement.</p>';
 
 }
-async function init(){try{const [ar,sr,er,sv,hc,hi]=await Promise.all(['airports.json','status.json','editorial.json','software_versions.json','hardware_catalog.json','hardware-images.json'].map(p=>fetch(p,{cache:'no-store'}).catch(()=>null)));if(!ar?.ok||!sr?.ok||!er?.ok)throw new Error('Fichiers de données indisponibles');[airports,status,editorial]=await Promise.all([ar.json(),sr.json(),er.json()]);software=sv?.ok?await sv.json():{items:[]};hardware=hc?.ok?await hc.json():[];hardwareImages=hi?.ok?await hi.json():{};try{airportCoordinates=await fetch('airport_coordinates.json',{cache:'no-store'}).then(r=>r.ok?r.json():{})}catch(_){airportCoordinates={}};$('#count-scenes').textContent=airports.length;$('#count-codes').textContent=new Set(airports.map(x=>x.icao)).size;$('#airport-total').textContent=airports.length+' SCÈNES';const regions=[...new Set(airports.map(a=>a.region||a.country).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'fr'));$('#region-filter').innerHTML='<option value="">Toutes les régions</option>'+regions.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');renderAirports();renderStatus();renderWeather();renderNews();renderHardwareNews();renderSoftware();renderHardwareGallery();renderQualityAudit();}catch(e){$('#run-state').textContent='Données indisponibles';$('#run-detail').textContent='Impossible de charger les fichiers JSON.';$('#weather-container').innerHTML='<div class="error">Chargement des données impossible. Ouvre le site via un serveur web.</div>';$('#airport-count').textContent='Erreur de chargement';console.error(e)}if(location.hash)switchView(location.hash.slice(1))}
+async function init(){try{const [ar,sr,er,sv,hc,hi,wa]=await Promise.all(['airports.json','status.json','editorial.json','software_versions.json','hardware_catalog.json','hardware-images.json','winctrl_airbus.json'].map(p=>fetch(p,{cache:'no-store'}).catch(()=>null)));if(!ar?.ok||!sr?.ok||!er?.ok)throw new Error('Fichiers de données indisponibles');[airports,status,editorial]=await Promise.all([ar.json(),sr.json(),er.json()]);software=sv?.ok?await sv.json():{items:[]};hardware=hc?.ok?await hc.json():[];hardwareImages=hi?.ok?await hi.json():{};winctrlAirbus=wa?.ok?await wa.json():{articles:[],products:{}};try{airportCoordinates=await fetch('airport_coordinates.json',{cache:'no-store'}).then(r=>r.ok?r.json():{})}catch(_){airportCoordinates={}};$('#count-scenes').textContent=airports.length;$('#count-codes').textContent=new Set(airports.map(x=>x.icao)).size;$('#airport-total').textContent=airports.length+' SCÈNES';const regions=[...new Set(airports.map(a=>a.region||a.country).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'fr'));$('#region-filter').innerHTML='<option value="">Toutes les régions</option>'+regions.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');renderAirports();renderStatus();renderWeather();renderNews();renderHardwareNews();renderSoftware();renderHardwareGallery();renderQualityAudit();}catch(e){$('#run-state').textContent='Données indisponibles';$('#run-detail').textContent='Impossible de charger les fichiers JSON.';$('#weather-container').innerHTML='<div class="error">Chargement des données impossible. Ouvre le site via un serveur web.</div>';$('#airport-count').textContent='Erreur de chargement';console.error(e)}if(location.hash)switchView(location.hash.slice(1))}
 async function loadSimbriefFlight(){
   const el=$('#simbrief-flight-data'),button=$('#simbrief-refresh');
   if(!el||!button)return;
