@@ -362,7 +362,7 @@ def build():
     status["airac_cycle"] = cycle
     (PUBLIC / "status.json").write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     airac = ('<div class="airac-banner"><b>NAVIGRAPH AIRAC ' + h(cycle) + '</b> ' +
-             ('<span class="new-tag">NEWS</span> ' if changed else '') +
+             ('<span class="new-tag airac-red-news">NEWS</span> ' if changed else '') +
              h(start.strftime("%d/%m/%Y")) + ' – ' + h(end.strftime("%d/%m/%Y")) + '</div>')
     index = index.replace('<main id="main" class="shell main">', '<main id="main" class="shell main">' + airac, 1)
     # Résumé très compact des actualités du jour dans le bandeau héro.
