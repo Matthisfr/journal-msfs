@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-29T13:31:41.479954+00:00",
+  "checked_at": "2026-10-29T13:36:11.210016+00:00",
   "source_url": "https://msfsaddons.com/developer/winctrl/",
   "source_state": "ok",
   "scope": "Matériels Airbus uniquement ; annonces historiques et prix datés",
@@ -94,6 +94,7 @@
   "products": {
     "sidestick-metal": {
       "price": "$55.53",
+      "price_eu": "€53.31",
       "price_date": "2026-10-22",
       "availability": "Précommande annoncée le 22/10/2026 ; vente prévue le 28/10/2026",
       "release_date": "2026-10-28",
@@ -104,6 +105,7 @@
     },
     "nws": {
       "price": "$82.30",
+      "price_eu": "€79.01",
       "price_date": "2026-07-02",
       "availability": "Lancement annoncé le 02/07/2026",
       "article_date": "2026-07-02",
@@ -112,6 +114,7 @@
     },
     "tcas": {
       "price": "$77.50",
+      "price_eu": "€74.40",
       "price_date": "2026-04-15",
       "availability": "Lancement annoncé le 15/04/2026",
       "article_date": "2026-04-15",

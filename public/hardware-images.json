@@ -63,7 +63,6 @@
     "path": "hardware/ovhd.webp",
     "state": "photo",
     "source": "WINCTRL / MSFS Addons — visuel du produit",
-    "origin": "https://msfsaddons.com/wp-content/uploads/2026/03/winctrl-airbus-overhead-panel-2.webp",
     "verification": "non_verifiee_visuellement"
   },
   "agp": {
@@ -80,14 +79,12 @@
     "path": "hardware/sidestick-metal.webp",
     "state": "photo",
     "source": "WINCTRL / MSFS Addons — visuel du produit",
-    "origin": "https://msfsaddons.com/wp-content/uploads/2026/10/WINCTRL-32-Sidestick-Controller-L-7.png.webp",
     "verification": "non_verifiee_visuellement"
   },
   "ecam": {
     "path": "hardware/ecam.webp",
     "state": "photo",
     "source": "WINCTRL / MSFS Addons — visuel du produit",
-    "origin": "https://msfsaddons.com/wp-content/uploads/2025/11/winwing-ecam-6.webp",
     "verification": "non_verifiee_visuellement"
   }
 }
