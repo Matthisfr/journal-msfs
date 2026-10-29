@@ -404,8 +404,8 @@ def build():
     # The HTML query string alone does not invalidate Safari's cached app.js.
     rev = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%d%H%M%S")
     # Remplacer aussi les anciennes chaînes de cache (?v=...) pour garantir ?rev=.
-    index = re.sub(r'src="app\\.js(?:\\?[^"]*)?"', f'src="app.js?rev={rev}"', index)
-    index = re.sub(r'href="styles\\.css(?:\\?[^"]*)?"', f'href="styles.css?rev={rev}"', index)
+    index = re.sub(r'src="app\.js(?:\?[^"]*)?"', f'src="app.js?rev={rev}"', index)
+    index = re.sub(r'href="styles\.css(?:\?[^"]*)?"', f'href="styles.css?rev={rev}"', index)
     # Bouton sur la rubrique AÉROPORTS du journal (celle visible sur iPad).
     if '👁️ Doublons' not in index:
         index = index.replace(
