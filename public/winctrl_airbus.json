@@ -1,0 +1,171 @@
+{
+  "checked_at": "2026-10-29T13:31:41.479954+00:00",
+  "source_url": "https://msfsaddons.com/developer/winctrl/",
+  "source_state": "ok",
+  "scope": "Matériels Airbus uniquement ; annonces historiques et prix datés",
+  "articles": [
+    {
+      "date": "2026-10-22",
+      "url": "https://msfsaddons.com/2026/10/22/airbus-captain-sticks-are-like-buses-winctrls-full-metal-left-hand-grip-arrives-on-the-same-day-as-mozas/",
+      "title": "WINCTRL : nouveau sidestick Airbus métal côté commandant",
+      "summary": "32 Sidestick Controller Metal 2 : précommande annoncée à 55,53 $ ; vente annoncée à partir du 28 octobre. Nécessite une base Orion 2 ou Cyber Taurus.",
+      "products": [
+        "sidestick-metal"
+      ],
+      "price": "$55.53",
+      "image_url": "https://msfsaddons.com/wp-content/uploads/2026/10/WINCTRL-32-Sidestick-Controller-L-3-1.webp"
+    },
+    {
+      "date": "2026-07-02",
+      "url": "https://msfsaddons.com/2026/07/02/winctrl-32-nws-the-tiller-finally-gets-its-affordable-moment-at-82-30/",
+      "title": "WINCTRL 32 NWS : lancement du tiller Airbus gauche et droit",
+      "summary": "Tiller Airbus disponible à l'annonce dès 82,30 $ (79,01 € en précommande européenne), avec profils Fenix et SimAppPro.",
+      "products": [
+        "nws"
+      ],
+      "price": "$82.30",
+      "image_url": "https://msfsaddons.com/wp-content/uploads/2026/07/winctrls-32-nws-tiller-3-1.webp"
+    },
+    {
+      "date": "2026-04-15",
+      "url": "https://msfsaddons.com/2026/04/15/winctrl-launches-the-32-tcas-panel-squawk-codes-and-tcas-control-in-physical-hardware-for-77-50/",
+      "title": "WINCTRL 32 TCAS : lancement du panneau transpondeur Airbus",
+      "summary": "TCAS commercialisé à l'annonce dès 77,50 $ (74,40 € en Europe). Compatibilité Fenix A319/A320/A321 via SimAppPro.",
+      "products": [
+        "tcas"
+      ],
+      "price": "$77.50",
+      "image_url": "https://msfsaddons.com/wp-content/uploads/2026/04/winctrl-32-tcas-1.webp"
+    },
+    {
+      "date": "2026-03-21",
+      "url": "https://msfsaddons.com/2026/03/21/winctrls-ovhd32-sop-brings-a-full-airbus-overhead-panel-to-home-cockpits-for-349-95/",
+      "title": "WINCTRL OVHD32 SOP : présentation du plafonnier Airbus",
+      "summary": "Overhead A320 annoncé à 349,95 $. Date d'expédition non confirmée dans cet article.",
+      "products": [
+        "ovhd"
+      ],
+      "price": "$349.95",
+      "image_url": "https://msfsaddons.com/wp-content/uploads/2026/03/winctrl-airbus-overhead-panel-2.webp"
+    },
+    {
+      "date": "2026-01-26",
+      "url": "https://msfsaddons.com/2026/01/26/winctrl-targets-airliner-simmers-with-new-orion-32-rudder-pedals/",
+      "title": "WINCTRL Orion 32 : palonniers métal pour avions de ligne",
+      "summary": "Version avec amortisseur annoncée à 325,02 € en Europe ; commandes annoncées pour le 27 janvier 2026.",
+      "products": [
+        "pedals"
+      ],
+      "price": "€325.02",
+      "image_url": "https://msfsaddons.com/wp-content/uploads/2026/01/winctrl-orion-32-rudder-pedals-2.webp"
+    },
+    {
+      "date": "2025-11-08",
+      "url": "https://msfsaddons.com/2025/11/08/winwings-new-airbus-style-ecam-32-and-agp-32-metal-panels-are-now-listed-and-shipping-soon/",
+      "title": "WINWING : ECAM 32 et AGP 32 Metal annoncés pour Airbus",
+      "summary": "ECAM 32 à 57,63 $ et AGP 32 Metal à 116,34 $ (prix de lancement annoncés). Expéditions annoncées dès le 10 novembre 2025.",
+      "products": [
+        "ecam",
+        "agp"
+      ]
+    },
+    {
+      "date": "2025-09-24",
+      "url": "https://msfsaddons.com/2025/09/24/winwing-sets-september-26-launch-for-new-ursa-minor-airbus-style-throttles/",
+      "title": "WINWING : manettes URSA MINOR 32 Airbus annoncées",
+      "summary": "Annonce du lancement des manettes de poussée Airbus au 26 septembre 2025.",
+      "products": [
+        "throttle"
+      ],
+      "image_url": "https://msfsaddons.com/wp-content/uploads/2025/09/winwing-airbus-throttle.webp"
+    },
+    {
+      "url": "https://msfsaddons.com/2024/10/01/winwing-announces-full-size-airbus-efis-panel-for-home-cockpit-enthusiasts/",
+      "date": "2024-10-01",
+      "title": "WINCTRL Airbus : annonce EFIS Airbus",
+      "summary": "MSFS Addons présente EFIS Airbus. Consulte l'article pour les caractéristiques et les conditions de vente.",
+      "products": [
+        "efis"
+      ],
+      "image_url": "https://msfsaddons.com/wp-content/uploads/2024/10/Winwing-EFIS-panel-1.webp",
+      "source": "MSFS Addons — WINCTRL"
+    }
+  ],
+  "products": {
+    "sidestick-metal": {
+      "price": "$55.53",
+      "price_date": "2026-10-22",
+      "availability": "Précommande annoncée le 22/10/2026 ; vente prévue le 28/10/2026",
+      "release_date": "2026-10-28",
+      "release_kind": "date de mise en vente annoncée",
+      "image_url": "https://msfsaddons.com/wp-content/uploads/2026/10/WINCTRL-32-Sidestick-Controller-L-7.png.webp",
+      "article_date": "2026-10-22",
+      "article_url": "https://msfsaddons.com/2026/10/22/airbus-captain-sticks-are-like-buses-winctrls-full-metal-left-hand-grip-arrives-on-the-same-day-as-mozas/"
+    },
+    "nws": {
+      "price": "$82.30",
+      "price_date": "2026-07-02",
+      "availability": "Lancement annoncé le 02/07/2026",
+      "article_date": "2026-07-02",
+      "article_url": "https://msfsaddons.com/2026/07/02/winctrl-32-nws-the-tiller-finally-gets-its-affordable-moment-at-82-30/",
+      "image_url": "https://msfsaddons.com/wp-content/uploads/2026/07/winctrls-32-nws-tiller-3-1.webp"
+    },
+    "tcas": {
+      "price": "$77.50",
+      "price_date": "2026-04-15",
+      "availability": "Lancement annoncé le 15/04/2026",
+      "article_date": "2026-04-15",
+      "article_url": "https://msfsaddons.com/2026/04/15/winctrl-launches-the-32-tcas-panel-squawk-codes-and-tcas-control-in-physical-hardware-for-77-50/",
+      "image_url": "https://msfsaddons.com/wp-content/uploads/2026/04/winctrl-32-tcas-1.webp"
+    },
+    "ovhd": {
+      "price": "$349.95",
+      "price_date": "2026-03-21",
+      "availability": "Présenté à FSWeekend ; expédition non confirmée",
+      "image_url": "https://msfsaddons.com/wp-content/uploads/2026/03/winctrl-airbus-overhead-panel-2.webp",
+      "article_date": "2026-03-21",
+      "article_url": "https://msfsaddons.com/2026/03/21/winctrls-ovhd32-sop-brings-a-full-airbus-overhead-panel-to-home-cockpits-for-349-95/"
+    },
+    "pedals": {
+      "price": "€325.02",
+      "price_date": "2026-01-26",
+      "availability": "Prix européen annoncé pour version avec amortisseur",
+      "article_date": "2026-01-26",
+      "article_url": "https://msfsaddons.com/2026/01/26/winctrl-targets-airliner-simmers-with-new-orion-32-rudder-pedals/",
+      "image_url": "https://msfsaddons.com/wp-content/uploads/2026/01/winctrl-orion-32-rudder-pedals-2.webp"
+    },
+    "ecam": {
+      "price": "$57.63",
+      "price_date": "2025-11-08",
+      "availability": "Lancement annoncé le 10/11/2025",
+      "release_date": "2025-11-10",
+      "release_kind": "date de disponibilité annoncée",
+      "image_url": "https://msfsaddons.com/wp-content/uploads/2025/11/winwing-ecam-6.webp",
+      "article_date": "2025-11-08",
+      "article_url": "https://msfsaddons.com/2025/11/08/winwings-new-airbus-style-ecam-32-and-agp-32-metal-panels-are-now-listed-and-shipping-soon/"
+    },
+    "agp": {
+      "price": "$116.34",
+      "price_date": "2025-11-08",
+      "availability": "Lancement annoncé le 10/11/2025",
+      "release_date": "2025-11-10",
+      "release_kind": "date de disponibilité annoncée",
+      "image_url": "https://msfsaddons.com/wp-content/uploads/2025/11/winwing-agp-metal-1.webp",
+      "article_date": "2025-11-08",
+      "article_url": "https://msfsaddons.com/2025/11/08/winwings-new-airbus-style-ecam-32-and-agp-32-metal-panels-are-now-listed-and-shipping-soon/"
+    },
+    "throttle": {
+      "availability": "Lancement annoncé le 26/09/2025",
+      "release_date": "2025-09-26",
+      "release_kind": "date de lancement annoncée",
+      "article_date": "2025-09-24",
+      "article_url": "https://msfsaddons.com/2025/09/24/winwing-sets-september-26-launch-for-new-ursa-minor-airbus-style-throttles/",
+      "image_url": "https://msfsaddons.com/wp-content/uploads/2025/09/winwing-airbus-throttle.webp"
+    },
+    "efis": {
+      "article_date": "2024-10-01",
+      "article_url": "https://msfsaddons.com/2024/10/01/winwing-announces-full-size-airbus-efis-panel-for-home-cockpit-enthusiasts/",
+      "image_url": "https://msfsaddons.com/wp-content/uploads/2024/10/Winwing-EFIS-panel-1.webp"
+    }
+  }
+}

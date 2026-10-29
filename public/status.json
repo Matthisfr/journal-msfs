@@ -1,22 +1,9 @@
 {
   "edition": "2026-10-29",
-  "last_run": "2026-10-29T13:27:33.558219+00:00",
-  "weather_checked_at": "2026-10-29T13:27:33.558219+00:00",
-  "news_checked_at": "2026-10-29T13:27:33.558219+00:00",
+  "last_run": "2026-10-29T13:30:39.441250+00:00",
+  "weather_checked_at": "2026-10-29T13:30:39.441250+00:00",
+  "news_checked_at": "2026-10-29T13:30:39.441250+00:00",
   "weather": [
-    {
-      "icao": "KOMA",
-      "name": "KOMA Omaha-Eppley Airfield",
-      "observed_at": "2026-10-29T13:06:00+00:00",
-      "raw": "SPECI KOMA 291306Z 36005KT 1/2SM R14R/2000V4500FT FG SCT000 08/07 A3018 RMK AO2 VIS SW-NW 5 FG SCT000 T00780072 $",
-      "score": 145,
-      "summary": "brouillard, visibilité < 1 SM",
-      "icon": "🌫️",
-      "phenomenon": "Brouillard",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KOMA 291120Z 2912/3012 02007KT P6SM FEW050 TEMPO 2912/2914 OVC005 FM291500 08008KT P6SM SKC FM300300 10008KT P6SM SCT100 FM300500 11008KT P6SM -TSRA BKN035CB FM300900 11009KT 6SM -TSRA BKN023CB"
-    },
     {
       "icao": "CYEG",
       "name": "CYEG - Edmonton Airport",
@@ -55,6 +42,19 @@
       "level": "Dégradé",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF EKVG 291127Z 2912/2921 18008KT 8000 BKN006 TEMPO 2912/2921 2500 BR BKN004"
+    },
+    {
+      "icao": "KOMA",
+      "name": "KOMA Omaha-Eppley Airfield",
+      "observed_at": "2026-10-29T13:27:00+00:00",
+      "raw": "SPECI KOMA 291327Z 36006KT 1 1/2SM R14R/6000VP6000FT BR FEW000 08/07 A3018 RMK AO2 TWR VIS 10 VIS SW-NW 5 BR FEW000 T00780072 $",
+      "score": 45,
+      "summary": "visibilité < 3 SM",
+      "icon": "🌤️",
+      "phenomenon": "Éclaircies",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KOMA 291120Z 2912/3012 02007KT P6SM FEW050 TEMPO 2912/2914 OVC005 FM291500 08008KT P6SM SKC FM300300 10008KT P6SM SCT100 FM300500 11008KT P6SM -TSRA BKN035CB FM300900 11009KT 6SM -TSRA BKN023CB"
     },
     {
       "icao": "EETN",
@@ -141,14 +141,42 @@
   },
   "news": [
     {
-      "id": "msfs_fselite_news-content-bluebird-simulations-shares-post-launch-update",
-      "title": "BlueBird Simulations partage une mise à jour post-lancement",
+      "id": "software-navigraph-stable-8.45.1",
+      "title": "Navigraph / Cartes / Simlink : nouvelle version 8.45.1",
+      "category": "LOGICIELS / VERSIONS",
+      "topic": "Navigraph / Charts / Simlink",
+      "date": "2026-10-28",
+      "source": "Notes officielles — Navigraph / Charts / Simlink",
+      "url": "https://navigraph.com/products/charts/changelog",
+      "new": true,
+      "summary": "Version précédente 8.43.1 → 8.45.1. (15 octobre 2026) · 🐛 Corrections de bugs et améliorations · Correction de la feuille inférieure inutilisable au démarrage · Correction des étiquettes d'indicatif parfois non visibles dans la projection du globe · Correction d'un problème où la carte pouvait parfois être bloquée dans un état de chargement au démarrage · [Android]** Correction d'un problème où l'indicateur de cartes mobiles pouvait rester bloqué à sa position initiale",
+      "impact": "Consulter le changelog officiel complet et vérifier la compatibilité Fenix / MSFS 2024 avant installation.",
+      "details": "(15 Oct 2026)\n🐛 Bug fixes & improvements\n*   Fix bottom sheet inoperable on startup\n*   Fix callsign labels sometimes not visible in globe projection\n*   Fix an issue where the map could sometimes be stuck in a loading state on startup\n*   **[Android]** Fix an issue where the moving maps indicator could get stuck at its initial position",
+      "changelog_url": "https://navigraph.com/products/charts/changelog",
+      "version_before": "8.43.1",
+      "version_after": "8.45.1"
+    },
+    {
+      "id": "msfs_fselite_news-content-navigraph-expands-academy-with-new-course-2",
+      "title": "Navigraph étend son Académie avec un nouveau cours",
       "category": "MSFS 2024",
       "topic": "MSFS",
       "date": "2026-10-28",
       "source": "FSElite — MSFS",
-      "url": "https://fselite.net/content/bluebird-simulations-shares-post-launch-update/",
-      "summary": "28 octobre 2026 – BlueBird Simulations partage la mise à jour post-lancement et les prochaines étapes. Actualités MSFS MSFS 2024",
+      "url": "https://fselite.net/content/navigraph-expands-academy-with-new-course-2/",
+      "summary": "28 octobre 2026 – Navigraph élargit son Académie avec un nouveau cours sur les approches IFR. Actualités MSFS MSFS 2024",
+      "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
+      "new": false
+    },
+    {
+      "id": "msfs_fselite_news-content-microsoft-wu-23-poland-and-the-baltics-out-now",
+      "title": "Microsoft WU 23 : la Pologne et les pays baltes sont désormais disponibles",
+      "category": "MSFS 2024",
+      "topic": "MSFS",
+      "date": "2026-10-28",
+      "source": "FSElite — MSFS",
+      "url": "https://fselite.net/content/microsoft-wu-23-poland-and-the-baltics-out-now/",
+      "summary": "28 octobre 2026 – Sortie de la mise à jour 23 de Microsoft Flight Simulator World. Actualités MSFS MSFS 2024 MSFS PS5 MSFS Xbox",
       "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
       "new": false
     },
@@ -177,41 +205,6 @@
       "new": false
     },
     {
-      "id": "msfs_fselite_news-content-microsoft-wu-23-poland-and-the-baltics-out-now",
-      "title": "Microsoft WU 23 : la Pologne et les pays baltes sont désormais disponibles",
-      "category": "MSFS 2024",
-      "topic": "MSFS",
-      "date": "2026-10-28",
-      "source": "FSElite — MSFS",
-      "url": "https://fselite.net/content/microsoft-wu-23-poland-and-the-baltics-out-now/",
-      "summary": "28 octobre 2026 – Sortie de la mise à jour 23 de Microsoft Flight Simulator World. Actualités MSFS MSFS 2024 MSFS PS5 MSFS Xbox",
-      "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
-      "new": false
-    },
-    {
-      "id": "msfs_fselite_news-content-navigraph-expands-academy-with-new-course-2",
-      "title": "Navigraph étend son Académie avec un nouveau cours",
-      "category": "MSFS 2024",
-      "topic": "MSFS",
-      "date": "2026-10-28",
-      "source": "FSElite — MSFS",
-      "url": "https://fselite.net/content/navigraph-expands-academy-with-new-course-2/",
-      "summary": "28 octobre 2026 – Navigraph élargit son Académie avec un nouveau cours sur les approches IFR. Actualités MSFS MSFS 2024",
-      "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
-      "new": false
-    },
-    {
-      "id": "780010",
-      "title": "Tournoi d'exhibition du championnat national de courses aériennes",
-      "category": "MSFS officiel",
-      "date": "2026-10-28",
-      "source": "Forum officiel Microsoft Flight Simulator",
-      "url": "https://forums.flightsimulator.com/t/national-championship-air-races-exhibition-tournament/780010",
-      "summary": "Rejoignez-nous ce vendredi 30 octobre alors que cinq de vos simmers préférés de Twitch et YouTube s'affrontent contre le Community Manager @Chewwy94 dans le mode National Championship Air Races ! Nous sommes ravis d'accueillir AvAngel, Cow Town,…",
-      "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
-      "new": false
-    },
-    {
       "id": "msfs_fselite_news-content-headwind-a330-development-progress",
       "title": "Headwind Simulations présente la mise à jour du développement de l'Airbus A330X",
       "category": "MSFS 2024",
@@ -236,20 +229,27 @@
       "new": false
     },
     {
-      "id": "software-navigraph-stable-8.45.1",
-      "title": "Navigraph / Cartes / Simlink : nouvelle version 8.45.1",
-      "category": "LOGICIELS / VERSIONS",
-      "topic": "Navigraph / Charts / Simlink",
+      "id": "msfs_fselite_news-content-bluebird-simulations-shares-post-launch-update",
+      "title": "BlueBird Simulations partage une mise à jour post-lancement",
+      "category": "MSFS 2024",
+      "topic": "MSFS",
       "date": "2026-10-28",
-      "source": "Notes officielles — Navigraph / Charts / Simlink",
-      "url": "https://navigraph.com/products/charts/changelog",
-      "new": true,
-      "summary": "Version précédente 8.43.1 → 8.45.1. (15 octobre 2026) · 🐛 Corrections de bugs et améliorations · Correction de la feuille inférieure inutilisable au démarrage · Correction des étiquettes d'indicatif parfois non visibles dans la projection du globe · Correction d'un problème où la carte pouvait parfois être bloquée dans un état de chargement au démarrage · [Android]** Correction d'un problème où l'indicateur de cartes mobiles pouvait rester bloqué à sa position initiale",
-      "impact": "Consulter le changelog officiel complet et vérifier la compatibilité Fenix / MSFS 2024 avant installation.",
-      "details": "(15 Oct 2026)\n🐛 Bug fixes & improvements\n*   Fix bottom sheet inoperable on startup\n*   Fix callsign labels sometimes not visible in globe projection\n*   Fix an issue where the map could sometimes be stuck in a loading state on startup\n*   **[Android]** Fix an issue where the moving maps indicator could get stuck at its initial position",
-      "changelog_url": "https://navigraph.com/products/charts/changelog",
-      "version_before": "8.43.1",
-      "version_after": "8.45.1"
+      "source": "FSElite — MSFS",
+      "url": "https://fselite.net/content/bluebird-simulations-shares-post-launch-update/",
+      "summary": "28 octobre 2026 – BlueBird Simulations partage la mise à jour post-lancement et les prochaines étapes. Actualités MSFS MSFS 2024",
+      "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
+      "new": false
+    },
+    {
+      "id": "780010",
+      "title": "Tournoi d'exhibition du championnat national de courses aériennes",
+      "category": "MSFS officiel",
+      "date": "2026-10-28",
+      "source": "Forum officiel Microsoft Flight Simulator",
+      "url": "https://forums.flightsimulator.com/t/national-championship-air-races-exhibition-tournament/780010",
+      "summary": "Rejoignez-nous ce vendredi 30 octobre alors que cinq de vos simmers préférés de Twitch et YouTube s'affrontent contre le Community Manager @Chewwy94 dans le mode National Championship Air Races ! Nous sommes ravis d'accueillir AvAngel, Cow Town,…",
+      "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
+      "new": false
     },
     {
       "id": "github-FSLiveTrafficLiveries-base-1.7.0",
@@ -264,14 +264,15 @@
       "new": false
     },
     {
-      "id": "779816",
-      "title": "Légende locale 23 : Antonov An-28 disponible dès maintenant",
-      "category": "MSFS officiel",
+      "id": "msfs_fselite_news-content-win-rowsfire-a117-a320-glareshield-panel-this-halloween",
+      "title": "GAGNEZ : Panneau anti-éblouissement Rowsfire A117 A320 cet Halloween",
+      "category": "MSFS 2024",
+      "topic": "MSFS",
       "date": "2026-10-26",
-      "source": "Forum officiel Microsoft Flight Simulator",
-      "url": "https://forums.flightsimulator.com/t/local-legend-23-antonov-an-28-available-now/779816",
-      "summary": "L'An-28 est un avion utilitaire léger bi-turbopropulseur à décollage et atterrissage courts (STOL) développé par la société aérospatiale ukrainienne Antonov. Piloté par deux, il peut transporter jusqu'à 17 passagers, 4 000 livres de fret ou une combinaison quelconque. Le…",
-      "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
+      "source": "FSElite — MSFS",
+      "url": "https://fselite.net/content/win-rowsfire-a117-a320-glareshield-panel-this-halloween/",
+      "summary": "26 octobre 2026 - Votre chance de gagner du matériel Airbus pendant cette saison effrayante ! Cadeau MSFS MSFS 2024 XPL12",
+      "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
       "new": false
     },
     {
@@ -297,15 +298,14 @@
       "new": false
     },
     {
-      "id": "msfs_fselite_news-content-win-rowsfire-a117-a320-glareshield-panel-this-halloween",
-      "title": "GAGNEZ : Panneau anti-éblouissement Rowsfire A117 A320 cet Halloween",
-      "category": "MSFS 2024",
-      "topic": "MSFS",
+      "id": "779816",
+      "title": "Légende locale 23 : Antonov An-28 disponible dès maintenant",
+      "category": "MSFS officiel",
       "date": "2026-10-26",
-      "source": "FSElite — MSFS",
-      "url": "https://fselite.net/content/win-rowsfire-a117-a320-glareshield-panel-this-halloween/",
-      "summary": "26 octobre 2026 - Votre chance de gagner du matériel Airbus pendant cette saison effrayante ! Cadeau MSFS MSFS 2024 XPL12",
-      "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
+      "source": "Forum officiel Microsoft Flight Simulator",
+      "url": "https://forums.flightsimulator.com/t/local-legend-23-antonov-an-28-available-now/779816",
+      "summary": "L'An-28 est un avion utilitaire léger bi-turbopropulseur à décollage et atterrissage courts (STOL) développé par la société aérospatiale ukrainienne Antonov. Piloté par deux, il peut transporter jusqu'à 17 passagers, 4 000 livres de fret ou une combinaison quelconque. Le…",
+      "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
       "new": false
     },
     {
@@ -333,17 +333,6 @@
       "new": false
     },
     {
-      "id": "779387",
-      "title": "Notes de version - Mise à jour 7.1 de Microsoft Flight Simulator 2024 Sim [1.9.21.0]",
-      "category": "MSFS officiel",
-      "date": "2026-10-23",
-      "source": "Forum officiel Microsoft Flight Simulator",
-      "url": "https://forums.flightsimulator.com/t/release-notes-microsoft-flight-simulator-2024-sim-update-7-1-1-9-21-0/779387",
-      "summary": "NOTES DE VERIFICATION Sim Update 7.1 - 1.9.21.0 Si vous jouez sur PC, des packages obsolètes dans votre dossier de communauté peuvent avoir un impact inattendu sur les performances et le comportement du titre. Si vous souffrez de problèmes de stabilité ou de chargement long…",
-      "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
-      "new": false
-    },
-    {
       "id": "github-MobiFlight-MobiFlight-Connector-11.3.1.2",
       "title": "MobiFlight : préversion 11.3.1.2",
       "category": "MOBIFLIGHT",
@@ -368,6 +357,17 @@
       "new": false
     },
     {
+      "id": "779387",
+      "title": "Notes de version - Mise à jour 7.1 de Microsoft Flight Simulator 2024 Sim [1.9.21.0]",
+      "category": "MSFS officiel",
+      "date": "2026-10-23",
+      "source": "Forum officiel Microsoft Flight Simulator",
+      "url": "https://forums.flightsimulator.com/t/release-notes-microsoft-flight-simulator-2024-sim-update-7-1-1-9-21-0/779387",
+      "summary": "NOTES DE VERIFICATION Sim Update 7.1 - 1.9.21.0 Si vous jouez sur PC, des packages obsolètes dans votre dossier de communauté peuvent avoir un impact inattendu sur les performances et le comportement du titre. Si vous souffrez de problèmes de stabilité ou de chargement long…",
+      "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
+      "new": false
+    },
+    {
       "id": "si-atc-improvements-20261022",
       "title": "SayIntentions : améliorations ATC pour les arrivées IFR et le sol",
       "date": "2026-10-22",
@@ -380,13 +380,25 @@
       "new": false
     },
     {
+      "id": "winctrl-airbus-airbus-captain-sticks-are-like-buses-winctrls-full-metal-left-hand-grip-arrives-on-the-same-day-as-mozas",
+      "url": "https://msfsaddons.com/2026/10/22/airbus-captain-sticks-are-like-buses-winctrls-full-metal-left-hand-grip-arrives-on-the-same-day-as-mozas/",
+      "date": "2026-10-22",
+      "topic": "WINCTRL",
+      "category": "Matériel Airbus",
+      "source": "MSFS Addons — WINCTRL",
+      "title": "WINCTRL : nouveau sidestick Airbus métal côté commandant",
+      "summary": "32 Sidestick Controller Metal 2 : précommande annoncée à 55,53 $ ; vente annoncée à partir du 28 octobre. Nécessite une base Orion 2 ou Cyber Taurus.",
+      "impact": "Prix annoncés à la date de l'article ; vérifier la boutique WINCTRL pour disponibilité et tarif actuels.",
+      "new": false
+    },
+    {
       "id": "779510",
       "title": "[Blog] Briefing hebdomadaire du 22/10/2026",
       "category": "MSFS officiel",
       "date": "2026-10-22",
       "source": "Forum officiel Microsoft Flight Simulator",
       "url": "https://forums.flightsimulator.com/t/blog-weekly-briefing-for-2026-10-22/779510",
-      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Lisez la suite pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
+      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Poursuivez votre lecture pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
       "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
       "new": false
     },
@@ -404,7 +416,7 @@
     },
     {
       "id": "msfs_fselite_news-content-pmdg-teases-747-news-and-updates-on-737-and-777-fleets",
-      "title": "PMDG taquine les nouvelles et les mises à jour du 747 sur les flottes 737 et 777",
+      "title": "PMDG dévoile les nouvelles et mises à jour du 747 sur les flottes 737 et 777",
       "category": "MSFS 2024",
       "topic": "MSFS",
       "date": "2026-10-20",
@@ -423,18 +435,6 @@
       "source": "FSElite — MSFS",
       "url": "https://fselite.net/content/boris-audio-works-shares-bluebird-757-sound-showcase/",
       "summary": "19 octobre 2026 - Boris Audio Works partage une présentation des détails sonores avant le lancement de BlueBird Simulations 757. Actualités MSFS MSFS 2024",
-      "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
-      "new": false
-    },
-    {
-      "id": "msfs_fselite_news-content-bluebird-shares-757-launch-update-as-creator-previews-go-live",
-      "title": "BlueBird partage la mise à jour de lancement 757 alors que les aperçus des créateurs sont mis en ligne",
-      "category": "MSFS 2024",
-      "topic": "MSFS",
-      "date": "2026-10-18",
-      "source": "FSElite — MSFS",
-      "url": "https://fselite.net/content/bluebird-shares-757-launch-update-as-creator-previews-go-live/",
-      "summary": "18 octobre 2026 – Le développeur présente le futur support du simulateur et les plans post-lancement avant le 23 octobre. Actualités MSFS MSFS 2024 Suivant » 1 - 15 sur 3819 messages .cls-1{fill:#f57f20;}.cls-1,.cls-2{Stroke-width:0px;}.cls-2{fill:#103a5e;} Célébration de la simulation de vol depuis 2016. © FSElite Media LLC 2016 - 2026 Flight Sim Conte",
       "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
       "new": false
     },
@@ -463,14 +463,15 @@
       "new": false
     },
     {
-      "id": "778878",
-      "title": "[Blog] Briefing hebdomadaire du 15/10/2026",
-      "category": "MSFS officiel",
-      "date": "2026-10-15",
-      "source": "Forum officiel Microsoft Flight Simulator",
-      "url": "https://forums.flightsimulator.com/t/blog-weekly-briefing-for-2026-10-15/778878",
-      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Lisez la suite pour plus d'informations sur : Informations sur la sortie de la mise à jour Sim 7 : Championnat national de courses aériennes Table ronde des pilotes Capture d'écran des gagnants du concours Et plus encore ! 15 octobre 2026 MSFS Hebdomadaire…",
-      "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
+      "id": "msfs_fselite_news-content-bluebird-shares-757-launch-update-as-creator-previews-go-live",
+      "title": "BlueBird partage la mise à jour de lancement 757 alors que les aperçus des créateurs sont mis en ligne",
+      "category": "MSFS 2024",
+      "topic": "MSFS",
+      "date": "2026-10-18",
+      "source": "FSElite — MSFS",
+      "url": "https://fselite.net/content/bluebird-shares-757-launch-update-as-creator-previews-go-live/",
+      "summary": "18 octobre 2026 – Le développeur présente le futur support du simulateur et les plans post-lancement avant le 23 octobre. Actualités MSFS MSFS 2024 Suivant » 1 - 15 sur 3819 messages .cls-1{fill:#f57f20;}.cls-1,.cls-2{Stroke-width:0px;}.cls-2{fill:#103a5e;} Célébration de la simulation de vol depuis 2016. © FSElite Media LLC 2016 - 2026 Flight Sim Conte",
+      "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
       "new": false
     },
     {
@@ -481,6 +482,17 @@
       "source": "Forum officiel Microsoft Flight Simulator",
       "url": "https://forums.flightsimulator.com/t/national-championship-air-races-panel-discussion-with-five-race-pilots/778876",
       "summary": "Rejoignez-nous cette semaine à 11h00 PDT (1800 UTC) pour regarder cette conversation spéciale sur les courses aériennes avec cinq des meilleurs pilotes de course au monde ! Tammy Camilleri - Classe Jet - Miss Independance Rod Hewitt - Classe STOL Drag - Chaton en colère…",
+      "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
+      "new": false
+    },
+    {
+      "id": "778878",
+      "title": "[Blog] Briefing hebdomadaire du 15/10/2026",
+      "category": "MSFS officiel",
+      "date": "2026-10-15",
+      "source": "Forum officiel Microsoft Flight Simulator",
+      "url": "https://forums.flightsimulator.com/t/blog-weekly-briefing-for-2026-10-15/778878",
+      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Lisez la suite pour plus d'informations sur : Informations sur la sortie de la mise à jour Sim 7 : Championnat national de courses aériennes Table ronde des pilotes Capture d'écran des gagnants du concours Et plus encore ! 15 octobre 2026 MSFS Hebdomadaire…",
       "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
       "new": false
     },
@@ -541,7 +553,8 @@
     "software_versions": "partial",
     "sayintentions_news": "no_dated_articles",
     "gsx_fselite_news": "ok",
-    "msfs_fselite_news": "ok"
+    "msfs_fselite_news": "ok",
+    "winctrl_airbus_articles": "ok"
   },
   "errors": [
     "Versions : GMMX / PERFECTSOFT : Fiche 1.1.0 plus ancienne que l'installation 1.2.0 : vérifier le canal éditeur, ne pas rétrograder",
@@ -571,16 +584,17 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 58,
-    "audited_at": "2026-10-29T13:27:33.558219+00:00"
+    "audited_at": "2026-10-29T13:30:39.441250+00:00"
   },
-  "versions_checked_at": "2026-10-29T13:27:33.558219+00:00",
-  "releases_checked_at": "2026-10-29T13:27:33.558219+00:00",
+  "versions_checked_at": "2026-10-29T13:30:39.441250+00:00",
+  "releases_checked_at": "2026-10-29T13:30:39.441250+00:00",
   "software_coverage": {
     "total": 19,
     "verified": 9,
     "changed": 0,
-    "checked_at": "2026-10-29T13:28:32.685762+00:00",
+    "checked_at": "2026-10-29T13:31:34.741771+00:00",
     "unverified": 10
   },
-  "airac_cycle": "2611"
+  "airac_cycle": "2611",
+  "winctrl_airbus_checked_at": "2026-10-29T13:31:41.479954+00:00"
 }
