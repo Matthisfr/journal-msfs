@@ -68,5 +68,9 @@
     "state": "photo",
     "source": "Photographie produit — The Onion Shop",
     "verification": "non_verifiee_visuellement"
+  },
+  "s3": {
+    "state": "unavailable",
+    "reason": "KeyError : 's3'"
   }
 }
