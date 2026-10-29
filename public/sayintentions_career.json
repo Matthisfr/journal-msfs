@@ -50,7 +50,7 @@
     {
       "id": "IFR-883854493",
       "aircraft": "F-FENX",
-      "when": "6 days ago",
+      "when": "1 week ago",
       "origin": "GMMX",
       "destination": "DAAG",
       "rules": "IFR",
@@ -102,7 +102,7 @@
       "duration": "2h 0m"
     }
   ],
-  "flights_checked_at": "2026-10-29T08:17:06.932597+00:00",
-  "verified_at": "2026-10-29T08:17:06.932597+00:00",
-  "checked_at": "2026-10-29T08:17:06.932597+00:00"
+  "flights_checked_at": "2026-10-29T09:00:11.072440+00:00",
+  "verified_at": "2026-10-29T09:00:11.072440+00:00",
+  "checked_at": "2026-10-29T09:00:11.072440+00:00"
 }
