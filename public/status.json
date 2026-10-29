@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-29",
-  "last_run": "2026-10-29T09:32:37.444254+00:00",
-  "weather_checked_at": "2026-10-29T09:32:37.444254+00:00",
-  "news_checked_at": "2026-10-29T09:32:37.444254+00:00",
+  "last_run": "2026-10-29T09:44:30.719825+00:00",
+  "weather_checked_at": "2026-10-29T09:44:30.719825+00:00",
+  "news_checked_at": "2026-10-29T09:44:30.719825+00:00",
   "weather": [
     {
       "icao": "EDDS",
@@ -16,19 +16,6 @@
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF EDDS 290500Z 2906/3006 VRB03KT 0300 FG VV002 TEMPO 2906/2909 BKN001 BECMG 2908/2911 06005KT 9999 FEW003 BECMG 2918/2921 VRB03KT TEMPO 3000/3006 0500 FG BKN001"
-    },
-    {
-      "icao": "KFSD",
-      "name": "KFSD Sioux falls Regional Airport",
-      "observed_at": "2026-10-29T09:12:00+00:00",
-      "raw": "SPECI KFSD 290912Z AUTO 00000KT 1/4SM R03/1200V2600FT FG VV001 02/02 A3014 RMK AO2 T00220022 $",
-      "score": 145,
-      "summary": "brouillard, visibilité < 1 SM",
-      "icon": "🌫️",
-      "phenomenon": "Brouillard",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KFSD 290530Z 2906/3006 VRB03KT P6SM SKC TEMPO 2911/2914 2SM BR SCT005 FM291700 15007KT P6SM FEW120"
     },
     {
       "icao": "LFSB",
@@ -57,6 +44,19 @@
       "taf_raw": "TAF AMD LCLK 290744Z 2907/3006 23010KT 9999 FEW025 FEW030CB TEMPO 2907/2915 VRB15G25KT 4000 SHRA PROB40 TEMPO 2907/2915 VRB25G35KT 1500 TSRA BECMG 2907/2911 22020KT BECMG 2917/2920 28009KT"
     },
     {
+      "icao": "KFSD",
+      "name": "KFSD Sioux falls Regional Airport",
+      "observed_at": "2026-10-29T09:40:00+00:00",
+      "raw": "SPECI KFSD 290940Z AUTO 00000KT 3/4SM R03/1200V3500FT BR VV001 02/02 A3015 RMK AO2 T00220022 $",
+      "score": 80,
+      "summary": "visibilité < 1 SM",
+      "icon": "☁️",
+      "phenomenon": "Ciel non précisé",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KFSD 290530Z 2906/3006 VRB03KT P6SM SKC TEMPO 2911/2914 2SM BR SCT005 FM291700 15007KT P6SM FEW120"
+    },
+    {
       "icao": "CYEG",
       "name": "CYEG - Edmonton Airport",
       "observed_at": "2026-10-29T09:00:00+00:00",
@@ -83,6 +83,19 @@
       "taf_raw": "TAF LGAV 290500Z 2906/3006 31012KT 9999 FEW010 BKN020 BKN070 PROB30 TEMPO 2906/2912 5000 RA FEW008 BKN020 BKN070 BECMG 2913/2915 SCT025"
     },
     {
+      "icao": "LROP",
+      "name": "bma LROP Bucharest 2024 v2-6-0",
+      "observed_at": "2026-10-29T09:30:00+00:00",
+      "raw": "METAR LROP 290930Z VRB02KT 3000 DZ BKN003 OVC024 13/13 Q1021 NOSIG",
+      "score": 57,
+      "summary": "visibilité < 3 SM, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF LROP 290500Z 2906/3006 VRB04KT 5000 BR BKN005 OVC025 TEMPO 2906/2909 1500 -RADZ BR BKN002 OVC020 TEMPO 2910/2914 9999 NSW SCT015 OVC035 BECMG 2914/2916 3000 RA BKN010 OVC020 TEMPO 2918/2923 12010KT 1500 DZ BKN002 OVC015"
+    },
+    {
       "icao": "LIML",
       "name": "LIML Milan Linate Airport",
       "observed_at": "2026-10-29T09:20:00+00:00",
@@ -96,32 +109,6 @@
       "taf_raw": "TAF LIML 290500Z 2906/3006 VRB04KT 2000 BCFG NSC TEMPO 2906/2908 0400 FG BKN002 BECMG 2908/2910 9999"
     },
     {
-      "icao": "BIKF",
-      "name": "BIKF Keflavik Airport",
-      "observed_at": "2026-10-29T09:01:00+00:00",
-      "raw": "METAR BIKF 290901Z 17014KT 8000 -DZRA SCT004 BKN020 OVC040 08/07 Q0992",
-      "score": 32,
-      "summary": "visibilité < 5 SM, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF BIKF 290749Z 2909/3009 17015G25KT 9999 BKN025 TX09/2909Z TN05/3006Z TEMPO 2921/3009 4000 SHRA BKN014 BECMG 3000/3002 18010KT"
-    },
-    {
-      "icao": "LROP",
-      "name": "bma LROP Bucharest 2024 v2-6-0",
-      "observed_at": "2026-10-29T09:00:00+00:00",
-      "raw": "METAR LROP 290900Z 21003KT 160V250 5000 -DZ SCT004 OVC025 13/13 Q1020 NOSIG",
-      "score": 32,
-      "summary": "visibilité < 5 SM, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LROP 290500Z 2906/3006 VRB04KT 5000 BR BKN005 OVC025 TEMPO 2906/2909 1500 -RADZ BR BKN002 OVC020 TEMPO 2910/2914 9999 NSW SCT015 OVC035 BECMG 2914/2916 3000 RA BKN010 OVC020 TEMPO 2918/2923 12010KT 1500 DZ BKN002 OVC015"
-    },
-    {
       "icao": "LTFM",
       "name": "LTFM Istanbul Airport",
       "observed_at": "2026-10-29T09:20:00+00:00",
@@ -133,6 +120,18 @@
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF LTFM 290440Z 2906/3012 01016KT 9999 -SHRA BKN006 BKN022 TEMPO 2906/2910 BKN004 BKN020 PROB40 TEMPO 2910/2914 4000 SHRA BKN004 FEW018CB BKN020 BECMG 2913/2915 01018G28KT BECMG 2917/2919 01015KT BECMG 2920/2923 BKN010 BKN022 BECMG 3001/3004 BKN013 BKN025"
+    },
+    {
+      "icao": "VQPR",
+      "name": "VQPR Paro Airport",
+      "observed_at": "2026-10-29T09:30:00+00:00",
+      "raw": "METAR VQPR 290930Z VRB02KT 8000 -RA FEW015 OVC045 10/09 Q1031",
+      "score": 32,
+      "summary": "visibilité < 5 SM, précipitations",
+      "icon": "🌧️",
+      "phenomenon": "Précipitations",
+      "level": "À surveiller",
+      "source_url": "https://aviationweather.gov/"
     }
   ],
   "weather_coverage": {
@@ -260,7 +259,7 @@
       "date": "2026-10-27",
       "source": "GitHub Releases officiel — FSLiveTrafficLiveries/base",
       "url": "https://github.com/FSLiveTrafficLiveries/base/releases/tag/1.7.0",
-      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - 150+ livrées réelles et historiques nouvelles ou mises à jour - 250+ livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
+      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - Plus de 150 livrées réelles et historiques nouvelles ou mises à jour - Plus de 250 livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
       "impact": "Vérifier le changelog officiel et sauvegarder les configurations avant installation.",
       "new": false
     },
@@ -572,15 +571,15 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 58,
-    "audited_at": "2026-10-29T09:32:37.444254+00:00"
+    "audited_at": "2026-10-29T09:44:30.719825+00:00"
   },
-  "versions_checked_at": "2026-10-29T09:32:37.444254+00:00",
-  "releases_checked_at": "2026-10-29T09:32:37.444254+00:00",
+  "versions_checked_at": "2026-10-29T09:44:30.719825+00:00",
+  "releases_checked_at": "2026-10-29T09:44:30.719825+00:00",
   "software_coverage": {
     "total": 19,
     "verified": 9,
     "changed": 0,
-    "checked_at": "2026-10-29T09:33:31.799534+00:00",
+    "checked_at": "2026-10-29T09:45:30.229102+00:00",
     "unverified": 10
   },
   "airac_cycle": "2611"
