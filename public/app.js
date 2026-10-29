@@ -413,6 +413,9 @@ function renderSoftware(){
   if(overview)overview.innerHTML='<strong>'+items.length+' logiciels suivis</strong><span>'+verified+' versions confirmées · '+changed+' changements · '+(items.length-verified)+' non confirmées</span><small>Contrôle : '+esc(localDateTime(software.checked_at))+'</small>';
   const nav=$('#software-nav-news');if(nav){nav.hidden=!changed;nav.textContent=changed?'NEWS '+changed:'NEWS'}
   const selected=items.filter(x=>(!q||[x.name,x.group,x.version,x.reason].join(' ').toLowerCase().includes(q))&&(!filter||(filter==='changed'?x.state==='changed':filter==='verified'?['verified','changed'].includes(x.state):!['verified','changed'].includes(x.state))));
+  // Ordre stable : VÉRIFIÉ (NEWS inclus), puis RÉFÉRENCE DATÉE, puis UNKNOWN.
+  const priority=x=>['verified','changed'].includes(x.state)?0:x.reference_version?1:2;
+  selected.sort((a,b)=>priority(a)-priority(b));
   const body=$('#software-body');if(!body)return;
   body.innerHTML=selected.map(x=>{
     const ok=['verified','changed'].includes(x.state),fresh=x.state==='changed';
