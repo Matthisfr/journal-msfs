@@ -383,7 +383,16 @@ function renderNews(){
   const lead=a.find(x=>newsAgeGroup(x)<3);
   const hero=document.querySelector('#accueil .hero-main p');
   if(hero&&lead)hero.textContent='Dernière nouveauté vérifiée : '+lead.title+'. Consulte les actualités pour le détail et la source officielle.';
-  $('#home-news').innerHTML=a.filter(x=>newsAgeGroup(x)<3).slice(0,6).map(x=>'<article><div class="home-news-row">'+topicBadge(x)+'<div class="home-news-content"><small>'+esc(x.category||'Actualités')+' · '+esc(localDate(x.date))+'</small><strong>'+esc(x.title)+'</strong><a href="'+esc(isSafeUrl(x.url))+'" target="_blank" rel="noopener noreferrer">Source officielle ↗</a></div></div></article>').join('')||'<p class="muted">Aucune actualité sourcée pour le moment.</p>';
+  // Accueil : uniquement les annonces réellement publiées aujourd'hui (heure française).
+  // Une découverte aujourd'hui d'une ancienne annonce ne la rend pas nouvelle.
+  const todayParis=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+  const parisDay=value=>{
+    const raw=String(value||'');
+    if(/^\d{4}-\d{2}-\d{2}$/.test(raw))return raw;
+    const d=new Date(raw);
+    return Number.isFinite(d.getTime())?new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(d):'';
+  };
+  $('#home-news').innerHTML=a.filter(x=>parisDay(x.published_at||x.date)===todayParis).slice(0,6).map(x=>'<article><div class="home-news-row">'+topicBadge(x)+'<div class="home-news-content"><small>'+esc(x.category||'Actualités')+' · '+esc(localDate(x.date))+'</small><strong>'+esc(x.title)+'</strong><a href="'+esc(isSafeUrl(x.url))+'" target="_blank" rel="noopener noreferrer">Source officielle ↗</a></div></div></article>').join('')||'<p class="muted">Aucune actualité sourcée pour le moment.</p>';
 }
 
 function renderSoftware(){
