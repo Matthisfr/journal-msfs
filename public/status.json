@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-29",
-  "last_run": "2026-10-29T09:17:13.312677+00:00",
-  "weather_checked_at": "2026-10-29T09:17:13.312677+00:00",
-  "news_checked_at": "2026-10-29T09:17:13.312677+00:00",
+  "last_run": "2026-10-29T09:19:34.871703+00:00",
+  "weather_checked_at": "2026-10-29T09:19:34.871703+00:00",
+  "news_checked_at": "2026-10-29T09:19:34.871703+00:00",
   "weather": [
     {
       "icao": "EDDS",
@@ -260,7 +260,7 @@
       "date": "2026-10-27",
       "source": "GitHub Releases officiel — FSLiveTrafficLiveries/base",
       "url": "https://github.com/FSLiveTrafficLiveries/base/releases/tag/1.7.0",
-      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - Plus de 150 livrées réelles et historiques nouvelles ou mises à jour - Plus de 250 livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
+      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - 150+ livrées réelles et historiques nouvelles ou mises à jour - 250+ livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
       "impact": "Vérifier le changelog officiel et sauvegarder les configurations avant installation.",
       "new": false
     },
@@ -572,15 +572,15 @@
     "without_official_url": 27,
     "manual_source": 1,
     "unverified": 58,
-    "audited_at": "2026-10-29T09:17:13.312677+00:00"
+    "audited_at": "2026-10-29T09:19:34.871703+00:00"
   },
-  "versions_checked_at": "2026-10-29T09:17:13.312677+00:00",
-  "releases_checked_at": "2026-10-29T09:17:13.312677+00:00",
+  "versions_checked_at": "2026-10-29T09:19:34.871703+00:00",
+  "releases_checked_at": "2026-10-29T09:19:34.871703+00:00",
   "software_coverage": {
     "total": 19,
     "verified": 9,
     "changed": 0,
-    "checked_at": "2026-10-29T09:18:14.506065+00:00",
+    "checked_at": "2026-10-29T09:20:29.586823+00:00",
     "unverified": 10
   },
   "airac_cycle": "2611"
