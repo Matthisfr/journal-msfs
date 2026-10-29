@@ -392,7 +392,17 @@ function renderNews(){
     const d=new Date(raw);
     return Number.isFinite(d.getTime())?new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(d):'';
   };
-  $('#home-news').innerHTML=a.filter(x=>parisDay(x.published_at||x.date)===todayParis).slice(0,6).map(x=>'<article><div class="home-news-row">'+topicBadge(x)+'<div class="home-news-content"><small>'+esc(x.category||'Actualités')+' · '+esc(localDate(x.date))+'</small><strong>'+esc(x.title)+'</strong><a href="'+esc(isSafeUrl(x.url))+'" target="_blank" rel="noopener noreferrer">Source officielle ↗</a></div></div></article>').join('')||'<p class="muted">Aucune actualité sourcée pour le moment.</p>';
+  const airacNews=x=>/airac/i.test([x.title,x.topic,x.category].join(' '))&&/navigraph|airac/i.test([x.title,x.topic,x.source,x.category].join(' '));
+  const homeItems=a.filter(x=>{
+    const release=parisDay(x.published_at||x.date);
+    if(release===todayParis)return true;
+    if(!airacNews(x)||!release)return false;
+    const start=new Date(release+'T12:00:00Z');
+    const today=new Date(todayParis+'T12:00:00Z');
+    const days=Math.round((today-start)/86400000);
+    return days>=0&&days<3;
+  }).sort((x,y)=>Number(airacNews(y))-Number(airacNews(x))).slice(0,6);
+  $('#home-news').innerHTML=homeItems.map(x=>'<article class="'+(airacNews(x)?'home-airac-news':'')+'"><div class="home-news-row">'+topicBadge(x)+'<div class="home-news-content"><small>'+esc(x.category||'Actualités')+' · '+esc(localDate(x.date))+(airacNews(x)?' <span class="airac-news-label">NEWS AIRAC</span>':'')+'</small><strong>'+esc(x.title)+'</strong><a href="'+esc(isSafeUrl(x.url))+'" target="_blank" rel="noopener noreferrer">Source officielle ↗</a></div></div></article>').join('')||'<p class="muted">Aucune nouveauté publiée aujourd’hui.</p>';
 }
 
 function renderSoftware(){
