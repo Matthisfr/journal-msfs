@@ -115,5 +115,23 @@
     "official_url": "https://santiluib3.com/",
     "photo_source": "santiluib3.com",
     "photo_status": "pending"
+  },
+  {
+    "id": "sidestick-metal",
+    "name": "32 Sidestick Controller Metal 2 (Airbus)",
+    "ownership": "Veille matériel",
+    "image_query": "WINCTRL Airbus captain sidestick metal 2",
+    "official_url": "https://winctrl.com/view/shopping.html",
+    "photo_source": "MSFS Addons — photo fabricant",
+    "photo_status": "pending"
+  },
+  {
+    "id": "ecam",
+    "name": "WINCTRL ECAM 32 Airbus",
+    "ownership": "Veille matériel",
+    "image_query": "WINCTRL ECAM 32 Airbus panel",
+    "official_url": "https://winctrl.com/view/shopping.html",
+    "photo_source": "MSFS Addons — visuel fabricant",
+    "photo_status": "pending"
   }
 ]
