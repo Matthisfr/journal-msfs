@@ -64,6 +64,19 @@ def save_photo(key,url,credit):
 def run():
     items=json.loads((PUBLIC/"hardware_catalog.json").read_text())
     sources=json.loads((PUBLIC/"hardware_photo_sources.json").read_text()) if (PUBLIC/"hardware_photo_sources.json").exists() else {}
+    # Les nouveaux visuels Airbus sont liés à des articles qui identifient
+    # exactement le produit. Priorité à une photo locale déjà connue.
+    news_file=PUBLIC/"winctrl_airbus.json"
+    if news_file.exists():
+        try:
+            product_news=json.loads(news_file.read_text()).get("products",{})
+            for key,item in product_news.items():
+                url=item.get("image_url","")
+                if (url.startswith("https://msfsaddons.com/wp-content/uploads/")
+                        and key not in sources):
+                    sources[key]={"url":url,"credit":"WINCTRL / MSFS Addons — visuel du produit"}
+        except (OSError,ValueError,TypeError):
+            pass
     manifest={}
     for x in items:
         key=x["id"]
@@ -91,7 +104,7 @@ def run():
             query=x["image_query"]
             url=SOURCE+"?"+urllib.parse.urlencode({"s":query,"post_type":"product"})
             page,typ=fetch(url)
-            src=match_image(page.decode("utf-8","replace"),ALIASES[key])
+            src=match_image(page.decode("utf-8","replace"),ALIASES.get(key,[]))
             if src:
                 manifest[key]=save_photo(key,src,"Photographie produit — winwingturkiye.com")
                 continue
