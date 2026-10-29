@@ -12,6 +12,8 @@ import winctrl_airbus as w
 class WinCtrlAirbusTests(unittest.TestCase):
     def test_scope_excludes_boeing_and_generic_articles(self):
         self.assertEqual(w.product_ids("WINWING introduces EFIS control panels for Boeing 737 NG"), [])
+        self.assertEqual(w.product_ids("MOZA Airbus captain sticks now available"), [])
+        self.assertEqual(w.product_ids("Thrustmaster Airbus EFIS panel"), [])
         self.assertEqual(w.product_ids("WINWING opens orders for Boeing PAP 3 autopilot panel"), [])
         self.assertEqual(w.product_ids("WINCTRL brings force feedback flight controls to FSWeekend"), [])
         self.assertEqual(w.product_ids("WINCTRL OVHD32 SOP full Airbus overhead"), ["ovhd"])
