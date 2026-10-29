@@ -166,7 +166,29 @@ jobs:
           python scripts/build_comparisons.py
           python scripts/build_airport_map.py
           python scripts/build_site.py
-          python -c "from pathlib import Path; import json; p=Path('public/index.html').read_text(); a=Path('public/airports.html').read_text(); w=json.loads(Path('public/watch.json').read_text()); s=json.loads(Path('public/status.json').read_text()); assert p.count('<tr>')>=len(json.loads(Path('public/airports.json').read_text())) and a.count('<tr>')>=len(json.loads(Path('public/airports.json').read_text())); assert w['total']>=30; assert s['version_coverage']['inventory_total']==len(json.loads(Path('public/airports.json').read_text())); assert json.loads(Path('public/software_versions.json').read_text())['total']==len(json.loads(Path('public/software_catalog.json').read_text())); assert json.loads(Path('public/hardware-images.json').read_text()); assert 'id=\"logiciels\"' in p; assert 'app.js?rev=' in p; print('Tests OK : inventaire complet, surveillance des sources, météo/news, carte et JS')"
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          p=Path('public/index.html').read_text()
+          a=Path('public/airports.html').read_text()
+          w=json.loads(Path('public/watch.json').read_text())
+          s=json.loads(Path('public/status.json').read_text())
+          airports=json.loads(Path('public/airports.json').read_text())
+          sw=json.loads(Path('public/software_versions.json').read_text())
+          catalog=json.loads(Path('public/software_catalog.json').read_text())
+          checks={
+           'index airport rows':p.count('<tr>')>=len(airports),
+           'independent airport rows':a.count('<tr>')>=len(airports),
+           'watch total':w['total']>=30,
+           'airport inventory':s['version_coverage']['inventory_total']==len(airports),
+           'software inventory':sw['total']==len(catalog),
+           'hardware images':bool(json.loads(Path('public/hardware-images.json').read_text())),
+           'software section':'id="logiciels"' in p,
+           'JS revision':'app.js?rev=' in p,
+          }
+          for name,ok in checks.items():print(('OK' if ok else 'FAIL')+' : '+name,flush=True)
+          assert all(checks.values()),'Contrôle de publication échoué : '+', '.join(k for k,v in checks.items() if not v)
+          PY
 
       - name: Enregistrer les données collectées
         if: steps.gate.outputs.run == 'true'
