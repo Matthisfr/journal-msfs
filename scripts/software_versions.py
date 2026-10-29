@@ -108,6 +108,26 @@ def parse_navigraph_charts_changelog(page, url):
     return {"version":version,"url":url,"published_at":None,
             "notes":notes[:2000] or "Nouvelle version de Navigraph Charts."}
 
+
+def navigraph_charts_ios_version():
+    """Official Apple App Store metadata: iOS only, never a Windows version."""
+    api="https://itunes.apple.com/lookup?id=999805677&country=dk"
+    payload=json.loads(get(api,"application/json"))
+    apps=payload.get("results",[])
+    if not apps or not apps[0].get("version"):
+        raise ValueError("App Store: version iOS indisponible")
+    app=apps[0]
+    if str(app.get("trackId"))!="999805677":
+        raise ValueError("App Store: application inattendue")
+    version=str(app["version"])
+    if not re.fullmatch(r"\d+(?:\.\d+){1,4}",version):
+        raise ValueError("App Store: version iOS invalide")
+    return {"version":version,"url":app.get("trackViewUrl") or
+            "https://apps.apple.com/dk/app/navigraph-charts/id999805677",
+            "published_at":app.get("currentVersionReleaseDate"),
+            "notes":app.get("releaseNotes") or "Notes de version non publiées par Apple."}
+
+
 def navigraph_charts_version():
     url="https://navigraph.com/products/charts/changelog"
     failures=[]
@@ -157,6 +177,8 @@ def update():
                 stable=fenix_official()
             elif entry["method"]=="siminnovations":
                 stable=siminnovations_version()
+            elif entry["method"]=="navigraph_charts_ios":
+                stable=navigraph_charts_ios_version()
             elif entry["method"]=="navigraph_charts":
                 stable=navigraph_charts_version()
             elif entry["method"]=="simmarket_fcr6":
