@@ -106,7 +106,7 @@ jobs:
         if: steps.gate.outputs.run == 'true'
         run: |
           python -m unittest discover -s tests -v
-          python -m py_compile scripts/build_comparisons.py scripts/update.py scripts/versions.py scripts/releases.py scripts/watch_sources.py scripts/build_site.py scripts/build_airport_map.py scripts/import_airports_excel.py scripts/smoke_live.py scripts/discover_airports.py scripts/discover_simmarket.py scripts/apply_airport_sources.py scripts/software_versions.py scripts/sayintentions_news.py scripts/editorial_news.py scripts/fetch_hardware_photos.py scripts/fetch_simbrief.py scripts/fetch_sayintentions_career.py
+          python -m py_compile scripts/build_comparisons.py scripts/update.py scripts/versions.py scripts/releases.py scripts/watch_sources.py scripts/build_site.py scripts/build_airport_map.py scripts/import_airports_excel.py scripts/smoke_live.py scripts/discover_airports.py scripts/discover_simmarket.py scripts/apply_airport_sources.py scripts/software_versions.py scripts/sayintentions_news.py scripts/editorial_news.py scripts/winctrl_airbus.py scripts/fetch_hardware_photos.py scripts/fetch_simbrief.py scripts/fetch_sayintentions_career.py
           node --check public/app.js
           node tests/test_frontend.cjs
 
@@ -133,6 +133,10 @@ jobs:
       - name: Collecter METAR, TAF, actualités et versions de scènes
         if: steps.gate.outputs.run == 'true'
         run: python scripts/update.py
+
+      - name: Collecter les annonces et visuels WINCTRL Airbus (MSFS Addons)
+        if: steps.gate.outputs.run == 'true'
+        run: python scripts/winctrl_airbus.py
 
       - name: Récupérer le dernier plan de vol SimBrief Matthis
         if: steps.gate.outputs.run == 'true'
@@ -183,6 +187,7 @@ jobs:
            'airport inventory':s['version_coverage']['inventory_total']==len(airports),
            'software inventory':sw['total']==len(catalog),
            'hardware images':bool(json.loads(Path('public/hardware-images.json').read_text())),
+           'winctrl Airbus':len(json.loads(Path('public/winctrl_airbus.json').read_text()).get('articles',[]))>=5,
            'software section':'id="logiciels"' in p,
            'JS revision':'app.js?rev=' in p,
           }
@@ -195,14 +200,14 @@ jobs:
         run: |
           git config user.name "journal-msfs-bot"
           git config user.email "journal-msfs-bot@users.noreply.github.com"
-          git add public/comparisons.json public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/hardware/
+          git add public/comparisons.json public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/winctrl_airbus.json public/hardware/
           if [[ -f public/sayintentions-rank.svg ]]; then git add public/sayintentions-rank.svg; fi
           if ! git diff --cached --quiet; then
             git commit -m "Journal: collecte automatique $(date -u +%Y-%m-%d)"
             if ! git push origin HEAD:main; then
               echo "Dépôt modifié pendant la collecte : conserver les données puis repartir du dernier main."
               mkdir -p "$RUNNER_TEMP/journal-sync"
-              cp public/comparisons.json public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json "$RUNNER_TEMP/journal-sync/"
+              cp public/comparisons.json public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/winctrl_airbus.json "$RUNNER_TEMP/journal-sync/"
               mkdir -p "$RUNNER_TEMP/journal-sync/hardware"
               if [[ -d public/hardware ]]; then cp -a public/hardware/. "$RUNNER_TEMP/journal-sync/hardware/"; fi
               success=false
@@ -212,7 +217,7 @@ jobs:
                 cp "$RUNNER_TEMP/journal-sync/"*.json public/
                 mkdir -p public/hardware
                 cp -a "$RUNNER_TEMP/journal-sync/hardware/." public/hardware/
-                git add public/comparisons.json public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/hardware/
+                git add public/comparisons.json public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/winctrl_airbus.json public/hardware/
                 if git diff --cached --quiet; then
                   success=true
                   break
