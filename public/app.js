@@ -407,6 +407,17 @@ function newsMarkup(a){
     (a.impact?'<div class="news-impact"><b>Impact / action :</b> '+esc(a.impact)+'</div>':'')+change+
     '<div class="news-source"><a href="'+esc(isSafeUrl(a.url))+'" target="_blank" rel="noopener noreferrer">'+esc(a.source||'Source officielle')+' ↗</a></div></article>';
 }
+
+// Le bandeau AIRAC statique est actualisé côté navigateur sans attendre un nouveau déploiement.
+function syncAiracHomeBadge(){
+ const el=document.getElementById('airac-home-news');if(!el)return;
+ const started=Date.parse(el.dataset.release||'');
+ const age=Date.now()-started;
+ el.hidden=!(Number.isFinite(started)&&age>=0&&age<72*3600000);
+}
+syncAiracHomeBadge();
+if(typeof window!=='undefined')window.setInterval(syncAiracHomeBadge,60000);
+
 function renderNews(){
   const editorialNews=editorial.news||[];
   const superseded=new Set(editorialNews.flatMap(a=>a.supersedes||[]));
