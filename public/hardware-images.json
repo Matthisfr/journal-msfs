@@ -86,5 +86,12 @@
     "state": "photo",
     "source": "WINCTRL / MSFS Addons — visuel du produit",
     "verification": "non_verifiee_visuellement"
+  },
+  "brake-pressure-gauge": {
+    "path": "hardware/brake-pressure-gauge.jpg",
+    "state": "photo",
+    "source": "Photo WINCTRL 32 Brake Pressure Gauge — Superchicane",
+    "origin": "https://superchicane.fr/wp-content/uploads/2026/08/winctrl-32-Brake-Pressure-Gauge-1600x900.jpg",
+    "verification": "non_verifiee_visuellement"
   }
 }
