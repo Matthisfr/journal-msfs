@@ -427,17 +427,29 @@ function renderNews(){
     return Number.isFinite(d.getTime())?new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(d):'';
   };
   const airacNews=x=>/\bairac\b/i.test([x.title,x.topic,x.category].join(' '));
-  const homeItems=a.filter(x=>{
-    const release=parisDay(x.published_at||x.date);
-    if(release===todayParis)return true;
-    if(!airacNews(x)||!release)return false;
-    const start=new Date(release+'T12:00:00Z');
-    const today=new Date(todayParis+'T12:00:00Z');
-    const days=Math.round((today-start)/86400000);
-    return days>=0&&days<3;
-  }).sort((x,y)=>Number(airacNews(y))-Number(airacNews(x))).slice(0,6);
+  // 72 heures glissantes à partir de l'entrée en vigueur officielle du cycle AIRAC.
+  // Référence AIRAC 2611 : 29 octobre 2026 ; chaque cycle dure 28 jours.
+  const airacCycle=String(status.airac_cycle||'');
+  const airacIndex=/^\d{4}$/.test(airacCycle)?Number(airacCycle.slice(0,2))*13+Number(airacCycle.slice(2)):NaN;
+  const baseIndex=26*13+11;
+  const airacStart=Number.isFinite(airacIndex)?new Date(Date.UTC(2026,9,29)+(airacIndex-baseIndex)*28*86400000):null;
+  const airacAge=airacStart?Date.now()-airacStart.getTime():Infinity;
+  const recentAirac=airacAge>=0&&airacAge<72*3600000;
+  const airacItem=recentAirac?{
+    id:'navigraph-airac-'+airacCycle,title:'NAVIGRAPH AIRAC '+airacCycle,
+    category:'NAVIGRAPH AIRAC',topic:'AIRAC',date:airacStart.toISOString().slice(0,10),
+    url:'https://navigraph.com/',airacEffective:true
+  }:null;
+  const homeItems=[
+    ...(airacItem?[airacItem]:[]),
+    ...a.filter(x=>{
+      const release=parisDay(x.published_at||x.date);
+      // Pas de faux NEWS AIRAC pour une ancienne annonce ou pour Navigraph Charts.
+      return release===todayParis&&!airacNews(x);
+    })
+  ].slice(0,6);
   if(hero)hero.textContent=homeItems.length?'À la une aujourd’hui : '+homeItems[0].title+'. Consulte les actualités pour le détail et la source officielle.':'Aucune nouveauté publiée aujourd’hui. Retrouve les dernières actualités dans la rubrique Nouveautés.';
-  $('#home-news').innerHTML=homeItems.map(x=>'<article class="'+(airacNews(x)?'home-airac-news':'')+'"><div class="home-news-row">'+topicBadge(x)+'<div class="home-news-content"><small>'+esc(x.category||'Actualités')+' · '+esc(localDate(x.date))+(airacNews(x)?' <span class="airac-news-label">NEWS AIRAC</span>':'')+'</small><strong>'+esc(x.title)+'</strong><a href="'+esc(isSafeUrl(x.url))+'" target="_blank" rel="noopener noreferrer">Source officielle ↗</a></div></div></article>').join('')||'<p class="muted">Aucune nouveauté publiée aujourd’hui.</p>';
+  $('#home-news').innerHTML=homeItems.map(x=>'<article class="'+(x.airacEffective?'home-airac-news':'')+'"><div class="home-news-row">'+topicBadge(x)+'<div class="home-news-content"><small>'+esc(x.category||'Actualités')+' · '+esc(localDate(x.date))+(x.airacEffective?' <span class="airac-news-label">NEWS</span>':'')+'</small><strong>'+esc(x.title)+'</strong><a href="'+esc(isSafeUrl(x.url))+'" target="_blank" rel="noopener noreferrer">Source officielle ↗</a></div></div></article>').join('')||'<p class="muted">Aucune nouveauté publiée aujourd’hui.</p>';
 }
 
 function renderSoftware(){
