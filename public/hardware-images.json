@@ -90,8 +90,8 @@
   "brake-pressure-gauge": {
     "path": "hardware/brake-pressure-gauge.jpg",
     "state": "photo",
-    "source": "Photo WINCTRL 32 Brake Pressure Gauge — Superchicane",
-    "origin": "https://superchicane.fr/wp-content/uploads/2026/08/winctrl-32-Brake-Pressure-Gauge-1600x900.jpg",
-    "verification": "non_verifiee_visuellement"
+    "source": "Visuel de référence SL3 Simulations — autre fabricant que WINCTRL",
+    "origin": "https://www.santiluib3.com/cdn/shop/files/PressureGauge1.jpg?v=1752602892",
+    "verification": "reference_visuelle_autre_fabricant"
   }
 }
