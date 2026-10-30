@@ -61,6 +61,26 @@ def save_photo(key,url,credit):
     path=DEST/(key+"."+ext)
     path.write_bytes(data)
     return {"path":"hardware/"+path.name,"state":"photo","source":credit,"origin":url,"verification":"non_verifiee_visuellement"}
+def find_brake_gauge_image():
+    """Image du produit explicitement identifiee dans l'article Superchicane."""
+    page_url="https://superchicane.fr/winctrl-32-brake-pressure-gauge/"
+    page,_=fetch(page_url)
+    parser=ImgParser()
+    parser.feed(page.decode("utf-8","replace"))
+    for img in parser.images:
+        alt=(img.get("alt") or "").lower()
+        if "brake pressure gauge" not in alt or "winctrl" not in alt:
+            continue
+        src=img.get("src") or ""
+        if not src or "data:image" in src:
+            srcset=img.get("srcset") or ""
+            src=srcset.split(",")[-1].strip().split(" ")[0] if srcset else ""
+        url=urllib.parse.urljoin(page_url,src)
+        parsed=urllib.parse.urlparse(url)
+        if parsed.scheme=="https" and parsed.hostname in ("superchicane.fr","www.superchicane.fr") and re.search(r"\\.(?:jpe?g|png|webp)(?:$|\\?)",parsed.path,re.I):
+            return url
+    return None
+
 def run():
     items=json.loads((PUBLIC/"hardware_catalog.json").read_text())
     sources=json.loads((PUBLIC/"hardware_photo_sources.json").read_text()) if (PUBLIC/"hardware_photo_sources.json").exists() else {}
@@ -84,6 +104,14 @@ def run():
         if existing:
             manifest[key]={"path":"hardware/"+existing.name,"state":"photo","source":sources.get(key,{}).get("credit","Photographie du produit"),"verification":"non_verifiee_visuellement"}
             continue
+        if key=="brake-pressure-gauge":
+            try:
+                exact_url=find_brake_gauge_image()
+                if exact_url:
+                    manifest[key]=save_photo(key,exact_url,"Photo WINCTRL 32 Brake Pressure Gauge — Superchicane")
+                    continue
+            except Exception as exc:
+                print("Image Brake Pressure Gauge : extraction echouee",type(exc).__name__,str(exc)[:120])
         source=sources.get(key)
         if source:
             try:
