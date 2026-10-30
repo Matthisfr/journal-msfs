@@ -77,7 +77,7 @@ def find_brake_gauge_image():
             src=srcset.split(",")[-1].strip().split(" ")[0] if srcset else ""
         url=urllib.parse.urljoin(page_url,src)
         parsed=urllib.parse.urlparse(url)
-        if parsed.scheme=="https" and parsed.hostname in ("superchicane.fr","www.superchicane.fr") and re.search(r"\\.(?:jpe?g|png|webp)(?:$|\\?)",parsed.path,re.I):
+        if parsed.scheme=="https" and parsed.hostname in ("superchicane.fr","www.superchicane.fr") and parsed.path.lower().endswith((".jpg",".jpeg",".png",".webp")):
             return url
     return None
 
