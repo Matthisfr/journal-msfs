@@ -31,7 +31,7 @@ permissions:
 
 concurrency:
   group: journal-msfs-pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   update-and-publish:
@@ -48,9 +48,16 @@ jobs:
           GH_REPOSITORY: ${{ github.repository }}
           TRIGGER: ${{ github.event_name }}
         run: |
-          if [[ "$TRIGGER" != "schedule" ]]; then
+          if [[ "$TRIGGER" == "push" ]]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
-            echo "Déclenchement manuel ou commit : collecte autorisée"
+            echo "collect=false" >> "$GITHUB_OUTPUT"
+            echo "Commit : publication rapide sans collecte"
+            exit 0
+          fi
+          if [[ "$TRIGGER" == "workflow_dispatch" ]]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "collect=true" >> "$GITHUB_OUTPUT"
+            echo "Lancement manuel : collecte demandée"
             exit 0
           fi
 
@@ -70,6 +77,7 @@ jobs:
               last_hour="${last_local:11:2}"
               if (( 10#$last_hour >= 4 )); then
                 echo "run=false" >> "$GITHUB_OUTPUT"
+                echo "collect=false" >> "$GITHUB_OUTPUT"
                 echo "Collecte matinale du $today déjà enregistrée à $last_local : rattrapage inutile"
                 exit 0
               fi
@@ -77,6 +85,7 @@ jobs:
             fi
           fi
           echo "run=true" >> "$GITHUB_OUTPUT"
+          echo "collect=true" >> "$GITHUB_OUTPUT"
           echo "Journal absent ou ancien pour $today : collecte/rattrapage lancé"
           
       - name: Récupérer le dépôt
@@ -87,23 +96,23 @@ jobs:
           fetch-depth: 0
 
       - name: Python
-        if: steps.gate.outputs.run == 'true'
+        if: steps.gate.outputs.collect == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
       - name: Installer le lecteur Excel
-        if: steps.gate.outputs.run == 'true'
+        if: steps.gate.outputs.collect == 'true'
         run: python -m pip install openpyxl==3.1.5
 
       - name: Importer le nouvel inventaire Excel
-        if: steps.gate.outputs.run == 'true'
+        if: steps.gate.outputs.collect == 'true'
         run: |
           python scripts/import_airports_excel.py
           python scripts/build_comparisons.py
 
       - name: Vérifier le code et les scripts du site
-        if: steps.gate.outputs.run == 'true'
+        if: steps.gate.outputs.collect == 'true'
         run: |
           python -m unittest discover -s tests -v
           python -m py_compile scripts/build_comparisons.py scripts/update.py scripts/versions.py scripts/releases.py scripts/watch_sources.py scripts/build_site.py scripts/build_airport_map.py scripts/import_airports_excel.py scripts/smoke_live.py scripts/discover_airports.py scripts/discover_simmarket.py scripts/apply_airport_sources.py scripts/software_versions.py scripts/sayintentions_news.py scripts/editorial_news.py scripts/winctrl_airbus.py scripts/fetch_hardware_photos.py scripts/fetch_simbrief.py scripts/fetch_sayintentions_career.py
@@ -111,7 +120,7 @@ jobs:
           node tests/test_frontend.cjs
 
       - name: Rechercher de nouvelles fiches produit (hebdomadaire)
-        if: steps.gate.outputs.run == 'true'
+        if: steps.gate.outputs.collect == 'true'
         run: |
           # La vérification des versions se fait chaque matin sur les fiches
           # existantes. Les catalogues entiers sont rescannés le samedi.
@@ -131,41 +140,41 @@ jobs:
           fi
 
       - name: Collecter METAR, TAF, actualités et versions de scènes
-        if: steps.gate.outputs.run == 'true'
+        if: steps.gate.outputs.collect == 'true'
         run: python scripts/update.py
 
       - name: Collecter les annonces et visuels WINCTRL Airbus (MSFS Addons)
-        if: steps.gate.outputs.run == 'true'
+        if: steps.gate.outputs.collect == 'true'
         run: python scripts/winctrl_airbus.py
 
       - name: Récupérer le dernier plan de vol SimBrief Matthis
-        if: steps.gate.outputs.run == 'true'
+        if: steps.gate.outputs.collect == 'true'
         run: python scripts/fetch_simbrief.py
 
       - name: Installer Chromium pour le profil pilote public
-        if: steps.gate.outputs.run == 'true'
+        if: steps.gate.outputs.collect == 'true'
         run: |
           python -m pip install playwright==1.56.0
           python -m playwright install --with-deps chromium
 
       - name: Lire le profil public SayIntentions Gate 404 Mathis
-        if: steps.gate.outputs.run == 'true'
+        if: steps.gate.outputs.collect == 'true'
         run: python scripts/fetch_sayintentions_career.py
 
       - name: Mettre à jour les photos réelles du matériel
-        if: steps.gate.outputs.run == 'true'
+        if: steps.gate.outputs.collect == 'true'
         run: python scripts/fetch_hardware_photos.py
 
       - name: Vérifier les sites des éditeurs et logiciels surveillés
-        if: steps.gate.outputs.run == 'true'
+        if: steps.gate.outputs.collect == 'true'
         run: python scripts/watch_sources.py
 
       - name: Récupérer les logos originaux des éditeurs
-        if: steps.gate.outputs.run == 'true'
+        if: steps.gate.outputs.collect == 'true'
         run: python scripts/fetch_brand_assets.py
 
       - name: Construire le site, la veille et la liste indépendante
-        if: steps.gate.outputs.run == 'true'
+        if: steps.gate.outputs.collect == 'true'
         run: |
           python scripts/build_comparisons.py
           python scripts/build_airport_map.py
@@ -196,7 +205,7 @@ jobs:
           PY
 
       - name: Enregistrer les données collectées
-        if: steps.gate.outputs.run == 'true'
+        if: steps.gate.outputs.collect == 'true'
         run: |
           git config user.name "journal-msfs-bot"
           git config user.email "journal-msfs-bot@users.noreply.github.com"
