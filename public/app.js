@@ -432,7 +432,7 @@ function renderNews(){
   const airacCycle=String(status.airac_cycle||'');
   const airacIndex=/^\d{4}$/.test(airacCycle)?Number(airacCycle.slice(0,2))*13+Number(airacCycle.slice(2)):NaN;
   const baseIndex=26*13+11;
-  const airacStart=Number.isFinite(airacIndex)?new Date(Date.UTC(2026,9,29)+(airacIndex-baseIndex)*28*86400000):null;
+  const airacStart=Number.isFinite(airacIndex)?new Date(Date.UTC(2026,9,28,23)+(airacIndex-baseIndex)*28*86400000):null;
   const airacAge=airacStart?Date.now()-airacStart.getTime():Infinity;
   const recentAirac=airacAge>=0&&airacAge<72*3600000;
   const airacItem=recentAirac?{
