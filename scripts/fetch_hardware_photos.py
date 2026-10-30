@@ -8,6 +8,7 @@ from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
+import sys
 import urllib.parse
 import urllib.request
 ROOT=Path(__file__).resolve().parents[1]
@@ -97,8 +98,11 @@ def run():
                     sources[key]={"url":url,"credit":"WINCTRL / MSFS Addons — visuel du produit"}
         except (OSError,ValueError,TypeError):
             pass
-    manifest={}
+    brake_only="--brake-only" in sys.argv
+    manifest=json.loads((PUBLIC/"hardware-images.json").read_text()) if brake_only and (PUBLIC/"hardware-images.json").exists() else {}
     for x in items:
+        if brake_only and x["id"]!="brake-pressure-gauge":
+            continue
         key=x["id"]
         existing=next((DEST/(key+"."+ext) for ext in ("jpg","png","webp") if (DEST/(key+"."+ext)).is_file()),None)
         if existing:
