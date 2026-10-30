@@ -358,11 +358,15 @@ def build():
     cycle_year = 2026 + (cycle_month - 1) // 13
     cycle = f"{cycle_year % 100:02d}{(cycle_month - 1) % 13 + 1:02d}"
     previous = status.get("airac_cycle")
-    changed = today_airac == start
+    from zoneinfo import ZoneInfo
+    airac_start_local = dt.datetime.combine(start, dt.time.min, tzinfo=ZoneInfo("Europe/Paris"))
+    airac_start_utc = airac_start_local.astimezone(dt.timezone.utc)
+    airac_age = dt.datetime.now(dt.timezone.utc) - airac_start_utc
+    changed = dt.timedelta(0) <= airac_age < dt.timedelta(hours=72)
     status["airac_cycle"] = cycle
     (PUBLIC / "status.json").write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     airac = ('<div class="airac-banner"><b>NAVIGRAPH AIRAC ' + h(cycle) + '</b> ' +
-             ('<span class="new-tag airac-red-news">NEWS</span> ' if changed else '') +
+             ('<span class="new-tag airac-red-news" id="airac-home-news" data-release="' + airac_start_utc.isoformat() + '"' + ('' if changed else ' hidden') + '>NEWS</span> ') +
              h(start.strftime("%d/%m/%Y")) + ' – ' + h(end.strftime("%d/%m/%Y")) + '</div>')
     index = index.replace('<main id="main" class="shell main">', '<main id="main" class="shell main">' + airac, 1)
     # Résumé très compact des actualités du jour dans le bandeau héro.
