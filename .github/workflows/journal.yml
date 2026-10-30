@@ -31,7 +31,7 @@ permissions:
 
 concurrency:
   group: journal-msfs-pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   update-and-publish:
