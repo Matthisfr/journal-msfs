@@ -60,6 +60,10 @@ SEEDS = [
 # Informations datées et vérifiées par produit. Ne sont jamais écrasées
 # par un prix extrait du texte d'une annonce qui traiterait de plusieurs modèles.
 PRODUCTS = {
+    "brake-pressure-gauge":dict(price="$39.95",price_date="2026-08-24",
+        availability="Annoncé ; date de commercialisation non confirmée",
+        release_kind="sortie non confirmée",
+        announcement_url="https://fsnews.eu/winctrl-unveils-newest-piece-of-hardware-for-home-airbus-cockpits/"),
     "sidestick-metal":dict(price="$55.53",price_eu="€53.31",price_date="2026-10-22",availability="Précommande annoncée le 22/10/2026 ; vente prévue le 28/10/2026",
         release_date="2026-10-28",release_kind="date de mise en vente annoncée",
         image_url="https://msfsaddons.com/wp-content/uploads/2026/10/WINCTRL-32-Sidestick-Controller-L-7.png.webp"),
@@ -77,7 +81,7 @@ PRODUCTS = {
     "throttle":dict(availability="Lancement annoncé le 26/09/2025",release_date="2025-09-26",
         release_kind="date de lancement annoncée"),
 }
-LABELS = {"sidestick-metal":"32 Sidestick Controller Metal 2", "nws":"32 NWS Airbus",
+LABELS = {"brake-pressure-gauge":"32 Brake Pressure Gauge Airbus", "sidestick-metal":"32 Sidestick Controller Metal 2", "nws":"32 NWS Airbus",
           "tcas":"32 TCAS Airbus", "ovhd":"OVHD32 SOP Airbus", "pedals":"Orion 32 Rudder Pedals",
           "ecam":"ECAM 32 Airbus", "agp":"AGP 32 Metal", "throttle":"URSA MINOR 32 Throttle",
           "acp":"ACP32 Airbus", "fcu":"FCU Airbus", "efis":"EFIS Airbus", "mcdu":"MCDU A320"}
@@ -132,6 +136,7 @@ def product_ids(title):
     if not re.search(r"\bwinctrl\b|\bwinwing\b",t):return []
     # Décision basée sur le TITRE et non les recommandations au bas de l'article.
     if "boeing" in t and "airbus" not in t:return []
+    if "brake pressure" in t or "brake gauge" in t:return ["brake-pressure-gauge"]
     if "sidestick" in t or "captain sticks" in t:return ["sidestick-metal"] if ("airbus" in t or "winctrl" in t) else []
     if "ecam" in t and "agp" in t:return ["ecam","agp"]
     if "ovhd32" in t or "airbus overhead" in t:return ["ovhd"]
