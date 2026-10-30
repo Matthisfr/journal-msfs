@@ -282,3 +282,6 @@ button.airport-map-eye:focus-visible{outline:2px solid #5ba6c9;border-radius:4px
 .hardware-news-entry{min-width:0;overflow:hidden}
 .hardware-news-entry .news-card{height:auto}
 .hardware-news-photo{width:100%;height:170px;object-fit:contain;background:#edf1f4;border:1px solid var(--line,#dfe4e7);border-radius:5px;margin:0 0 7px}
+
+/* Garantir la disparition du badge AIRAC à l'expiration des 72 heures. */
+#airac-home-news[hidden]{display:none!important}
