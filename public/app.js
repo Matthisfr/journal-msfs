@@ -202,7 +202,15 @@ async function addSimbriefRoute(map, airportData, slot){
   L.DomEvent.disableClickPropagation(button);
   L.DomEvent.disableScrollPropagation(button);
   simbriefRouteButton=button;
-  L.DomEvent.on(button,'click',()=>setSimbriefRouteVisible(!map.hasLayer(layer)));
+  L.DomEvent.on(button,'click',()=>{
+   const visible=!map.hasLayer(layer);
+   setSimbriefRouteVisible(visible);
+   if(visible){
+    // Afficher tout le trajet SimBrief et recentrer la carte sur ce vol.
+    focusSimbriefRoute();
+    scrollToAirportMap();
+   }
+  });
   showSimbriefOnLoad=false;
   const label=document.createElement('p');
   label.className='map-caption';
