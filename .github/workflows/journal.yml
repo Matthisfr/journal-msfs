@@ -95,6 +95,10 @@ jobs:
           persist-credentials: true
           fetch-depth: 0
 
+      - name: Construire les pages HTML pour la publication rapide
+        if: github.event_name == 'push'
+        run: python scripts/build_site.py
+
       - name: Python
         if: steps.gate.outputs.collect == 'true'
         uses: actions/setup-python@v5
