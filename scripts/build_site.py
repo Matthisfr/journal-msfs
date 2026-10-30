@@ -349,7 +349,8 @@ def build():
                           '<div id="news-container" class="news-grid">' + cards + '</div>')
     # AIRAC : référence officielle 2610, entrée en vigueur le 01/10/2026.
     # Cycles de 28 jours. Ne pas assimiler un premier affichage à NEWS.
-    today_airac = dt.datetime.now(dt.timezone.utc).date()
+    from zoneinfo import ZoneInfo
+    today_airac = dt.datetime.now(ZoneInfo("Europe/Paris")).date()
     anchor = dt.date(2026, 10, 1)
     step = (today_airac - anchor).days // 28
     start = anchor + dt.timedelta(days=step * 28)
@@ -358,7 +359,6 @@ def build():
     cycle_year = 2026 + (cycle_month - 1) // 13
     cycle = f"{cycle_year % 100:02d}{(cycle_month - 1) % 13 + 1:02d}"
     previous = status.get("airac_cycle")
-    from zoneinfo import ZoneInfo
     airac_start_local = dt.datetime.combine(start, dt.time.min, tzinfo=ZoneInfo("Europe/Paris"))
     airac_start_utc = airac_start_local.astimezone(dt.timezone.utc)
     airac_age = dt.datetime.now(dt.timezone.utc) - airac_start_utc
