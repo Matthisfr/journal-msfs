@@ -62,25 +62,8 @@ def save_photo(key,url,credit):
     path=DEST/(key+"."+ext)
     path.write_bytes(data)
     return {"path":"hardware/"+path.name,"state":"photo","source":credit,"origin":url,"verification":"non_verifiee_visuellement"}
-def find_brake_gauge_image():
-    """Image du produit explicitement identifiee dans l'article Superchicane."""
-    page_url="https://superchicane.fr/winctrl-32-brake-pressure-gauge/"
-    page,_=fetch(page_url)
-    parser=ImgParser()
-    parser.feed(page.decode("utf-8","replace"))
-    for img in parser.images:
-        alt=(img.get("alt") or "").lower()
-        if "brake pressure gauge" not in alt or "winctrl" not in alt:
-            continue
-        src=img.get("src") or ""
-        if not src or "data:image" in src:
-            srcset=img.get("srcset") or ""
-            src=srcset.split(",")[-1].strip().split(" ")[0] if srcset else ""
-        url=urllib.parse.urljoin(page_url,src)
-        parsed=urllib.parse.urlparse(url)
-        if parsed.scheme=="https" and parsed.hostname in ("superchicane.fr","www.superchicane.fr") and parsed.path.lower().endswith((".jpg",".jpeg",".png",".webp")):
-            return url
-    return None
+# Référence visuelle exacte demandée : photo SL3 Simulations, non officielle WINCTRL.
+BRAKE_REFERENCE_IMAGE="https://www.santiluib3.com/cdn/shop/files/PressureGauge1.jpg?v=1752602892"
 
 def run():
     items=json.loads((PUBLIC/"hardware_catalog.json").read_text())
@@ -105,17 +88,20 @@ def run():
             continue
         key=x["id"]
         existing=next((DEST/(key+"."+ext) for ext in ("jpg","png","webp") if (DEST/(key+"."+ext)).is_file()),None)
+        if key=="brake-pressure-gauge":
+            try:
+                manifest[key]=save_photo(key,BRAKE_REFERENCE_IMAGE,
+                    "Visuel de référence SL3 Simulations — autre fabricant que WINCTRL")
+                manifest[key]["verification"]="reference_visuelle_autre_fabricant"
+                continue
+            except Exception as exc:
+                print("Photo de référence ACCU/BRAKES indisponible",type(exc).__name__,str(exc)[:130])
+                # Ne jamais réutiliser le mauvais visuel Superchicane.
+                manifest[key]={"state":"unavailable","reason":"Photo de référence non récupérable ; photo WINCTRL non confirmée"}
+                continue
         if existing:
             manifest[key]={"path":"hardware/"+existing.name,"state":"photo","source":sources.get(key,{}).get("credit","Photographie du produit"),"verification":"non_verifiee_visuellement"}
             continue
-        if key=="brake-pressure-gauge":
-            try:
-                exact_url=find_brake_gauge_image()
-                if exact_url:
-                    manifest[key]=save_photo(key,exact_url,"Photo WINCTRL 32 Brake Pressure Gauge — Superchicane")
-                    continue
-            except Exception as exc:
-                print("Image Brake Pressure Gauge : extraction echouee",type(exc).__name__,str(exc)[:120])
         source=sources.get(key)
         if source:
             try:
