@@ -133,5 +133,14 @@
     "official_url": "https://winctrl.com/view/shopping.html",
     "photo_source": "MSFS Addons — visuel fabricant",
     "photo_status": "pending"
+  },
+  {
+    "id": "brake-pressure-gauge",
+    "name": "WINCTRL 32 Brake Pressure Gauge",
+    "ownership": "Veille matériel",
+    "image_query": "WINCTRL 32 Brake Pressure Gauge Airbus A320",
+    "official_url": "https://winctrl.com/view/shopping.html",
+    "photo_source": "Annonce WINCTRL — photo du produit à confirmer",
+    "photo_status": "pending"
   }
 ]
