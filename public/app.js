@@ -498,9 +498,13 @@ function renderHardwareGallery(){
   const el=$('#hardware-gallery');if(!el)return;
   el.innerHTML=(Array.isArray(hardware)?hardware:[]).map(x=>{
     const photo=hardwareImages[x.id]||{};
+    // URL versionnée : Safari/iPad ne doit pas conserver la précédente photographie.
+    const photoPath=x.id==='brake-pressure-gauge'&&photo.path
+      ?photo.path+'?photo=brake-gauge-corrected-20261031'
+      :photo.path;
     const info=(winctrlAirbus.products||{})[x.id]||{};
     const picture=['photo','photo_remote'].includes(photo.state)&&photo.path?
-      '<img class="hardware-photo" loading="lazy" decoding="async" src="'+esc(photo.path)+'" alt="Visuel du matériel '+esc(x.name)+'" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.hidden=false">'+
+      '<img class="hardware-photo" loading="lazy" decoding="async" src="'+esc(photoPath)+'" alt="Visuel du matériel '+esc(x.name)+'" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.hidden=false">'+
       '<span class="hardware-no-photo" hidden>Visuel momentanément indisponible</span>':
       '<span class="hardware-no-photo">Visuel de ce modèle non disponible</span>';
     const owned=x.ownership==='Possédé',pending=x.ownership==='Attendu';
