@@ -107,6 +107,8 @@ function renderAirports(){
 }
 let airportMap=null;
 let simbriefRouteBounds=null;
+const WORLD_BOUNDS=[[-85,-180],[85,180]];
+function showWholeWorld(){if(!airportMap)return;airportMap.invalidateSize();airportMap.fitBounds(WORLD_BOUNDS,{padding:[8,8],animate:true});}
 let simbriefRouteLayer=null;
 let simbriefRouteButton=null;
 let showSimbriefOnLoad=false;
@@ -114,6 +116,7 @@ function setSimbriefRouteVisible(visible){
  if(!airportMap||!simbriefRouteLayer)return;
  if(visible&&!airportMap.hasLayer(simbriefRouteLayer))simbriefRouteLayer.addTo(airportMap);
  if(!visible&&airportMap.hasLayer(simbriefRouteLayer))airportMap.removeLayer(simbriefRouteLayer);
+ if(!visible)showWholeWorld();
  if(simbriefRouteButton){simbriefRouteButton.textContent=visible?'👁 Masquer le dernier vol':'👁 Voir le dernier vol';simbriefRouteButton.setAttribute('aria-pressed',String(visible));}
 }
 let focusSimbriefOnOpen=false;
@@ -157,6 +160,26 @@ function updateAirportMap(matches){
  if(airportMapCaption)airportMapCaption.textContent=shown+' aéroports affichés sur '+airportMapMarkers.length+' géolocalisés · '+matches.length+' scènes filtrées · Vert : à jour · Orange : MAJ disponible · Gris : non vérifié';
 }
 
+// Découper les traversées du méridien 180° pour ne pas tracer une ligne à travers le planisphère.
+function splitAntimeridian(points){
+ const segments=[];let current=[];
+ for(const point of points){
+  if(current.length){
+   const prev=current[current.length-1],delta=point[1]-prev[1];
+   if(Math.abs(delta)>180){
+    const target=delta>0?-180:180;
+    const unwrapped=point[1]+(delta>0?-360:360);
+    const fraction=(target-prev[1])/(unwrapped-prev[1]);
+    const latitude=prev[0]+fraction*(point[0]-prev[0]);
+    current.push([latitude,target]);segments.push(current);
+    current=[[latitude,-target]];
+   }
+  }
+  current.push(point);
+ }
+ if(current.length)segments.push(current);
+ return segments;
+}
 function fromSimbriefBounds(fixes,start,end){
  const coords=[];
  for(const p of [start,...fixes,end])if(p&&Number.isFinite(Number(p.lat))&&Number.isFinite(Number(p.lon)))coords.push([Number(p.lat),Number(p.lon)]);
@@ -187,8 +210,11 @@ async function addSimbriefRoute(map, airportData, slot){
   if(fixes.length>=2){
    if(valid(start))points.unshift(from);
    if(valid(end))points.push(to);
-   L.polyline(points,{color:'#172635',weight:6,opacity:.85,interactive:false}).addTo(layer);
-   L.polyline(points,{color:'#ffffff',weight:3,opacity:1,interactive:false}).addTo(layer);
+   for(const segment of splitAntimeridian(points)){
+    if(segment.length<2)continue;
+    L.polyline(segment,{color:'#172635',weight:6,opacity:.85,interactive:false}).addTo(layer);
+    L.polyline(segment,{color:'#ffffff',weight:3,opacity:1,interactive:false}).addTo(layer);
+   }
    const middle=points[Math.floor(points.length/2)];
    const fl=Number(flight.altitude);
    L.marker(middle,{icon:routeLabel('Vol '+duration(flight.enroute_time)+' · '+(fl>0?'FL'+Math.round(fl/100):'FL —')),interactive:false}).addTo(layer);
@@ -239,12 +265,12 @@ async function renderMap(){
   });
   document.addEventListener('fullscreenchange',updateFullscreenLabel);
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&slot.classList.contains('map-fullscreen-fallback')){slot.classList.remove('map-fullscreen-fallback');document.body.style.overflow='';updateFullscreenLabel()}});
-  airportMap=L.map('airport-leaflet-map').setView([43.7,7.2],5);
+  airportMap=L.map('airport-leaflet-map',{maxBounds:WORLD_BOUNDS,maxBoundsViscosity:1}).setView([43.7,7.2],5);
   const baseMaps={
-    'Plan':L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}),
-    'Satellite':L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Tiles &copy; Esri and contributors'}),
-    'Relief':L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',{maxZoom:17,attribution:'&copy; OpenTopoMap contributors &copy; OpenStreetMap'}),
-    'Sombre':L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:'&copy; CARTO &copy; OpenStreetMap'})
+    'Plan':L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{noWrap:true,maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}),
+    'Satellite':L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{noWrap:true,maxZoom:19,attribution:'Tiles &copy; Esri and contributors'}),
+    'Relief':L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',{noWrap:true,maxZoom:17,attribution:'&copy; OpenTopoMap contributors &copy; OpenStreetMap'}),
+    'Sombre':L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{noWrap:true,maxZoom:19,attribution:'&copy; CARTO &copy; OpenStreetMap'})
   };
   const selectedStyle=(()=>{try{return localStorage.getItem('msfs-airport-map-style')||'Plan'}catch{return 'Plan'}})();
   (baseMaps[selectedStyle]||baseMaps.Plan).addTo(airportMap);
