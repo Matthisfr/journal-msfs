@@ -416,17 +416,23 @@ function renderNews(){
 
 function renderSoftware(){
   const items=Array.isArray(software.items)?software.items:[],q=($('#software-search')?.value||'').trim().toLowerCase(),filter=$('#software-filter')?.value||'';
-  const changed=items.filter(x=>x.state==='changed').length,verified=items.filter(x=>x.state==='verified'||x.state==='changed').length;
+  // NEWS uniquement pour une version stable réellement changée dans les dernières 24 h.
+  // last_change_at est conservé par la collecte suivante.
+  const isFreshChange=x=>{
+    const at=x.changed_at||x.last_change_at;
+    const time=Date.parse(at||'');
+    return Boolean(x.version&&at&&Number.isFinite(time)&&Date.now()>=time&&Date.now()-time<24*60*60*1000&&['verified','changed'].includes(x.state));
+  };
+  const changed=items.filter(isFreshChange).length,verified=items.filter(x=>x.state==='verified'||x.state==='changed').length;
   const overview=$('#software-overview');
   if(overview)overview.innerHTML='<strong>'+items.length+' logiciels suivis</strong><span>'+verified+' versions confirmées · '+changed+' changements · '+(items.length-verified)+' non confirmées</span><small>Contrôle : '+esc(localDateTime(software.checked_at))+'</small>';
-  const nav=$('#software-nav-news');if(nav){nav.hidden=!changed;nav.textContent=changed?'NEWS '+changed:'NEWS'}
   const selected=items.filter(x=>(!q||[x.name,x.group,x.version,x.reason].join(' ').toLowerCase().includes(q))&&(!filter||(filter==='changed'?x.state==='changed':filter==='verified'?['verified','changed'].includes(x.state):!['verified','changed'].includes(x.state))));
   // Ordre stable : VÉRIFIÉ (NEWS inclus), puis RÉFÉRENCE DATÉE, puis UNKNOWN.
   const priority=x=>['verified','changed'].includes(x.state)?0:x.reference_version?1:2;
   selected.sort((a,b)=>priority(a)-priority(b));
   const body=$('#software-body');if(!body)return;
   body.innerHTML=selected.map(x=>{
-    const ok=['verified','changed'].includes(x.state),fresh=x.state==='changed';
+    const ok=['verified','changed'].includes(x.state),fresh=isFreshChange(x);
     const tag=fresh?'<span class="new-tag">NEWS</span>':ok?'<span class="flag flag-ok">VÉRIFIÉ</span>':x.reference_version?'<span class="flag flag-c">RÉFÉRENCE DATÉE</span>':'<span class="flag flag-v">UNKNOWN</span>';
     const preview=x.preview_version?'<small>Préversion : '+esc(x.preview_version)+'</small>':'';
     const last=x.previous_version?'<small>Précédente : '+esc(x.previous_version)+'</small>':'';
