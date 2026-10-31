@@ -416,7 +416,7 @@ function syncAiracHomeBadge(){
  el.hidden=!(Number.isFinite(started)&&age>=0&&age<72*3600000);
 }
 syncAiracHomeBadge();
-if(typeof window!=='undefined')window.setInterval(syncAiracHomeBadge,60000);
+if(typeof window!=='undefined' && typeof window.setInterval==='function')window.setInterval(syncAiracHomeBadge,60000);
 
 function renderNews(){
   const editorialNews=editorial.news||[];
