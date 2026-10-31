@@ -1,8 +1,8 @@
 {
   "edition": "2026-10-31",
-  "last_run": "2026-10-31T06:03:09.713141+00:00",
-  "weather_checked_at": "2026-10-31T06:03:09.713141+00:00",
-  "news_checked_at": "2026-10-31T06:03:09.713141+00:00",
+  "last_run": "2026-10-31T06:08:01.970403+00:00",
+  "weather_checked_at": "2026-10-31T06:08:01.970403+00:00",
+  "news_checked_at": "2026-10-31T06:08:01.970403+00:00",
   "weather": [
     {
       "icao": "EBBR",
@@ -70,6 +70,19 @@
       "taf_raw": "TAF GMMN 302300Z 3100/0106 VRB03KT 8000 NSC PROB30 TEMPO 3102/3108 3000 BR BKN006 BECMG 3110/3113 32010KT CAVOK BECMG 3119/3122 06004KT"
     },
     {
+      "icao": "LFBD",
+      "name": "LFBD Bordeaux-Mérignac Airport",
+      "observed_at": "2026-10-31T06:00:00+00:00",
+      "raw": "METAR LFBD 310600Z AUTO 00000KT 1400 1000 R23/1300N R05/1300D R29/1900U BR VV/// 04/04 Q1023 TEMPO 0300 FG",
+      "score": 145,
+      "summary": "brouillard, visibilité < 1 SM",
+      "icon": "🌫️",
+      "phenomenon": "Brouillard",
+      "level": "Très dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF LFBD 310500Z 3106/0112 VRB03KT CAVOK TX17/3114Z TN02/0106Z TEMPO 3106/3110 3000 BR SCT002 PROB40 TEMPO 3106/3109 0300 FG VV/// BECMG 3114/3116 36005KT BECMG 3118/3120 VRB03KT BECMG 3120/3122 2000 BR PROB30 3122/0108 0300 FG VV/// BECMG 0108/0110 02005KT CAVOK"
+    },
+    {
       "icao": "LFSB",
       "name": "LFSB Basel-Mulhouse-Freiburg EuroAirport",
       "observed_at": "2026-10-31T06:00:00+00:00",
@@ -98,8 +111,8 @@
     {
       "icao": "DTTJ",
       "name": "DTTJ Djerba",
-      "observed_at": "2026-10-31T05:30:00+00:00",
-      "raw": "METAR DTTJ 310530Z 07003KT 9999 TS SCT020 FEW023CB SCT030 18/17 Q1016",
+      "observed_at": "2026-10-31T06:00:00+00:00",
+      "raw": "METAR DTTJ 310600Z 06003KT 9999 TS SCT020 FEW023CB SCT030 18/17 Q1016",
       "score": 110,
       "summary": "orage",
       "icon": "⛈️",
@@ -120,25 +133,12 @@
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF EDDL 310500Z 3106/0112 VRB03KT 4000 BR BKN003 TEMPO 3106/3109 0400 FG VV000 BECMG 3107/3110 05006KT 6000 SCT005 BKN008 BECMG 3110/3113 BKN015 BECMG 3120/3123 VRB03KT PROB30 TEMPO 0100/0108 3000 BR BKN007 TEMPO 0108/0112 BKN012"
-    },
-    {
-      "icao": "LGRP",
-      "name": "LGRP Rhodes International Airport \"Diagoras\"",
-      "observed_at": "2026-10-31T05:50:00+00:00",
-      "raw": "METAR LGRP 310550Z VRB03KT 9999 FEW018TCU SCT020 18/15 Q1017 RETS NOSIG",
-      "score": 110,
-      "summary": "orage",
-      "icon": "⛈️",
-      "phenomenon": "Orage",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LGRP 310500Z 3106/0106 13008KT 9999 SCT020 PROB40 TEMPO 3106/0106 5000 RA FEW018TCU BKN020 PROB30 TEMPO 3106/0106 3000 TSRA FEW018CB BKN020"
     }
   ],
   "weather_coverage": {
     "eligible": 211,
-    "received": 161,
-    "fresh": 161
+    "received": 204,
+    "fresh": 204
   },
   "news": [
     {
@@ -172,7 +172,7 @@
       "date": "2026-10-29",
       "source": "FSElite — MSFS",
       "url": "https://fselite.net/content/thrustmaster-tca-sky-yoke-now-available-for-pc-console-and-mobile/",
-      "summary": "29 octobre 2026 – Le dernier matériel de Thrustmaster est désormais disponible. Actualités MSFS MSFS 2024 MSFS PS5 MSFS Xbox XPL12 var HYVOR_TALK_WEBSITE = 3490 ; window.addEventListener('load', function() { hyvorTalkCommentCounts.load({ \"website-id\": HYVOR_TALK_WEBSITE, }) });",
+      "summary": "29 octobre 2026 - Le dernier matériel de Thrustmaster est désormais disponible. Actualités MSFS MSFS 2024 MSFS PS5 MSFS Xbox XPL12 var HYVOR_TALK_WEBSITE = 3490 ; window.addEventListener('load', function() { hyvorTalkCommentCounts.load({ \"website-id\": HYVOR_TALK_WEBSITE, }) });",
       "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
       "new": false
     },
@@ -301,7 +301,7 @@
     },
     {
       "id": "msfs_fselite_news-content-win-rowsfire-a117-a320-glareshield-panel-this-halloween",
-      "title": "GAGNEZ : Panneau anti-éblouissement Rowsfire A117 A320 cet Halloween",
+      "title": "GAGNEZ : Panneau anti-éblouissement Rowsfire A117 A320 cet Halloween",
       "category": "MSFS 2024",
       "topic": "MSFS",
       "date": "2026-10-26",
@@ -434,7 +434,7 @@
       "date": "2026-10-22",
       "source": "Forum officiel Microsoft Flight Simulator",
       "url": "https://forums.flightsimulator.com/t/blog-weekly-briefing-for-2026-10-22/779510",
-      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Poursuivez votre lecture pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
+      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Lisez la suite pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
       "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
       "new": false
     },
@@ -452,7 +452,7 @@
     },
     {
       "id": "msfs_fselite_news-content-pmdg-teases-747-news-and-updates-on-737-and-777-fleets",
-      "title": "PMDG dévoile les nouvelles et mises à jour du 747 sur les flottes 737 et 777",
+      "title": "PMDG taquine les nouvelles et les mises à jour du 747 sur les flottes 737 et 777",
       "category": "MSFS 2024",
       "topic": "MSFS",
       "date": "2026-10-20",
@@ -557,7 +557,7 @@
   ],
   "hardware": [],
   "source_status": {
-    "metar": "partial",
+    "metar": "ok",
     "taf": "ok",
     "official_news": "ok",
     "airport_versions": "partial",
@@ -569,7 +569,6 @@
     "winctrl_airbus_articles": "ok"
   },
   "errors": [
-    "HTTP Error 504: Gateway Time-out",
     "Versions : GMMX / PERFECTSOFT : Fiche 1.1.0 plus ancienne que l'installation 1.2.0 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : DTTA / prealsoft : Fiche 1.00 plus ancienne que l'installation 1.0.1 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : CYVR / fsdreamteam : Fiche 1.0.7 plus ancienne que l'installation 1.3.1 : vérifier le canal éditeur, ne pas rétrograder",
@@ -580,9 +579,9 @@
   ],
   "note": "Collecte quotidienne automatique : METAR/TAF NOAA, flux officiel MSFS, versions GitHub publiées, audit des scènes répertoriées, extraction des versions des boutiques publiques reconnues et surveillance des sites publics. Les versions non publiées ou inaccessibles restent UNKNOWN ; une page modifiée n’est pas une mise à jour confirmée.",
   "version_coverage": {
-    "verified_today": 170,
+    "verified_today": 165,
     "eligible": 222,
-    "unavailable": 21,
+    "unavailable": 26,
     "no_version": 13,
     "inconsistent": 7,
     "not_automatable": 1,
@@ -596,18 +595,18 @@
     "official_url_known": 222,
     "without_official_url": 27,
     "manual_source": 1,
-    "unverified": 79,
-    "audited_at": "2026-10-31T06:03:09.713141+00:00"
+    "unverified": 84,
+    "audited_at": "2026-10-31T06:08:01.970403+00:00"
   },
-  "versions_checked_at": "2026-10-31T06:03:09.713141+00:00",
-  "releases_checked_at": "2026-10-31T06:03:09.713141+00:00",
+  "versions_checked_at": "2026-10-31T06:08:01.970403+00:00",
+  "releases_checked_at": "2026-10-31T06:08:01.970403+00:00",
   "software_coverage": {
     "total": 19,
     "verified": 9,
     "changed": 0,
-    "checked_at": "2026-10-31T06:05:18.471252+00:00",
+    "checked_at": "2026-10-31T06:09:09.143802+00:00",
     "unverified": 10
   },
   "airac_cycle": "2611",
-  "winctrl_airbus_checked_at": "2026-10-31T06:05:24.235827+00:00"
+  "winctrl_airbus_checked_at": "2026-10-31T06:09:16.185667+00:00"
 }
