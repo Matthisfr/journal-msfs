@@ -48,6 +48,20 @@ jobs:
           GH_REPOSITORY: ${{ github.repository }}
           TRIGGER: ${{ github.event_name }}
         run: |
+          saturday_scan_missing() {
+            [[ "$(TZ=Europe/Paris date +%u)" == "6" ]] || return 1
+            today=$(TZ=Europe/Paris date +%F)
+            api="https://api.github.com/repos/$GH_REPOSITORY/contents/public/airport_source_candidates.json?ref=main"
+            if payload=$(curl -fsSL --retry 2 -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "$api"); then
+              report=$(printf '%s' "$payload" | jq -er '.content' | base64 -d)
+              checked_catalog=$(printf '%s' "$report" | jq -r '.generated_at // empty')
+              checked_simmarket=$(printf '%s' "$report" | jq -r '.simmarket_checked_at // empty')
+              catalog_local=$(TZ=Europe/Paris date -d "$checked_catalog" +%F 2>/dev/null || true)
+              simmarket_local=$(TZ=Europe/Paris date -d "$checked_simmarket" +%F 2>/dev/null || true)
+              [[ "$catalog_local" == "$today" && "$simmarket_local" == "$today" ]] && return 1
+            fi
+            return 0
+          }
           if [[ "$TRIGGER" == "push" ]]; then
             # Un push après 04h (Paris) sert aussi de rattrapage si les
             # déclenchements planifiés n'ont pas collecté les données du jour.
@@ -67,6 +81,12 @@ jobs:
                 echo "Push de rattrapage : données du matin absentes (dernière collecte : $last_local)"
                 exit 0
               fi
+            fi
+            if (( 10#$now_hour >= 4 )) && saturday_scan_missing; then
+              echo "run=true" >> "$GITHUB_OUTPUT"
+              echo "collect=true" >> "$GITHUB_OUTPUT"
+              echo "Samedi : collecte présente mais recherche approfondie des catalogues absente"
+              exit 0
             fi
             echo "run=true" >> "$GITHUB_OUTPUT"
             echo "collect=false" >> "$GITHUB_OUTPUT"
@@ -95,6 +115,12 @@ jobs:
             if [[ "$last_local" == "$today"T* ]]; then
               last_hour="${last_local:11:2}"
               if (( 10#$last_hour >= 4 )); then
+                if saturday_scan_missing; then
+                  echo "run=true" >> "$GITHUB_OUTPUT"
+                  echo "collect=true" >> "$GITHUB_OUTPUT"
+                  echo "Samedi : relance du scan Contrail, iniBuilds et SimMarket absent"
+                  exit 0
+                fi
                 echo "run=false" >> "$GITHUB_OUTPUT"
                 echo "collect=false" >> "$GITHUB_OUTPUT"
                 echo "Collecte matinale du $today déjà enregistrée à $last_local : rattrapage inutile"
@@ -166,7 +192,7 @@ jobs:
               echo "Nouvel inventaire Excel : recherche complète."
             fi
           fi
-          if [[ "$excel_changed" == "true" ]] || [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.mode }}" == "totale" ]] || [[ "$(TZ=Europe/Paris date +%u)" == "6" && "${{ github.event_name }}" == "schedule" ]]; then
+          if [[ "$excel_changed" == "true" ]] || [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.mode }}" == "totale" ]] || [[ "$(TZ=Europe/Paris date +%u)" == "6" ]]; then
             python scripts/discover_airports.py || echo "Catalogue Contrail / iniBuilds indisponible"
             python scripts/discover_simmarket.py || echo "Recherche simMarket indisponible"
             python scripts/apply_airport_sources.py
