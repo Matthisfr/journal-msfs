@@ -127,7 +127,7 @@ jobs:
           fi
 
       - name: Construire les pages HTML pour la publication rapide
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' && steps.gate.outputs.collect != 'true'
         run: python scripts/build_site.py
 
       - name: Python
