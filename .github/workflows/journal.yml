@@ -40,6 +40,12 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Récupérer le dépôt pour détecter les imports Excel
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 2
+
       - name: Vérifier fraîcheur réelle du journal et créneau de rattrapage
         id: gate
         shell: bash
@@ -63,6 +69,271 @@ jobs:
             return 0
           }
           if [[ "$TRIGGER" == "push" ]]; then
+            # Tout changement d'inventaire Excel déclenche obligatoirement l'import,
+            # même si la collecte matinale vient d'être effectuée.
+            if git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" -- data/airports/ | grep -Eiq '\\.xlsx (Paris) sert aussi de rattrapage si les
+            # déclenchements planifiés n'ont pas collecté les données du jour.
+            # Une collecte récente conserve le chemin de publication rapide.
+            now_local=$(TZ=Europe/Paris date +%Y-%m-%dT%H:%M:%S)
+            now_hour="${now_local:11:2}"
+            if (( 10#$now_hour >= 4 )); then
+              api="https://api.github.com/repos/$GH_REPOSITORY/contents/public/status.json?ref=main"
+              last_local=""
+              if payload=$(curl -fsSL --retry 2 -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "$api"); then
+                last_run=$(printf '%s' "$payload" | jq -er '.content' | base64 -d | jq -r '.last_run // empty' || true)
+                last_local=$(TZ=Europe/Paris date -d "$last_run" +%Y-%m-%dT%H:%M:%S 2>/dev/null || true)
+              fi
+              if [[ "$last_local" != "${now_local:0:10}"T* ]] || [[ "${last_local:11:2}" < "04" ]]; then
+                echo "run=true" >> "$GITHUB_OUTPUT"
+                echo "collect=true" >> "$GITHUB_OUTPUT"
+                echo "Push de rattrapage : données du matin absentes (dernière collecte : $last_local)"
+                exit 0
+              fi
+            fi
+            if (( 10#$now_hour >= 4 )) && saturday_scan_missing; then
+              echo "run=true" >> "$GITHUB_OUTPUT"
+              echo "collect=true" >> "$GITHUB_OUTPUT"
+              echo "Samedi : collecte présente mais recherche approfondie des catalogues absente"
+              exit 0
+            fi
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "collect=false" >> "$GITHUB_OUTPUT"
+            echo "Commit : publication rapide, données matinales déjà fraîches ou avant 04h"
+            exit 0
+          fi
+          if [[ "$TRIGGER" == "workflow_dispatch" ]]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "collect=true" >> "$GITHUB_OUTPUT"
+            echo "Lancement manuel : collecte demandée"
+            exit 0
+          fi
+
+          today=$(TZ=Europe/Paris date +%F)
+          # Ne jamais rejeter un déclenchement GitHub retardé :
+          # seule la fraîcheur réelle des données décide de lancer la collecte.
+
+          # Contrôler la date des DONNÉES réellement enregistrées, et non
+          # la conclusion success d'un workflow qui aurait sauté la collecte.
+          api="https://api.github.com/repos/$GH_REPOSITORY/contents/public/status.json?ref=main"
+          if payload=$(curl -fsSL --retry 2 -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "$api"); then
+            last_run=$(printf '%s' "$payload" | jq -er '.content' | base64 -d | jq -r '.last_run // empty' || true)
+            # Convertir l'horodatage UTC en Europe/Paris : une collecte
+            # à 00h35 locale ne doit pas remplacer le passage matinal.
+            last_local=$(TZ=Europe/Paris date -d "$last_run" +%Y-%m-%dT%H:%M:%S 2>/dev/null || true)
+            if [[ "$last_local" == "$today"T* ]]; then
+              last_hour="${last_local:11:2}"
+              if (( 10#$last_hour >= 4 )); then
+                if saturday_scan_missing; then
+                  echo "run=true" >> "$GITHUB_OUTPUT"
+                  echo "collect=true" >> "$GITHUB_OUTPUT"
+                  echo "Samedi : relance du scan Contrail, iniBuilds et SimMarket absent"
+                  exit 0
+                fi
+                echo "run=false" >> "$GITHUB_OUTPUT"
+                echo "collect=false" >> "$GITHUB_OUTPUT"
+                echo "Collecte matinale du $today déjà enregistrée à $last_local : rattrapage inutile"
+                exit 0
+              fi
+              echo "Collecte du jour à $last_local, trop tôt pour le contrôle matinal : relance"
+            fi
+          fi
+          echo "run=true" >> "$GITHUB_OUTPUT"
+          echo "collect=true" >> "$GITHUB_OUTPUT"
+          echo "Journal absent ou ancien pour $today : collecte/rattrapage lancé"
+          
+      - name: Récupérer la photo WINCTRL Brake Pressure Gauge (publication rapide)
+        if: github.event_name == 'push'
+        run: |
+          python scripts/fetch_hardware_photos.py --brake-only
+          git config user.name "journal-msfs-bot"
+          git config user.email "journal-msfs-bot@users.noreply.github.com"
+          git add public/hardware-images.json public/hardware/
+          if ! git diff --cached --quiet; then
+            git commit -m "Journal: photo WINCTRL Brake Pressure Gauge"
+            git push origin HEAD:main
+          fi
+
+      - name: Construire les pages HTML pour la publication rapide
+        if: github.event_name == 'push' && steps.gate.outputs.collect != 'true'
+        run: python scripts/build_site.py
+
+      - name: Python
+        if: steps.gate.outputs.collect == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Installer le lecteur Excel
+        if: steps.gate.outputs.collect == 'true'
+        run: python -m pip install openpyxl==3.1.5
+
+      - name: Importer le nouvel inventaire Excel
+        if: steps.gate.outputs.collect == 'true'
+        run: |
+          python scripts/import_airports_excel.py
+          python scripts/build_comparisons.py
+
+      - name: Vérifier le code et les scripts du site
+        if: steps.gate.outputs.collect == 'true'
+        run: |
+          python -m unittest discover -s tests -v
+          python -m py_compile scripts/build_comparisons.py scripts/update.py scripts/versions.py scripts/releases.py scripts/watch_sources.py scripts/build_site.py scripts/build_airport_map.py scripts/import_airports_excel.py scripts/smoke_live.py scripts/discover_airports.py scripts/discover_simmarket.py scripts/apply_airport_sources.py scripts/software_versions.py scripts/sayintentions_news.py scripts/editorial_news.py scripts/winctrl_airbus.py scripts/fetch_hardware_photos.py scripts/fetch_simbrief.py scripts/fetch_sayintentions_career.py
+          node --check public/app.js
+          node tests/test_frontend.cjs
+
+      - name: Rechercher de nouvelles fiches produit (hebdomadaire)
+        if: steps.gate.outputs.collect == 'true'
+        run: |
+          # La vérification des versions se fait chaque matin sur les fiches
+          # existantes. Les catalogues entiers sont rescannés le samedi.
+          excel_changed=false
+          if [[ "$GITHUB_EVENT_NAME" == "push" ]]; then
+            if git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" -- data/airports/ | grep -Fq '.xlsx'; then
+              excel_changed=true
+              echo "Nouvel inventaire Excel : recherche complète."
+            fi
+          fi
+          if [[ "$excel_changed" == "true" ]] || [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.mode }}" == "totale" ]] || [[ "$(TZ=Europe/Paris date +%u)" == "6" ]]; then
+            python scripts/discover_airports.py || echo "Catalogue Contrail / iniBuilds indisponible"
+            python scripts/discover_simmarket.py || echo "Recherche simMarket indisponible"
+            python scripts/apply_airport_sources.py
+          else
+            echo "Recherche catalogue complète : nouvel Excel, samedi ou lancement manuel total."
+          fi
+
+      - name: Collecter METAR, TAF, actualités et versions de scènes
+        if: steps.gate.outputs.collect == 'true'
+        run: python scripts/update.py
+
+      - name: Collecter les annonces et visuels WINCTRL Airbus (MSFS Addons)
+        if: steps.gate.outputs.collect == 'true'
+        run: python scripts/winctrl_airbus.py
+
+      - name: Récupérer le dernier plan de vol SimBrief Matthis
+        if: steps.gate.outputs.collect == 'true'
+        run: python scripts/fetch_simbrief.py
+
+      - name: Installer Chromium pour le profil pilote public
+        if: steps.gate.outputs.collect == 'true'
+        run: |
+          python -m pip install playwright==1.56.0
+          python -m playwright install --with-deps chromium
+
+      - name: Lire le profil public SayIntentions Gate 404 Mathis
+        if: steps.gate.outputs.collect == 'true'
+        run: python scripts/fetch_sayintentions_career.py
+
+      - name: Mettre à jour les photos réelles du matériel
+        if: steps.gate.outputs.collect == 'true'
+        run: python scripts/fetch_hardware_photos.py
+
+      - name: Vérifier les sites des éditeurs et logiciels surveillés
+        if: steps.gate.outputs.collect == 'true'
+        run: python scripts/watch_sources.py
+
+      - name: Récupérer les logos originaux des éditeurs
+        if: steps.gate.outputs.collect == 'true'
+        run: python scripts/fetch_brand_assets.py
+
+      - name: Construire le site, la veille et la liste indépendante
+        if: steps.gate.outputs.collect == 'true'
+        run: |
+          python scripts/build_comparisons.py
+          python scripts/build_airport_map.py
+          python scripts/build_site.py
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          p=Path('public/index.html').read_text()
+          a=Path('public/airports.html').read_text()
+          w=json.loads(Path('public/watch.json').read_text())
+          s=json.loads(Path('public/status.json').read_text())
+          airports=json.loads(Path('public/airports.json').read_text())
+          sw=json.loads(Path('public/software_versions.json').read_text())
+          catalog=json.loads(Path('public/software_catalog.json').read_text())
+          checks={
+           'index airport rows':p.count('<tr>')>=len(airports),
+           'independent airport rows':a.count('<tr>')>=len(airports),
+           'watch total':w['total']>=30,
+           'airport inventory':s['version_coverage']['inventory_total']==len(airports),
+           'software inventory':sw['total']==len(catalog),
+           'hardware images':bool(json.loads(Path('public/hardware-images.json').read_text())),
+           'winctrl Airbus':len(json.loads(Path('public/winctrl_airbus.json').read_text()).get('articles',[]))>=5,
+           'software section':'id="logiciels"' in p,
+           'JS revision':'app.js?rev=' in p,
+          }
+          for name,ok in checks.items():print(('OK' if ok else 'FAIL')+' : '+name,flush=True)
+          assert all(checks.values()),'Contrôle de publication échoué : '+', '.join(k for k,v in checks.items() if not v)
+          PY
+
+      - name: Enregistrer les données collectées
+        if: steps.gate.outputs.collect == 'true'
+        run: |
+          git config user.name "journal-msfs-bot"
+          git config user.email "journal-msfs-bot@users.noreply.github.com"
+          git add public/comparisons.json public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/winctrl_airbus.json public/hardware/
+          if [[ -f public/sayintentions-rank.svg ]]; then git add public/sayintentions-rank.svg; fi
+          if ! git diff --cached --quiet; then
+            git commit -m "Journal: collecte automatique $(date -u +%Y-%m-%d)"
+            if ! git push origin HEAD:main; then
+              echo "Dépôt modifié pendant la collecte : conserver les données puis repartir du dernier main."
+              mkdir -p "$RUNNER_TEMP/journal-sync"
+              cp public/comparisons.json public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/winctrl_airbus.json "$RUNNER_TEMP/journal-sync/"
+              mkdir -p "$RUNNER_TEMP/journal-sync/hardware"
+              if [[ -d public/hardware ]]; then cp -a public/hardware/. "$RUNNER_TEMP/journal-sync/hardware/"; fi
+              success=false
+              for attempt in 1 2 3; do
+                git fetch origin main
+                git reset --hard origin/main
+                cp "$RUNNER_TEMP/journal-sync/"*.json public/
+                mkdir -p public/hardware
+                cp -a "$RUNNER_TEMP/journal-sync/hardware/." public/hardware/
+                git add public/comparisons.json public/airport_coordinates.json public/simbrief_last.json public/sayintentions_career.json public/status.json public/airports.json public/watch.json public/airport_source_candidates.json public/software_versions.json public/hardware-images.json public/winctrl_airbus.json public/hardware/
+                if git diff --cached --quiet; then
+                  success=true
+                  break
+                fi
+                git commit -m "Journal: collecte automatique $(date -u +%Y-%m-%d) [synchronisation]"
+                if git push origin HEAD:main; then
+                  success=true
+                  break
+                fi
+                echo "Nouvelle tentative de synchronisation $attempt/3"
+              done
+              if [[ "$success" != true ]]; then
+                echo "Échec de synchronisation : ne pas publier un site avec des données non enregistrées."
+                exit 1
+              fi
+              python scripts/build_site.py
+            fi
+          fi
+
+      - name: Configurer GitHub Pages
+        if: steps.gate.outputs.run == 'true'
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Préparer le site statique
+        if: steps.gate.outputs.run == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Publier le site
+        if: steps.gate.outputs.run == 'true'
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Vérifier le vrai site public après publication
+        if: steps.gate.outputs.run == 'true'
+        run: python scripts/smoke_live.py "${{ steps.deployment.outputs.page_url }}"
+; then
+              echo "run=true" >> "$GITHUB_OUTPUT"
+              echo "collect=true" >> "$GITHUB_OUTPUT"
+              echo "Nouvel Excel : import et reconstruction complète obligatoires"
+              exit 0
+            fi
             # Un push après 04h (Paris) sert aussi de rattrapage si les
             # déclenchements planifiés n'ont pas collecté les données du jour.
             # Une collecte récente conserve le chemin de publication rapide.
