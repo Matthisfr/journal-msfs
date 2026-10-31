@@ -1482,5 +1482,68 @@
     "name": "Aix Les Milles airport",
     "source": "OurAirports / airport-codes",
     "aircraft_marker": "cessna"
+  },
+  "NTAA": {
+    "lat": -17.553472,
+    "lon": -149.606936,
+    "name": "Fa'a'ā International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "NTTB": {
+    "lat": -16.444400787353516,
+    "lon": -151.75100708007812,
+    "name": "Bora Bora Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "cessna"
+  },
+  "NTTH": {
+    "lat": -16.687084,
+    "lon": -151.021593,
+    "name": "Huahine-Fare Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "cessna"
+  },
+  "NTTM": {
+    "lat": -17.48979,
+    "lon": -149.761777,
+    "name": "Moorea Temae Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "cessna"
+  },
+  "SABE": {
+    "lat": -34.559419,
+    "lon": -58.415536,
+    "name": "Aeroparque Jorge Newbery",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SBGR": {
+    "lat": -23.431274,
+    "lon": -46.469954,
+    "name": "São Paulo/Guarulhos–Governor André Franco Montoro International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SBSP": {
+    "lat": -23.627657,
+    "lon": -46.654601,
+    "name": "Congonhas–Deputado Freitas Nobre Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SKBO": {
+    "lat": 4.70159,
+    "lon": -74.1469,
+    "name": "El Dorado International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SKMD": {
+    "lat": 6.219686,
+    "lon": -75.590597,
+    "name": "Enrique Olaya Herrera Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
   }
 }

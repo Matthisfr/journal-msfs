@@ -1063,5 +1063,35 @@
         "À vérifier"
       ]
     ]
+  },
+  {
+    "code": "NTTH",
+    "name": "simple scenery",
+    "scenes": [
+      {
+        "publisher": "ps",
+        "installed": "1.0.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "My Company",
+        "installed": "1.1.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
   }
 ]
