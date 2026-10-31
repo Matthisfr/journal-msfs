@@ -108,15 +108,26 @@ function renderAirports(){
 let airportMap=null;
 let simbriefRouteBounds=null;
 const WORLD_BOUNDS=[[-85,-180],[85,180]];
-function showWholeWorld(){if(!airportMap)return;airportMap.invalidateSize();airportMap.fitBounds(WORLD_BOUNDS,{padding:[8,8],animate:true});}
+let preFlightMapView=null;
+function savePreFlightMapView(){
+ if(airportMap&&!preFlightMapView){
+  preFlightMapView={center:airportMap.getCenter(),zoom:airportMap.getZoom()};
+ }
+}
+function restorePreFlightMapView(){
+ if(!airportMap||!preFlightMapView)return;
+ airportMap.invalidateSize();
+ airportMap.setView(preFlightMapView.center,preFlightMapView.zoom,{animate:true});
+ preFlightMapView=null;
+}
 let simbriefRouteLayer=null;
 let simbriefRouteButton=null;
 let showSimbriefOnLoad=false;
 function setSimbriefRouteVisible(visible){
  if(!airportMap||!simbriefRouteLayer)return;
- if(visible&&!airportMap.hasLayer(simbriefRouteLayer))simbriefRouteLayer.addTo(airportMap);
+ if(visible&&!airportMap.hasLayer(simbriefRouteLayer)){savePreFlightMapView();simbriefRouteLayer.addTo(airportMap);}
  if(!visible&&airportMap.hasLayer(simbriefRouteLayer))airportMap.removeLayer(simbriefRouteLayer);
- if(!visible)showWholeWorld();
+ if(!visible)restorePreFlightMapView();
  if(simbriefRouteButton){simbriefRouteButton.textContent=visible?'👁 Masquer le dernier vol':'👁 Voir le dernier vol';simbriefRouteButton.setAttribute('aria-pressed',String(visible));}
 }
 let focusSimbriefOnOpen=false;
@@ -200,7 +211,7 @@ async function addSimbriefRoute(map, airportData, slot){
   simbriefRouteBounds=fromSimbriefBounds(fixes,start,end);
   const layer=L.layerGroup();
   simbriefRouteLayer=layer;
-  if(showSimbriefOnLoad)layer.addTo(map);
+  if(showSimbriefOnLoad){savePreFlightMapView();layer.addTo(map);}
   const icon=(type)=>L.divIcon({className:'simbrief-aircraft',html:'<span style="display:grid;place-items:center;background:#102c42;border:2px solid white;color:white;border-radius:50%;width:38px;height:38px;font-size:23px">'+(type==='departure'?'🛫':'🛬')+'</span>',iconSize:[38,38],iconAnchor:[19,19]});
   const from=valid(start)?[Number(start.lat),Number(start.lon)]:points[0];
   const to=valid(end)?[Number(end.lat),Number(end.lon)]:points[points.length-1];
