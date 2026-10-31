@@ -36,6 +36,11 @@ def compare(installed, online):
 def render_rows(airports):
     out = []
     cls = {"UNK-P": "p", "UNK-V": "v", "UNK-C": "c", "UNK-S": "s"}
+    # Garder les doublons par ICAO et trier leurs scènes par nom.
+    airports = sorted(airports, key=lambda a: (
+        str(a.get("icao") or "").strip().upper(),
+        str(a.get("name") or "").casefold()
+    ))
     for a in airports:
         original = a.get("original") or ""
         icao = a.get("icao") or ""
