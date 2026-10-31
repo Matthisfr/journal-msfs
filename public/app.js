@@ -90,7 +90,12 @@ function renderAirports(){
   const isHeliport=a=>a.scene_type==="heliport"||/heliport|helipad|helistop|helisurface/i.test([a.name,a.folder].join(" "));
   const duplicateCounts=new Map();
   airports.forEach(a=>{const code=String(a.icao||'').trim().toUpperCase();if(code)duplicateCounts.set(code,(duplicateCounts.get(code)||0)+1)});
-  const matches=airports.filter(a=>(!q||[a.icao,a.original,a.name,a.publisher,a.folder,a.country,a.region,a.installed,a.server_version].join(' ').toLowerCase().includes(q))&&(!region||(a.region||a.country)===region)&&(!st||(st==='airliner'||st==='cessna'?airportCoordinates[String(a.icao||'').trim().toUpperCase()]?.aircraft_marker===st:st==='verified'?isVerified(a):st==='current'?isVerified(a)&&a.version_comparison==='equal':st==='update'?isVerified(a)&&a.version_comparison==='update':st==='duplicates'?(duplicateCounts.get(String(a.icao||'').trim().toUpperCase())||0)>1:a.status===st)));
+  const matches=airports.filter(a=>(!q||[a.icao,a.original,a.name,a.publisher,a.folder,a.country,a.region,a.installed,a.server_version].join(' ').toLowerCase().includes(q))&&(!region||(a.region||a.country)===region)&&(!st||(st==='airliner'||st==='cessna'?airportCoordinates[String(a.icao||'').trim().toUpperCase()]?.aircraft_marker===st:st==='verified'?isVerified(a):st==='current'?isVerified(a)&&a.version_comparison==='equal':st==='update'?isVerified(a)&&a.version_comparison==='update':st==='duplicates'?(duplicateCounts.get(String(a.icao||'').trim().toUpperCase())||0)>1:a.status===st))).sort((left,right)=>{
+    const lc=String(left.icao||'').trim().toUpperCase();
+    const rc=String(right.icao||'').trim().toUpperCase();
+    return lc.localeCompare(rc,'en',{numeric:true})||
+      String(left.name||'').localeCompare(String(right.name||''),'fr');
+  });
   if(airportMap)updateAirportMap(matches);
   $('#airport-count').textContent=`${matches.length} scène${matches.length>1?'s':''} affichée${matches.length>1?'s':''} sur ${airports.length}`;
   const cls={'UNK-P':'p','UNK-V':'v','UNK-C':'c','UNK-S':'s','verified':'ok'};
