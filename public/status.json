@@ -1,14 +1,14 @@
 {
   "edition": "2026-10-31",
-  "last_run": "2026-10-31T10:34:12.994478+00:00",
-  "weather_checked_at": "2026-10-31T10:34:12.994478+00:00",
-  "news_checked_at": "2026-10-31T10:34:12.994478+00:00",
+  "last_run": "2026-10-31T11:21:11.629797+00:00",
+  "weather_checked_at": "2026-10-31T11:21:11.629797+00:00",
+  "news_checked_at": "2026-10-31T11:21:11.629797+00:00",
   "weather": [
     {
       "icao": "EFRO",
       "name": "EFRO Rovaniemi Airport",
-      "observed_at": "2026-10-31T10:20:00+00:00",
-      "raw": "METAR EFRO 311020Z AUTO 21009KT 0350 R21/0550N FZFG VV002 M00/M00 Q1026",
+      "observed_at": "2026-10-31T10:50:00+00:00",
+      "raw": "METAR EFRO 311050Z AUTO 21011KT 0350 R21/0600U FZFG VV002 M00/M00 Q1025",
       "score": 145,
       "summary": "brouillard, visibilité < 1 SM",
       "icon": "🌫️",
@@ -20,8 +20,8 @@
     {
       "icao": "ENGM",
       "name": "Aerosoft Oslo Airport",
-      "observed_at": "2026-10-31T10:20:00+00:00",
-      "raw": "METAR ENGM 311020Z VRB02KT 0300 R19R/0400N R01R/0450N R19L/0450N R01L/0450N FG VV002 04/04 Q1030 TEMPO 0900",
+      "observed_at": "2026-10-31T10:50:00+00:00",
+      "raw": "METAR ENGM 311050Z 15003KT 0400 R19R/0450N R01R/0450N R19L/0550N R01L/0450N FG VV002 04/04 Q1030 TEMPO 0900",
       "score": 145,
       "summary": "brouillard, visibilité < 1 SM",
       "icon": "🌫️",
@@ -31,49 +31,62 @@
       "taf_raw": "TAF ENGM 310500Z 3106/0106 VRB03KT 0300 FG VV001 TEMPO 3106/3112 0800 FG VV002 PROB40 TEMPO 3112/3118 4000 BR BKN003"
     },
     {
-      "icao": "LMML",
-      "name": "LMML Malta International",
-      "observed_at": "2026-10-31T10:15:00+00:00",
-      "raw": "METAR LMML 311015Z VRB02KT 9999 -RA FEW015CB 18/15 Q1016 RETS RESHRA",
-      "score": 122,
-      "summary": "orage, précipitations",
-      "icon": "⛈️",
-      "phenomenon": "Orage",
+      "icao": "KDEN",
+      "name": "KDEN Denver International Airport",
+      "observed_at": "2026-10-31T11:13:00+00:00",
+      "raw": "SPECI KDEN 311113Z 34005KT 1/4SM R35L/4500VP6000FT FG OVC001 07/07 A3001 RMK AO2 TWR VIS 1/2 T00670067",
+      "score": 145,
+      "summary": "brouillard, visibilité < 1 SM",
+      "icon": "🌫️",
+      "phenomenon": "Brouillard",
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LMML 310500Z 3106/0106 VRB05KT 9999 FEW015CB TEMPO 3106/0106 8000 SHRA BKN020TCU PROB40 TEMPO 3106/0106 VRB15G25KT 4000 TSRA BKN015CB BECMG 0100/0103 29010KT"
+      "taf_raw": "TAF KDEN 310856Z 3109/0112 VRB05KT P6SM BKN180 TEMPO 3111/3112 1/4SM FG BKN002 FM311200 VRB05KT 1/4SM FG VV001 FM311700 31007KT 3/4SM BR OVC001 TEMPO 3117/3119 6SM SCT002 SCT070 FM312000 36007KT P6SM FEW009 FEW080 FM312300 05007KT P6SM SCT090 FM010100 VRB05KT P6SM FEW080 SCT090 FM010400 17006KT P6SM FEW060 SCT080"
+    },
+    {
+      "icao": "SKCL",
+      "name": "SKCL Alfonso Bonilla Aragon Int Airport",
+      "observed_at": "2026-10-31T11:00:00+00:00",
+      "raw": "METAR SKCL 311100Z VRB02KT 8000 VCFG SCT010 BKN040 21/19 Q1015",
+      "score": 85,
+      "summary": "brouillard, visibilité < 5 SM",
+      "icon": "🌫️",
+      "phenomenon": "Brouillard",
+      "level": "Dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF SKCL 311055Z 3112/0112 VRB02KT 9999 SCT020 BKN050 PROB30 TEMPO 3120/3124 32010KT 7000 SHRA SCT020CB PROB30 TEMPO 0110/0112 4000 BR DZ BKN006 TX30/3119Z TN20/0111Z"
     },
     {
       "icao": "KCRW",
       "name": "KCRW West Virginia International Yeager Airport",
-      "observed_at": "2026-10-31T09:54:00+00:00",
-      "raw": "METAR KCRW 310954Z 00000KT 10SM FEW000 04/04 A3039 RMK AO2 SLP289 FG FEW000 T00440044",
+      "observed_at": "2026-10-31T10:54:00+00:00",
+      "raw": "METAR KCRW 311054Z 06003KT 10SM FEW000 SCT220 04/04 A3040 RMK AO2 SLP293 FG FEW000 T00440044",
       "score": 65,
       "summary": "brouillard",
       "icon": "🌫️",
       "phenomenon": "Brouillard",
       "level": "Dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KCRW 310520Z 3106/0106 00000KT P6SM SCT200 FM311100 00000KT 3SM BR SCT002 FM311230 06004KT P6SM BKN140 FM010000 00000KT P6SM BKN180"
+      "taf_raw": "TAF KCRW 311120Z 3112/0112 VRB03KT P6SM SCT240 FM311500 07004KT P6SM BKN220 FM010300 00000KT P6SM BKN150"
     },
     {
       "icao": "SKBO",
-      "name": "WSM_SKBO",
-      "observed_at": "2026-10-31T10:30:00+00:00",
-      "raw": "SPECI SKBO 311030Z VRB02KT 9999 VCFG FEW040 10/10 Q1026 NOSIG",
+      "name": "Airport",
+      "observed_at": "2026-10-31T11:00:00+00:00",
+      "raw": "METAR SKBO 311100Z 08003KT 050V130 9999 VCFG SCT040 09/09 Q1027 NOSIG RMK VCFG/N",
       "score": 65,
       "summary": "brouillard",
       "icon": "🌫️",
       "phenomenon": "Brouillard",
       "level": "Dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF SKBO 310455Z 3106/0106 VRB03KT 9999 SCT030 BECMG 3115/3117 12010KT PROB40 TEMPO 3120/3124 26006KT SHRA SCT020TCU TX20/3119Z TN09/3110Z"
+      "taf_raw": "TAF SKBO 311055Z 3112/0112 04004KT 9999 SCT030 BECMG 3115/3117 12010KT TEMPO 3120/3124 26006KT SHRA SCT020TCU BECMG 3123/0101 VRB03KT TEMPO 0108/0112 8000 VCFG BKN017 TX20/3119Z TN10/0110Z"
     },
     {
       "icao": "EHAM",
       "name": "EHAM Amsterdam Airport",
-      "observed_at": "2026-10-31T10:25:00+00:00",
-      "raw": "METAR EHAM 311025Z 12005KT 070V150 3000 BR FEW001 BKN002 BKN003 08/08 Q1034 BECMG BKN003",
+      "observed_at": "2026-10-31T10:55:00+00:00",
+      "raw": "METAR EHAM 311055Z 05004KT 020V080 3000 BR FEW001 BKN002 BKN003 08/08 Q1034 BECMG BKN003",
       "score": 45,
       "summary": "visibilité < 3 SM",
       "icon": "☁️",
@@ -85,8 +98,8 @@
     {
       "icao": "EHRD",
       "name": "EHRD Rotterdam The Hague",
-      "observed_at": "2026-10-31T10:25:00+00:00",
-      "raw": "METAR EHRD 311025Z AUTO 11007KT 4500 BR OVC003 08/07 Q1033 TEMPO 2500 BKN002",
+      "observed_at": "2026-10-31T10:55:00+00:00",
+      "raw": "METAR EHRD 311055Z AUTO 11006KT 060V140 4600 BR OVC003/// 08/07 Q1033 TEMPO 4000 BR BKN002",
       "score": 45,
       "summary": "visibilité < 3 SM",
       "icon": "☁️",
@@ -96,49 +109,36 @@
       "taf_raw": "TAF EHRD 310510Z 3106/0112 10006KT 2500 BR BKN002 PROB30 3106/3108 BKN001 BECMG 3108/3111 4000 BR BKN005 BECMG 3111/3113 9999 NSW BKN012 BECMG 3118/3121 VRB02KT SCT025 PROB30 3121/0106 4000 BR MIFG BECMG 0109/0112 30005KT"
     },
     {
-      "icao": "LFSB",
-      "name": "LFSB Basel-Mulhouse-Freiburg EuroAirport",
-      "observed_at": "2026-10-31T10:30:00+00:00",
-      "raw": "METAR LFSB 311030Z AUTO 33005KT 300V010 3400 1700NW BR OVC002 05/05 Q1028 BECMG 8000 NSW NSC",
+      "icao": "SKPE",
+      "name": "SKPE Matecana International Airport",
+      "observed_at": "2026-10-31T11:00:00+00:00",
+      "raw": "METAR SKPE 311100Z 30004KT 3000 BR BKN010 19/19 Q1017",
       "score": 45,
       "summary": "visibilité < 3 SM",
       "icon": "☁️",
       "phenomenon": "Ciel couvert",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LFSB 310500Z 3106/0106 33003KT 3000 BR OVC003 TEMPO 3106/3109 0300 FG VV/// BECMG 3110/3113 8000 NSW NSC BECMG 3118/3120 3000 BR BECMG 3122/3124 OVC003 TEMPO 0100/0106 0300 FG VV///"
+      "taf_raw": "TAF SKPE 311055Z 3112/0112 VRB02KT 9999 BKN020 TEMPO 3119/3123 12010KT 5000 SHRA SCT020TCU TEMPO 0101/0105 DZ BKN012 PROB40 TEMPO 0108/0112 3000 BR BKN004 TX26/3119Z TN18/0109Z"
     },
     {
-      "icao": "ENTC",
-      "name": "ENTC Tromso Airport",
-      "observed_at": "2026-10-31T10:20:00+00:00",
-      "raw": "METAR ENTC 311020Z 19021G32KT 9999 -RA BKN032 10/05 Q1014 TEMPO 21020KT RADZ BKN014 RMK WIND 2600FT 19040KT",
+      "icao": "PANC",
+      "name": "sim-wings Anchorage",
+      "observed_at": "2026-10-31T10:53:00+00:00",
+      "raw": "METAR PANC 311053Z 15015G29KT 10SM FEW080 BKN090 05/01 A2919 RMK AO2 PK WND 14034/1020 RAB10E22 SLP886 P0000 T00500006 $",
       "score": 34,
       "summary": "rafales ≥ 25 kt, précipitations",
       "icon": "🌧️",
       "phenomenon": "Précipitations",
       "level": "À surveiller",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF ENTC 310500Z 3106/0106 20017KT 9999 -RA BKN035 TEMPO 3108/3116 25020G30KT TEMPO 3109/3116 4000 RA BKN008 BECMG 3112/3115 25007KT BECMG 3116/3118 18010KT"
-    },
-    {
-      "icao": "KMCI",
-      "name": "KMCI Kansas City Airport",
-      "observed_at": "2026-10-31T09:53:00+00:00",
-      "raw": "METAR KMCI 310953Z 00000KT 4SM -RA BR FEW070 OVC090 17/16 A3022 RMK AO2 RAB37 SLP226 P0000 T01670161",
-      "score": 32,
-      "summary": "visibilité < 5 SM, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "À surveiller",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KMCI 310520Z 3106/0106 11008KT P6SM -RA SCT070 BKN100 FM311600 13006KT P6SM OVC080"
+      "taf_raw": "TAF PANC 310959Z 3110/0112 15013G25KT P6SM -SHRA SCT060 BKN090 FM311400 16011G20KT P6SM -SHRA SCT030 BKN040 FM312100 15010KT P6SM VCSH SCT030 BKN050"
     }
   ],
   "weather_coverage": {
-    "eligible": 220,
-    "received": 211,
-    "fresh": 211
+    "eligible": 238,
+    "received": 229,
+    "fresh": 229
   },
   "news": [
     {
@@ -434,7 +434,7 @@
       "date": "2026-10-22",
       "source": "Forum officiel Microsoft Flight Simulator",
       "url": "https://forums.flightsimulator.com/t/blog-weekly-briefing-for-2026-10-22/779510",
-      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Poursuivez votre lecture pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
+      "summary": "Le dernier briefing hebdomadaire est maintenant disponible ! Lisez la suite pour plus d'informations sur : Informations bêta de la mise à jour Sim 7.1 de novembre Formulaire de questions en direct pour les développeurs Sorties hebdomadaires du marché Captures d'écran des gagnants du concours Et plus encore ! 22 octobre 2026…",
       "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
       "new": false
     },
@@ -579,34 +579,34 @@
   ],
   "note": "Collecte quotidienne automatique : METAR/TAF NOAA, flux officiel MSFS, versions GitHub publiées, audit des scènes répertoriées, extraction des versions des boutiques publiques reconnues et surveillance des sites publics. Les versions non publiées ou inaccessibles restent UNKNOWN ; une page modifiée n’est pas une mise à jour confirmée.",
   "version_coverage": {
-    "verified_today": 194,
-    "eligible": 227,
+    "verified_today": 204,
+    "eligible": 241,
     "unavailable": 0,
     "no_version": 13,
     "inconsistent": 8,
     "not_automatable": 1,
-    "no_source": 31,
-    "source_older": 12,
-    "total_checked": 259,
-    "with_source": 227,
-    "missing_source": 32,
-    "updates_confirmed": 9,
-    "inventory_total": 259,
-    "official_url_known": 227,
-    "without_official_url": 32,
+    "no_source": 36,
+    "source_older": 16,
+    "total_checked": 278,
+    "with_source": 241,
+    "missing_source": 37,
+    "updates_confirmed": 10,
+    "inventory_total": 278,
+    "official_url_known": 241,
+    "without_official_url": 37,
     "manual_source": 1,
-    "unverified": 65,
-    "audited_at": "2026-10-31T10:34:12.994478+00:00"
+    "unverified": 74,
+    "audited_at": "2026-10-31T11:21:11.629797+00:00"
   },
-  "versions_checked_at": "2026-10-31T10:34:12.994478+00:00",
-  "releases_checked_at": "2026-10-31T10:34:12.994478+00:00",
+  "versions_checked_at": "2026-10-31T11:21:11.629797+00:00",
+  "releases_checked_at": "2026-10-31T11:21:11.629797+00:00",
   "software_coverage": {
     "total": 19,
     "verified": 9,
     "changed": 0,
-    "checked_at": "2026-10-31T10:36:03.668193+00:00",
+    "checked_at": "2026-10-31T11:22:37.920899+00:00",
     "unverified": 10
   },
   "airac_cycle": "2611",
-  "winctrl_airbus_checked_at": "2026-10-31T10:36:13.469329+00:00"
+  "winctrl_airbus_checked_at": "2026-10-31T11:22:45.315173+00:00"
 }

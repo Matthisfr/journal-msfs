@@ -250,6 +250,36 @@
     "criteria": []
   },
   {
+    "code": "SKBO",
+    "name": "Airport",
+    "scenes": [
+      {
+        "publisher": "My Company",
+        "installed": "1.0.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "WSM",
+        "installed": "2.1.0",
+        "url": "https://secure.simmarket.com/wingsim-skbo-bogota-el-dorado-intl-msfs2024.phtml",
+        "image": "https://secure.simmarket.com/images/products/5/51/20157/logo_peq_msfs_BOG_copia.png",
+        "image_checked": true,
+        "comparison": "incomparable",
+        "server_version": "2.12",
+        "version_state": "À vérifier"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
     "code": "SOCA",
     "name": "airport-soca-cayenne",
     "scenes": [

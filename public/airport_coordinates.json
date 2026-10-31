@@ -1545,5 +1545,131 @@
     "name": "Enrique Olaya Herrera Airport",
     "source": "OurAirports / airport-codes",
     "aircraft_marker": "airliner"
+  },
+  "SAEZ": {
+    "lat": -34.8222,
+    "lon": -58.5358,
+    "name": "Ezeiza International Airport - Ministro Pistarini",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SAME": {
+    "lat": -32.831699,
+    "lon": -68.7929,
+    "name": "Governor Francisco Gabrielli International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SANT": {
+    "lat": -26.837397,
+    "lon": -65.104195,
+    "name": "Teniente Benjamín Matienzo International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SASA": {
+    "lat": -24.856001,
+    "lon": -65.486198,
+    "name": "Martín Miguel de Güemes International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SASJ": {
+    "lat": -24.392799,
+    "lon": -65.097801,
+    "name": "Gobernador Horacio Guzman International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SBKP": {
+    "lat": -23.007404,
+    "lon": -47.134502,
+    "name": "Viracopos International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SBRF": {
+    "lat": -8.12747,
+    "lon": -34.922961,
+    "name": "Recife/Guararapes - Gilberto Freyre International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SCEL": {
+    "lat": -33.393001556396484,
+    "lon": -70.78579711914062,
+    "name": "Comodoro Arturo Merino Benítez International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SCIP": {
+    "lat": -27.165411,
+    "lon": -109.421027,
+    "name": "Mataveri International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SCJO": {
+    "lat": -40.611198,
+    "lon": -73.060997,
+    "name": "Cañal Bajo Carlos Hott Siebert Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SCTE": {
+    "lat": -41.443093,
+    "lon": -73.094065,
+    "name": "El Tepual International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SEGU": {
+    "lat": -2.15742,
+    "lon": -79.883598,
+    "name": "José Joaquín de Olmedo International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SKCG": {
+    "lat": 10.4424,
+    "lon": -75.513,
+    "name": "Rafael Nuñez International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SKCL": {
+    "lat": 3.542717,
+    "lon": -76.381898,
+    "name": "Alfonso Bonilla Aragon International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SKPE": {
+    "lat": 4.81267,
+    "lon": -75.7395,
+    "name": "Matecaña International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SKSP": {
+    "lat": 12.5836,
+    "lon": -81.7112,
+    "name": "Gustavo Rojas Pinilla International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SPJC": {
+    "lat": -12.0219,
+    "lon": -77.114305,
+    "name": "Jorge Chávez International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "SUMU": {
+    "lat": -34.835647,
+    "lon": -56.026497,
+    "name": "Carrasco General Cesáreo L. Berisso International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
   }
 }
