@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-30T17:30:52.182724+00:00",
+  "checked_at": "2026-10-31T06:05:24.235827+00:00",
   "source_url": "https://msfsaddons.com/developer/winctrl/",
   "source_state": "ok",
   "scope": "Matériels Airbus uniquement ; annonces historiques et prix datés",
@@ -92,6 +92,13 @@
     }
   ],
   "products": {
+    "brake-pressure-gauge": {
+      "price": "$39.95",
+      "price_date": "2026-08-24",
+      "availability": "Annoncé ; date de commercialisation non confirmée",
+      "release_kind": "sortie non confirmée",
+      "announcement_url": "https://fsnews.eu/winctrl-unveils-newest-piece-of-hardware-for-home-airbus-cockpits/"
+    },
     "sidestick-metal": {
       "price": "$55.53",
       "price_eu": "€53.31",
