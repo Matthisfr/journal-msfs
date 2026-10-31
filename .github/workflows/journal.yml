@@ -49,9 +49,28 @@ jobs:
           TRIGGER: ${{ github.event_name }}
         run: |
           if [[ "$TRIGGER" == "push" ]]; then
+            # Un push après 04h (Paris) sert aussi de rattrapage si les
+            # déclenchements planifiés n'ont pas collecté les données du jour.
+            # Une collecte récente conserve le chemin de publication rapide.
+            now_local=$(TZ=Europe/Paris date +%Y-%m-%dT%H:%M:%S)
+            now_hour="${now_local:11:2}"
+            if (( 10#$now_hour >= 4 )); then
+              api="https://api.github.com/repos/$GH_REPOSITORY/contents/public/status.json?ref=main"
+              last_local=""
+              if payload=$(curl -fsSL --retry 2 -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "$api"); then
+                last_run=$(printf '%s' "$payload" | jq -er '.content' | base64 -d | jq -r '.last_run // empty' || true)
+                last_local=$(TZ=Europe/Paris date -d "$last_run" +%Y-%m-%dT%H:%M:%S 2>/dev/null || true)
+              fi
+              if [[ "$last_local" != "${now_local:0:10}"T* ]] || [[ "${last_local:11:2}" < "04" ]]; then
+                echo "run=true" >> "$GITHUB_OUTPUT"
+                echo "collect=true" >> "$GITHUB_OUTPUT"
+                echo "Push de rattrapage : données du matin absentes (dernière collecte : $last_local)"
+                exit 0
+              fi
+            fi
             echo "run=true" >> "$GITHUB_OUTPUT"
             echo "collect=false" >> "$GITHUB_OUTPUT"
-            echo "Commit : publication rapide sans collecte"
+            echo "Commit : publication rapide, données matinales déjà fraîches ou avant 04h"
             exit 0
           fi
           if [[ "$TRIGGER" == "workflow_dispatch" ]]; then
