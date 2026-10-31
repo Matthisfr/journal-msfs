@@ -1671,5 +1671,201 @@
     "name": "Carrasco General Cesáreo L. Berisso International Airport",
     "source": "OurAirports / airport-codes",
     "aircraft_marker": "airliner"
+  },
+  "LLBG": {
+    "lat": 32.011398,
+    "lon": 34.8867,
+    "name": "Ben Gurion International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "OEDF": {
+    "lat": 26.4691,
+    "lon": 49.798209,
+    "name": "King Fahd International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "OEJN": {
+    "lat": 21.680241,
+    "lon": 39.157436,
+    "name": "King Abdulaziz International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "OIIE": {
+    "lat": 35.416099548339844,
+    "lon": 51.152198791503906,
+    "name": "Imam Khomeini International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "OJAI": {
+    "lat": 31.7226009369,
+    "lon": 35.9931983948,
+    "name": "Queen Alia International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "OMAA": {
+    "lat": 24.440966,
+    "lon": 54.649237,
+    "name": "Zayed International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "RCTP": {
+    "lat": 25.0777,
+    "lon": 121.233002,
+    "name": "Taiwan Taoyuan International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "RJAA": {
+    "lat": 35.76858,
+    "lon": 140.388714,
+    "name": "Narita International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "RJBB": {
+    "lat": 34.427299,
+    "lon": 135.244003,
+    "name": "Kansai International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "RJTT": {
+    "lat": 35.549678,
+    "lon": 139.786958,
+    "name": "Tokyo Haneda International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "RKSI": {
+    "lat": 37.469101,
+    "lon": 126.450996,
+    "name": "Incheon International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "RPLL": {
+    "lat": 14.5086,
+    "lon": 121.019997,
+    "name": "Ninoy Aquino International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "VABB": {
+    "lat": 19.088699,
+    "lon": 72.867897,
+    "name": "Chhatrapati Shivaji Maharaj International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "VCBI": {
+    "lat": 7.180759906768799,
+    "lon": 79.88410186767578,
+    "name": "Bandaranaike International Colombo Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "VGHS": {
+    "lat": 23.843347,
+    "lon": 90.397783,
+    "name": "Hazrat Shahjalal International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "VHHH": {
+    "lat": 22.31184,
+    "lon": 113.914862,
+    "name": "Hong Kong International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "VIDP": {
+    "lat": 28.55563,
+    "lon": 77.09519,
+    "name": "Indira Gandhi International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "VOBL": {
+    "lat": 13.1979,
+    "lon": 77.706299,
+    "name": "Kempegowda International Airport Bengaluru",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "VTBS": {
+    "lat": 13.6811,
+    "lon": 100.747002,
+    "name": "Suvarnabhumi Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "VVTS": {
+    "lat": 10.8188,
+    "lon": 106.652,
+    "name": "Tan Son Nhat International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "WIII": {
+    "lat": -6.12557,
+    "lon": 106.655998,
+    "name": "Soekarno-Hatta International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "WMKK": {
+    "lat": 2.74558,
+    "lon": 101.709999,
+    "name": "Kuala Lumpur International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "WSSS": {
+    "lat": 1.35019,
+    "lon": 103.994003,
+    "name": "Singapore Changi Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "YBBN": {
+    "lat": -27.384199142456055,
+    "lon": 153.11700439453125,
+    "name": "Brisbane International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "ZBAA": {
+    "lat": 40.077349,
+    "lon": 116.596702,
+    "name": "Beijing Capital International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "ZBAD": {
+    "lat": 39.501289,
+    "lon": 116.413967,
+    "name": "Beijing Daxing International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "ZGGG": {
+    "lat": 23.392401,
+    "lon": 113.299004,
+    "name": "Guangzhou Baiyun International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "ZSPD": {
+    "lat": 31.1434,
+    "lon": 121.805,
+    "name": "Shanghai Pudong International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
   }
 }
