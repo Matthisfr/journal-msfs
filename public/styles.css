@@ -292,3 +292,7 @@ button.airport-map-eye:focus-visible{outline:2px solid #5ba6c9;border-radius:4px
 /* Bulle de commentaire iPad : superposition fixe hors du tableau scrollable. */
 #airport-comment-popover{position:fixed;z-index:99999;box-sizing:border-box;width:max-content;max-width:min(330px,calc(100vw - 16px));touch-action:manipulation}
 button.airport-description-info{touch-action:manipulation;min-width:26px;min-height:26px}
+
+/* Accès direct visible et tactile dans les bulles Leaflet, sans modifier le tableau. */
+.leaflet-popup-content .airport-popup-link{display:inline-block;margin-top:8px;padding:9px 12px;min-height:24px;background:#143b54;color:#fff!important;border-radius:7px;font-weight:700;text-decoration:none;touch-action:manipulation}
+.leaflet-popup-content .airport-popup-link:focus-visible{outline:3px solid #f39b27;outline-offset:2px}
