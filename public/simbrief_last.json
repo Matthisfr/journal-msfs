@@ -1,7 +1,7 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-11-01T09:13:18.120231+00:00",
+  "retrieved_at": "2026-11-01T13:08:37.529292+00:00",
   "origin": {
     "icao": "OERK",
     "name": "KING KHALED INTL"
@@ -14,10 +14,10 @@
   "aircraft": "A320",
   "route": "DCT RESAL T533 RAPMA DCT KUVSO DCT RIBOT M550 GOLGU M318 RURAL Q317 LORID LORI4D",
   "altitude": "37000",
-  "enroute_time": "01:27:58",
-  "scheduled_departure": "2026-11-01T09:40:00Z",
-  "scheduled_arrival": "2026-11-01T11:25:00Z",
-  "generated_at": "2026-11-01T09:10:45Z",
+  "enroute_time": "01:28:25",
+  "scheduled_departure": "2026-11-01T10:10:00Z",
+  "scheduled_arrival": "2026-11-01T11:55:00Z",
+  "generated_at": "2026-11-01T09:38:39Z",
   "route_points": [
     {
       "lat": 24.113611,
@@ -35,8 +35,8 @@
       "name": "KUVSO"
     },
     {
-      "lat": 23.351851,
-      "lon": 49.066811,
+      "lat": 23.33592,
+      "lon": 49.372891,
       "name": "TOC"
     },
     {
@@ -95,6 +95,11 @@
       "name": "LORID"
     },
     {
+      "lat": 25.094297,
+      "lon": 54.778695,
+      "name": "TOD"
+    },
+    {
       "lat": 25.103583,
       "lon": 54.785972,
       "name": "ORGUR"
@@ -103,11 +108,6 @@
       "lat": 25.154944,
       "lon": 54.826278,
       "name": "PEBUS"
-    },
-    {
-      "lat": 25.156218,
-      "lon": 54.827463,
-      "name": "TOD"
     },
     {
       "lat": 25.286056,

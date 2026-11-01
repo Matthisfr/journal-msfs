@@ -2302,5 +2302,109 @@
     "source": "OurAirports / airport-codes",
     "country_code": "AU",
     "aircraft_marker": "airliner"
+  },
+  "DGAA": {
+    "lat": 5.605189800262451,
+    "lon": -0.16678600013256073,
+    "name": "Kotoka International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "GH",
+    "aircraft_marker": "airliner"
+  },
+  "EBLG": {
+    "lat": 50.638574,
+    "lon": 5.443897,
+    "name": "Liège Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "BE",
+    "aircraft_marker": "airliner"
+  },
+  "EGSS": {
+    "lat": 51.884998,
+    "lon": 0.235,
+    "name": "London Stansted Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "GB",
+    "aircraft_marker": "airliner"
+  },
+  "FACT": {
+    "lat": -33.97403,
+    "lon": 18.604333,
+    "name": "Cape Town International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "ZA",
+    "aircraft_marker": "airliner"
+  },
+  "FAOR": {
+    "lat": -26.140081,
+    "lon": 28.246801,
+    "name": "O.R. Tambo International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "ZA",
+    "aircraft_marker": "airliner"
+  },
+  "HESH": {
+    "lat": 27.977272,
+    "lon": 34.394717,
+    "name": "Sharm El Sheikh International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "EG",
+    "aircraft_marker": "airliner"
+  },
+  "HKJK": {
+    "lat": -1.318886,
+    "lon": 36.928233,
+    "name": "Jomo Kenyatta International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "KE",
+    "aircraft_marker": "airliner"
+  },
+  "LFBH": {
+    "lat": 46.179199,
+    "lon": -1.19528,
+    "name": "La Rochelle Île de Ré Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "FR",
+    "aircraft_marker": "airliner"
+  },
+  "LFBP": {
+    "lat": 43.380001,
+    "lon": -0.418611,
+    "name": "Pau Pyrénées Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "FR",
+    "aircraft_marker": "airliner"
+  },
+  "LFBT": {
+    "lat": 43.178699,
+    "lon": -0.006439,
+    "name": "Tarbes-Lourdes-Pyrénées Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "FR",
+    "aircraft_marker": "airliner"
+  },
+  "LFMP": {
+    "lat": 42.740398,
+    "lon": 2.87067,
+    "name": "Perpignan-Rivesaltes (Llabanère) Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "FR",
+    "aircraft_marker": "airliner"
+  },
+  "LFQQ": {
+    "lat": 50.566564,
+    "lon": 3.102429,
+    "name": "Lille Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "FR",
+    "aircraft_marker": "airliner"
+  },
+  "LTFJ": {
+    "lat": 40.898602,
+    "lon": 29.3092,
+    "name": "Istanbul Sabiha Gökçen International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "TR",
+    "aircraft_marker": "airliner"
   }
 }
