@@ -151,7 +151,7 @@ def render_airport_digest(airports):
         source = (f'<a href="{h(url)}" target="_blank" rel="noopener noreferrer">'
                   f'{h(a.get("source_store") or "Fiche source")} ↗</a>') if url.startswith("https://") else ""
         line = (f'<li><span class="airport-update-code">{h(a.get("icao") or "")}</span>'
-                f'<span><strong>{h(a.get("name") or "")}</strong>'
+                f'<span><strong>{h(a.get("name") or "")}</strong><span class="airport-country-inline" data-icao-country="{h(a.get("icao") or "")}"></span>'
                 f'<small>{h(a.get("publisher") or "")} · Installée {h(a.get("installed") or "?")} '
                 f'→ Source {h(a.get("server_version") or "?")} · {source}</small></span></li>')
         (updates if label == "MISE À JOUR" else editions).append(line)
@@ -161,7 +161,7 @@ def render_airport_digest(airports):
         edition_status = "Vérifiée aujourd’hui" if a.get("new_edition_checked_at")==today else "Dernière version connue, non revalidée"
         editions.append(
             f'<li><span class="airport-update-code">{h(a.get("icao") or "")}</span>'
-            f'<span><strong>{h(a.get("name") or "")} — édition MSFS 2024 distincte</strong>'
+            f'<span><strong>{h(a.get("name") or "")} — édition MSFS 2024 distincte</strong><span class="airport-country-inline" data-icao-country="{h(a.get("icao") or "")}"></span>'
             f'<small>Installée {h(a.get("installed") or "?")} · Nouvelle édition '
             f'{h(a["new_edition_version"])} · {h(edition_status)} · '
             f'<a href="{h(a["source_url"])}" target="_blank" rel="noopener noreferrer">'
