@@ -2406,5 +2406,85 @@
     "source": "OurAirports / airport-codes",
     "country_code": "TR",
     "aircraft_marker": "airliner"
+  },
+  "DNMM": {
+    "lat": 6.57737,
+    "lon": 3.32116,
+    "name": "Murtala Muhammed International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NG",
+    "aircraft_marker": "airliner"
+  },
+  "FMEE": {
+    "lat": -20.890087,
+    "lon": 55.518894,
+    "name": "Roland Garros Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "RE",
+    "aircraft_marker": "airliner"
+  },
+  "FMMI": {
+    "lat": -18.7969,
+    "lon": 47.478802,
+    "name": "Ivato International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "MG",
+    "aircraft_marker": "airliner"
+  },
+  "GOBD": {
+    "lat": 14.670878,
+    "lon": -17.072829,
+    "name": "Blaise Diagne International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "SN",
+    "aircraft_marker": "airliner"
+  },
+  "LFBI": {
+    "lat": 46.5877,
+    "lon": 0.306666,
+    "name": "Poitiers-Biard Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "FR",
+    "aircraft_marker": "airliner"
+  },
+  "LFBZ": {
+    "lat": 43.468372,
+    "lon": -1.523223,
+    "name": "Biarritz Pays Basque airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "FR",
+    "aircraft_marker": "airliner"
+  },
+  "LFLC": {
+    "lat": 45.786701,
+    "lon": 3.16917,
+    "name": "Clermont-Ferrand Auvergne airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "FR",
+    "aircraft_marker": "airliner"
+  },
+  "LFOB": {
+    "lat": 49.454399,
+    "lon": 2.11278,
+    "name": "Beauvais-Tillé airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "FR",
+    "aircraft_marker": "airliner"
+  },
+  "LFRB": {
+    "lat": 48.447899,
+    "lon": -4.41854,
+    "name": "Brest Bretagne airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "FR",
+    "aircraft_marker": "airliner"
+  },
+  "LFTH": {
+    "lat": 43.097301,
+    "lon": 6.14603,
+    "name": "Toulon-Hyères Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "FR",
+    "aircraft_marker": "airliner"
   }
 }

@@ -6,22 +6,22 @@
       {
         "publisher": "inibuilds",
         "installed": "1.0.2",
-        "url": "",
+        "url": "https://inibuilds.com/products/inibuilds-johannesburg-faor-msfs",
         "image": "",
-        "image_checked": false,
-        "comparison": "",
-        "server_version": "",
-        "version_state": "À vérifier"
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.0.2",
+        "version_state": "À jour"
       },
       {
         "publisher": "NMG Simulations",
         "installed": "5.4.4",
-        "url": "",
-        "image": "",
-        "image_checked": false,
-        "comparison": "",
-        "server_version": "",
-        "version_state": "À vérifier"
+        "url": "https://secure.simmarket.com/nmg-simulations-faor-johannesburg-intl-airport-msfs24.phtml",
+        "image": "https://secure.simmarket.com/images/products/6/66/20799/cs-faor_msfs24_v55-sm.png",
+        "image_checked": true,
+        "comparison": "update",
+        "server_version": "5.5.0",
+        "version_state": "Mise à jour disponible"
       }
     ],
     "winner": "Non déterminé",
@@ -76,6 +76,66 @@
       {
         "publisher": "iniBuilds",
         "installed": "1.0.1",
+        "url": "https://inibuilds.com/products/inibuilds-addis-ababa-bole-haab-msfs-2024",
+        "image": "",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.0.1",
+        "version_state": "À jour"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
+    "code": "HKJK",
+    "name": "HKJK Nairobi Jomo Kenyatta International Airport",
+    "scenes": [
+      {
+        "publisher": "FSDG",
+        "installed": "1.4.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "inibuilds",
+        "installed": "1.0.1",
+        "url": "https://inibuilds.com/products/inibuilds-nairobi-jomo-kenyatta-hkjk-msfs",
+        "image": "",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.0.1",
+        "version_state": "À jour"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
+    "code": "GOBD",
+    "name": "GOBD",
+    "scenes": [
+      {
+        "publisher": "Devinci",
+        "installed": "1.0.3",
+        "url": "https://secure.simmarket.com/devinci-gobd-blaise-diagne-intl-sn-msfs24.phtml",
+        "image": "https://secure.simmarket.com/images/products/3/31/20279/Logo_SimMarket.png",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.0.3",
+        "version_state": "À jour"
+      },
+      {
+        "publisher": "FSDG",
+        "installed": "1.1.2",
         "url": "",
         "image": "",
         "image_checked": false,
@@ -702,12 +762,12 @@
       {
         "publisher": "inibuilds",
         "installed": "1.1.1",
-        "url": "",
+        "url": "https://inibuilds.com/products/inibuilds-luton-eggw-msfs",
         "image": "",
-        "image_checked": false,
-        "comparison": "",
-        "server_version": "",
-        "version_state": "À vérifier"
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.1.1",
+        "version_state": "À jour"
       },
       {
         "publisher": "UK2000 Scenery",
@@ -846,6 +906,36 @@
     "criteria": []
   },
   {
+    "code": "LFBP",
+    "name": "LFBP Pau Pyrenees Airport",
+    "scenes": [
+      {
+        "publisher": "France VFR",
+        "installed": "1.0.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "LN Design",
+        "installed": "2.1.2",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
     "code": "LFKC",
     "name": "LFKC Calvi Sainte-Catherine",
     "scenes": [
@@ -962,6 +1052,36 @@
     "criteria": []
   },
   {
+    "code": "LFMP",
+    "name": "Perpignan Sud de France",
+    "scenes": [
+      {
+        "publisher": "BEAUTIFUL MODEL of the WORLD",
+        "installed": "2.0.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "France VFR",
+        "installed": "1.3.0",
+        "url": "https://secure.simmarket.com/france-vfr-lfmp-perpignan-rivesaltes-msfs.phtml",
+        "image": "https://secure.simmarket.com/images/products/9/9a/16799/APTLFMPMSFS_thumbnail.jpg",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.30",
+        "version_state": "À jour"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
     "code": "LFNC",
     "name": "LFNC Mont-Dauphin - Saint-Crépin Airport",
     "scenes": [
@@ -983,6 +1103,66 @@
         "image_checked": true,
         "comparison": "equal",
         "server_version": "1.1",
+        "version_state": "À jour"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
+    "code": "LFQQ",
+    "name": "Lille Airport",
+    "scenes": [
+      {
+        "publisher": "BEAUTIFUL MODEL of the WORLD",
+        "installed": "2.0.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "France VFR",
+        "installed": "1.6.0",
+        "url": "https://secure.simmarket.com/france-vfr-lfqq-lille-lesquin-msfs.phtml",
+        "image": "https://secure.simmarket.com/images/products/7/70/16798/APTLFQQMSFS_thumbnail.jpg",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.60",
+        "version_state": "À jour"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
+    "code": "LFRB",
+    "name": "LFRB Brest Bretagne Airport",
+    "scenes": [
+      {
+        "publisher": "France VFR",
+        "installed": "1.3.3",
+        "url": "https://secure.simmarket.com/france-vfr-lfrb-brest-bretagne-msfs.phtml",
+        "image": "https://secure.simmarket.com/images/products/d/df/15152/APTLFRBMSFS_thumbnail.jpg",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.33",
+        "version_state": "À jour"
+      },
+      {
+        "publisher": "Pilot Experience Sim",
+        "installed": "1.1.1",
+        "url": "https://inibuilds.com/products/pilot-experience-sim-brest-bretagne-lfrb-msfs",
+        "image": "",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.1.1",
         "version_state": "À jour"
       }
     ],
@@ -1431,22 +1611,22 @@
       {
         "publisher": "MXI Design",
         "installed": "1.1.0",
-        "url": "",
-        "image": "",
-        "image_checked": false,
-        "comparison": "",
-        "server_version": "",
-        "version_state": "À vérifier"
+        "url": "https://contrail.shop/products/mxi-design-ltfj-istanbul-sabiha-gokcen-airport-msfs-2020-2024",
+        "image": "https://contrail.shop/cdn/shop/files/thumb_793946c2-9687-4b96-8337-98527eaedad4_1200x1200.webp?v=1747928373",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.1.0",
+        "version_state": "À jour"
       },
       {
         "publisher": "SceneryTR Design",
         "installed": "1.0.5",
-        "url": "",
-        "image": "",
-        "image_checked": false,
-        "comparison": "",
-        "server_version": "",
-        "version_state": "À vérifier"
+        "url": "https://contrail.shop/products/scenerytr-ltfj-istanbul-sabiha-gokcen-airport-msfs-2020-2024",
+        "image": "https://contrail.shop/cdn/shop/files/thumb_73973cf1-1228-4e94-80fc-9f289577a3e1_1200x1200.jpg?v=1770105851",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.0.5",
+        "version_state": "À jour"
       }
     ],
     "winner": "Non déterminé",
