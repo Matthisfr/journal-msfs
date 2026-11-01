@@ -30,7 +30,7 @@ function compareVersions(installed,online){
   return 'current';
 }
 // Bulle hors du tableau : Safari iPad ne la masque pas dans le conteneur défilant.
-document.addEventListener('click',event=>{
+document.addEventListener?.('click',event=>{
  const button=event.target.closest?.('.airport-description-info');
  const current=document.getElementById('airport-comment-popover');
  if(!button){
