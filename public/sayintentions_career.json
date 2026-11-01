@@ -14,7 +14,7 @@
     {
       "id": "IFR-884082178",
       "aircraft": "F-FENX",
-      "when": "14 hours ago",
+      "when": "15 hours ago",
       "origin": "OERK",
       "destination": "OMDB",
       "rules": "IFR",
@@ -102,7 +102,7 @@
       "duration": "2h 1m"
     }
   ],
-  "flights_checked_at": "2026-11-01T17:11:03.733388+00:00",
-  "verified_at": "2026-11-01T17:11:03.733388+00:00",
-  "checked_at": "2026-11-01T17:11:03.733388+00:00"
+  "flights_checked_at": "2026-11-01T18:20:32.364266+00:00",
+  "verified_at": "2026-11-01T18:20:32.364266+00:00",
+  "checked_at": "2026-11-01T18:20:32.364266+00:00"
 }

@@ -1,193 +1,138 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-11-01T17:10:43.989306+00:00",
+  "retrieved_at": "2026-11-01T18:20:13.005408+00:00",
   "origin": {
-    "icao": "OERK",
-    "name": "KING KHALED INTL"
-  },
-  "destination": {
     "icao": "OMDB",
     "name": "DUBAI INTL"
   },
+  "destination": {
+    "icao": "OPKC",
+    "name": "JINNAH INTL"
+  },
   "flight_number": "2809",
   "aircraft": "A320",
-  "route": "DCT RESAL T533 RAPMA DCT KUVSO DCT RIBOT M550 GOLGU M318 RURAL Q317 LORID LORI4D",
+  "route": "IVUR1F IVURO M428 TARBO Z440 DAMUM B524 ALPOR G216 LAKIV LAKI2A",
   "altitude": "37000",
-  "enroute_time": "01:28:25",
-  "scheduled_departure": "2026-11-01T10:10:00Z",
-  "scheduled_arrival": "2026-11-01T11:55:00Z",
-  "generated_at": "2026-11-01T09:38:39Z",
+  "enroute_time": "01:31:53",
+  "scheduled_departure": "2026-11-01T18:50:00Z",
+  "scheduled_arrival": "2026-11-01T21:00:00Z",
+  "generated_at": "2026-11-01T18:15:50Z",
   "route_points": [
     {
-      "lat": 24.113611,
-      "lon": 47.074167,
-      "name": "RESAL"
+      "lat": 25.295528,
+      "lon": 55.294722,
+      "name": "DB570"
     },
     {
-      "lat": 23.382222,
-      "lon": 48.341111,
-      "name": "RAPMA"
+      "lat": 25.347861,
+      "lon": 55.295972,
+      "name": "DB560"
     },
     {
-      "lat": 23.351944,
-      "lon": 49.065,
-      "name": "KUVSO"
+      "lat": 25.398,
+      "lon": 55.297167,
+      "name": "DB576"
     },
     {
-      "lat": 23.33592,
-      "lon": 49.372891,
+      "lat": 25.44,
+      "lon": 55.354472,
+      "name": "DB569"
+    },
+    {
+      "lat": 25.4835,
+      "lon": 55.413889,
+      "name": "KUPOR"
+    },
+    {
+      "lat": 25.539639,
+      "lon": 55.494361,
+      "name": "UKRER"
+    },
+    {
+      "lat": 25.426361,
+      "lon": 55.69325,
+      "name": "VAXAB"
+    },
+    {
+      "lat": 25.411139,
+      "lon": 55.764944,
+      "name": "LUDEV"
+    },
+    {
+      "lat": 25.373694,
+      "lon": 55.940361,
+      "name": "GETID"
+    },
+    {
+      "lat": 25.327778,
+      "lon": 56.154167,
+      "name": "IVURO"
+    },
+    {
+      "lat": 25.258611,
+      "lon": 56.364722,
+      "name": "SUTVO"
+    },
+    {
+      "lat": 25.1875,
+      "lon": 56.579722,
+      "name": "GOMTA"
+    },
+    {
+      "lat": 24.730833,
+      "lon": 57.776944,
+      "name": "TARBO"
+    },
+    {
+      "lat": 24.673339,
+      "lon": 58.230879,
       "name": "TOC"
     },
     {
-      "lat": 23.145556,
-      "lon": 52.407778,
-      "name": "RIBOT"
+      "lat": 24.543333,
+      "lon": 59.218611,
+      "name": "DAMUM"
     },
     {
-      "lat": 23.180833,
-      "lon": 52.519167,
-      "name": "GOLGU"
+      "lat": 24.353611,
+      "lon": 60.097778,
+      "name": "ASLOM"
     },
     {
-      "lat": 23.406667,
-      "lon": 52.958056,
-      "name": "ESROM"
+      "lat": 24.209722,
+      "lon": 60.748333,
+      "name": "VEKAN"
     },
     {
-      "lat": 23.705556,
-      "lon": 53.519722,
-      "name": "DANOK"
+      "lat": 24.078056,
+      "lon": 61.333333,
+      "name": "ALPOR"
     },
     {
-      "lat": 23.996389,
-      "lon": 54.067778,
-      "name": "BOPIT"
+      "lat": 24.145556,
+      "lon": 61.795833,
+      "name": "SIDKA"
     },
     {
-      "lat": 24.241389,
-      "lon": 54.543333,
-      "name": "MUSEN"
+      "lat": 24.528889,
+      "lon": 64.828889,
+      "name": "LAKIV"
     },
     {
-      "lat": 24.285556,
-      "lon": 54.575556,
-      "name": "ATUDO"
-    },
-    {
-      "lat": 24.5125,
-      "lon": 54.532222,
-      "name": "RURAL"
-    },
-    {
-      "lat": 24.718611,
-      "lon": 54.498611,
-      "name": "UKNAV"
-    },
-    {
-      "lat": 24.869722,
-      "lon": 54.606944,
-      "name": "EGROP"
-    },
-    {
-      "lat": 24.93125,
-      "lon": 54.651139,
-      "name": "LORID"
-    },
-    {
-      "lat": 25.094297,
-      "lon": 54.778695,
+      "lat": 24.579597,
+      "lon": 65.246344,
       "name": "TOD"
     },
     {
-      "lat": 25.103583,
-      "lon": 54.785972,
-      "name": "ORGUR"
+      "lat": 24.724722,
+      "lon": 66.5,
+      "name": "ANRIM"
     },
     {
-      "lat": 25.154944,
-      "lon": 54.826278,
-      "name": "PEBUS"
-    },
-    {
-      "lat": 25.286056,
-      "lon": 54.948444,
-      "name": "EMOPO"
-    },
-    {
-      "lat": 25.360833,
-      "lon": 55.123167,
-      "name": "DB531"
-    },
-    {
-      "lat": 25.242361,
-      "lon": 55.268778,
-      "name": "DB533"
-    },
-    {
-      "lat": 25.187694,
-      "lon": 55.335778,
-      "name": "DB534"
-    },
-    {
-      "lat": 25.156083,
-      "lon": 55.391722,
-      "name": "DB528"
-    },
-    {
-      "lat": 25.111944,
-      "lon": 55.469722,
-      "name": "RARPI"
-    },
-    {
-      "lat": 25.076944,
-      "lon": 55.5325,
-      "name": "TUKAK"
-    },
-    {
-      "lat": 25.041944,
-      "lon": 55.595,
-      "name": "DB522"
-    },
-    {
-      "lat": 25.007222,
-      "lon": 55.657778,
-      "name": "DB523"
-    },
-    {
-      "lat": 24.972222,
-      "lon": 55.720278,
-      "name": "DB524"
-    },
-    {
-      "lat": 24.937222,
-      "lon": 55.782778,
-      "name": "DB525"
-    },
-    {
-      "lat": 24.997222,
-      "lon": 55.823333,
-      "name": "DB506"
-    },
-    {
-      "lat": 25.032167,
-      "lon": 55.760778,
-      "name": "DB505"
-    },
-    {
-      "lat": 25.067139,
-      "lon": 55.698194,
-      "name": "DB504"
-    },
-    {
-      "lat": 25.102083,
-      "lon": 55.635556,
-      "name": "ULDOT"
-    },
-    {
-      "lat": 25.252778,
-      "lon": 55.364444,
-      "name": "OMDB"
+      "lat": 24.908558,
+      "lon": 67.162761,
+      "name": "OPKC"
     }
   ]
 }
