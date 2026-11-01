@@ -250,6 +250,66 @@
     "criteria": []
   },
   {
+    "code": "KSAN",
+    "name": "KSAN San Diego Airport",
+    "scenes": [
+      {
+        "publisher": "Glideslope Pro",
+        "installed": "2.2.6",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "lvfr",
+        "installed": "1.0.6",
+        "url": "https://contrail.shop/products/ksan-san-diego-intl",
+        "image": "https://contrail.shop/cdn/shop/products/thumb_8c7a523f-b87a-4070-8508-c9aa0b200bcc_1200x1200.jpg?v=1674666332",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.0.6",
+        "version_state": "À jour"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
+    "code": "KSFO",
+    "name": "KSFO San Francisco Airport Captain's Edition",
+    "scenes": [
+      {
+        "publisher": "Flightbeam",
+        "installed": "1.3.5",
+        "url": "https://contrail.shop/products/flightbeam-ksfo-san-francisco-captains-edition-msfs",
+        "image": "https://contrail.shop/cdn/shop/files/thumb_b1809fde-9511-4ea2-9304-1b407b06083b_1200x1200.webp?v=1741374105",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.3.5",
+        "version_state": "À jour"
+      },
+      {
+        "publisher": "Glideslope Pro",
+        "installed": "2.6.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
     "code": "SKBO",
     "name": "Airport",
     "scenes": [
@@ -657,6 +717,36 @@
         "image_checked": true,
         "comparison": "equal",
         "server_version": "1.0.2",
+        "version_state": "À jour"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
+    "code": "LEMG",
+    "name": "©bma NO FREE USE ALLOWED",
+    "scenes": [
+      {
+        "publisher": "© lucio sergio barelli",
+        "installed": "1.0.0",
+        "url": "https://secure.simmarket.com/barelli-msfs-addon-malaga-costa-del-sol-lemg_msfs.phtml",
+        "image": "https://secure.simmarket.com/images/products/9/96/18021/Logo.jpg",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.0",
+        "version_state": "À jour"
+      },
+      {
+        "publisher": "MK-STUDIOS",
+        "installed": "1.2.2",
+        "url": "https://contrail.shop/products/lemg-malaga-airport-msfs",
+        "image": "https://contrail.shop/cdn/shop/files/thumb_16571092-81d1-4110-84e4-4894e481e8fa_1200x1200.jpg?v=1701355292",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.2.2",
         "version_state": "À jour"
       }
     ],
@@ -1243,6 +1333,66 @@
         "À vérifier"
       ]
     ]
+  },
+  {
+    "code": "OBBI",
+    "name": "OBBI Bahrain Intl Airport",
+    "scenes": [
+      {
+        "publisher": "MFSG",
+        "installed": "2.4.1",
+        "url": "https://secure.simmarket.com/mfsg-bahrain-intl-obbi-msfs.phtml",
+        "image": "https://secure.simmarket.com/images/products/3/38/18494/product.jpg",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "2.4.1",
+        "version_state": "À jour"
+      },
+      {
+        "publisher": "Taym",
+        "installed": "2.3.1",
+        "url": "https://inibuilds.com/products/tuwaiq-designs-bahrain-airport-v2-msfs",
+        "image": "",
+        "image_checked": true,
+        "comparison": "source_older",
+        "server_version": "2.1",
+        "version_state": "Version installée plus récente"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
+    "code": "YPPH",
+    "name": "YPPH Perth Intl Airport",
+    "scenes": [
+      {
+        "publisher": "MFSG",
+        "installed": "1.0.0",
+        "url": "https://secure.simmarket.com/mfsg-perth-intl-ypph-msfs.phtml",
+        "image": "https://secure.simmarket.com/images/products/0/0d/19168/product_ypph.jpg",
+        "image_checked": true,
+        "comparison": "incomparable",
+        "server_version": "2.4.2",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "ORBX",
+        "installed": "1.1.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
   },
   {
     "code": "NTTH",

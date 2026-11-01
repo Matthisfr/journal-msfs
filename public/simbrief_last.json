@@ -1,7 +1,7 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-11-01T06:03:23.685164+00:00",
+  "retrieved_at": "2026-11-01T09:13:18.120231+00:00",
   "origin": {
     "icao": "OERK",
     "name": "KING KHALED INTL"
@@ -12,12 +12,12 @@
   },
   "flight_number": "2809",
   "aircraft": "A320",
-  "route": "DCT RESAL T533 RAPMA DCT KUVSO DCT RIBOT M550 GOLGU M318 RURAL Q317 LORID LORI1E",
+  "route": "DCT RESAL T533 RAPMA DCT KUVSO DCT RIBOT M550 GOLGU M318 RURAL Q317 LORID LORI4D",
   "altitude": "37000",
-  "enroute_time": "01:26:57",
-  "scheduled_departure": "2026-10-27T20:15:00Z",
-  "scheduled_arrival": "2026-10-27T22:00:00Z",
-  "generated_at": "2026-10-27T19:46:30Z",
+  "enroute_time": "01:27:58",
+  "scheduled_departure": "2026-11-01T09:40:00Z",
+  "scheduled_arrival": "2026-11-01T11:25:00Z",
+  "generated_at": "2026-11-01T09:10:45Z",
   "route_points": [
     {
       "lat": 24.113611,
@@ -35,8 +35,8 @@
       "name": "KUVSO"
     },
     {
-      "lat": 23.334958,
-      "lon": 49.391,
+      "lat": 23.351851,
+      "lon": 49.066811,
       "name": "TOC"
     },
     {
@@ -80,11 +80,6 @@
       "name": "RURAL"
     },
     {
-      "lat": 24.561927,
-      "lon": 54.524172,
-      "name": "TOD"
-    },
-    {
       "lat": 24.718611,
       "lon": 54.498611,
       "name": "UKNAV"
@@ -110,54 +105,84 @@
       "name": "PEBUS"
     },
     {
-      "lat": 25.302833,
-      "lon": 54.820333,
-      "name": "ROVIB"
+      "lat": 25.156218,
+      "lon": 54.827463,
+      "name": "TOD"
     },
     {
-      "lat": 25.347917,
-      "lon": 54.898944,
-      "name": "DB400"
+      "lat": 25.286056,
+      "lon": 54.948444,
+      "name": "EMOPO"
     },
     {
-      "lat": 25.31275,
-      "lon": 54.961,
-      "name": "DB401"
+      "lat": 25.360833,
+      "lon": 55.123167,
+      "name": "DB531"
     },
     {
-      "lat": 25.26775,
-      "lon": 55.040278,
-      "name": "DB402"
+      "lat": 25.242361,
+      "lon": 55.268778,
+      "name": "DB533"
     },
     {
-      "lat": 25.331556,
-      "lon": 55.084111,
-      "name": "DB403"
+      "lat": 25.187694,
+      "lon": 55.335778,
+      "name": "DB534"
     },
     {
-      "lat": 25.376556,
-      "lon": 55.004833,
-      "name": "SOLIL"
+      "lat": 25.156083,
+      "lon": 55.391722,
+      "name": "DB528"
     },
     {
-      "lat": 25.412083,
-      "lon": 54.942361,
-      "name": "ODLAL"
+      "lat": 25.111944,
+      "lon": 55.469722,
+      "name": "RARPI"
     },
     {
-      "lat": 25.469194,
-      "lon": 54.980667,
-      "name": "DB414"
+      "lat": 25.076944,
+      "lon": 55.5325,
+      "name": "TUKAK"
     },
     {
-      "lat": 25.434444,
-      "lon": 55.043556,
-      "name": "DB413"
+      "lat": 25.041944,
+      "lon": 55.595,
+      "name": "DB522"
     },
     {
-      "lat": 25.399611,
-      "lon": 55.106417,
-      "name": "REREK"
+      "lat": 25.007222,
+      "lon": 55.657778,
+      "name": "DB523"
+    },
+    {
+      "lat": 24.972222,
+      "lon": 55.720278,
+      "name": "DB524"
+    },
+    {
+      "lat": 24.937222,
+      "lon": 55.782778,
+      "name": "DB525"
+    },
+    {
+      "lat": 24.997222,
+      "lon": 55.823333,
+      "name": "DB506"
+    },
+    {
+      "lat": 25.032167,
+      "lon": 55.760778,
+      "name": "DB505"
+    },
+    {
+      "lat": 25.067139,
+      "lon": 55.698194,
+      "name": "DB504"
+    },
+    {
+      "lat": 25.102083,
+      "lon": 55.635556,
+      "name": "ULDOT"
     },
     {
       "lat": 25.252778,

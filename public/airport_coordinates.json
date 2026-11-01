@@ -1867,5 +1867,152 @@
     "name": "Shanghai Pudong International Airport",
     "source": "OurAirports / airport-codes",
     "aircraft_marker": "airliner"
+  },
+  "DIAP": {
+    "lat": 5.26139,
+    "lon": -3.92629,
+    "name": "Félix-Houphouët-Boigny International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "EDDP": {
+    "lat": 51.420657,
+    "lon": 12.232705,
+    "name": "Leipzig/Halle Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "EGGW": {
+    "lat": 51.874699,
+    "lon": -0.368333,
+    "name": "London Luton Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "HAAB": {
+    "lat": 8.97789,
+    "lon": 38.799301,
+    "name": "Addis Ababa Bole International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "HEGN": {
+    "lat": 27.176776,
+    "lon": 33.796692,
+    "name": "Hurghada International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "KMEM": {
+    "lat": 35.043845,
+    "lon": -89.97634,
+    "name": "Frederick W. Smith International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "KSAN": {
+    "lat": 32.733601,
+    "lon": -117.190002,
+    "name": "San Diego International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "KSDF": {
+    "lat": 38.1706,
+    "lon": -85.735076,
+    "name": "Louisville Muhammad Ali International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "KTPA": {
+    "lat": 27.9755,
+    "lon": -82.533203,
+    "name": "Tampa International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "LEAL": {
+    "lat": 38.2822,
+    "lon": -0.558156,
+    "name": "Alicante-Elche Miguel Hernández Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "LTAI": {
+    "lat": 36.898701,
+    "lon": 30.800501,
+    "name": "Antalya International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "MMMY": {
+    "lat": 25.778521,
+    "lon": -100.106989,
+    "name": "Monterrey International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "NFFN": {
+    "lat": -17.761822,
+    "lon": 177.437843,
+    "name": "Nadi International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "NZAA": {
+    "lat": -37.01199,
+    "lon": 174.786331,
+    "name": "Auckland International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "NZCH": {
+    "lat": -43.489029,
+    "lon": 172.532065,
+    "name": "Christchurch International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "OBBI": {
+    "lat": 26.267295,
+    "lon": 50.63764,
+    "name": "Bahrain International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "OPKC": {
+    "lat": 24.9065,
+    "lon": 67.160797,
+    "name": "Jinnah International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "VVNB": {
+    "lat": 21.221201,
+    "lon": 105.806999,
+    "name": "Noi Bai International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "YMML": {
+    "lat": -37.670732,
+    "lon": 144.837898,
+    "name": "Melbourne Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "YPPH": {
+    "lat": -31.94029998779297,
+    "lon": 115.96700286865234,
+    "name": "Perth International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
+  },
+  "YSSY": {
+    "lat": -33.946098,
+    "lon": 151.177002,
+    "name": "Sydney Kingsford Smith International Airport",
+    "source": "OurAirports / airport-codes",
+    "aircraft_marker": "airliner"
   }
 }
