@@ -285,3 +285,6 @@ button.airport-map-eye:focus-visible{outline:2px solid #5ba6c9;border-radius:4px
 
 /* Garantir la disparition du badge AIRAC à l'expiration des 72 heures. */
 #airac-home-news[hidden]{display:none!important}
+
+/* Pays affiché discrètement sur la même ligne que le nom de l'aéroport. */
+.airport-country-inline{font-size:.8em;font-weight:400;color:#718096;white-space:nowrap}
