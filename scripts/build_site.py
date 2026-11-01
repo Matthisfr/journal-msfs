@@ -51,7 +51,9 @@ def render_rows(airports):
             code += f'<small>Source : {h(original)}</small>'
         description = str(a.get("description") or "").strip()
         info = (f' <button type="button" class="airport-description-info" data-description="{h(description)}" aria-label="Lire le commentaire de {h(a.get('name') or '')}">ⓘ</button>' if description else "")
-        name = f'<b>{h(a.get("name") or "")}</b><span class="airport-country-inline" data-icao-country="{h(icao)}"></span>{info}<small>{h(a.get("note") or a.get("folder") or "")}</small>'
+        direct_url = str(a.get("source_url") or "")
+        direct_link = (f' <a class="airport-direct-link" href="{h(direct_url)}" target="_blank" rel="noopener noreferrer">↗ Fiche scène</a>' if direct_url.startswith("https://") else "")
+        name = f'<b>{h(a.get("name") or "")}</b><span class="airport-country-inline" data-icao-country="{h(icao)}"></span>{direct_link}{info}<small>{h(a.get("note") or a.get("folder") or "")}</small>'
         installed = h(a.get("installed") or "Non renseignée")
         url = str(a.get("source_url") or "")
         store = str(a.get("source_store") or "Éditeur")
