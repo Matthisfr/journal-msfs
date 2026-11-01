@@ -23,7 +23,7 @@ def main():
                 try: lat,lon=map(float,coord)
                 except ValueError: continue
                 if -90<=lat<=90 and -180<=lon<=180:
-                    result[code]={"lat":lat,"lon":lon,"name":row.get("name",""),"source":"OurAirports / airport-codes"}
+                    result[code]={"lat":lat,"lon":lon,"name":row.get("name",""),"source":"OurAirports / airport-codes","country_code":str(row.get("iso_country") or "").strip().upper()}
     except Exception as exc:
         raise RuntimeError(f"Source de coordonnées indisponible : {exc}") from exc
     result={k:v for k,v in result.items() if k in codes}
