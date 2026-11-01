@@ -51,7 +51,7 @@ def render_rows(airports):
             code += f'<small>Source : {h(original)}</small>'
         description = str(a.get("description") or "").strip()
         info = (f' <button type="button" class="airport-description-info" data-description="{h(description)}" aria-label="Lire le commentaire de {h(a.get('name') or '')}">ⓘ</button>' if description else "")
-        name = f'<b>{h(a.get("name") or "")}</b>{info}<small>{h(a.get("note") or a.get("folder") or "")}</small>'
+        name = f'<b>{h(a.get("name") or "")}</b><span class="airport-country-inline" data-icao-country="{h(icao)}"></span>{info}<small>{h(a.get("note") or a.get("folder") or "")}</small>'
         installed = h(a.get("installed") or "Non renseignée")
         url = str(a.get("source_url") or "")
         store = str(a.get("source_store") or "Éditeur")
@@ -479,6 +479,16 @@ body{{background:#f5f5f1}}
 <div class="airport-update-digest">{render_airport_digest(airports)}</div>
 {table}
 <div class="map-section"><h2>Carte interactive des aéroports</h2><p><a href="./index.html#aeroports">Ouvrir la carte interactive avec repères colorés</a></p><div id="airport-leaflet-map" hidden></div></div></div></main></body></html>"""
+    independent = independent.replace("</body>", """<script>
+fetch('airport_coordinates.json').then(r => {if(!r.ok)throw new Error('Coordonnées indisponibles');return r.json()}).then(coords => {
+ const localized = new Intl.DisplayNames(['fr'], {type:'region'});
+ document.querySelectorAll('[data-icao-country]').forEach(element => {
+  const entry = coords[String(element.dataset.icaoCountry||'').toUpperCase()];
+  const iso = String(entry?.country_code||'').toUpperCase();
+  if (/^[A-Z]{2}$/.test(iso)) element.textContent = ' [' + localized.of(iso) + ']';
+ });
+}).catch(()=>{});
+</script></body>""")
     (PUBLIC / "airports.html").write_text(independent, encoding="utf-8")
     assert index.count("<tr>") >= len(airports), "Lignes statiques manquantes"
     assert "id=\"home-updated\">Le " in index, "Horodatage accueil absent"
