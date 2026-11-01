@@ -29,21 +29,40 @@ function compareVersions(installed,online){
   for(let i=0;i<n;i++){const x=Number(a[i]||0),y=Number(b[i]||0);if(y>x)return 'update';if(y<x)return 'ahead'}
   return 'current';
 }
-$('#airport-body')?.addEventListener('click',event=>{
+// Bulle hors du tableau : Safari iPad ne la masque pas dans le conteneur défilant.
+document.addEventListener('click',event=>{
  const button=event.target.closest?.('.airport-description-info');
- if(button){
-  const existing=document.getElementById('airport-comment-popover');
-  if(existing){existing.remove();if(existing.dataset.source===button.dataset.description)return;}
-  const note=document.createElement('div');
-  note.id='airport-comment-popover';
-  note.className='airport-comment-popover';
-  note.dataset.source=button.dataset.description||'';
-  const label=document.createElement('strong');label.textContent='Commentaire : ';
-  const value=document.createElement('span');value.textContent=button.dataset.description||'';
-  const close=document.createElement('button');close.type='button';close.textContent='×';close.setAttribute('aria-label','Fermer le commentaire');close.addEventListener('click',()=>note.remove());
-  note.append(label,value,close);
-  button.closest('td')?.appendChild(note);
+ const current=document.getElementById('airport-comment-popover');
+ if(!button){
+  if(current&&!event.target.closest?.('#airport-comment-popover'))current.remove();
+  return;
  }
+ event.preventDefault();
+ event.stopPropagation();
+ if(current){
+  const same=current.dataset.source===button.dataset.description&&current.dataset.code===button.closest('tr')?.querySelector('.code')?.textContent;
+  current.remove();
+  if(same)return;
+ }
+ const note=document.createElement('div');
+ note.id='airport-comment-popover';
+ note.className='airport-comment-popover';
+ note.dataset.source=button.dataset.description||'';
+ note.dataset.code=button.closest('tr')?.querySelector('.code')?.textContent||'';
+ note.setAttribute('role','dialog');
+ note.setAttribute('aria-label','Commentaire de scène');
+ const label=document.createElement('strong');label.textContent='Commentaire : ';
+ const value=document.createElement('span');value.textContent=button.dataset.description||'';
+ const close=document.createElement('button');close.type='button';close.textContent='×';close.setAttribute('aria-label','Fermer le commentaire');
+ close.addEventListener('click',()=>note.remove());
+ note.append(label,value,close);
+ document.body.appendChild(note);
+ const rect=button.getBoundingClientRect();
+ const width=note.offsetWidth,height=note.offsetHeight;
+ const left=Math.max(8,Math.min(rect.left,window.innerWidth-width-8));
+ const top=rect.bottom+height+8<window.innerHeight?rect.bottom+6:Math.max(8,rect.top-height-6);
+ note.style.left=left+'px';
+ note.style.top=top+'px';
 });
 async function focusAirportFromList(code){
  const key=String(code||'').trim().toUpperCase();
