@@ -4,6 +4,7 @@
     "lon": -50.715294,
     "name": "Kangerlussuaq International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "GL",
     "aircraft_marker": "airliner"
   },
   "BIKF": {
@@ -11,6 +12,7 @@
     "lon": -22.6056,
     "name": "Keflavik International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "IS",
     "aircraft_marker": "airliner"
   },
   "CYUL": {
@@ -18,6 +20,7 @@
     "lon": -73.742294,
     "name": "Montreal / Pierre Elliott Trudeau International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CA",
     "aircraft_marker": "airliner"
   },
   "CYYZ": {
@@ -25,6 +28,7 @@
     "lon": -79.629421,
     "name": "Toronto Pearson International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CA",
     "aircraft_marker": "airliner"
   },
   "DAAG": {
@@ -32,6 +36,7 @@
     "lon": 3.214531,
     "name": "Houari Boumediene Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "DZ",
     "aircraft_marker": "airliner"
   },
   "DTMB": {
@@ -39,6 +44,7 @@
     "lon": 10.75469970703125,
     "name": "Monastir Habib Bourguiba International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "TN",
     "aircraft_marker": "airliner"
   },
   "DTTA": {
@@ -46,6 +52,7 @@
     "lon": 10.2272,
     "name": "Tunis Carthage International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "TN",
     "aircraft_marker": "airliner"
   },
   "DTTJ": {
@@ -53,6 +60,7 @@
     "lon": 10.7773,
     "name": "Djerba Zarzis International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "TN",
     "aircraft_marker": "airliner"
   },
   "EBBR": {
@@ -60,6 +68,7 @@
     "lon": 4.48444,
     "name": "Brussels Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "BE",
     "aircraft_marker": "airliner"
   },
   "EDDB": {
@@ -67,6 +76,7 @@
     "lon": 13.502341,
     "name": "Berlin Brandenburg Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "DE",
     "aircraft_marker": "airliner"
   },
   "EDDF": {
@@ -74,6 +84,7 @@
     "lon": 8.55835,
     "name": "Frankfurt Main Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "DE",
     "aircraft_marker": "airliner"
   },
   "EDDG": {
@@ -81,6 +92,7 @@
     "lon": 7.688482,
     "name": "Münster Osnabrück Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "DE",
     "aircraft_marker": "airliner"
   },
   "EDDH": {
@@ -88,6 +100,7 @@
     "lon": 9.98823,
     "name": "Hamburg Helmut Schmidt Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "DE",
     "aircraft_marker": "airliner"
   },
   "EDDK": {
@@ -95,6 +108,7 @@
     "lon": 7.14274,
     "name": "Cologne Bonn Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "DE",
     "aircraft_marker": "airliner"
   },
   "EDDL": {
@@ -102,6 +116,7 @@
     "lon": 6.76678,
     "name": "Düsseldorf Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "DE",
     "aircraft_marker": "airliner"
   },
   "EDDM": {
@@ -109,6 +124,7 @@
     "lon": 11.7861,
     "name": "Munich Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "DE",
     "aircraft_marker": "airliner"
   },
   "EDDS": {
@@ -116,6 +132,7 @@
     "lon": 9.22196,
     "name": "Stuttgart Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "DE",
     "aircraft_marker": "airliner"
   },
   "EDDV": {
@@ -123,6 +140,7 @@
     "lon": 9.68508,
     "name": "Hannover Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "DE",
     "aircraft_marker": "airliner"
   },
   "EDLW": {
@@ -130,6 +148,7 @@
     "lon": 7.61224,
     "name": "Dortmund Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "DE",
     "aircraft_marker": "airliner"
   },
   "EFHK": {
@@ -137,6 +156,7 @@
     "lon": 24.963341,
     "name": "Helsinki Vantaa Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FI",
     "aircraft_marker": "airliner"
   },
   "EFRO": {
@@ -144,6 +164,7 @@
     "lon": 25.829751,
     "name": "Rovaniemi Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FI",
     "aircraft_marker": "airliner"
   },
   "EGCC": {
@@ -151,6 +172,7 @@
     "lon": -2.279521,
     "name": "Manchester Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "GB",
     "aircraft_marker": "airliner"
   },
   "EGKK": {
@@ -158,6 +180,7 @@
     "lon": -0.185739,
     "name": "London Gatwick Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "GB",
     "aircraft_marker": "airliner"
   },
   "EGLL": {
@@ -165,6 +188,7 @@
     "lon": -0.459909,
     "name": "London Heathrow Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "GB",
     "aircraft_marker": "airliner"
   },
   "EGPF": {
@@ -172,6 +196,7 @@
     "lon": -4.43306,
     "name": "Glasgow Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "GB",
     "aircraft_marker": "airliner"
   },
   "EGPK": {
@@ -179,6 +204,7 @@
     "lon": -4.577182,
     "name": "Glasgow Prestwick Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "GB",
     "aircraft_marker": "airliner"
   },
   "EHRD": {
@@ -186,6 +212,7 @@
     "lon": 4.43722,
     "name": "Rotterdam The Hague Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "NL",
     "aircraft_marker": "airliner"
   },
   "EICK": {
@@ -193,6 +220,7 @@
     "lon": -8.49111,
     "name": "Cork International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "IE",
     "aircraft_marker": "airliner"
   },
   "EIDW": {
@@ -200,6 +228,7 @@
     "lon": -6.262121,
     "name": "Dublin Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "IE",
     "aircraft_marker": "airliner"
   },
   "EINN": {
@@ -207,6 +236,7 @@
     "lon": -8.92482,
     "name": "Shannon Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "IE",
     "aircraft_marker": "airliner"
   },
   "EKCH": {
@@ -214,6 +244,7 @@
     "lon": 12.656000137329,
     "name": "Copenhagen Kastrup Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "DK",
     "aircraft_marker": "airliner"
   },
   "EKVG": {
@@ -221,6 +252,7 @@
     "lon": -7.275782,
     "name": "Vágar Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FO",
     "aircraft_marker": "airliner"
   },
   "ENGM": {
@@ -228,6 +260,7 @@
     "lon": 11.1004,
     "name": "Oslo-Gardermoen International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "NO",
     "aircraft_marker": "airliner"
   },
   "ESGG": {
@@ -235,6 +268,7 @@
     "lon": 12.2798,
     "name": "Göteborg Landvetter Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "SE",
     "aircraft_marker": "airliner"
   },
   "ESSA": {
@@ -242,6 +276,7 @@
     "lon": 17.928829,
     "name": "Stockholm-Arlanda Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "SE",
     "aircraft_marker": "airliner"
   },
   "GCFV": {
@@ -249,6 +284,7 @@
     "lon": -13.8638,
     "name": "Fuerteventura Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "ES",
     "aircraft_marker": "airliner"
   },
   "GMMN": {
@@ -256,6 +292,7 @@
     "lon": -7.58997,
     "name": "Mohammed V International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "MA",
     "aircraft_marker": "airliner"
   },
   "GMMX": {
@@ -263,6 +300,7 @@
     "lon": -8.035788,
     "name": "Marrakesh Menara Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "MA",
     "aircraft_marker": "airliner"
   },
   "HECA": {
@@ -270,6 +308,7 @@
     "lon": 31.396694,
     "name": "Cairo International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "EG",
     "aircraft_marker": "airliner"
   },
   "KATL": {
@@ -277,6 +316,7 @@
     "lon": -84.428101,
     "name": "Hartsfield Jackson Atlanta International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KBDL": {
@@ -284,6 +324,7 @@
     "lon": -72.688016,
     "name": "Bradley International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KBHM": {
@@ -291,6 +332,7 @@
     "lon": -86.750712,
     "name": "Birmingham-Shuttlesworth International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KBNA": {
@@ -298,6 +340,7 @@
     "lon": -86.6782,
     "name": "Nashville International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KBOS": {
@@ -305,6 +348,7 @@
     "lon": -71.0079,
     "name": "Boston Logan International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KBTV": {
@@ -312,6 +356,7 @@
     "lon": -73.153297,
     "name": "Patrick Leahy Burlington International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KBWI": {
@@ -319,6 +364,7 @@
     "lon": -76.668297,
     "name": "Baltimore/Washington International Thurgood Marshall Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KCHS": {
@@ -326,6 +372,7 @@
     "lon": -80.038151,
     "name": "Charleston International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KCLE": {
@@ -333,6 +380,7 @@
     "lon": -81.8498,
     "name": "Cleveland Hopkins International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KCLT": {
@@ -340,6 +388,7 @@
     "lon": -80.94309997558594,
     "name": "Charlotte Douglas International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KCRW": {
@@ -347,6 +396,7 @@
     "lon": -81.593201,
     "name": "Yeager Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KDTW": {
@@ -354,6 +404,7 @@
     "lon": -83.353786,
     "name": "Detroit Metropolitan Wayne County Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KEWR": {
@@ -361,6 +412,7 @@
     "lon": -74.170545,
     "name": "Newark Liberty International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KIAD": {
@@ -368,6 +420,7 @@
     "lon": -77.455803,
     "name": "Washington Dulles International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KIND": {
@@ -375,6 +428,7 @@
     "lon": -86.294403,
     "name": "Indianapolis International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KJFK": {
@@ -382,6 +436,7 @@
     "lon": -73.779317,
     "name": "John F. Kennedy International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KLGA": {
@@ -389,6 +444,7 @@
     "lon": -73.872597,
     "name": "LaGuardia Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KMDW": {
@@ -396,6 +452,7 @@
     "lon": -87.752403,
     "name": "Chicago Midway International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KMHT": {
@@ -403,6 +460,7 @@
     "lon": -71.435699,
     "name": "Manchester-Boston Regional Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KMIA": {
@@ -410,6 +468,7 @@
     "lon": -80.289751,
     "name": "Miami International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KMKE": {
@@ -417,6 +476,7 @@
     "lon": -87.896599,
     "name": "General Mitchell International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KORD": {
@@ -424,6 +484,7 @@
     "lon": -87.9048,
     "name": "Chicago O'Hare International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KPHL": {
@@ -431,6 +492,7 @@
     "lon": -75.241096,
     "name": "Philadelphia International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KPVD": {
@@ -438,6 +500,7 @@
     "lon": -71.425668,
     "name": "Rhode Island T. F. Green International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KPWM": {
@@ -445,6 +508,7 @@
     "lon": -70.309303,
     "name": "Portland International Jetport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "LDZA": {
@@ -452,6 +516,7 @@
     "lon": 16.0688,
     "name": "Zagreb Franjo Tuđman International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "HR",
     "aircraft_marker": "airliner"
   },
   "LEBL": {
@@ -459,6 +524,7 @@
     "lon": 2.07846,
     "name": "Josep Tarradellas Barcelona-El Prat Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "ES",
     "aircraft_marker": "airliner"
   },
   "LEGE": {
@@ -466,6 +532,7 @@
     "lon": 2.761774,
     "name": "Girona-Costa Brava Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "ES",
     "aircraft_marker": "airliner"
   },
   "LEIB": {
@@ -473,6 +540,7 @@
     "lon": 1.37312,
     "name": "Ibiza Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "ES",
     "aircraft_marker": "airliner"
   },
   "LEMD": {
@@ -480,6 +548,7 @@
     "lon": -3.572249,
     "name": "Adolfo Suárez Madrid–Barajas Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "ES",
     "aircraft_marker": "airliner"
   },
   "LEMG": {
@@ -487,6 +556,7 @@
     "lon": -4.500208,
     "name": "Málaga-Costa del Sol Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "ES",
     "aircraft_marker": "airliner"
   },
   "LEPA": {
@@ -494,6 +564,7 @@
     "lon": 2.73881,
     "name": "Palma de Mallorca Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "ES",
     "aircraft_marker": "airliner"
   },
   "LESO": {
@@ -501,6 +572,7 @@
     "lon": -1.79061,
     "name": "San Sebastián Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "ES",
     "aircraft_marker": "airliner"
   },
   "LEZL": {
@@ -508,6 +580,7 @@
     "lon": -5.89311,
     "name": "Seville Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "ES",
     "aircraft_marker": "airliner"
   },
   "LFBD": {
@@ -515,6 +588,7 @@
     "lon": -0.715356,
     "name": "Bordeaux–Mérignac Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "airliner"
   },
   "LFBO": {
@@ -522,6 +596,7 @@
     "lon": 1.36382,
     "name": "Toulouse-Blagnac Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "airliner"
   },
   "LFJL": {
@@ -529,6 +604,7 @@
     "lon": 6.25132,
     "name": "Metz-Nancy-Lorraine Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "airliner"
   },
   "LFKB": {
@@ -536,6 +612,7 @@
     "lon": 9.48373,
     "name": "Bastia-Poretta International airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "airliner"
   },
   "LFKC": {
@@ -543,6 +620,7 @@
     "lon": 8.792984,
     "name": "Calvi Sainte Catherine Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "airliner"
   },
   "LFKF": {
@@ -550,6 +628,7 @@
     "lon": 9.097092,
     "name": "Figari Sud-Corse Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "airliner"
   },
   "LFKJ": {
@@ -557,6 +636,7 @@
     "lon": 8.80292,
     "name": "Ajaccio Napoléon Bonaparte airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "airliner"
   },
   "LFMD": {
@@ -564,6 +644,7 @@
     "lon": 6.955176,
     "name": "Cannes Mandelieu Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "cessna"
   },
   "LFML": {
@@ -571,6 +652,7 @@
     "lon": 5.2125,
     "name": "Marseille Provence Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "airliner"
   },
   "LFMN": {
@@ -578,6 +660,7 @@
     "lon": 7.21587,
     "name": "Nice-Côte d'Azur Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "airliner"
   },
   "LFMT": {
@@ -585,6 +668,7 @@
     "lon": 3.96301,
     "name": "Montpellier-Méditerranée Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "airliner"
   },
   "LFNA": {
@@ -592,6 +676,7 @@
     "lon": 6.03778,
     "name": "Gap-Tallard Airfield",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "cessna"
   },
   "LFPO": {
@@ -599,6 +684,7 @@
     "lon": 2.358963,
     "name": "Paris-Orly Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "airliner"
   },
   "LFRN": {
@@ -606,6 +692,7 @@
     "lon": -1.73479,
     "name": "Rennes-Saint-Jacques Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "airliner"
   },
   "LFRS": {
@@ -613,6 +700,7 @@
     "lon": -1.61073,
     "name": "Nantes Atlantique Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "airliner"
   },
   "LFSB": {
@@ -620,6 +708,7 @@
     "lon": 7.521117,
     "name": "EuroAirport Basel–Mulhouse–Freiburg",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "airliner"
   },
   "LFST": {
@@ -627,6 +716,7 @@
     "lon": 7.62823,
     "name": "Strasbourg Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "airliner"
   },
   "LFTZ": {
@@ -634,6 +724,7 @@
     "lon": 6.482,
     "name": "La Môle Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "cessna"
   },
   "LGAV": {
@@ -641,6 +732,7 @@
     "lon": 23.9445,
     "name": "Athens Eleftherios Venizelos International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "GR",
     "aircraft_marker": "airliner"
   },
   "LGMK": {
@@ -648,6 +740,7 @@
     "lon": 25.348101,
     "name": "Mykonos Island National Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "GR",
     "aircraft_marker": "airliner"
   },
   "LGRP": {
@@ -655,6 +748,7 @@
     "lon": 28.086201,
     "name": "Rhodes International Airport \"Diagoras\"",
     "source": "OurAirports / airport-codes",
+    "country_code": "GR",
     "aircraft_marker": "airliner"
   },
   "LGSR": {
@@ -662,6 +756,7 @@
     "lon": 25.478638,
     "name": "Santorini International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "GR",
     "aircraft_marker": "airliner"
   },
   "LHBP": {
@@ -669,6 +764,7 @@
     "lon": 19.262393,
     "name": "Budapest Liszt Ferenc International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "HU",
     "aircraft_marker": "airliner"
   },
   "LICJ": {
@@ -676,6 +772,7 @@
     "lon": 13.091,
     "name": "Falcone–Borsellino Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "IT",
     "aircraft_marker": "airliner"
   },
   "LIMC": {
@@ -683,6 +780,7 @@
     "lon": 8.72811,
     "name": "Milan Malpensa International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "IT",
     "aircraft_marker": "airliner"
   },
   "LIML": {
@@ -690,6 +788,7 @@
     "lon": 9.27674,
     "name": "Milano Linate Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "IT",
     "aircraft_marker": "airliner"
   },
   "LIPE": {
@@ -697,6 +796,7 @@
     "lon": 11.2887,
     "name": "Bologna Guglielmo Marconi Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "IT",
     "aircraft_marker": "airliner"
   },
   "LIPZ": {
@@ -704,6 +804,7 @@
     "lon": 12.3519,
     "name": "Venice Marco Polo Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "IT",
     "aircraft_marker": "airliner"
   },
   "LIRF": {
@@ -711,6 +812,7 @@
     "lon": 12.251998,
     "name": "Rome–Fiumicino Leonardo da Vinci International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "IT",
     "aircraft_marker": "airliner"
   },
   "LIRN": {
@@ -718,6 +820,7 @@
     "lon": 14.2908,
     "name": "Naples International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "IT",
     "aircraft_marker": "airliner"
   },
   "LMML": {
@@ -725,6 +828,7 @@
     "lon": 14.491546,
     "name": "Malta International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "MT",
     "aircraft_marker": "airliner"
   },
   "LOWI": {
@@ -732,6 +836,7 @@
     "lon": 11.344,
     "name": "Innsbruck Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "AT",
     "aircraft_marker": "airliner"
   },
   "LOWS": {
@@ -739,6 +844,7 @@
     "lon": 13.0043,
     "name": "Salzburg Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "AT",
     "aircraft_marker": "airliner"
   },
   "LPFR": {
@@ -746,6 +852,7 @@
     "lon": -7.970939,
     "name": "Faro - Gago Coutinho International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "PT",
     "aircraft_marker": "airliner"
   },
   "LPPR": {
@@ -753,6 +860,7 @@
     "lon": -8.68138980865,
     "name": "Francisco de Sá Carneiro Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "PT",
     "aircraft_marker": "airliner"
   },
   "LPPT": {
@@ -760,6 +868,7 @@
     "lon": -9.13592,
     "name": "Lisbon Humberto Delgado Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "PT",
     "aircraft_marker": "airliner"
   },
   "LSGG": {
@@ -767,6 +876,7 @@
     "lon": 6.10895,
     "name": "Geneva International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CH",
     "aircraft_marker": "airliner"
   },
   "LSZH": {
@@ -774,6 +884,7 @@
     "lon": 8.548056,
     "name": "Zürich Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CH",
     "aircraft_marker": "airliner"
   },
   "LTFM": {
@@ -781,6 +892,7 @@
     "lon": 28.732136,
     "name": "İstanbul Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "TR",
     "aircraft_marker": "airliner"
   },
   "LXGB": {
@@ -788,6 +900,7 @@
     "lon": -5.34978,
     "name": "Gibraltar Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "GI",
     "aircraft_marker": "airliner"
   },
   "MDSD": {
@@ -795,6 +908,7 @@
     "lon": -69.668899536133,
     "name": "Las Américas International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "DO",
     "aircraft_marker": "airliner"
   },
   "MUHA": {
@@ -802,6 +916,7 @@
     "lon": -82.40910339355469,
     "name": "José Martí International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CU",
     "aircraft_marker": "airliner"
   },
   "OERK": {
@@ -809,6 +924,7 @@
     "lon": 46.698799,
     "name": "King Khalid International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "SA",
     "aircraft_marker": "airliner"
   },
   "OMDB": {
@@ -816,6 +932,7 @@
     "lon": 55.370992,
     "name": "Dubai International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "AE",
     "aircraft_marker": "airliner"
   },
   "OOMS": {
@@ -823,6 +940,7 @@
     "lon": 58.285268,
     "name": "Muscat International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "OM",
     "aircraft_marker": "airliner"
   },
   "TFFF": {
@@ -830,6 +948,7 @@
     "lon": -61.003201,
     "name": "Martinique Aimé Césaire International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "MQ",
     "aircraft_marker": "airliner"
   },
   "TFFR": {
@@ -837,6 +956,7 @@
     "lon": -61.532754,
     "name": "Maryse Condé International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "GP",
     "aircraft_marker": "airliner"
   },
   "TJSJ": {
@@ -844,6 +964,7 @@
     "lon": -66.001801,
     "name": "Luis Munoz Marin International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "PR",
     "aircraft_marker": "airliner"
   },
   "58CA": {
@@ -851,6 +972,7 @@
     "lon": -118.22899627685547,
     "name": "Jay Stephen Hooper Memorial Heliport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "cessna"
   },
   "CYVR": {
@@ -858,6 +980,7 @@
     "lon": -123.183998,
     "name": "Vancouver International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CA",
     "aircraft_marker": "airliner"
   },
   "KABQ": {
@@ -865,6 +988,7 @@
     "lon": -106.608925,
     "name": "Albuquerque International Sunport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KASE": {
@@ -872,6 +996,7 @@
     "lon": -106.869003,
     "name": "Aspen-Pitkin County Airport (Sardy Field)",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KBOI": {
@@ -879,6 +1004,7 @@
     "lon": -116.223,
     "name": "Boise Air Terminal/Gowen Field",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KBZN": {
@@ -886,6 +1012,7 @@
     "lon": -111.153711,
     "name": "Bozeman Yellowstone International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KDEN": {
@@ -893,6 +1020,7 @@
     "lon": -104.673792,
     "name": "Denver International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KDFW": {
@@ -900,6 +1028,7 @@
     "lon": -97.038002,
     "name": "Dallas Fort Worth International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KFSD": {
@@ -907,6 +1036,7 @@
     "lon": -96.741152,
     "name": "Sioux Falls Regional Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KIAH": {
@@ -914,6 +1044,7 @@
     "lon": -95.3414,
     "name": "George Bush Intercontinental Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KICT": {
@@ -921,6 +1052,7 @@
     "lon": -97.428583,
     "name": "Wichita Dwight D. Eisenhower National Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KJAC": {
@@ -928,6 +1060,7 @@
     "lon": -110.737999,
     "name": "Jackson Hole Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KJAN": {
@@ -935,6 +1068,7 @@
     "lon": -90.075897,
     "name": "Jackson-Medgar Wiley Evers International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KLAS": {
@@ -942,6 +1076,7 @@
     "lon": -115.151817,
     "name": "Harry Reid International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KLAX": {
@@ -949,6 +1084,7 @@
     "lon": -118.407997,
     "name": "Los Angeles International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KLIT": {
@@ -956,6 +1092,7 @@
     "lon": -92.223591,
     "name": "Bill & Hillary Clinton National Airport/Adams Field",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KMCI": {
@@ -963,6 +1100,7 @@
     "lon": -94.713893,
     "name": "Kansas City International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KMSP": {
@@ -970,6 +1108,7 @@
     "lon": -93.221741,
     "name": "Minneapolis–Saint Paul International Airport / Wold–Chamberlain Field",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KMSY": {
@@ -977,6 +1116,7 @@
     "lon": -90.264673,
     "name": "Louis Armstrong New Orleans International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KOKC": {
@@ -984,6 +1124,7 @@
     "lon": -97.598248,
     "name": "OKC Will Rogers World Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KOMA": {
@@ -991,6 +1132,7 @@
     "lon": -95.894096,
     "name": "Eppley Airfield",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KPDX": {
@@ -998,6 +1140,7 @@
     "lon": -122.598,
     "name": "Portland International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KPHX": {
@@ -1005,6 +1148,7 @@
     "lon": -112.005905,
     "name": "Phoenix Sky Harbor International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KSEA": {
@@ -1012,6 +1156,7 @@
     "lon": -122.310276,
     "name": "Seattle–Tacoma International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KSFO": {
@@ -1019,6 +1164,7 @@
     "lon": -122.374821,
     "name": "San Francisco International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KSLC": {
@@ -1026,6 +1172,7 @@
     "lon": -111.979866,
     "name": "Salt Lake City International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KTUS": {
@@ -1033,6 +1180,7 @@
     "lon": -110.938053,
     "name": "Tucson International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "PANC": {
@@ -1040,6 +1188,7 @@
     "lon": -149.992561,
     "name": "Ted Stevens Anchorage International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "PHNL": {
@@ -1047,6 +1196,7 @@
     "lon": -157.92567,
     "name": "Daniel K. Inouye International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "ROAH": {
@@ -1054,6 +1204,7 @@
     "lon": 127.639804,
     "name": "Naha International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "JP",
     "aircraft_marker": "airliner"
   },
   "YPAD": {
@@ -1061,6 +1212,7 @@
     "lon": 138.533393,
     "name": "Adelaide International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "AU",
     "aircraft_marker": "airliner"
   },
   "EETN": {
@@ -1068,6 +1220,7 @@
     "lon": 24.83264,
     "name": "Lennart Meri Tallinn Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "EE",
     "aircraft_marker": "airliner"
   },
   "EHAM": {
@@ -1075,6 +1228,7 @@
     "lon": 4.76389,
     "name": "Amsterdam Airport Schiphol",
     "source": "OurAirports / airport-codes",
+    "country_code": "NL",
     "aircraft_marker": "airliner"
   },
   "ELLX": {
@@ -1082,6 +1236,7 @@
     "lon": 6.212134,
     "name": "Luxembourg-Findel International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "LU",
     "aircraft_marker": "airliner"
   },
   "EPWA": {
@@ -1089,6 +1244,7 @@
     "lon": 20.9671,
     "name": "Warsaw Chopin Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "PL",
     "aircraft_marker": "airliner"
   },
   "EVRA": {
@@ -1096,6 +1252,7 @@
     "lon": 23.970711,
     "name": "Riga International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "LV",
     "aircraft_marker": "airliner"
   },
   "EYVI": {
@@ -1103,6 +1260,7 @@
     "lon": 25.285801,
     "name": "Vilnius International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "LT",
     "aircraft_marker": "airliner"
   },
   "LATI": {
@@ -1110,6 +1268,7 @@
     "lon": 19.7206,
     "name": "Tirana International Airport Mother Teresa",
     "source": "OurAirports / airport-codes",
+    "country_code": "AL",
     "aircraft_marker": "airliner"
   },
   "LBSF": {
@@ -1117,6 +1276,7 @@
     "lon": 23.417671,
     "name": "Sofia Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "BG",
     "aircraft_marker": "airliner"
   },
   "LCLK": {
@@ -1124,6 +1284,7 @@
     "lon": 33.624901,
     "name": "Larnaca International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CY",
     "aircraft_marker": "airliner"
   },
   "LKPR": {
@@ -1131,6 +1292,7 @@
     "lon": 14.259911,
     "name": "Václav Havel Airport Prague",
     "source": "OurAirports / airport-codes",
+    "country_code": "CZ",
     "aircraft_marker": "airliner"
   },
   "LROP": {
@@ -1138,6 +1300,7 @@
     "lon": 26.103285,
     "name": "Bucharest Henri Coandă International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "RO",
     "aircraft_marker": "airliner"
   },
   "LYBE": {
@@ -1145,6 +1308,7 @@
     "lon": 20.309099,
     "name": "Belgrade Nikola Tesla Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "RS",
     "aircraft_marker": "airliner"
   },
   "ULLI": {
@@ -1152,6 +1316,7 @@
     "lon": 30.262501,
     "name": "Pulkovo Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "RU",
     "aircraft_marker": "airliner"
   },
   "URSS": {
@@ -1159,6 +1324,7 @@
     "lon": 39.9566,
     "name": "Sochi International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "RU",
     "aircraft_marker": "airliner"
   },
   "UUDD": {
@@ -1166,6 +1332,7 @@
     "lon": 37.9063,
     "name": "Domodedovo International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "RU",
     "aircraft_marker": "airliner"
   },
   "UUEE": {
@@ -1173,6 +1340,7 @@
     "lon": 37.386677,
     "name": "Sheremetyevo International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "RU",
     "aircraft_marker": "airliner"
   },
   "UUWW": {
@@ -1180,6 +1348,7 @@
     "lon": 37.261501,
     "name": "Vnukovo International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "RU",
     "aircraft_marker": "airliner"
   },
   "CYAW": {
@@ -1187,6 +1356,7 @@
     "lon": -63.502107,
     "name": "CFB Shearwater Heliport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CA",
     "aircraft_marker": "cessna"
   },
   "CYEG": {
@@ -1194,6 +1364,7 @@
     "lon": -113.580002,
     "name": "Edmonton International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CA",
     "aircraft_marker": "airliner"
   },
   "CYHZ": {
@@ -1201,6 +1372,7 @@
     "lon": -63.5085983276,
     "name": "Halifax / Stanfield International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CA",
     "aircraft_marker": "airliner"
   },
   "CYOW": {
@@ -1208,6 +1380,7 @@
     "lon": -75.669197,
     "name": "Ottawa Macdonald-Cartier International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CA",
     "aircraft_marker": "airliner"
   },
   "CYQB": {
@@ -1215,6 +1388,7 @@
     "lon": -71.393303,
     "name": "Quebec Jean Lesage International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CA",
     "aircraft_marker": "airliner"
   },
   "CYWG": {
@@ -1222,6 +1396,7 @@
     "lon": -97.2398986816,
     "name": "Winnipeg / James Armstrong Richardson International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CA",
     "aircraft_marker": "airliner"
   },
   "CYYC": {
@@ -1229,6 +1404,7 @@
     "lon": -114.009933,
     "name": "Calgary International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CA",
     "aircraft_marker": "airliner"
   },
   "KGFK": {
@@ -1236,6 +1412,7 @@
     "lon": -97.176102,
     "name": "Grand Forks International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "LDDU": {
@@ -1243,6 +1420,7 @@
     "lon": 18.265543,
     "name": "Dubrovnik Ruđer Bošković Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "HR",
     "aircraft_marker": "airliner"
   },
   "LPMA": {
@@ -1250,6 +1428,7 @@
     "lon": -16.774613,
     "name": "Cristiano Ronaldo International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "PT",
     "aircraft_marker": "airliner"
   },
   "LSGS": {
@@ -1257,6 +1436,7 @@
     "lon": 7.326944,
     "name": "Sion Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CH",
     "aircraft_marker": "airliner"
   },
   "NZQN": {
@@ -1264,6 +1444,7 @@
     "lon": 168.746379,
     "name": "Queenstown Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "NZ",
     "aircraft_marker": "airliner"
   },
   "TFFJ": {
@@ -1271,6 +1452,7 @@
     "lon": -62.843333,
     "name": "St. Jean Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "BL",
     "aircraft_marker": "cessna"
   },
   "VQPR": {
@@ -1278,6 +1460,7 @@
     "lon": 89.424599,
     "name": "Paro International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "BT",
     "aircraft_marker": "airliner"
   },
   "ENTC": {
@@ -1285,6 +1468,7 @@
     "lon": 18.9189,
     "name": "Tromsø Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "NO",
     "aircraft_marker": "airliner"
   },
   "LFKT": {
@@ -1292,6 +1476,7 @@
     "lon": 9.189,
     "name": "Aérodrome de Corte",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "cessna"
   },
   "LFLB": {
@@ -1299,6 +1484,7 @@
     "lon": 5.88023,
     "name": "Chambéry Aix les Bains airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "airliner"
   },
   "LFNC": {
@@ -1306,6 +1492,7 @@
     "lon": 6.60028,
     "name": "Mont-Dauphin Saint-Crépin Airfield",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "cessna"
   },
   "LGSK": {
@@ -1313,6 +1500,7 @@
     "lon": 23.5037,
     "name": "Skiathos Island National Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "GR",
     "aircraft_marker": "cessna"
   },
   "LGSM": {
@@ -1320,6 +1508,7 @@
     "lon": 26.911699,
     "name": "Samos Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "GR",
     "aircraft_marker": "airliner"
   },
   "SBRJ": {
@@ -1327,6 +1516,7 @@
     "lon": -43.16282,
     "name": "Santos Dumont Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "BR",
     "aircraft_marker": "cessna"
   },
   "SLLP": {
@@ -1334,6 +1524,7 @@
     "lon": -68.189416,
     "name": "El Alto International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "BO",
     "aircraft_marker": "airliner"
   },
   "LDSP": {
@@ -1341,6 +1532,7 @@
     "lon": 16.298,
     "name": "Split Saint Jerome Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "HR",
     "aircraft_marker": "airliner"
   },
   "LFLL": {
@@ -1348,6 +1540,7 @@
     "lon": 5.090139,
     "name": "Lyon Saint-Exupéry Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "airliner"
   },
   "LIBD": {
@@ -1355,6 +1548,7 @@
     "lon": 16.760599,
     "name": "Bari Karol Wojtyła International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "IT",
     "aircraft_marker": "airliner"
   },
   "LOWW": {
@@ -1362,6 +1556,7 @@
     "lon": 16.5697,
     "name": "Vienna International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "AT",
     "aircraft_marker": "airliner"
   },
   "MKJS": {
@@ -1369,6 +1564,7 @@
     "lon": -77.91323,
     "name": "Sangster International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "JM",
     "aircraft_marker": "airliner"
   },
   "MYGF": {
@@ -1376,6 +1572,7 @@
     "lon": -78.695583,
     "name": "Grand Bahama International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "BS",
     "aircraft_marker": "airliner"
   },
   "MYNN": {
@@ -1383,6 +1580,7 @@
     "lon": -77.466202,
     "name": "Lynden Pindling International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "BS",
     "aircraft_marker": "airliner"
   },
   "OTHH": {
@@ -1390,6 +1588,7 @@
     "lon": 51.608056,
     "name": "Hamad International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "QA",
     "aircraft_marker": "airliner"
   },
   "SOCA": {
@@ -1397,6 +1596,7 @@
     "lon": -52.361326,
     "name": "Cayenne – Félix Eboué Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "GF",
     "aircraft_marker": "airliner"
   },
   "KJAX": {
@@ -1404,6 +1604,7 @@
     "lon": -81.687813,
     "name": "Jacksonville International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KORL": {
@@ -1411,6 +1612,7 @@
     "lon": -81.332901,
     "name": "Orlando Executive Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "LFRK": {
@@ -1418,6 +1620,7 @@
     "lon": -0.454883,
     "name": "Caen Carpiquet airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "airliner"
   },
   "MGGT": {
@@ -1425,6 +1628,7 @@
     "lon": -90.527515,
     "name": "La Aurora International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "GT",
     "aircraft_marker": "airliner"
   },
   "MHPR": {
@@ -1432,6 +1636,7 @@
     "lon": -87.621201,
     "name": "Palmerola International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "HN",
     "aircraft_marker": "airliner"
   },
   "MMAA": {
@@ -1439,6 +1644,7 @@
     "lon": -99.753113,
     "name": "General Juan N. Álvarez International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "MX",
     "aircraft_marker": "airliner"
   },
   "MMMX": {
@@ -1446,6 +1652,7 @@
     "lon": -99.07033,
     "name": "Mexico City Benito Juárez International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "MX",
     "aircraft_marker": "airliner"
   },
   "MNMG": {
@@ -1453,6 +1660,7 @@
     "lon": -86.168198,
     "name": "Augusto C. Sandino (Managua) International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "NI",
     "aircraft_marker": "airliner"
   },
   "MPTO": {
@@ -1460,6 +1668,7 @@
     "lon": -79.383499,
     "name": "Tocumen International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "PA",
     "aircraft_marker": "airliner"
   },
   "MROC": {
@@ -1467,6 +1676,7 @@
     "lon": -84.208801,
     "name": "Juan Santamaría International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CR",
     "aircraft_marker": "airliner"
   },
   "MSLP": {
@@ -1474,6 +1684,7 @@
     "lon": -89.055784,
     "name": "El Salvador International Airport Saint Óscar Arnulfo Romero y Galdámez",
     "source": "OurAirports / airport-codes",
+    "country_code": "SV",
     "aircraft_marker": "airliner"
   },
   "LFMA": {
@@ -1481,6 +1692,7 @@
     "lon": 5.366426,
     "name": "Aix Les Milles airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FR",
     "aircraft_marker": "cessna"
   },
   "NTAA": {
@@ -1488,6 +1700,7 @@
     "lon": -149.606936,
     "name": "Fa'a'ā International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "PF",
     "aircraft_marker": "airliner"
   },
   "NTTB": {
@@ -1495,6 +1708,7 @@
     "lon": -151.75100708007812,
     "name": "Bora Bora Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "PF",
     "aircraft_marker": "cessna"
   },
   "NTTH": {
@@ -1502,6 +1716,7 @@
     "lon": -151.021593,
     "name": "Huahine-Fare Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "PF",
     "aircraft_marker": "cessna"
   },
   "NTTM": {
@@ -1509,6 +1724,7 @@
     "lon": -149.761777,
     "name": "Moorea Temae Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "PF",
     "aircraft_marker": "cessna"
   },
   "SABE": {
@@ -1516,6 +1732,7 @@
     "lon": -58.415536,
     "name": "Aeroparque Jorge Newbery",
     "source": "OurAirports / airport-codes",
+    "country_code": "AR",
     "aircraft_marker": "airliner"
   },
   "SBGR": {
@@ -1523,6 +1740,7 @@
     "lon": -46.469954,
     "name": "São Paulo/Guarulhos–Governor André Franco Montoro International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "BR",
     "aircraft_marker": "airliner"
   },
   "SBSP": {
@@ -1530,6 +1748,7 @@
     "lon": -46.654601,
     "name": "Congonhas–Deputado Freitas Nobre Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "BR",
     "aircraft_marker": "airliner"
   },
   "SKBO": {
@@ -1537,6 +1756,7 @@
     "lon": -74.1469,
     "name": "El Dorado International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CO",
     "aircraft_marker": "airliner"
   },
   "SKMD": {
@@ -1544,6 +1764,7 @@
     "lon": -75.590597,
     "name": "Enrique Olaya Herrera Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CO",
     "aircraft_marker": "airliner"
   },
   "SAEZ": {
@@ -1551,6 +1772,7 @@
     "lon": -58.5358,
     "name": "Ezeiza International Airport - Ministro Pistarini",
     "source": "OurAirports / airport-codes",
+    "country_code": "AR",
     "aircraft_marker": "airliner"
   },
   "SAME": {
@@ -1558,6 +1780,7 @@
     "lon": -68.7929,
     "name": "Governor Francisco Gabrielli International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "AR",
     "aircraft_marker": "airliner"
   },
   "SANT": {
@@ -1565,6 +1788,7 @@
     "lon": -65.104195,
     "name": "Teniente Benjamín Matienzo International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "AR",
     "aircraft_marker": "airliner"
   },
   "SASA": {
@@ -1572,6 +1796,7 @@
     "lon": -65.486198,
     "name": "Martín Miguel de Güemes International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "AR",
     "aircraft_marker": "airliner"
   },
   "SASJ": {
@@ -1579,6 +1804,7 @@
     "lon": -65.097801,
     "name": "Gobernador Horacio Guzman International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "AR",
     "aircraft_marker": "airliner"
   },
   "SBKP": {
@@ -1586,6 +1812,7 @@
     "lon": -47.134502,
     "name": "Viracopos International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "BR",
     "aircraft_marker": "airliner"
   },
   "SBRF": {
@@ -1593,6 +1820,7 @@
     "lon": -34.922961,
     "name": "Recife/Guararapes - Gilberto Freyre International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "BR",
     "aircraft_marker": "airliner"
   },
   "SCEL": {
@@ -1600,6 +1828,7 @@
     "lon": -70.78579711914062,
     "name": "Comodoro Arturo Merino Benítez International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CL",
     "aircraft_marker": "airliner"
   },
   "SCIP": {
@@ -1607,6 +1836,7 @@
     "lon": -109.421027,
     "name": "Mataveri International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CL",
     "aircraft_marker": "airliner"
   },
   "SCJO": {
@@ -1614,6 +1844,7 @@
     "lon": -73.060997,
     "name": "Cañal Bajo Carlos Hott Siebert Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CL",
     "aircraft_marker": "airliner"
   },
   "SCTE": {
@@ -1621,6 +1852,7 @@
     "lon": -73.094065,
     "name": "El Tepual International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CL",
     "aircraft_marker": "airliner"
   },
   "SEGU": {
@@ -1628,6 +1860,7 @@
     "lon": -79.883598,
     "name": "José Joaquín de Olmedo International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "EC",
     "aircraft_marker": "airliner"
   },
   "SKCG": {
@@ -1635,6 +1868,7 @@
     "lon": -75.513,
     "name": "Rafael Nuñez International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CO",
     "aircraft_marker": "airliner"
   },
   "SKCL": {
@@ -1642,6 +1876,7 @@
     "lon": -76.381898,
     "name": "Alfonso Bonilla Aragon International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CO",
     "aircraft_marker": "airliner"
   },
   "SKPE": {
@@ -1649,6 +1884,7 @@
     "lon": -75.7395,
     "name": "Matecaña International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CO",
     "aircraft_marker": "airliner"
   },
   "SKSP": {
@@ -1656,6 +1892,7 @@
     "lon": -81.7112,
     "name": "Gustavo Rojas Pinilla International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CO",
     "aircraft_marker": "airliner"
   },
   "SPJC": {
@@ -1663,6 +1900,7 @@
     "lon": -77.114305,
     "name": "Jorge Chávez International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "PE",
     "aircraft_marker": "airliner"
   },
   "SUMU": {
@@ -1670,6 +1908,7 @@
     "lon": -56.026497,
     "name": "Carrasco General Cesáreo L. Berisso International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "UY",
     "aircraft_marker": "airliner"
   },
   "LLBG": {
@@ -1677,6 +1916,7 @@
     "lon": 34.8867,
     "name": "Ben Gurion International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "IL",
     "aircraft_marker": "airliner"
   },
   "OEDF": {
@@ -1684,6 +1924,7 @@
     "lon": 49.798209,
     "name": "King Fahd International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "SA",
     "aircraft_marker": "airliner"
   },
   "OEJN": {
@@ -1691,6 +1932,7 @@
     "lon": 39.157436,
     "name": "King Abdulaziz International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "SA",
     "aircraft_marker": "airliner"
   },
   "OIIE": {
@@ -1698,6 +1940,7 @@
     "lon": 51.152198791503906,
     "name": "Imam Khomeini International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "IR",
     "aircraft_marker": "airliner"
   },
   "OJAI": {
@@ -1705,6 +1948,7 @@
     "lon": 35.9931983948,
     "name": "Queen Alia International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "JO",
     "aircraft_marker": "airliner"
   },
   "OMAA": {
@@ -1712,6 +1956,7 @@
     "lon": 54.649237,
     "name": "Zayed International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "AE",
     "aircraft_marker": "airliner"
   },
   "RCTP": {
@@ -1719,6 +1964,7 @@
     "lon": 121.233002,
     "name": "Taiwan Taoyuan International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "TW",
     "aircraft_marker": "airliner"
   },
   "RJAA": {
@@ -1726,6 +1972,7 @@
     "lon": 140.388714,
     "name": "Narita International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "JP",
     "aircraft_marker": "airliner"
   },
   "RJBB": {
@@ -1733,6 +1980,7 @@
     "lon": 135.244003,
     "name": "Kansai International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "JP",
     "aircraft_marker": "airliner"
   },
   "RJTT": {
@@ -1740,6 +1988,7 @@
     "lon": 139.786958,
     "name": "Tokyo Haneda International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "JP",
     "aircraft_marker": "airliner"
   },
   "RKSI": {
@@ -1747,6 +1996,7 @@
     "lon": 126.450996,
     "name": "Incheon International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "KR",
     "aircraft_marker": "airliner"
   },
   "RPLL": {
@@ -1754,6 +2004,7 @@
     "lon": 121.019997,
     "name": "Ninoy Aquino International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "PH",
     "aircraft_marker": "airliner"
   },
   "VABB": {
@@ -1761,6 +2012,7 @@
     "lon": 72.867897,
     "name": "Chhatrapati Shivaji Maharaj International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "IN",
     "aircraft_marker": "airliner"
   },
   "VCBI": {
@@ -1768,6 +2020,7 @@
     "lon": 79.88410186767578,
     "name": "Bandaranaike International Colombo Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "LK",
     "aircraft_marker": "airliner"
   },
   "VGHS": {
@@ -1775,6 +2028,7 @@
     "lon": 90.397783,
     "name": "Hazrat Shahjalal International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "BD",
     "aircraft_marker": "airliner"
   },
   "VHHH": {
@@ -1782,6 +2036,7 @@
     "lon": 113.914862,
     "name": "Hong Kong International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "HK",
     "aircraft_marker": "airliner"
   },
   "VIDP": {
@@ -1789,6 +2044,7 @@
     "lon": 77.09519,
     "name": "Indira Gandhi International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "IN",
     "aircraft_marker": "airliner"
   },
   "VOBL": {
@@ -1796,6 +2052,7 @@
     "lon": 77.706299,
     "name": "Kempegowda International Airport Bengaluru",
     "source": "OurAirports / airport-codes",
+    "country_code": "IN",
     "aircraft_marker": "airliner"
   },
   "VTBS": {
@@ -1803,6 +2060,7 @@
     "lon": 100.747002,
     "name": "Suvarnabhumi Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "TH",
     "aircraft_marker": "airliner"
   },
   "VVTS": {
@@ -1810,6 +2068,7 @@
     "lon": 106.652,
     "name": "Tan Son Nhat International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "VN",
     "aircraft_marker": "airliner"
   },
   "WIII": {
@@ -1817,6 +2076,7 @@
     "lon": 106.655998,
     "name": "Soekarno-Hatta International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "ID",
     "aircraft_marker": "airliner"
   },
   "WMKK": {
@@ -1824,6 +2084,7 @@
     "lon": 101.709999,
     "name": "Kuala Lumpur International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "MY",
     "aircraft_marker": "airliner"
   },
   "WSSS": {
@@ -1831,6 +2092,7 @@
     "lon": 103.994003,
     "name": "Singapore Changi Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "SG",
     "aircraft_marker": "airliner"
   },
   "YBBN": {
@@ -1838,6 +2100,7 @@
     "lon": 153.11700439453125,
     "name": "Brisbane International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "AU",
     "aircraft_marker": "airliner"
   },
   "ZBAA": {
@@ -1845,6 +2108,7 @@
     "lon": 116.596702,
     "name": "Beijing Capital International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CN",
     "aircraft_marker": "airliner"
   },
   "ZBAD": {
@@ -1852,6 +2116,7 @@
     "lon": 116.413967,
     "name": "Beijing Daxing International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CN",
     "aircraft_marker": "airliner"
   },
   "ZGGG": {
@@ -1859,6 +2124,7 @@
     "lon": 113.299004,
     "name": "Guangzhou Baiyun International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CN",
     "aircraft_marker": "airliner"
   },
   "ZSPD": {
@@ -1866,6 +2132,7 @@
     "lon": 121.805,
     "name": "Shanghai Pudong International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CN",
     "aircraft_marker": "airliner"
   },
   "DIAP": {
@@ -1873,6 +2140,7 @@
     "lon": -3.92629,
     "name": "Félix-Houphouët-Boigny International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "CI",
     "aircraft_marker": "airliner"
   },
   "EDDP": {
@@ -1880,6 +2148,7 @@
     "lon": 12.232705,
     "name": "Leipzig/Halle Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "DE",
     "aircraft_marker": "airliner"
   },
   "EGGW": {
@@ -1887,6 +2156,7 @@
     "lon": -0.368333,
     "name": "London Luton Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "GB",
     "aircraft_marker": "airliner"
   },
   "HAAB": {
@@ -1894,6 +2164,7 @@
     "lon": 38.799301,
     "name": "Addis Ababa Bole International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "ET",
     "aircraft_marker": "airliner"
   },
   "HEGN": {
@@ -1901,6 +2172,7 @@
     "lon": 33.796692,
     "name": "Hurghada International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "EG",
     "aircraft_marker": "airliner"
   },
   "KMEM": {
@@ -1908,6 +2180,7 @@
     "lon": -89.97634,
     "name": "Frederick W. Smith International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KSAN": {
@@ -1915,6 +2188,7 @@
     "lon": -117.190002,
     "name": "San Diego International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KSDF": {
@@ -1922,6 +2196,7 @@
     "lon": -85.735076,
     "name": "Louisville Muhammad Ali International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "KTPA": {
@@ -1929,6 +2204,7 @@
     "lon": -82.533203,
     "name": "Tampa International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "US",
     "aircraft_marker": "airliner"
   },
   "LEAL": {
@@ -1936,6 +2212,7 @@
     "lon": -0.558156,
     "name": "Alicante-Elche Miguel Hernández Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "ES",
     "aircraft_marker": "airliner"
   },
   "LTAI": {
@@ -1943,6 +2220,7 @@
     "lon": 30.800501,
     "name": "Antalya International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "TR",
     "aircraft_marker": "airliner"
   },
   "MMMY": {
@@ -1950,6 +2228,7 @@
     "lon": -100.106989,
     "name": "Monterrey International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "MX",
     "aircraft_marker": "airliner"
   },
   "NFFN": {
@@ -1957,6 +2236,7 @@
     "lon": 177.437843,
     "name": "Nadi International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "FJ",
     "aircraft_marker": "airliner"
   },
   "NZAA": {
@@ -1964,6 +2244,7 @@
     "lon": 174.786331,
     "name": "Auckland International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "NZ",
     "aircraft_marker": "airliner"
   },
   "NZCH": {
@@ -1971,6 +2252,7 @@
     "lon": 172.532065,
     "name": "Christchurch International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "NZ",
     "aircraft_marker": "airliner"
   },
   "OBBI": {
@@ -1978,6 +2260,7 @@
     "lon": 50.63764,
     "name": "Bahrain International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "BH",
     "aircraft_marker": "airliner"
   },
   "OPKC": {
@@ -1985,6 +2268,7 @@
     "lon": 67.160797,
     "name": "Jinnah International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "PK",
     "aircraft_marker": "airliner"
   },
   "VVNB": {
@@ -1992,6 +2276,7 @@
     "lon": 105.806999,
     "name": "Noi Bai International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "VN",
     "aircraft_marker": "airliner"
   },
   "YMML": {
@@ -1999,6 +2284,7 @@
     "lon": 144.837898,
     "name": "Melbourne Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "AU",
     "aircraft_marker": "airliner"
   },
   "YPPH": {
@@ -2006,6 +2292,7 @@
     "lon": 115.96700286865234,
     "name": "Perth International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "AU",
     "aircraft_marker": "airliner"
   },
   "YSSY": {
@@ -2013,6 +2300,7 @@
     "lon": 151.177002,
     "name": "Sydney Kingsford Smith International Airport",
     "source": "OurAirports / airport-codes",
+    "country_code": "AU",
     "aircraft_marker": "airliner"
   }
 }
