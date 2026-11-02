@@ -296,3 +296,7 @@ button.airport-description-info{touch-action:manipulation;min-width:26px;min-hei
 /* Accès direct visible et tactile dans les bulles Leaflet, sans modifier le tableau. */
 .leaflet-popup-content .airport-popup-link{display:inline-block;margin-top:8px;padding:9px 12px;min-height:24px;background:#143b54;color:#fff!important;border-radius:7px;font-weight:700;text-decoration:none;touch-action:manipulation}
 .leaflet-popup-content .airport-popup-link:focus-visible{outline:3px solid #f39b27;outline-offset:2px}
+
+/* Accès tactile compact aux pages de webcams, sans modifier la hauteur des lignes METAR. */
+.weather-webcam-link{display:inline-flex;align-items:center;justify-content:center;vertical-align:baseline;font-size:15px;line-height:1;text-decoration:none;margin-left:5px;min-width:23px;min-height:23px;touch-action:manipulation;border-radius:5px}
+.weather-webcam-link:focus-visible{outline:2px solid #257eb4;outline-offset:2px}
