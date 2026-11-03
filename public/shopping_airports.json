@@ -1732,6 +1732,86 @@
     ]
   },
   {
+    "icao": "LFER",
+    "name": "Redon — Bains-sur-Oust",
+    "type": "aerodrome",
+    "lat": 47.69861,
+    "lon": -2.03806,
+    "country": "FR",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/118025/lfer-redon-bains-sur-oust",
+        "price_type": "Gratuit",
+        "product_title": "Redon — Bains-sur-Oust — scène MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LFFE",
+    "name": "Enghien — Moisselles",
+    "type": "aerodrome",
+    "lat": 49.04556,
+    "lon": 2.35194,
+    "country": "FR",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://fr.flightsim.to/addon/118163/lffe-enghien-moiselles",
+        "price_type": "Gratuit",
+        "product_title": "Enghien — Moisselles — scène MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LFLG",
+    "name": "Grenoble — Le Versoud",
+    "type": "aerodrome",
+    "lat": 45.218199,
+    "lon": 5.848509,
+    "country": "FR",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/airports/country/FR/updated",
+        "price_type": "Gratuit",
+        "product_title": "Grenoble — Le Versoud — scène MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LFNE",
+    "name": "Salon — Eyguières",
+    "type": "aerodrome",
+    "lat": 43.657501,
+    "lon": 5.013634,
+    "country": "FR",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/26621/lfne-salon-eyguires-airport-arodrome-de-salon-eyguires-provence-france-upgrade/null",
+        "price_type": "Gratuit",
+        "product_title": "Salon — Eyguières — scène MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LFQL",
+    "name": "Lens — Bénifontaine",
+    "type": "aerodrome",
+    "lat": 50.46603,
+    "lon": 2.81886,
+    "country": "FR",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/16308/lfql-lens-benifontaine",
+        "price_type": "Gratuit",
+        "product_title": "Lens — Bénifontaine — scène MSFS"
+      }
+    ]
+  },
+  {
     "icao": "LGKO",
     "name": "Kos International Airport \"Ippokratis\"",
     "type": "airport",
