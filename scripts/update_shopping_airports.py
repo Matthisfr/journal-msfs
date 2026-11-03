@@ -46,11 +46,11 @@ def main():
                 raise ValueError(f"URL boutique non conforme pour {code}: {url}")
             if not re.fullmatch(r"[A-Za-z0-9.-]+",parsed.hostname or ""):
                 raise ValueError(f"Hôte boutique non conforme : {code}")
-            shops.append({"store":str(entry.get("store") or "Boutique")[:65],"url":url})
+            shops.append({"store":str(entry.get("store") or "Boutique")[:65],"url":url,"price_type":str(entry.get("price_type") or "Prix à vérifier")[:32],"product_title":str(entry.get("product_title") or "")[:140]})
         if not shops:
             skipped.append(code+" (aucun lien produit)")
             continue
-        result.append({"icao":code,"name":str(item.get("name") or (position[2] if len(position)>2 else code))[:100],"lat":float(lat),"lon":float(lon),"shops":shops})
+        result.append({"icao":code,"name":str(item.get("name") or (position[2] if len(position)>2 else code))[:100],"lat":float(lat),"lon":float(lon),"type":str(item.get("type") or "airport"),"shops":shops})
     result.sort(key=lambda x:x["icao"])
     # Une liste vide est légitime lorsque tous les aéroports du catalogue sont achetés.
     OUTPUT.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
