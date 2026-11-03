@@ -1,131 +1,2485 @@
 [
   {
-    "icao": "NWWW",
-    "name": "Nouméa-La Tontouta",
+    "icao": "BIAR",
+    "name": "Akureyri International Airport",
+    "type": "airport",
     "shops": [
       {
-        "store": "Sierrasim",
-        "url": "https://secure.simmarket.com/sierrasim-simulation-la-tontouta-intl.-airport-nwww-msfs24.phtml"
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/st-simulations-biar-akureyri-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "BIAR - Akureyri Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/st-simulations-akureyri-biar-msfs",
+        "price_type": "Payant",
+        "product_title": "ST Simulations Akureyri (BIAR) for MSFS-2020"
       }
     ]
   },
   {
-    "icao": "NFTL",
-    "name": "Lifuka / Ha'apai",
+    "icao": "BKPR",
+    "name": "Priština Adem Jashari International Airport",
+    "type": "airport",
     "shops": [
       {
-        "store": "Shadow Media",
-        "url": "https://secure.simmarket.com/tonga-haapai-lifuka-island-nftl-msfs24.phtml"
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/bkpr-prishtina-intl-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "BKPR - Prishtina Intl. Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/mm-simulations-prishtina-bkpr-msfs",
+        "price_type": "Payant",
+        "product_title": "M'M Simulations Prishtina (BKPR) for MSFS"
       }
     ]
   },
   {
-    "icao": "NFTP",
-    "name": "Niuatoputapu",
+    "icao": "CYLW",
+    "name": "Kelowna International Airport",
+    "type": "airport",
     "shops": [
       {
-        "store": "Shadow Media",
-        "url": "https://secure.simmarket.com/tonga-mataaho-niuatoputapu-nftp-msfs24.phtml"
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/cylw-kelowna-intl",
+        "price_type": "Payant",
+        "product_title": "CYLW - Kelowna Intl. MSFS"
       }
     ]
   },
   {
-    "icao": "NCRG",
-    "name": "Rarotonga",
+    "icao": "CYQG",
+    "name": "Windsor International Airport",
+    "type": "airport",
     "shops": [
       {
-        "store": "KiwiFlightSim",
-        "url": "https://flightsim.to/store/product/ncrg-rarotonga-airport-cook-islands-polynesia"
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/dfflyer-cyqg-windsor-international-airport-msfs-2020-2024",
+        "price_type": "Payant",
+        "product_title": "CYQG - Windsor International Airport MSFS20/24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/dfflyer-direct-windsor-cyqg-msfs",
+        "price_type": "Payant",
+        "product_title": "Dfflyer Direct Windsor (CYQG) for MSFS"
       }
     ]
   },
   {
-    "icao": "RPMD",
-    "name": "Davao",
+    "icao": "CZBA",
+    "name": "Burlington Executive Airpark",
+    "type": "aerodrome",
     "shops": [
       {
-        "store": "Airwil Sceneries",
-        "url": "https://secure.simmarket.com/airwil-sceneries-rpmd-davao-intl-airport-msfs.phtml"
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/czba-burlington-airpark-msfs",
+        "price_type": "Payant",
+        "product_title": "CZBA - Burlington Airpark MSFS"
       }
     ]
   },
   {
-    "icao": "WADD",
-    "name": "Bali / Denpasar",
+    "icao": "DAAT",
+    "name": "Aguenar – Hadj Bey Akhamok Airport",
+    "type": "airport",
     "shops": [
       {
-        "store": "Aerosoft",
-        "url": "https://secure.simmarket.com/aerosoft-aerosoft-airport-bali-msfs.phtml"
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/daat-aguenar-tamanrasset-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "DAAT - Aguenar Tamanrasset Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/netdesign-aguenar-daat-msfs",
+        "price_type": "Payant",
+        "product_title": "NetDesign Aguenar (DAAT) for MSFS-2020"
       }
     ]
   },
   {
-    "icao": "ZMCK",
-    "name": "Oulan-Bator",
+    "icao": "DATG",
+    "name": "In Guezzam Airport",
+    "type": "aerodrome",
     "shops": [
       {
-        "store": "Mokui",
-        "url": "https://secure.simmarket.com/mokui-zmck-ulaanbaatar-chinggis-khaan-msfs.phtml"
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/datg-in-guezzam-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "DATG - In Guezzam Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/netdesign-in-guezzam-datg-msfs",
+        "price_type": "Payant",
+        "product_title": "NetDesign In Guezzam (DATG) for MSFS"
       }
     ]
   },
   {
-    "icao": "VNKT",
-    "name": "Katmandou",
+    "icao": "EDBJ",
+    "name": "Jena-Schöngleina Airfield",
+    "type": "aerodrome",
     "shops": [
       {
-        "store": "Final Approach Design",
-        "url": "https://secure.simmarket.com/kathmandu-nepal-vnkt-msfs2024.phtml"
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/spinoza-jena-schoengleina-edbj-msfs",
+        "price_type": "Payant",
+        "product_title": "SPINOZA Jena Schoengleina (EDBJ) for MSFS"
       }
     ]
   },
   {
-    "icao": "FZAA",
-    "name": "Kinshasa-N'Djili",
+    "icao": "EDBK",
+    "name": "Kyritz Airfield",
+    "type": "aerodrome",
     "shops": [
       {
-        "store": "FSDG",
-        "url": "https://secure.simmarket.com/fsdg-kinshasa-msfs2420.phtml"
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/edbk-kyritz-airfield-msfs",
+        "price_type": "Payant",
+        "product_title": "EDBK - Kyritz Airfield MSFS"
       }
     ]
   },
   {
-    "icao": "FYWH",
-    "name": "Windhoek / Hosea Kutako",
+    "icao": "EDDC",
+    "name": "Dresden Airport",
+    "type": "airport",
     "shops": [
       {
-        "store": "FSDG",
-        "url": "https://secure.simmarket.com/fsdg-lite-windhoek-msfs.phtml"
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/atelic-eddc-dresden-airport-msfs-2020-2024",
+        "price_type": "Payant",
+        "product_title": "EDDC - Dresden Airport MSFS20/24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/atelic-dresden-eddc-msfs",
+        "price_type": "Payant",
+        "product_title": "Atelic Dresden (EDDC) for MSFS"
       }
     ]
   },
   {
-    "icao": "FIMP",
-    "name": "Île Maurice",
+    "icao": "EDDN",
+    "name": "Nuremberg Airport",
+    "type": "airport",
     "shops": [
       {
-        "store": "FSDG",
-        "url": "https://secure.simmarket.com/fsdg-mauritius-msfs.phtml"
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/eddn-nuremberg-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "EDDN - Nuremberg Airport MSFS"
       }
     ]
   },
   {
-    "icao": "GCTS",
-    "name": "Tenerife Sud",
+    "icao": "EDEH",
+    "name": "Herrenteich Airfield",
+    "type": "aerodrome",
     "shops": [
       {
-        "store": "MK Studios",
-        "url": "https://secure.simmarket.com/tenerife-south-airport-gcts-msfs24.phtml"
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/spinoza-herrenteich-edeh-msfs",
+        "price_type": "Payant",
+        "product_title": "SPINOZA Herrenteich (EDEH) for MSFS"
       }
     ]
   },
   {
-    "icao": "RPVM",
-    "name": "Cebu-Mactan",
+    "icao": "EDEN",
+    "name": "Bad Hersfeld Airfield",
+    "type": "aerodrome",
     "shops": [
       {
-        "store": "CloudSurf Asia",
-        "url": "https://secure.simmarket.com/cloudsurf-asia-simulations-rpvm-mactan-cebu-international-airport.phtml"
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/vpilot-skar-el-eden-intl-airport-msfs2024",
+        "price_type": "Payant",
+        "product_title": "SKAR - El Eden Intl. Airport MSFS24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/v-pilot-designs-el-eden-skar-msfs-2024",
+        "price_type": "Payant",
+        "product_title": "V Pilot Designs El Eden (SKAR) for MSFS-2024"
+      }
+    ]
+  },
+  {
+    "icao": "EDFH",
+    "name": "Frankfurt-Hahn Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/mm-simulations-edfh-frankfurt-hahn-airport-msfs-2020-2024",
+        "price_type": "Payant",
+        "product_title": "EDFH - Frankfurt-Hahn Airport MSFS20/24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/mm-simulations-frankfurt-hahn-edfh-msfs",
+        "price_type": "Payant",
+        "product_title": "M'M Simulations Frankfurt Hahn (EDFH) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EDFR",
+    "name": "Rothenburg ob der Tauber Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/edfr-rothenburg-airfield-msfs",
+        "price_type": "Payant",
+        "product_title": "EDFR - Rothenburg Airfield MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EDLP",
+    "name": "Paderborn Lippstadt Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/edlp-paderborn-lippstadt-airport",
+        "price_type": "Gratuit",
+        "product_title": "EDLP - Paderborn Lippstadt Airport MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EDLS",
+    "name": "Stadtlohn-Vreden Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/spinoza-stadtlohn-vreden-edls-msfs",
+        "price_type": "Payant",
+        "product_title": "SPINOZA Stadtlohn-Vreden (EDLS) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EDMB",
+    "name": "Biberach an der Riß Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/edmb-biberach-airfield-msfs",
+        "price_type": "Payant",
+        "product_title": "EDMB - Biberach Airfield MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/spinoza-magdeburg-edmb-msfs",
+        "price_type": "Payant",
+        "product_title": "SPINOZA Magdeburg (EDMB) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EDMW",
+    "name": "Deggendorf Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/edmw-deggendorf-airfield-msfs",
+        "price_type": "Payant",
+        "product_title": "EDMW - Deggendorf Airfield MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EDNR",
+    "name": "Regensburg-Oberhub Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/ednr-regensburg-airfield",
+        "price_type": "Payant",
+        "product_title": "EDNR - Regensburg Airfield MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EDPA",
+    "name": "Aalen Heidenheim Elchingen Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/edpa-aalen-heidenheim-elchingen-msfs",
+        "price_type": "Payant",
+        "product_title": "EDPA - Aalen-Heidenheim/Elchingen MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EDQH",
+    "name": "Herzogenaurach Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/edqh-herzogenaurach-airfield",
+        "price_type": "Payant",
+        "product_title": "EDQH - Herzogenaurach Airfield MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EDRJ",
+    "name": "Saarlouis-Düren Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/spinoza-saarlouis-duren-edrj-msfs",
+        "price_type": "Payant",
+        "product_title": "SPINOZA Saarlouis Duren (EDRJ) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EDRP",
+    "name": "Pirmasens-Pottschütthöhe Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/dc-scenery-design-pirmasens-edrp-msfs",
+        "price_type": "Payant",
+        "product_title": "DC Scenery Design Pirmasens (EDRP) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "EDRW",
+    "name": "Dierdorf-Wienau Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/spinoza-dierdorf-wienau-edrw-msfs",
+        "price_type": "Payant",
+        "product_title": "SPINOZA Dierdorf-Wienau (EDRW) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EDVY",
+    "name": "Porta Westfalica Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/edvy-porta-westfalica-airfield-msfs",
+        "price_type": "Payant",
+        "product_title": "EDVY - Porta Westfalica Airfield MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EDWC",
+    "name": "Damme Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/spinoza-damme-edwc-msfs",
+        "price_type": "Payant",
+        "product_title": "SPINOZA Damme (EDWC) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EDWE",
+    "name": "Emden Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/edwe-emden-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "EDWE - Emden Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/mm-simulations-emden-airport-edwe-msfs",
+        "price_type": "Payant",
+        "product_title": "M'M Simulations Emden (EDWE) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "EDWO",
+    "name": "Atterheide Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/spinoza-osnabruck-atterheide-edwo-msfs",
+        "price_type": "Payant",
+        "product_title": "SPINOZA Osnabruck Atterheide (EDWO) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EDWQ",
+    "name": "Ganderkesee Atlas Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/fss-edwq-ganderkesee-airfield-msfs",
+        "price_type": "Payant",
+        "product_title": "EDWQ - Ganderkesee Airfield MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EDWR",
+    "name": "Borkum Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/edwr-borkum-airfield-msfs",
+        "price_type": "Payant",
+        "product_title": "EDWR - Borkum Airfield MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/mm-simulations-borkum-edwr-msfs",
+        "price_type": "Payant",
+        "product_title": "M'M Simulations Borkum (EDWR) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "EDWS",
+    "name": "Norden-Norddeich Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/edws-norden-norddeich-msfs",
+        "price_type": "Payant",
+        "product_title": "EDWS - Norden-Norddeich MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EDXB",
+    "name": "Heide-Büsum Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/edxb-heide-busum-airfield-msfs",
+        "price_type": "Payant",
+        "product_title": "EDXB - Heide-Büsum Airfield MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EDXD",
+    "name": "Bohmte-Bad Essen Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/spinoza-bohmte-edxd-msfs",
+        "price_type": "Payant",
+        "product_title": "SPINOZA Bohmte (EDXD) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EDXE",
+    "name": "Rheine-Eschendorf Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/spinoza-rheine-eschendorf-edxe-msfs",
+        "price_type": "Payant",
+        "product_title": "SPINOZA Rheine-Eschendorf (EDXE) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EFOU",
+    "name": "Oulu Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/mm-simulations-efou-oulu-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "EFOU - Oulu Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/mm-simulations-oulu-efou-msfs",
+        "price_type": "Payant",
+        "product_title": "M'M Simulations Oulu (EFOU) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EFTU",
+    "name": "Turku Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/eftu-turku-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "EFTU - Turku Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/mm-simulations-turku-eftu-msfs",
+        "price_type": "Payant",
+        "product_title": "M'M Simulations Turku (EFTU) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EGAA",
+    "name": "Belfast International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/egaa-belfast-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "EGAA - Belfast Airport MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EGFF",
+    "name": "Cardiff International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/sofly-egff-cardiff-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "EGFF - Cardiff Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/sofly-cardiff-egff-xp12",
+        "price_type": "Payant",
+        "product_title": "SoFly Cardiff (EGFF)"
+      }
+    ]
+  },
+  {
+    "icao": "EGGP",
+    "name": "Liverpool John Lennon Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/eggp-liverpool-john-lennon-airport",
+        "price_type": "Payant",
+        "product_title": "EGGP - Liverpool John Lennon Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/inibuilds-liverpool-eggp-msfs-2024",
+        "price_type": "Payant",
+        "product_title": "iniBuilds Liverpool (EGGP) for MSFS-2024"
+      }
+    ]
+  },
+  {
+    "icao": "EGNX",
+    "name": "East Midlands Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/egnx-east-midlands-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "EGNX - East Midlands Airport MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EGPH",
+    "name": "Edinburgh Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/pyreegue-egph-edinburgh-airport-v2-msfs",
+        "price_type": "Payant",
+        "product_title": "EGPH - Edinburgh Airport II MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EHBK",
+    "name": "Maastricht Aachen Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/st-simulations-ehbk-maastricht-aachen-airport",
+        "price_type": "Payant",
+        "product_title": "EHBK - Maastricht Aachen Airport"
+      }
+    ]
+  },
+  {
+    "icao": "EKBI",
+    "name": "Billund Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/taimodels-ekbi-billund-airport-msfs2020-2024",
+        "price_type": "Payant",
+        "product_title": "EKBI - Billund Airport MSFS20/24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/taimodels-billund-ekbi-msfs",
+        "price_type": "Payant",
+        "product_title": "TaiModels Billund (EKBI) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "ENBR",
+    "name": "Bergen Airport, Flesland",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/enbr-bergen-flesland-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "ENBR - Bergen Flesland Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/salvuz-bergen-flesland-enbr-msfs-2024",
+        "price_type": "Payant",
+        "product_title": "Salvuz Bergen Flesland (ENBR) for MSFS-2024"
+      }
+    ]
+  },
+  {
+    "icao": "ENCN",
+    "name": "Kristiansand Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/gaya-encn-kristiansand-airport-msfs2020",
+        "price_type": "Payant",
+        "product_title": "ENCN - Kristiansand Airport MSFS20"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/gaya-simulations-kristiansand-encn-msfs",
+        "price_type": "Payant",
+        "product_title": "Gaya Simulations Kristiansand (ENCN) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "ENEV",
+    "name": "Harstad/Narvik Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/mm-simulations-enev-harstad-narvik-airport-msfs-2020-2024",
+        "price_type": "Payant",
+        "product_title": "ENEV - Harstad/Narvik Airport MSFS20/24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/mm-simulations-harstad-narvik-enev-msfs",
+        "price_type": "Payant",
+        "product_title": "M'M Simulations Harstad Narvik (ENEV) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "ENVA",
+    "name": "Trondheim Airport, Værnes",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/enva-trondheim-vaernes",
+        "price_type": "Payant",
+        "product_title": "ENVA - Trondheim-Vaernes Intl. MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EPGD",
+    "name": "Gdańsk Lech Wałęsa Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/epgd-gdansk-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "EPGD - Gdańsk Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/drzewiecki-design-gdansk-epgd-msfs",
+        "price_type": "Payant",
+        "product_title": "Drzewiecki Design Gdansk (EPGD) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EPKK",
+    "name": "Kraków John Paul II International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/drzewiecki-design-epkk-krakow-airport-v2-msfs",
+        "price_type": "Payant",
+        "product_title": "EPKK - Kraków Airport v2 MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/drzewiecki-design-krakow-v2-epkk-msfs",
+        "price_type": "Payant",
+        "product_title": "Drzewiecki Design Krakow V2 (EPKK) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EPKT",
+    "name": "Katowice Wojciech Korfanty International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/drzewiecki-epkt-katowice-airport-msfs-2020-2024",
+        "price_type": "Payant",
+        "product_title": "EPKT - Katowice Airport MSFS20/24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/drzewiecki-design-katowice-epkt-msfs",
+        "price_type": "Payant",
+        "product_title": "Drzewiecki Design Katowice (EPKT) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EPLB",
+    "name": "Lublin Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/eplb-lublin-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "EPLB - Lublin Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/drzewiecki-design-lublin-eplb-msfs",
+        "price_type": "Payant",
+        "product_title": "Drzewiecki Design Lublin (EPLB) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EPRZ",
+    "name": "Rzeszów-Jasionka Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/eprz-rzeszow-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "EPRZ - Rzeszów Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/drzewiecki-design-rzeszow-eprz-msfs",
+        "price_type": "Payant",
+        "product_title": "Drzewiecki Design Rzeszów (EPRZ) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EPSC",
+    "name": "Solidarity Szczecin–Goleniów Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/drzewiecki-epsc-szczecin-airport-msfs-2020-2024",
+        "price_type": "Payant",
+        "product_title": "EPSC - Szczecin Airport MSFS20/24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/drzewiecki-design-szczecin-epsc-msfs",
+        "price_type": "Payant",
+        "product_title": "Drzewiecki Design Szczecin (EPSC) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EPWR",
+    "name": "Copernicus Wrocław Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/epwr-wroclaw-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "EPWR - Wroclaw Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/drzewiecki-design-wroclaw-epwr-msfs",
+        "price_type": "Payant",
+        "product_title": "Drzewiecki Design Wroclaw (EPWR) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "ESOW",
+    "name": "Stockholm Västerås Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/mxi-design-esow-stockholm-vasteras-airport-msfs-2020-2024",
+        "price_type": "Payant",
+        "product_title": "ESOW - Stockholm Västerås Airport MSFS20/24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/mxi-design-stockholm-vasteras-esow-msfs",
+        "price_type": "Payant",
+        "product_title": "MXI Design Stockholm Vasteras (ESOW) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "EYPA",
+    "name": "Palanga International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/lisium-design-eypa-palanga-airport-v2-msfs-2020-2024",
+        "price_type": "Payant",
+        "product_title": "EYPA - Palanga Airport v2 MSFS20/24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/lisium-design-palanga-eypa-msfs",
+        "price_type": "Payant",
+        "product_title": "Lisium Design Palanga (EYPA) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "FADS",
+    "name": "De Doorns Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/fads-vnkt-kathmandu-airport-msfs2024",
+        "price_type": "Payant",
+        "product_title": "VNKT - Kathmandu Airport MSFS24"
+      },
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/fads-vgsy-sylhet-international-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "VGSY - Sylhet International Airport MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "FAHD",
+    "name": "Hippo Pools Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/vertex-design-studio-oedf-king-fahd-airport-msfs-2020-2024",
+        "price_type": "Payant",
+        "product_title": "OEDF - King Fahd International Airport MSFS20/24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/vertex-design-studio-king-fahd-oedf-msfs",
+        "price_type": "Payant",
+        "product_title": "Vertex Design Studio King Fahd (OEDF) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "FANG",
+    "name": "Ngala Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/inibuilds-wolfs-fang-runway-at98-msfs",
+        "price_type": "Gratuit",
+        "product_title": "iniBuilds Wolf's Fang Runway (AT98) for MSFS-2024"
+      }
+    ]
+  },
+  {
+    "icao": "FARO",
+    "name": "Rooiberg Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/lpfr-faro-international-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "LPFR - Faro International Airport MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "GCGM",
+    "name": "La Gomera Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/gcgm-la-gomera-airport",
+        "price_type": "Payant",
+        "product_title": "GCGM - La Gomera Airport MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "GCLP",
+    "name": "Gran Canaria Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/gclp-gran-canaria-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "GCLP - Gran Canaria Airport MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "HKKE",
+    "name": "Keekorok Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/samscene3d-nairobi-sightseeing-hknw-hkke-for-msfs-2024",
+        "price_type": "Payant",
+        "product_title": "SamScene3D Nairobi Sightseeing (HKNW) (HKKE) for MSFS-2024"
+      }
+    ]
+  },
+  {
+    "icao": "HTKJ",
+    "name": "Kilimanjaro International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/htkj-kilimanjaro-intl-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "HTKJ - Kilimanjaro Intl. Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/vuelosimple-kilimanjaro-htkj-msfs",
+        "price_type": "Payant",
+        "product_title": "VueloSimple Kilimanjaro (HTKJ) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "KCDK",
+    "name": "George T Lewis Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/kcdk-ceydar-key-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "KCDK - Ceydar Key Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/pilots-cedar-key-kcdk-msfs",
+        "price_type": "Payant",
+        "product_title": "PILOT'S Cedar Key (KCDK) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "KCDW",
+    "name": "Essex County Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/dc-scenery-design-essex-county-kcdw-msfs-2024",
+        "price_type": "Payant",
+        "product_title": "DC Scenery Design Essex County (KCDW) for MSFS-2024"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/dc-scenery-design-essex-county-kcdw-msfs",
+        "price_type": "Payant",
+        "product_title": "DC Scenery Design Essex County (KCDW) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "KDJT",
+    "name": "President Donald J. Trump International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/verticalsim-kdjt-donald-j-trump-international-airport-msfs-2020-2024",
+        "price_type": "Payant",
+        "product_title": "KDJT - Donald J Trump International Airport MSFS20/24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/verticalsim-donald-j-trump-kdjt-msfs",
+        "price_type": "Payant",
+        "product_title": "VerticalSim Donald J Trump (KDJT) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "KDNN",
+    "name": "Dalton Municipal Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/project-max-dalton-municipal-kdnn-msfs",
+        "price_type": "Payant",
+        "product_title": "Project MAX Dalton Municipal (KDNN) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "KEMT",
+    "name": "San Gabriel Valley Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/spinoza-san-gabriel-valley-airport-kemt-msfs",
+        "price_type": "Payant",
+        "product_title": "SPINOZA San Gabriel Valley Airport (KEMT) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "KFDK",
+    "name": "Frederick Municipal Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/airportmode-kfdk-frederick-municipal-airport-msfs-2024",
+        "price_type": "Payant",
+        "product_title": "KFDK - Frederick Municipal Airport MSFS24"
+      }
+    ]
+  },
+  {
+    "icao": "KFLL",
+    "name": "Fort Lauderdale Hollywood International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/kfll-fort-lauderdale-hollywood-intl",
+        "price_type": "Payant",
+        "product_title": "KFLL - Fort Lauderdale Hollywood Intl. MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/mk-studios-fort-lauderdale-hollywood-kfll-msfs-2024",
+        "price_type": "Payant",
+        "product_title": "MK-STUDIOS Fort Lauderdale-Hollywood (KFLL) for MSFS-2024"
+      }
+    ]
+  },
+  {
+    "icao": "KHMT",
+    "name": "Hemet Ryan Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/flyin-j-simulations-khmt-hemet-ryan-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "KHMT - Hemet-Ryan Airport MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "KHOU",
+    "name": "William P. Hobby Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/fly2high-khou-william-hobby-airport-msfs2024",
+        "price_type": "Payant",
+        "product_title": "KHOU - William P. Hobby Airport MSFS24"
+      },
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/khou-houston-hobby-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "KHOU - Houston Hobby Airport MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "KHVN",
+    "name": "Tweed New Haven Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/fly2high-khvn-tweed-new-haven-airport-msfs2024",
+        "price_type": "Payant",
+        "product_title": "KHVN - Tweed New Haven Airport MSFS24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/fly2high-tweed-new-haven-khvn-msfs",
+        "price_type": "Payant",
+        "product_title": "Fly2High Tweed New Haven (KHVN) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "KLVK",
+    "name": "Livermore Municipal Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/spinoza-livermore-municipal-klvk-msfs",
+        "price_type": "Payant",
+        "product_title": "SPINOZA Livermore Municipal (KLVK) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "KONT",
+    "name": "Ontario International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/kont-ontario-international-msfs",
+        "price_type": "Payant",
+        "product_title": "KONT - Ontario International MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/verticalsim-ontario-kont-msfs",
+        "price_type": "Payant",
+        "product_title": "VerticalSim Ontario (KONT) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "KORF",
+    "name": "Norfolk International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/korf-norfolk-intl",
+        "price_type": "Payant",
+        "product_title": "KORF - Norfolk Intl. MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "KPIE",
+    "name": "St. Petersburg Clearwater International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/verticalsim-kpie-st-petersburg-clearwater-intl-msfs",
+        "price_type": "Payant",
+        "product_title": "KPIE - St. Petersburg-Clearwater Intl MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/verticalsim-st-pete-clearwater-kpie-msfs",
+        "price_type": "Payant",
+        "product_title": "VerticalSim St.Pete/Clearwater (KPIE) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "KRNT",
+    "name": "Renton Municipal Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/krnt-renton-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "KRNT - Renton Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/drzewiecki-design-renton-krnt-msfs",
+        "price_type": "Payant",
+        "product_title": "Drzewiecki Design Renton (KRNT) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "KRSW",
+    "name": "Southwest Florida International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/verticalsim-krsw-southwest-florida-intl-airport-msfs-2020-2024",
+        "price_type": "Payant",
+        "product_title": "KRSW - Southwest Florida Intl Airport MSFS20/24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/verticalsim-southwest-florida-krsw-msfs",
+        "price_type": "Payant",
+        "product_title": "VerticalSim Southwest Florida (KRSW) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "KSBA",
+    "name": "Santa Barbara Municipal Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/gaya-simulations-santa-barbara-municipal-ksba-for-msfs-2024",
+        "price_type": "Payant",
+        "product_title": "Gaya Simulations Santa Barbara Municipal (KSBA) for MSFS-2024"
+      }
+    ]
+  },
+  {
+    "icao": "KSFB",
+    "name": "Orlando Sanford International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/taimodels-ksfb-orlando-sanford-airport-msfs2020-2024",
+        "price_type": "Payant",
+        "product_title": "KSFB - Orlando Sanford Airport MSFS20/24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/taimodels-orlando-sanford-ksfb-xp",
+        "price_type": "Payant",
+        "product_title": "TaiModels Orlando Sanford (KSFB)"
+      }
+    ]
+  },
+  {
+    "icao": "KSRQ",
+    "name": "Sarasota Bradenton International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/ksrq-sarasota-bradenton-intl",
+        "price_type": "Payant",
+        "product_title": "KSRQ - Sarasota Bradenton Intl. MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/verticalsim-sarasota-bradenton-ksrq-msfs",
+        "price_type": "Payant",
+        "product_title": "VerticalSim Sarasota-Bradenton (KSRQ) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "KSYR",
+    "name": "Syracuse Hancock International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/ksyr-syracuse-hancock-intl-msfs",
+        "price_type": "Payant",
+        "product_title": "KSYR - Syracuse Hancock Intl. MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/verticalsim-syracuse-hancock-ksyr-msfs",
+        "price_type": "Payant",
+        "product_title": "VerticalSim Syracuse Hancock (KSYR) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "KTNP",
+    "name": "Twentynine Palms Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/ktnp-twentynine-palms-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "KTNP - Twentynine Palms Airport MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "KTPF",
+    "name": "Peter O Knight Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/ktpf-peter-o-knight-airport",
+        "price_type": "Payant",
+        "product_title": "KTPF - Peter O. Knight Airport MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LBBG",
+    "name": "Burgas Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/lbbg-burgas-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "LBBG - Burgas Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/ag-sim-burgas-lbbg-msfs",
+        "price_type": "Payant",
+        "product_title": "AG Sim Burgas (LBBG) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LBWN",
+    "name": "Varna Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/lbwn-varna-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "LBWN - Varna Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/ag-sim-varna-lbwn-msfs",
+        "price_type": "Payant",
+        "product_title": "AG Sim Varna (LBWN) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "LEMH",
+    "name": "Menorca Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/lemh-menorca-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "LEMH - Menorca Airport MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LEMY",
+    "name": "Aeródromo de Royanejos",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/slh-sim-designs-tffj-saint-barthelemy-airport-msfs-2020-2024",
+        "price_type": "Payant",
+        "product_title": "TFFJ - Saint Barthélemy Airport MSFS20/24"
+      }
+    ]
+  },
+  {
+    "icao": "LGKO",
+    "name": "Kos International Airport \"Ippokratis\"",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/gaya-lgko-kos-airport-msfs2020",
+        "price_type": "Payant",
+        "product_title": "LGKO - Kos Airport MSFS20"
+      },
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/atelic-lgko-kos-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "LGKO - Kos International Airport MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LGKR",
+    "name": "Corfu Ioannis Kapodistrias International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/gaya-lgkr-corfu-airport-msfs2020",
+        "price_type": "Payant",
+        "product_title": "LGKR - Corfu Airport MSFS20"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/gaya-simulations-corfu-lgkr-msfs",
+        "price_type": "Payant",
+        "product_title": "Gaya Simulations Corfu (LGKR) for MSFS-2024"
+      }
+    ]
+  },
+  {
+    "icao": "LGKV",
+    "name": "Kavala Alexander the Great International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/mm-simulations-lgkv-kavala-intl-airport-msfs-2020-2024",
+        "price_type": "Payant",
+        "product_title": "LGKV - Kavala Intl. Airport MSFS20/24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/mm-simulations-kavala-lgkv-msfs",
+        "price_type": "Payant",
+        "product_title": "M'M Simulations Kavala (LGKV) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LGKY",
+    "name": "Kalymnos Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/mm-simulations-lgky-kalymnos-airport-msfs2020-2024",
+        "price_type": "Payant",
+        "product_title": "LGKY - Kalymnos Airport MSFS20/24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/mm-simulations-kalymnos-lgky-msfs",
+        "price_type": "Payant",
+        "product_title": "M'M Simulations Kalymnos (LGKY) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LGSA",
+    "name": "Chania International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/29palms-lgsa-chania-airport-msfs-2024",
+        "price_type": "Payant",
+        "product_title": "LGSA - Chania Airport MSFS24"
+      },
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/lgsa-chania-intl",
+        "price_type": "Payant",
+        "product_title": "LGSA - Chania Intl. MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LGZA",
+    "name": "Zakynthos International Airport \"Dionysios Solomos\"",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/mxi-design-lgza-zakynthos-airport-msfs2020-2024",
+        "price_type": "Payant",
+        "product_title": "LGZA - Zakynthos Airport MSFS20/24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/inibuilds-zakynthos-lgza-msfs-2024",
+        "price_type": "Payant",
+        "product_title": "iniBuilds Zakynthos (LGZA) for MSFS-2024"
+      }
+    ]
+  },
+  {
+    "icao": "LIME",
+    "name": "Il Caravaggio International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/lime-bergamo-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "LIME - Bergamo Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/barelli-msfs-addons-milan-bergamo-lime-for-msfs-2020",
+        "price_type": "Payant",
+        "product_title": "Barelli MSFS Addons Milan Bergamo (LIME) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "LIPV",
+    "name": "Venice-Lido Giovanni Nicelli Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/lipv-lido-di-venezia-airfield-msfs",
+        "price_type": "Payant",
+        "product_title": "LIPV - Lido di Venezia Airfield MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/barelli-msfs-addons-venezia-lido-lipv-msfs-2024",
+        "price_type": "Payant",
+        "product_title": "Barelli MSFS Addons Venezia Lido (LIPV) for MSFS-2024"
+      }
+    ]
+  },
+  {
+    "icao": "LIRQ",
+    "name": "Florence Airport, Peretola",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/gaya-lirq-florence-msfs2020",
+        "price_type": "Payant",
+        "product_title": "LIRQ - Florence Airport MSFS20"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/gaya-simulations-florence-lirq-msfs",
+        "price_type": "Payant",
+        "product_title": "Gaya Simulations Florence (LIRQ) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LJBO",
+    "name": "Bovec Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/ljbo-bovec-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "LJBO - Bovec Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/st-simulations-bovec-ljbo-msfs",
+        "price_type": "Payant",
+        "product_title": "ST Simulations Bovec (LJBO) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "LOIJ",
+    "name": "Sankt Johann Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/gaya-loij-sankt-johann-airport-msfs2020",
+        "price_type": "Payant",
+        "product_title": "LOIJ - Sankt Johann Airport MSFS20"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/gaya-simulations-sankt-johann-loij-msfs",
+        "price_type": "Payant",
+        "product_title": "Gaya Simulations Sankt Johann (LOIJ) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LOWZ",
+    "name": "Zell am See Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/gaya-lowz-zell-am-see-airport-msfs2020",
+        "price_type": "Payant",
+        "product_title": "LOWZ - Zell am See Airport MSFS20"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/gaya-simulations-zell-am-see-lowz-msfs",
+        "price_type": "Payant",
+        "product_title": "Gaya Simulations Zell am See (LOWZ) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LRIA",
+    "name": "Iaşi International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/lria-iasi-international-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "LRIA - Iasi International Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/mld-scenery-iasi-lria-msfs",
+        "price_type": "Payant",
+        "product_title": "MLD Scenery Iași (LRIA) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "LRTR",
+    "name": "Timișoara Traian Vuia International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/lrtr-timisoara-international-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "LRTR - Timisoara International Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/mld-scenery-timisoara-lrtr-msfs",
+        "price_type": "Payant",
+        "product_title": "MLD Scenery Timisoara (LRTR) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "LSPV",
+    "name": "Wangen-Lachen Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/lspv-wangen-lachen-airfield-msfs",
+        "price_type": "Payant",
+        "product_title": "LSPV - Wangen-Lachen Airfield MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/ag-sim-wangen-lachen-lspv-msfs",
+        "price_type": "Payant",
+        "product_title": "AG Sim Wangen-Lachen (LSPV) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LSTS",
+    "name": "Sankt Stephan Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/lsts-st-stephan-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "LSTS - St. Stephan Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/st-simulations-st-stephan-lsts-msfs",
+        "price_type": "Payant",
+        "product_title": "ST Simulations St. Stephan (LSTS) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "LSZE",
+    "name": "Bad Ragaz Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/lsze-bad-ragaz-airfield-msfs",
+        "price_type": "Payant",
+        "product_title": "LSZE - Bad Ragaz Airfield MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/ag-sim-bad-ragaz-lsze-msfs",
+        "price_type": "Payant",
+        "product_title": "AG Sim Bad Ragaz (LSZE) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LSZM",
+    "name": "Mollis Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/lszm-mollis-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "LSZM - Mollis Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/ag-sim-mollis-lszm-msfs",
+        "price_type": "Payant",
+        "product_title": "AG Sim Mollis (LSZM/LSMF) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LSZP",
+    "name": "Biel-Kappelen Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/lszp-biel-kappelen-airfield-msfs",
+        "price_type": "Payant",
+        "product_title": "LSZP - Biel-Kappelen Airfield MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/biel-kappelen-lszp-msfs",
+        "price_type": "Payant",
+        "product_title": "AG Sim Biel Kappelen (LSZP) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LSZT",
+    "name": "Lommis Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/lszt-lommis-airfield-msfs",
+        "price_type": "Payant",
+        "product_title": "LSZT - Lommis Airfield MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/ag-sim-lommis-lszt-msfs",
+        "price_type": "Payant",
+        "product_title": "AG Sim Lommis (LSZT) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "LSZX",
+    "name": "Schänis Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/lszx-schanis-airfield-msfs",
+        "price_type": "Payant",
+        "product_title": "LSZX - Schanis Airfield MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/ag-sim-schanis-lszx-msfs",
+        "price_type": "Payant",
+        "product_title": "AG Sim Schanis (LSZX) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LTAC",
+    "name": "Esenboğa International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/scenerytr-ltac-ankara-esenboga-airport-msfs-2020-2024",
+        "price_type": "Payant",
+        "product_title": "LTAC - Ankara Esenboğa Airport MSFS20/24"
+      }
+    ]
+  },
+  {
+    "icao": "LTAF",
+    "name": "Adana Şakirpaşa Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/ltaf-adana-sakirpasa-airport",
+        "price_type": "Payant",
+        "product_title": "LTAF - Adana Sakirpasa Airport MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LTBJ",
+    "name": "Adnan Menderes International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/mm-simulations-ltbj-izmir-intl-airport-v2-msfs-2020-2024",
+        "price_type": "Payant",
+        "product_title": "LTBJ - Izmir Intl. Airport v2 MSFS20/24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/mm-simulations-izmir-ltbj-msfs-2024",
+        "price_type": "Payant",
+        "product_title": "M'M Simulations Izmir V2 (LTBJ) for MSFS-2024"
+      }
+    ]
+  },
+  {
+    "icao": "LTBS",
+    "name": "Dalaman International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/ltbs-dalaman-intl-msfs",
+        "price_type": "Payant",
+        "product_title": "LTBS - Dalaman Intl. MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/mm-simulations-dalaman-ltbs-msfs",
+        "price_type": "Payant",
+        "product_title": "M'M Simulations Dalaman (LTBS) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "LWOH",
+    "name": "Ohrid St. Paul the Apostle Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/sofly-lwoh-ohrid-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "LWOH - Ohrid Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/sofly-ohrid-lwoh-msfs",
+        "price_type": "Payant",
+        "product_title": "SoFly Ohrid (LWOH) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "LWSK",
+    "name": "Skopje International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/lwsk-skopje-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "LWSK - Skopje Airport MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LZIB",
+    "name": "M. R. Štefánik Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/lzib-bratislava-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "LZIB - Bratislava Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/flying-partners-slovakia-bratislava-lzib-for-msfs",
+        "price_type": "Payant",
+        "product_title": "Flying Partners Slovakia Bratislava (LZIB) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "MMOX",
+    "name": "Xoxocotlán International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/mmox-oaxaca-international-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "MMOX - Oaxaca International Airport MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "MMUN",
+    "name": "Cancún International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/mmun-cancun-intl-msfs",
+        "price_type": "Payant",
+        "product_title": "MMUN - Cancun Intl. MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/macco-simulations-cancun-mmun-msfs",
+        "price_type": "Payant",
+        "product_title": "Macco Simulations Cancun (MMUN) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "MNCI",
+    "name": "Corn Island Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/teikof-studio-corn-island-mnci-msfs",
+        "price_type": "Payant",
+        "product_title": "Teikof Studio Corn Island (MNCI) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "MPSM",
+    "name": "Scarlett Martinez International Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/teikof-studio-scarlett-martinez-mpsm-msfs",
+        "price_type": "Payant",
+        "product_title": "Teikof Studio Scarlett Martinez (MPSM) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "MWCR",
+    "name": "Owen Roberts International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/mwcr-owen-roberts-airport",
+        "price_type": "Payant",
+        "product_title": "MWCR - Owen Roberts Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/vuelosimple-owen-roberts-mwcr-msfs",
+        "price_type": "Payant",
+        "product_title": "VueloSimple Owen Roberts (MWCR) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "NZWN",
+    "name": "Wellington International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/nzwn-wellington-intl-msfs",
+        "price_type": "Payant",
+        "product_title": "NZWN - Wellington Intl. MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "OIAW",
+    "name": "Qasem Soleimani International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/oiaw-ahvaz-international",
+        "price_type": "Payant",
+        "product_title": "OIAW International Airport MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "OPSD",
+    "name": "Skardu International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/vuelosimple-opsd-skardu-international-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "OPSD - Skardu International Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/vuelosimple-skardu-opsd-msfs",
+        "price_type": "Payant",
+        "product_title": "VueloSimple Skardu (OPSD) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "PACK",
+    "name": "Chefornak Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/echo-19-audio-productions-black-square-tbm-850-pro-sound-pack-msfs-2024",
+        "price_type": "Payant",
+        "product_title": "Echo 19 Audio Productions Black Square TBM 850 Pro Sound Pack for MSFS-2024"
+      },
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/skylogiclabs-falkor-too-expedition-pack-msfs2020-2024",
+        "price_type": "Payant",
+        "product_title": "Falkor Too Expedition Pack MSFS20/24"
+      }
+    ]
+  },
+  {
+    "icao": "PASO",
+    "name": "Seldovia Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/dominicdesignteam-el-paso-kelp-msfs",
+        "price_type": "Payant",
+        "product_title": "DominicDesignTeam El Paso (KELP) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "PHDH",
+    "name": "Kawaihapai Airfield",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/northern-sky-studios-phdh-dillingham-airfield-msfs",
+        "price_type": "Payant",
+        "product_title": "PHDH - Dillingham Airfield MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/northern-sky-studio-dillingham-phdh-msfs",
+        "price_type": "Payant",
+        "product_title": "Northern Sky Studio Dillingham (PHDH) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "PHLI",
+    "name": "Lihue Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/northern-sky-phli-lihue-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "PHLI - Lihue Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/northern-sky-studio-lihue-phli-msfs",
+        "price_type": "Payant",
+        "product_title": "Northern Sky Studio Lihue (PHLI) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "PHLU",
+    "name": "Kalaupapa Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/northern-sky-studio-molokai-and-kalaupapa-phmk-phlu-msfs",
+        "price_type": "Payant",
+        "product_title": "Northern Sky Studio Molokai and Kalaupapa (PHMK, PHLU) for MSFS-2020"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/south-oak-co-kalaupapa-phlu-msfs",
+        "price_type": "Payant",
+        "product_title": "South Oak Co Kalaupapa (PHLU) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "PHOG",
+    "name": "Kahului International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/phog-kahului-airport",
+        "price_type": "Payant",
+        "product_title": "PHOG - Kahului Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/northern-sky-studio-kahului-phog-msfs",
+        "price_type": "Payant",
+        "product_title": "Northern Sky Studio Kahului (PHOG) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "RCKH",
+    "name": "Kaohsiung International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/aco-design-studio-rckh-kaohsiung-international-airport-msfs2020-2024",
+        "price_type": "Payant",
+        "product_title": "RCKH - Kaohsiung International Airport MSFS20/24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/aco-design-studio-taiwan-kaohsiung-rckh-msfs",
+        "price_type": "Payant",
+        "product_title": "ACO Design Studio Taiwan Kaohsiung (RCKH) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "RCSS",
+    "name": "Taipei Songshan International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/aco-design-studio-rcss-taipei-songshan-airport-msfs2020-2024",
+        "price_type": "Payant",
+        "product_title": "RCSS - Taipei Songshan Airport MSFS20/24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/aco-design-studio-taiwan-songshan-rcss-msfs",
+        "price_type": "Payant",
+        "product_title": "ACO Design Studio Taiwan Songshan (RCSS) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "RPSP",
+    "name": "Bohol-Panglao International Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/cloudsurf-asia-rpsp-bohol-panglao-intl-airport-msfs-2024",
+        "price_type": "Payant",
+        "product_title": "RPSP - Bohol-Panglao Intl. Airport FS24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/cloudsurf-asia-simiulations-bohol-panglao-rpsp-for-msfs-2024",
+        "price_type": "Payant",
+        "product_title": "CloudSurf Asia Simiulations Bohol-Panglao (RPSP) for MSFS-2024"
+      }
+    ]
+  },
+  {
+    "icao": "SIMS",
+    "name": "Fazenda Califórnia Airstrip",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/rara-avis-sims-english-electric-wren-msfs-2024",
+        "price_type": "Payant",
+        "product_title": "Rara-Avis Sims English Electric Wren for MSFS-2024"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/rara-avis-sims-bulldog-autogyro-msfs-2024",
+        "price_type": "Payant",
+        "product_title": "Rara-Avis Sims Bulldog Autogyro for MSFS-2024"
+      }
+    ]
+  },
+  {
+    "icao": "SKAR",
+    "name": "El Eden Airport",
+    "type": "airport",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/vpilot-skar-el-eden-intl-airport-msfs2024",
+        "price_type": "Payant",
+        "product_title": "SKAR - El Eden Intl. Airport MSFS24"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/v-pilot-designs-el-eden-skar-msfs-2024",
+        "price_type": "Payant",
+        "product_title": "V Pilot Designs El Eden (SKAR) for MSFS-2024"
+      }
+    ]
+  },
+  {
+    "icao": "TFFA",
+    "name": "La Désirade Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/tffa-la-desirade-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "TFFA - La Désirade Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/slh-sim-designs-la-desirade-tffa-msfs",
+        "price_type": "Payant",
+        "product_title": "SLH Sim Designs La Désirade (TFFA) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "UBBF",
+    "name": "Fuzuli International Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/azrsim-karabakh-ubbf-msfs-2024",
+        "price_type": "Payant",
+        "product_title": "Azrsim Karabakh (UBBF) for MSFS-2024"
+      }
+    ]
+  },
+  {
+    "icao": "WAFO",
+    "name": "Maleo Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/project-max-morowali-maleo-wafo-msfs",
+        "price_type": "Payant",
+        "product_title": "Project MAX Morowali Maleo (WAFO) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "WATO",
+    "name": "Komodo Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/wato-komodo-airport",
+        "price_type": "Payant",
+        "product_title": "WATO - Komodo Airport MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "WMPA",
+    "name": "Pulau Pangkor Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/shadescene-pangkor-island-wmpa-msfs",
+        "price_type": "Payant",
+        "product_title": "Shadescene Pangkor Island (WMPA) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "WREN",
+    "name": "Bomela Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/rara-avis-sims-english-electric-wren-msfs-2024",
+        "price_type": "Payant",
+        "product_title": "Rara-Avis Sims English Electric Wren for MSFS-2024"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/rara-avis-sims-english-electric-wren-for-msfs",
+        "price_type": "Payant",
+        "product_title": "Rara-Avis Sims English Electric Wren for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "YBDG",
+    "name": "Bendigo Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/impulse-simulations-bendigo-ybdg-msfs",
+        "price_type": "Payant",
+        "product_title": "Impulse Simulations Bendigo (YBDG) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "YCDR",
+    "name": "Caloundra Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/ycdr-caloundra-airport-msfs",
+        "price_type": "Payant",
+        "product_title": "YCDR - Caloundra Airport MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "YLHI",
+    "name": "Lord Howe Island Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/ylhi-lord-howe-island",
+        "price_type": "Payant",
+        "product_title": "YLHI - Lord Howe Island MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/auscene-lord-howe-island-ylhi-msfs",
+        "price_type": "Payant",
+        "product_title": "AUscene Lord Howe Island (YLHI) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "YOLW",
+    "name": "Onslow Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/shadescene-onslow-yolw-msfs-2024",
+        "price_type": "Payant",
+        "product_title": "SHADESCENE Onslow (YOLW) for MSFS-2024"
+      }
+    ]
+  },
+  {
+    "icao": "YPPF",
+    "name": "Adelaide Parafield Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/auscene-yppf-parafield-adelaide-airport-msfs2024",
+        "price_type": "Payant",
+        "product_title": "YPPF - Parafield Adelaide Airport MSFS24"
+      },
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/yppf-parafield-adelaide-airport",
+        "price_type": "Payant",
+        "product_title": "YPPF - Parafield Adelaide Airport MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "YSPT",
+    "name": "Southport Airport",
+    "type": "aerodrome",
+    "shops": [
+      {
+        "store": "Contrail",
+        "url": "https://contrail.shop/products/yspt-southport-gold-coast-airport",
+        "price_type": "Payant",
+        "product_title": "YSPT - Southport Gold Coast Airport MSFS"
+      },
+      {
+        "store": "iniBuilds",
+        "url": "https://inibuilds.com/products/auscene-southport-gold-coast-yspt-msfs",
+        "price_type": "Payant",
+        "product_title": "AUscene Southport Gold Coast (YSPT) for MSFS"
       }
     ]
   }
