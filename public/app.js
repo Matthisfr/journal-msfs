@@ -379,13 +379,13 @@ async function renderMap(){
   shoppingControl.className='map-shopping-toggle';
   shoppingControl.setAttribute('aria-pressed','false');
   const bagSvg='<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg>';
+  let shoppingVisible=false;
   let shoppingCounts={airport:0,aerodrome:0};
   const updateShoppingButton=()=>{
     shoppingControl.innerHTML=bagSvg+' <span>'+shoppingCounts.airport+' aéroports · '+shoppingCounts.aerodrome+' aérodromes — '+(shoppingVisible?'Masquer':'Afficher')+'</span>';
   };
   updateShoppingButton();
   slot.insertBefore(shoppingControl,mapElement);
-  let shoppingVisible=false;
   shoppingControl.addEventListener('click',()=>{
     shoppingVisible=!shoppingVisible;
     if(shoppingVisible)shoppingLayer.addTo(airportMap);
