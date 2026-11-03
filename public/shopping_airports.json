@@ -1242,6 +1242,22 @@
     ]
   },
   {
+    "icao": "KBKL",
+    "name": "Cleveland Burke Lakefront Airport",
+    "type": "aerodrome",
+    "lat": 41.5175,
+    "lon": -81.6833,
+    "country": "US",
+    "shops": [
+      {
+        "store": "Flightsim.to Store",
+        "url": "https://flightsim.to/store/country/US",
+        "price_type": "Payant",
+        "product_title": "Cleveland Burke Lakefront Airport — scène MSFS"
+      }
+    ]
+  },
+  {
     "icao": "KBOK",
     "name": "Brookings State Airport — Oregon",
     "type": "aerodrome",
@@ -1298,6 +1314,22 @@
         "url": "https://inibuilds.com/products/dc-scenery-design-essex-county-kcdw-msfs",
         "price_type": "Payant",
         "product_title": "DC Scenery Design Essex County (KCDW) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "KCON",
+    "name": "Concord Municipal Airport",
+    "type": "aerodrome",
+    "lat": 43.2027,
+    "lon": -71.5023,
+    "country": "US",
+    "shops": [
+      {
+        "store": "Flightsim.to Store",
+        "url": "https://flightsim.to/store/product/kcon-concord-municipal-airport",
+        "price_type": "Payant",
+        "product_title": "Concord Municipal Airport — scène MSFS"
       }
     ]
   },
@@ -1480,6 +1512,22 @@
     ]
   },
   {
+    "icao": "KHPN",
+    "name": "Westchester County Airport",
+    "type": "aerodrome",
+    "lat": 41.06696,
+    "lon": -73.70757,
+    "country": "US",
+    "shops": [
+      {
+        "store": "Flightsim.to Store",
+        "url": "https://flightsim.to/store/country/US",
+        "price_type": "Payant",
+        "product_title": "Westchester County Airport — scène MSFS"
+      }
+    ]
+  },
+  {
     "icao": "KHVN",
     "name": "Tweed New Haven Airport",
     "type": "airport",
@@ -1498,6 +1546,22 @@
         "url": "https://inibuilds.com/products/fly2high-tweed-new-haven-khvn-msfs",
         "price_type": "Payant",
         "product_title": "Fly2High Tweed New Haven (KHVN) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "KIKK",
+    "name": "Greater Kankakee Airport",
+    "type": "aerodrome",
+    "lat": 41.0714,
+    "lon": -87.8463,
+    "country": "US",
+    "shops": [
+      {
+        "store": "Flightsim.to Store",
+        "url": "https://flightsim.to/store/country/US",
+        "price_type": "Payant",
+        "product_title": "Greater Kankakee Airport — scène MSFS"
       }
     ]
   },
@@ -1632,6 +1696,22 @@
         "url": "https://contrail.shop/products/korf-norfolk-intl",
         "price_type": "Payant",
         "product_title": "KORF - Norfolk Intl. MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "KOSH",
+    "name": "Wittman Regional Airport — Oshkosh",
+    "type": "aerodrome",
+    "lat": 43.9844,
+    "lon": -88.5569,
+    "country": "US",
+    "shops": [
+      {
+        "store": "Flightsim.to Store",
+        "url": "https://flightsim.to/store/country/US",
+        "price_type": "Payant",
+        "product_title": "Wittman Regional Airport — Oshkosh — scène MSFS"
       }
     ]
   },
