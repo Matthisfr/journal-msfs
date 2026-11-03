@@ -312,26 +312,9 @@ async function renderMap(){
   });
   document.addEventListener('fullscreenchange',updateFullscreenLabel);
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&slot.classList.contains('map-fullscreen-fallback')){slot.classList.remove('map-fullscreen-fallback');document.body.style.overflow='';updateFullscreenLabel()}});
-  // OpenFreeMap : styles vectoriels gratuits sans clé API.
-  // Chargement uniquement à l'ouverture de la carte ; en cas d'échec réseau,
-  // les trois fonds raster historiques restent utilisables.
-  let vectorReady=false;
-  try{
-    if(!document.getElementById('maplibre-map-styles')){
-      const css=document.createElement('link');
-      css.id='maplibre-map-styles';css.rel='stylesheet';
-      css.href='https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.css';
-      document.head.appendChild(css);
-    }
-    const loadMapScript=src=>new Promise((resolve,reject)=>{
-      const script=document.createElement('script');
-      script.src=src;script.onload=resolve;script.onerror=()=>reject(new Error('Chargement impossible : '+src));
-      document.head.appendChild(script);
-    });
-    if(!window.maplibregl)await loadMapScript('https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.js');
-    if(!L.maplibreGL)await loadMapScript('https://cdn.jsdelivr.net/npm/@maplibre/maplibre-gl-leaflet@0.1.1/leaflet-maplibre-gl.js');
-    vectorReady=Boolean(L.maplibreGL);
-  }catch(e){console.warn('Styles OpenFreeMap indisponibles, utilisation des fonds classiques',e)}
+  // Priorité à la disponibilité de la carte : les fonds raster se chargent sans attendre les CDN MapLibre.
+  // Les styles vectoriels sont temporairement désactivés pour éviter un écran vide en cas de CDN bloqué.
+  const vectorReady=false;
   airportMap=L.map('airport-leaflet-map',{maxBounds:WORLD_BOUNDS,maxBoundsViscosity:1}).setView([43.7,7.2],5);
   const baseMaps={
     'Plan':L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{noWrap:true,maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}),
