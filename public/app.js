@@ -301,7 +301,8 @@ async function renderMap(){
   const fullscreenButton=document.createElement('button');
   fullscreenButton.type='button';fullscreenButton.className='map-fullscreen-button';fullscreenButton.textContent='⛶ Plein écran';
   fullscreenButton.setAttribute('aria-label','Afficher la carte en plein écran');
-  slot.appendChild(fullscreenButton);
+  // Commande dans la barre au-dessus de la carte : ne masque plus les zooms Leaflet +/-.
+  slot.insertBefore(fullscreenButton,mapElement);
   const updateMapSize=()=>setTimeout(()=>airportMap&&airportMap.invalidateSize(),120);
   const updateFullscreenLabel=()=>{const active=document.fullscreenElement===slot||slot.classList.contains('map-fullscreen-fallback');fullscreenButton.textContent=active?'✕ Quitter le plein écran':'⛶ Plein écran';fullscreenButton.setAttribute('aria-label',active?'Quitter le plein écran':'Afficher la carte en plein écran');updateMapSize()};
   fullscreenButton.addEventListener('click',async()=>{
