@@ -312,9 +312,27 @@ async function renderMap(){
   });
   document.addEventListener('fullscreenchange',updateFullscreenLabel);
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&slot.classList.contains('map-fullscreen-fallback')){slot.classList.remove('map-fullscreen-fallback');document.body.style.overflow='';updateFullscreenLabel()}});
-  // Priorité à la disponibilité de la carte : les fonds raster se chargent sans attendre les CDN MapLibre.
-  // Les styles vectoriels sont temporairement désactivés pour éviter un écran vide en cas de CDN bloqué.
-  const vectorReady=false;
+  // Charger les styles vectoriels avec une attente limitée : la carte raster reste disponible en secours.
+  let vectorReady=false;
+  try{
+    if(!document.getElementById('maplibre-map-styles')){
+      const css=document.createElement('link');
+      css.id='maplibre-map-styles';css.rel='stylesheet';
+      css.href='https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.css';
+      document.head.appendChild(css);
+    }
+    const loadMapScript=src=>new Promise((resolve,reject)=>{
+      const script=document.createElement('script');
+      script.src=src;script.onload=resolve;script.onerror=()=>reject(new Error('Chargement impossible : '+src));
+      document.head.appendChild(script);
+    });
+    const timeout=ms=>new Promise((_,reject)=>setTimeout(()=>reject(new Error('Délai de chargement des fonds vectoriels dépassé')),ms));
+    await Promise.race([(async()=>{
+      if(!window.maplibregl)await loadMapScript('https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.js');
+      if(!L.maplibreGL)await loadMapScript('https://cdn.jsdelivr.net/npm/@maplibre/maplibre-gl-leaflet@0.1.1/leaflet-maplibre-gl.js');
+    })(),timeout(3000)]);
+    vectorReady=Boolean(L.maplibreGL);
+  }catch(e){console.warn('Fonds vectoriels indisponibles : carte classique conservée',e)}
   airportMap=L.map('airport-leaflet-map',{maxBounds:WORLD_BOUNDS,maxBoundsViscosity:1}).setView([43.7,7.2],5);
   const baseMaps={
     'Plan':L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{noWrap:true,maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}),
@@ -391,7 +409,8 @@ async function renderMap(){
         return '<a class="airport-direct-link airport-popup-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" title="'+esc(x.product_title||'Voir la scène')+'">↗ '+esc(x.store||'Boutique')+' · '+esc(x.price_type||'Prix à vérifier')+'</a>';
       }).filter(Boolean).join('<br>');
       if(!shops)continue;
-      const icon=L.divIcon({className:'airport-shopping-pin',html:'<div class="shopping-bag-pin" aria-hidden="true">'+bagSvg+'</div>',iconSize:[34,38],iconAnchor:[17,35]});
+      const aircraft=entry.type==='heliport'?'🚁':entry.type==='aerodrome'?'<img src="icons/cessna.png" alt="" width="26" height="26">':'<img src="icons/a320.png" alt="" width="26" height="26">';
+      const icon=L.divIcon({className:'airport-shopping-pin',html:'<div class="shopping-bag-pin" aria-hidden="true">'+aircraft+'</div>',iconSize:[34,38],iconAnchor:[17,17]});
       shoppingCounts[entry.type==='aerodrome'?'aerodrome':'airport']++;
       L.marker([+entry.lat,+entry.lon],{icon}).bindPopup('<strong>'+esc(code)+' — '+esc(entry.name||code)+'</strong><p>'+esc(entry.type==='aerodrome'?'Aérodrome':'Aéroport')+' · Scène MSFS disponible :</p>'+shops).addTo(shoppingLayer);
     }
