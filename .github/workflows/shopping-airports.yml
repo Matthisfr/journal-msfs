@@ -2,9 +2,6 @@ name: Liste de courses aéroports - recherche manuelle
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'data/shopping_bootstrap.request'
 
 permissions:
   contents: write
