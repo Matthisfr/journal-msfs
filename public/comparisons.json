@@ -876,6 +876,36 @@
     "criteria": []
   },
   {
+    "code": "GCTS",
+    "name": "GCTS Tenerife Airport",
+    "scenes": [
+      {
+        "publisher": "MK-STUDIOS",
+        "installed": "2.0.1",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "Sim-wings",
+        "installed": "1.4.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
     "code": "LEMG",
     "name": "©bma NO FREE USE ALLOWED",
     "scenes": [

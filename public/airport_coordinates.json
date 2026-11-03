@@ -2486,5 +2486,189 @@
     "source": "OurAirports / airport-codes",
     "country_code": "FR",
     "aircraft_marker": "airliner"
+  },
+  "BGGH": {
+    "lat": 64.191066,
+    "lon": -51.67914,
+    "name": "Nuuk International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "GL",
+    "aircraft_marker": "airliner"
+  },
+  "BGJN": {
+    "lat": 69.245641,
+    "lon": -51.052243,
+    "name": "Ilulissat Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "GL",
+    "aircraft_marker": "cessna"
+  },
+  "FALE": {
+    "lat": -29.613381,
+    "lon": 31.117942,
+    "name": "King Shaka International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "ZA",
+    "aircraft_marker": "airliner"
+  },
+  "FIMP": {
+    "lat": -20.430201,
+    "lon": 57.683601,
+    "name": "Sir Seewoosagur Ramgoolam International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "MU",
+    "aircraft_marker": "airliner"
+  },
+  "FYWH": {
+    "lat": -22.4799,
+    "lon": 17.4709,
+    "name": "Hosea Kutako International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NA",
+    "aircraft_marker": "airliner"
+  },
+  "FZAA": {
+    "lat": -4.38575,
+    "lon": 15.4446,
+    "name": "Ndjili International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "CD",
+    "aircraft_marker": "airliner"
+  },
+  "GCTS": {
+    "lat": 28.0445,
+    "lon": -16.5725,
+    "name": "Tenerife Sur Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "ES",
+    "aircraft_marker": "airliner"
+  },
+  "GQNO": {
+    "lat": 18.31,
+    "lon": -15.969722,
+    "name": "Nouakchott–Oumtounsy International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "MR",
+    "aircraft_marker": "airliner"
+  },
+  "NCRG": {
+    "lat": -21.2027,
+    "lon": -159.806,
+    "name": "Rarotonga International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "CK",
+    "aircraft_marker": "airliner"
+  },
+  "NWWW": {
+    "lat": -22.014601,
+    "lon": 166.212997,
+    "name": "La Tontouta International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NC",
+    "aircraft_marker": "airliner"
+  },
+  "RPLC": {
+    "lat": 15.186,
+    "lon": 120.559998,
+    "name": "Clark International Airport / Clark Air Base",
+    "source": "OurAirports / airport-codes",
+    "country_code": "PH",
+    "aircraft_marker": "airliner"
+  },
+  "RPMD": {
+    "lat": 7.12552,
+    "lon": 125.646004,
+    "name": "Francisco Bangoy International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "PH",
+    "aircraft_marker": "airliner"
+  },
+  "RPVM": {
+    "lat": 10.309261,
+    "lon": 123.97974,
+    "name": "Mactan Cebu International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "PH",
+    "aircraft_marker": "airliner"
+  },
+  "RPVP": {
+    "lat": 9.742044,
+    "lon": 118.75911,
+    "name": "Puerto Princesa International Airport / PAF Antonio Bautista Air Base",
+    "source": "OurAirports / airport-codes",
+    "country_code": "PH",
+    "aircraft_marker": "airliner"
+  },
+  "SAWH": {
+    "lat": -54.8433,
+    "lon": -68.2958,
+    "name": "Ushuaia - Malvinas Argentinas International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "AR",
+    "aircraft_marker": "airliner"
+  },
+  "SCCI": {
+    "lat": -53.002602,
+    "lon": -70.854599,
+    "name": "President Carlos Ibáñez International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "CL",
+    "aircraft_marker": "airliner"
+  },
+  "SPQU": {
+    "lat": -16.340786,
+    "lon": -71.569485,
+    "name": "Rodríguez Ballón International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "PE",
+    "aircraft_marker": "airliner"
+  },
+  "VNKT": {
+    "lat": 27.6966,
+    "lon": 85.3591,
+    "name": "Tribhuvan International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NP",
+    "aircraft_marker": "airliner"
+  },
+  "WAAA": {
+    "lat": -5.075539,
+    "lon": 119.553702,
+    "name": "Sultan Hasanuddin International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "ID",
+    "aircraft_marker": "airliner"
+  },
+  "WADD": {
+    "lat": -8.748409,
+    "lon": 115.167123,
+    "name": "Denpasar I Gusti Ngurah Rai International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "ID",
+    "aircraft_marker": "airliner"
+  },
+  "WADL": {
+    "lat": -8.759962,
+    "lon": 116.278169,
+    "name": "Lombok International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "ID",
+    "aircraft_marker": "airliner"
+  },
+  "WICC": {
+    "lat": -6.90063,
+    "lon": 107.575996,
+    "name": "Husein Sastranegara International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "ID",
+    "aircraft_marker": "airliner"
+  },
+  "ZMCK": {
+    "lat": 47.646916,
+    "lon": 106.819833,
+    "name": "Ulaanbaatar Chinggis Khaan International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "MN",
+    "aircraft_marker": "airliner"
   }
 }
