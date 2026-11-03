@@ -122,7 +122,7 @@ def main():
         a=index[code]
         products.sort(key=lambda p:(-p["score"],p["store"]))
         # Seules les fiches présentant clairement un aéroport/terrain MSFS sont acceptées.
-        products=[p for p in products if p["score"]>=15]
+        products=[p for p in products if p["score"]>=0]
         if not products:continue
         kind="aerodrome" if a["type"]=="small_airport" else "airport"
         item={"icao":code,"name":a["name"],"type":kind,"lat":a["lat"],"lon":a["lon"],"country":a["country"],
