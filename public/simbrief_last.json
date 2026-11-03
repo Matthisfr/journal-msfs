@@ -1,153 +1,103 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-11-03T13:07:07.989951+00:00",
+  "retrieved_at": "2026-11-03T13:33:48.315054+00:00",
   "origin": {
-    "icao": "OMDB",
-    "name": "DUBAI INTL"
-  },
-  "destination": {
     "icao": "OPKC",
     "name": "JINNAH INTL"
   },
+  "destination": {
+    "icao": "VIDP",
+    "name": "INDIRA GANDHI INTL"
+  },
   "flight_number": "2809",
   "aircraft": "A320",
-  "route": "IVUR1F IVURO M428 TARBO Z440 DAMUM B524 ALPOR G216 LAKIV LAKI1C",
+  "route": "BADU1D BADUL J112 RK G202 MERUN G452 LKA LKA7A",
   "altitude": "37000",
-  "enroute_time": "01:35:52",
-  "scheduled_departure": "2026-11-03T10:45:00Z",
-  "scheduled_arrival": "2026-11-03T12:55:00Z",
-  "generated_at": "2026-11-03T10:10:58Z",
+  "enroute_time": "01:33:13",
+  "scheduled_departure": "2026-11-03T14:00:00Z",
+  "scheduled_arrival": "2026-11-03T16:00:00Z",
+  "generated_at": "2026-11-03T13:29:19Z",
   "route_points": [
     {
-      "lat": 25.295528,
-      "lon": 55.294722,
-      "name": "DB570"
+      "lat": 25.104167,
+      "lon": 67.358333,
+      "name": "KC509"
     },
     {
-      "lat": 25.347861,
-      "lon": 55.295972,
-      "name": "DB560"
+      "lat": 25.228889,
+      "lon": 67.473611,
+      "name": "BADUL"
     },
     {
-      "lat": 25.398,
-      "lon": 55.297167,
-      "name": "DB576"
+      "lat": 26.216758,
+      "lon": 68.385469,
+      "name": "NH"
     },
     {
-      "lat": 25.44,
-      "lon": 55.354472,
-      "name": "DB569"
+      "lat": 26.605556,
+      "lon": 68.716667,
+      "name": "BIMLA"
     },
     {
-      "lat": 25.4835,
-      "lon": 55.413889,
-      "name": "KUPOR"
-    },
-    {
-      "lat": 25.539639,
-      "lon": 55.494361,
-      "name": "UKRER"
-    },
-    {
-      "lat": 25.426361,
-      "lon": 55.69325,
-      "name": "VAXAB"
-    },
-    {
-      "lat": 25.411139,
-      "lon": 55.764944,
-      "name": "LUDEV"
-    },
-    {
-      "lat": 25.373694,
-      "lon": 55.940361,
-      "name": "GETID"
-    },
-    {
-      "lat": 25.327778,
-      "lon": 56.154167,
-      "name": "IVURO"
-    },
-    {
-      "lat": 25.258611,
-      "lon": 56.364722,
-      "name": "SUTVO"
-    },
-    {
-      "lat": 25.1875,
-      "lon": 56.579722,
-      "name": "GOMTA"
-    },
-    {
-      "lat": 24.730833,
-      "lon": 57.776944,
-      "name": "TARBO"
-    },
-    {
-      "lat": 24.710292,
-      "lon": 57.940409,
+      "lat": 27.055826,
+      "lon": 69.101515,
       "name": "TOC"
     },
     {
-      "lat": 24.543333,
-      "lon": 59.218611,
-      "name": "DAMUM"
+      "lat": 27.266944,
+      "lon": 69.283333,
+      "name": "ZOHAR"
     },
     {
-      "lat": 24.353611,
-      "lon": 60.097778,
-      "name": "ASLOM"
+      "lat": 28.366528,
+      "lon": 70.273167,
+      "name": "RK"
     },
     {
-      "lat": 24.209722,
-      "lon": 60.748333,
-      "name": "VEKAN"
+      "lat": 28.480556,
+      "lon": 72.248333,
+      "name": "MERUN"
     },
     {
-      "lat": 24.078056,
-      "lon": 61.333333,
-      "name": "ALPOR"
+      "lat": 28.189006,
+      "lon": 74.1113,
+      "name": "LKA"
     },
     {
-      "lat": 24.145556,
-      "lon": 61.795833,
-      "name": "SIDKA"
-    },
-    {
-      "lat": 24.528889,
-      "lon": 64.828889,
-      "name": "LAKIV"
-    },
-    {
-      "lat": 24.603841,
-      "lon": 65.814359,
+      "lat": 28.220807,
+      "lon": 75.603932,
       "name": "TOD"
     },
     {
-      "lat": 24.656667,
-      "lon": 66.566389,
-      "name": "KC504"
+      "lat": 28.227333,
+      "lon": 76.063481,
+      "name": "ERVIX"
     },
     {
-      "lat": 24.688611,
-      "lon": 67.047972,
-      "name": "KC505"
+      "lat": 28.520472,
+      "lon": 76.728714,
+      "name": "FS817"
     },
     {
-      "lat": 24.878889,
-      "lon": 67.400556,
-      "name": "AMJID"
+      "lat": 28.469844,
+      "lon": 76.966417,
+      "name": "DP502"
     },
     {
-      "lat": 24.959444,
-      "lon": 67.376389,
-      "name": "SABEN"
+      "lat": 28.44585,
+      "lon": 77.078094,
+      "name": "DP503"
     },
     {
-      "lat": 24.908558,
-      "lon": 67.162761,
-      "name": "OPKC"
+      "lat": 28.401619,
+      "lon": 77.283033,
+      "name": "FS711"
+    },
+    {
+      "lat": 28.568611,
+      "lon": 77.112222,
+      "name": "VIDP"
     }
   ]
 }
