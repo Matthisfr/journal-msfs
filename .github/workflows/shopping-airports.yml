@@ -1,0 +1,46 @@
+name: Liste de courses aéroports - mise à jour manuelle
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: journal-shopping-airports
+  cancel-in-progress: false
+
+jobs:
+  shopping-list:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Configurer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recalculer les sacs bleus et exclure les scènes possédées
+        run: python scripts/update_shopping_airports.py
+      - name: Publier la liste mise à jour
+        run: |
+          git config user.name "journal-msfs-bot"
+          git config user.email "journal-msfs-bot@users.noreply.github.com"
+          git add public/shopping_airports.json
+          if git diff --cached --quiet; then
+            echo "Liste de courses inchangée."
+            exit 0
+          fi
+          git commit -m "Aéroports : mise à jour manuelle de la liste de courses"
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              echo "Liste publiée ; la publication normale du journal sera déclenchée."
+              exit 0
+            fi
+            git fetch origin main
+            git rebase origin/main
+          done
+          echo "Échec du push de la liste de courses" >&2
+          exit 1
