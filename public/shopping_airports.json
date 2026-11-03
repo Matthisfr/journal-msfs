@@ -1270,6 +1270,22 @@
     ]
   },
   {
+    "icao": "KCPK",
+    "name": "Chesapeake Regional Airport",
+    "type": "aerodrome",
+    "lat": 36.6656175,
+    "lon": -76.3206558,
+    "country": "US",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/116739/kcpk-chesapeake-regional-airport-v2",
+        "price_type": "Gratuit",
+        "product_title": "Chesapeake Regional Airport — MSFS"
+      }
+    ]
+  },
+  {
     "icao": "KDJT",
     "name": "President Donald J. Trump International Airport",
     "type": "airport",
@@ -1418,6 +1434,22 @@
         "url": "https://inibuilds.com/products/fly2high-tweed-new-haven-khvn-msfs",
         "price_type": "Payant",
         "product_title": "Fly2High Tweed New Haven (KHVN) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "KLCI",
+    "name": "Laconia Municipal Airport",
+    "type": "aerodrome",
+    "lat": 43.5730417,
+    "lon": -71.4178417,
+    "country": "US",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/73956/klci-laconia-municipal-airport",
+        "price_type": "Gratuit",
+        "product_title": "Laconia Municipal Airport — MSFS"
       }
     ]
   },
