@@ -311,13 +311,33 @@ async function renderMap(){
   });
   document.addEventListener('fullscreenchange',updateFullscreenLabel);
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&slot.classList.contains('map-fullscreen-fallback')){slot.classList.remove('map-fullscreen-fallback');document.body.style.overflow='';updateFullscreenLabel()}});
+  // OpenFreeMap : styles vectoriels gratuits sans clé API.
+  // Chargement uniquement à l'ouverture de la carte ; en cas d'échec réseau,
+  // les trois fonds raster historiques restent utilisables.
+  let vectorReady=false;
+  try{
+    const loadMapScript=src=>new Promise((resolve,reject)=>{
+      const script=document.createElement('script');
+      script.src=src;script.onload=resolve;script.onerror=()=>reject(new Error('Chargement impossible : '+src));
+      document.head.appendChild(script);
+    });
+    if(!window.maplibregl)await loadMapScript('https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.js');
+    if(!L.maplibreGL)await loadMapScript('https://cdn.jsdelivr.net/npm/@maplibre/maplibre-gl-leaflet@0.1.1/leaflet-maplibre-gl.js');
+    vectorReady=Boolean(L.maplibreGL);
+  }catch(e){console.warn('Styles OpenFreeMap indisponibles, utilisation des fonds classiques',e)}
   airportMap=L.map('airport-leaflet-map',{maxBounds:WORLD_BOUNDS,maxBoundsViscosity:1}).setView([43.7,7.2],5);
   const baseMaps={
     'Plan':L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{noWrap:true,maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}),
     'Satellite':L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{noWrap:true,maxZoom:19,attribution:'Tiles &copy; Esri and contributors'}),
-    'Relief':L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',{noWrap:true,maxZoom:17,attribution:'&copy; OpenTopoMap contributors &copy; OpenStreetMap'}),
-    'Sombre':L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{noWrap:true,maxZoom:19,attribution:'&copy; CARTO &copy; OpenStreetMap'})
+    'Relief':L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',{noWrap:true,maxZoom:17,attribution:'&copy; OpenTopoMap contributors &copy; OpenStreetMap'})
   };
+  if(vectorReady){
+    for(const [name,style] of Object.entries({
+      'Sombre':'dark','Fiord':'fiord','Positron':'positron','Liberty':'liberty','Bright':'bright'
+    })){
+      baseMaps[name]=L.maplibreGL({style:'https://tiles.openfreemap.org/styles/'+style,attribution:'&copy; OpenFreeMap &copy; OpenStreetMap contributors'});
+    }
+  }
   const selectedStyle=(()=>{try{return localStorage.getItem('msfs-airport-map-style')||'Plan'}catch{return 'Plan'}})();
   (baseMaps[selectedStyle]||baseMaps.Plan).addTo(airportMap);
   const mapStyles=L.control.layers(baseMaps,null,{position:'topright',collapsed:true}).addTo(airportMap);
