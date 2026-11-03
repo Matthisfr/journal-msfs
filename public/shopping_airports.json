@@ -1,5 +1,39 @@
 [
   {
+    "icao": "21AK",
+    "name": "Montana Creek Airport — Alaska",
+    "type": "aerodrome",
+    "lat": 62.0826111,
+    "lon": -150.0669306,
+    "country": "US",
+    "comment": "Piste gravier 701 m; scène compatible MSFS 2024",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/5793/montana-creek-alaska-21ak",
+        "price_type": "Gratuit",
+        "product_title": "Montana Creek Airport — Alaska — scène MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "49MT",
+    "name": "Firebuster Airfield — Montana",
+    "type": "aerodrome",
+    "lat": 45.606,
+    "lon": -109.121,
+    "country": "US",
+    "comment": "Terrain privé; scène MSFS 2024, piste 1 829 m",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/116581/49mt-firebuster-airfield-montana-usa",
+        "price_type": "Gratuit",
+        "product_title": "Firebuster Airfield — Montana — scène MSFS"
+      }
+    ]
+  },
+  {
     "icao": "BIAR",
     "name": "Akureyri International Airport",
     "type": "airport",
@@ -1470,6 +1504,23 @@
         "url": "https://inibuilds.com/products/mk-studios-fort-lauderdale-hollywood-kfll-msfs-2024",
         "price_type": "Payant",
         "product_title": "MK-STUDIOS Fort Lauderdale-Hollywood (KFLL) for MSFS-2024"
+      }
+    ]
+  },
+  {
+    "icao": "KGCN",
+    "name": "Grand Canyon National Park Airport — Arizona",
+    "type": "aerodrome",
+    "lat": 35.9523611,
+    "lon": -112.1469722,
+    "country": "US",
+    "comment": "Scène MSFS 2020; compatibilité 2024 signalée par des utilisateurs, non garantie",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/759/grand-canyon-national-park-airport-kgcn",
+        "price_type": "Gratuit",
+        "product_title": "Grand Canyon National Park Airport — Arizona — scène MSFS"
       }
     ]
   },
@@ -3052,6 +3103,23 @@
         "url": "https://inibuilds.com/products/teikof-studio-scarlett-martinez-mpsm-msfs",
         "price_type": "Payant",
         "product_title": "Teikof Studio Scarlett Martinez (MPSM) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "MT03",
+    "name": "Lakeside Airport — Montana",
+    "type": "aerodrome",
+    "lat": 47.9934083,
+    "lon": -114.2243056,
+    "country": "US",
+    "comment": "Terrain privé; autorisation requise en réalité; approche à sens unique",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/116270/mt03-lakeside",
+        "price_type": "Gratuit",
+        "product_title": "Lakeside Airport — Montana — scène MSFS"
       }
     ]
   },
