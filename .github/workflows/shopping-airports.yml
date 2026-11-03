@@ -1,7 +1,10 @@
-name: Liste de courses aéroports - mise à jour manuelle
+name: Liste de courses aéroports - recherche manuelle
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'data/shopping_bootstrap.request'
 
 permissions:
   contents: write
@@ -11,8 +14,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  shopping-list:
+  discover:
     runs-on: ubuntu-24.04
+    timeout-minutes: 20
     steps:
       - name: Récupérer le dépôt
         uses: actions/checkout@v4
@@ -22,25 +26,31 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Recalculer les sacs bleus et exclure les scènes possédées
-        run: python scripts/update_shopping_airports.py
-      - name: Publier la liste mise à jour
+      - name: Rechercher les scènes réelles et exclure les aéroports possédés
+        run: python scripts/discover_shopping_airports.py
+      - name: Contrôler le résultat
+        run: |
+          python - <<'PY'
+          import collections,json
+          records=json.load(open('public/shopping_airports.json'))
+          counts=collections.Counter(x['type'] for x in records)
+          assert counts['airport']>=50 and counts['aerodrome']>=50,counts
+          assert all(a['shops'] and a['icao'] for a in records)
+          print("Liste vérifiée :",dict(counts))
+          PY
+      - name: Enregistrer et publier le catalogue
         run: |
           git config user.name "journal-msfs-bot"
           git config user.email "journal-msfs-bot@users.noreply.github.com"
-          git add public/shopping_airports.json
+          git add data/shopping_airports_catalog.json public/shopping_airports.json
           if git diff --cached --quiet; then
-            echo "Liste de courses inchangée."
+            echo "Catalogue inchangé"
             exit 0
           fi
-          git commit -m "Aéroports : mise à jour manuelle de la liste de courses"
+          git commit -m "Liste de courses : scènes MSFS vérifiées (50+50)"
           for attempt in 1 2 3; do
-            if git push origin HEAD:main; then
-              echo "Liste publiée ; la publication normale du journal sera déclenchée."
-              exit 0
-            fi
+            if git push origin HEAD:main; then exit 0; fi
             git fetch origin main
             git rebase origin/main
           done
-          echo "Échec du push de la liste de courses" >&2
           exit 1
