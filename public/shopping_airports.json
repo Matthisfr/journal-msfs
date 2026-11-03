@@ -1558,6 +1558,22 @@
     ]
   },
   {
+    "icao": "KRTN",
+    "name": "Raton Municipal / Crews Field",
+    "type": "aerodrome",
+    "lat": 36.7424392,
+    "lon": -104.5017264,
+    "country": "US",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/116711/krtn-raton-municipal-airport-crews-field",
+        "price_type": "Gratuit",
+        "product_title": "Raton Municipal / Crews Field — scène MSFS"
+      }
+    ]
+  },
+  {
     "icao": "KSBA",
     "name": "Santa Barbara Municipal Airport",
     "type": "airport",
@@ -1684,6 +1700,22 @@
         "url": "https://contrail.shop/products/ktpf-peter-o-knight-airport",
         "price_type": "Payant",
         "product_title": "KTPF - Peter O. Knight Airport MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "KVDI",
+    "name": "Vidalia Regional Airport",
+    "type": "aerodrome",
+    "lat": 32.1927222,
+    "lon": -82.3711667,
+    "country": "US",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/118138/kvdi-vidalia-regional-airport",
+        "price_type": "Gratuit",
+        "product_title": "Vidalia Regional Airport — scène MSFS"
       }
     ]
   },
@@ -1840,6 +1872,22 @@
         "url": "https://flightsim.to/addon/16308/lfql-lens-benifontaine",
         "price_type": "Gratuit",
         "product_title": "Lens — Bénifontaine — scène MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LFRF",
+    "name": "Granville — Mont-Saint-Michel",
+    "type": "aerodrome",
+    "lat": 48.88287,
+    "lon": -1.56383,
+    "country": "FR",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://fr.flightsim.to/addon/90315/lfrf-granville",
+        "price_type": "Gratuit",
+        "product_title": "Granville — Mont-Saint-Michel — scène MSFS"
       }
     ]
   },
