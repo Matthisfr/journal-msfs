@@ -2734,6 +2734,86 @@
     ]
   },
   {
+    "icao": "UAAA",
+    "name": "Almaty International Airport",
+    "type": "airport",
+    "lat": 43.35528,
+    "lon": 77.04472,
+    "country": "KZ",
+    "shops": [
+      {
+        "store": "SimMarket",
+        "url": "https://secure.simmarket.com/middle-asia-developers-almaty-international-airport-%28uaaa%29.phtml",
+        "price_type": "Payant",
+        "product_title": "Almaty International Airport — MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "UACC",
+    "name": "Astana — Nursultan Nazarbayev International Airport",
+    "type": "airport",
+    "lat": 51.027035,
+    "lon": 71.467094,
+    "country": "KZ",
+    "shops": [
+      {
+        "store": "SimMarket",
+        "url": "https://secure.simmarket.com/middle-asia-developers-astana-international-airport-%28uacc%29.phtml",
+        "price_type": "Payant",
+        "product_title": "Astana — Nursultan Nazarbayev International Airport — MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "UAIT",
+    "name": "Turkistan — Hazrat Sultan International Airport",
+    "type": "airport",
+    "lat": 43.31111,
+    "lon": 68.55028,
+    "country": "KZ",
+    "shops": [
+      {
+        "store": "SimMarket",
+        "url": "https://secure.simmarket.com/ac-scenery-uait-turkistan-airport-msfs2420.phtml",
+        "price_type": "Payant",
+        "product_title": "Turkistan — Hazrat Sultan International Airport — MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "UASK",
+    "name": "Öskemen — Ust-Kamenogorsk Airport",
+    "type": "airport",
+    "lat": 50.035033,
+    "lon": 82.496057,
+    "country": "KZ",
+    "shops": [
+      {
+        "store": "SimMarket",
+        "url": "https://secure.simmarket.com/middle-asia-developers-airport-ust-kamenogorsk-%28uask%29-msfs20msfs24.phtml",
+        "price_type": "Payant",
+        "product_title": "Öskemen — Ust-Kamenogorsk Airport — MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "UATE",
+    "name": "Aktau International Airport",
+    "type": "airport",
+    "lat": 43.86,
+    "lon": 51.09194,
+    "country": "KZ",
+    "shops": [
+      {
+        "store": "SimMarket",
+        "url": "https://secure.simmarket.com/middle-asia-developers-aktau-international-airport-%28uate%29.phtml",
+        "price_type": "Payant",
+        "product_title": "Aktau International Airport — MSFS"
+      }
+    ]
+  },
+  {
     "icao": "UBBF",
     "name": "Fuzuli International Airport",
     "type": "aerodrome",
@@ -2746,6 +2826,54 @@
         "url": "https://inibuilds.com/products/azrsim-karabakh-ubbf-msfs-2024",
         "price_type": "Payant",
         "product_title": "Azrsim Karabakh (UBBF) for MSFS-2024"
+      }
+    ]
+  },
+  {
+    "icao": "UEEE",
+    "name": "Iakoutsk — Yakutsk International Airport",
+    "type": "airport",
+    "lat": 62.0933,
+    "lon": 129.771,
+    "country": "RU",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/24752/yakutsk-international-airport-ueee",
+        "price_type": "Gratuit",
+        "product_title": "Iakoutsk — Yakutsk International Airport — MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "UEMM",
+    "name": "Magan Airport — Iakoutie",
+    "type": "aerodrome",
+    "lat": 62.1035,
+    "lon": 129.5453,
+    "country": "RU",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/27327/magan-airport-ueee",
+        "price_type": "Gratuit",
+        "product_title": "Magan Airport — Iakoutie — MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "UNNT",
+    "name": "Novossibirsk — Tolmachevo Airport",
+    "type": "airport",
+    "lat": 55.0126,
+    "lon": 82.6507,
+    "country": "RU",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/4741/unnt-tolmachevo-novosibirsk",
+        "price_type": "Gratuit",
+        "product_title": "Novossibirsk — Tolmachevo Airport — MSFS"
       }
     ]
   },
@@ -2952,6 +3080,22 @@
         "url": "https://inibuilds.com/products/auscene-southport-gold-coast-yspt-msfs",
         "price_type": "Payant",
         "product_title": "AUscene Southport Gold Coast (YSPT) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "ZMCK",
+    "name": "Oulan-Bator — Chinggis Khaan International Airport",
+    "type": "airport",
+    "lat": 47.646916,
+    "lon": 106.819833,
+    "country": "MN",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/114241/zmck-new-ulaanbaatar-chinggis-khaan-int-l-airport-free-version",
+        "price_type": "Gratuit",
+        "product_title": "Oulan-Bator — Chinggis Khaan International Airport — MSFS"
       }
     ]
   }
