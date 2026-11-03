@@ -2020,6 +2020,22 @@
     ]
   },
   {
+    "icao": "LFEA",
+    "name": "Belle-Île-en-Mer",
+    "type": "aerodrome",
+    "lat": 47.32611,
+    "lon": -3.19889,
+    "country": "FR",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/86557/lfea-belle-ile-en-mer",
+        "price_type": "Gratuit",
+        "product_title": "Belle-Île-en-Mer — scène MSFS"
+      }
+    ]
+  },
+  {
     "icao": "LFEQ",
     "name": "Quiberon",
     "type": "aerodrome",
@@ -2196,6 +2212,22 @@
     ]
   },
   {
+    "icao": "LFOZ",
+    "name": "Orléans — Saint-Denis-de-l’Hôtel",
+    "type": "aerodrome",
+    "lat": 47.89762,
+    "lon": 2.16421,
+    "country": "FR",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/88223/lfoz-orleans-loire-valley",
+        "price_type": "Gratuit",
+        "product_title": "Orléans — Saint-Denis-de-l’Hôtel — scène MSFS"
+      }
+    ]
+  },
+  {
     "icao": "LFQA",
     "name": "Reims — Prunay",
     "type": "aerodrome",
@@ -2240,6 +2272,38 @@
         "url": "https://fr.flightsim.to/addon/90315/lfrf-granville",
         "price_type": "Gratuit",
         "product_title": "Granville — Mont-Saint-Michel — scène MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LFRI",
+    "name": "La Roche-sur-Yon — Les Ajoncs",
+    "type": "aerodrome",
+    "lat": 46.70238,
+    "lon": -1.38176,
+    "country": "FR",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://fr.flightsim.to/addon/66943/lfri-la-roche-sur-yon",
+        "price_type": "Gratuit",
+        "product_title": "La Roche-sur-Yon — Les Ajoncs — scène MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LFRV",
+    "name": "Vannes — Meucon",
+    "type": "aerodrome",
+    "lat": 47.71924,
+    "lon": -2.72338,
+    "country": "FR",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/airports/country/FR",
+        "price_type": "Gratuit",
+        "product_title": "Vannes — Meucon — scène MSFS"
       }
     ]
   },
