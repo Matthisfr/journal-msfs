@@ -1226,6 +1226,22 @@
     ]
   },
   {
+    "icao": "KBOK",
+    "name": "Brookings State Airport — Oregon",
+    "type": "aerodrome",
+    "lat": 42.0746,
+    "lon": -124.2905,
+    "country": "US",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/73283/kbok-brookings-state-airport",
+        "price_type": "Gratuit",
+        "product_title": "Brookings State Airport — Oregon — MSFS 2024"
+      }
+    ]
+  },
+  {
     "icao": "KCDK",
     "name": "George T Lewis Airport",
     "type": "aerodrome",
@@ -1542,6 +1558,22 @@
         "url": "https://inibuilds.com/products/verticalsim-st-pete-clearwater-kpie-msfs",
         "price_type": "Payant",
         "product_title": "VerticalSim St.Pete/Clearwater (KPIE) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "KRDM",
+    "name": "Roberts Field — Redmond, Oregon",
+    "type": "aerodrome",
+    "lat": 44.2541,
+    "lon": -121.15,
+    "country": "US",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/33017/krdm-roberts-field-redmond-municipal-airport",
+        "price_type": "Gratuit",
+        "product_title": "Roberts Field — Redmond, Oregon — MSFS 2024"
       }
     ]
   },
