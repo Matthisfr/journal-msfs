@@ -140,11 +140,19 @@ function savePreFlightMapView(){
   preFlightMapView={center:airportMap.getCenter(),zoom:airportMap.getZoom()};
  }
 }
+// Leaflet : transition progressive (déplacement et zoom simultanés).
+// Respecter les utilisateurs qui préfèrent réduire les animations.
+function flightMapAnimation(){
+ const reduced=typeof window.matchMedia==='function'&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ return {animate:!reduced,duration:reduced?0:1.8,easeLinearity:0.22};
+}
 function restorePreFlightMapView(){
  if(!airportMap||!preFlightMapView)return;
- airportMap.invalidateSize();
- airportMap.setView(preFlightMapView.center,preFlightMapView.zoom,{animate:true});
+ const previous=preFlightMapView;
  preFlightMapView=null;
+ airportMap.stop();
+ airportMap.invalidateSize();
+ airportMap.flyTo(previous.center,previous.zoom,flightMapAnimation());
 }
 let simbriefRouteLayer=null;
 let simbriefRouteButton=null;
@@ -158,9 +166,10 @@ function setSimbriefRouteVisible(visible){
 }
 let focusSimbriefOnOpen=false;
 function focusSimbriefRoute(){
- if(!airportMap||!simbriefRouteBounds)return;
+ if(!airportMap||!simbriefRouteBounds||!airportMap.hasLayer(simbriefRouteLayer))return;
+ airportMap.stop();
  airportMap.invalidateSize();
- airportMap.fitBounds(simbriefRouteBounds,{padding:[65,65],maxZoom:9,animate:true});
+ airportMap.flyToBounds(simbriefRouteBounds,{padding:[65,65],maxZoom:9,...flightMapAnimation()});
 }
 function scrollToAirportMap(){
  const map=document.getElementById('airport-leaflet-map')||document.getElementById('google-map');
