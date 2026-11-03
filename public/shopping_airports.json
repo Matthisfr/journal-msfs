@@ -1438,6 +1438,22 @@
     ]
   },
   {
+    "icao": "KMYF",
+    "name": "Montgomery–Gibbs Executive Airport",
+    "type": "aerodrome",
+    "lat": 32.8157,
+    "lon": -117.1396,
+    "country": "US",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/5856/montgomery-gibbs-exec-airport-taxiway-fix-and-many-more",
+        "price_type": "Gratuit",
+        "product_title": "Montgomery–Gibbs Executive Airport — MSFS 2020/2024"
+      }
+    ]
+  },
+  {
     "icao": "KONT",
     "name": "Ontario International Airport",
     "type": "airport",
@@ -1554,6 +1570,22 @@
         "url": "https://inibuilds.com/products/gaya-simulations-santa-barbara-municipal-ksba-for-msfs-2024",
         "price_type": "Payant",
         "product_title": "Gaya Simulations Santa Barbara Municipal (KSBA) for MSFS-2024"
+      }
+    ]
+  },
+  {
+    "icao": "KSEE",
+    "name": "Gillespie Field — San Diego",
+    "type": "aerodrome",
+    "lat": 32.8262,
+    "lon": -116.9724,
+    "country": "US",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/36679/gillespie-field-ksee",
+        "price_type": "Gratuit",
+        "product_title": "Gillespie Field — San Diego — MSFS 2020/2024"
       }
     ]
   },
