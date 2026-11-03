@@ -316,6 +316,12 @@ async function renderMap(){
   // les trois fonds raster historiques restent utilisables.
   let vectorReady=false;
   try{
+    if(!document.getElementById('maplibre-map-styles')){
+      const css=document.createElement('link');
+      css.id='maplibre-map-styles';css.rel='stylesheet';
+      css.href='https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.css';
+      document.head.appendChild(css);
+    }
     const loadMapScript=src=>new Promise((resolve,reject)=>{
       const script=document.createElement('script');
       script.src=src;script.onload=resolve;script.onerror=()=>reject(new Error('Chargement impossible : '+src));
