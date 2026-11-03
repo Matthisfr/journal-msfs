@@ -377,7 +377,12 @@ async function renderMap(){
   shoppingControl.type='button';
   shoppingControl.className='map-shopping-toggle';
   shoppingControl.setAttribute('aria-pressed','false');
-  shoppingControl.textContent='🛍️ 0 · Afficher';
+  const bagSvg='<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg>';
+  let shoppingCounts={airport:0,aerodrome:0};
+  const updateShoppingButton=()=>{
+    shoppingControl.innerHTML=bagSvg+' <span>'+shoppingCounts.airport+' aéroports · '+shoppingCounts.aerodrome+' aérodromes — '+(shoppingVisible?'Masquer':'Afficher')+'</span>';
+  };
+  updateShoppingButton();
   slot.insertBefore(shoppingControl,mapElement);
   let shoppingVisible=false;
   shoppingControl.addEventListener('click',()=>{
@@ -385,7 +390,7 @@ async function renderMap(){
     if(shoppingVisible)shoppingLayer.addTo(airportMap);
     else airportMap.removeLayer(shoppingLayer);
     shoppingControl.setAttribute('aria-pressed',String(shoppingVisible));
-    shoppingControl.textContent='🛍️ '+shoppingLayer.getLayers().length+' · '+(shoppingVisible?'Masquer':'Afficher');
+    updateShoppingButton();
   });
   try{
     const response=await fetch('shopping_airports.json',{cache:'no-store'});
@@ -402,11 +407,12 @@ async function renderMap(){
         return '<a class="airport-direct-link airport-popup-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">↗ '+esc(x.store||'Boutique')+'</a>';
       }).filter(Boolean).join('<br>');
       if(!shops)continue;
-      const icon=L.divIcon({className:'airport-shopping-pin',html:'<div class="shopping-bag-pin" aria-hidden="true">🛍️</div>',iconSize:[34,38],iconAnchor:[17,35]});
+      const icon=L.divIcon({className:'airport-shopping-pin',html:'<div class="shopping-bag-pin" aria-hidden="true">'+bagSvg+'</div>',iconSize:[34,38],iconAnchor:[17,35]});
+      shoppingCounts[entry.type==='aerodrome'?'aerodrome':'airport']++;
       L.marker([+entry.lat,+entry.lon],{icon}).bindPopup('<strong>'+esc(code)+' — '+esc(entry.name||code)+'</strong><p>Scène commerciale à acheter :</p>'+shops).addTo(shoppingLayer);
     }
-    shoppingControl.textContent='🛍️ '+shoppingLayer.getLayers().length+' · Afficher';
-  }catch(error){console.warn('Liste de courses indisponible',error);shoppingControl.textContent='🛍️ 0 · Afficher'}
+    updateShoppingButton();
+  }catch(error){console.warn('Liste de courses indisponible',error);updateShoppingButton()}
   // Appui long (iPad) ou clic droit : raccourcis de recherche des scènes.
   // Identifier l'aéroport réellement touché, y compris hors inventaire personnel.
   const showAirportShops=(code,name,position)=>{
