@@ -1226,6 +1226,22 @@
     ]
   },
   {
+    "icao": "K74V",
+    "name": "Roosevelt Municipal Airport",
+    "type": "aerodrome",
+    "lat": 40.2784139,
+    "lon": -110.0513772,
+    "country": "US",
+    "shops": [
+      {
+        "store": "Flightsim.to Store",
+        "url": "https://flightsim.to/store/product/k74v-roosevelt-municipal-airport",
+        "price_type": "Payant",
+        "product_title": "Roosevelt Municipal Airport — scène MSFS"
+      }
+    ]
+  },
+  {
     "icao": "KBOK",
     "name": "Brookings State Airport — Oregon",
     "type": "aerodrome",
@@ -1302,6 +1318,22 @@
     ]
   },
   {
+    "icao": "KCXP",
+    "name": "Carson City Airport",
+    "type": "aerodrome",
+    "lat": 39.1923042,
+    "lon": -119.7325706,
+    "country": "US",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/117593/kcxp-carson-airport-carson-city-nv",
+        "price_type": "Gratuit",
+        "product_title": "Carson City Airport — scène MSFS"
+      }
+    ]
+  },
+  {
     "icao": "KDJT",
     "name": "President Donald J. Trump International Airport",
     "type": "airport",
@@ -1336,6 +1368,22 @@
         "url": "https://inibuilds.com/products/project-max-dalton-municipal-kdnn-msfs",
         "price_type": "Payant",
         "product_title": "Project MAX Dalton Municipal (KDNN) for MSFS-2020"
+      }
+    ]
+  },
+  {
+    "icao": "KDTS",
+    "name": "Destin Executive Airport",
+    "type": "aerodrome",
+    "lat": 30.4000547,
+    "lon": -86.4714722,
+    "country": "US",
+    "shops": [
+      {
+        "store": "Flightsim.to Store",
+        "url": "https://flightsim.to/store/product/kdts-destin-executive-airport-msfs2024",
+        "price_type": "Payant",
+        "product_title": "Destin Executive Airport — scène MSFS"
       }
     ]
   },
@@ -1470,6 +1518,22 @@
     ]
   },
   {
+    "icao": "KLPR",
+    "name": "Lorain County Regional Airport",
+    "type": "aerodrome",
+    "lat": 41.3442764,
+    "lon": -82.1776289,
+    "country": "US",
+    "shops": [
+      {
+        "store": "Flightsim.to Store",
+        "url": "https://flightsim.to/store/product/klpr-lorain-county-airport",
+        "price_type": "Payant",
+        "product_title": "Lorain County Regional Airport — scène MSFS"
+      }
+    ]
+  },
+  {
     "icao": "KLVK",
     "name": "Livermore Municipal Airport",
     "type": "aerodrome",
@@ -1482,6 +1546,22 @@
         "url": "https://inibuilds.com/products/spinoza-livermore-municipal-klvk-msfs",
         "price_type": "Payant",
         "product_title": "SPINOZA Livermore Municipal (KLVK) for MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "KMAN",
+    "name": "Nampa Municipal Airport",
+    "type": "aerodrome",
+    "lat": 43.5813411,
+    "lon": -116.5230631,
+    "country": "US",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://fr.flightsim.to/addon/117427/nampa-municipal-airport",
+        "price_type": "Gratuit",
+        "product_title": "Nampa Municipal Airport — scène MSFS"
       }
     ]
   },
@@ -1654,6 +1734,22 @@
     ]
   },
   {
+    "icao": "KRVS",
+    "name": "Tulsa Riverside Airport",
+    "type": "aerodrome",
+    "lat": 36.0395842,
+    "lon": -95.9845947,
+    "country": "US",
+    "shops": [
+      {
+        "store": "Flightsim.to Store",
+        "url": "https://flightsim.to/store/product/krvs-tulsa-riverside-airport-msfs2024",
+        "price_type": "Payant",
+        "product_title": "Tulsa Riverside Airport — scène MSFS"
+      }
+    ]
+  },
+  {
     "icao": "KSBA",
     "name": "Santa Barbara Municipal Airport",
     "type": "airport",
@@ -1704,6 +1800,22 @@
         "url": "https://inibuilds.com/products/taimodels-orlando-sanford-ksfb-xp",
         "price_type": "Payant",
         "product_title": "TaiModels Orlando Sanford (KSFB)"
+      }
+    ]
+  },
+  {
+    "icao": "KSME",
+    "name": "Lake Cumberland Regional — Somerset",
+    "type": "aerodrome",
+    "lat": 37.0535833,
+    "lon": -84.6156389,
+    "country": "US",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/117828/ksme-somerset-kentucky",
+        "price_type": "Gratuit",
+        "product_title": "Lake Cumberland Regional — Somerset — scène MSFS"
       }
     ]
   },
@@ -1876,6 +1988,54 @@
     ]
   },
   {
+    "icao": "LFAY",
+    "name": "Amiens — Glisy",
+    "type": "aerodrome",
+    "lat": 49.8731,
+    "lon": 2.38699,
+    "country": "FR",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://fr.flightsim.to/addon/7913/lfay-amiens-glisy-scenery-lights-improvements",
+        "price_type": "Gratuit",
+        "product_title": "Amiens — Glisy — scène MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LFCV",
+    "name": "Villefranche-de-Rouergue",
+    "type": "aerodrome",
+    "lat": 44.36889,
+    "lon": 2.02694,
+    "country": "FR",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/file/13014/lfcv-villefranche-de-rouergue",
+        "price_type": "Gratuit",
+        "product_title": "Villefranche-de-Rouergue — scène MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LFEQ",
+    "name": "Quiberon",
+    "type": "aerodrome",
+    "lat": 47.48139,
+    "lon": -3.10167,
+    "country": "FR",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/85562/lfeq-quiberon-2024",
+        "price_type": "Gratuit",
+        "product_title": "Quiberon — scène MSFS"
+      }
+    ]
+  },
+  {
     "icao": "LFER",
     "name": "Redon — Bains-sur-Oust",
     "type": "aerodrome",
@@ -1924,6 +2084,70 @@
     ]
   },
   {
+    "icao": "LFLR",
+    "name": "Saint-Rambert-d’Albon",
+    "type": "aerodrome",
+    "lat": 45.253,
+    "lon": 4.8215,
+    "country": "FR",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/91437/lflr-saint-rambert-d-albon-tour-d-albon-msfs2024",
+        "price_type": "Gratuit",
+        "product_title": "Saint-Rambert-d’Albon — scène MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LFMR",
+    "name": "Barcelonnette — Saint-Pons",
+    "type": "aerodrome",
+    "lat": 44.38667,
+    "lon": 6.60806,
+    "country": "FR",
+    "shops": [
+      {
+        "store": "Flightsim.to Store",
+        "url": "https://flightsim.to/store/product/lfmr-barcelonnette-msfs2024",
+        "price_type": "Payant",
+        "product_title": "Barcelonnette — Saint-Pons — scène MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LFNA",
+    "name": "Gap — Tallard",
+    "type": "aerodrome",
+    "lat": 44.455,
+    "lon": 6.03722,
+    "country": "FR",
+    "shops": [
+      {
+        "store": "Flightsim.to Store",
+        "url": "https://flightsim.to/store/product/lfna-gap-tallard-msfs2024",
+        "price_type": "Payant",
+        "product_title": "Gap — Tallard — scène MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LFNC",
+    "name": "Mont-Dauphin — Saint-Crépin",
+    "type": "aerodrome",
+    "lat": 44.70167,
+    "lon": 6.59972,
+    "country": "FR",
+    "shops": [
+      {
+        "store": "Flightsim.to Store",
+        "url": "https://flightsim.to/store/product/lfnc-mont-dauphin-st-crepin-msfs2024",
+        "price_type": "Payant",
+        "product_title": "Mont-Dauphin — Saint-Crépin — scène MSFS"
+      }
+    ]
+  },
+  {
     "icao": "LFNE",
     "name": "Salon — Eyguières",
     "type": "aerodrome",
@@ -1936,6 +2160,54 @@
         "url": "https://flightsim.to/addon/26621/lfne-salon-eyguires-airport-arodrome-de-salon-eyguires-provence-france-upgrade/null",
         "price_type": "Gratuit",
         "product_title": "Salon — Eyguières — scène MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LFNS",
+    "name": "Sisteron — Vaumeilh",
+    "type": "aerodrome",
+    "lat": 44.28667,
+    "lon": 5.92917,
+    "country": "FR",
+    "shops": [
+      {
+        "store": "Flightsim.to Store",
+        "url": "https://flightsim.to/store/product/lfns-sisteron-vaumeilh-msfs2024",
+        "price_type": "Payant",
+        "product_title": "Sisteron — Vaumeilh — scène MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LFOU",
+    "name": "Cholet — Le Pontreau",
+    "type": "aerodrome",
+    "lat": 47.08191,
+    "lon": -0.87722,
+    "country": "FR",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/27971/lfou-cholet-le-pontreau",
+        "price_type": "Gratuit",
+        "product_title": "Cholet — Le Pontreau — scène MSFS"
+      }
+    ]
+  },
+  {
+    "icao": "LFQA",
+    "name": "Reims — Prunay",
+    "type": "aerodrome",
+    "lat": 49.20861,
+    "lon": 4.15667,
+    "country": "FR",
+    "shops": [
+      {
+        "store": "Flightsim.to Store",
+        "url": "https://flightsim.to/store/product/lfqa-aerodrome-of-reism-prunay-airport",
+        "price_type": "Payant",
+        "product_title": "Reims — Prunay — scène MSFS"
       }
     ]
   },
