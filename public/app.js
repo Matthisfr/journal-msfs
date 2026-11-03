@@ -370,6 +370,43 @@ async function renderMap(){
    airportMapMarkers.push({code:String(code).trim().toUpperCase(),marker:m});
    bounds.push(m.getLatLng());
   }
+  // Liste de courses : couche indépendante, cachée par défaut.
+  // Les aéroports possédés restent exclus même si le JSON est en retard sur un import.
+  const shoppingLayer=L.layerGroup();
+  const shoppingControl=document.createElement('button');
+  shoppingControl.type='button';
+  shoppingControl.className='map-shopping-toggle';
+  shoppingControl.setAttribute('aria-pressed','false');
+  shoppingControl.textContent='🛍️ 0 · Afficher';
+  slot.insertBefore(shoppingControl,mapElement);
+  let shoppingVisible=false;
+  shoppingControl.addEventListener('click',()=>{
+    shoppingVisible=!shoppingVisible;
+    if(shoppingVisible)shoppingLayer.addTo(airportMap);
+    else airportMap.removeLayer(shoppingLayer);
+    shoppingControl.setAttribute('aria-pressed',String(shoppingVisible));
+    shoppingControl.textContent='🛍️ '+shoppingLayer.getLayers().length+' · '+(shoppingVisible?'Masquer':'Afficher');
+  });
+  try{
+    const response=await fetch('shopping_airports.json',{cache:'no-store'});
+    if(!response.ok)throw new Error('Liste non encore créée');
+    const shopping=await response.json();
+    const ownedCodes=new Set(airports.map(a=>String(a.icao||'').trim().toUpperCase()));
+    for(const entry of shopping){
+      const code=String(entry.icao||'').trim().toUpperCase();
+      if(!/^[A-Z]{4}$/.test(code)||ownedCodes.has(code))continue;
+      if(!Number.isFinite(+entry.lat)||!Number.isFinite(+entry.lon)||Math.abs(+entry.lat)>90||Math.abs(+entry.lon)>180)continue;
+      const shops=(entry.shops||[]).slice(0,2).map(x=>{
+        const url=isSafeUrl(x.url);
+        if(url==='#')return '';
+        return '<a class="airport-direct-link airport-popup-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">↗ '+esc(x.store||'Boutique')+'</a>';
+      }).filter(Boolean).join('<br>');
+      if(!shops)continue;
+      const icon=L.divIcon({className:'airport-shopping-pin',html:'<div class="shopping-bag-pin" aria-hidden="true">🛍️</div>',iconSize:[34,38],iconAnchor:[17,35]});
+      L.marker([+entry.lat,+entry.lon],{icon}).bindPopup('<strong>'+esc(code)+' — '+esc(entry.name||code)+'</strong><p>Scène commerciale à acheter :</p>'+shops).addTo(shoppingLayer);
+    }
+    shoppingControl.textContent='🛍️ '+shoppingLayer.getLayers().length+' · Afficher';
+  }catch(error){console.warn('Liste de courses indisponible',error);shoppingControl.textContent='🛍️ 0 · Afficher'}
   // Appui long (iPad) ou clic droit : raccourcis de recherche des scènes.
   // Identifier l'aéroport réellement touché, y compris hors inventaire personnel.
   const showAirportShops=(code,name,position)=>{
