@@ -2750,6 +2750,28 @@
     ]
   },
   {
+    "icao": "VRMM",
+    "name": "Velana International Airport — Malé",
+    "type": "airport",
+    "lat": 4.192936,
+    "lon": 73.529025,
+    "country": "MV",
+    "shops": [
+      {
+        "store": "SimMarket · FSDG",
+        "url": "https://secure.simmarket.com/fsdg-maldives-velana-international-airport-msfs.phtml",
+        "price_type": "Payant",
+        "product_title": "FSDG Maldives Velana International Airport MSFS 2024/2020"
+      },
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/96568/vrmm",
+        "price_type": "Gratuit",
+        "product_title": "VRMM Velana International Airport Maldives"
+      }
+    ]
+  },
+  {
     "icao": "WAFO",
     "name": "Maleo Airport",
     "type": "aerodrome",
