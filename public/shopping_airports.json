@@ -1486,6 +1486,22 @@
     ]
   },
   {
+    "icao": "KMOX",
+    "name": "Morris Municipal Airport — Charlie Schmidt Field",
+    "type": "aerodrome",
+    "lat": 45.5635914,
+    "lon": -95.9650275,
+    "country": "US",
+    "shops": [
+      {
+        "store": "Flightsim.to",
+        "url": "https://flightsim.to/addon/116374/morris-municipal-airport",
+        "price_type": "Gratuit",
+        "product_title": "Morris Municipal Airport — MSFS 2024"
+      }
+    ]
+  },
+  {
     "icao": "KMYF",
     "name": "Montgomery–Gibbs Executive Airport",
     "type": "aerodrome",
