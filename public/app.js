@@ -404,12 +404,12 @@ async function renderMap(){
       const shops=(entry.shops||[]).slice(0,2).map(x=>{
         const url=isSafeUrl(x.url);
         if(url==='#')return '';
-        return '<a class="airport-direct-link airport-popup-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">↗ '+esc(x.store||'Boutique')+'</a>';
+        return '<a class="airport-direct-link airport-popup-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" title="'+esc(x.product_title||'Voir la scène')+'">↗ '+esc(x.store||'Boutique')+' · '+esc(x.price_type||'Prix à vérifier')+'</a>';
       }).filter(Boolean).join('<br>');
       if(!shops)continue;
       const icon=L.divIcon({className:'airport-shopping-pin',html:'<div class="shopping-bag-pin" aria-hidden="true">'+bagSvg+'</div>',iconSize:[34,38],iconAnchor:[17,35]});
       shoppingCounts[entry.type==='aerodrome'?'aerodrome':'airport']++;
-      L.marker([+entry.lat,+entry.lon],{icon}).bindPopup('<strong>'+esc(code)+' — '+esc(entry.name||code)+'</strong><p>Scène commerciale à acheter :</p>'+shops).addTo(shoppingLayer);
+      L.marker([+entry.lat,+entry.lon],{icon}).bindPopup('<strong>'+esc(code)+' — '+esc(entry.name||code)+'</strong><p>'+esc(entry.type==='aerodrome'?'Aérodrome':'Aéroport')+' · Scène MSFS disponible :</p>'+shops).addTo(shoppingLayer);
     }
     updateShoppingButton();
   }catch(error){console.warn('Liste de courses indisponible',error);updateShoppingButton()}
