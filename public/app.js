@@ -401,7 +401,7 @@ async function renderMap(){
     const ownedCodes=new Set(airports.map(a=>String(a.icao||'').trim().toUpperCase()));
     for(const entry of shopping){
       const code=String(entry.icao||'').trim().toUpperCase();
-      if(!/^[A-Z]{4}$/.test(code)||ownedCodes.has(code))continue;
+      if(!/^(?:[A-Z]{4}|[A-Z0-9]{3,5})$/.test(code)||ownedCodes.has(code))continue;
       if(!Number.isFinite(+entry.lat)||!Number.isFinite(+entry.lon)||Math.abs(+entry.lat)>90||Math.abs(+entry.lon)>180)continue;
       const shops=(entry.shops||[]).slice(0,2).map(x=>{
         const url=isSafeUrl(x.url);
