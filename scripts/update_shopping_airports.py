@@ -50,10 +50,9 @@ def main():
         if not shops:
             skipped.append(code+" (aucun lien produit)")
             continue
-        result.append({"icao":code,"name":str(item.get("name") or position[2] if len(position)>2 else code)[:100],"lat":float(lat),"lon":float(lon),"shops":shops})
+        result.append({"icao":code,"name":str(item.get("name") or (position[2] if len(position)>2 else code))[:100],"lat":float(lat),"lon":float(lon),"shops":shops})
     result.sort(key=lambda x:x["icao"])
-    if not result:
-        raise RuntimeError("Aucun aéroport payant à publier : données précédentes conservées.")
+    # Une liste vide est légitime lorsque tous les aéroports du catalogue sont achetés.
     OUTPUT.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(f"Liste de courses : {len(result)} aéroports retenus ; {len(skipped)} ignorés.")
     for code in skipped:
