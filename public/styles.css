@@ -300,3 +300,9 @@ button.airport-description-info{touch-action:manipulation;min-width:26px;min-hei
 /* Accès tactile compact aux pages de webcams, sans modifier la hauteur des lignes METAR. */
 .weather-webcam-link{display:inline-flex;align-items:center;justify-content:center;vertical-align:baseline;font-size:15px;line-height:1;text-decoration:none;margin-left:5px;min-width:23px;min-height:23px;touch-action:manipulation;border-radius:5px}
 .weather-webcam-link:focus-visible{outline:2px solid #257eb4;outline-offset:2px}
+
+/* Couche indépendante des aéroports à acheter : masquée par défaut. */
+.map-shopping-toggle{display:inline-flex;align-items:center;gap:6px;margin:8px 8px 8px 0;padding:8px 13px;border:1px solid #2984cb;border-radius:9px;background:#e7f4ff;color:#075c9b;font-weight:700;cursor:pointer;min-height:42px;touch-action:manipulation}
+.map-shopping-toggle[aria-pressed="true"]{background:#1265b6;color:#fff}
+.map-shopping-toggle:focus-visible{outline:3px solid #ffbe31;outline-offset:2px}
+.shopping-bag-pin{display:flex;align-items:center;justify-content:center;border:2px solid #fff;border-radius:11px;background:#1178e4;box-shadow:0 2px 7px #0006;width:31px;height:31px;font-size:20px}
