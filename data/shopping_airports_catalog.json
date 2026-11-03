@@ -1,0 +1,132 @@
+[
+  {
+    "icao": "NWWW",
+    "name": "Nouméa-La Tontouta",
+    "shops": [
+      {
+        "store": "Sierrasim",
+        "url": "https://secure.simmarket.com/sierrasim-simulation-la-tontouta-intl.-airport-nwww-msfs24.phtml"
+      }
+    ]
+  },
+  {
+    "icao": "NFTL",
+    "name": "Lifuka / Ha'apai",
+    "shops": [
+      {
+        "store": "Shadow Media",
+        "url": "https://secure.simmarket.com/tonga-haapai-lifuka-island-nftl-msfs24.phtml"
+      }
+    ]
+  },
+  {
+    "icao": "NFTP",
+    "name": "Niuatoputapu",
+    "shops": [
+      {
+        "store": "Shadow Media",
+        "url": "https://secure.simmarket.com/tonga-mataaho-niuatoputapu-nftp-msfs24.phtml"
+      }
+    ]
+  },
+  {
+    "icao": "NCRG",
+    "name": "Rarotonga",
+    "shops": [
+      {
+        "store": "KiwiFlightSim",
+        "url": "https://flightsim.to/store/product/ncrg-rarotonga-airport-cook-islands-polynesia"
+      }
+    ]
+  },
+  {
+    "icao": "RPMD",
+    "name": "Davao",
+    "shops": [
+      {
+        "store": "Airwil Sceneries",
+        "url": "https://secure.simmarket.com/airwil-sceneries-rpmd-davao-intl-airport-msfs.phtml"
+      }
+    ]
+  },
+  {
+    "icao": "WADD",
+    "name": "Bali / Denpasar",
+    "shops": [
+      {
+        "store": "Aerosoft",
+        "url": "https://secure.simmarket.com/aerosoft-aerosoft-airport-bali-msfs.phtml"
+      }
+    ]
+  },
+  {
+    "icao": "ZMCK",
+    "name": "Oulan-Bator",
+    "shops": [
+      {
+        "store": "Mokui",
+        "url": "https://secure.simmarket.com/mokui-zmck-ulaanbaatar-chinggis-khaan-msfs.phtml"
+      }
+    ]
+  },
+  {
+    "icao": "VNKT",
+    "name": "Katmandou",
+    "shops": [
+      {
+        "store": "Final Approach Design",
+        "url": "https://secure.simmarket.com/kathmandu-nepal-vnkt-msfs2024.phtml"
+      }
+    ]
+  },
+  {
+    "icao": "FZAA",
+    "name": "Kinshasa-N'Djili",
+    "shops": [
+      {
+        "store": "FSDG",
+        "url": "https://secure.simmarket.com/fsdg-kinshasa-msfs2420.phtml"
+      }
+    ]
+  },
+  {
+    "icao": "FYWH",
+    "name": "Windhoek / Hosea Kutako",
+    "shops": [
+      {
+        "store": "FSDG",
+        "url": "https://secure.simmarket.com/fsdg-lite-windhoek-msfs.phtml"
+      }
+    ]
+  },
+  {
+    "icao": "FIMP",
+    "name": "Île Maurice",
+    "shops": [
+      {
+        "store": "FSDG",
+        "url": "https://secure.simmarket.com/fsdg-mauritius-msfs.phtml"
+      }
+    ]
+  },
+  {
+    "icao": "GCTS",
+    "name": "Tenerife Sud",
+    "shops": [
+      {
+        "store": "MK Studios",
+        "url": "https://secure.simmarket.com/tenerife-south-airport-gcts-msfs24.phtml"
+      }
+    ]
+  },
+  {
+    "icao": "RPVM",
+    "name": "Cebu-Mactan",
+    "shops": [
+      {
+        "store": "CloudSurf Asia",
+        "url": "https://secure.simmarket.com/cloudsurf-asia-simulations-rpvm-mactan-cebu-international-airport.phtml"
+      }
+    ]
+  }
+]
