@@ -1,7 +1,7 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-11-02T06:02:06.906428+00:00",
+  "retrieved_at": "2026-11-03T10:46:37.687272+00:00",
   "origin": {
     "icao": "OMDB",
     "name": "DUBAI INTL"
@@ -12,12 +12,12 @@
   },
   "flight_number": "2809",
   "aircraft": "A320",
-  "route": "IVUR1F IVURO M428 TARBO Z440 DAMUM B524 ALPOR G216 LAKIV LAKI2A",
+  "route": "IVUR1F IVURO M428 TARBO Z440 DAMUM B524 ALPOR G216 LAKIV LAKI1C",
   "altitude": "37000",
-  "enroute_time": "01:31:53",
-  "scheduled_departure": "2026-11-01T18:50:00Z",
-  "scheduled_arrival": "2026-11-01T21:00:00Z",
-  "generated_at": "2026-11-01T18:15:50Z",
+  "enroute_time": "01:35:52",
+  "scheduled_departure": "2026-11-03T10:45:00Z",
+  "scheduled_arrival": "2026-11-03T12:55:00Z",
+  "generated_at": "2026-11-03T10:10:58Z",
   "route_points": [
     {
       "lat": 25.295528,
@@ -85,8 +85,8 @@
       "name": "TARBO"
     },
     {
-      "lat": 24.673339,
-      "lon": 58.230879,
+      "lat": 24.710292,
+      "lon": 57.940409,
       "name": "TOC"
     },
     {
@@ -120,14 +120,29 @@
       "name": "LAKIV"
     },
     {
-      "lat": 24.579597,
-      "lon": 65.246344,
+      "lat": 24.603841,
+      "lon": 65.814359,
       "name": "TOD"
     },
     {
-      "lat": 24.724722,
-      "lon": 66.5,
-      "name": "ANRIM"
+      "lat": 24.656667,
+      "lon": 66.566389,
+      "name": "KC504"
+    },
+    {
+      "lat": 24.688611,
+      "lon": 67.047972,
+      "name": "KC505"
+    },
+    {
+      "lat": 24.878889,
+      "lon": 67.400556,
+      "name": "AMJID"
+    },
+    {
+      "lat": 24.959444,
+      "lon": 67.376389,
+      "name": "SABEN"
     },
     {
       "lat": 24.908558,

@@ -14,7 +14,7 @@
     {
       "id": "IFR-884082178",
       "aircraft": "F-FENX",
-      "when": "yesterday",
+      "when": "2 days ago",
       "origin": "OERK",
       "destination": "OMDB",
       "rules": "IFR",
@@ -23,7 +23,7 @@
     {
       "id": "IFR-883978650",
       "aircraft": "F-FENX",
-      "when": "5 days ago",
+      "when": "1 week ago",
       "origin": "HECA",
       "destination": "OERK",
       "rules": "IFR",
@@ -86,7 +86,7 @@
     {
       "id": "IFR-883810326",
       "aircraft": "F-FENX",
-      "when": "1 week ago",
+      "when": "2 weeks ago",
       "origin": "LFMN",
       "destination": "EGLL",
       "rules": "IFR",
@@ -95,14 +95,14 @@
     {
       "id": "IFR-883793722",
       "aircraft": "F-FENX",
-      "when": "1 week ago",
+      "when": "2 weeks ago",
       "origin": "LFRK",
       "destination": "LFMN",
       "rules": "IFR",
       "duration": "2h 1m"
     }
   ],
-  "flights_checked_at": "2026-11-02T06:02:22.518576+00:00",
-  "verified_at": "2026-11-02T06:02:22.518576+00:00",
-  "checked_at": "2026-11-02T06:02:22.518576+00:00"
+  "flights_checked_at": "2026-11-03T10:46:58.123805+00:00",
+  "verified_at": "2026-11-03T10:46:58.123805+00:00",
+  "checked_at": "2026-11-03T10:46:58.123805+00:00"
 }
