@@ -2670,5 +2670,13 @@
     "source": "OurAirports / airport-codes",
     "country_code": "MN",
     "aircraft_marker": "airliner"
+  },
+  "VRMM": {
+    "lat": 4.19183,
+    "lon": 73.529099,
+    "name": "Velana International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "MV",
+    "aircraft_marker": "airliner"
   }
 }

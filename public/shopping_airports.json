@@ -1,45 +1,10 @@
 [
   {
-    "icao": "21AK",
-    "name": "Montana Creek Airport — Alaska",
-    "type": "aerodrome",
-    "lat": 62.0826111,
-    "lon": -150.0669306,
-    "country": "US",
-    "comment": "Piste gravier 701 m; scène compatible MSFS 2024",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/5793/montana-creek-alaska-21ak",
-        "price_type": "Gratuit",
-        "product_title": "Montana Creek Airport — Alaska — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "49MT",
-    "name": "Firebuster Airfield — Montana",
-    "type": "aerodrome",
-    "lat": 45.606,
-    "lon": -109.121,
-    "country": "US",
-    "comment": "Terrain privé; scène MSFS 2024, piste 1 829 m",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/116581/49mt-firebuster-airfield-montana-usa",
-        "price_type": "Gratuit",
-        "product_title": "Firebuster Airfield — Montana — scène MSFS"
-      }
-    ]
-  },
-  {
     "icao": "BIAR",
     "name": "Akureyri International Airport",
+    "lat": 65.65657,
+    "lon": -18.07202,
     "type": "airport",
-    "lat": 65.656573,
-    "lon": -18.072018,
-    "country": "IS",
     "shops": [
       {
         "store": "Contrail",
@@ -58,10 +23,9 @@
   {
     "icao": "BKPR",
     "name": "Priština Adem Jashari International Airport",
-    "type": "airport",
     "lat": 42.5728,
-    "lon": 21.035801,
-    "country": "XK",
+    "lon": 21.0358,
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -80,10 +44,9 @@
   {
     "icao": "CYLW",
     "name": "Kelowna International Airport",
-    "type": "airport",
     "lat": 49.9561,
-    "lon": -119.377998,
-    "country": "CA",
+    "lon": -119.378,
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -96,10 +59,9 @@
   {
     "icao": "CYQG",
     "name": "Windsor International Airport",
-    "type": "airport",
     "lat": 42.2756,
-    "lon": -82.955597,
-    "country": "CA",
+    "lon": -82.9556,
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -118,10 +80,9 @@
   {
     "icao": "CZBA",
     "name": "Burlington Executive Airpark",
+    "lat": 43.44145,
+    "lon": -79.8501,
     "type": "aerodrome",
-    "lat": 43.441453,
-    "lon": -79.850103,
-    "country": "CA",
     "shops": [
       {
         "store": "Contrail",
@@ -134,10 +95,9 @@
   {
     "icao": "DAAT",
     "name": "Aguenar – Hadj Bey Akhamok Airport",
+    "lat": 22.81099,
+    "lon": 5.45083,
     "type": "airport",
-    "lat": 22.810992,
-    "lon": 5.450832,
-    "country": "DZ",
     "shops": [
       {
         "store": "Contrail",
@@ -156,10 +116,9 @@
   {
     "icao": "DATG",
     "name": "In Guezzam Airport",
+    "lat": 19.56052,
+    "lon": 5.74933,
     "type": "aerodrome",
-    "lat": 19.560518,
-    "lon": 5.749326,
-    "country": "DZ",
     "shops": [
       {
         "store": "Contrail",
@@ -178,10 +137,9 @@
   {
     "icao": "EDBJ",
     "name": "Jena-Schöngleina Airfield",
+    "lat": 50.91535,
+    "lon": 11.7142,
     "type": "aerodrome",
-    "lat": 50.915345,
-    "lon": 11.714201,
-    "country": "DE",
     "shops": [
       {
         "store": "iniBuilds",
@@ -194,10 +152,9 @@
   {
     "icao": "EDBK",
     "name": "Kyritz Airfield",
+    "lat": 52.91889,
+    "lon": 12.42528,
     "type": "aerodrome",
-    "lat": 52.918888,
-    "lon": 12.425278,
-    "country": "DE",
     "shops": [
       {
         "store": "Contrail",
@@ -210,10 +167,9 @@
   {
     "icao": "EDDC",
     "name": "Dresden Airport",
+    "lat": 51.13412,
+    "lon": 13.76783,
     "type": "airport",
-    "lat": 51.134123,
-    "lon": 13.767831,
-    "country": "DE",
     "shops": [
       {
         "store": "Contrail",
@@ -232,10 +188,9 @@
   {
     "icao": "EDDN",
     "name": "Nuremberg Airport",
+    "lat": 49.4987,
+    "lon": 11.07806,
     "type": "airport",
-    "lat": 49.498699,
-    "lon": 11.078056,
-    "country": "DE",
     "shops": [
       {
         "store": "Contrail",
@@ -248,10 +203,9 @@
   {
     "icao": "EDEH",
     "name": "Herrenteich Airfield",
+    "lat": 49.345,
+    "lon": 8.48778,
     "type": "aerodrome",
-    "lat": 49.345001,
-    "lon": 8.487778,
-    "country": "DE",
     "shops": [
       {
         "store": "iniBuilds",
@@ -264,10 +218,9 @@
   {
     "icao": "EDEN",
     "name": "Bad Hersfeld Airfield",
+    "lat": 50.84405,
+    "lon": 9.70722,
     "type": "aerodrome",
-    "lat": 50.844055,
-    "lon": 9.707218,
-    "country": "DE",
     "shops": [
       {
         "store": "Contrail",
@@ -286,10 +239,9 @@
   {
     "icao": "EDFH",
     "name": "Frankfurt-Hahn Airport",
+    "lat": 49.94635,
+    "lon": 7.26173,
     "type": "airport",
-    "lat": 49.946353,
-    "lon": 7.261734,
-    "country": "DE",
     "shops": [
       {
         "store": "Contrail",
@@ -308,10 +260,9 @@
   {
     "icao": "EDFR",
     "name": "Rothenburg ob der Tauber Airfield",
+    "lat": 49.38894,
+    "lon": 10.21856,
     "type": "aerodrome",
-    "lat": 49.388941,
-    "lon": 10.218564,
-    "country": "DE",
     "shops": [
       {
         "store": "Contrail",
@@ -324,10 +275,9 @@
   {
     "icao": "EDLP",
     "name": "Paderborn Lippstadt Airport",
+    "lat": 51.61253,
+    "lon": 8.61746,
     "type": "airport",
-    "lat": 51.612527,
-    "lon": 8.617459,
-    "country": "DE",
     "shops": [
       {
         "store": "Contrail",
@@ -340,10 +290,9 @@
   {
     "icao": "EDLS",
     "name": "Stadtlohn-Vreden Airfield",
+    "lat": 51.99583,
+    "lon": 6.84056,
     "type": "aerodrome",
-    "lat": 51.995834,
-    "lon": 6.840556,
-    "country": "DE",
     "shops": [
       {
         "store": "iniBuilds",
@@ -356,10 +305,9 @@
   {
     "icao": "EDMB",
     "name": "Biberach an der Riß Airfield",
+    "lat": 48.11236,
+    "lon": 9.76401,
     "type": "aerodrome",
-    "lat": 48.112359,
-    "lon": 9.764013,
-    "country": "DE",
     "shops": [
       {
         "store": "Contrail",
@@ -378,10 +326,9 @@
   {
     "icao": "EDMW",
     "name": "Deggendorf Airfield",
+    "lat": 48.83028,
+    "lon": 12.87972,
     "type": "aerodrome",
-    "lat": 48.830276,
-    "lon": 12.879722,
-    "country": "DE",
     "shops": [
       {
         "store": "Contrail",
@@ -394,10 +341,9 @@
   {
     "icao": "EDNR",
     "name": "Regensburg-Oberhub Airfield",
+    "lat": 49.14194,
+    "lon": 12.08194,
     "type": "aerodrome",
-    "lat": 49.141945,
-    "lon": 12.081944,
-    "country": "DE",
     "shops": [
       {
         "store": "Contrail",
@@ -410,10 +356,9 @@
   {
     "icao": "EDPA",
     "name": "Aalen Heidenheim Elchingen Airfield",
+    "lat": 48.77778,
+    "lon": 10.26472,
     "type": "aerodrome",
-    "lat": 48.777779,
-    "lon": 10.264722,
-    "country": "DE",
     "shops": [
       {
         "store": "Contrail",
@@ -426,10 +371,9 @@
   {
     "icao": "EDQH",
     "name": "Herzogenaurach Airfield",
+    "lat": 49.58271,
+    "lon": 10.87834,
     "type": "aerodrome",
-    "lat": 49.582708,
-    "lon": 10.878339,
-    "country": "DE",
     "shops": [
       {
         "store": "Contrail",
@@ -442,10 +386,9 @@
   {
     "icao": "EDRJ",
     "name": "Saarlouis-Düren Airfield",
-    "type": "aerodrome",
     "lat": 49.3125,
-    "lon": 6.674444,
-    "country": "DE",
+    "lon": 6.67444,
+    "type": "aerodrome",
     "shops": [
       {
         "store": "iniBuilds",
@@ -458,10 +401,9 @@
   {
     "icao": "EDRP",
     "name": "Pirmasens-Pottschütthöhe Airfield",
+    "lat": 49.26444,
+    "lon": 7.48833,
     "type": "aerodrome",
-    "lat": 49.264442,
-    "lon": 7.488333,
-    "country": "DE",
     "shops": [
       {
         "store": "iniBuilds",
@@ -474,10 +416,9 @@
   {
     "icao": "EDRW",
     "name": "Dierdorf-Wienau Airfield",
+    "lat": 50.56611,
+    "lon": 7.65333,
     "type": "aerodrome",
-    "lat": 50.566113,
-    "lon": 7.653333,
-    "country": "DE",
     "shops": [
       {
         "store": "iniBuilds",
@@ -490,10 +431,9 @@
   {
     "icao": "EDVY",
     "name": "Porta Westfalica Airfield",
+    "lat": 52.22137,
+    "lon": 8.85976,
     "type": "aerodrome",
-    "lat": 52.221367,
-    "lon": 8.859765,
-    "country": "DE",
     "shops": [
       {
         "store": "Contrail",
@@ -506,10 +446,9 @@
   {
     "icao": "EDWC",
     "name": "Damme Airfield",
+    "lat": 52.48756,
+    "lon": 8.18515,
     "type": "aerodrome",
-    "lat": 52.487558,
-    "lon": 8.185151,
-    "country": "DE",
     "shops": [
       {
         "store": "iniBuilds",
@@ -522,10 +461,9 @@
   {
     "icao": "EDWE",
     "name": "Emden Airport",
-    "type": "aerodrome",
-    "lat": 53.391109,
+    "lat": 53.39111,
     "lon": 7.2275,
-    "country": "DE",
+    "type": "aerodrome",
     "shops": [
       {
         "store": "Contrail",
@@ -544,10 +482,9 @@
   {
     "icao": "EDWO",
     "name": "Atterheide Airfield",
+    "lat": 52.28639,
+    "lon": 7.96972,
     "type": "aerodrome",
-    "lat": 52.286388,
-    "lon": 7.969722,
-    "country": "DE",
     "shops": [
       {
         "store": "iniBuilds",
@@ -560,10 +497,9 @@
   {
     "icao": "EDWQ",
     "name": "Ganderkesee Atlas Airfield",
-    "type": "aerodrome",
     "lat": 53.03611,
-    "lon": 8.505556,
-    "country": "DE",
+    "lon": 8.50556,
+    "type": "aerodrome",
     "shops": [
       {
         "store": "Contrail",
@@ -576,10 +512,9 @@
   {
     "icao": "EDWR",
     "name": "Borkum Airport",
-    "type": "aerodrome",
     "lat": 53.59639,
-    "lon": 6.709167,
-    "country": "DE",
+    "lon": 6.70917,
+    "type": "aerodrome",
     "shops": [
       {
         "store": "Contrail",
@@ -598,10 +533,9 @@
   {
     "icao": "EDWS",
     "name": "Norden-Norddeich Airport",
+    "lat": 53.63306,
+    "lon": 7.19028,
     "type": "aerodrome",
-    "lat": 53.633057,
-    "lon": 7.190278,
-    "country": "DE",
     "shops": [
       {
         "store": "Contrail",
@@ -614,10 +548,9 @@
   {
     "icao": "EDXB",
     "name": "Heide-Büsum Airport",
+    "lat": 54.15333,
+    "lon": 8.90167,
     "type": "aerodrome",
-    "lat": 54.153332,
-    "lon": 8.901667,
-    "country": "DE",
     "shops": [
       {
         "store": "Contrail",
@@ -630,10 +563,9 @@
   {
     "icao": "EDXD",
     "name": "Bohmte-Bad Essen Airfield",
+    "lat": 52.35139,
+    "lon": 8.32833,
     "type": "aerodrome",
-    "lat": 52.351391,
-    "lon": 8.328333,
-    "country": "DE",
     "shops": [
       {
         "store": "iniBuilds",
@@ -646,10 +578,9 @@
   {
     "icao": "EDXE",
     "name": "Rheine-Eschendorf Airfield",
+    "lat": 52.27639,
+    "lon": 7.49278,
     "type": "aerodrome",
-    "lat": 52.276389,
-    "lon": 7.492778,
-    "country": "DE",
     "shops": [
       {
         "store": "iniBuilds",
@@ -662,10 +593,9 @@
   {
     "icao": "EFOU",
     "name": "Oulu Airport",
+    "lat": 64.9301,
+    "lon": 25.3546,
     "type": "airport",
-    "lat": 64.930099,
-    "lon": 25.354601,
-    "country": "FI",
     "shops": [
       {
         "store": "Contrail",
@@ -684,10 +614,9 @@
   {
     "icao": "EFTU",
     "name": "Turku Airport",
-    "type": "airport",
-    "lat": 60.514099,
+    "lat": 60.5141,
     "lon": 22.2628,
-    "country": "FI",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -706,10 +635,9 @@
   {
     "icao": "EGAA",
     "name": "Belfast International Airport",
+    "lat": 54.6575,
+    "lon": -6.21583,
     "type": "airport",
-    "lat": 54.6575012207,
-    "lon": -6.2158298492399995,
-    "country": "GB",
     "shops": [
       {
         "store": "Contrail",
@@ -722,10 +650,9 @@
   {
     "icao": "EGFF",
     "name": "Cardiff International Airport",
-    "type": "airport",
-    "lat": 51.396702,
+    "lat": 51.3967,
     "lon": -3.34333,
-    "country": "GB",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -744,10 +671,9 @@
   {
     "icao": "EGGP",
     "name": "Liverpool John Lennon Airport",
+    "lat": 53.33486,
+    "lon": -2.84964,
     "type": "airport",
-    "lat": 53.334863,
-    "lon": -2.849637,
-    "country": "GB",
     "shops": [
       {
         "store": "Contrail",
@@ -766,10 +692,9 @@
   {
     "icao": "EGNX",
     "name": "East Midlands Airport",
-    "type": "airport",
     "lat": 52.8311,
     "lon": -1.32806,
-    "country": "GB",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -782,10 +707,9 @@
   {
     "icao": "EGPH",
     "name": "Edinburgh Airport",
+    "lat": 55.95014,
+    "lon": -3.37229,
     "type": "airport",
-    "lat": 55.950145,
-    "lon": -3.372288,
-    "country": "GB",
     "shops": [
       {
         "store": "Contrail",
@@ -798,10 +722,9 @@
   {
     "icao": "EHBK",
     "name": "Maastricht Aachen Airport",
+    "lat": 50.91109,
+    "lon": 5.7694,
     "type": "airport",
-    "lat": 50.911087,
-    "lon": 5.769401,
-    "country": "NL",
     "shops": [
       {
         "store": "Contrail",
@@ -814,10 +737,9 @@
   {
     "icao": "EKBI",
     "name": "Billund Airport",
+    "lat": 55.74034,
+    "lon": 9.15702,
     "type": "airport",
-    "lat": 55.740335,
-    "lon": 9.157019,
-    "country": "DK",
     "shops": [
       {
         "store": "Contrail",
@@ -836,10 +758,9 @@
   {
     "icao": "ENBR",
     "name": "Bergen Airport, Flesland",
-    "type": "airport",
     "lat": 60.2934,
     "lon": 5.21814,
-    "country": "NO",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -858,10 +779,9 @@
   {
     "icao": "ENCN",
     "name": "Kristiansand Airport",
-    "type": "airport",
-    "lat": 58.204201,
+    "lat": 58.2042,
     "lon": 8.08537,
-    "country": "NO",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -880,10 +800,9 @@
   {
     "icao": "ENEV",
     "name": "Harstad/Narvik Airport",
+    "lat": 68.4913,
+    "lon": 16.6781,
     "type": "airport",
-    "lat": 68.491302,
-    "lon": 16.678101,
-    "country": "NO",
     "shops": [
       {
         "store": "Contrail",
@@ -902,10 +821,9 @@
   {
     "icao": "ENVA",
     "name": "Trondheim Airport, Værnes",
-    "type": "airport",
-    "lat": 63.457802,
+    "lat": 63.4578,
     "lon": 10.924,
-    "country": "NO",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -918,10 +836,9 @@
   {
     "icao": "EPGD",
     "name": "Gdańsk Lech Wałęsa Airport",
-    "type": "airport",
-    "lat": 54.377602,
+    "lat": 54.3776,
     "lon": 18.4662,
-    "country": "PL",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -940,10 +857,9 @@
   {
     "icao": "EPKK",
     "name": "Kraków John Paul II International Airport",
-    "type": "airport",
-    "lat": 50.077702,
+    "lat": 50.0777,
     "lon": 19.7848,
-    "country": "PL",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -962,10 +878,9 @@
   {
     "icao": "EPKT",
     "name": "Katowice Wojciech Korfanty International Airport",
+    "lat": 50.47601,
+    "lon": 19.0807,
     "type": "airport",
-    "lat": 50.476015,
-    "lon": 19.080705,
-    "country": "PL",
     "shops": [
       {
         "store": "Contrail",
@@ -984,10 +899,9 @@
   {
     "icao": "EPLB",
     "name": "Lublin Airport",
+    "lat": 51.24016,
+    "lon": 22.71346,
     "type": "airport",
-    "lat": 51.240157,
-    "lon": 22.713461,
-    "country": "PL",
     "shops": [
       {
         "store": "Contrail",
@@ -1006,10 +920,9 @@
   {
     "icao": "EPRZ",
     "name": "Rzeszów-Jasionka Airport",
+    "lat": 50.10979,
+    "lon": 22.02416,
     "type": "airport",
-    "lat": 50.109791,
-    "lon": 22.024155,
-    "country": "PL",
     "shops": [
       {
         "store": "Contrail",
@@ -1028,10 +941,9 @@
   {
     "icao": "EPSC",
     "name": "Solidarity Szczecin–Goleniów Airport",
-    "type": "airport",
-    "lat": 53.584702,
+    "lat": 53.5847,
     "lon": 14.9022,
-    "country": "PL",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -1050,10 +962,9 @@
   {
     "icao": "EPWR",
     "name": "Copernicus Wrocław Airport",
+    "lat": 51.10372,
+    "lon": 16.8821,
     "type": "airport",
-    "lat": 51.103719,
-    "lon": 16.882096,
-    "country": "PL",
     "shops": [
       {
         "store": "Contrail",
@@ -1072,10 +983,9 @@
   {
     "icao": "ESOW",
     "name": "Stockholm Västerås Airport",
-    "type": "airport",
-    "lat": 59.589401,
+    "lat": 59.5894,
     "lon": 16.6336,
-    "country": "SE",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -1094,10 +1004,9 @@
   {
     "icao": "EYPA",
     "name": "Palanga International Airport",
+    "lat": 55.9732,
+    "lon": 21.0939,
     "type": "airport",
-    "lat": 55.973202,
-    "lon": 21.093901,
-    "country": "LT",
     "shops": [
       {
         "store": "Contrail",
@@ -1116,10 +1025,9 @@
   {
     "icao": "FADS",
     "name": "De Doorns Airport",
+    "lat": -33.45556,
+    "lon": 19.68449,
     "type": "aerodrome",
-    "lat": -33.455557,
-    "lon": 19.684493,
-    "country": "ZA",
     "shops": [
       {
         "store": "Contrail",
@@ -1138,10 +1046,9 @@
   {
     "icao": "FAHD",
     "name": "Hippo Pools Airport",
-    "type": "aerodrome",
-    "lat": -24.199722,
+    "lat": -24.19972,
     "lon": 30.8125,
-    "country": "ZA",
+    "type": "aerodrome",
     "shops": [
       {
         "store": "Contrail",
@@ -1160,10 +1067,9 @@
   {
     "icao": "FANG",
     "name": "Ngala Airport",
-    "type": "aerodrome",
     "lat": -24.389,
     "lon": 31.326,
-    "country": "ZA",
+    "type": "aerodrome",
     "shops": [
       {
         "store": "iniBuilds",
@@ -1176,10 +1082,9 @@
   {
     "icao": "FARO",
     "name": "Rooiberg Airport",
+    "lat": -24.77779,
+    "lon": 27.75234,
     "type": "aerodrome",
-    "lat": -24.777789,
-    "lon": 27.752336,
-    "country": "ZA",
     "shops": [
       {
         "store": "Contrail",
@@ -1192,10 +1097,9 @@
   {
     "icao": "GCGM",
     "name": "La Gomera Airport",
-    "type": "aerodrome",
     "lat": 28.0296,
     "lon": -17.2146,
-    "country": "ES",
+    "type": "aerodrome",
     "shops": [
       {
         "store": "Contrail",
@@ -1208,10 +1112,9 @@
   {
     "icao": "GCLP",
     "name": "Gran Canaria Airport",
-    "type": "airport",
     "lat": 27.9319,
     "lon": -15.3866,
-    "country": "ES",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -1224,10 +1127,9 @@
   {
     "icao": "HKKE",
     "name": "Keekorok Airport",
+    "lat": -1.58634,
+    "lon": 35.25746,
     "type": "aerodrome",
-    "lat": -1.586345,
-    "lon": 35.257455,
-    "country": "KE",
     "shops": [
       {
         "store": "iniBuilds",
@@ -1240,10 +1142,9 @@
   {
     "icao": "HTKJ",
     "name": "Kilimanjaro International Airport",
-    "type": "airport",
-    "lat": -3.427049,
+    "lat": -3.42705,
     "lon": 37.07353,
-    "country": "TZ",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -1260,60 +1161,11 @@
     ]
   },
   {
-    "icao": "K74V",
-    "name": "Roosevelt Municipal Airport",
-    "type": "aerodrome",
-    "lat": 40.2784139,
-    "lon": -110.0513772,
-    "country": "US",
-    "shops": [
-      {
-        "store": "Flightsim.to Store",
-        "url": "https://flightsim.to/store/product/k74v-roosevelt-municipal-airport",
-        "price_type": "Payant",
-        "product_title": "Roosevelt Municipal Airport — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "KBKL",
-    "name": "Cleveland Burke Lakefront Airport",
-    "type": "aerodrome",
-    "lat": 41.5175,
-    "lon": -81.6833,
-    "country": "US",
-    "shops": [
-      {
-        "store": "Flightsim.to Store",
-        "url": "https://flightsim.to/store/country/US",
-        "price_type": "Payant",
-        "product_title": "Cleveland Burke Lakefront Airport — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "KBOK",
-    "name": "Brookings State Airport — Oregon",
-    "type": "aerodrome",
-    "lat": 42.0746,
-    "lon": -124.2905,
-    "country": "US",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/73283/kbok-brookings-state-airport",
-        "price_type": "Gratuit",
-        "product_title": "Brookings State Airport — Oregon — MSFS 2024"
-      }
-    ]
-  },
-  {
     "icao": "KCDK",
     "name": "George T Lewis Airport",
+    "lat": 29.13409,
+    "lon": -83.05078,
     "type": "aerodrome",
-    "lat": 29.134095,
-    "lon": -83.050783,
-    "country": "US",
     "shops": [
       {
         "store": "Contrail",
@@ -1332,10 +1184,9 @@
   {
     "icao": "KCDW",
     "name": "Essex County Airport",
+    "lat": 40.8752,
+    "lon": -74.2814,
     "type": "aerodrome",
-    "lat": 40.875198364300005,
-    "lon": -74.2814025879,
-    "country": "US",
     "shops": [
       {
         "store": "iniBuilds",
@@ -1352,60 +1203,11 @@
     ]
   },
   {
-    "icao": "KCON",
-    "name": "Concord Municipal Airport",
-    "type": "aerodrome",
-    "lat": 43.2027,
-    "lon": -71.5023,
-    "country": "US",
-    "shops": [
-      {
-        "store": "Flightsim.to Store",
-        "url": "https://flightsim.to/store/product/kcon-concord-municipal-airport",
-        "price_type": "Payant",
-        "product_title": "Concord Municipal Airport — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "KCPK",
-    "name": "Chesapeake Regional Airport",
-    "type": "aerodrome",
-    "lat": 36.6656175,
-    "lon": -76.3206558,
-    "country": "US",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/116739/kcpk-chesapeake-regional-airport-v2",
-        "price_type": "Gratuit",
-        "product_title": "Chesapeake Regional Airport — MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "KCXP",
-    "name": "Carson City Airport",
-    "type": "aerodrome",
-    "lat": 39.1923042,
-    "lon": -119.7325706,
-    "country": "US",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/117593/kcxp-carson-airport-carson-city-nv",
-        "price_type": "Gratuit",
-        "product_title": "Carson City Airport — scène MSFS"
-      }
-    ]
-  },
-  {
     "icao": "KDJT",
     "name": "President Donald J. Trump International Airport",
+    "lat": 26.6832,
+    "lon": -80.0956,
     "type": "airport",
-    "lat": 26.683201,
-    "lon": -80.095596,
-    "country": "US",
     "shops": [
       {
         "store": "Contrail",
@@ -1424,10 +1226,9 @@
   {
     "icao": "KDNN",
     "name": "Dalton Municipal Airport",
+    "lat": 34.7229,
+    "lon": -84.8702,
     "type": "aerodrome",
-    "lat": 34.72290039,
-    "lon": -84.87020111,
-    "country": "US",
     "shops": [
       {
         "store": "iniBuilds",
@@ -1438,28 +1239,11 @@
     ]
   },
   {
-    "icao": "KDTS",
-    "name": "Destin Executive Airport",
-    "type": "aerodrome",
-    "lat": 30.4000547,
-    "lon": -86.4714722,
-    "country": "US",
-    "shops": [
-      {
-        "store": "Flightsim.to Store",
-        "url": "https://flightsim.to/store/product/kdts-destin-executive-airport-msfs2024",
-        "price_type": "Payant",
-        "product_title": "Destin Executive Airport — scène MSFS"
-      }
-    ]
-  },
-  {
     "icao": "KEMT",
     "name": "San Gabriel Valley Airport",
+    "lat": 34.0861,
+    "lon": -118.035,
     "type": "aerodrome",
-    "lat": 34.086102,
-    "lon": -118.035004,
-    "country": "US",
     "shops": [
       {
         "store": "iniBuilds",
@@ -1472,10 +1256,9 @@
   {
     "icao": "KFDK",
     "name": "Frederick Municipal Airport",
+    "lat": 39.4176,
+    "lon": -77.3743,
     "type": "aerodrome",
-    "lat": 39.417598724399994,
-    "lon": -77.3742980957,
-    "country": "US",
     "shops": [
       {
         "store": "Contrail",
@@ -1488,10 +1271,9 @@
   {
     "icao": "KFLL",
     "name": "Fort Lauderdale Hollywood International Airport",
+    "lat": 26.0726,
+    "lon": -80.1527,
     "type": "airport",
-    "lat": 26.072599,
-    "lon": -80.152702,
-    "country": "US",
     "shops": [
       {
         "store": "Contrail",
@@ -1508,29 +1290,11 @@
     ]
   },
   {
-    "icao": "KGCN",
-    "name": "Grand Canyon National Park Airport — Arizona",
-    "type": "aerodrome",
-    "lat": 35.9523611,
-    "lon": -112.1469722,
-    "country": "US",
-    "comment": "Scène MSFS 2020; compatibilité 2024 signalée par des utilisateurs, non garantie",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/759/grand-canyon-national-park-airport-kgcn",
-        "price_type": "Gratuit",
-        "product_title": "Grand Canyon National Park Airport — Arizona — scène MSFS"
-      }
-    ]
-  },
-  {
     "icao": "KHMT",
     "name": "Hemet Ryan Airport",
+    "lat": 33.734,
+    "lon": -117.023,
     "type": "aerodrome",
-    "lat": 33.7340011597,
-    "lon": -117.023002625,
-    "country": "US",
     "shops": [
       {
         "store": "Contrail",
@@ -1543,10 +1307,9 @@
   {
     "icao": "KHOU",
     "name": "William P. Hobby Airport",
+    "lat": 29.64534,
+    "lon": -95.27681,
     "type": "airport",
-    "lat": 29.645336,
-    "lon": -95.276812,
-    "country": "US",
     "shops": [
       {
         "store": "Contrail",
@@ -1563,28 +1326,11 @@
     ]
   },
   {
-    "icao": "KHPN",
-    "name": "Westchester County Airport",
-    "type": "aerodrome",
-    "lat": 41.06696,
-    "lon": -73.70757,
-    "country": "US",
-    "shops": [
-      {
-        "store": "Flightsim.to Store",
-        "url": "https://flightsim.to/store/country/US",
-        "price_type": "Payant",
-        "product_title": "Westchester County Airport — scène MSFS"
-      }
-    ]
-  },
-  {
     "icao": "KHVN",
     "name": "Tweed New Haven Airport",
+    "lat": 41.26287,
+    "lon": -72.88769,
     "type": "airport",
-    "lat": 41.262869,
-    "lon": -72.887694,
-    "country": "US",
     "shops": [
       {
         "store": "Contrail",
@@ -1601,60 +1347,11 @@
     ]
   },
   {
-    "icao": "KIKK",
-    "name": "Greater Kankakee Airport",
-    "type": "aerodrome",
-    "lat": 41.0714,
-    "lon": -87.8463,
-    "country": "US",
-    "shops": [
-      {
-        "store": "Flightsim.to Store",
-        "url": "https://flightsim.to/store/country/US",
-        "price_type": "Payant",
-        "product_title": "Greater Kankakee Airport — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "KLCI",
-    "name": "Laconia Municipal Airport",
-    "type": "aerodrome",
-    "lat": 43.5730417,
-    "lon": -71.4178417,
-    "country": "US",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/73956/klci-laconia-municipal-airport",
-        "price_type": "Gratuit",
-        "product_title": "Laconia Municipal Airport — MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "KLPR",
-    "name": "Lorain County Regional Airport",
-    "type": "aerodrome",
-    "lat": 41.3442764,
-    "lon": -82.1776289,
-    "country": "US",
-    "shops": [
-      {
-        "store": "Flightsim.to Store",
-        "url": "https://flightsim.to/store/product/klpr-lorain-county-airport",
-        "price_type": "Payant",
-        "product_title": "Lorain County Regional Airport — scène MSFS"
-      }
-    ]
-  },
-  {
     "icao": "KLVK",
     "name": "Livermore Municipal Airport",
+    "lat": 37.6934,
+    "lon": -121.82,
     "type": "aerodrome",
-    "lat": 37.6934013367,
-    "lon": -121.819999695,
-    "country": "US",
     "shops": [
       {
         "store": "iniBuilds",
@@ -1665,60 +1362,11 @@
     ]
   },
   {
-    "icao": "KMAN",
-    "name": "Nampa Municipal Airport",
-    "type": "aerodrome",
-    "lat": 43.5813411,
-    "lon": -116.5230631,
-    "country": "US",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://fr.flightsim.to/addon/117427/nampa-municipal-airport",
-        "price_type": "Gratuit",
-        "product_title": "Nampa Municipal Airport — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "KMOX",
-    "name": "Morris Municipal Airport — Charlie Schmidt Field",
-    "type": "aerodrome",
-    "lat": 45.5635914,
-    "lon": -95.9650275,
-    "country": "US",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/116374/morris-municipal-airport",
-        "price_type": "Gratuit",
-        "product_title": "Morris Municipal Airport — MSFS 2024"
-      }
-    ]
-  },
-  {
-    "icao": "KMYF",
-    "name": "Montgomery–Gibbs Executive Airport",
-    "type": "aerodrome",
-    "lat": 32.8157,
-    "lon": -117.1396,
-    "country": "US",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/5856/montgomery-gibbs-exec-airport-taxiway-fix-and-many-more",
-        "price_type": "Gratuit",
-        "product_title": "Montgomery–Gibbs Executive Airport — MSFS 2020/2024"
-      }
-    ]
-  },
-  {
     "icao": "KONT",
     "name": "Ontario International Airport",
-    "type": "airport",
     "lat": 34.056,
-    "lon": -117.600998,
-    "country": "US",
+    "lon": -117.601,
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -1737,10 +1385,9 @@
   {
     "icao": "KORF",
     "name": "Norfolk International Airport",
-    "type": "airport",
-    "lat": 36.895341,
+    "lat": 36.89534,
     "lon": -76.201,
-    "country": "US",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -1751,28 +1398,11 @@
     ]
   },
   {
-    "icao": "KOSH",
-    "name": "Wittman Regional Airport — Oshkosh",
-    "type": "aerodrome",
-    "lat": 43.9844,
-    "lon": -88.5569,
-    "country": "US",
-    "shops": [
-      {
-        "store": "Flightsim.to Store",
-        "url": "https://flightsim.to/store/country/US",
-        "price_type": "Payant",
-        "product_title": "Wittman Regional Airport — Oshkosh — scène MSFS"
-      }
-    ]
-  },
-  {
     "icao": "KPIE",
     "name": "St. Petersburg Clearwater International Airport",
-    "type": "airport",
     "lat": 27.9102,
-    "lon": -82.687401,
-    "country": "US",
+    "lon": -82.6874,
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -1789,28 +1419,11 @@
     ]
   },
   {
-    "icao": "KRDM",
-    "name": "Roberts Field — Redmond, Oregon",
-    "type": "aerodrome",
-    "lat": 44.2541,
-    "lon": -121.15,
-    "country": "US",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/33017/krdm-roberts-field-redmond-municipal-airport",
-        "price_type": "Gratuit",
-        "product_title": "Roberts Field — Redmond, Oregon — MSFS 2024"
-      }
-    ]
-  },
-  {
     "icao": "KRNT",
     "name": "Renton Municipal Airport",
+    "lat": 47.4931,
+    "lon": -122.216,
     "type": "aerodrome",
-    "lat": 47.4930992126,
-    "lon": -122.216003418,
-    "country": "US",
     "shops": [
       {
         "store": "Contrail",
@@ -1829,10 +1442,9 @@
   {
     "icao": "KRSW",
     "name": "Southwest Florida International Airport",
+    "lat": 26.53468,
+    "lon": -81.75282,
     "type": "airport",
-    "lat": 26.534685,
-    "lon": -81.752816,
-    "country": "US",
     "shops": [
       {
         "store": "Contrail",
@@ -1849,44 +1461,11 @@
     ]
   },
   {
-    "icao": "KRTN",
-    "name": "Raton Municipal / Crews Field",
-    "type": "aerodrome",
-    "lat": 36.7424392,
-    "lon": -104.5017264,
-    "country": "US",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/116711/krtn-raton-municipal-airport-crews-field",
-        "price_type": "Gratuit",
-        "product_title": "Raton Municipal / Crews Field — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "KRVS",
-    "name": "Tulsa Riverside Airport",
-    "type": "aerodrome",
-    "lat": 36.0395842,
-    "lon": -95.9845947,
-    "country": "US",
-    "shops": [
-      {
-        "store": "Flightsim.to Store",
-        "url": "https://flightsim.to/store/product/krvs-tulsa-riverside-airport-msfs2024",
-        "price_type": "Payant",
-        "product_title": "Tulsa Riverside Airport — scène MSFS"
-      }
-    ]
-  },
-  {
     "icao": "KSBA",
     "name": "Santa Barbara Municipal Airport",
+    "lat": 34.4262,
+    "lon": -119.84,
     "type": "airport",
-    "lat": 34.426201,
-    "lon": -119.839996,
-    "country": "US",
     "shops": [
       {
         "store": "iniBuilds",
@@ -1897,28 +1476,11 @@
     ]
   },
   {
-    "icao": "KSEE",
-    "name": "Gillespie Field — San Diego",
-    "type": "aerodrome",
-    "lat": 32.8262,
-    "lon": -116.9724,
-    "country": "US",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/36679/gillespie-field-ksee",
-        "price_type": "Gratuit",
-        "product_title": "Gillespie Field — San Diego — MSFS 2020/2024"
-      }
-    ]
-  },
-  {
     "icao": "KSFB",
     "name": "Orlando Sanford International Airport",
+    "lat": 28.77428,
+    "lon": -81.23463,
     "type": "airport",
-    "lat": 28.774277,
-    "lon": -81.234626,
-    "country": "US",
     "shops": [
       {
         "store": "Contrail",
@@ -1935,28 +1497,11 @@
     ]
   },
   {
-    "icao": "KSME",
-    "name": "Lake Cumberland Regional — Somerset",
-    "type": "aerodrome",
-    "lat": 37.0535833,
-    "lon": -84.6156389,
-    "country": "US",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/117828/ksme-somerset-kentucky",
-        "price_type": "Gratuit",
-        "product_title": "Lake Cumberland Regional — Somerset — scène MSFS"
-      }
-    ]
-  },
-  {
     "icao": "KSRQ",
     "name": "Sarasota Bradenton International Airport",
+    "lat": 27.39463,
+    "lon": -82.55436,
     "type": "airport",
-    "lat": 27.394631,
-    "lon": -82.554359,
-    "country": "US",
     "shops": [
       {
         "store": "Contrail",
@@ -1975,10 +1520,9 @@
   {
     "icao": "KSYR",
     "name": "Syracuse Hancock International Airport",
+    "lat": 43.1112,
+    "lon": -76.1063,
     "type": "airport",
-    "lat": 43.11119842529297,
-    "lon": -76.1063003540039,
-    "country": "US",
     "shops": [
       {
         "store": "Contrail",
@@ -1997,10 +1541,9 @@
   {
     "icao": "KTNP",
     "name": "Twentynine Palms Airport",
+    "lat": 34.1339,
+    "lon": -115.94735,
     "type": "aerodrome",
-    "lat": 34.133901,
-    "lon": -115.947347,
-    "country": "US",
     "shops": [
       {
         "store": "Contrail",
@@ -2013,10 +1556,9 @@
   {
     "icao": "KTPF",
     "name": "Peter O Knight Airport",
+    "lat": 27.9156,
+    "lon": -82.4493,
     "type": "aerodrome",
-    "lat": 27.915599822998,
-    "lon": -82.44930267334,
-    "country": "US",
     "shops": [
       {
         "store": "Contrail",
@@ -2027,28 +1569,11 @@
     ]
   },
   {
-    "icao": "KVDI",
-    "name": "Vidalia Regional Airport",
-    "type": "aerodrome",
-    "lat": 32.1927222,
-    "lon": -82.3711667,
-    "country": "US",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/118138/kvdi-vidalia-regional-airport",
-        "price_type": "Gratuit",
-        "product_title": "Vidalia Regional Airport — scène MSFS"
-      }
-    ]
-  },
-  {
     "icao": "LBBG",
     "name": "Burgas Airport",
+    "lat": 42.56992,
+    "lon": 27.51517,
     "type": "airport",
-    "lat": 42.569917,
-    "lon": 27.515173,
-    "country": "BG",
     "shops": [
       {
         "store": "Contrail",
@@ -2067,10 +1592,9 @@
   {
     "icao": "LBWN",
     "name": "Varna Airport",
-    "type": "airport",
-    "lat": 43.232101,
+    "lat": 43.2321,
     "lon": 27.8251,
-    "country": "BG",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -2089,10 +1613,9 @@
   {
     "icao": "LEMH",
     "name": "Menorca Airport",
-    "type": "airport",
-    "lat": 39.862598,
+    "lat": 39.8626,
     "lon": 4.21865,
-    "country": "ES",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -2105,10 +1628,9 @@
   {
     "icao": "LEMY",
     "name": "Aeródromo de Royanejos",
+    "lat": 38.97992,
+    "lon": -6.34517,
     "type": "aerodrome",
-    "lat": 38.979917,
-    "lon": -6.345167,
-    "country": "ES",
     "shops": [
       {
         "store": "Contrail",
@@ -2119,332 +1641,11 @@
     ]
   },
   {
-    "icao": "LFAY",
-    "name": "Amiens — Glisy",
-    "type": "aerodrome",
-    "lat": 49.8731,
-    "lon": 2.38699,
-    "country": "FR",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://fr.flightsim.to/addon/7913/lfay-amiens-glisy-scenery-lights-improvements",
-        "price_type": "Gratuit",
-        "product_title": "Amiens — Glisy — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LFCV",
-    "name": "Villefranche-de-Rouergue",
-    "type": "aerodrome",
-    "lat": 44.36889,
-    "lon": 2.02694,
-    "country": "FR",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/file/13014/lfcv-villefranche-de-rouergue",
-        "price_type": "Gratuit",
-        "product_title": "Villefranche-de-Rouergue — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LFEA",
-    "name": "Belle-Île-en-Mer",
-    "type": "aerodrome",
-    "lat": 47.32611,
-    "lon": -3.19889,
-    "country": "FR",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/86557/lfea-belle-ile-en-mer",
-        "price_type": "Gratuit",
-        "product_title": "Belle-Île-en-Mer — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LFEQ",
-    "name": "Quiberon",
-    "type": "aerodrome",
-    "lat": 47.48139,
-    "lon": -3.10167,
-    "country": "FR",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/85562/lfeq-quiberon-2024",
-        "price_type": "Gratuit",
-        "product_title": "Quiberon — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LFER",
-    "name": "Redon — Bains-sur-Oust",
-    "type": "aerodrome",
-    "lat": 47.69861,
-    "lon": -2.03806,
-    "country": "FR",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/118025/lfer-redon-bains-sur-oust",
-        "price_type": "Gratuit",
-        "product_title": "Redon — Bains-sur-Oust — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LFFE",
-    "name": "Enghien — Moisselles",
-    "type": "aerodrome",
-    "lat": 49.04556,
-    "lon": 2.35194,
-    "country": "FR",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://fr.flightsim.to/addon/118163/lffe-enghien-moiselles",
-        "price_type": "Gratuit",
-        "product_title": "Enghien — Moisselles — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LFLG",
-    "name": "Grenoble — Le Versoud",
-    "type": "aerodrome",
-    "lat": 45.218199,
-    "lon": 5.848509,
-    "country": "FR",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/airports/country/FR/updated",
-        "price_type": "Gratuit",
-        "product_title": "Grenoble — Le Versoud — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LFLR",
-    "name": "Saint-Rambert-d’Albon",
-    "type": "aerodrome",
-    "lat": 45.253,
-    "lon": 4.8215,
-    "country": "FR",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/91437/lflr-saint-rambert-d-albon-tour-d-albon-msfs2024",
-        "price_type": "Gratuit",
-        "product_title": "Saint-Rambert-d’Albon — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LFMR",
-    "name": "Barcelonnette — Saint-Pons",
-    "type": "aerodrome",
-    "lat": 44.38667,
-    "lon": 6.60806,
-    "country": "FR",
-    "shops": [
-      {
-        "store": "Flightsim.to Store",
-        "url": "https://flightsim.to/store/product/lfmr-barcelonnette-msfs2024",
-        "price_type": "Payant",
-        "product_title": "Barcelonnette — Saint-Pons — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LFNA",
-    "name": "Gap — Tallard",
-    "type": "aerodrome",
-    "lat": 44.455,
-    "lon": 6.03722,
-    "country": "FR",
-    "shops": [
-      {
-        "store": "Flightsim.to Store",
-        "url": "https://flightsim.to/store/product/lfna-gap-tallard-msfs2024",
-        "price_type": "Payant",
-        "product_title": "Gap — Tallard — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LFNC",
-    "name": "Mont-Dauphin — Saint-Crépin",
-    "type": "aerodrome",
-    "lat": 44.70167,
-    "lon": 6.59972,
-    "country": "FR",
-    "shops": [
-      {
-        "store": "Flightsim.to Store",
-        "url": "https://flightsim.to/store/product/lfnc-mont-dauphin-st-crepin-msfs2024",
-        "price_type": "Payant",
-        "product_title": "Mont-Dauphin — Saint-Crépin — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LFNE",
-    "name": "Salon — Eyguières",
-    "type": "aerodrome",
-    "lat": 43.657501,
-    "lon": 5.013634,
-    "country": "FR",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/26621/lfne-salon-eyguires-airport-arodrome-de-salon-eyguires-provence-france-upgrade/null",
-        "price_type": "Gratuit",
-        "product_title": "Salon — Eyguières — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LFNS",
-    "name": "Sisteron — Vaumeilh",
-    "type": "aerodrome",
-    "lat": 44.28667,
-    "lon": 5.92917,
-    "country": "FR",
-    "shops": [
-      {
-        "store": "Flightsim.to Store",
-        "url": "https://flightsim.to/store/product/lfns-sisteron-vaumeilh-msfs2024",
-        "price_type": "Payant",
-        "product_title": "Sisteron — Vaumeilh — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LFOU",
-    "name": "Cholet — Le Pontreau",
-    "type": "aerodrome",
-    "lat": 47.08191,
-    "lon": -0.87722,
-    "country": "FR",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/27971/lfou-cholet-le-pontreau",
-        "price_type": "Gratuit",
-        "product_title": "Cholet — Le Pontreau — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LFOZ",
-    "name": "Orléans — Saint-Denis-de-l’Hôtel",
-    "type": "aerodrome",
-    "lat": 47.89762,
-    "lon": 2.16421,
-    "country": "FR",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/88223/lfoz-orleans-loire-valley",
-        "price_type": "Gratuit",
-        "product_title": "Orléans — Saint-Denis-de-l’Hôtel — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LFQA",
-    "name": "Reims — Prunay",
-    "type": "aerodrome",
-    "lat": 49.20861,
-    "lon": 4.15667,
-    "country": "FR",
-    "shops": [
-      {
-        "store": "Flightsim.to Store",
-        "url": "https://flightsim.to/store/product/lfqa-aerodrome-of-reism-prunay-airport",
-        "price_type": "Payant",
-        "product_title": "Reims — Prunay — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LFQL",
-    "name": "Lens — Bénifontaine",
-    "type": "aerodrome",
-    "lat": 50.46603,
-    "lon": 2.81886,
-    "country": "FR",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/16308/lfql-lens-benifontaine",
-        "price_type": "Gratuit",
-        "product_title": "Lens — Bénifontaine — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LFRF",
-    "name": "Granville — Mont-Saint-Michel",
-    "type": "aerodrome",
-    "lat": 48.88287,
-    "lon": -1.56383,
-    "country": "FR",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://fr.flightsim.to/addon/90315/lfrf-granville",
-        "price_type": "Gratuit",
-        "product_title": "Granville — Mont-Saint-Michel — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LFRI",
-    "name": "La Roche-sur-Yon — Les Ajoncs",
-    "type": "aerodrome",
-    "lat": 46.70238,
-    "lon": -1.38176,
-    "country": "FR",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://fr.flightsim.to/addon/66943/lfri-la-roche-sur-yon",
-        "price_type": "Gratuit",
-        "product_title": "La Roche-sur-Yon — Les Ajoncs — scène MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LFRV",
-    "name": "Vannes — Meucon",
-    "type": "aerodrome",
-    "lat": 47.71924,
-    "lon": -2.72338,
-    "country": "FR",
-    "shops": [
-      {
-        "store": "Flightsim.to — auteur MaxGG60",
-        "url": "https://flightsim.to/profile/MaxGG60",
-        "price_type": "Gratuit",
-        "product_title": "LFRV Vannes Golfe du Morbihan — rechercher dans les scènes de MaxGG60"
-      }
-    ]
-  },
-  {
     "icao": "LGKO",
     "name": "Kos International Airport \"Ippokratis\"",
-    "type": "airport",
-    "lat": 36.794523,
+    "lat": 36.79452,
     "lon": 27.09115,
-    "country": "GR",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -2463,10 +1664,9 @@
   {
     "icao": "LGKR",
     "name": "Corfu Ioannis Kapodistrias International Airport",
-    "type": "airport",
     "lat": 39.60145,
-    "lon": 19.912179,
-    "country": "GR",
+    "lon": 19.91218,
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -2485,10 +1685,9 @@
   {
     "icao": "LGKV",
     "name": "Kavala Alexander the Great International Airport",
-    "type": "airport",
     "lat": 40.9133,
     "lon": 24.6192,
-    "country": "GR",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -2507,10 +1706,9 @@
   {
     "icao": "LGKY",
     "name": "Kalymnos Airport",
+    "lat": 36.9633,
+    "lon": 26.9406,
     "type": "aerodrome",
-    "lat": 36.9632987976,
-    "lon": 26.9405994415,
-    "country": "GR",
     "shops": [
       {
         "store": "Contrail",
@@ -2529,10 +1727,9 @@
   {
     "icao": "LGSA",
     "name": "Chania International Airport",
+    "lat": 35.53121,
+    "lon": 24.15067,
     "type": "airport",
-    "lat": 35.531207,
-    "lon": 24.150673,
-    "country": "GR",
     "shops": [
       {
         "store": "Contrail",
@@ -2551,10 +1748,9 @@
   {
     "icao": "LGZA",
     "name": "Zakynthos International Airport \"Dionysios Solomos\"",
-    "type": "airport",
     "lat": 37.7509,
     "lon": 20.8843,
-    "country": "GR",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -2573,10 +1769,9 @@
   {
     "icao": "LIME",
     "name": "Il Caravaggio International Airport",
+    "lat": 45.66936,
+    "lon": 9.70885,
     "type": "airport",
-    "lat": 45.669362,
-    "lon": 9.708851,
-    "country": "IT",
     "shops": [
       {
         "store": "Contrail",
@@ -2595,10 +1790,9 @@
   {
     "icao": "LIPV",
     "name": "Venice-Lido Giovanni Nicelli Airfield",
+    "lat": 45.42878,
+    "lon": 12.38873,
     "type": "aerodrome",
-    "lat": 45.428779,
-    "lon": 12.388733,
-    "country": "IT",
     "shops": [
       {
         "store": "Contrail",
@@ -2617,10 +1811,9 @@
   {
     "icao": "LIRQ",
     "name": "Florence Airport, Peretola",
+    "lat": 43.80856,
+    "lon": 11.20282,
     "type": "airport",
-    "lat": 43.808558,
-    "lon": 11.202822,
-    "country": "IT",
     "shops": [
       {
         "store": "Contrail",
@@ -2639,10 +1832,9 @@
   {
     "icao": "LJBO",
     "name": "Bovec Airfield",
+    "lat": 46.32902,
+    "lon": 13.55023,
     "type": "aerodrome",
-    "lat": 46.329017,
-    "lon": 13.550231,
-    "country": "SI",
     "shops": [
       {
         "store": "Contrail",
@@ -2661,10 +1853,9 @@
   {
     "icao": "LOIJ",
     "name": "Sankt Johann Airfield",
-    "type": "aerodrome",
     "lat": 47.5201,
     "lon": 12.4497,
-    "country": "AT",
+    "type": "aerodrome",
     "shops": [
       {
         "store": "Contrail",
@@ -2683,10 +1874,9 @@
   {
     "icao": "LOWZ",
     "name": "Zell am See Airfield",
+    "lat": 47.29147,
+    "lon": 12.79063,
     "type": "aerodrome",
-    "lat": 47.291468,
-    "lon": 12.790632,
-    "country": "AT",
     "shops": [
       {
         "store": "Contrail",
@@ -2705,10 +1895,9 @@
   {
     "icao": "LRIA",
     "name": "Iaşi International Airport",
+    "lat": 47.17963,
+    "lon": 27.62143,
     "type": "airport",
-    "lat": 47.179633,
-    "lon": 27.621431,
-    "country": "RO",
     "shops": [
       {
         "store": "Contrail",
@@ -2727,10 +1916,9 @@
   {
     "icao": "LRTR",
     "name": "Timișoara Traian Vuia International Airport",
-    "type": "airport",
-    "lat": 45.809898,
+    "lat": 45.8099,
     "lon": 21.3379,
-    "country": "RO",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -2749,10 +1937,9 @@
   {
     "icao": "LSPV",
     "name": "Wangen-Lachen Airfield",
+    "lat": 47.20484,
+    "lon": 8.86735,
     "type": "aerodrome",
-    "lat": 47.204835,
-    "lon": 8.867346,
-    "country": "CH",
     "shops": [
       {
         "store": "Contrail",
@@ -2771,10 +1958,9 @@
   {
     "icao": "LSTS",
     "name": "Sankt Stephan Airfield",
-    "type": "aerodrome",
-    "lat": 46.497398,
+    "lat": 46.4974,
     "lon": 7.41257,
-    "country": "CH",
+    "type": "aerodrome",
     "shops": [
       {
         "store": "Contrail",
@@ -2793,10 +1979,9 @@
   {
     "icao": "LSZE",
     "name": "Bad Ragaz Airfield",
+    "lat": 47.0149,
+    "lon": 9.48181,
     "type": "aerodrome",
-    "lat": 47.014904,
-    "lon": 9.481815,
-    "country": "CH",
     "shops": [
       {
         "store": "Contrail",
@@ -2815,10 +2000,9 @@
   {
     "icao": "LSZM",
     "name": "Mollis Airfield",
+    "lat": 47.07835,
+    "lon": 9.06466,
     "type": "aerodrome",
-    "lat": 47.078353,
-    "lon": 9.064662,
-    "country": "CH",
     "shops": [
       {
         "store": "Contrail",
@@ -2837,10 +2021,9 @@
   {
     "icao": "LSZP",
     "name": "Biel-Kappelen Airfield",
+    "lat": 47.08824,
+    "lon": 7.28906,
     "type": "aerodrome",
-    "lat": 47.088242,
-    "lon": 7.289055,
-    "country": "CH",
     "shops": [
       {
         "store": "Contrail",
@@ -2859,10 +2042,9 @@
   {
     "icao": "LSZT",
     "name": "Lommis Airfield",
-    "type": "aerodrome",
-    "lat": 47.524399,
+    "lat": 47.5244,
     "lon": 9.00306,
-    "country": "CH",
+    "type": "aerodrome",
     "shops": [
       {
         "store": "Contrail",
@@ -2881,10 +2063,9 @@
   {
     "icao": "LSZX",
     "name": "Schänis Airfield",
-    "type": "aerodrome",
     "lat": 47.1717,
     "lon": 9.03944,
-    "country": "CH",
+    "type": "aerodrome",
     "shops": [
       {
         "store": "Contrail",
@@ -2903,10 +2084,9 @@
   {
     "icao": "LTAC",
     "name": "Esenboğa International Airport",
+    "lat": 40.1281,
+    "lon": 32.9951,
     "type": "airport",
-    "lat": 40.128101,
-    "lon": 32.995098,
-    "country": "TR",
     "shops": [
       {
         "store": "Contrail",
@@ -2919,10 +2099,9 @@
   {
     "icao": "LTAF",
     "name": "Adana Şakirpaşa Airport",
+    "lat": 36.9822,
+    "lon": 35.2804,
     "type": "aerodrome",
-    "lat": 36.982201,
-    "lon": 35.280399,
-    "country": "TR",
     "shops": [
       {
         "store": "Contrail",
@@ -2935,10 +2114,9 @@
   {
     "icao": "LTBJ",
     "name": "Adnan Menderes International Airport",
-    "type": "airport",
     "lat": 38.2924,
     "lon": 27.157,
-    "country": "TR",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -2957,10 +2135,9 @@
   {
     "icao": "LTBS",
     "name": "Dalaman International Airport",
-    "type": "airport",
     "lat": 36.7131,
     "lon": 28.7925,
-    "country": "TR",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -2979,10 +2156,9 @@
   {
     "icao": "LWOH",
     "name": "Ohrid St. Paul the Apostle Airport",
-    "type": "airport",
     "lat": 41.18,
     "lon": 20.7423,
-    "country": "MK",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -3001,10 +2177,9 @@
   {
     "icao": "LWSK",
     "name": "Skopje International Airport",
+    "lat": 41.95809,
+    "lon": 21.62258,
     "type": "airport",
-    "lat": 41.958087,
-    "lon": 21.622581,
-    "country": "MK",
     "shops": [
       {
         "store": "Contrail",
@@ -3017,10 +2192,9 @@
   {
     "icao": "LZIB",
     "name": "M. R. Štefánik Airport",
-    "type": "airport",
     "lat": 48.1702,
     "lon": 17.2127,
-    "country": "SK",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -3039,10 +2213,9 @@
   {
     "icao": "MMOX",
     "name": "Xoxocotlán International Airport",
+    "lat": 16.99877,
+    "lon": -96.72609,
     "type": "airport",
-    "lat": 16.998773,
-    "lon": -96.726092,
-    "country": "MX",
     "shops": [
       {
         "store": "Contrail",
@@ -3055,10 +2228,9 @@
   {
     "icao": "MMUN",
     "name": "Cancún International Airport",
-    "type": "airport",
-    "lat": 21.040817,
+    "lat": 21.04082,
     "lon": -86.87347,
-    "country": "MX",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -3077,10 +2249,9 @@
   {
     "icao": "MNCI",
     "name": "Corn Island Airport",
+    "lat": 12.17478,
+    "lon": -83.05944,
     "type": "aerodrome",
-    "lat": 12.174785,
-    "lon": -83.059445,
-    "country": "NI",
     "shops": [
       {
         "store": "iniBuilds",
@@ -3093,10 +2264,9 @@
   {
     "icao": "MPSM",
     "name": "Scarlett Martinez International Airport",
+    "lat": 8.37588,
+    "lon": -80.1279,
     "type": "aerodrome",
-    "lat": 8.375880241394,
-    "lon": -80.127899169922,
-    "country": "PA",
     "shops": [
       {
         "store": "iniBuilds",
@@ -3107,29 +2277,11 @@
     ]
   },
   {
-    "icao": "MT03",
-    "name": "Lakeside Airport — Montana",
-    "type": "aerodrome",
-    "lat": 47.9934083,
-    "lon": -114.2243056,
-    "country": "US",
-    "comment": "Terrain privé; autorisation requise en réalité; approche à sens unique",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/116270/mt03-lakeside",
-        "price_type": "Gratuit",
-        "product_title": "Lakeside Airport — Montana — scène MSFS"
-      }
-    ]
-  },
-  {
     "icao": "MWCR",
     "name": "Owen Roberts International Airport",
+    "lat": 19.2928,
+    "lon": -81.3577,
     "type": "airport",
-    "lat": 19.292801,
-    "lon": -81.357697,
-    "country": "KY",
     "shops": [
       {
         "store": "Contrail",
@@ -3148,10 +2300,9 @@
   {
     "icao": "NZWN",
     "name": "Wellington International Airport",
+    "lat": -41.32684,
+    "lon": 174.80686,
     "type": "airport",
-    "lat": -41.326839,
-    "lon": 174.806862,
-    "country": "NZ",
     "shops": [
       {
         "store": "Contrail",
@@ -3164,10 +2315,9 @@
   {
     "icao": "OIAW",
     "name": "Qasem Soleimani International Airport",
-    "type": "airport",
     "lat": 31.3364,
-    "lon": 48.763789,
-    "country": "IR",
+    "lon": 48.76379,
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -3180,10 +2330,9 @@
   {
     "icao": "OPSD",
     "name": "Skardu International Airport",
-    "type": "airport",
     "lat": 35.33866,
-    "lon": 75.538648,
-    "country": "PK",
+    "lon": 75.53865,
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -3202,10 +2351,9 @@
   {
     "icao": "PACK",
     "name": "Chefornak Airport",
+    "lat": 60.13667,
+    "lon": -164.27917,
     "type": "aerodrome",
-    "lat": 60.136667,
-    "lon": -164.279167,
-    "country": "US",
     "shops": [
       {
         "store": "iniBuilds",
@@ -3224,10 +2372,9 @@
   {
     "icao": "PASO",
     "name": "Seldovia Airport",
+    "lat": 59.44298,
+    "lon": -151.70523,
     "type": "aerodrome",
-    "lat": 59.442981,
-    "lon": -151.705227,
-    "country": "US",
     "shops": [
       {
         "store": "iniBuilds",
@@ -3240,10 +2387,9 @@
   {
     "icao": "PHDH",
     "name": "Kawaihapai Airfield",
-    "type": "aerodrome",
     "lat": 21.5795,
-    "lon": -158.197006,
-    "country": "US",
+    "lon": -158.19701,
+    "type": "aerodrome",
     "shops": [
       {
         "store": "Contrail",
@@ -3262,10 +2408,9 @@
   {
     "icao": "PHLI",
     "name": "Lihue Airport",
+    "lat": 21.97439,
+    "lon": -159.33715,
     "type": "airport",
-    "lat": 21.974393,
-    "lon": -159.337146,
-    "country": "US",
     "shops": [
       {
         "store": "Contrail",
@@ -3284,10 +2429,9 @@
   {
     "icao": "PHLU",
     "name": "Kalaupapa Airport",
-    "type": "aerodrome",
     "lat": 21.211,
-    "lon": -156.973999,
-    "country": "US",
+    "lon": -156.974,
+    "type": "aerodrome",
     "shops": [
       {
         "store": "iniBuilds",
@@ -3306,10 +2450,9 @@
   {
     "icao": "PHOG",
     "name": "Kahului International Airport",
+    "lat": 20.89626,
+    "lon": -156.43184,
     "type": "airport",
-    "lat": 20.896263,
-    "lon": -156.431837,
-    "country": "US",
     "shops": [
       {
         "store": "Contrail",
@@ -3328,10 +2471,9 @@
   {
     "icao": "RCKH",
     "name": "Kaohsiung International Airport",
+    "lat": 22.5771,
+    "lon": 120.35,
     "type": "airport",
-    "lat": 22.577101,
-    "lon": 120.349998,
-    "country": "TW",
     "shops": [
       {
         "store": "Contrail",
@@ -3350,10 +2492,9 @@
   {
     "icao": "RCSS",
     "name": "Taipei Songshan International Airport",
+    "lat": 25.06724,
+    "lon": 121.55282,
     "type": "airport",
-    "lat": 25.067244,
-    "lon": 121.552822,
-    "country": "TW",
     "shops": [
       {
         "store": "Contrail",
@@ -3372,10 +2513,9 @@
   {
     "icao": "RPSP",
     "name": "Bohol-Panglao International Airport",
+    "lat": 9.57305,
+    "lon": 123.77014,
     "type": "airport",
-    "lat": 9.573045,
-    "lon": 123.770143,
-    "country": "PH",
     "shops": [
       {
         "store": "Contrail",
@@ -3394,10 +2534,9 @@
   {
     "icao": "SIMS",
     "name": "Fazenda Califórnia Airstrip",
+    "lat": -19.09496,
+    "lon": -54.18498,
     "type": "aerodrome",
-    "lat": -19.094958,
-    "lon": -54.184984,
-    "country": "BR",
     "shops": [
       {
         "store": "iniBuilds",
@@ -3416,10 +2555,9 @@
   {
     "icao": "SKAR",
     "name": "El Eden Airport",
-    "type": "airport",
     "lat": 4.45278,
     "lon": -75.7664,
-    "country": "CO",
+    "type": "airport",
     "shops": [
       {
         "store": "Contrail",
@@ -3438,10 +2576,9 @@
   {
     "icao": "TFFA",
     "name": "La Désirade Airport",
-    "type": "aerodrome",
-    "lat": 16.296902,
+    "lat": 16.2969,
     "lon": -61.0844,
-    "country": "GP",
+    "type": "aerodrome",
     "shops": [
       {
         "store": "Contrail",
@@ -3458,92 +2595,11 @@
     ]
   },
   {
-    "icao": "UAAA",
-    "name": "Almaty International Airport",
-    "type": "airport",
-    "lat": 43.35528,
-    "lon": 77.04472,
-    "country": "KZ",
-    "shops": [
-      {
-        "store": "SimMarket",
-        "url": "https://secure.simmarket.com/middle-asia-developers-almaty-international-airport-%28uaaa%29.phtml",
-        "price_type": "Payant",
-        "product_title": "Almaty International Airport — MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "UACC",
-    "name": "Astana — Nursultan Nazarbayev International Airport",
-    "type": "airport",
-    "lat": 51.027035,
-    "lon": 71.467094,
-    "country": "KZ",
-    "shops": [
-      {
-        "store": "SimMarket",
-        "url": "https://secure.simmarket.com/middle-asia-developers-astana-international-airport-%28uacc%29.phtml",
-        "price_type": "Payant",
-        "product_title": "Astana — Nursultan Nazarbayev International Airport — MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "UAIT",
-    "name": "Turkistan — Hazrat Sultan International Airport",
-    "type": "airport",
-    "lat": 43.31111,
-    "lon": 68.55028,
-    "country": "KZ",
-    "shops": [
-      {
-        "store": "SimMarket",
-        "url": "https://secure.simmarket.com/ac-scenery-uait-turkistan-airport-msfs2420.phtml",
-        "price_type": "Payant",
-        "product_title": "Turkistan — Hazrat Sultan International Airport — MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "UASK",
-    "name": "Öskemen — Ust-Kamenogorsk Airport",
-    "type": "airport",
-    "lat": 50.035033,
-    "lon": 82.496057,
-    "country": "KZ",
-    "shops": [
-      {
-        "store": "SimMarket",
-        "url": "https://secure.simmarket.com/middle-asia-developers-airport-ust-kamenogorsk-%28uask%29-msfs20msfs24.phtml",
-        "price_type": "Payant",
-        "product_title": "Öskemen — Ust-Kamenogorsk Airport — MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "UATE",
-    "name": "Aktau International Airport",
-    "type": "airport",
-    "lat": 43.86,
-    "lon": 51.09194,
-    "country": "KZ",
-    "shops": [
-      {
-        "store": "SimMarket",
-        "url": "https://secure.simmarket.com/middle-asia-developers-aktau-international-airport-%28uate%29.phtml",
-        "price_type": "Payant",
-        "product_title": "Aktau International Airport — MSFS"
-      }
-    ]
-  },
-  {
     "icao": "UBBF",
     "name": "Fuzuli International Airport",
+    "lat": 39.59458,
+    "lon": 47.19613,
     "type": "aerodrome",
-    "lat": 39.594578,
-    "lon": 47.196128,
-    "country": "AZ",
     "shops": [
       {
         "store": "iniBuilds",
@@ -3554,82 +2610,11 @@
     ]
   },
   {
-    "icao": "UEEE",
-    "name": "Iakoutsk — Yakutsk International Airport",
-    "type": "airport",
-    "lat": 62.0933,
-    "lon": 129.771,
-    "country": "RU",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/24752/yakutsk-international-airport-ueee",
-        "price_type": "Gratuit",
-        "product_title": "Iakoutsk — Yakutsk International Airport — MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "UEMM",
-    "name": "Magan Airport — Iakoutie",
-    "type": "aerodrome",
-    "lat": 62.1035,
-    "lon": 129.5453,
-    "country": "RU",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/27327/magan-airport-ueee",
-        "price_type": "Gratuit",
-        "product_title": "Magan Airport — Iakoutie — MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "UNNT",
-    "name": "Novossibirsk — Tolmachevo Airport",
-    "type": "airport",
-    "lat": 55.0126,
-    "lon": 82.6507,
-    "country": "RU",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/4741/unnt-tolmachevo-novosibirsk",
-        "price_type": "Gratuit",
-        "product_title": "Novossibirsk — Tolmachevo Airport — MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "VRMM",
-    "name": "Velana International Airport — Malé",
-    "type": "airport",
-    "lat": 4.192936,
-    "lon": 73.529025,
-    "country": "MV",
-    "shops": [
-      {
-        "store": "SimMarket · FSDG",
-        "url": "https://secure.simmarket.com/fsdg-maldives-velana-international-airport-msfs.phtml",
-        "price_type": "Payant",
-        "product_title": "FSDG Maldives Velana International Airport MSFS 2024/2020"
-      },
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/96568/vrmm",
-        "price_type": "Gratuit",
-        "product_title": "VRMM Velana International Airport Maldives"
-      }
-    ]
-  },
-  {
     "icao": "WAFO",
     "name": "Maleo Airport",
+    "lat": -2.20114,
+    "lon": 121.66288,
     "type": "aerodrome",
-    "lat": -2.201143,
-    "lon": 121.662884,
-    "country": "ID",
     "shops": [
       {
         "store": "iniBuilds",
@@ -3642,10 +2627,9 @@
   {
     "icao": "WATO",
     "name": "Komodo Airport",
+    "lat": -8.48069,
+    "lon": 119.88831,
     "type": "aerodrome",
-    "lat": -8.480694,
-    "lon": 119.888306,
-    "country": "ID",
     "shops": [
       {
         "store": "Contrail",
@@ -3658,10 +2642,9 @@
   {
     "icao": "WMPA",
     "name": "Pulau Pangkor Airport",
+    "lat": 4.24472,
+    "lon": 100.553,
     "type": "aerodrome",
-    "lat": 4.244719982147217,
-    "lon": 100.5530014038086,
-    "country": "MY",
     "shops": [
       {
         "store": "iniBuilds",
@@ -3674,10 +2657,9 @@
   {
     "icao": "WREN",
     "name": "Bomela Airport",
+    "lat": -4.69363,
+    "lon": 139.91271,
     "type": "aerodrome",
-    "lat": -4.693634,
-    "lon": 139.912707,
-    "country": "ID",
     "shops": [
       {
         "store": "iniBuilds",
@@ -3696,10 +2678,9 @@
   {
     "icao": "YBDG",
     "name": "Bendigo Airport",
+    "lat": -36.7394,
+    "lon": 144.33,
     "type": "aerodrome",
-    "lat": -36.739399,
-    "lon": 144.330002,
-    "country": "AU",
     "shops": [
       {
         "store": "iniBuilds",
@@ -3712,10 +2693,9 @@
   {
     "icao": "YCDR",
     "name": "Caloundra Airport",
-    "type": "aerodrome",
     "lat": -26.80336,
-    "lon": 153.104975,
-    "country": "AU",
+    "lon": 153.10497,
+    "type": "aerodrome",
     "shops": [
       {
         "store": "Contrail",
@@ -3728,10 +2708,9 @@
   {
     "icao": "YLHI",
     "name": "Lord Howe Island Airport",
-    "type": "aerodrome",
-    "lat": -31.538204,
+    "lat": -31.5382,
     "lon": 159.07546,
-    "country": "AU",
+    "type": "aerodrome",
     "shops": [
       {
         "store": "Contrail",
@@ -3750,10 +2729,9 @@
   {
     "icao": "YOLW",
     "name": "Onslow Airport",
+    "lat": -21.67016,
+    "lon": 115.1149,
     "type": "aerodrome",
-    "lat": -21.670161,
-    "lon": 115.114902,
-    "country": "AU",
     "shops": [
       {
         "store": "iniBuilds",
@@ -3766,10 +2744,9 @@
   {
     "icao": "YPPF",
     "name": "Adelaide Parafield Airport",
+    "lat": -34.7933,
+    "lon": 138.633,
     "type": "aerodrome",
-    "lat": -34.793300628699996,
-    "lon": 138.632995605,
-    "country": "AU",
     "shops": [
       {
         "store": "Contrail",
@@ -3788,10 +2765,9 @@
   {
     "icao": "YSPT",
     "name": "Southport Airport",
+    "lat": -27.92185,
+    "lon": 153.37147,
     "type": "aerodrome",
-    "lat": -27.921848,
-    "lon": 153.371469,
-    "country": "AU",
     "shops": [
       {
         "store": "Contrail",
@@ -3804,22 +2780,6 @@
         "url": "https://inibuilds.com/products/auscene-southport-gold-coast-yspt-msfs",
         "price_type": "Payant",
         "product_title": "AUscene Southport Gold Coast (YSPT) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "ZMCK",
-    "name": "Oulan-Bator — Chinggis Khaan International Airport",
-    "type": "airport",
-    "lat": 47.646916,
-    "lon": 106.819833,
-    "country": "MN",
-    "shops": [
-      {
-        "store": "Flightsim.to",
-        "url": "https://flightsim.to/addon/114241/zmck-new-ulaanbaatar-chinggis-khaan-int-l-airport-free-version",
-        "price_type": "Gratuit",
-        "product_title": "Oulan-Bator — Chinggis Khaan International Airport — MSFS"
       }
     ]
   }

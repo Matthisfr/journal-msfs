@@ -610,6 +610,36 @@
     "criteria": []
   },
   {
+    "code": "VRMM",
+    "name": "VRMM Maldives Velana Intl Airport",
+    "scenes": [
+      {
+        "publisher": "FSDG",
+        "installed": "1.1.0",
+        "url": "https://secure.simmarket.com/fsdg-maldives-vrmm-mal-atolls-bundle-msfs.phtml",
+        "image": "https://secure.simmarket.com/images/products/a/ab/19271/simmarket_PI_BigPack1.jpg",
+        "image_checked": true,
+        "comparison": "update",
+        "server_version": "1.2",
+        "version_state": "Mise à jour disponible"
+      },
+      {
+        "publisher": "VueloSimple",
+        "installed": "1.2.0",
+        "url": "https://contrail.shop/products/vrmm-velana-airport-maldives-msfs",
+        "image": "https://contrail.shop/cdn/shop/files/thumb_df6eb55b-8ce3-4070-9836-5e849e3c5c61_1200x1200.jpg?v=1698934600",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.2.0",
+        "version_state": "À jour"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
     "code": "WSSS",
     "name": "WSSS Singapore",
     "scenes": [
