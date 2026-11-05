@@ -81,10 +81,8 @@ def fetch_catalog():
             desc=re.sub(r"<[^>]+>"," ",str(item.get("body_html") or ""))
             tags=item.get("tags") or []
             if isinstance(tags,list):tags=" ".join(map(str,tags))
-            corpus=" ".join([title,handle,str(item.get("product_type") or ""),str(tags),desc[:300]])
-            if EXCLUDE.search(title+" "+handle):continue
-            # S3 est un fabricant Airbus : conserver les composants même sans A320 dans le titre.
-            if not AIRBUS.search(corpus) and not re.search(r"panel|switch|button|knob|rotary|encoder|light|dimmer|mount|board|kit|gauge|module|cockpit|display|screen|throttle|quadrant|lever|handle|printable|download",corpus,re.I):continue
+            # Inventaire intégral de la boutique S3 : ne pas éliminer les pièces
+            # dont le titre n'indique ni A320 ni une catégorie connue.
             if not handle:continue
             url=urljoin(SITE,"products/"+handle)
             images=item.get("images") or []
