@@ -70,6 +70,12 @@ jobs:
             return 0
           }
           if [[ "$TRIGGER" == "push" ]]; then
+            if git log -1 --format=%s | grep -Fq "[collect-total]"; then
+              echo "run=true" >> "$GITHUB_OUTPUT"
+              echo "collect=true" >> "$GITHUB_OUTPUT"
+              echo "Collecte totale explicitement demandée par commit"
+              exit 0
+            fi
             last_airports_commit=$(git log -1 --format=%H -- public/airports.json)
             if [[ -n "$last_airports_commit" ]] && [[ $(git rev-list --count "$last_airports_commit"..HEAD -- data/airports/) -gt 0 ]]; then
               echo "run=true" >> "$GITHUB_OUTPUT"
