@@ -235,7 +235,11 @@ jobs:
         if: steps.gate.outputs.collect == 'true'
         run: python scripts/winctrl_airbus.py
 
-      - name: Surveiller RTRhobby — matériel Airbus\n        if: steps.gate.outputs.collect == 'true'\n        run: python scripts/rtrhobby_airbus.py\n\n      - name: Récupérer le dernier plan de vol SimBrief Matthis
+      - name: Surveiller RTRhobby — matériel Airbus
+        if: steps.gate.outputs.collect == 'true'
+        run: python scripts/rtrhobby_airbus.py
+
+      - name: Récupérer le dernier plan de vol SimBrief Matthis
         if: steps.gate.outputs.collect == 'true'
         run: python scripts/fetch_simbrief.py
 
