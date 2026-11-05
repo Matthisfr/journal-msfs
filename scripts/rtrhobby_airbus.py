@@ -28,9 +28,9 @@ def main():
             title=p.get("title","")
             if EXCLUDE.search(title) or not INCLUDE.search(title):continue
             variants=p.get("variants") or []
-            cents=[int(v["price"]) for v in variants if str(v.get("price","")).isdigit()]
+            prices=[]\n            for v in variants:\n                try:prices.append(float(v["price"]))\n                except (KeyError,TypeError,ValueError):pass
             image=p.get("images") or []
-            rows.append({"id":str(p.get("id","")),"title":title,"url":"https://rtrhobby.com/products/"+str(p.get("handle","")),"updated_at":p.get("updated_at",""),"published_at":p.get("published_at",""),"available":any(v.get("available",False) for v in variants),"price_usd":min(cents)/100 if cents else None,"image_url":image[0].get("src","") if image else ""})
+            rows.append({"id":str(p.get("id","")),"title":title,"url":"https://rtrhobby.com/products/"+str(p.get("handle","")),"updated_at":p.get("updated_at",""),"published_at":p.get("published_at",""),"available":any(v.get("available",False) for v in variants),"price_usd":min(prices) if prices else None,"image_url":image[0].get("src","") if image else ""})
         if not rows:raise ValueError("Catalogue vide ou filtre trop restrictif")
         previous_rows={p["id"]:p for p in previous.get("products",[])}
         changes=[p for p in rows if p["id"] not in previous_rows or any(p.get(k)!=previous_rows[p["id"]].get(k) for k in ("price_usd","available","updated_at"))]
