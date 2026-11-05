@@ -51,6 +51,37 @@ def main():
             skipped.append(code+" (aucun lien produit)")
             continue
         result.append({"icao":code,"name":str(item.get("name") or (position[2] if len(position)>2 else code))[:100],"lat":float(lat),"lon":float(lon),"type":str(item.get("type") or "airport"),"shops":shops})
+    # Préserver les propositions ajoutées manuellement entre deux collectes.
+    # Le catalogue initial ne doit jamais effacer les ajouts éditoriaux validés.
+    if OUTPUT.exists():
+        try:
+            existing=json.loads(OUTPUT.read_text(encoding="utf-8"))
+        except (ValueError,OSError):
+            existing=[]
+        retained={x["icao"] for x in result}
+        for item in existing:
+            code=str(item.get("icao") or "").strip().upper()
+            if not re.fullmatch(r"(?:[A-Z]{4}|[A-Z0-9]{3,5})",code):
+                continue
+            if code in retained or code in owned_codes:
+                continue
+            lat,lon=item.get("lat"),item.get("lon")
+            try:
+                if not (-90<=float(lat)<=90 and -180<=float(lon)<=180):
+                    continue
+            except (TypeError,ValueError):
+                continue
+            shops=[]
+            for shop in item.get("shops",[])[:2]:
+                url=str(shop.get("url") or "")
+                parsed=urlparse(url)
+                if parsed.scheme=="https" and parsed.hostname and not parsed.username and not parsed.password:
+                    shops.append(shop)
+            if shops:
+                item["icao"]=code
+                item["shops"]=shops
+                result.append(item)
+                retained.add(code)
     result.sort(key=lambda x:x["icao"])
     # Une liste vide est légitime lorsque tous les aéroports du catalogue sont achetés.
     OUTPUT.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
