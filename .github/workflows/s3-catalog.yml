@@ -1,0 +1,37 @@
+name: S3 - actualiser le catalogue complet
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 5 * * *'
+permissions:
+  contents: write
+jobs:
+  collect-s3:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Collecter toutes les fiches S3
+        run: python scripts/s3_airbus.py
+      - name: Vérifier le catalogue avant publication
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("public/s3_airbus.json").read_text())
+          count=len(d.get("products",[]))
+          print("Produits S3 :",count,"; état :",d.get("source_state"))
+          if d.get("source_state")!="ok" or count<=14:
+              raise SystemExit("Collecte S3 incomplète : conserver l'ancien fichier et signaler l'échec.")
+          PY
+      - name: Enregistrer les produits vérifiés
+        run: |
+          git config user.name "journal-msfs-bot"
+          git config user.email "journal-msfs-bot@users.noreply.github.com"
+          git add public/s3_airbus.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Journal: catalogue S3 complet"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
