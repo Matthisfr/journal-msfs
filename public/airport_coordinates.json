@@ -2686,5 +2686,109 @@
     "source": "OurAirports / airport-codes",
     "country_code": "CA",
     "aircraft_marker": "airliner"
+  },
+  "KFLL": {
+    "lat": 26.072599,
+    "lon": -80.152702,
+    "name": "Fort Lauderdale Hollywood International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
+  },
+  "KHVN": {
+    "lat": 41.262869,
+    "lon": -72.887694,
+    "name": "Tweed New Haven Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "cessna"
+  },
+  "KONT": {
+    "lat": 34.056,
+    "lon": -117.600998,
+    "name": "Ontario International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
+  },
+  "KORF": {
+    "lat": 36.895341,
+    "lon": -76.201,
+    "name": "Norfolk International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
+  },
+  "KDJT": {
+    "lat": 26.683201,
+    "lon": -80.095596,
+    "name": "President Donald J. Trump International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
+  },
+  "KPIE": {
+    "lat": 27.9102,
+    "lon": -82.687401,
+    "name": "St. Petersburg Clearwater International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
+  },
+  "KSBA": {
+    "lat": 34.426201,
+    "lon": -119.839996,
+    "name": "Santa Barbara Municipal Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
+  },
+  "KSFB": {
+    "lat": 28.774277,
+    "lon": -81.234626,
+    "name": "Orlando Sanford International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
+  },
+  "KSRQ": {
+    "lat": 27.394631,
+    "lon": -82.554359,
+    "name": "Sarasota Bradenton International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
+  },
+  "KSYR": {
+    "lat": 43.11119842529297,
+    "lon": -76.1063003540039,
+    "name": "Syracuse Hancock International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
+  },
+  "PHDH": {
+    "lat": 21.5795,
+    "lon": -158.197006,
+    "name": "Kawaihapai Airfield",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "cessna"
+  },
+  "PHLI": {
+    "lat": 21.974393,
+    "lon": -159.337146,
+    "name": "Lihue Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
+  },
+  "PHOG": {
+    "lat": 20.896263,
+    "lon": -156.431837,
+    "name": "Kahului International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
   }
 }

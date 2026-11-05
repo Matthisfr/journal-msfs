@@ -240,6 +240,36 @@
     "criteria": []
   },
   {
+    "code": "KDJT",
+    "name": "KDJT Palm Beach Donald J. Trump Int. Airport",
+    "scenes": [
+      {
+        "publisher": "Glideslope Pro",
+        "installed": "1.1.2",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "Verticalsim",
+        "installed": "1.0.3",
+        "url": "https://contrail.shop/products/verticalsim-kdjt-donald-j-trump-international-airport-msfs-2020-2024",
+        "image": "https://contrail.shop/cdn/shop/files/thumb_b609f4bb-d6ca-432c-b5d4-56a57392591d_1200x1200.jpg?v=1771441519",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.0.3",
+        "version_state": "À jour"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
     "code": "KEWR",
     "name": "KEWR Newark Intl MSFS",
     "scenes": [
@@ -261,6 +291,36 @@
         "image_checked": true,
         "comparison": "equal",
         "server_version": "1.6.0",
+        "version_state": "À jour"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
+    "code": "KFLL",
+    "name": "KFLL fort lauderdale airport",
+    "scenes": [
+      {
+        "publisher": "lvfr",
+        "installed": "1.0.4",
+        "url": "https://contrail.shop/products/kfll-fort-lauderdale-hollywood-intl",
+        "image": "https://contrail.shop/cdn/shop/products/thumb_c73476ae-16cc-4da4-8a91-de4d7fc5452d_1200x1200.jpg?v=1674666494",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.0.4",
+        "version_state": "À jour"
+      },
+      {
+        "publisher": "MK-STUDIOS",
+        "installed": "1.0.3",
+        "url": "https://contrail.shop/products/mk-studios-kfll-fort-lauderdale-hollywood-airport-msfs-2024",
+        "image": "https://contrail.shop/cdn/shop/files/thumb_825f18a3-26c4-4782-a471-5422226ef5df_1200x1200.jpg?v=1779288086",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.0.3",
         "version_state": "À jour"
       }
     ],

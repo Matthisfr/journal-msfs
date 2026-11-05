@@ -1188,27 +1188,6 @@
     ]
   },
   {
-    "icao": "KDJT",
-    "name": "President Donald J. Trump International Airport",
-    "lat": 26.6832,
-    "lon": -80.0956,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/verticalsim-kdjt-donald-j-trump-international-airport-msfs-2020-2024",
-        "price_type": "Payant",
-        "product_title": "KDJT - Donald J Trump International Airport MSFS20/24"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/verticalsim-donald-j-trump-kdjt-msfs",
-        "price_type": "Payant",
-        "product_title": "VerticalSim Donald J Trump (KDJT) for MSFS"
-      }
-    ]
-  },
-  {
     "icao": "KDNN",
     "name": "Dalton Municipal Airport",
     "lat": 34.7229,
@@ -1254,27 +1233,6 @@
     ]
   },
   {
-    "icao": "KFLL",
-    "name": "Fort Lauderdale Hollywood International Airport",
-    "lat": 26.0726,
-    "lon": -80.1527,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/kfll-fort-lauderdale-hollywood-intl",
-        "price_type": "Payant",
-        "product_title": "KFLL - Fort Lauderdale Hollywood Intl. MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/mk-studios-fort-lauderdale-hollywood-kfll-msfs-2024",
-        "price_type": "Payant",
-        "product_title": "MK-STUDIOS Fort Lauderdale-Hollywood (KFLL) for MSFS-2024"
-      }
-    ]
-  },
-  {
     "icao": "KHMT",
     "name": "Hemet Ryan Airport",
     "lat": 33.734,
@@ -1311,27 +1269,6 @@
     ]
   },
   {
-    "icao": "KHVN",
-    "name": "Tweed New Haven Airport",
-    "lat": 41.26287,
-    "lon": -72.88769,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/fly2high-khvn-tweed-new-haven-airport-msfs2024",
-        "price_type": "Payant",
-        "product_title": "KHVN - Tweed New Haven Airport MSFS24"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/fly2high-tweed-new-haven-khvn-msfs",
-        "price_type": "Payant",
-        "product_title": "Fly2High Tweed New Haven (KHVN) for MSFS"
-      }
-    ]
-  },
-  {
     "icao": "KLVK",
     "name": "Livermore Municipal Airport",
     "lat": 37.6934,
@@ -1343,63 +1280,6 @@
         "url": "https://inibuilds.com/products/spinoza-livermore-municipal-klvk-msfs",
         "price_type": "Payant",
         "product_title": "SPINOZA Livermore Municipal (KLVK) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "KONT",
-    "name": "Ontario International Airport",
-    "lat": 34.056,
-    "lon": -117.601,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/kont-ontario-international-msfs",
-        "price_type": "Payant",
-        "product_title": "KONT - Ontario International MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/verticalsim-ontario-kont-msfs",
-        "price_type": "Payant",
-        "product_title": "VerticalSim Ontario (KONT) for MSFS-2020"
-      }
-    ]
-  },
-  {
-    "icao": "KORF",
-    "name": "Norfolk International Airport",
-    "lat": 36.89534,
-    "lon": -76.201,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/korf-norfolk-intl",
-        "price_type": "Payant",
-        "product_title": "KORF - Norfolk Intl. MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "KPIE",
-    "name": "St. Petersburg Clearwater International Airport",
-    "lat": 27.9102,
-    "lon": -82.6874,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/verticalsim-kpie-st-petersburg-clearwater-intl-msfs",
-        "price_type": "Payant",
-        "product_title": "KPIE - St. Petersburg-Clearwater Intl MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/verticalsim-st-pete-clearwater-kpie-msfs",
-        "price_type": "Payant",
-        "product_title": "VerticalSim St.Pete/Clearwater (KPIE) for MSFS-2020"
       }
     ]
   },
@@ -1442,84 +1322,6 @@
         "url": "https://inibuilds.com/products/verticalsim-southwest-florida-krsw-msfs",
         "price_type": "Payant",
         "product_title": "VerticalSim Southwest Florida (KRSW) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "KSBA",
-    "name": "Santa Barbara Municipal Airport",
-    "lat": 34.4262,
-    "lon": -119.84,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/gaya-simulations-santa-barbara-municipal-ksba-for-msfs-2024",
-        "price_type": "Payant",
-        "product_title": "Gaya Simulations Santa Barbara Municipal (KSBA) for MSFS-2024"
-      }
-    ]
-  },
-  {
-    "icao": "KSFB",
-    "name": "Orlando Sanford International Airport",
-    "lat": 28.77428,
-    "lon": -81.23463,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/taimodels-ksfb-orlando-sanford-airport-msfs2020-2024",
-        "price_type": "Payant",
-        "product_title": "KSFB - Orlando Sanford Airport MSFS20/24"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/taimodels-orlando-sanford-ksfb-xp",
-        "price_type": "Payant",
-        "product_title": "TaiModels Orlando Sanford (KSFB)"
-      }
-    ]
-  },
-  {
-    "icao": "KSRQ",
-    "name": "Sarasota Bradenton International Airport",
-    "lat": 27.39463,
-    "lon": -82.55436,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/ksrq-sarasota-bradenton-intl",
-        "price_type": "Payant",
-        "product_title": "KSRQ - Sarasota Bradenton Intl. MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/verticalsim-sarasota-bradenton-ksrq-msfs",
-        "price_type": "Payant",
-        "product_title": "VerticalSim Sarasota-Bradenton (KSRQ) for MSFS-2020"
-      }
-    ]
-  },
-  {
-    "icao": "KSYR",
-    "name": "Syracuse Hancock International Airport",
-    "lat": 43.1112,
-    "lon": -76.1063,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/ksyr-syracuse-hancock-intl-msfs",
-        "price_type": "Payant",
-        "product_title": "KSYR - Syracuse Hancock Intl. MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/verticalsim-syracuse-hancock-ksyr-msfs",
-        "price_type": "Payant",
-        "product_title": "VerticalSim Syracuse Hancock (KSYR) for MSFS-2020"
       }
     ]
   },
@@ -2370,48 +2172,6 @@
     ]
   },
   {
-    "icao": "PHDH",
-    "name": "Kawaihapai Airfield",
-    "lat": 21.5795,
-    "lon": -158.19701,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/northern-sky-studios-phdh-dillingham-airfield-msfs",
-        "price_type": "Payant",
-        "product_title": "PHDH - Dillingham Airfield MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/northern-sky-studio-dillingham-phdh-msfs",
-        "price_type": "Payant",
-        "product_title": "Northern Sky Studio Dillingham (PHDH) for MSFS-2020"
-      }
-    ]
-  },
-  {
-    "icao": "PHLI",
-    "name": "Lihue Airport",
-    "lat": 21.97439,
-    "lon": -159.33715,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/northern-sky-phli-lihue-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "PHLI - Lihue Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/northern-sky-studio-lihue-phli-msfs",
-        "price_type": "Payant",
-        "product_title": "Northern Sky Studio Lihue (PHLI) for MSFS-2020"
-      }
-    ]
-  },
-  {
     "icao": "PHLU",
     "name": "Kalaupapa Airport",
     "lat": 21.211,
@@ -2429,27 +2189,6 @@
         "url": "https://inibuilds.com/products/south-oak-co-kalaupapa-phlu-msfs",
         "price_type": "Payant",
         "product_title": "South Oak Co Kalaupapa (PHLU) for MSFS-2020"
-      }
-    ]
-  },
-  {
-    "icao": "PHOG",
-    "name": "Kahului International Airport",
-    "lat": 20.89626,
-    "lon": -156.43184,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/phog-kahului-airport",
-        "price_type": "Payant",
-        "product_title": "PHOG - Kahului Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/northern-sky-studio-kahului-phog-msfs",
-        "price_type": "Payant",
-        "product_title": "Northern Sky Studio Kahului (PHOG) for MSFS-2020"
       }
     ]
   },
