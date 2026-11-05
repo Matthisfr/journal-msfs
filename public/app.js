@@ -703,6 +703,17 @@ function renderQualityAudit(){
 
 }
 async function init(){try{const [ar,sr,er,sv,hc,hi,wa,rr,s3r]=await Promise.all(['airports.json','status.json','editorial.json','software_versions.json','hardware_catalog.json','hardware-images.json','winctrl_airbus.json','rtrhobby_airbus.json','s3_airbus.json'].map(p=>fetch(p,{cache:'no-store'}).catch(()=>null)));if(!ar?.ok||!sr?.ok||!er?.ok)throw new Error('Fichiers de données indisponibles');[airports,status,editorial]=await Promise.all([ar.json(),sr.json(),er.json()]);software=sv?.ok?await sv.json():{items:[]};hardware=hc?.ok?await hc.json():[];hardwareImages=hi?.ok?await hi.json():{};winctrlAirbus=wa?.ok?await wa.json():{articles:[],products:{}};rtrAirbus=rr?.ok?await rr.json():{products:[],changes:[]};s3Airbus=s3r?.ok?await s3r.json():{products:[],changes:[]};try{airportCoordinates=await fetch('airport_coordinates.json',{cache:'no-store'}).then(r=>r.ok?r.json():{})}catch(_){airportCoordinates={}};$('#count-scenes').textContent=airports.length;$('#count-codes').textContent=new Set(airports.map(x=>x.icao)).size;$('#airport-total').textContent=airports.length+' SCÈNES - '+new Set(airports.map(a=>String(a.icao||'').trim().toUpperCase()).filter(Boolean)).size+' AÉROPORTS DISTINCTS';const regions=[...new Set(airports.map(a=>a.region||a.country).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'fr'));$('#region-filter').innerHTML='<option value="">Toutes les régions</option>'+regions.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');document.querySelectorAll('[data-icao-country]').forEach(el=>{el.textContent=countrySuffix(el.dataset.icaoCountry)});for(const [name,fn] of [['Matériel',renderHardwareGallery],['Actualités matériel',renderHardwareNews],['Aéroports',renderAirports],['État du journal',renderStatus],['Météo',renderWeather],['Nouveautés',renderNews],['Logiciels',renderSoftware],['Qualité',renderQualityAudit]]){try{fn()}catch(err){console.error('Erreur rubrique '+name,err)}}}catch(e){$('#run-state').textContent='Données indisponibles';$('#run-detail').textContent='Chargement interrompu : '+String(e?.message||e).slice(0,180);$('#weather-container').innerHTML='<div class="error">Chargement des données impossible. Ouvre le site via un serveur web.</div>';$('#airport-count').textContent='Erreur de chargement';console.error(e)}if(location.hash)switchView(location.hash.slice(1))}
+const simbriefDispatchForm=$('#simbrief-dispatch-form');
+if(simbriefDispatchForm)simbriefDispatchForm.addEventListener('submit',e=>{
+  e.preventDefault();
+  const orig=$('#simbrief-departure').value.trim().toUpperCase();
+  const dest=$('#simbrief-arrival').value.trim().toUpperCase();
+  const airline=$('#simbrief-airline').value.trim().toUpperCase();
+  const fltnum=$('#simbrief-flight-number').value.trim();
+  if(!/^[A-Z]{4}$/.test(orig)||!/^[A-Z]{4}$/.test(dest)||orig===dest){alert('Saisis deux codes ICAO différents de quatre lettres.');return}
+  const params=new URLSearchParams({orig,dest,type:'A320',airline,fltnum});
+  window.open('https://dispatch.simbrief.com/options/custom?'+params.toString(),'_blank','noopener,noreferrer');
+});
 async function loadSimbriefFlight(){
   const el=$('#simbrief-flight-data'),button=$('#simbrief-refresh');
   if(!el||!button)return;
