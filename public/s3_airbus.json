@@ -1,7 +1,329 @@
 {
-  "checked_at": null,
+  "checked_at": "2026-11-05T09:44:48.095366+00:00",
   "source_url": "https://www.santiluib3.com/",
-  "source_state": "pending",
-  "products": [],
-  "changes": []
+  "source_state": "ok",
+  "products": [
+    {
+      "id": "https://www.santiluib3.com/collections/sl3-a320-overhead-panel",
+      "title": "FULL Overhead Panel",
+      "url": "https://www.santiluib3.com/collections/sl3-a320-overhead-panel",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/pages/mobiflight-config-files",
+      "title": "FenixA320 MF Files",
+      "url": "https://www.santiluib3.com/pages/mobiflight-config-files",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/sl3-a320-mip-flood-light",
+      "title": "SL3 A320 MIP Flood Light",
+      "url": "https://www.santiluib3.com/products/sl3-a320-mip-flood-light",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/full-a320-overhead-panel",
+      "title": "FULL A320 Overhead Panel ** PRE-ORDER **",
+      "url": "https://www.santiluib3.com/products/full-a320-overhead-panel",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/full-overhead-mounting-board-plans-dxf-file",
+      "title": "Full Overhead Mounting Board Plans - DXF FILE",
+      "url": "https://www.santiluib3.com/products/full-overhead-mounting-board-plans-dxf-file",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/printable-mip-sl3-edition",
+      "title": "DOWNLOADABLE A320 MIP - JK/SL3 Edition",
+      "url": "https://www.santiluib3.com/products/printable-mip-sl3-edition",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/a320-wing-warning-panel",
+      "title": "A320 Glare Wing/Warning panel - Mark II",
+      "url": "https://www.santiluib3.com/products/a320-wing-warning-panel",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/sl3-a320-atc-msg-panel",
+      "title": "SL3 A320 ATC MSG Panel",
+      "url": "https://www.santiluib3.com/products/sl3-a320-atc-msg-panel",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/overhead-kory-buttons",
+      "title": "A320 Kory Buttons",
+      "url": "https://www.santiluib3.com/products/overhead-kory-buttons",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/eng1-eng2-lift-unlock-mod-diy-kit-for-the-tm-tca-quadrant",
+      "title": "A320 ENG1-ENG2 Lift-Unlock Mod DIY Kit for the TM TCA Quadrant",
+      "url": "https://www.santiluib3.com/products/eng1-eng2-lift-unlock-mod-diy-kit-for-the-tm-tca-quadrant",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/a320-landing-light-switch-handles",
+      "title": "A320 Landing Light Switch handles",
+      "url": "https://www.santiluib3.com/products/a320-landing-light-switch-handles",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/a320-circular-chrono-button",
+      "title": "FREE Downloadable A320 Circular \"Chrono\" Button",
+      "url": "https://www.santiluib3.com/products/a320-circular-chrono-button",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/free-fcu-push-pull-knob-stl-files-d-i-y",
+      "title": "FREE - FCU Push-Pull knob STL files D-I-Y",
+      "url": "https://www.santiluib3.com/products/free-fcu-push-pull-knob-stl-files-d-i-y",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/freebies",
+      "title": "FREE - FCU ALT knob complete feature STL files",
+      "url": "https://www.santiluib3.com/products/freebies",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/mk3-fcu-push-pull-rotary-with-push-pull-travel",
+      "title": "Mk3 FCU Push-Pull Rotary with push-pull travel",
+      "url": "https://www.santiluib3.com/products/mk3-fcu-push-pull-rotary-with-push-pull-travel",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/sl3-diy-mip-flood-integ-and-ped-lt-dimmer",
+      "title": "FREE *DOWNLOADABLE* Content - DIY Flood Lt/MIP/Pedestal Illumination Dimmer files kit",
+      "url": "https://www.santiluib3.com/products/sl3-diy-mip-flood-integ-and-ped-lt-dimmer",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    }
+  ],
+  "changes": [
+    {
+      "id": "https://www.santiluib3.com/collections/sl3-a320-overhead-panel",
+      "title": "FULL Overhead Panel",
+      "url": "https://www.santiluib3.com/collections/sl3-a320-overhead-panel",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/pages/mobiflight-config-files",
+      "title": "FenixA320 MF Files",
+      "url": "https://www.santiluib3.com/pages/mobiflight-config-files",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/sl3-a320-mip-flood-light",
+      "title": "SL3 A320 MIP Flood Light",
+      "url": "https://www.santiluib3.com/products/sl3-a320-mip-flood-light",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/full-a320-overhead-panel",
+      "title": "FULL A320 Overhead Panel ** PRE-ORDER **",
+      "url": "https://www.santiluib3.com/products/full-a320-overhead-panel",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/full-overhead-mounting-board-plans-dxf-file",
+      "title": "Full Overhead Mounting Board Plans - DXF FILE",
+      "url": "https://www.santiluib3.com/products/full-overhead-mounting-board-plans-dxf-file",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/printable-mip-sl3-edition",
+      "title": "DOWNLOADABLE A320 MIP - JK/SL3 Edition",
+      "url": "https://www.santiluib3.com/products/printable-mip-sl3-edition",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/a320-wing-warning-panel",
+      "title": "A320 Glare Wing/Warning panel - Mark II",
+      "url": "https://www.santiluib3.com/products/a320-wing-warning-panel",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/sl3-a320-atc-msg-panel",
+      "title": "SL3 A320 ATC MSG Panel",
+      "url": "https://www.santiluib3.com/products/sl3-a320-atc-msg-panel",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/overhead-kory-buttons",
+      "title": "A320 Kory Buttons",
+      "url": "https://www.santiluib3.com/products/overhead-kory-buttons",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/eng1-eng2-lift-unlock-mod-diy-kit-for-the-tm-tca-quadrant",
+      "title": "A320 ENG1-ENG2 Lift-Unlock Mod DIY Kit for the TM TCA Quadrant",
+      "url": "https://www.santiluib3.com/products/eng1-eng2-lift-unlock-mod-diy-kit-for-the-tm-tca-quadrant",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/a320-landing-light-switch-handles",
+      "title": "A320 Landing Light Switch handles",
+      "url": "https://www.santiluib3.com/products/a320-landing-light-switch-handles",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/a320-circular-chrono-button",
+      "title": "FREE Downloadable A320 Circular \"Chrono\" Button",
+      "url": "https://www.santiluib3.com/products/a320-circular-chrono-button",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/free-fcu-push-pull-knob-stl-files-d-i-y",
+      "title": "FREE - FCU Push-Pull knob STL files D-I-Y",
+      "url": "https://www.santiluib3.com/products/free-fcu-push-pull-knob-stl-files-d-i-y",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/freebies",
+      "title": "FREE - FCU ALT knob complete feature STL files",
+      "url": "https://www.santiluib3.com/products/freebies",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/mk3-fcu-push-pull-rotary-with-push-pull-travel",
+      "title": "Mk3 FCU Push-Pull Rotary with push-pull travel",
+      "url": "https://www.santiluib3.com/products/mk3-fcu-push-pull-rotary-with-push-pull-travel",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    },
+    {
+      "id": "https://www.santiluib3.com/products/sl3-diy-mip-flood-integ-and-ped-lt-dimmer",
+      "title": "FREE *DOWNLOADABLE* Content - DIY Flood Lt/MIP/Pedestal Illumination Dimmer files kit",
+      "url": "https://www.santiluib3.com/products/sl3-diy-mip-flood-integ-and-ped-lt-dimmer",
+      "image_url": "",
+      "price": null,
+      "currency": "",
+      "availability": "À confirmer sur la fiche officielle",
+      "published_at": null
+    }
+  ]
 }
