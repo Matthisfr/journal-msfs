@@ -308,3 +308,11 @@ button.airport-description-info{touch-action:manipulation;min-width:26px;min-hei
 .shopping-bag-pin{display:flex;align-items:center;justify-content:center;border:2px solid #fff;border-radius:11px;background:#1178e4;color:#fff;box-shadow:0 2px 7px #0006;width:31px;height:31px;font-size:20px}
 
 #google-map:fullscreen .map-fullscreen-button,#google-map.map-fullscreen-fallback .map-fullscreen-button{align-self:flex-start;flex-shrink:0;margin:8px}
+
+/* Navigation rapide par fabricant dans la page Matériel. */
+.hardware-jump-nav{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 24px}
+.hardware-jump-nav a{display:inline-flex;align-items:center;gap:7px;padding:10px 14px;border:1px solid #4387b6;border-radius:9px;text-decoration:none;font-weight:700;min-height:44px}
+.hardware-jump-nav a:hover,.hardware-jump-nav a:focus-visible{background:#176aa5;color:white;outline-offset:3px}
+#hardware-my,#hardware-winctrl,#hardware-rtr,#hardware-s3{scroll-margin-top:90px}
+.hardware-section-heading{margin:22px 0 14px}
+[data-hardware-news][hidden]{display:none!important}
