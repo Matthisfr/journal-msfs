@@ -2678,5 +2678,13 @@
     "source": "OurAirports / airport-codes",
     "country_code": "MV",
     "aircraft_marker": "airliner"
+  },
+  "CYLW": {
+    "lat": 49.9561,
+    "lon": -119.377998,
+    "name": "Kelowna International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "CA",
+    "aircraft_marker": "airliner"
   }
 }

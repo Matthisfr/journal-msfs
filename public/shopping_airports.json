@@ -42,21 +42,6 @@
     ]
   },
   {
-    "icao": "CYLW",
-    "name": "Kelowna International Airport",
-    "lat": 49.9561,
-    "lon": -119.378,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/cylw-kelowna-intl",
-        "price_type": "Payant",
-        "product_title": "CYLW - Kelowna Intl. MSFS"
-      }
-    ]
-  },
-  {
     "icao": "CYQG",
     "name": "Windsor International Airport",
     "lat": 42.2756,
