@@ -513,48 +513,6 @@
     ]
   },
   {
-    "icao": "EFOU",
-    "name": "Oulu Airport",
-    "lat": 64.9301,
-    "lon": 25.3546,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/mm-simulations-efou-oulu-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "EFOU - Oulu Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/mm-simulations-oulu-efou-msfs",
-        "price_type": "Payant",
-        "product_title": "M'M Simulations Oulu (EFOU) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "EFTU",
-    "name": "Turku Airport",
-    "lat": 60.5141,
-    "lon": 22.2628,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/eftu-turku-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "EFTU - Turku Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/mm-simulations-turku-eftu-msfs",
-        "price_type": "Payant",
-        "product_title": "M'M Simulations Turku (EFTU) for MSFS"
-      }
-    ]
-  },
-  {
     "icao": "EGAA",
     "name": "Belfast International Airport",
     "lat": 54.6575,
@@ -720,27 +678,6 @@
     ]
   },
   {
-    "icao": "ENEV",
-    "name": "Harstad/Narvik Airport",
-    "lat": 68.4913,
-    "lon": 16.6781,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/mm-simulations-enev-harstad-narvik-airport-msfs-2020-2024",
-        "price_type": "Payant",
-        "product_title": "ENEV - Harstad/Narvik Airport MSFS20/24"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/mm-simulations-harstad-narvik-enev-msfs",
-        "price_type": "Payant",
-        "product_title": "M'M Simulations Harstad Narvik (ENEV) for MSFS"
-      }
-    ]
-  },
-  {
     "icao": "ENVA",
     "name": "Trondheim Airport, Værnes",
     "lat": 63.4578,
@@ -752,27 +689,6 @@
         "url": "https://contrail.shop/products/enva-trondheim-vaernes",
         "price_type": "Payant",
         "product_title": "ENVA - Trondheim-Vaernes Intl. MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "EPGD",
-    "name": "Gdańsk Lech Wałęsa Airport",
-    "lat": 54.3776,
-    "lon": 18.4662,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/epgd-gdansk-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "EPGD - Gdańsk Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/drzewiecki-design-gdansk-epgd-msfs",
-        "price_type": "Payant",
-        "product_title": "Drzewiecki Design Gdansk (EPGD) for MSFS"
       }
     ]
   },
@@ -815,48 +731,6 @@
         "url": "https://inibuilds.com/products/drzewiecki-design-katowice-epkt-msfs",
         "price_type": "Payant",
         "product_title": "Drzewiecki Design Katowice (EPKT) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "EPLB",
-    "name": "Lublin Airport",
-    "lat": 51.24016,
-    "lon": 22.71346,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/eplb-lublin-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "EPLB - Lublin Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/drzewiecki-design-lublin-eplb-msfs",
-        "price_type": "Payant",
-        "product_title": "Drzewiecki Design Lublin (EPLB) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "EPRZ",
-    "name": "Rzeszów-Jasionka Airport",
-    "lat": 50.10979,
-    "lon": 22.02416,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/eprz-rzeszow-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "EPRZ - Rzeszów Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/drzewiecki-design-rzeszow-eprz-msfs",
-        "price_type": "Payant",
-        "product_title": "Drzewiecki Design Rzeszów (EPRZ) for MSFS"
       }
     ]
   },
@@ -920,27 +794,6 @@
         "url": "https://inibuilds.com/products/mxi-design-stockholm-vasteras-esow-msfs",
         "price_type": "Payant",
         "product_title": "MXI Design Stockholm Vasteras (ESOW) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "EYPA",
-    "name": "Palanga International Airport",
-    "lat": 55.9732,
-    "lon": 21.0939,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/lisium-design-eypa-palanga-airport-v2-msfs-2020-2024",
-        "price_type": "Payant",
-        "product_title": "EYPA - Palanga Airport v2 MSFS20/24"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/lisium-design-palanga-eypa-msfs",
-        "price_type": "Payant",
-        "product_title": "Lisium Design Palanga (EYPA) for MSFS-2020"
       }
     ]
   },
@@ -1266,27 +1119,6 @@
     ]
   },
   {
-    "icao": "LGZA",
-    "name": "Zakynthos International Airport \"Dionysios Solomos\"",
-    "lat": 37.7509,
-    "lon": 20.8843,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/mxi-design-lgza-zakynthos-airport-msfs2020-2024",
-        "price_type": "Payant",
-        "product_title": "LGZA - Zakynthos Airport MSFS20/24"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/inibuilds-zakynthos-lgza-msfs-2024",
-        "price_type": "Payant",
-        "product_title": "iniBuilds Zakynthos (LGZA) for MSFS-2024"
-      }
-    ]
-  },
-  {
     "icao": "LIME",
     "name": "Il Caravaggio International Airport",
     "lat": 45.66936,
@@ -1409,27 +1241,6 @@
         "url": "https://inibuilds.com/products/gaya-simulations-zell-am-see-lowz-msfs",
         "price_type": "Payant",
         "product_title": "Gaya Simulations Zell am See (LOWZ) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LRIA",
-    "name": "Iaşi International Airport",
-    "lat": 47.17963,
-    "lon": 27.62143,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/lria-iasi-international-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "LRIA - Iasi International Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/mld-scenery-iasi-lria-msfs",
-        "price_type": "Payant",
-        "product_title": "MLD Scenery Iași (LRIA) for MSFS-2020"
       }
     ]
   },
@@ -1668,42 +1479,6 @@
     ]
   },
   {
-    "icao": "NZWN",
-    "name": "Wellington International Airport",
-    "lat": -41.32684,
-    "lon": 174.80686,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/nzwn-wellington-intl-msfs",
-        "price_type": "Payant",
-        "product_title": "NZWN - Wellington Intl. MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "OPSD",
-    "name": "Skardu International Airport",
-    "lat": 35.33866,
-    "lon": 75.53865,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/vuelosimple-opsd-skardu-international-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "OPSD - Skardu International Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/vuelosimple-skardu-opsd-msfs",
-        "price_type": "Payant",
-        "product_title": "VueloSimple Skardu (OPSD) for MSFS-2020"
-      }
-    ]
-  },
-  {
     "icao": "PACK",
     "name": "Chefornak Airport",
     "lat": 60.13667,
@@ -1757,48 +1532,6 @@
         "url": "https://inibuilds.com/products/south-oak-co-kalaupapa-phlu-msfs",
         "price_type": "Payant",
         "product_title": "South Oak Co Kalaupapa (PHLU) for MSFS-2020"
-      }
-    ]
-  },
-  {
-    "icao": "RCKH",
-    "name": "Kaohsiung International Airport",
-    "lat": 22.5771,
-    "lon": 120.35,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/aco-design-studio-rckh-kaohsiung-international-airport-msfs2020-2024",
-        "price_type": "Payant",
-        "product_title": "RCKH - Kaohsiung International Airport MSFS20/24"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/aco-design-studio-taiwan-kaohsiung-rckh-msfs",
-        "price_type": "Payant",
-        "product_title": "ACO Design Studio Taiwan Kaohsiung (RCKH) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "RCSS",
-    "name": "Taipei Songshan International Airport",
-    "lat": 25.06724,
-    "lon": 121.55282,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/aco-design-studio-rcss-taipei-songshan-airport-msfs2020-2024",
-        "price_type": "Payant",
-        "product_title": "RCSS - Taipei Songshan Airport MSFS20/24"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/aco-design-studio-taiwan-songshan-rcss-msfs",
-        "price_type": "Payant",
-        "product_title": "ACO Design Studio Taiwan Songshan (RCSS) for MSFS"
       }
     ]
   },

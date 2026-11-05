@@ -2974,5 +2974,109 @@
     "source": "OurAirports / airport-codes",
     "country_code": "CO",
     "aircraft_marker": "airliner"
+  },
+  "EFOU": {
+    "lat": 64.930099,
+    "lon": 25.354601,
+    "name": "Oulu Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "FI",
+    "aircraft_marker": "airliner"
+  },
+  "EFTU": {
+    "lat": 60.514099,
+    "lon": 22.2628,
+    "name": "Turku Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "FI",
+    "aircraft_marker": "airliner"
+  },
+  "ENEV": {
+    "lat": 68.491302,
+    "lon": 16.678101,
+    "name": "Harstad/Narvik Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NO",
+    "aircraft_marker": "airliner"
+  },
+  "EPGD": {
+    "lat": 54.377602,
+    "lon": 18.4662,
+    "name": "Gdańsk Lech Wałęsa Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "PL",
+    "aircraft_marker": "airliner"
+  },
+  "EPLB": {
+    "lat": 51.240157,
+    "lon": 22.713461,
+    "name": "Lublin Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "PL",
+    "aircraft_marker": "airliner"
+  },
+  "EPRZ": {
+    "lat": 50.109791,
+    "lon": 22.024155,
+    "name": "Rzeszów-Jasionka Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "PL",
+    "aircraft_marker": "airliner"
+  },
+  "EYPA": {
+    "lat": 55.973202,
+    "lon": 21.093901,
+    "name": "Palanga International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "LT",
+    "aircraft_marker": "airliner"
+  },
+  "LGZA": {
+    "lat": 37.7509,
+    "lon": 20.8843,
+    "name": "Zakynthos International Airport \"Dionysios Solomos\"",
+    "source": "OurAirports / airport-codes",
+    "country_code": "GR",
+    "aircraft_marker": "airliner"
+  },
+  "LRIA": {
+    "lat": 47.179633,
+    "lon": 27.621431,
+    "name": "Iaşi International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "RO",
+    "aircraft_marker": "airliner"
+  },
+  "NZWN": {
+    "lat": -41.326839,
+    "lon": 174.806862,
+    "name": "Wellington International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NZ",
+    "aircraft_marker": "airliner"
+  },
+  "OPSD": {
+    "lat": 35.33866,
+    "lon": 75.538648,
+    "name": "Skardu International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "PK",
+    "aircraft_marker": "airliner"
+  },
+  "RCKH": {
+    "lat": 22.577101,
+    "lon": 120.349998,
+    "name": "Kaohsiung International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "TW",
+    "aircraft_marker": "airliner"
+  },
+  "RCSS": {
+    "lat": 25.067244,
+    "lon": 121.552822,
+    "name": "Taipei Songshan International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "TW",
+    "aircraft_marker": "airliner"
   }
 }
