@@ -17,7 +17,23 @@
   <script src="app.js?v=diagnostic-render-isolation-20261105" defer></script>
   
   
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></head>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><style id="simbrief-dispatch-modern">
+#simbrief-last-flight .simbrief-dispatch-box{margin-top:30px;padding:28px 0 4px;border-top:1px solid #dce4eb;background:transparent}
+#simbrief-last-flight .simbrief-dispatch-box .sectionbar{margin-bottom:22px}
+#simbrief-last-flight .simbrief-dispatch-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))  minmax(0,.75fr) minmax(0,.75fr);gap:14px}
+#simbrief-last-flight .simbrief-dispatch-fields label{display:flex;flex-direction:column;gap:9px;min-width:0;color:#607589;font-size:12px;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+#simbrief-last-flight .simbrief-dispatch-fields input{box-sizing:border-box;width:100%;min-width:0;height:52px;border:1px solid #cbd7e2;border-radius:11px;padding:0 15px;background:#f7f9fb;color:#162a3d;font-size:19px;font-weight:700;letter-spacing:.035em;box-shadow:none;outline:none;transition:border-color .15s,box-shadow .15s}
+#simbrief-last-flight .simbrief-dispatch-fields input:focus{border-color:#2878b9;box-shadow:0 0 0 3px rgba(40,120,185,.13);background:white}
+#simbrief-last-flight .simbrief-aircraft-info{display:grid;grid-template-columns:1fr 1.5fr;gap:14px;margin:16px 0 20px}
+#simbrief-last-flight .simbrief-aircraft-info>div{display:flex;flex-direction:column;gap:7px;padding:16px 18px;background:#f2f6f9;border:1px solid #e0e8ee;border-radius:11px;min-width:0}
+#simbrief-last-flight .simbrief-aircraft-info small{font-size:11px;font-weight:800;letter-spacing:.1em;color:#6c8192}
+#simbrief-last-flight .simbrief-aircraft-info strong{font-size:16px;line-height:1.4;color:#193449;overflow-wrap:anywhere}
+#simbrief-last-flight .simbrief-dispatch-button{appearance:none;display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border:0;border-radius:11px;background:#176ba9;color:white;font-size:15px;font-weight:750;box-shadow:0 5px 14px rgba(23,107,169,.17);cursor:pointer}
+#simbrief-last-flight .simbrief-dispatch-button:hover{background:#10598e}
+#simbrief-last-flight .simbrief-dispatch-box .fineprint{margin:13px 0 0;color:#7b8c99;font-size:12px;line-height:1.5}
+@media(max-width:850px){#simbrief-last-flight .simbrief-dispatch-fields{grid-template-columns:repeat(2,minmax(0,1fr))}#simbrief-last-flight .simbrief-aircraft-info{grid-template-columns:1fr}}
+@media(max-width:480px){#simbrief-last-flight .simbrief-dispatch-box{padding-top:20px}#simbrief-last-flight .simbrief-dispatch-fields{gap:12px}#simbrief-last-flight .simbrief-dispatch-fields input{font-size:16px}#simbrief-last-flight .simbrief-dispatch-button{width:100%}}
+</style></head>
 <body>
   <a class="skip" href="#main">Aller au contenu</a>
   <div class="topline"><div class="shell topinner"><span><span class="dot"></span> JOURNAL INDÉPENDANT · MSFS 2024</span><span class="top-status-wrap"><span id="sync-label">ÉDITION DE LANCEMENT · COLLECTE NON ACTIVÉE</span><a id="build-status" class="build-status build-status-unknown" href="https://github.com/Matthisfr/journal-msfs/actions/workflows/journal.yml" target="_blank" rel="noopener noreferrer" title="État de la dernière publication du Journal MSFS" aria-label="État de la publication : vérification en cours"><span class="build-status-dot" aria-hidden="true"></span><span id="build-status-text">Vérification…</span></a></span></div></div>
@@ -78,8 +94,8 @@
             <label>Airline<input id="simbrief-airline" name="airline" value="AFR" maxlength="3" required></label>
             <label>Flight Number<input id="simbrief-flight-number" name="fltnum" value="2809" required></label>
           </div>
-          <div class="simbrief-aircraft-info"><span>Aircraft Type : <strong>A320 — A320-200</strong></span><span>Airframe : <strong>G-FENX — CFM56-5B4/P — WTF</strong></span></div>
-          <button type="submit" class="simbrief-dispatch-button">Ouvrir SimBrief ↗</button>
+          <div class="simbrief-aircraft-info"><div><small>TYPE D’APPAREIL</small><strong>A320 · A320-200</strong></div><div><small>PROFIL AIRFRAME</small><strong>G-FENX · CFM56-5B4/P · WTF</strong></div></div>
+          <button type="submit" class="simbrief-dispatch-button">Préparer le vol dans SimBrief ↗</button>
           <p class="fineprint">Le profil G-FENX est indiqué à titre de référence : sa présélection automatique nécessite son identifiant SimBrief.</p>
         </form>
       </div>
