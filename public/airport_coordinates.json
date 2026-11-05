@@ -2790,5 +2790,189 @@
     "source": "OurAirports / airport-codes",
     "country_code": "US",
     "aircraft_marker": "airliner"
+  },
+  "BIAR": {
+    "lat": 65.656573,
+    "lon": -18.072018,
+    "name": "Akureyri International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "IS",
+    "aircraft_marker": "airliner"
+  },
+  "BKPR": {
+    "lat": 42.5728,
+    "lon": 21.035801,
+    "name": "Priština Adem Jashari International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "XK",
+    "aircraft_marker": "airliner"
+  },
+  "DAAT": {
+    "lat": 22.810992,
+    "lon": 5.450832,
+    "name": "Aguenar – Hadj Bey Akhamok Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "DZ",
+    "aircraft_marker": "airliner"
+  },
+  "GCLP": {
+    "lat": 27.9319,
+    "lon": -15.3866,
+    "name": "Gran Canaria Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "ES",
+    "aircraft_marker": "airliner"
+  },
+  "HTKJ": {
+    "lat": -3.427049,
+    "lon": 37.07353,
+    "name": "Kilimanjaro International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "TZ",
+    "aircraft_marker": "airliner"
+  },
+  "KHOU": {
+    "lat": 29.645336,
+    "lon": -95.276812,
+    "name": "William P. Hobby Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
+  },
+  "KRSW": {
+    "lat": 26.534685,
+    "lon": -81.752816,
+    "name": "Southwest Florida International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
+  },
+  "LBBG": {
+    "lat": 42.569917,
+    "lon": 27.515173,
+    "name": "Burgas Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "BG",
+    "aircraft_marker": "airliner"
+  },
+  "LBWN": {
+    "lat": 43.232101,
+    "lon": 27.8251,
+    "name": "Varna Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "BG",
+    "aircraft_marker": "airliner"
+  },
+  "LGKO": {
+    "lat": 36.794523,
+    "lon": 27.09115,
+    "name": "Kos International Airport \"Ippokratis\"",
+    "source": "OurAirports / airport-codes",
+    "country_code": "GR",
+    "aircraft_marker": "airliner"
+  },
+  "LGKR": {
+    "lat": 39.60145,
+    "lon": 19.912179,
+    "name": "Corfu Ioannis Kapodistrias International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "GR",
+    "aircraft_marker": "airliner"
+  },
+  "LGKV": {
+    "lat": 40.9133,
+    "lon": 24.6192,
+    "name": "Kavala Alexander the Great International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "GR",
+    "aircraft_marker": "airliner"
+  },
+  "LGSA": {
+    "lat": 35.531207,
+    "lon": 24.150673,
+    "name": "Chania International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "GR",
+    "aircraft_marker": "airliner"
+  },
+  "LRTR": {
+    "lat": 45.809898,
+    "lon": 21.3379,
+    "name": "Timișoara Traian Vuia International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "RO",
+    "aircraft_marker": "airliner"
+  },
+  "LTAC": {
+    "lat": 40.128101,
+    "lon": 32.995098,
+    "name": "Esenboğa International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "TR",
+    "aircraft_marker": "airliner"
+  },
+  "LTBJ": {
+    "lat": 38.2924,
+    "lon": 27.157,
+    "name": "Adnan Menderes International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "TR",
+    "aircraft_marker": "airliner"
+  },
+  "LTBS": {
+    "lat": 36.7131,
+    "lon": 28.7925,
+    "name": "Dalaman International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "TR",
+    "aircraft_marker": "airliner"
+  },
+  "LWOH": {
+    "lat": 41.18,
+    "lon": 20.7423,
+    "name": "Ohrid St. Paul the Apostle Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "MK",
+    "aircraft_marker": "airliner"
+  },
+  "LWSK": {
+    "lat": 41.958087,
+    "lon": 21.622581,
+    "name": "Skopje International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "MK",
+    "aircraft_marker": "airliner"
+  },
+  "MMOX": {
+    "lat": 16.998773,
+    "lon": -96.726092,
+    "name": "Xoxocotlán International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "MX",
+    "aircraft_marker": "airliner"
+  },
+  "MWCR": {
+    "lat": 19.292801,
+    "lon": -81.357697,
+    "name": "Owen Roberts International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "KY",
+    "aircraft_marker": "airliner"
+  },
+  "OIAW": {
+    "lat": 31.3364,
+    "lon": 48.763789,
+    "name": "Qasem Soleimani International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "IR",
+    "aircraft_marker": "airliner"
+  },
+  "SKAR": {
+    "lat": 4.45278,
+    "lon": -75.7664,
+    "name": "El Eden Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "CO",
+    "aircraft_marker": "airliner"
   }
 }

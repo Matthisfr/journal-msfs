@@ -1,103 +1,88 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-11-05T13:09:14.490065+00:00",
+  "retrieved_at": "2026-11-05T18:54:02.614404+00:00",
   "origin": {
-    "icao": "OPKC",
-    "name": "JINNAH INTL"
+    "icao": "MUHA",
+    "name": "JOSE MARTI INTL"
   },
   "destination": {
-    "icao": "VIDP",
-    "name": "INDIRA GANDHI INTL"
+    "icao": "MKJS",
+    "name": "SANGSTER INTL"
   },
   "flight_number": "2809",
   "aircraft": "A320",
-  "route": "BADU1D BADUL J112 RK G202 MERUN G452 LKA LKA7A",
-  "altitude": "37000",
-  "enroute_time": "01:33:13",
-  "scheduled_departure": "2026-11-03T14:00:00Z",
-  "scheduled_arrival": "2026-11-03T16:00:00Z",
-  "generated_at": "2026-11-03T13:29:19Z",
+  "route": "KAVU6A UCL G442 ADSEL LENAR7",
+  "altitude": "23000",
+  "enroute_time": "01:05:07",
+  "scheduled_departure": "2026-11-05T17:10:00Z",
+  "scheduled_arrival": "2026-11-05T18:45:00Z",
+  "generated_at": "2026-11-05T16:41:44Z",
   "route_points": [
     {
-      "lat": 25.104167,
-      "lon": 67.358333,
-      "name": "KC509"
+      "lat": 23.056111,
+      "lon": -82.112778,
+      "name": "KAVUL"
     },
     {
-      "lat": 25.228889,
-      "lon": 67.473611,
-      "name": "BADUL"
-    },
-    {
-      "lat": 26.216758,
-      "lon": 68.385469,
-      "name": "NH"
-    },
-    {
-      "lat": 26.605556,
-      "lon": 68.716667,
-      "name": "BIMLA"
-    },
-    {
-      "lat": 27.055826,
-      "lon": 69.101515,
+      "lat": 22.244037,
+      "lon": -81.786562,
       "name": "TOC"
     },
     {
-      "lat": 27.266944,
-      "lon": 69.283333,
-      "name": "ZOHAR"
+      "lat": 21.605019,
+      "lon": -81.532697,
+      "name": "UCL"
     },
     {
-      "lat": 28.366528,
-      "lon": 70.273167,
-      "name": "RK"
+      "lat": 21.068611,
+      "lon": -80.894722,
+      "name": "UDNET"
     },
     {
-      "lat": 28.480556,
-      "lon": 72.248333,
-      "name": "MERUN"
+      "lat": 20.515556,
+      "lon": -80.238056,
+      "name": "IBSEN"
     },
     {
-      "lat": 28.189006,
-      "lon": 74.1113,
-      "name": "LKA"
+      "lat": 20.0,
+      "lon": -79.638333,
+      "name": "KATAL"
     },
     {
-      "lat": 28.220807,
-      "lon": 75.603932,
+      "lat": 19.881111,
+      "lon": -79.5,
+      "name": "ILATA"
+    },
+    {
+      "lat": 19.421111,
+      "lon": -78.970556,
+      "name": "ALORA"
+    },
+    {
+      "lat": 19.183589,
+      "lon": -78.698519,
       "name": "TOD"
     },
     {
-      "lat": 28.227333,
-      "lon": 76.063481,
-      "name": "ERVIX"
+      "lat": 18.952222,
+      "lon": -78.434722,
+      "name": "ADSEL"
     },
     {
-      "lat": 28.520472,
-      "lon": 76.728714,
-      "name": "FS817"
+      "lat": 18.649086,
+      "lon": -78.091206,
+      "name": "D321M"
     },
     {
-      "lat": 28.469844,
-      "lon": 76.966417,
-      "name": "DP502"
+      "lat": 18.418611,
+      "lon": -78.096667,
+      "name": "LENAR"
     },
     {
-      "lat": 28.44585,
-      "lon": 77.078094,
-      "name": "DP503"
-    },
-    {
-      "lat": 28.401619,
-      "lon": 77.283033,
-      "name": "FS711"
-    },
-    {
-      "lat": 28.568611,
-      "lon": 77.112222,
-      "name": "VIDP"
+      "lat": 18.503669,
+      "lon": -77.913389,
+      "name": "MKJS"
     }
   ]
 }

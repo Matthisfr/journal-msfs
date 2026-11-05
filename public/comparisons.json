@@ -1002,22 +1002,22 @@
       {
         "publisher": "MK-STUDIOS",
         "installed": "2.0.1",
-        "url": "",
-        "image": "",
-        "image_checked": false,
+        "url": "https://contrail.shop/products/mkstudios-gcts-tenerife-south-airport-v2-msfs2024",
+        "image": "https://contrail.shop/cdn/shop/files/mkgcts_thumb_3ccc1f1c-0e35-4aec-8c1d-b4e8ed2d0a89_1200x1200.png?v=1787596699",
+        "image_checked": true,
         "comparison": "",
-        "server_version": "",
+        "server_version": "2.0.1",
         "version_state": "À vérifier"
       },
       {
         "publisher": "Sim-wings",
         "installed": "1.4.0",
-        "url": "",
-        "image": "",
-        "image_checked": false,
-        "comparison": "",
-        "server_version": "",
-        "version_state": "À vérifier"
+        "url": "https://contrail.shop/products/gcts-tenerife-south-airport",
+        "image": "https://contrail.shop/cdn/shop/products/thumb_e8525d76-9dfb-42ea-a2f3-1e64174838a9_1200x1200.jpg?v=1674667936",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.4.0",
+        "version_state": "À jour"
       }
     ],
     "winner": "Non déterminé",
@@ -1753,6 +1753,36 @@
         "À vérifier"
       ]
     ]
+  },
+  {
+    "code": "LTBS",
+    "name": "LTBS Dalaman International Airport",
+    "scenes": [
+      {
+        "publisher": "JUSTSIM",
+        "installed": "1.0.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "MM SIMULATIONS",
+        "installed": "1.7.0",
+        "url": "https://contrail.shop/products/ltbs-dalaman-intl-msfs",
+        "image": "https://contrail.shop/cdn/shop/files/thumb_f9e855fc-a33c-4bb4-967a-e719c99211e9_1200x1200.jpg?v=1769416457",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.7.0",
+        "version_state": "À jour"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
   },
   {
     "code": "LTFJ",
