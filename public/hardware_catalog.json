@@ -108,15 +108,6 @@
     "photo_status": "pending"
   },
   {
-    "id": "s3",
-    "name": "S3 / santiluib3 — modules cockpit A320",
-    "ownership": "Veille matériel",
-    "image_query": "santiluib3 S3 Airbus A320 cockpit modules hardware",
-    "official_url": "https://santiluib3.com/",
-    "photo_source": "santiluib3.com",
-    "photo_status": "pending"
-  },
-  {
     "id": "sidestick-metal",
     "name": "32 Sidestick Controller Metal 2 (Airbus)",
     "ownership": "Veille matériel",
