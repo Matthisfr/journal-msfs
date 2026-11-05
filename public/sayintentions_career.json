@@ -14,7 +14,7 @@
     {
       "id": "IFR-884166837",
       "aircraft": "F-FENX",
-      "when": "11 hours ago",
+      "when": "12 hours ago",
       "origin": "MUHA",
       "destination": "MKJS",
       "rules": "IFR",
@@ -102,7 +102,7 @@
       "duration": "3h 18m"
     }
   ],
-  "flights_checked_at": "2026-11-05T21:41:37.703096+00:00",
-  "verified_at": "2026-11-05T21:41:37.703096+00:00",
-  "checked_at": "2026-11-05T21:41:37.703096+00:00"
+  "flights_checked_at": "2026-11-05T22:20:32.781532+00:00",
+  "verified_at": "2026-11-05T22:20:32.781532+00:00",
+  "checked_at": "2026-11-05T22:20:32.781532+00:00"
 }

@@ -790,6 +790,36 @@
     "criteria": []
   },
   {
+    "code": "EDDC",
+    "name": "atelic-eddc-dresden",
+    "scenes": [
+      {
+        "publisher": "atelic",
+        "installed": "1.0.0",
+        "url": "https://contrail.shop/products/atelic-eddc-dresden-airport-msfs-2020-2024",
+        "image": "https://contrail.shop/cdn/shop/files/thumb_ce0c7b23-fed4-4308-a9c7-10a450774707_1200x1200.jpg?v=1774289711",
+        "image_checked": true,
+        "comparison": "",
+        "server_version": "1.0.0",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "JUSTSIM",
+        "installed": "1.1.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
     "code": "EDDL",
     "name": "Aerosoft Dusseldorf Airport",
     "scenes": [
@@ -834,6 +864,36 @@
         "Avis partagés"
       ]
     ]
+  },
+  {
+    "code": "EDDN",
+    "name": "Captain7_EDDN",
+    "scenes": [
+      {
+        "publisher": "LimeSim",
+        "installed": "1.1.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "Freds Airports",
+        "installed": "1.2.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
   },
   {
     "code": "EGCC",
@@ -988,6 +1048,36 @@
         "comparison": "equal",
         "server_version": "1.0.2",
         "version_state": "À jour"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
+    "code": "EKBI",
+    "name": "EKBI Billund Airport",
+    "scenes": [
+      {
+        "publisher": "SimNord",
+        "installed": "1.7.2",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "Taimodels",
+        "installed": "1.0.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
       }
     ],
     "winner": "Non déterminé",
@@ -1647,6 +1737,66 @@
         "Non mesurées"
       ]
     ]
+  },
+  {
+    "code": "EPSC",
+    "name": "EPSC Szczecin Airport MSFS",
+    "scenes": [
+      {
+        "publisher": "Drzewiecki Design",
+        "installed": "1.0.0",
+        "url": "https://contrail.shop/products/drzewiecki-epsc-szczecin-airport-msfs-2020-2024",
+        "image": "https://contrail.shop/cdn/shop/files/thumb_d39ca6fe-6cdf-4838-89a3-311f1b0a30ae_1200x1200.jpg?v=1774897623",
+        "image_checked": true,
+        "comparison": "",
+        "server_version": "1.0.0",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "Papa Delta Studio",
+        "installed": "3.0.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
+    "code": "EPWR",
+    "name": "EPWR Wroclaw Copernicus Airport",
+    "scenes": [
+      {
+        "publisher": "Drzewiecki Design",
+        "installed": "1.3.0",
+        "url": "https://secure.simmarket.com/drzewiecki-design-epwr-wroclaw-msfs.phtml",
+        "image": "https://secure.simmarket.com/images/products/5/5a/18324/EPWR_MSFS_ICON.jpg",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.3",
+        "version_state": "À jour"
+      },
+      {
+        "publisher": "FL2",
+        "installed": "2.1.0",
+        "url": "https://secure.simmarket.com/fly-2-high-epwr-copernicus-airport-wroclaw-msfs.phtml",
+        "image": "https://secure.simmarket.com/images/products/3/37/17014/EPWR_COVER.png",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "2.1.0",
+        "version_state": "À jour"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
   },
   {
     "code": "LPMA",

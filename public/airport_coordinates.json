@@ -3078,5 +3078,93 @@
     "source": "OurAirports / airport-codes",
     "country_code": "TW",
     "aircraft_marker": "airliner"
+  },
+  "EDDC": {
+    "lat": 51.134123,
+    "lon": 13.767831,
+    "name": "Dresden Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "DE",
+    "aircraft_marker": "airliner"
+  },
+  "EDDN": {
+    "lat": 49.498699,
+    "lon": 11.078056,
+    "name": "Nuremberg Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "DE",
+    "aircraft_marker": "airliner"
+  },
+  "EDFH": {
+    "lat": 49.946353,
+    "lon": 7.261734,
+    "name": "Frankfurt-Hahn Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "DE",
+    "aircraft_marker": "airliner"
+  },
+  "EHBK": {
+    "lat": 50.911087,
+    "lon": 5.769401,
+    "name": "Maastricht Aachen Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NL",
+    "aircraft_marker": "airliner"
+  },
+  "EKBI": {
+    "lat": 55.740335,
+    "lon": 9.157019,
+    "name": "Billund Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "DK",
+    "aircraft_marker": "airliner"
+  },
+  "ENCN": {
+    "lat": 58.204201,
+    "lon": 8.08537,
+    "name": "Kristiansand Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NO",
+    "aircraft_marker": "airliner"
+  },
+  "EPSC": {
+    "lat": 53.584702,
+    "lon": 14.9022,
+    "name": "Solidarity Szczecin–Goleniów Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "PL",
+    "aircraft_marker": "airliner"
+  },
+  "EPWR": {
+    "lat": 51.103719,
+    "lon": 16.882096,
+    "name": "Copernicus Wrocław Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "PL",
+    "aircraft_marker": "airliner"
+  },
+  "ESOW": {
+    "lat": 59.589401,
+    "lon": 16.6336,
+    "name": "Stockholm Västerås Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "SE",
+    "aircraft_marker": "airliner"
+  },
+  "LIRQ": {
+    "lat": 43.808558,
+    "lon": 11.202822,
+    "name": "Florence Airport, Peretola",
+    "source": "OurAirports / airport-codes",
+    "country_code": "IT",
+    "aircraft_marker": "cessna"
+  },
+  "LZIB": {
+    "lat": 48.1702,
+    "lon": 17.2127,
+    "name": "M. R. Štefánik Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "SK",
+    "aircraft_marker": "airliner"
   }
 }

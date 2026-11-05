@@ -87,42 +87,6 @@
     ]
   },
   {
-    "icao": "EDDC",
-    "name": "Dresden Airport",
-    "lat": 51.13412,
-    "lon": 13.76783,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/atelic-eddc-dresden-airport-msfs-2020-2024",
-        "price_type": "Payant",
-        "product_title": "EDDC - Dresden Airport MSFS20/24"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/atelic-dresden-eddc-msfs",
-        "price_type": "Payant",
-        "product_title": "Atelic Dresden (EDDC) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "EDDN",
-    "name": "Nuremberg Airport",
-    "lat": 49.4987,
-    "lon": 11.07806,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/eddn-nuremberg-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "EDDN - Nuremberg Airport MSFS"
-      }
-    ]
-  },
-  {
     "icao": "EDEH",
     "name": "Herrenteich Airfield",
     "lat": 49.345,
@@ -155,27 +119,6 @@
         "url": "https://inibuilds.com/products/v-pilot-designs-el-eden-skar-msfs-2024",
         "price_type": "Payant",
         "product_title": "V Pilot Designs El Eden (SKAR) for MSFS-2024"
-      }
-    ]
-  },
-  {
-    "icao": "EDFH",
-    "name": "Frankfurt-Hahn Airport",
-    "lat": 49.94635,
-    "lon": 7.26173,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/mm-simulations-edfh-frankfurt-hahn-airport-msfs-2020-2024",
-        "price_type": "Payant",
-        "product_title": "EDFH - Frankfurt-Hahn Airport MSFS20/24"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/mm-simulations-frankfurt-hahn-edfh-msfs",
-        "price_type": "Payant",
-        "product_title": "M'M Simulations Frankfurt Hahn (EDFH) for MSFS"
       }
     ]
   },
@@ -600,42 +543,6 @@
     ]
   },
   {
-    "icao": "EHBK",
-    "name": "Maastricht Aachen Airport",
-    "lat": 50.91109,
-    "lon": 5.7694,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/st-simulations-ehbk-maastricht-aachen-airport",
-        "price_type": "Payant",
-        "product_title": "EHBK - Maastricht Aachen Airport"
-      }
-    ]
-  },
-  {
-    "icao": "EKBI",
-    "name": "Billund Airport",
-    "lat": 55.74034,
-    "lon": 9.15702,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/taimodels-ekbi-billund-airport-msfs2020-2024",
-        "price_type": "Payant",
-        "product_title": "EKBI - Billund Airport MSFS20/24"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/taimodels-billund-ekbi-msfs",
-        "price_type": "Payant",
-        "product_title": "TaiModels Billund (EKBI) for MSFS"
-      }
-    ]
-  },
-  {
     "icao": "ENBR",
     "name": "Bergen Airport, Flesland",
     "lat": 60.2934,
@@ -653,27 +560,6 @@
         "url": "https://inibuilds.com/products/salvuz-bergen-flesland-enbr-msfs-2024",
         "price_type": "Payant",
         "product_title": "Salvuz Bergen Flesland (ENBR) for MSFS-2024"
-      }
-    ]
-  },
-  {
-    "icao": "ENCN",
-    "name": "Kristiansand Airport",
-    "lat": 58.2042,
-    "lon": 8.08537,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/gaya-encn-kristiansand-airport-msfs2020",
-        "price_type": "Payant",
-        "product_title": "ENCN - Kristiansand Airport MSFS20"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/gaya-simulations-kristiansand-encn-msfs",
-        "price_type": "Payant",
-        "product_title": "Gaya Simulations Kristiansand (ENCN) for MSFS"
       }
     ]
   },
@@ -731,69 +617,6 @@
         "url": "https://inibuilds.com/products/drzewiecki-design-katowice-epkt-msfs",
         "price_type": "Payant",
         "product_title": "Drzewiecki Design Katowice (EPKT) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "EPSC",
-    "name": "Solidarity Szczecin–Goleniów Airport",
-    "lat": 53.5847,
-    "lon": 14.9022,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/drzewiecki-epsc-szczecin-airport-msfs-2020-2024",
-        "price_type": "Payant",
-        "product_title": "EPSC - Szczecin Airport MSFS20/24"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/drzewiecki-design-szczecin-epsc-msfs",
-        "price_type": "Payant",
-        "product_title": "Drzewiecki Design Szczecin (EPSC) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "EPWR",
-    "name": "Copernicus Wrocław Airport",
-    "lat": 51.10372,
-    "lon": 16.8821,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/epwr-wroclaw-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "EPWR - Wroclaw Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/drzewiecki-design-wroclaw-epwr-msfs",
-        "price_type": "Payant",
-        "product_title": "Drzewiecki Design Wroclaw (EPWR) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "ESOW",
-    "name": "Stockholm Västerås Airport",
-    "lat": 59.5894,
-    "lon": 16.6336,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/mxi-design-esow-stockholm-vasteras-airport-msfs-2020-2024",
-        "price_type": "Payant",
-        "product_title": "ESOW - Stockholm Västerås Airport MSFS20/24"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/mxi-design-stockholm-vasteras-esow-msfs",
-        "price_type": "Payant",
-        "product_title": "MXI Design Stockholm Vasteras (ESOW) for MSFS"
       }
     ]
   },
@@ -1161,27 +984,6 @@
     ]
   },
   {
-    "icao": "LIRQ",
-    "name": "Florence Airport, Peretola",
-    "lat": 43.80856,
-    "lon": 11.20282,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/gaya-lirq-florence-msfs2020",
-        "price_type": "Payant",
-        "product_title": "LIRQ - Florence Airport MSFS20"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/gaya-simulations-florence-lirq-msfs",
-        "price_type": "Payant",
-        "product_title": "Gaya Simulations Florence (LIRQ) for MSFS"
-      }
-    ]
-  },
-  {
     "icao": "LJBO",
     "name": "Bovec Airfield",
     "lat": 46.32902,
@@ -1403,27 +1205,6 @@
         "url": "https://contrail.shop/products/ltaf-adana-sakirpasa-airport",
         "price_type": "Payant",
         "product_title": "LTAF - Adana Sakirpasa Airport MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LZIB",
-    "name": "M. R. Štefánik Airport",
-    "lat": 48.1702,
-    "lon": 17.2127,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/lzib-bratislava-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "LZIB - Bratislava Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/flying-partners-slovakia-bratislava-lzib-for-msfs",
-        "price_type": "Payant",
-        "product_title": "Flying Partners Slovakia Bratislava (LZIB) for MSFS"
       }
     ]
   },
