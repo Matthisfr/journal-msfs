@@ -66,6 +66,47 @@ class Links(HTMLParser):
             self.links.append((self.href," ".join(self.text).strip()))
             self.href=None
 
+def fetch_catalog():
+    """Catalogue Shopify paginé, sans se limiter aux liens de l'accueil."""
+    found={}
+    for page in range(1,31):
+        endpoint=urljoin(SITE,f"products.json?limit=250&page={page}")
+        request=Request(endpoint,headers={"User-Agent":"Mozilla/5.0 (compatible; JournalMSFS/1.0)","Accept":"application/json"})
+        with urlopen(request,timeout=35) as response:
+            batch=json.load(response).get("products",[])
+        if not batch:break
+        for item in batch:
+            title=str(item.get("title") or "").strip()
+            handle=str(item.get("handle") or "").strip()
+            desc=re.sub(r"<[^>]+>"," ",str(item.get("body_html") or ""))
+            tags=item.get("tags") or []
+            if isinstance(tags,list):tags=" ".join(map(str,tags))
+            corpus=" ".join([title,handle,str(item.get("product_type") or ""),str(tags),desc[:300]])
+            if EXCLUDE.search(title+" "+handle):continue
+            # S3 est un fabricant Airbus : conserver les composants même sans A320 dans le titre.
+            if not AIRBUS.search(corpus) and not re.search(r"panel|switch|button|knob|rotary|encoder|light|dimmer|mount|board|kit|gauge|module|cockpit|display|screen|throttle|quadrant|lever|handle|printable|download",corpus,re.I):continue
+            if not handle:continue
+            url=urljoin(SITE,"products/"+handle)
+            images=item.get("images") or []
+            featured=item.get("image") or (images[0] if images else {})
+            raw_image=featured.get("src","") if isinstance(featured,dict) else str(featured)
+            variants=item.get("variants") or []
+            prices=[]
+            for v in variants:
+                try:prices.append(float(v["price"]))
+                except (KeyError,TypeError,ValueError):pass
+            found[url]={
+                "id":url,"title":title,"url":url,
+                "image_url":urljoin(SITE,raw_image) if raw_image else "",
+                "price":min(prices) if prices else None,
+                "currency":"",
+                "availability":"Disponible" if any(v.get("available") for v in variants) else "Indisponible",
+                "published_at":item.get("published_at"),
+                "updated_at":item.get("updated_at"),
+            }
+        if len(batch)<250:break
+    return list(found.values())
+
 def main():
     previous={}
     if OUT.exists():
@@ -73,36 +114,17 @@ def main():
         except (ValueError,OSError):pass
     now=dt.datetime.now(dt.timezone.utc).isoformat()
     try:
-        request=Request(SITE,headers={"User-Agent":"Mozilla/5.0 (compatible; JournalMSFS/1.0)"})
-        with urlopen(request,timeout=25) as response:
-            html=response.read(2_000_000).decode("utf-8","replace")
-        parser=Links()
-        parser.feed(html)
-        products=[]
-        seen=set()
-        for href,title in parser.links:
-            url=urljoin(SITE,href)
-            host=urlparse(url).hostname or ""
-            if not (host=="santiluib3.com" or host.endswith(".santiluib3.com")):continue
-            if "/products/" not in urlparse(url).path:continue
-            if not AIRBUS.search(title+" "+url) or EXCLUDE.search(title+" "+url):continue
-            if url in seen or not title or len(title)>150:continue
-            seen.add(url)
-            products.append({"id":url,"title":title,"url":url,"image_url":"","price":None,"currency":"","availability":"À confirmer sur la fiche officielle","published_at":None})
-        for product in products:
-            details=product_details(product["url"])
-            product.update({k:v for k,v in details.items() if v is not None and v!=""})
-        if not products:
-            raise ValueError("Aucune fiche Airbus identifiable automatiquement sur la page officielle")
+        products=fetch_catalog()
+        if not products:raise ValueError("Catalogue Shopify vide ou inaccessible")
         before={x["id"]:x for x in previous.get("products",[])}
         changes=[x for x in products if x["id"] not in before]
-        data={"checked_at":now,"source_url":SITE,"source_state":"ok","products":products,"changes":changes}
-        print(f"S3 Airbus: {len(products)} liens Airbus, {len(changes)} nouveaux")
+        data={"checked_at":now,"source_url":SITE,"source_state":"ok","products":products,"changes":changes,"total":len(products)}
+        print(f"S3 Airbus: {len(products)} produits, {len(changes)} nouvelles fiches")
     except Exception as exc:
         data={**previous,"checked_at":now,"source_url":SITE,"source_state":"unavailable","error":str(exc)[:200]}
         data.setdefault("products",[])
         data.setdefault("changes",[])
-        print("S3 Airbus: collecte non confirmée, anciennes données conservées:",exc)
+        print("S3 Airbus: catalogue non confirmé, anciennes données conservées:",exc)
     OUT.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 
 if __name__=="__main__":
