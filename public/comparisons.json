@@ -390,6 +390,36 @@
     "criteria": []
   },
   {
+    "code": "KMSY",
+    "name": "KMSY",
+    "scenes": [
+      {
+        "publisher": "inibuilds",
+        "installed": "1.0.0",
+        "url": "https://inibuilds.com/products/inibuilds-new-orleans-kmsy-msfs-2024",
+        "image": "",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.0.0",
+        "version_state": "À jour"
+      },
+      {
+        "publisher": "lvfr",
+        "installed": "1.0.7",
+        "url": "https://contrail.shop/products/kmsy-new-orleans-intl",
+        "image": "https://contrail.shop/cdn/shop/products/thumb_69b61627-6cc0-4ac0-8216-59293d30783b_1200x1200.jpg?v=1674666388",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.0.7",
+        "version_state": "À jour"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
     "code": "KPVD",
     "name": "TF Green Intl Airport",
     "scenes": [
@@ -928,6 +958,36 @@
         "comparison": "equal",
         "server_version": "1.8",
         "version_state": "À jour"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
+    "code": "EGGP",
+    "name": "EGGP Liverpool Airport",
+    "scenes": [
+      {
+        "publisher": "DigitalDesign",
+        "installed": "1.5.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "inibuilds",
+        "installed": "1.0.4",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
       }
     ],
     "winner": "Non déterminé",
@@ -1737,6 +1797,66 @@
         "Non mesurées"
       ]
     ]
+  },
+  {
+    "code": "ENBR",
+    "name": "Bergen",
+    "scenes": [
+      {
+        "publisher": "Unai",
+        "installed": "1.2.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "Salvuz",
+        "installed": "2.0.3",
+        "url": "https://secure.simmarket.com/salvuz-enbr-bergen-flesland-airport-msfs24.phtml",
+        "image": "https://secure.simmarket.com/images/products/5/5e/19842/Testo_del_paragrafo.png",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "2.0.3",
+        "version_state": "À jour"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
+    "code": "EGFF",
+    "name": "EGFF Cardiff Airport",
+    "scenes": [
+      {
+        "publisher": "SoFly",
+        "installed": "1.2.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "UK2000 Scenery",
+        "installed": "1.4.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
   },
   {
     "code": "EPSC",

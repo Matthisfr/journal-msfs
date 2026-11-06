@@ -456,150 +456,6 @@
     ]
   },
   {
-    "icao": "EGAA",
-    "name": "Belfast International Airport",
-    "lat": 54.6575,
-    "lon": -6.21583,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/egaa-belfast-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "EGAA - Belfast Airport MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "EGFF",
-    "name": "Cardiff International Airport",
-    "lat": 51.3967,
-    "lon": -3.34333,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/sofly-egff-cardiff-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "EGFF - Cardiff Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/sofly-cardiff-egff-xp12",
-        "price_type": "Payant",
-        "product_title": "SoFly Cardiff (EGFF)"
-      }
-    ]
-  },
-  {
-    "icao": "EGGP",
-    "name": "Liverpool John Lennon Airport",
-    "lat": 53.33486,
-    "lon": -2.84964,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/eggp-liverpool-john-lennon-airport",
-        "price_type": "Payant",
-        "product_title": "EGGP - Liverpool John Lennon Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/inibuilds-liverpool-eggp-msfs-2024",
-        "price_type": "Payant",
-        "product_title": "iniBuilds Liverpool (EGGP) for MSFS-2024"
-      }
-    ]
-  },
-  {
-    "icao": "EGNX",
-    "name": "East Midlands Airport",
-    "lat": 52.8311,
-    "lon": -1.32806,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/egnx-east-midlands-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "EGNX - East Midlands Airport MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "EGPH",
-    "name": "Edinburgh Airport",
-    "lat": 55.95014,
-    "lon": -3.37229,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/pyreegue-egph-edinburgh-airport-v2-msfs",
-        "price_type": "Payant",
-        "product_title": "EGPH - Edinburgh Airport II MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "ENBR",
-    "name": "Bergen Airport, Flesland",
-    "lat": 60.2934,
-    "lon": 5.21814,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/enbr-bergen-flesland-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "ENBR - Bergen Flesland Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/salvuz-bergen-flesland-enbr-msfs-2024",
-        "price_type": "Payant",
-        "product_title": "Salvuz Bergen Flesland (ENBR) for MSFS-2024"
-      }
-    ]
-  },
-  {
-    "icao": "ENVA",
-    "name": "Trondheim Airport, Værnes",
-    "lat": 63.4578,
-    "lon": 10.924,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/enva-trondheim-vaernes",
-        "price_type": "Payant",
-        "product_title": "ENVA - Trondheim-Vaernes Intl. MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "EPKK",
-    "name": "Kraków John Paul II International Airport",
-    "lat": 50.0777,
-    "lon": 19.7848,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/drzewiecki-design-epkk-krakow-airport-v2-msfs",
-        "price_type": "Payant",
-        "product_title": "EPKK - Kraków Airport v2 MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/drzewiecki-design-krakow-v2-epkk-msfs",
-        "price_type": "Payant",
-        "product_title": "Drzewiecki Design Krakow V2 (EPKK) for MSFS"
-      }
-    ]
-  },
-  {
     "icao": "EPKT",
     "name": "Katowice Wojciech Korfanty International Airport",
     "lat": 50.47601,
@@ -891,21 +747,6 @@
     ]
   },
   {
-    "icao": "LEMH",
-    "name": "Menorca Airport",
-    "lat": 39.8626,
-    "lon": 4.21865,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/lemh-menorca-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "LEMH - Menorca Airport MSFS"
-      }
-    ]
-  },
-  {
     "icao": "LEMY",
     "name": "Aeródromo de Royanejos",
     "lat": 38.97992,
@@ -938,27 +779,6 @@
         "url": "https://inibuilds.com/products/mm-simulations-kalymnos-lgky-msfs",
         "price_type": "Payant",
         "product_title": "M'M Simulations Kalymnos (LGKY) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LIME",
-    "name": "Il Caravaggio International Airport",
-    "lat": 45.66936,
-    "lon": 9.70885,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/lime-bergamo-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "LIME - Bergamo Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/barelli-msfs-addons-milan-bergamo-lime-for-msfs-2020",
-        "price_type": "Payant",
-        "product_title": "Barelli MSFS Addons Milan Bergamo (LIME) for MSFS-2020"
       }
     ]
   },

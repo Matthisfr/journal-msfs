@@ -3166,5 +3166,85 @@
     "source": "OurAirports / airport-codes",
     "country_code": "SK",
     "aircraft_marker": "airliner"
+  },
+  "EGAA": {
+    "lat": 54.6575012207,
+    "lon": -6.2158298492399995,
+    "name": "Belfast International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "GB",
+    "aircraft_marker": "airliner"
+  },
+  "EGFF": {
+    "lat": 51.396702,
+    "lon": -3.34333,
+    "name": "Cardiff International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "GB",
+    "aircraft_marker": "airliner"
+  },
+  "EGGP": {
+    "lat": 53.334863,
+    "lon": -2.849637,
+    "name": "Liverpool John Lennon Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "GB",
+    "aircraft_marker": "airliner"
+  },
+  "EGNX": {
+    "lat": 52.8311,
+    "lon": -1.32806,
+    "name": "East Midlands Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "GB",
+    "aircraft_marker": "airliner"
+  },
+  "EGPH": {
+    "lat": 55.950145,
+    "lon": -3.372288,
+    "name": "Edinburgh Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "GB",
+    "aircraft_marker": "airliner"
+  },
+  "ENBR": {
+    "lat": 60.2934,
+    "lon": 5.21814,
+    "name": "Bergen Airport, Flesland",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NO",
+    "aircraft_marker": "airliner"
+  },
+  "ENVA": {
+    "lat": 63.457802,
+    "lon": 10.924,
+    "name": "Trondheim Airport, Værnes",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NO",
+    "aircraft_marker": "airliner"
+  },
+  "EPKK": {
+    "lat": 50.077702,
+    "lon": 19.7848,
+    "name": "Kraków John Paul II International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "PL",
+    "aircraft_marker": "airliner"
+  },
+  "LEMH": {
+    "lat": 39.862598,
+    "lon": 4.21865,
+    "name": "Menorca Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "ES",
+    "aircraft_marker": "airliner"
+  },
+  "LIME": {
+    "lat": 45.669362,
+    "lon": 9.708851,
+    "name": "Il Caravaggio International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "IT",
+    "aircraft_marker": "airliner"
   }
 }
