@@ -150,7 +150,7 @@ def parse(book):
     records.append(dict(base,icao=secondary,original=secondary,name=secondary+" — "+base["name"],pack_primary_icao=code,pack_secondary=True))
  return records
 def merge(records,old):
- by_folder={norm(a.get("folder")):a for a in old if a.get("folder")}
+ by_folder={(norm(a.get("folder")),a.get("icao")):a for a in old if a.get("folder")}
  by_identity={(a.get("icao"),norm(a.get("name")),norm(a.get("publisher"))):a for a in old}
  output=[]
  seen={}
@@ -165,7 +165,7 @@ def merge(records,old):
    duplicates+=1
    continue
   seen[key]=rec
-  previous=by_folder.get(norm(rec["folder"])) if rec["folder"] else None
+  previous=by_folder.get((norm(rec["folder"]),rec["icao"])) if rec["folder"] else None
   if previous is None: previous=by_identity.get((rec["icao"],norm(rec["name"]),norm(rec.get("publisher"))))
   entry=dict(previous or {})
   entry.update({k:v for k,v in rec.items() if v or k in ("icao","original","installed","description")})
