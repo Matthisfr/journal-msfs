@@ -48,7 +48,7 @@ def extract_icao_codes(value):
  if re.fullmatch(r"[A-Z0-9]{4}",raw):
   return [CORRECTIONS.get(raw,raw)]
  # Only a clearly delimited list; never harvest four-letter words from names.
- if not re.fullmatch(r"[A-Z0-9]{4}(?:\\s*(?:[,;/+&]|\\bAND\\b|\\bET\\b)\\s*[A-Z0-9]{4})+",raw):
+ if not re.fullmatch(r"[A-Z0-9]{4}(?:\s*(?:[,;/+&]|\bAND\b|\bET\b)\s*[A-Z0-9]{4})+",raw):
   return []
  return list(dict.fromkeys(CORRECTIONS.get(c,c) for c in re.findall(r"[A-Z0-9]{4}",raw) if c not in ("2020","2024")))
 
@@ -56,7 +56,7 @@ def associated_airport_codes(code,name,folder,description=""):
  # Only airport codes explicitly grouped in a scene title, folder or description.
  # Do not invent secondary airports based on geographical proximity.
  text=" ".join(str(v or "") for v in (name,folder,description)).upper()
- groups=re.findall(r"(?<![A-Z0-9])(?:[A-Z0-9]{4}\\s*(?:[,;/+&]|\\bAND\\b|\\bET\\b)\\s*)+[A-Z0-9]{4}(?![A-Z0-9])",text)
+ groups=re.findall(r"(?<![A-Z0-9])(?:[A-Z0-9]{4}\s*(?:[,;/+&]|\bAND\b|\bET\b)\s*)+[A-Z0-9]{4}(?![A-Z0-9])",text)
  found=[]
  for group in groups:
   for secondary in extract_icao_codes(group):
