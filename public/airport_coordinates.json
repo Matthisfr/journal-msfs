@@ -3254,5 +3254,397 @@
     "source": "OurAirports / airport-codes",
     "country_code": "DE",
     "aircraft_marker": "airliner"
+  },
+  "CZBA": {
+    "lat": 43.441453,
+    "lon": -79.850103,
+    "name": "Burlington Executive Airpark",
+    "source": "OurAirports / airport-codes",
+    "country_code": "CA",
+    "aircraft_marker": "cessna"
+  },
+  "DATG": {
+    "lat": 19.560518,
+    "lon": 5.749326,
+    "name": "In Guezzam Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "DZ",
+    "aircraft_marker": "cessna"
+  },
+  "EDWE": {
+    "lat": 53.391109,
+    "lon": 7.2275,
+    "name": "Emden Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "DE",
+    "aircraft_marker": "cessna"
+  },
+  "EDWG": {
+    "lat": 53.782544,
+    "lon": 7.919584,
+    "name": "Wangerooge Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "DE",
+    "aircraft_marker": "cessna"
+  },
+  "EDWJ": {
+    "lat": 53.681421,
+    "lon": 7.056398,
+    "name": "Juist Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "DE",
+    "aircraft_marker": "cessna"
+  },
+  "EDWL": {
+    "lat": 53.742379,
+    "lon": 7.496345,
+    "name": "Langeoog Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "DE",
+    "aircraft_marker": "cessna"
+  },
+  "EDWQ": {
+    "lat": 53.03611,
+    "lon": 8.505556,
+    "name": "Ganderkesee Atlas Airfield",
+    "source": "OurAirports / airport-codes",
+    "country_code": "DE",
+    "aircraft_marker": "cessna"
+  },
+  "EDWR": {
+    "lat": 53.59639,
+    "lon": 6.709167,
+    "name": "Borkum Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "DE",
+    "aircraft_marker": "cessna"
+  },
+  "EDWS": {
+    "lat": 53.633057,
+    "lon": 7.190278,
+    "name": "Norden-Norddeich Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "DE",
+    "aircraft_marker": "cessna"
+  },
+  "EDWY": {
+    "lat": 53.706944,
+    "lon": 7.23,
+    "name": "Norderney Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "DE",
+    "aircraft_marker": "cessna"
+  },
+  "EDWZ": {
+    "lat": 53.72485,
+    "lon": 7.373257,
+    "name": "Baltrum Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "DE",
+    "aircraft_marker": "cessna"
+  },
+  "EDXB": {
+    "lat": 54.153332,
+    "lon": 8.901667,
+    "name": "Heide-Büsum Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "DE",
+    "aircraft_marker": "cessna"
+  },
+  "EGAR": {
+    "lat": -67.5675,
+    "lon": -68.127403,
+    "name": "Rothera Research Station",
+    "source": "OurAirports / airport-codes",
+    "country_code": "AQ",
+    "aircraft_marker": "cessna"
+  },
+  "EPKT": {
+    "lat": 50.476015,
+    "lon": 19.080705,
+    "name": "Katowice Wojciech Korfanty International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "PL",
+    "aircraft_marker": "airliner"
+  },
+  "FSIA": {
+    "lat": -4.67434,
+    "lon": 55.521801,
+    "name": "Seychelles International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "SC",
+    "aircraft_marker": "airliner"
+  },
+  "FSPP": {
+    "lat": -4.319256,
+    "lon": 55.691561,
+    "name": "Praslin Island Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "SC",
+    "aircraft_marker": "cessna"
+  },
+  "GCGM": {
+    "lat": 28.0296,
+    "lon": -17.2146,
+    "name": "La Gomera Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "ES",
+    "aircraft_marker": "cessna"
+  },
+  "KCDK": {
+    "lat": 29.134095,
+    "lon": -83.050783,
+    "name": "George T Lewis Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "cessna"
+  },
+  "KCDW": {
+    "lat": 40.875198364300005,
+    "lon": -74.2814025879,
+    "name": "Essex County Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "cessna"
+  },
+  "KRNT": {
+    "lat": 47.4930992126,
+    "lon": -122.216003418,
+    "name": "Renton Municipal Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "cessna"
+  },
+  "KTNP": {
+    "lat": 34.133901,
+    "lon": -115.947347,
+    "name": "Twentynine Palms Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "cessna"
+  },
+  "KTPF": {
+    "lat": 27.915599822998,
+    "lon": -82.44930267334,
+    "name": "Peter O Knight Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "cessna"
+  },
+  "LGKY": {
+    "lat": 36.9632987976,
+    "lon": 26.9405994415,
+    "name": "Kalymnos Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "GR",
+    "aircraft_marker": "cessna"
+  },
+  "LIPV": {
+    "lat": 45.428779,
+    "lon": 12.388733,
+    "name": "Venice-Lido Giovanni Nicelli Airfield",
+    "source": "OurAirports / airport-codes",
+    "country_code": "IT",
+    "aircraft_marker": "cessna"
+  },
+  "LJBO": {
+    "lat": 46.329017,
+    "lon": 13.550231,
+    "name": "Bovec Airfield",
+    "source": "OurAirports / airport-codes",
+    "country_code": "SI",
+    "aircraft_marker": "cessna"
+  },
+  "LSPV": {
+    "lat": 47.204835,
+    "lon": 8.867346,
+    "name": "Wangen-Lachen Airfield",
+    "source": "OurAirports / airport-codes",
+    "country_code": "CH",
+    "aircraft_marker": "cessna"
+  },
+  "LSTS": {
+    "lat": 46.497398,
+    "lon": 7.41257,
+    "name": "Sankt Stephan Airfield",
+    "source": "OurAirports / airport-codes",
+    "country_code": "CH",
+    "aircraft_marker": "cessna"
+  },
+  "LSZE": {
+    "lat": 47.014904,
+    "lon": 9.481815,
+    "name": "Bad Ragaz Airfield",
+    "source": "OurAirports / airport-codes",
+    "country_code": "CH",
+    "aircraft_marker": "cessna"
+  },
+  "LSZM": {
+    "lat": 47.078353,
+    "lon": 9.064662,
+    "name": "Mollis Airfield",
+    "source": "OurAirports / airport-codes",
+    "country_code": "CH",
+    "aircraft_marker": "cessna"
+  },
+  "LSZP": {
+    "lat": 47.088242,
+    "lon": 7.289055,
+    "name": "Biel-Kappelen Airfield",
+    "source": "OurAirports / airport-codes",
+    "country_code": "CH",
+    "aircraft_marker": "cessna"
+  },
+  "LSZT": {
+    "lat": 47.524399,
+    "lon": 9.00306,
+    "name": "Lommis Airfield",
+    "source": "OurAirports / airport-codes",
+    "country_code": "CH",
+    "aircraft_marker": "cessna"
+  },
+  "LSZX": {
+    "lat": 47.1717,
+    "lon": 9.03944,
+    "name": "Schänis Airfield",
+    "source": "OurAirports / airport-codes",
+    "country_code": "CH",
+    "aircraft_marker": "cessna"
+  },
+  "MMCZ": {
+    "lat": 20.514922,
+    "lon": -86.928538,
+    "name": "Cozumel International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "MX",
+    "aircraft_marker": "airliner"
+  },
+  "MMIM": {
+    "lat": 21.245962,
+    "lon": -86.740365,
+    "name": "Isla Mujeres National Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "MX",
+    "aircraft_marker": "cessna"
+  },
+  "MMUN": {
+    "lat": 21.040817,
+    "lon": -86.87347,
+    "name": "Cancún International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "MX",
+    "aircraft_marker": "airliner"
+  },
+  "MPSM": {
+    "lat": 8.375880241394,
+    "lon": -80.127899169922,
+    "name": "Scarlett Martinez International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "PA",
+    "aircraft_marker": "airliner"
+  },
+  "PHLU": {
+    "lat": 21.211,
+    "lon": -156.973999,
+    "name": "Kalaupapa Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "cessna"
+  },
+  "PHMK": {
+    "lat": 21.152901,
+    "lon": -157.095993,
+    "name": "Molokai Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "cessna"
+  },
+  "SKPV": {
+    "lat": 13.357461,
+    "lon": -81.357977,
+    "name": "El Embrujo Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "CO",
+    "aircraft_marker": "cessna"
+  },
+  "TFFA": {
+    "lat": 16.296902,
+    "lon": -61.0844,
+    "name": "La Désirade Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "GP",
+    "aircraft_marker": "cessna"
+  },
+  "WATO": {
+    "lat": -8.480694,
+    "lon": 119.888306,
+    "name": "Komodo Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "ID",
+    "aircraft_marker": "airliner"
+  },
+  "YBDG": {
+    "lat": -36.739399,
+    "lon": 144.330002,
+    "name": "Bendigo Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "AU",
+    "aircraft_marker": "cessna"
+  },
+  "YCDR": {
+    "lat": -26.80336,
+    "lon": 153.104975,
+    "name": "Caloundra Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "AU",
+    "aircraft_marker": "cessna"
+  },
+  "YLHI": {
+    "lat": -31.538204,
+    "lon": 159.07546,
+    "name": "Lord Howe Island Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "AU",
+    "aircraft_marker": "cessna"
+  },
+  "YOLW": {
+    "lat": -21.670161,
+    "lon": 115.114902,
+    "name": "Onslow Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "AU",
+    "aircraft_marker": "cessna"
+  },
+  "YPPF": {
+    "lat": -34.793300628699996,
+    "lon": 138.632995605,
+    "name": "Adelaide Parafield Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "AU",
+    "aircraft_marker": "cessna"
+  },
+  "YSPT": {
+    "lat": -27.921848,
+    "lon": 153.371469,
+    "name": "Southport Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "AU",
+    "aircraft_marker": "cessna"
+  },
+  "AQ80": {
+    "lat": -71.3293333333,
+    "lon": -68.2672222222,
+    "name": "Fossil Bluff Skiway",
+    "source": "Aerosoft Antarctica X manual (simulator ICAO)",
+    "country_code": "AQ",
+    "aircraft_marker": "unknown"
+  },
+  "AQ85": {
+    "lat": -74.8571027778,
+    "lon": -71.569225,
+    "name": "Sky Blu Runway",
+    "source": "Aerosoft Antarctica X manual (simulator ICAO)",
+    "country_code": "AQ",
+    "aircraft_marker": "unknown"
   }
 }

@@ -550,6 +550,36 @@
     "criteria": []
   },
   {
+    "code": "SKSP",
+    "name": "SKSP — SKSP Gustavo Rojas Pinilla",
+    "scenes": [
+      {
+        "publisher": "PKSIM",
+        "installed": "1.1.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "GearDown Simulations",
+        "installed": "1.0.2",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
     "code": "SOCA",
     "name": "airport-soca-cayenne",
     "scenes": [
@@ -912,6 +942,36 @@
       {
         "publisher": "Freds Airports",
         "installed": "1.2.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
+    "code": "EDWE",
+    "name": "EDWE",
+    "scenes": [
+      {
+        "publisher": "Dennis_Passolt",
+        "installed": "1.3.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "MM SIMULATIONS",
+        "installed": "1.0.0",
         "url": "",
         "image": "",
         "image_checked": false,
@@ -1542,6 +1602,36 @@
     "criteria": []
   },
   {
+    "code": "LGKY",
+    "name": "LGKY Kalmynos Airport",
+    "scenes": [
+      {
+        "publisher": "IronSim",
+        "installed": "1.1.1",
+        "url": "https://secure.simmarket.com/ironsim-kalymnos-airport-lgky-msfs.phtml",
+        "image": "https://secure.simmarket.com/images/products/4/45/13815/LGKY_logo_MSFS.png",
+        "image_checked": true,
+        "comparison": "source_older",
+        "server_version": "1.0.0",
+        "version_state": "Version installée plus récente"
+      },
+      {
+        "publisher": "MM SIMULATIONS",
+        "installed": "1.1.0",
+        "url": "https://secure.simmarket.com/mm-simulations-lgky-kalymnos-airport-msfs2024.phtml",
+        "image": "https://secure.simmarket.com/images/products/9/9b/21368/simMarket_cover-LGKY.jpg",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.1.0",
+        "version_state": "À jour"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
     "code": "LGSM",
     "name": "LGSM Samos International Airport",
     "scenes": [
@@ -2025,6 +2115,66 @@
       {
         "publisher": "Simaddons",
         "installed": "1.0.1",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
+    "code": "LSPV",
+    "name": "LSPV Wangen-Lachen",
+    "scenes": [
+      {
+        "publisher": "AG Sim",
+        "installed": "1.6.0",
+        "url": "https://secure.simmarket.com/ag-sim-wangen-lachen-airfield-lspv-msfs.phtml",
+        "image": "https://secure.simmarket.com/images/products/9/90/15473/logosimmarket2.png",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.6",
+        "version_state": "À jour"
+      },
+      {
+        "publisher": "Anton Schoenenberger",
+        "installed": "1.3.1",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
+    "code": "LSZE",
+    "name": "LSZE Scenery",
+    "scenes": [
+      {
+        "publisher": "AG Sim",
+        "installed": "1.5.0",
+        "url": "https://secure.simmarket.com/ag-sim-bad-ragaz-airfield-lsze-switzerland-msfs.phtml",
+        "image": "https://secure.simmarket.com/images/products/2/24/16165/simmarket.jpg",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.5",
+        "version_state": "À jour"
+      },
+      {
+        "publisher": "Anton Schoenenberger",
+        "installed": "1.1.0",
         "url": "",
         "image": "",
         "image_checked": false,

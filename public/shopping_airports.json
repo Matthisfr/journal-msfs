@@ -21,42 +21,6 @@
     ]
   },
   {
-    "icao": "CZBA",
-    "name": "Burlington Executive Airpark",
-    "lat": 43.44145,
-    "lon": -79.8501,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/czba-burlington-airpark-msfs",
-        "price_type": "Payant",
-        "product_title": "CZBA - Burlington Airpark MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "DATG",
-    "name": "In Guezzam Airport",
-    "lat": 19.56052,
-    "lon": 5.74933,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/datg-in-guezzam-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "DATG - In Guezzam Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/netdesign-in-guezzam-datg-msfs",
-        "price_type": "Payant",
-        "product_title": "NetDesign In Guezzam (DATG) for MSFS"
-      }
-    ]
-  },
-  {
     "icao": "EDBJ",
     "name": "Jena-Schöngleina Airfield",
     "lat": 50.91535,
@@ -309,27 +273,6 @@
     ]
   },
   {
-    "icao": "EDWE",
-    "name": "Emden Airport",
-    "lat": 53.39111,
-    "lon": 7.2275,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/edwe-emden-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "EDWE - Emden Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/mm-simulations-emden-airport-edwe-msfs",
-        "price_type": "Payant",
-        "product_title": "M'M Simulations Emden (EDWE) for MSFS-2020"
-      }
-    ]
-  },
-  {
     "icao": "EDWO",
     "name": "Atterheide Airfield",
     "lat": 52.28639,
@@ -341,72 +284,6 @@
         "url": "https://inibuilds.com/products/spinoza-osnabruck-atterheide-edwo-msfs",
         "price_type": "Payant",
         "product_title": "SPINOZA Osnabruck Atterheide (EDWO) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "EDWQ",
-    "name": "Ganderkesee Atlas Airfield",
-    "lat": 53.03611,
-    "lon": 8.50556,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/fss-edwq-ganderkesee-airfield-msfs",
-        "price_type": "Payant",
-        "product_title": "EDWQ - Ganderkesee Airfield MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "EDWR",
-    "name": "Borkum Airport",
-    "lat": 53.59639,
-    "lon": 6.70917,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/edwr-borkum-airfield-msfs",
-        "price_type": "Payant",
-        "product_title": "EDWR - Borkum Airfield MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/mm-simulations-borkum-edwr-msfs",
-        "price_type": "Payant",
-        "product_title": "M'M Simulations Borkum (EDWR) for MSFS-2020"
-      }
-    ]
-  },
-  {
-    "icao": "EDWS",
-    "name": "Norden-Norddeich Airport",
-    "lat": 53.63306,
-    "lon": 7.19028,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/edws-norden-norddeich-msfs",
-        "price_type": "Payant",
-        "product_title": "EDWS - Norden-Norddeich MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "EDXB",
-    "name": "Heide-Büsum Airport",
-    "lat": 54.15333,
-    "lon": 8.90167,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/edxb-heide-busum-airfield-msfs",
-        "price_type": "Payant",
-        "product_title": "EDXB - Heide-Büsum Airfield MSFS"
       }
     ]
   },
@@ -437,27 +314,6 @@
         "url": "https://inibuilds.com/products/spinoza-rheine-eschendorf-edxe-msfs",
         "price_type": "Payant",
         "product_title": "SPINOZA Rheine-Eschendorf (EDXE) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "EPKT",
-    "name": "Katowice Wojciech Korfanty International Airport",
-    "lat": 50.47601,
-    "lon": 19.0807,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/drzewiecki-epkt-katowice-airport-msfs-2020-2024",
-        "price_type": "Payant",
-        "product_title": "EPKT - Katowice Airport MSFS20/24"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/drzewiecki-design-katowice-epkt-msfs",
-        "price_type": "Payant",
-        "product_title": "Drzewiecki Design Katowice (EPKT) for MSFS"
       }
     ]
   },
@@ -534,21 +390,6 @@
     ]
   },
   {
-    "icao": "GCGM",
-    "name": "La Gomera Airport",
-    "lat": 28.0296,
-    "lon": -17.2146,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/gcgm-la-gomera-airport",
-        "price_type": "Payant",
-        "product_title": "GCGM - La Gomera Airport MSFS"
-      }
-    ]
-  },
-  {
     "icao": "HKKE",
     "name": "Keekorok Airport",
     "lat": -1.58634,
@@ -560,48 +401,6 @@
         "url": "https://inibuilds.com/products/samscene3d-nairobi-sightseeing-hknw-hkke-for-msfs-2024",
         "price_type": "Payant",
         "product_title": "SamScene3D Nairobi Sightseeing (HKNW) (HKKE) for MSFS-2024"
-      }
-    ]
-  },
-  {
-    "icao": "KCDK",
-    "name": "George T Lewis Airport",
-    "lat": 29.13409,
-    "lon": -83.05078,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/kcdk-ceydar-key-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "KCDK - Ceydar Key Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/pilots-cedar-key-kcdk-msfs",
-        "price_type": "Payant",
-        "product_title": "PILOT'S Cedar Key (KCDK) for MSFS-2020"
-      }
-    ]
-  },
-  {
-    "icao": "KCDW",
-    "name": "Essex County Airport",
-    "lat": 40.8752,
-    "lon": -74.2814,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/dc-scenery-design-essex-county-kcdw-msfs-2024",
-        "price_type": "Payant",
-        "product_title": "DC Scenery Design Essex County (KCDW) for MSFS-2024"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/dc-scenery-design-essex-county-kcdw-msfs",
-        "price_type": "Payant",
-        "product_title": "DC Scenery Design Essex County (KCDW) for MSFS-2020"
       }
     ]
   },
@@ -681,57 +480,6 @@
     ]
   },
   {
-    "icao": "KRNT",
-    "name": "Renton Municipal Airport",
-    "lat": 47.4931,
-    "lon": -122.216,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/krnt-renton-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "KRNT - Renton Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/drzewiecki-design-renton-krnt-msfs",
-        "price_type": "Payant",
-        "product_title": "Drzewiecki Design Renton (KRNT) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "KTNP",
-    "name": "Twentynine Palms Airport",
-    "lat": 34.1339,
-    "lon": -115.94735,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/ktnp-twentynine-palms-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "KTNP - Twentynine Palms Airport MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "KTPF",
-    "name": "Peter O Knight Airport",
-    "lat": 27.9156,
-    "lon": -82.4493,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/ktpf-peter-o-knight-airport",
-        "price_type": "Payant",
-        "product_title": "KTPF - Peter O. Knight Airport MSFS"
-      }
-    ]
-  },
-  {
     "icao": "LEMY",
     "name": "Aeródromo de Royanejos",
     "lat": 38.97992,
@@ -743,69 +491,6 @@
         "url": "https://contrail.shop/products/slh-sim-designs-tffj-saint-barthelemy-airport-msfs-2020-2024",
         "price_type": "Payant",
         "product_title": "TFFJ - Saint Barthélemy Airport MSFS20/24"
-      }
-    ]
-  },
-  {
-    "icao": "LGKY",
-    "name": "Kalymnos Airport",
-    "lat": 36.9633,
-    "lon": 26.9406,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/mm-simulations-lgky-kalymnos-airport-msfs2020-2024",
-        "price_type": "Payant",
-        "product_title": "LGKY - Kalymnos Airport MSFS20/24"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/mm-simulations-kalymnos-lgky-msfs",
-        "price_type": "Payant",
-        "product_title": "M'M Simulations Kalymnos (LGKY) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LIPV",
-    "name": "Venice-Lido Giovanni Nicelli Airfield",
-    "lat": 45.42878,
-    "lon": 12.38873,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/lipv-lido-di-venezia-airfield-msfs",
-        "price_type": "Payant",
-        "product_title": "LIPV - Lido di Venezia Airfield MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/barelli-msfs-addons-venezia-lido-lipv-msfs-2024",
-        "price_type": "Payant",
-        "product_title": "Barelli MSFS Addons Venezia Lido (LIPV) for MSFS-2024"
-      }
-    ]
-  },
-  {
-    "icao": "LJBO",
-    "name": "Bovec Airfield",
-    "lat": 46.32902,
-    "lon": 13.55023,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/ljbo-bovec-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "LJBO - Bovec Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/st-simulations-bovec-ljbo-msfs",
-        "price_type": "Payant",
-        "product_title": "ST Simulations Bovec (LJBO) for MSFS-2020"
       }
     ]
   },
@@ -852,153 +537,6 @@
     ]
   },
   {
-    "icao": "LSPV",
-    "name": "Wangen-Lachen Airfield",
-    "lat": 47.20484,
-    "lon": 8.86735,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/lspv-wangen-lachen-airfield-msfs",
-        "price_type": "Payant",
-        "product_title": "LSPV - Wangen-Lachen Airfield MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/ag-sim-wangen-lachen-lspv-msfs",
-        "price_type": "Payant",
-        "product_title": "AG Sim Wangen-Lachen (LSPV) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LSTS",
-    "name": "Sankt Stephan Airfield",
-    "lat": 46.4974,
-    "lon": 7.41257,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/lsts-st-stephan-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "LSTS - St. Stephan Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/st-simulations-st-stephan-lsts-msfs",
-        "price_type": "Payant",
-        "product_title": "ST Simulations St. Stephan (LSTS) for MSFS-2020"
-      }
-    ]
-  },
-  {
-    "icao": "LSZE",
-    "name": "Bad Ragaz Airfield",
-    "lat": 47.0149,
-    "lon": 9.48181,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/lsze-bad-ragaz-airfield-msfs",
-        "price_type": "Payant",
-        "product_title": "LSZE - Bad Ragaz Airfield MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/ag-sim-bad-ragaz-lsze-msfs",
-        "price_type": "Payant",
-        "product_title": "AG Sim Bad Ragaz (LSZE) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LSZM",
-    "name": "Mollis Airfield",
-    "lat": 47.07835,
-    "lon": 9.06466,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/lszm-mollis-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "LSZM - Mollis Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/ag-sim-mollis-lszm-msfs",
-        "price_type": "Payant",
-        "product_title": "AG Sim Mollis (LSZM/LSMF) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LSZP",
-    "name": "Biel-Kappelen Airfield",
-    "lat": 47.08824,
-    "lon": 7.28906,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/lszp-biel-kappelen-airfield-msfs",
-        "price_type": "Payant",
-        "product_title": "LSZP - Biel-Kappelen Airfield MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/biel-kappelen-lszp-msfs",
-        "price_type": "Payant",
-        "product_title": "AG Sim Biel Kappelen (LSZP) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "LSZT",
-    "name": "Lommis Airfield",
-    "lat": 47.5244,
-    "lon": 9.00306,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/lszt-lommis-airfield-msfs",
-        "price_type": "Payant",
-        "product_title": "LSZT - Lommis Airfield MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/ag-sim-lommis-lszt-msfs",
-        "price_type": "Payant",
-        "product_title": "AG Sim Lommis (LSZT) for MSFS-2020"
-      }
-    ]
-  },
-  {
-    "icao": "LSZX",
-    "name": "Schänis Airfield",
-    "lat": 47.1717,
-    "lon": 9.03944,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/lszx-schanis-airfield-msfs",
-        "price_type": "Payant",
-        "product_title": "LSZX - Schanis Airfield MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/ag-sim-schanis-lszx-msfs",
-        "price_type": "Payant",
-        "product_title": "AG Sim Schanis (LSZX) for MSFS"
-      }
-    ]
-  },
-  {
     "icao": "LTAF",
     "name": "Adana Şakirpaşa Airport",
     "lat": 36.9822,
@@ -1014,27 +552,6 @@
     ]
   },
   {
-    "icao": "MMUN",
-    "name": "Cancún International Airport",
-    "lat": 21.04082,
-    "lon": -86.87347,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/mmun-cancun-intl-msfs",
-        "price_type": "Payant",
-        "product_title": "MMUN - Cancun Intl. MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/macco-simulations-cancun-mmun-msfs",
-        "price_type": "Payant",
-        "product_title": "Macco Simulations Cancun (MMUN) for MSFS-2020"
-      }
-    ]
-  },
-  {
     "icao": "MNCI",
     "name": "Corn Island Airport",
     "lat": 12.17478,
@@ -1046,21 +563,6 @@
         "url": "https://inibuilds.com/products/teikof-studio-corn-island-mnci-msfs",
         "price_type": "Payant",
         "product_title": "Teikof Studio Corn Island (MNCI) for MSFS-2020"
-      }
-    ]
-  },
-  {
-    "icao": "MPSM",
-    "name": "Scarlett Martinez International Airport",
-    "lat": 8.37588,
-    "lon": -80.1279,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/teikof-studio-scarlett-martinez-mpsm-msfs",
-        "price_type": "Payant",
-        "product_title": "Teikof Studio Scarlett Martinez (MPSM) for MSFS-2020"
       }
     ]
   },
@@ -1097,27 +599,6 @@
         "url": "https://inibuilds.com/products/dominicdesignteam-el-paso-kelp-msfs",
         "price_type": "Payant",
         "product_title": "DominicDesignTeam El Paso (KELP) for MSFS-2020"
-      }
-    ]
-  },
-  {
-    "icao": "PHLU",
-    "name": "Kalaupapa Airport",
-    "lat": 21.211,
-    "lon": -156.974,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/northern-sky-studio-molokai-and-kalaupapa-phmk-phlu-msfs",
-        "price_type": "Payant",
-        "product_title": "Northern Sky Studio Molokai and Kalaupapa (PHMK, PHLU) for MSFS-2020"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/south-oak-co-kalaupapa-phlu-msfs",
-        "price_type": "Payant",
-        "product_title": "South Oak Co Kalaupapa (PHLU) for MSFS-2020"
       }
     ]
   },
@@ -1164,27 +645,6 @@
     ]
   },
   {
-    "icao": "TFFA",
-    "name": "La Désirade Airport",
-    "lat": 16.2969,
-    "lon": -61.0844,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/tffa-la-desirade-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "TFFA - La Désirade Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/slh-sim-designs-la-desirade-tffa-msfs",
-        "price_type": "Payant",
-        "product_title": "SLH Sim Designs La Désirade (TFFA) for MSFS-2020"
-      }
-    ]
-  },
-  {
     "icao": "UBBF",
     "name": "Fuzuli International Airport",
     "lat": 39.59458,
@@ -1211,21 +671,6 @@
         "url": "https://inibuilds.com/products/project-max-morowali-maleo-wafo-msfs",
         "price_type": "Payant",
         "product_title": "Project MAX Morowali Maleo (WAFO) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "WATO",
-    "name": "Komodo Airport",
-    "lat": -8.48069,
-    "lon": 119.88831,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/wato-komodo-airport",
-        "price_type": "Payant",
-        "product_title": "WATO - Komodo Airport MSFS"
       }
     ]
   },
@@ -1262,114 +707,6 @@
         "url": "https://inibuilds.com/products/rara-avis-sims-english-electric-wren-for-msfs",
         "price_type": "Payant",
         "product_title": "Rara-Avis Sims English Electric Wren for MSFS-2020"
-      }
-    ]
-  },
-  {
-    "icao": "YBDG",
-    "name": "Bendigo Airport",
-    "lat": -36.7394,
-    "lon": 144.33,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/impulse-simulations-bendigo-ybdg-msfs",
-        "price_type": "Payant",
-        "product_title": "Impulse Simulations Bendigo (YBDG) for MSFS-2020"
-      }
-    ]
-  },
-  {
-    "icao": "YCDR",
-    "name": "Caloundra Airport",
-    "lat": -26.80336,
-    "lon": 153.10497,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/ycdr-caloundra-airport-msfs",
-        "price_type": "Payant",
-        "product_title": "YCDR - Caloundra Airport MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "YLHI",
-    "name": "Lord Howe Island Airport",
-    "lat": -31.5382,
-    "lon": 159.07546,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/ylhi-lord-howe-island",
-        "price_type": "Payant",
-        "product_title": "YLHI - Lord Howe Island MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/auscene-lord-howe-island-ylhi-msfs",
-        "price_type": "Payant",
-        "product_title": "AUscene Lord Howe Island (YLHI) for MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "YOLW",
-    "name": "Onslow Airport",
-    "lat": -21.67016,
-    "lon": 115.1149,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/shadescene-onslow-yolw-msfs-2024",
-        "price_type": "Payant",
-        "product_title": "SHADESCENE Onslow (YOLW) for MSFS-2024"
-      }
-    ]
-  },
-  {
-    "icao": "YPPF",
-    "name": "Adelaide Parafield Airport",
-    "lat": -34.7933,
-    "lon": 138.633,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/auscene-yppf-parafield-adelaide-airport-msfs2024",
-        "price_type": "Payant",
-        "product_title": "YPPF - Parafield Adelaide Airport MSFS24"
-      },
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/yppf-parafield-adelaide-airport",
-        "price_type": "Payant",
-        "product_title": "YPPF - Parafield Adelaide Airport MSFS"
-      }
-    ]
-  },
-  {
-    "icao": "YSPT",
-    "name": "Southport Airport",
-    "lat": -27.92185,
-    "lon": 153.37147,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/yspt-southport-gold-coast-airport",
-        "price_type": "Payant",
-        "product_title": "YSPT - Southport Gold Coast Airport MSFS"
-      },
-      {
-        "store": "iniBuilds",
-        "url": "https://inibuilds.com/products/auscene-southport-gold-coast-yspt-msfs",
-        "price_type": "Payant",
-        "product_title": "AUscene Southport Gold Coast (YSPT) for MSFS"
       }
     ]
   }
