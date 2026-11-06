@@ -195,6 +195,17 @@ jobs:
       - name: Importer le nouvel inventaire Excel
         if: steps.gate.outputs.collect == 'true'
         run: |
+          python - <<'PY'
+          from openpyxl import load_workbook
+          import re
+          book=load_workbook('data/airports/Export APT 4.xlsx',read_only=True,data_only=True)
+          wanted={'MMUN','MMCZ','MMIM','EGAR','AQ80','AQ85','SKPV','SKSP','PHLU','PHMK'}
+          for sh in book:
+              for i,row in enumerate(sh.iter_rows(values_only=True),1):
+                  parts=[str(v or '') for v in row]
+                  if any(re.search(r'(?<![A-Z0-9])'+c+r'(?![A-Z0-9])',' '.join(parts).upper()) for c in wanted):
+                      print('DIAGNOSTIC_PACK',sh.title,i,repr(parts[:13])[:550])
+          PY
           python scripts/import_airports_excel.py
           # Uniquement dédupliquer les aéroports achetés ; aucune recherche de scènes.
           python scripts/update_shopping_airports.py
