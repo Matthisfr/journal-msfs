@@ -1,4 +1,5 @@
 name: Journal MSFS - actualisation et publication
+# Rattrapage manuel du 06/11/2026 : les créneaux GitHub planifiés n'ont pas démarré.
 
 on:
   push:
