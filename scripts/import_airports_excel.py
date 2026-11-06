@@ -42,6 +42,18 @@ def section_kind(value):
   return "other"
  return None
 
+def associated_airport_codes(code, name, folder, description=""):
+ # A pack may explicitly list several ICAO identifiers in its title or notes.
+ # Do not infer unrelated codes from ordinary words or a geographic region.
+ text=" ".join(str(v or "") for v in (name,folder,description)).upper()
+ tokens=set(re.findall(r"(?<![A-Z0-9])[A-Z0-9]{4}(?![A-Z0-9])",text))
+ # A code alone in free text is not proof of a second airport: require a
+ # multi-airport cue or an explicit list of 2+ codes including the primary.
+ cue=bool(re.search(r"\\b(?:PACK|BUNDLE|COLLECTION|AIRPORTS|AERODROMES|AIRFIELDS|MULTI|PLUS|AND|ET)\\b",text))
+ listed=code in tokens and len(tokens)>=2
+ return sorted(x for x in tokens if x!=code and (cue or listed) and
+               re.search(r"[A-Z]",x) and x not in {"MSFS","2020","2024","PACK","WITH","PLUS","ANDX"})
+ 
 def parse_addons_linker(sheet):
  records=[]
  region=""
@@ -76,10 +88,15 @@ def parse_addons_linker(sheet):
   if not re.fullmatch(r"[A-Z0-9]{4}",code) or not version or not folder or not name: continue
   original=code
   code=CORRECTIONS.get(code,code)
-  records.append({"icao":code,"original":original,"name":name,"folder":folder,
+  base={"icao":code,"original":original,"name":name,"folder":folder,
                   "installed":version,"publisher":str(row[12] or "").strip(),
                   "region":region or country,"description":str(row[10] or "").strip(),
-                  "scene_type":scene_type(code,name,folder)})
+                  "scene_type":scene_type(code,name,folder)}
+  records.append(base)
+  for secondary in associated_airport_codes(code,name,folder,base["description"]):
+   records.append(dict(base,icao=secondary,original=secondary,
+                       name=secondary+" — "+name,pack_primary_icao=code,
+                       pack_secondary=True))
  if not records:
   raise ValueError("Aucune scène aéroport/héliport valide dans l'export Addons Linker : import annulé")
  return records
@@ -122,7 +139,7 @@ def merge(records,old):
  seen={}
  duplicates=0
  for rec in records:
-  key=("folder",norm(rec["folder"])) if rec["folder"] else ("identity",rec["icao"],norm(rec["name"]),norm(rec.get("publisher")))
+  key=("folder",norm(rec["folder"]),rec["icao"]) if rec["folder"] else ("identity",rec["icao"],norm(rec["name"]),norm(rec.get("publisher")))
   if key in seen:
    prior=seen[key]
    comparable=("icao","installed","name","publisher","folder","scene_type")
