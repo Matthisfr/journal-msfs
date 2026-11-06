@@ -42,24 +42,28 @@ def section_kind(value):
   return "other"
  return None
 
-def associated_airport_codes(code, name, folder, description=""):
- # A pack may explicitly list several ICAO identifiers in its title or notes.
- # Do not infer unrelated codes from ordinary words or a geographic region.
+def extract_icao_codes(value):
+ # Accept explicit ICAO lists in the export, including custom simulator IDs AQ80/AQ85.
+ raw=str(value or "").upper().strip()
+ if re.fullmatch(r"[A-Z0-9]{4}",raw):
+  return [CORRECTIONS.get(raw,raw)]
+ # Only a clearly delimited list; never harvest four-letter words from names.
+ if not re.fullmatch(r"[A-Z0-9]{4}(?:\\s*(?:[,;/+&]|\\bAND\\b|\\bET\\b)\\s*[A-Z0-9]{4})+",raw):
+  return []
+ return list(dict.fromkeys(CORRECTIONS.get(c,c) for c in re.findall(r"[A-Z0-9]{4}",raw) if c not in ("2020","2024")))
+
+def associated_airport_codes(code,name,folder,description=""):
+ # Only airport codes explicitly grouped in a scene title, folder or description.
+ # Do not invent secondary airports based on geographical proximity.
  text=" ".join(str(v or "") for v in (name,folder,description)).upper()
- tokens=set(re.findall(r"(?<![A-Z0-9])[A-Z0-9]{4}(?![A-Z0-9])",text))
- # A code alone in free text is not proof of a second airport: require a
- # multi-airport cue or an explicit list of 2+ codes including the primary.
- cue=bool(re.search(r"\\b(?:PACK|BUNDLE|COLLECTION|AIRPORTS|AERODROMES|AIRFIELDS|MULTI|PLUS|AND|ET)\\b",text))
- listed=code in tokens and len(tokens)>=2
- # Validate secondary identifiers against the known geographic index; never
- # turn a random four-letter word in a product title into an airport.
- try:
-  known=set(json.loads((ROOT/"public"/"world_airports.json").read_text(encoding="utf-8")))
- except (OSError,ValueError):
-  known=set()
- return sorted(x for x in tokens if x!=code and (cue or listed) and
-               x in known)
- 
+ groups=re.findall(r"(?<![A-Z0-9])(?:[A-Z0-9]{4}\\s*(?:[,;/+&]|\\bAND\\b|\\bET\\b)\\s*)+[A-Z0-9]{4}(?![A-Z0-9])",text)
+ found=[]
+ for group in groups:
+  for secondary in extract_icao_codes(group):
+   if secondary!=code and secondary not in found:
+    found.append(secondary)
+ return found
+
 def parse_addons_linker(sheet):
  records=[]
  region=""
@@ -68,7 +72,9 @@ def parse_addons_linker(sheet):
  rows=sheet.iter_rows(values_only=True)
  for row in rows:
   if len(row)<13: continue
-  code=str(row[6] or "").strip().upper()
+  raw_code=str(row[6] or "").strip().upper()
+  codes=extract_icao_codes(raw_code)
+  code=codes[0] if codes else raw_code
   # Only heading rows (no ICAO) can change the active category.
   if not code:
    for cell in row[:6]:
@@ -99,7 +105,7 @@ def parse_addons_linker(sheet):
                   "region":region or country,"description":str(row[10] or "").strip(),
                   "scene_type":scene_type(code,name,folder)}
   records.append(base)
-  for secondary in associated_airport_codes(code,name,folder,base["description"]):
+  for secondary in dict.fromkeys(codes[1:]+associated_airport_codes(code,name,folder,base["description"])):
    records.append(dict(base,icao=secondary,original=secondary,
                        name=secondary+" — "+name,pack_primary_icao=code,
                        pack_secondary=True))
@@ -125,7 +131,9 @@ def parse(book):
    def get(key):
     idx=cols[key]
     return str(row[idx]).strip() if idx is not None and idx<len(row) and row[idx] is not None else ""
-   code=get("icao").upper()
+   raw_code=get("icao").upper()
+   codes=extract_icao_codes(raw_code)
+   code=codes[0] if codes else raw_code
    folder=get("folder")
    name=get("name")
    version=get("installed")
@@ -136,7 +144,10 @@ def parse(book):
    if not re.fullmatch(r"[A-Z0-9]{4}",code): continue
    original=code
    code=CORRECTIONS.get(code,code)
-   records.append({"icao":code,"original":original,"name":name or folder,"folder":folder,"installed":version,"publisher":get("publisher"),"region":get("region"),"description":get("description"),"scene_type":scene_type(code,name,folder)})
+   base={"icao":code,"original":original,"name":name or folder,"folder":folder,"installed":version,"publisher":get("publisher"),"region":get("region"),"description":get("description"),"scene_type":scene_type(code,name,folder)}
+   records.append(base)
+   for secondary in dict.fromkeys(codes[1:]+associated_airport_codes(code,name,folder,base["description"])):
+    records.append(dict(base,icao=secondary,original=secondary,name=secondary+" — "+base["name"],pack_primary_icao=code,pack_secondary=True))
  return records
 def merge(records,old):
  by_folder={norm(a.get("folder")):a for a in old if a.get("folder")}
