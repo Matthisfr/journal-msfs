@@ -40,6 +40,16 @@ class AirportImportTests(unittest.TestCase):
  def test_missing_section_without_airport_folder_fails_closed(self):
   with self.assertRaisesRegex(ValueError,"Aucune scène aéroport"):
    mod.parse_addons_linker(FakeSheet([row(code="LFPG",folder="city-paris",name="Paris City",version="1.0")]))
+ def test_multi_airport_code_cell(self):
+  sheet=FakeSheet([row(section="AEROPORTS"),row(code="MMUN, MMCZ, MMIM",folder="mexico-pack",name="Mexican airports",version="1.0")])
+  records=mod.parse_addons_linker(sheet)
+  self.assertEqual([r["icao"] for r in records],["MMUN","MMCZ","MMIM"])
+  self.assertEqual(records[1]["pack_primary_icao"],"MMUN")
+  self.assertEqual(len(mod.merge(records,[])),3)
+ def test_custom_simulator_codes(self):
+  self.assertEqual(mod.extract_icao_codes("EGAR / AQ80 / AQ85"),["EGAR","AQ80","AQ85"])
+ def test_no_accidental_title_words(self):
+  self.assertEqual(mod.associated_airport_codes("MMUN","AIRPORT PACK MSFS 2024","mexico-pack"),[])
  def test_sub_marker(self):
   self.assertTrue(mod.is_sub_scene("(sub LFMN)"))
   self.assertFalse(mod.is_sub_scene("airport-lfmn"))
