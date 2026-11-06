@@ -138,21 +138,6 @@
     ]
   },
   {
-    "icao": "EDLP",
-    "name": "Paderborn Lippstadt Airport",
-    "lat": 51.61253,
-    "lon": 8.61746,
-    "type": "airport",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/edlp-paderborn-lippstadt-airport",
-        "price_type": "Gratuit",
-        "product_title": "EDLP - Paderborn Lippstadt Airport MSFS"
-      }
-    ]
-  },
-  {
     "icao": "EDLS",
     "name": "Stadtlohn-Vreden Airfield",
     "lat": 51.99583,

@@ -3246,5 +3246,13 @@
     "source": "OurAirports / airport-codes",
     "country_code": "IT",
     "aircraft_marker": "airliner"
+  },
+  "EDLP": {
+    "lat": 51.612527,
+    "lon": 8.617459,
+    "name": "Paderborn Lippstadt Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "DE",
+    "aircraft_marker": "airliner"
   }
 }

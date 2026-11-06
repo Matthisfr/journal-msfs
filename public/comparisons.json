@@ -1116,6 +1116,36 @@
     "criteria": []
   },
   {
+    "code": "LDSP",
+    "name": "LDSP",
+    "scenes": [
+      {
+        "publisher": "Puljevic",
+        "installed": "1.0.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "Orbx",
+        "installed": "1.1.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
     "code": "EKBI",
     "name": "EKBI Billund Airport",
     "scenes": [

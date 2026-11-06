@@ -1,16 +1,16 @@
 {
   "edition": "2026-11-06",
-  "last_run": "2026-11-06T12:43:54.597619+00:00",
-  "weather_checked_at": "2026-11-06T12:43:54.597619+00:00",
-  "news_checked_at": "2026-11-06T12:43:54.597619+00:00",
+  "last_run": "2026-11-06T12:56:30.457355+00:00",
+  "weather_checked_at": "2026-11-06T12:56:30.457355+00:00",
+  "news_checked_at": "2026-11-06T12:56:30.457355+00:00",
   "weather": [
     {
       "icao": "BGGH",
       "name": "BGGH Nuuk International Airport",
-      "observed_at": "2026-11-06T12:20:00+00:00",
-      "raw": "METAR BGGH 061220Z AUTO 18038G52KT 2200 -SN SCT004/// SCT008/// OVC016/// 00/00 Q0993",
-      "score": 165,
-      "summary": "neige, visibilité < 3 SM, rafales ≥ 35 kt",
+      "observed_at": "2026-11-06T12:50:00+00:00",
+      "raw": "METAR BGGH 061250Z AUTO 19038G50KT 2600 -RASN BKN004/// OVC012/// 00/00 Q0993",
+      "score": 177,
+      "summary": "neige, visibilité < 3 SM, rafales ≥ 35 kt, précipitations",
       "icon": "🌨️",
       "phenomenon": "Neige",
       "level": "Très dégradé",
@@ -20,15 +20,15 @@
     {
       "icao": "KJFK",
       "name": "KJFK New York JFK International Airport",
-      "observed_at": "2026-11-06T12:36:00+00:00",
-      "raw": "SPECI KJFK 061236Z 29005KT 1SM R04R/P6000FT -TSRA BR BKN004 BKN025CB OVC100 18/17 A2988 RMK AO2 SFC VIS 4 FRQ LTGICCC SE-S TS SE-S MOV NE CIG 003V005 P0007 T01780172 $",
+      "observed_at": "2026-11-06T12:51:00+00:00",
+      "raw": "METAR KJFK 061251Z 28004KT 1SM R04R/P6000FT TSRA BR BKN004 BKN025CB OVC100 18/17 A2987 RMK AO2 SFC VIS 3 SLP116 FRQ LTGICCC SE-S TS SE-S MOV NE CIG 003V005 P0011 T01780172 $",
       "score": 155,
       "summary": "orage, visibilité < 3 SM",
       "icon": "⛈️",
       "phenomenon": "Orage",
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KJFK 061134Z 0612/0718 16005KT 2SM TSRA OVC015CB TEMPO 0612/0613 1SM +TSRA BR OVC008CB FM061400 16007KT 4SM -RA BR OVC008 TEMPO 0614/0616 2SM TSRA BR OVC008CB FM061600 20008KT 4SM -RA BR OVC008 TEMPO 0618/0620 2SM +TSRA BR OVC008CB FM062000 26005KT 4SM -RA BR OVC015 FM070000 26004KT P6SM -RA OVC050 FM070400 28005KT P6SM OVC100 FM071000 29007KT P6SM SCT250 FM071400 27010KT P6SM FEW035"
+      "taf_raw": "TAF KJFK 061250Z 0613/0718 VRB04KT 1SM -TSRA BR BKN004 BKN025CB FM061400 18005KT 4SM -RA BR OVC008 TEMPO 0614/0616 2SM TSRA BR OVC008CB FM061600 20008KT 4SM -RA BR OVC008 TEMPO 0618/0620 2SM TSRA BR OVC008CB FM062000 26005KT 4SM -RA BR OVC015 FM070000 26004KT P6SM -RA OVC050 FM070400 28005KT P6SM OVC100 FM071000 29007KT P6SM SCT250 FM071400 27010KT P6SM FEW035"
     },
     {
       "icao": "CYHZ",
@@ -46,8 +46,8 @@
     {
       "icao": "ENGM",
       "name": "Aerosoft Oslo Airport",
-      "observed_at": "2026-11-06T12:20:00+00:00",
-      "raw": "METAR ENGM 061220Z 17002KT 1400 0350NE R19R/1900D R01R/P2000N R19L/0450N R01L/P2000N PRFG BKN002 M00/M01 Q1031 TEMPO 0500 FG VV002",
+      "observed_at": "2026-11-06T12:50:00+00:00",
+      "raw": "METAR ENGM 061250Z 16002KT 0500 R19R/0750N R01R/P2000N R19L/0400N R01L/0650D FZFG VV002 M00/M01 Q1031 TEMPO 9999 NSW SCT002",
       "score": 145,
       "summary": "brouillard, visibilité < 1 SM",
       "icon": "🌫️",
@@ -55,19 +55,6 @@
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF COR ENGM 061100Z 0612/0712 VRB03KT 9999 FEW004 PROB40 0612/0620 0300 FZFG VV002 BECMG 0620/0623 0300 FZFG VV002"
-    },
-    {
-      "icao": "KBTV",
-      "name": "KBTV Burlington International MSFS",
-      "observed_at": "2026-11-06T12:23:00+00:00",
-      "raw": "SPECI KBTV 061223Z 14003KT 1/4SM FG VV001 10/10 A2988 RMK AO2 T01000100 RVRNO",
-      "score": 145,
-      "summary": "brouillard, visibilité < 1 SM",
-      "icon": "🌫️",
-      "phenomenon": "Brouillard",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KBTV 061212Z 0612/0712 VRB03KT P6SM VCFG BKN110 TEMPO 0612/0613 1SM BR SCT001 BKN035 FM061900 36005KT P6SM SCT100 FM070400 34005KT P6SM SCT020 FM070700 34005KT P6SM BKN017"
     },
     {
       "icao": "KCRW",
@@ -83,17 +70,43 @@
       "taf_raw": "TAF KCRW 061124Z 0612/0712 00000KT 2SM BR BKN001 FM061300 VRB05KT P6SM SCT050 FM061800 29008KT P6SM BKN035 FM062100 32008KT P6SM OVC025 FM070200 00000KT P6SM BKN040"
     },
     {
+      "icao": "KLGA",
+      "name": "KLGA LaGuardia Airport",
+      "observed_at": "2026-11-06T12:51:00+00:00",
+      "raw": "METAR KLGA 061251Z 00000KT 3SM RA BR SCT009 BKN021 OVC029 19/19 A2986 RMK AO2 TSB02E32B35E43 SLP112 P0011 T01940189 $",
+      "score": 142,
+      "summary": "orage, visibilité < 5 SM, précipitations",
+      "icon": "⛈️",
+      "phenomenon": "Orage",
+      "level": "Très dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KLGA 061250Z 0613/0718 13006KT 6SM -RA SCT015 BKN025 TEMPO 0614/0616 2SM TSRA BR BKN015CB FM061600 18005KT 2SM RA BR OVC008 TEMPO 0618/0620 2SM +TSRA BR OVC008CB FM062000 31005KT 4SM -RA BR OVC015 FM062200 32005KT P6SM OVC050 FM070000 29005KT P6SM OVC100 FM070600 32005KT P6SM FEW250 FM071400 28006KT P6SM FEW040"
+    },
+    {
       "icao": "KCLT",
       "name": "KCLT Charlotte International Airport",
-      "observed_at": "2026-11-06T12:23:00+00:00",
-      "raw": "SPECI KCLT 061223Z 00000KT 5SM -RA BR SCT010 BKN027 OVC090 18/18 A2990 RMK AO2 TSE22 TS SE MOV NE P0015 T01830178",
-      "score": 122,
-      "summary": "orage, précipitations",
+      "observed_at": "2026-11-06T12:52:00+00:00",
+      "raw": "METAR KCLT 061252Z 00000KT 3SM TSRA BR BKN007 BKN019CB OVC100 19/18 A2992 RMK AO2 TSE22B47 SLP139 OCNL LTGICCC OHD TS OHD MOV NE P0015 T01890183",
+      "score": 130,
+      "summary": "orage, visibilité < 5 SM",
       "icon": "⛈️",
       "phenomenon": "Orage",
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
       "taf_raw": "TAF KCLT 061122Z 0612/0718 00000KT 4SM -SHRA BR SCT004 BKN012 TEMPO 0612/0614 2SM TSRA BR BKN004CB FM061400 34005KT 6SM -SHRA BKN008 OVC013 FM061600 02006KT P6SM OVC020 FM061700 01005KT P6SM BKN060 FM070100 01007KT P6SM FEW250"
+    },
+    {
+      "icao": "KEWR",
+      "name": "KEWR Newark Intl MSFS",
+      "observed_at": "2026-11-06T12:51:00+00:00",
+      "raw": "METAR KEWR 061251Z 03005KT 3SM TSRA BR FEW008 BKN024CB OVC060 20/19 A2984 RMK AO2 TSB40 PRESFR SLP103 OCNL LTGIC OHD TS OHD MOV NE P0004 T02000189",
+      "score": 130,
+      "summary": "orage, visibilité < 5 SM",
+      "icon": "⛈️",
+      "phenomenon": "Orage",
+      "level": "Très dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KEWR 061250Z 0613/0718 20006KT 6SM -RA BR VCTS SCT008 BKN025CB TEMPO 0614/0616 2SM TSRA BR BKN008 BKN025CB FM061700 33004KT 4SM -RA BR OVC015 FM062100 33004KT P6SM OVC040 FM062300 32004KT P6SM OVC090 FM070200 27004KT P6SM BKN120 FM070500 30006KT P6SM SKC FM071400 27009KT P6SM FEW040"
     },
     {
       "icao": "GCTS",
@@ -109,36 +122,23 @@
       "taf_raw": "TAF GCTS 060800Z 0609/0709 23010KT 9999 FEW020 TX27/0614Z TN20/0706Z BECMG 0619/0621 36005KT"
     },
     {
-      "icao": "KEWR",
-      "name": "KEWR Newark Intl MSFS",
-      "observed_at": "2026-11-06T12:40:00+00:00",
-      "raw": "SPECI KEWR 061240Z 22008KT 7SM -TSRA SCT008 BKN024CB BKN055 OVC130 19/19 A2987 RMK AO2 TSB40 OCNL LTGIC VC S TS VC S MOV NE P0002 T01940189",
+      "icao": "PHOG",
+      "name": "PHOG Kahului International Airport",
+      "observed_at": "2026-11-06T12:54:00+00:00",
+      "raw": "METAR PHOG 061254Z AUTO 02012KT 9SM CLR 24/21 A3002 RMK AO2 SLP169 T02390211 TSNO $",
       "score": 110,
       "summary": "orage",
       "icon": "⛈️",
       "phenomenon": "Orage",
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KEWR 061134Z 0612/0718 20004KT 4SM -RA BR OVC015 FM061300 20006KT 4SM -RA BR OVC008 TEMPO 0614/0616 2SM TSRA BR OVC008CB FM061700 33004KT 4SM -RA BR OVC015 FM062100 33004KT P6SM OVC040 FM062300 32004KT P6SM OVC090 FM070200 27004KT P6SM BKN120 FM070500 30006KT P6SM SKC FM071400 27009KT P6SM FEW040"
-    },
-    {
-      "icao": "KLGA",
-      "name": "KLGA LaGuardia Airport",
-      "observed_at": "2026-11-06T12:05:00+00:00",
-      "raw": "SPECI KLGA 061205Z COR 13009KT 7SM TSRA FEW012 BKN020 OVC028CB 20/19 A2982 RMK AO2 TSB02 PRESFR OCNL LTGIC S TS S MOV NE P0001 T02000189",
-      "score": 110,
-      "summary": "orage",
-      "icon": "⛈️",
-      "phenomenon": "Orage",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF KLGA 061134Z 0612/0718 19005KT 4SM -RA BR VCTS OVC015CB TEMPO 0612/0613 2SM +TSRA BR OVC008CB FM061300 15006KT 4SM -RA BR OVC008 TEMPO 0614/0616 2SM TSRA BR OVC008CB FM061600 18005KT 2SM RA BR OVC008 TEMPO 0618/0620 2SM +TSRA BR OVC008CB FM062000 31005KT 4SM -RA BR OVC015 FM062200 32005KT P6SM OVC050 FM070000 29005KT P6SM OVC100 FM070600 32005KT P6SM FEW250 FM071400 28006KT P6SM FEW040"
+      "taf_raw": "TAF PHOG 061140Z 0612/0718 03010G20KT P6SM FEW040 FM062000 06020G32KT P6SM VCSH SCT020 BKN040 FM070500 05015KT P6SM VCSH FEW030 BKN040"
     }
   ],
   "weather_coverage": {
-    "eligible": 405,
-    "received": 392,
-    "fresh": 392
+    "eligible": 406,
+    "received": 393,
+    "fresh": 393
   },
   "news": [
     {
@@ -349,7 +349,7 @@
       "date": "2026-10-29",
       "source": "FSElite — MSFS",
       "url": "https://fselite.net/content/thrustmaster-tca-sky-yoke-now-available-for-pc-console-and-mobile/",
-      "summary": "29 octobre 2026 – Le dernier matériel de Thrustmaster est désormais disponible. Actualités MSFS MSFS 2024 MSFS PS5 MSFS Xbox XPL12",
+      "summary": "29 octobre 2026 - Le dernier matériel de Thrustmaster est désormais disponible. Actualités MSFS MSFS 2024 MSFS PS5 MSFS Xbox XPL12",
       "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
       "new": false
     },
@@ -472,7 +472,7 @@
       "date": "2026-10-27",
       "source": "GitHub Releases officiel — FSLiveTrafficLiveries/base",
       "url": "https://github.com/FSLiveTrafficLiveries/base/releases/tag/1.7.0",
-      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - Plus de 150 livrées réelles et historiques nouvelles ou mises à jour - Plus de 250 livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
+      "summary": "__Nouveau :__ - Ajout du B77WF - Ajout du CRJX - Ajout du DHC6 - Ajout du E290 - Ajout du E75L - Livrées : - 150+ livrées réelles et historiques nouvelles ou mises à jour - 250+ livrées VA nouvelles ou mises à jour - Plus de 2800 livrées maintenant __Mises à jour :__ - Modifications du modèle et…",
       "impact": "Vérifier le changelog officiel et sauvegarder les configurations avant installation.",
       "new": false
     },
@@ -495,7 +495,7 @@
       "date": "2026-10-26",
       "source": "Forum officiel Microsoft Flight Simulator",
       "url": "https://forums.flightsimulator.com/t/world-update-23-poland-and-the-baltics-available-now/779815",
-      "summary": "La mise à jour mondiale 23 : la Pologne et les pays baltes ajoute des détails époustouflants aux régions d'Estonie, de Lettonie, de Lituanie et de Pologne ! La mise à jour mondiale 23 de Microsoft Flight Simulator : la Pologne et les pays baltes est GRATUITE pour tous les propriétaires de Microsoft Flight…",
+      "summary": "La mise à jour mondiale 23 : la Pologne et les pays baltes ajoute des détails époustouflants aux régions d'Estonie, de Lettonie, de Lituanie et de Pologne ! La mise à jour mondiale 23 de Microsoft Flight Simulator : la Pologne et les pays baltes est GRATUITE pour tous les propriétaires de Microsoft Flight…",
       "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
       "new": false
     },
@@ -594,34 +594,34 @@
   ],
   "note": "Collecte quotidienne automatique : METAR/TAF NOAA, flux officiel MSFS, versions GitHub publiées, audit des scènes répertoriées, extraction des versions des boutiques publiques reconnues et surveillance des sites publics. Les versions non publiées ou inaccessibles restent UNKNOWN ; une page modifiée n’est pas une mise à jour confirmée.",
   "version_coverage": {
-    "verified_today": 214,
+    "verified_today": 211,
     "eligible": 377,
-    "unavailable": 120,
+    "unavailable": 123,
     "no_version": 12,
     "inconsistent": 11,
     "not_automatable": 1,
-    "no_source": 103,
+    "no_source": 105,
     "source_older": 20,
-    "total_checked": 481,
+    "total_checked": 483,
     "with_source": 377,
-    "missing_source": 104,
+    "missing_source": 106,
     "updates_confirmed": 12,
-    "inventory_total": 481,
+    "inventory_total": 483,
     "official_url_known": 377,
-    "without_official_url": 104,
+    "without_official_url": 106,
     "manual_source": 1,
-    "unverified": 267,
-    "audited_at": "2026-11-06T12:43:54.597619+00:00"
+    "unverified": 272,
+    "audited_at": "2026-11-06T12:56:30.457355+00:00"
   },
-  "versions_checked_at": "2026-11-06T12:43:54.597619+00:00",
-  "releases_checked_at": "2026-11-06T12:43:54.597619+00:00",
+  "versions_checked_at": "2026-11-06T12:56:30.457355+00:00",
+  "releases_checked_at": "2026-11-06T12:56:30.457355+00:00",
   "software_coverage": {
     "total": 19,
     "verified": 9,
     "changed": 0,
-    "checked_at": "2026-11-06T12:45:14.079716+00:00",
+    "checked_at": "2026-11-06T12:57:58.113987+00:00",
     "unverified": 10
   },
   "airac_cycle": "2611",
-  "winctrl_airbus_checked_at": "2026-11-06T12:45:23.729129+00:00"
+  "winctrl_airbus_checked_at": "2026-11-06T12:58:04.426071+00:00"
 }
