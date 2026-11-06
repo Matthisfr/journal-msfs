@@ -56,8 +56,8 @@ def main():
         best={}
         found=set()
         for row in remote_rows("runways.csv"):
-            codes=airport_ids.get(str(row.get("airport_ref") or ""),())
-            if not codes or str(row.get("closed") or "0").strip()=="1":
+            runway_codes=airport_ids.get(str(row.get("airport_ref") or ""),())
+            if not runway_codes or str(row.get("closed") or "0").strip()=="1":
                 continue
             try:
                 length=float(row.get("length_ft") or 0)*0.3048
@@ -66,7 +66,7 @@ def main():
                 continue
             surface=str(row.get("surface") or "").upper()
             paved=any(t in surface for t in ("ASP","CON","PEM","BIT","TAR","PAV"))
-            for code in codes:
+            for code in runway_codes:
                 found.add(code)
                 if length>=1800 and width>=30 and paved:
                     best[code]=True
