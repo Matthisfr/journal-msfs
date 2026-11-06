@@ -1,3 +1,5 @@
 Initialisation ponctuelle du catalogue de 50 aéroports + 50 aérodromes, 2026-11-03.
 
 [collect-total] Diagnostic et réimport packs multi-aéroports 2026-11-06
+
+Reimport après correction regex [collect-total] 2026-11-06
