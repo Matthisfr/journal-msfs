@@ -51,8 +51,14 @@ def associated_airport_codes(code, name, folder, description=""):
  # multi-airport cue or an explicit list of 2+ codes including the primary.
  cue=bool(re.search(r"\\b(?:PACK|BUNDLE|COLLECTION|AIRPORTS|AERODROMES|AIRFIELDS|MULTI|PLUS|AND|ET)\\b",text))
  listed=code in tokens and len(tokens)>=2
+ # Validate secondary identifiers against the known geographic index; never
+ # turn a random four-letter word in a product title into an airport.
+ try:
+  known=set(json.loads((ROOT/"public"/"world_airports.json").read_text(encoding="utf-8")))
+ except (OSError,ValueError):
+  known=set()
  return sorted(x for x in tokens if x!=code and (cue or listed) and
-               re.search(r"[A-Z]",x) and x not in {"MSFS","2020","2024","PACK","WITH","PLUS","ANDX"})
+               x in known)
  
 def parse_addons_linker(sheet):
  records=[]
