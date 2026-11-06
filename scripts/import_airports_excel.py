@@ -66,8 +66,7 @@ def parse_addons_linker(sheet):
   version=str(row[9] or "").strip()
   name=str(row[11] or folder).strip()
   if is_sub_scene(code,name,folder): continue
-  if section=="other": continue
-  if section is None and not re.search(r"(?:^|[-_])(airport|airports|heliport|helipad)(?:[-_]|$)",folder,re.I): continue
+  # Un code ICAO présent explicitement dans le nom ou dossier indique une scène\n  # aéroport, même si Addons Linker la range dans une section non standard.\n  # Ne jamais importer les simples décors de villes sans code dans leur nom.\n  explicit_code=bool(code and re.search(r"(?<![A-Z0-9])"+re.escape(code)+r"(?![A-Z0-9])", (name+" "+folder).upper()))\n  airport_folder=bool(re.search(r"(?:^|[-_])(airport|airports|heliport|helipad)(?:[-_]|$)",folder,re.I))\n  if section=="other" and not (explicit_code and airport_folder): continue\n  if section is None and not (airport_folder or explicit_code): continue
   if not re.fullmatch(r"[A-Z0-9]{4}",code) or not version or not folder or not name: continue
   original=code
   code=CORRECTIONS.get(code,code)
