@@ -26,6 +26,18 @@ def main():
                     result[code]={"lat":lat,"lon":lon,"name":row.get("name",""),"source":"OurAirports / airport-codes","country_code":str(row.get("iso_country") or "").strip().upper()}
     except Exception as exc:
         raise RuntimeError(f"Source de coordonnées indisponible : {exc}") from exc
+    # Aerosoft Antarctica: fictional simulator ICAO IDs absent from OurAirports.
+    # Coordinates are published in Aerosoft Antarctica X manual, page airport table.
+    # https://www.aerosoft2.de/downloads/antarcticax/Manual-AntarcticaX-Short.pdf
+    antarctica={
+        "AQ80":(-71.3293333333,-68.2672222222,"Fossil Bluff Skiway"),
+        "AQ85":(-74.8571027778,-71.569225,"Sky Blu Runway"),
+    }
+    for code,(lat,lon,name) in antarctica.items():
+        if code in codes:
+            result[code]={"lat":lat,"lon":lon,"name":name,
+                          "source":"Aerosoft Antarctica X manual (simulator ICAO)",
+                          "country_code":"AQ","aircraft_marker":"cessna"}
     result={k:v for k,v in result.items() if k in codes}
     missing=sorted(codes-set(result))
     if missing: raise RuntimeError(f"Coordonnées manquantes pour les aéroports vérifiables : {missing}")
