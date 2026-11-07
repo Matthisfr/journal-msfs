@@ -1,78 +1,63 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-11-07T08:33:56.700002+00:00",
+  "retrieved_at": "2026-11-07T15:59:30.169471+00:00",
   "origin": {
-    "icao": "MKJS",
-    "name": "SANGSTER INTL"
-  },
-  "destination": {
     "icao": "MDSD",
     "name": "LAS AMERICAS INTL (JOSE F PENA"
   },
+  "destination": {
+    "icao": "TFFR",
+    "name": "MARYSE CONDE"
+  },
   "flight_number": "2809",
   "aircraft": "A320",
-  "route": "ELUTU5 ALMUS DCT KEBET DCT PAP DCT ETBOD DCT PITEX DCT OKOSO DCT",
-  "altitude": "37000",
-  "enroute_time": "01:16:55",
-  "scheduled_departure": "2026-11-06T13:50:00Z",
-  "scheduled_arrival": "2026-11-06T15:40:00Z",
-  "generated_at": "2026-11-06T13:15:35Z",
+  "route": "DCT SATOE L349 GESSO DCT MODUX DCT GORET GORE2Z",
+  "altitude": "35000",
+  "enroute_time": "01:15:25",
+  "scheduled_departure": "2026-11-07T14:15:00Z",
+  "scheduled_arrival": "2026-11-07T16:05:00Z",
+  "generated_at": "2026-11-07T13:44:20Z",
   "route_points": [
     {
-      "lat": 18.511833,
-      "lon": -77.894611,
-      "name": "OTESU"
+      "lat": 17.666667,
+      "lon": -68.0,
+      "name": "SATOE"
     },
     {
-      "lat": 18.576667,
-      "lon": -77.813333,
-      "name": "ELUTU"
-    },
-    {
-      "lat": 18.476389,
-      "lon": -77.574444,
-      "name": "ALMUS"
-    },
-    {
-      "lat": 18.25,
-      "lon": -74.661667,
-      "name": "KEBET"
-    },
-    {
-      "lat": 18.250251,
-      "lon": -74.659933,
+      "lat": 17.623026,
+      "lon": -67.407526,
       "name": "TOC"
     },
     {
-      "lat": 18.576533,
-      "lon": -72.304239,
-      "name": "PAP"
+      "lat": 17.493822,
+      "lon": -65.778578,
+      "name": "GESSO"
     },
     {
-      "lat": 18.516667,
-      "lon": -71.883333,
-      "name": "ETBOD"
-    },
-    {
-      "lat": 18.458893,
-      "lon": -71.484033,
+      "lat": 17.001529,
+      "lon": -63.213893,
       "name": "TOD"
     },
     {
-      "lat": 18.403611,
-      "lon": -71.1075,
-      "name": "PITEX"
+      "lat": 16.958889,
+      "lon": -63.0,
+      "name": "MODUX"
     },
     {
-      "lat": 18.323056,
-      "lon": -70.5475,
-      "name": "OKOSO"
+      "lat": 16.564722,
+      "lon": -62.171944,
+      "name": "GORET"
     },
     {
-      "lat": 18.429664,
-      "lon": -69.668925,
-      "name": "MDSD"
+      "lat": 16.338722,
+      "lon": -61.930583,
+      "name": "RIDIN"
+    },
+    {
+      "lat": 16.264167,
+      "lon": -61.525833,
+      "name": "TFFR"
     }
   ]
 }

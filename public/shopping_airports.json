@@ -537,21 +537,6 @@
     ]
   },
   {
-    "icao": "LTAF",
-    "name": "Adana Şakirpaşa Airport",
-    "lat": 36.9822,
-    "lon": 35.2804,
-    "type": "aerodrome",
-    "shops": [
-      {
-        "store": "Contrail",
-        "url": "https://contrail.shop/products/ltaf-adana-sakirpasa-airport",
-        "price_type": "Payant",
-        "product_title": "LTAF - Adana Sakirpasa Airport MSFS"
-      }
-    ]
-  },
-  {
     "icao": "MNCI",
     "name": "Corn Island Airport",
     "lat": 12.17478,

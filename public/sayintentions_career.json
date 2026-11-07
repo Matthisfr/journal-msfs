@@ -23,7 +23,7 @@
     {
       "id": "IFR-884166837",
       "aircraft": "F-FENX",
-      "when": "yesterday",
+      "when": "2 days ago",
       "origin": "MUHA",
       "destination": "MKJS",
       "rules": "IFR",
@@ -68,7 +68,7 @@
     {
       "id": "IFR-883907560",
       "aircraft": "F-FENX",
-      "when": "1 week ago",
+      "when": "2 weeks ago",
       "origin": "DTTJ",
       "destination": "LGMK",
       "rules": "IFR",
@@ -102,7 +102,7 @@
       "duration": "1h 54m"
     }
   ],
-  "flights_checked_at": "2026-11-07T08:34:18.928223+00:00",
-  "verified_at": "2026-11-07T08:34:18.928223+00:00",
-  "checked_at": "2026-11-07T08:34:18.928223+00:00"
+  "flights_checked_at": "2026-11-07T15:59:50.575616+00:00",
+  "verified_at": "2026-11-07T15:59:50.575616+00:00",
+  "checked_at": "2026-11-07T15:59:50.575616+00:00"
 }

@@ -3646,5 +3646,21 @@
     "source": "Aerosoft Antarctica X manual (simulator ICAO)",
     "country_code": "AQ",
     "aircraft_marker": "unknown"
+  },
+  "GCLA": {
+    "lat": 28.626499,
+    "lon": -17.7556,
+    "name": "La Palma Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "ES",
+    "aircraft_marker": "airliner"
+  },
+  "LTAF": {
+    "lat": 36.982201,
+    "lon": 35.280399,
+    "name": "Adana Şakirpaşa Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "TR",
+    "aircraft_marker": "airliner"
   }
 }
