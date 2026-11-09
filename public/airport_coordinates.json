@@ -3662,5 +3662,13 @@
     "source": "OurAirports / airport-codes",
     "country_code": "TR",
     "aircraft_marker": "airliner"
+  },
+  "ENOE": {
+    "lat": -71.95714,
+    "lon": 2.45257,
+    "name": "Troll Airfield",
+    "source": "OurAirports / airport-codes",
+    "country_code": "AQ",
+    "aircraft_marker": "cessna"
   }
 }

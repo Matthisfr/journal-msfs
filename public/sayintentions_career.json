@@ -3,18 +3,27 @@
   "profile_url": "https://pilots.sayintentions.ai/u/Mathis",
   "username": "Mathis",
   "rank": "Senior 1st Officer",
-  "flight_hours": 75,
-  "ifr_hours": 73,
+  "flight_hours": 77,
+  "ifr_hours": 75,
   "vfr_hours": 2,
-  "total_flights": 47,
-  "airports_visited": 45,
+  "total_flights": 48,
+  "airports_visited": 46,
   "source": "profil public Gate 404 (navigateur Chromium)",
   "rank_badge": "sayintentions-rank.svg",
   "recent_flights": [
     {
+      "id": "IFR-884247917",
+      "aircraft": "F-FENX",
+      "when": "16 hours ago",
+      "origin": "EDDF",
+      "destination": "LFMN",
+      "rules": "IFR",
+      "duration": "2h 7m"
+    },
+    {
       "id": "IFR-884231078",
       "aircraft": "F-FENX",
-      "when": "22 hours ago",
+      "when": "yesterday",
       "origin": "LFPG",
       "destination": "LFMN",
       "rules": "IFR",
@@ -41,7 +50,7 @@
     {
       "id": "IFR-884203806",
       "aircraft": "F-FENX",
-      "when": "yesterday",
+      "when": "2 days ago",
       "origin": "MDSD",
       "destination": "TFFR",
       "rules": "IFR",
@@ -50,7 +59,7 @@
     {
       "id": "IFR-884180936",
       "aircraft": "F-FENX",
-      "when": "2 days ago",
+      "when": "3 days ago",
       "origin": "MKJS",
       "destination": "MDSD",
       "rules": "IFR",
@@ -59,7 +68,7 @@
     {
       "id": "IFR-884166837",
       "aircraft": "F-FENX",
-      "when": "3 days ago",
+      "when": "4 days ago",
       "origin": "MUHA",
       "destination": "MKJS",
       "rules": "IFR",
@@ -91,18 +100,9 @@
       "destination": "OERK",
       "rules": "IFR",
       "duration": "2h 58m"
-    },
-    {
-      "id": "IFR-883929202",
-      "aircraft": "F-FENX",
-      "when": "2 weeks ago",
-      "origin": "LGMK",
-      "destination": "HECA",
-      "rules": "IFR",
-      "duration": "1h 57m"
     }
   ],
-  "flights_checked_at": "2026-11-09T06:09:03.443885+00:00",
-  "verified_at": "2026-11-09T06:09:03.443885+00:00",
-  "checked_at": "2026-11-09T06:09:03.443885+00:00"
+  "flights_checked_at": "2026-11-09T19:55:06.433831+00:00",
+  "verified_at": "2026-11-09T19:55:06.433831+00:00",
+  "checked_at": "2026-11-09T19:55:06.433831+00:00"
 }
