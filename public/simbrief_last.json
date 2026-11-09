@@ -1,63 +1,143 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-11-08T08:41:30.509102+00:00",
+  "retrieved_at": "2026-11-09T06:08:42.826333+00:00",
   "origin": {
-    "icao": "MDSD",
-    "name": "LAS AMERICAS INTL (JOSE F PENA"
+    "icao": "LFPG",
+    "name": "CHARLES-DE-GAULLE"
   },
   "destination": {
-    "icao": "TFFR",
-    "name": "MARYSE CONDE"
+    "icao": "LFMN",
+    "name": "NICE/COTE D'AZUR"
   },
   "flight_number": "2809",
   "aircraft": "A320",
-  "route": "DCT SATOE L349 GESSO DCT MODUX DCT GORET GORE2Z",
+  "route": "LATR7G LATRA DCT LAMUT DCT UTUVA DCT LERGA DCT LIQID DCT LATAM DCT TUNUR DCT NISAR NISA8R",
   "altitude": "35000",
-  "enroute_time": "01:15:25",
-  "scheduled_departure": "2026-11-07T14:15:00Z",
-  "scheduled_arrival": "2026-11-07T16:05:00Z",
-  "generated_at": "2026-11-07T13:44:20Z",
+  "enroute_time": "01:04:16",
+  "scheduled_departure": "2026-11-08T15:20:00Z",
+  "scheduled_arrival": "2026-11-08T16:55:00Z",
+  "generated_at": "2026-11-08T14:47:44Z",
   "route_points": [
     {
-      "lat": 17.666667,
-      "lon": -68.0,
-      "name": "SATOE"
+      "lat": 49.028528,
+      "lon": 2.661639,
+      "name": "PG091"
     },
     {
-      "lat": 17.623026,
-      "lon": -67.407526,
+      "lat": 49.031333,
+      "lon": 2.715028,
+      "name": "PG092"
+    },
+    {
+      "lat": 49.046111,
+      "lon": 3.005139,
+      "name": "PG095"
+    },
+    {
+      "lat": 48.941972,
+      "lon": 3.009611,
+      "name": "PG100"
+    },
+    {
+      "lat": 48.720722,
+      "lon": 2.590194,
+      "name": "PG102"
+    },
+    {
+      "lat": 48.498528,
+      "lon": 2.392417,
+      "name": "LAPAX"
+    },
+    {
+      "lat": 48.286389,
+      "lon": 2.408889,
+      "name": "LALUX"
+    },
+    {
+      "lat": 48.083333,
+      "lon": 2.516667,
+      "name": "LATRA"
+    },
+    {
+      "lat": 47.118333,
+      "lon": 2.984722,
+      "name": "LAMUT"
+    },
+    {
+      "lat": 47.11673,
+      "lon": 2.985385,
       "name": "TOC"
     },
     {
-      "lat": 17.493822,
-      "lon": -65.778578,
-      "name": "GESSO"
+      "lat": 45.86325,
+      "lon": 3.491083,
+      "name": "UTUVA"
     },
     {
-      "lat": 17.001529,
-      "lon": -63.213893,
+      "lat": 45.257278,
+      "lon": 3.750167,
+      "name": "LERGA"
+    },
+    {
+      "lat": 45.142778,
+      "lon": 4.001778,
+      "name": "LIQID"
+    },
+    {
+      "lat": 45.033861,
+      "lon": 4.239111,
+      "name": "LATAM"
+    },
+    {
+      "lat": 44.640278,
+      "lon": 4.84,
+      "name": "TUNUR"
+    },
+    {
+      "lat": 44.495278,
+      "lon": 5.071389,
+      "name": "NISAR"
+    },
+    {
+      "lat": 44.372778,
+      "lon": 5.265556,
+      "name": "XIRBI"
+    },
+    {
+      "lat": 44.228339,
+      "lon": 5.423039,
       "name": "TOD"
     },
     {
-      "lat": 16.958889,
-      "lon": -63.0,
-      "name": "MODUX"
+      "lat": 44.156389,
+      "lon": 5.501111,
+      "name": "DOTIG"
     },
     {
-      "lat": 16.564722,
-      "lon": -62.171944,
-      "name": "GORET"
+      "lat": 43.857222,
+      "lon": 5.823333,
+      "name": "VEDIK"
     },
     {
-      "lat": 16.338722,
-      "lon": -61.930583,
-      "name": "RIDIN"
+      "lat": 43.595833,
+      "lon": 6.101111,
+      "name": "AMFOU"
     },
     {
-      "lat": 16.264167,
-      "lon": -61.525833,
-      "name": "TFFR"
+      "lat": 43.503889,
+      "lon": 6.434444,
+      "name": "TIPIK"
+    },
+    {
+      "lat": 43.384583,
+      "lon": 6.606361,
+      "name": "MUS"
+    },
+    {
+      "lat": 43.665278,
+      "lon": 7.215,
+      "name": "LFMN"
     }
   ]
 }

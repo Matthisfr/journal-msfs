@@ -3,14 +3,41 @@
   "profile_url": "https://pilots.sayintentions.ai/u/Mathis",
   "username": "Mathis",
   "rank": "Senior 1st Officer",
-  "flight_hours": 71,
-  "ifr_hours": 69,
+  "flight_hours": 75,
+  "ifr_hours": 73,
   "vfr_hours": 2,
-  "total_flights": 44,
-  "airports_visited": 44,
+  "total_flights": 47,
+  "airports_visited": 45,
   "source": "profil public Gate 404 (navigateur Chromium)",
   "rank_badge": "sayintentions-rank.svg",
   "recent_flights": [
+    {
+      "id": "IFR-884231078",
+      "aircraft": "F-FENX",
+      "when": "22 hours ago",
+      "origin": "LFPG",
+      "destination": "LFMN",
+      "rules": "IFR",
+      "duration": "1h 40m"
+    },
+    {
+      "id": "IFR-884225246",
+      "aircraft": "F-FENX",
+      "when": "yesterday",
+      "origin": "EIDW",
+      "destination": "LFPG",
+      "rules": "IFR",
+      "duration": "2h 6m"
+    },
+    {
+      "id": "IFR-884224876",
+      "aircraft": "F-FENX",
+      "when": "yesterday",
+      "origin": "EIDW",
+      "destination": "LFPG",
+      "rules": "IFR",
+      "duration": "0h 11m"
+    },
     {
       "id": "IFR-884203806",
       "aircraft": "F-FENX",
@@ -32,7 +59,7 @@
     {
       "id": "IFR-884166837",
       "aircraft": "F-FENX",
-      "when": "2 days ago",
+      "when": "3 days ago",
       "origin": "MUHA",
       "destination": "MKJS",
       "rules": "IFR",
@@ -41,7 +68,7 @@
     {
       "id": "IFR-884125447",
       "aircraft": "F-FENX",
-      "when": "5 days ago",
+      "when": "6 days ago",
       "origin": "OMDB",
       "destination": "OPKC",
       "rules": "IFR",
@@ -73,36 +100,9 @@
       "destination": "HECA",
       "rules": "IFR",
       "duration": "1h 57m"
-    },
-    {
-      "id": "IFR-883907560",
-      "aircraft": "F-FENX",
-      "when": "2 weeks ago",
-      "origin": "DTTJ",
-      "destination": "LGMK",
-      "rules": "IFR",
-      "duration": "2h 15m"
-    },
-    {
-      "id": "IFR-883875244",
-      "aircraft": "F-FENX",
-      "when": "2 weeks ago",
-      "origin": "DAAG",
-      "destination": "DTTJ",
-      "rules": "IFR",
-      "duration": "1h 36m"
-    },
-    {
-      "id": "IFR-883854493",
-      "aircraft": "F-FENX",
-      "when": "2 weeks ago",
-      "origin": "GMMX",
-      "destination": "DAAG",
-      "rules": "IFR",
-      "duration": "2h 12m"
     }
   ],
-  "flights_checked_at": "2026-11-08T08:41:52.462807+00:00",
-  "verified_at": "2026-11-08T08:41:52.462807+00:00",
-  "checked_at": "2026-11-08T08:41:52.462807+00:00"
+  "flights_checked_at": "2026-11-09T06:09:03.443885+00:00",
+  "verified_at": "2026-11-09T06:09:03.443885+00:00",
+  "checked_at": "2026-11-09T06:09:03.443885+00:00"
 }
