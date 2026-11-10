@@ -1,153 +1,108 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-11-09T19:54:46.173255+00:00",
+  "retrieved_at": "2026-11-10T06:09:40.900534+00:00",
   "origin": {
-    "icao": "EDDF",
-    "name": "FRANKFURT/MAIN"
+    "icao": "LDDU",
+    "name": "RUDJER BOSKOVIC"
   },
   "destination": {
-    "icao": "LFMN",
-    "name": "NICE/COTE D'AZUR"
+    "icao": "LFKJ",
+    "name": "NAPOLEON BONAPARTE"
   },
   "flight_number": "2809",
   "aircraft": "A320",
-  "route": "ANEK4D ANEKI Y163 HERBI Y164 MOPAN DCT LUTIX DCT BENOT DCT NEMOS DCT GEVEA DCT KOGAS DCT MEDAM DCT VEVAR VEVA8R",
-  "altitude": "37000",
-  "enroute_time": "01:21:19",
-  "scheduled_departure": "2026-11-09T10:45:00Z",
-  "scheduled_arrival": "2026-11-09T12:25:00Z",
-  "generated_at": "2026-11-09T10:14:04Z",
+  "route": "AMUG1W AMUGO M169 KATTI DCT PES DCT CMP DCT ASKAG ASKA3N",
+  "altitude": "20000",
+  "enroute_time": "01:28:33",
+  "scheduled_departure": "2026-11-09T23:50:00Z",
+  "scheduled_arrival": "2026-11-10T01:45:00Z",
+  "generated_at": "2026-11-09T23:19:29Z",
   "route_points": [
     {
-      "lat": 50.070553,
-      "lon": 8.708008,
-      "name": "DF152"
+      "lat": 42.538639,
+      "lon": 18.325917,
+      "name": "DU801"
     },
     {
-      "lat": 50.010247,
-      "lon": 8.751739,
-      "name": "DF150"
+      "lat": 42.384556,
+      "lon": 18.276083,
+      "name": "DU803"
     },
     {
-      "lat": 49.7911,
-      "lon": 8.672294,
-      "name": "DF157"
+      "lat": 42.419639,
+      "lon": 18.125861,
+      "name": "DU804"
     },
     {
-      "lat": 49.317272,
-      "lon": 8.480428,
-      "name": "ANEKI"
-    },
-    {
-      "lat": 49.286111,
-      "lon": 8.476389,
-      "name": "NEKLO"
-    },
-    {
-      "lat": 49.063611,
-      "lon": 8.4475,
-      "name": "BADLI"
-    },
-    {
-      "lat": 48.901111,
-      "lon": 8.391111,
-      "name": "LOVME"
-    },
-    {
-      "lat": 48.788586,
-      "lon": 8.351969,
-      "name": "PABLA"
-    },
-    {
-      "lat": 48.490833,
-      "lon": 8.243611,
-      "name": "HERBI"
-    },
-    {
-      "lat": 48.246375,
-      "lon": 8.154536,
-      "name": "MOPAN"
-    },
-    {
-      "lat": 47.812912,
-      "lon": 7.835898,
+      "lat": 42.514005,
+      "lon": 17.716387,
       "name": "TOC"
     },
     {
-      "lat": 47.165,
-      "lon": 7.370556,
-      "name": "LUTIX"
+      "lat": 42.544167,
+      "lon": 17.583889,
+      "name": "AMUGO"
     },
     {
-      "lat": 47.057694,
-      "lon": 7.172806,
-      "name": "BENOT"
+      "lat": 42.536944,
+      "lon": 17.200556,
+      "name": "ORAKA"
     },
     {
-      "lat": 46.911944,
-      "lon": 6.906556,
-      "name": "NEMOS"
+      "lat": 42.507778,
+      "lon": 16.048889,
+      "name": "KATTI"
     },
     {
-      "lat": 46.253917,
-      "lon": 6.132222,
-      "name": "GEVEA"
+      "lat": 42.435833,
+      "lon": 14.184167,
+      "name": "PES"
     },
     {
-      "lat": 45.808333,
-      "lon": 6.390833,
-      "name": "KOGAS"
+      "lat": 42.123833,
+      "lon": 12.381528,
+      "name": "CMP"
     },
     {
-      "lat": 45.264444,
-      "lon": 6.94,
-      "name": "MEDAM"
+      "lat": 41.790278,
+      "lon": 9.75,
+      "name": "ASKAG"
     },
     {
-      "lat": 44.8,
-      "lon": 7.0125,
-      "name": "VEVAR"
-    },
-    {
-      "lat": 44.214444,
-      "lon": 7.151139,
-      "name": "GAPDO"
-    },
-    {
-      "lat": 43.832056,
-      "lon": 7.374639,
-      "name": "AMGEL"
-    },
-    {
-      "lat": 43.819106,
-      "lon": 7.389156,
+      "lat": 41.799425,
+      "lon": 9.707037,
       "name": "TOD"
     },
     {
-      "lat": 43.679361,
-      "lon": 7.545278,
-      "name": "MIKRU"
+      "lat": 41.976361,
+      "lon": 8.858139,
+      "name": "KJ870"
     },
     {
-      "lat": 43.528556,
-      "lon": 8.128111,
-      "name": "OTOKE"
+      "lat": 42.016583,
+      "lon": 8.660139,
+      "name": "KJ506"
     },
     {
-      "lat": 43.369611,
-      "lon": 7.936306,
-      "name": "MN800"
+      "lat": 42.031556,
+      "lon": 8.5845,
+      "name": "KJ810"
     },
     {
-      "lat": 43.41575,
-      "lon": 7.824278,
-      "name": "NERAS"
+      "lat": 41.977806,
+      "lon": 8.509444,
+      "name": "LASVA"
     },
     {
-      "lat": 43.665278,
-      "lon": 7.215,
-      "name": "LFMN"
+      "lat": 41.898806,
+      "lon": 8.612083,
+      "name": "IDDOL"
+    },
+    {
+      "lat": 41.923889,
+      "lon": 8.8025,
+      "name": "LFKJ"
     }
   ]
 }
