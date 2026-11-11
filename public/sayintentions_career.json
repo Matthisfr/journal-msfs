@@ -3,14 +3,23 @@
   "profile_url": "https://pilots.sayintentions.ai/u/Mathis",
   "username": "Mathis",
   "rank": "Senior 1st Officer",
-  "flight_hours": 79,
-  "ifr_hours": 77,
+  "flight_hours": 81,
+  "ifr_hours": 79,
   "vfr_hours": 2,
-  "total_flights": 49,
-  "airports_visited": 47,
+  "total_flights": 50,
+  "airports_visited": 49,
   "source": "profil public Gate 404 (navigateur Chromium)",
   "rank_badge": "sayintentions-rank.svg",
   "recent_flights": [
+    {
+      "id": "IFR-884287210",
+      "aircraft": "F-FENX",
+      "when": "19 hours ago",
+      "origin": "EGKK",
+      "destination": "LPPR",
+      "rules": "IFR",
+      "duration": "2h 43m"
+    },
     {
       "id": "IFR-884267623",
       "aircraft": "F-FENX",
@@ -32,7 +41,7 @@
     {
       "id": "IFR-884231078",
       "aircraft": "F-FENX",
-      "when": "2 days ago",
+      "when": "3 days ago",
       "origin": "LFPG",
       "destination": "LFMN",
       "rules": "IFR",
@@ -59,7 +68,7 @@
     {
       "id": "IFR-884203806",
       "aircraft": "F-FENX",
-      "when": "3 days ago",
+      "when": "4 days ago",
       "origin": "MDSD",
       "destination": "TFFR",
       "rules": "IFR",
@@ -68,7 +77,7 @@
     {
       "id": "IFR-884180936",
       "aircraft": "F-FENX",
-      "when": "4 days ago",
+      "when": "5 days ago",
       "origin": "MKJS",
       "destination": "MDSD",
       "rules": "IFR",
@@ -77,7 +86,7 @@
     {
       "id": "IFR-884166837",
       "aircraft": "F-FENX",
-      "when": "5 days ago",
+      "when": "6 days ago",
       "origin": "MUHA",
       "destination": "MKJS",
       "rules": "IFR",
@@ -91,18 +100,9 @@
       "destination": "OPKC",
       "rules": "IFR",
       "duration": "2h 19m"
-    },
-    {
-      "id": "IFR-884082178",
-      "aircraft": "F-FENX",
-      "when": "1 week ago",
-      "origin": "OERK",
-      "destination": "OMDB",
-      "rules": "IFR",
-      "duration": "2h 10m"
     }
   ],
-  "flights_checked_at": "2026-11-11T06:08:25.072466+00:00",
-  "verified_at": "2026-11-11T06:08:25.072466+00:00",
-  "checked_at": "2026-11-11T06:08:25.072466+00:00"
+  "flights_checked_at": "2026-11-11T21:51:19.895785+00:00",
+  "verified_at": "2026-11-11T21:51:19.895785+00:00",
+  "checked_at": "2026-11-11T21:51:19.895785+00:00"
 }

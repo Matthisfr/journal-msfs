@@ -3670,5 +3670,189 @@
     "source": "OurAirports / airport-codes",
     "country_code": "AQ",
     "aircraft_marker": "cessna"
+  },
+  "KCXP": {
+    "lat": 39.194331,
+    "lon": -119.734312,
+    "name": "Carson Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "cessna"
+  },
+  "KDCA": {
+    "lat": 38.8521,
+    "lon": -77.037697,
+    "name": "Ronald Reagan Washington National Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
+  },
+  "KGCN": {
+    "lat": 35.9524,
+    "lon": -112.147003,
+    "name": "Grand Canyon National Park Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
+  },
+  "KPGA": {
+    "lat": 36.924234,
+    "lon": -111.447716,
+    "name": "Page Municipal Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
+  },
+  "LDRI": {
+    "lat": 45.216376,
+    "lon": 14.57085,
+    "name": "Rijeka Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "HR",
+    "aircraft_marker": "airliner"
+  },
+  "LQSA": {
+    "lat": 43.8246,
+    "lon": 18.331499,
+    "name": "Sarajevo International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "BA",
+    "aircraft_marker": "airliner"
+  },
+  "NWWX": {
+    "lat": -21.520435,
+    "lon": 165.971947,
+    "name": "Canala Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NC",
+    "aircraft_marker": "cessna"
+  },
+  "NWWA": {
+    "lat": -21.096407,
+    "lon": 167.80379,
+    "name": "Tiga Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NC",
+    "aircraft_marker": "unknown"
+  },
+  "NWWB": {
+    "lat": -21.609604,
+    "lon": 165.397103,
+    "name": "Bourail - Poé Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NC",
+    "aircraft_marker": "cessna"
+  },
+  "NWWC": {
+    "lat": -19.720521,
+    "lon": 163.661077,
+    "name": "Île Art - Waala Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NC",
+    "aircraft_marker": "cessna"
+  },
+  "NWWD": {
+    "lat": -21.053551,
+    "lon": 164.838768,
+    "name": "Koné Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NC",
+    "aircraft_marker": "cessna"
+  },
+  "NWWE": {
+    "lat": -22.5889,
+    "lon": 167.455994,
+    "name": "Île des Pins Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NC",
+    "aircraft_marker": "cessna"
+  },
+  "NWWH": {
+    "lat": -21.257288,
+    "lon": 165.61821,
+    "name": "Nesson Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NC",
+    "aircraft_marker": "cessna"
+  },
+  "NWWI": {
+    "lat": -20.69446,
+    "lon": 164.99249,
+    "name": "Hienghène Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NC",
+    "aircraft_marker": "unknown"
+  },
+  "NWWK": {
+    "lat": -20.546323,
+    "lon": 164.255648,
+    "name": "Koumac Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NC",
+    "aircraft_marker": "cessna"
+  },
+  "NWWL": {
+    "lat": -20.774563,
+    "lon": 167.239328,
+    "name": "Lifou Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NC",
+    "aircraft_marker": "cessna"
+  },
+  "NWWM": {
+    "lat": -22.257706,
+    "lon": 166.472822,
+    "name": "Nouméa Magenta Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NC",
+    "aircraft_marker": "cessna"
+  },
+  "NWWP": {
+    "lat": -20.289155,
+    "lon": 164.09935,
+    "name": "Poum / Malabou Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NC",
+    "aircraft_marker": "unknown"
+  },
+  "NWWQ": {
+    "lat": -21.316456,
+    "lon": 164.999399,
+    "name": "Mueo Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NC",
+    "aircraft_marker": "unknown"
+  },
+  "NWWR": {
+    "lat": -21.482438,
+    "lon": 168.038465,
+    "name": "Maré Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NC",
+    "aircraft_marker": "cessna"
+  },
+  "NWWT": {
+    "lat": -21.8197,
+    "lon": 165.860992,
+    "name": "Oua Tom Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NC",
+    "aircraft_marker": "cessna"
+  },
+  "NWWU": {
+    "lat": -20.790127,
+    "lon": 165.259524,
+    "name": "Touho Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NC",
+    "aircraft_marker": "cessna"
+  },
+  "NWWV": {
+    "lat": -20.640932,
+    "lon": 166.573024,
+    "name": "Ouvéa Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "NC",
+    "aircraft_marker": "cessna"
   }
 }

@@ -1116,6 +1116,36 @@
     "criteria": []
   },
   {
+    "code": "LQSA",
+    "name": "LQSA Sarajevo International Airport",
+    "scenes": [
+      {
+        "publisher": "Kiss Simulation",
+        "installed": "2.0.3",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "MXI Design",
+        "installed": "1.0.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
     "code": "LBSF",
     "name": "LBSF",
     "scenes": [
@@ -2377,6 +2407,36 @@
         "comparison": "",
         "server_version": "",
         "version_state": "À vérifier"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
+    "code": "NWWW",
+    "name": "Nouvelle-Caledonie - NWWW - La Tontouta",
+    "scenes": [
+      {
+        "publisher": "bagolu",
+        "installed": "1.0.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "sierrasim",
+        "installed": "2.1.1",
+        "url": "https://secure.simmarket.com/sierrasim-simulation-la-tontouta-intl.-airport-nwww-msfs24.phtml",
+        "image": "https://secure.simmarket.com/images/products/6/61/20188/PORTADA_NWWW_MSFS2024.jpg",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "2.1.1",
+        "version_state": "À jour"
       }
     ],
     "winner": "Non déterminé",

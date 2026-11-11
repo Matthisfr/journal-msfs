@@ -1,108 +1,113 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-11-11T06:08:03.492341+00:00",
+  "retrieved_at": "2026-11-11T21:50:56.004465+00:00",
   "origin": {
-    "icao": "LDDU",
-    "name": "RUDJER BOSKOVIC"
+    "icao": "EGKK",
+    "name": "GATWICK"
   },
   "destination": {
-    "icao": "LFKJ",
-    "name": "NAPOLEON BONAPARTE"
+    "icao": "LPPR",
+    "name": "FRANCISCO SA CARNEIRO"
   },
   "flight_number": "2809",
   "aircraft": "A320",
-  "route": "AMUG1W AMUGO M169 KATTI DCT PES DCT CMP DCT ASKAG ASKA3N",
-  "altitude": "20000",
-  "enroute_time": "01:28:38",
-  "scheduled_departure": "2026-11-10T12:45:00Z",
-  "scheduled_arrival": "2026-11-10T14:40:00Z",
-  "generated_at": "2026-11-10T12:10:40Z",
+  "route": "IMVU1Z IMVUR N63 SAM M195 LORKU DCT LOTEE DCT ELTEP T328 ASPOR ASPO3T",
+  "altitude": "35000",
+  "enroute_time": "01:56:57",
+  "scheduled_departure": "2026-11-11T09:55:00Z",
+  "scheduled_arrival": "2026-11-11T12:20:00Z",
+  "generated_at": "2026-11-11T09:22:11Z",
   "route_points": [
     {
-      "lat": 42.538639,
-      "lon": 18.325917,
-      "name": "DU801"
+      "lat": 51.168306,
+      "lon": -0.04325,
+      "name": "KKE05"
     },
     {
-      "lat": 42.384556,
-      "lon": 18.276083,
-      "name": "DU803"
+      "lat": 51.231417,
+      "lon": -0.065361,
+      "name": "KKN09"
     },
     {
-      "lat": 42.419639,
-      "lon": 18.125861,
-      "name": "DU804"
+      "lat": 51.199444,
+      "lon": -0.342861,
+      "name": "KKW19"
     },
     {
-      "lat": 42.523853,
-      "lon": 17.673213,
+      "lat": 51.174694,
+      "lon": -0.532333,
+      "name": "IMVUR"
+    },
+    {
+      "lat": 51.059125,
+      "lon": -0.963944,
+      "name": "VOUGA"
+    },
+    {
+      "lat": 50.95525,
+      "lon": -1.345056,
+      "name": "SAM"
+    },
+    {
+      "lat": 50.528808,
+      "lon": -1.785683,
+      "name": "IBNID"
+    },
+    {
+      "lat": 50.246267,
+      "lon": -2.072336,
+      "name": "MARUK"
+    },
+    {
+      "lat": 49.938361,
+      "lon": -2.371011,
+      "name": "LORKU"
+    },
+    {
+      "lat": 49.667121,
+      "lon": -2.568867,
       "name": "TOC"
     },
     {
-      "lat": 42.544167,
-      "lon": 17.583889,
-      "name": "AMUGO"
+      "lat": 44.658889,
+      "lon": -5.836667,
+      "name": "LOTEE"
     },
     {
-      "lat": 42.536944,
-      "lon": 17.200556,
-      "name": "ORAKA"
+      "lat": 42.616389,
+      "lon": -7.783611,
+      "name": "ELTEP"
     },
     {
-      "lat": 42.507778,
-      "lon": 16.048889,
-      "name": "KATTI"
-    },
-    {
-      "lat": 42.435833,
-      "lon": 14.184167,
-      "name": "PES"
-    },
-    {
-      "lat": 42.123833,
-      "lon": 12.381528,
-      "name": "CMP"
-    },
-    {
-      "lat": 41.790278,
-      "lon": 9.75,
-      "name": "ASKAG"
-    },
-    {
-      "lat": 41.808557,
-      "lon": 9.664062,
+      "lat": 42.520076,
+      "lon": -7.819799,
       "name": "TOD"
     },
     {
-      "lat": 41.976361,
-      "lon": 8.858139,
-      "name": "KJ870"
+      "lat": 41.815139,
+      "lon": -8.081194,
+      "name": "ASPOR"
     },
     {
-      "lat": 42.016583,
-      "lon": 8.660139,
-      "name": "KJ506"
+      "lat": 41.747467,
+      "lon": -8.235692,
+      "name": "PR643"
     },
     {
-      "lat": 42.031556,
-      "lon": 8.5845,
-      "name": "KJ810"
+      "lat": 41.598075,
+      "lon": -8.588831,
+      "name": "PR640"
     },
     {
-      "lat": 41.977806,
-      "lon": 8.509444,
-      "name": "LASVA"
+      "lat": 41.518244,
+      "lon": -8.753164,
+      "name": "ADNOV"
     },
     {
-      "lat": 41.898806,
-      "lon": 8.612083,
-      "name": "IDDOL"
-    },
-    {
-      "lat": 41.923889,
-      "lon": 8.8025,
-      "name": "LFKJ"
+      "lat": 41.235556,
+      "lon": -8.678056,
+      "name": "LPPR"
     }
   ]
 }
