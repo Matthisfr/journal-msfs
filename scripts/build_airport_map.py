@@ -38,6 +38,19 @@ def main():
             result[code]={"lat":lat,"lon":lon,"name":name,
                           "source":"Aerosoft Antarctica X manual (simulator ICAO)",
                           "country_code":"AQ","aircraft_marker":"cessna"}
+    # Identifiants spécifiques au pack Flightsim.to New Caledonia Airports.
+    # NWBO = Île Hugon (OurAirports NC-0001); NWDU = Nakutakoin (NC-0002).
+    # NWWO et NWWS figurent dans les répertoires d'aérodromes calédoniens.
+    new_caledonia={
+        "NWBO":(-22.041724,166.03215,"Île Hugon Airstrip","NC-0001 / Wingfarer"),
+        "NWDU":(-22.16896,166.4332,"Nakutakoin Ultralight Airport","NC-0002 / Wingfarer"),
+        "NWWO":(-22.459999,166.783005,"Edmond Cané / Île Ouen","Great Circle Mapper / LocaleDB"),
+        "NWWS":(-22.267000,166.917007,"Plaine des Lacs","Great Circle Mapper / LocaleDB"),
+    }
+    for code,(lat,lon,name,source) in new_caledonia.items():
+        if code in codes:
+            result[code]={"lat":lat,"lon":lon,"name":name,"source":source,
+                          "country_code":"NC","aircraft_marker":"cessna"}
     result={k:v for k,v in result.items() if k in codes}
     missing=sorted(codes-set(result))
     if missing:
