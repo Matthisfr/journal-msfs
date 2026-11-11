@@ -3886,5 +3886,13 @@
     "source": "Great Circle Mapper / LocaleDB",
     "country_code": "NC",
     "aircraft_marker": "unknown"
+  },
+  "NWYA": {
+    "lat": -22.15,
+    "lon": 166.883,
+    "name": "Yaté Barrage",
+    "source": "Coordonnées fournies par utilisateur — position approximative",
+    "country_code": "NC",
+    "aircraft_marker": "unknown"
   }
 }
