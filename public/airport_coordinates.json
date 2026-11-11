@@ -3854,5 +3854,37 @@
     "source": "OurAirports / airport-codes",
     "country_code": "NC",
     "aircraft_marker": "cessna"
+  },
+  "NWBO": {
+    "lat": -22.041724,
+    "lon": 166.03215,
+    "name": "Île Hugon Airstrip",
+    "source": "NC-0001 / Wingfarer",
+    "country_code": "NC",
+    "aircraft_marker": "unknown"
+  },
+  "NWDU": {
+    "lat": -22.16896,
+    "lon": 166.4332,
+    "name": "Nakutakoin Ultralight Airport",
+    "source": "NC-0002 / Wingfarer",
+    "country_code": "NC",
+    "aircraft_marker": "unknown"
+  },
+  "NWWO": {
+    "lat": -22.459999,
+    "lon": 166.783005,
+    "name": "Edmond Cané / Île Ouen",
+    "source": "Great Circle Mapper / LocaleDB",
+    "country_code": "NC",
+    "aircraft_marker": "unknown"
+  },
+  "NWWS": {
+    "lat": -22.267,
+    "lon": 166.917007,
+    "name": "Plaine des Lacs",
+    "source": "Great Circle Mapper / LocaleDB",
+    "country_code": "NC",
+    "aircraft_marker": "unknown"
   }
 }
