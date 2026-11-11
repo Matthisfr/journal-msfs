@@ -46,6 +46,7 @@ def main():
         "NWDU":(-22.16896,166.4332,"Nakutakoin Ultralight Airport","NC-0002 / Wingfarer"),
         "NWWO":(-22.459999,166.783005,"Edmond Cané / Île Ouen","Great Circle Mapper / LocaleDB"),
         "NWWS":(-22.267000,166.917007,"Plaine des Lacs","Great Circle Mapper / LocaleDB"),
+        "NWYA":(-22.1500,166.8830,"Yaté Barrage","Coordonnées fournies par utilisateur — position approximative"),
     }
     for code,(lat,lon,name,source) in new_caledonia.items():
         if code in codes:
