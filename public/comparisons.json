@@ -1122,12 +1122,12 @@
       {
         "publisher": "Kiss Simulation",
         "installed": "2.0.3",
-        "url": "",
-        "image": "",
-        "image_checked": false,
-        "comparison": "",
-        "server_version": "",
-        "version_state": "À vérifier"
+        "url": "https://secure.simmarket.com/kiss-simulation-lqsa-sarajevo-intl.-airport-msfs24.phtml",
+        "image": "https://secure.simmarket.com/images/products/9/98/20866/LQSA_MAINPAGE.png",
+        "image_checked": true,
+        "comparison": "update",
+        "server_version": "2.0.4",
+        "version_state": "Mise à jour disponible"
       },
       {
         "publisher": "MXI Design",
