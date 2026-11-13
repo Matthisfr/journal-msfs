@@ -1065,9 +1065,9 @@
         "url": "https://inibuilds.com/products/inibuilds-luton-eggw-msfs",
         "image": "",
         "image_checked": true,
-        "comparison": "equal",
-        "server_version": "1.1.1",
-        "version_state": "À jour"
+        "comparison": "update",
+        "server_version": "1.1.2",
+        "version_state": "Mise à jour disponible"
       },
       {
         "publisher": "UK2000 Scenery",

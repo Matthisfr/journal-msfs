@@ -1,113 +1,203 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-11-12T06:07:10.619944+00:00",
+  "retrieved_at": "2026-11-13T06:04:16.030577+00:00",
   "origin": {
-    "icao": "EGKK",
-    "name": "GATWICK"
+    "icao": "EKCH",
+    "name": "KASTRUP"
   },
   "destination": {
-    "icao": "LPPR",
-    "name": "FRANCISCO SA CARNEIRO"
+    "icao": "LIMC",
+    "name": "MALPENSA"
   },
   "flight_number": "2809",
   "aircraft": "A320",
-  "route": "IMVU1Z IMVUR N63 SAM M195 LORKU DCT LOTEE DCT ELTEP T328 ASPOR ASPO3T",
-  "altitude": "35000",
-  "enroute_time": "01:56:57",
-  "scheduled_departure": "2026-11-11T09:55:00Z",
-  "scheduled_arrival": "2026-11-11T12:20:00Z",
-  "generated_at": "2026-11-11T09:22:11Z",
+  "route": "NEXE2C NEXEN T503 GIMRU DCT MICOS DCT WRB DCT XAROL DCT BOMBI DCT GIGET DCT ABUKA DCT KRH DCT NATOR DCT TRA DCT RIPUS DCT GERSA DCT SOSON DCT DEGAD Z424 RIXUV RIXU3E",
+  "altitude": "30000",
+  "enroute_time": "01:52:12",
+  "scheduled_departure": "2026-11-12T09:35:00Z",
+  "scheduled_arrival": "2026-11-12T11:50:00Z",
+  "generated_at": "2026-11-12T09:03:37Z",
   "route_points": [
     {
-      "lat": 51.168306,
-      "lon": -0.04325,
-      "name": "KKE05"
+      "lat": 55.569028,
+      "lon": 12.56775,
+      "name": "RUBAT"
     },
     {
-      "lat": 51.231417,
-      "lon": -0.065361,
-      "name": "KKN09"
+      "lat": 55.203383,
+      "lon": 12.12305,
+      "name": "BISTA"
     },
     {
-      "lat": 51.199444,
-      "lon": -0.342861,
-      "name": "KKW19"
+      "lat": 54.810778,
+      "lon": 11.625242,
+      "name": "NEXEN"
     },
     {
-      "lat": 51.174694,
-      "lon": -0.532333,
-      "name": "IMVUR"
+      "lat": 54.56,
+      "lon": 11.313611,
+      "name": "GIMRU"
     },
     {
-      "lat": 51.059125,
-      "lon": -0.963944,
-      "name": "VOUGA"
-    },
-    {
-      "lat": 50.95525,
-      "lon": -1.345056,
-      "name": "SAM"
-    },
-    {
-      "lat": 50.528808,
-      "lon": -1.785683,
-      "name": "IBNID"
-    },
-    {
-      "lat": 50.246267,
-      "lon": -2.072336,
-      "name": "MARUK"
-    },
-    {
-      "lat": 49.938361,
-      "lon": -2.371011,
-      "name": "LORKU"
-    },
-    {
-      "lat": 49.667121,
-      "lon": -2.568867,
+      "lat": 54.451187,
+      "lon": 11.181167,
       "name": "TOC"
     },
     {
-      "lat": 44.658889,
-      "lon": -5.836667,
-      "name": "LOTEE"
+      "lat": 54.305556,
+      "lon": 11.005278,
+      "name": "MICOS"
     },
     {
-      "lat": 42.616389,
-      "lon": -7.783611,
-      "name": "ELTEP"
+      "lat": 51.505697,
+      "lon": 9.110914,
+      "name": "WRB"
     },
     {
-      "lat": 42.520076,
-      "lon": -7.819799,
+      "lat": 51.314575,
+      "lon": 9.045894,
+      "name": "XAROL"
+    },
+    {
+      "lat": 50.056667,
+      "lon": 8.800278,
+      "name": "BOMBI"
+    },
+    {
+      "lat": 49.701111,
+      "lon": 8.726667,
+      "name": "GIGET"
+    },
+    {
+      "lat": 49.465278,
+      "lon": 8.679167,
+      "name": "ABUKA"
+    },
+    {
+      "lat": 48.992944,
+      "lon": 8.584236,
+      "name": "KRH"
+    },
+    {
+      "lat": 48.17,
+      "lon": 8.321261,
+      "name": "NATOR"
+    },
+    {
+      "lat": 47.6895,
+      "lon": 8.436972,
+      "name": "TRA"
+    },
+    {
+      "lat": 47.260278,
+      "lon": 8.5,
+      "name": "RIPUS"
+    },
+    {
+      "lat": 47.039375,
+      "lon": 8.532114,
+      "name": "GERSA"
+    },
+    {
+      "lat": 46.606667,
+      "lon": 8.594167,
+      "name": "SOSON"
+    },
+    {
+      "lat": 46.436111,
+      "lon": 8.618333,
+      "name": "DEGAD"
+    },
+    {
+      "lat": 46.273056,
+      "lon": 8.472222,
+      "name": "BASGO"
+    },
+    {
+      "lat": 46.109722,
+      "lon": 8.495556,
+      "name": "AKASU"
+    },
+    {
+      "lat": 45.8975,
+      "lon": 8.609722,
+      "name": "RIXUV"
+    },
+    {
+      "lat": 45.76435,
+      "lon": 8.764017,
+      "name": "MC685"
+    },
+    {
+      "lat": 45.6175,
+      "lon": 8.876944,
+      "name": "EVGIR"
+    },
+    {
+      "lat": 45.502997,
+      "lon": 8.908103,
+      "name": "MC768"
+    },
+    {
+      "lat": 45.388383,
+      "lon": 8.939244,
+      "name": "MC761"
+    },
+    {
+      "lat": 45.306508,
+      "lon": 8.961411,
+      "name": "MC756"
+    },
+    {
+      "lat": 45.224722,
+      "lon": 8.983611,
+      "name": "ESITE"
+    },
+    {
+      "lat": 45.191989,
+      "lon": 8.99238,
       "name": "TOD"
     },
     {
-      "lat": 41.815139,
-      "lon": -8.081194,
-      "name": "ASPOR"
+      "lat": 45.142744,
+      "lon": 9.005553,
+      "name": "MC746"
     },
     {
-      "lat": 41.747467,
-      "lon": -8.235692,
-      "name": "PR643"
+      "lat": 45.060853,
+      "lon": 9.027531,
+      "name": "MC741"
     },
     {
-      "lat": 41.598075,
-      "lon": -8.588831,
-      "name": "PR640"
+      "lat": 45.042111,
+      "lon": 8.888956,
+      "name": "MC435"
     },
     {
-      "lat": 41.518244,
-      "lon": -8.753164,
-      "name": "ADNOV"
+      "lat": 45.123975,
+      "lon": 8.866789,
+      "name": "MC430"
     },
     {
-      "lat": 41.235556,
-      "lon": -8.678056,
-      "name": "LPPR"
+      "lat": 45.205833,
+      "lon": 8.844558,
+      "name": "MC425"
+    },
+    {
+      "lat": 45.287686,
+      "lon": 8.822261,
+      "name": "MC420"
+    },
+    {
+      "lat": 45.369444,
+      "lon": 8.8,
+      "name": "INLER"
+    },
+    {
+      "lat": 45.63,
+      "lon": 8.723056,
+      "name": "LIMC"
     }
   ]
 }
