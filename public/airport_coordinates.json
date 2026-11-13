@@ -3918,5 +3918,13 @@
     "source": "OurAirports / airport-codes",
     "country_code": "US",
     "aircraft_marker": "airliner"
+  },
+  "KSTL": {
+    "lat": 38.748697,
+    "lon": -90.370003,
+    "name": "St. Louis Lambert International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
   }
 }
