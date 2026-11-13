@@ -3894,5 +3894,29 @@
     "source": "Coordonnées fournies par utilisateur — position approximative",
     "country_code": "NC",
     "aircraft_marker": "unknown"
+  },
+  "KFAT": {
+    "lat": 36.775767,
+    "lon": -119.718018,
+    "name": "Fresno Yosemite International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
+  },
+  "KSAT": {
+    "lat": 29.533701,
+    "lon": -98.469803,
+    "name": "San Antonio International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
+  },
+  "KSAV": {
+    "lat": 32.126591,
+    "lon": -81.19998,
+    "name": "Savannah Hilton Head International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
   }
 }

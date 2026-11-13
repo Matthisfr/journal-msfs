@@ -1301,13 +1301,13 @@
     "scenes": [
       {
         "publisher": "inibuilds",
-        "installed": "1.0.2",
+        "installed": "1.0.3",
         "url": "https://inibuilds.com/products/inibuilds-ibiza-leib-msfs2024",
         "image": "",
         "image_checked": true,
-        "comparison": "update",
-        "server_version": "1.0.3",
-        "version_state": "Mise à jour disponible"
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
       },
       {
         "publisher": "sim-wings",
