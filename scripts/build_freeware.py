@@ -105,6 +105,7 @@ def build():
     airports=json.loads((PUBLIC/"airports.json").read_text(encoding="utf-8"))
     owned={str(a.get("icao","")).upper() for a in airports}
     items=payload.get("items",[])
+    print("Fiches catalogue source :",len(items))
     known={x["url"] for x in items}
     items += [x for x in latest_freeware() if x["url"] not in known]
     blocks=[]
