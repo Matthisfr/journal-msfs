@@ -25,17 +25,46 @@ def image_for(url):
     except Exception:
         return ""
 
+def latest_freeware():
+    """Actualités freeware récentes, excluant Flightsim.to et les utilitaires."""
+    import xml.etree.ElementTree as ET
+    try:
+        with urlopen(Request("https://msfsaddons.com/category/freeware/feed/",headers={"User-Agent":"JournalMSFS/1.0"}),timeout=12) as res:
+            xml=res.read(700000)
+        root=ET.fromstring(xml)
+        found=[]
+        for item in root.findall("./channel/item")[:35]:
+            title=(item.findtext("title") or "").strip()
+            url=(item.findtext("link") or "").strip()
+            cats=[(c.text or "").lower() for c in item.findall("category")]
+            if "freeware" not in cats or not url or "flightsim.to" in url.lower(): continue
+            kind="aeroport" if "airports" in cats else "avion" if "aircraft" in cats else None
+            if not kind: continue
+            # Ne pas confondre une annonce de développement avec un produit téléchargeable.
+            if re.search(r"upcoming|preview|shows|progress|coming|teases|announces|returns|review|guide",title,re.I): continue
+            if not re.search(r"free|giveaway|gives away|released|available|download|now out",title,re.I): continue
+            found.append({"type":kind,"title":title,"publisher":"MSFS Addons — actualité freeware",
+                          "description":"Annonce gratuite repérée automatiquement ; vérifier la disponibilité sur la fiche source.",
+                          "url":url,"source":"MSFS Addons","compatibility":"MSFS 2024 à vérifier","image":""})
+        return found[:12]
+    except Exception as exc:
+        print("Veille freeware indisponible :",exc)
+        return []
+
 def build():
     payload=json.loads((PUBLIC/"freeware.json").read_text(encoding="utf-8"))
     airports=json.loads((PUBLIC/"airports.json").read_text(encoding="utf-8"))
     owned={str(a.get("icao","")).upper() for a in airports}
     items=payload.get("items",[])
+    known={x["url"] for x in items}
+    items += [x for x in latest_freeware() if x["url"] not in known]
     blocks=[]
+    image_cache={}
     for kind, heading in [("aeroport","Aéroports gratuits"),("avion","Avions gratuits")]:
         cards=[]
         for item in items:
             if item.get("type") != kind: continue
-            img=item.get("image") or image_for(item["url"])
+            img=item.get("image") or image_cache.setdefault(item["url"], image_for(item["url"]))
             image_html=('<img loading="lazy" alt="Illustration : '+esc(item["title"])+'" src="'+esc(img)+'">') if img else '<div class="noimage">✈</div>'
             code=str(item.get("icao") or "").upper()
             ownership='<span class="owned">Déjà dans ton inventaire</span>' if code and code in owned else ''
