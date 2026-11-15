@@ -56,5 +56,33 @@
     "detail": "Version CS £2 278,80 TTC, comprenant notamment écrans, commandes et panneaux. Tarif catalogue, pas une remise confirmée.",
     "url": "https://skalarki-electronics.com/products/homeline-mip-panel-package-std",
     "kind": "catalogue"
+  },
+  {
+    "category": "MIP A320 — Fournisseur",
+    "title": "VIER IM POTT — MIP professionnel",
+    "detail": "Ensemble de panneaux MIP professionnel : 1 962,31 € TTC (tarif catalogue, hors promotion).",
+    "url": "https://www.vier-im-pott.com/en/shop/product/a320-mip-panel-set-professional-cockpit-builder",
+    "kind": "catalogue"
+  },
+  {
+    "category": "MIP A320 — Fournisseur",
+    "title": "SIMWORX — MIP structure aluminium",
+    "detail": "Structure MIP largeur complète dès 1 499 € sans moniteurs, 1 999 € avec supports pour écrans ; compatibilité WINWING FCU proposée. Tarifs catalogue.",
+    "url": "https://sim-worx.com/a320-full-cockpit.html",
+    "kind": "catalogue"
+  },
+  {
+    "category": "MIP A320 — Fournisseur",
+    "title": "NexGenSim — MIP & Glareshield Pro",
+    "detail": "Structure MIP et glareshield à partir de 1 050 $ ; tarif catalogue.",
+    "url": "https://nexgensim.com/fr/collections/a320/all-units/",
+    "kind": "catalogue"
+  },
+  {
+    "category": "MIP A320 — Fournisseur",
+    "title": "HomeCockpits.fr — MIP complet",
+    "detail": "MIP et glareshield complets à 12 800 € TTC ; vérifier compatibilité Fenix et disponibilité avant commande. Tarif catalogue.",
+    "url": "https://www.homecockpits.fr/fr/accueil/485-mip-a320-glareshield.html",
+    "kind": "catalogue"
   }
 ]
