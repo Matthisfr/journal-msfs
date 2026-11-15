@@ -630,7 +630,13 @@ function renderSoftware(){
 }
 function renderHardwareGallery(){
   const el=$('#hardware-gallery');if(!el)return;
-  el.innerHTML=(Array.isArray(hardware)?hardware:[]).map(x=>{
+  // Les modules possédés d'abord, puis les attendus, enfin les produits surveillés.
+  const priority=x=>x.ownership==='Possédé'?0:x.ownership==='Attendu'?1:2;
+  const orderedHardware=(Array.isArray(hardware)?hardware:[])
+    .map((item,index)=>({item,index}))
+    .sort((a,b)=>priority(a.item)-priority(b.item)||a.index-b.index)
+    .map(entry=>entry.item);
+  el.innerHTML=orderedHardware.map(x=>{
     const photo=hardwareImages[x.id]||{};
     // URL versionnée : Safari/iPad ne doit pas conserver la précédente photographie.
     const photoPath=x.id==='brake-pressure-gauge'&&photo.path
