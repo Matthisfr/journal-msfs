@@ -63,15 +63,6 @@
     "photo_status": "pending"
   },
   {
-    "id": "pac",
-    "name": "32 PAC Metal",
-    "ownership": "Possédé",
-    "image_query": "Airbus throttle PAC",
-    "official_url": "https://uk.winctrl.com/view/goods-details.html?id=1665",
-    "photo_source": "winwingturkiye.com",
-    "photo_status": "pending"
-  },
-  {
     "id": "pedals",
     "name": "Orion 32 Rudder Pedals Metal with Damper",
     "ownership": "Possédé",
@@ -114,15 +105,6 @@
     "image_query": "WINCTRL Airbus captain sidestick metal 2",
     "official_url": "https://winctrl.com/view/shopping.html",
     "photo_source": "MSFS Addons — photo fabricant",
-    "photo_status": "pending"
-  },
-  {
-    "id": "ecam",
-    "name": "WINCTRL ECAM 32 Airbus",
-    "ownership": "Veille matériel",
-    "image_query": "WINCTRL ECAM 32 Airbus panel",
-    "official_url": "https://winctrl.com/view/shopping.html",
-    "photo_source": "MSFS Addons — visuel fabricant",
     "photo_status": "pending"
   },
   {
