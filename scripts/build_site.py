@@ -359,6 +359,8 @@ def build():
             title, url = h(p["title"]), h(p["url"])
             detail = h(p.get("detail", ""))
             category = h(p.get("category", "Promotion"))
+            if p.get("kind") == "catalogue":
+                category += " · TARIF CATALOGUE — PAS UNE REMISE CONFIRMÉE"
             expiry = (" · jusqu'au " + h(p["end"])) if p.get("end") else " · fin non annoncée"
             promo_cards.append('<article style="padding:15px;border:1px solid #c6a073;border-radius:10px;background:#102c42;color:#fff">'
                 + '<small style="color:#f4c879">' + category + expiry + '</small><h3 style="margin:8px 0;color:#fff">' + title + '</h3>'
