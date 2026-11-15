@@ -1,0 +1,66 @@
+{
+  "updated_at": "2026-11-15",
+  "items": [
+    {
+      "type": "aeroport",
+      "icao": "GCXO",
+      "title": "Tenerife Nord — MK Studios",
+      "publisher": "MK Studios",
+      "description": "Scène offerte pour MSFS 2024, signalée le 1er octobre 2026.",
+      "url": "https://msfsaddons.com/category/freeware/",
+      "source": "MSFS Addons",
+      "compatibility": "MSFS 2024",
+      "image": ""
+    },
+    {
+      "type": "avion",
+      "title": "FlyByWire A32NX",
+      "publisher": "FlyByWire Simulations",
+      "description": "Airbus A320neo communautaire gratuit, installation via FlyByWire Installer.",
+      "url": "https://flybywiresim.com/",
+      "source": "Développeur",
+      "compatibility": "MSFS 2024 : vérifier la version",
+      "image": ""
+    },
+    {
+      "type": "avion",
+      "title": "FlyByWire A380X",
+      "publisher": "FlyByWire Simulations",
+      "description": "Airbus A380 communautaire gratuit, installation via FlyByWire Installer.",
+      "url": "https://flybywiresim.com/",
+      "source": "Développeur",
+      "compatibility": "MSFS 2024 : vérifier la version",
+      "image": ""
+    },
+    {
+      "type": "avion",
+      "title": "Horizon Simulations Boeing 787-9",
+      "publisher": "Horizon Simulations",
+      "description": "Avion gratuit via Orbx Central ; nécessite le Boeing 787-10 de l'édition Premium Deluxe.",
+      "url": "https://orbxdirect.com/",
+      "source": "Orbx Central",
+      "compatibility": "MSFS 2024",
+      "image": ""
+    },
+    {
+      "type": "avion",
+      "title": "Got Friends — Discus-2c",
+      "publisher": "Got Friends",
+      "description": "Planeur gratuit annoncé compatible MSFS 2024.",
+      "url": "https://www.got-friends.com/",
+      "source": "Développeur",
+      "compatibility": "MSFS 2024",
+      "image": ""
+    },
+    {
+      "type": "avion",
+      "title": "Delta Simulations UH-60M Black Hawk",
+      "publisher": "Delta Simulations",
+      "description": "Hélicoptère gratuit open source, version 5.1 publiée en avril 2026.",
+      "url": "https://github.com/Delta-Simulations",
+      "source": "Développeur GitHub",
+      "compatibility": "MSFS 2024",
+      "image": ""
+    }
+  ]
+}
