@@ -347,6 +347,29 @@ def build():
                           '<div id="watch-container" class="watch-panel">' + render_watch(watch) + '</div>')
     index = index.replace('<div id="airport-update-digest" class="airport-update-digest"><p>Les mises à jour confirmées seront affichées après la vérification quotidienne.</p></div>',
                           '<div id="airport-update-digest" class="airport-update-digest">' + render_airport_digest(airports) + '</div>')
+    # Promotions saisonnières vérifiées : affichage indépendant des actualités.
+    promo_path = PUBLIC / "promotions.json"
+    if promo_path.is_file():
+        promos = json.loads(promo_path.read_text(encoding="utf-8"))
+        today = dt.datetime.now(ZoneInfo("Europe/Paris")).date()
+        active = [p for p in promos if not p.get("end") or dt.date.fromisoformat(p["end"]) >= today]
+        active.sort(key=lambda p: (p.get("category") != "Matériel Airbus", p.get("category", ""), p.get("title", "")))
+        promo_cards = []
+        for p in active:
+            title, url = h(p["title"]), h(p["url"])
+            detail = h(p.get("detail", ""))
+            category = h(p.get("category", "Promotion"))
+            expiry = (" · jusqu'au " + h(p["end"])) if p.get("end") else " · fin non annoncée"
+            promo_cards.append('<article style="padding:15px;border:1px solid #c6a073;border-radius:10px;background:#102c42;color:#fff">'
+                + '<small style="color:#f4c879">' + category + expiry + '</small><h3 style="margin:8px 0;color:#fff">' + title + '</h3>'
+                + '<p>' + detail + '</p><a style="color:#9fddff" href="' + url + '" target="_blank" rel="noopener noreferrer">Voir la promotion ↗</a></article>')
+        promo_html = ('<section id="promotions-black-friday" class="shell" style="padding:24px 0">'
+            '<h2>🛍️ Black Friday — Matériel Airbus et aéroports</h2>'
+            '<p>Offres repérées sur les boutiques et annonces publiques. Vérifier le prix et la disponibilité avant achat ; les promotions ne sont pas nécessairement cumulables.</p>'
+            '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:12px">'
+            + "".join(promo_cards) + '</div></section>')
+        if active:
+            index = index.replace("</main>", promo_html + "</main>", 1)
     index = static_brand_icons(index, manifest)
     index = index.replace("</body>", '<script type="application/json" id="brand-manifest">' +
                           json.dumps(manifest, ensure_ascii=False).replace("<", "\\u003c") +
