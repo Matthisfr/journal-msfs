@@ -27,7 +27,7 @@ def image_for(url):
             if m:
                 photo=urljoin(url,html.unescape(m.group(1)).replace("\\/", "/"))
                 if photo.startswith(("http://","https://")): return photo
-        for raw in re.findall(r'<script[^>]+type=[\\\"']application/ld\\+json[\\\"'][^>]*>(.*?)</script>',data,re.I|re.S):
+        for raw in re.findall(r"<script[^>]+type=[^>]*application/ld\\+json[^>]*>(.*?)</script>",data,re.I|re.S):
             try:
                 obj=json.loads(raw)
                 objs=obj if isinstance(obj,list) else [obj]
