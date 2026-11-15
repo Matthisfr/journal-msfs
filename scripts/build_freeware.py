@@ -19,15 +19,15 @@ def image_for(url):
     try:
         with urlopen(Request(url, headers={"User-Agent":"Mozilla/5.0 (compatible; JournalMSFS/1.0)"}), timeout=8) as res:
             data = res.read(350000).decode("utf-8", "ignore")
-        metas = re.findall(r"<meta\\s+[^>]*>", data, re.I)
+        metas = re.findall(r"<meta\s+[^>]*>", data, re.I)
         for tag in metas:
             if not re.search(r"(?:og:image|twitter:image|itemprop=[\\\"']image)",tag,re.I):
                 continue
-            m = re.search(r"content\\s*=\\s*[\\\"']([^\\\"']+)",tag,re.I)
+            m = re.search(r"content\s*=\s*[\\\"']([^\\\"']+)",tag,re.I)
             if m:
                 photo=urljoin(url,html.unescape(m.group(1)).replace("\\/", "/"))
                 if photo.startswith(("http://","https://")): return photo
-        for raw in re.findall(r"<script[^>]+type=[^>]*application/ld\\+json[^>]*>(.*?)</script>",data,re.I|re.S):
+        for raw in re.findall(r"<script[^>]+type=[^>]*application/ld\+json[^>]*>(.*?)</script>",data,re.I|re.S):
             try:
                 obj=json.loads(raw)
                 objs=obj if isinstance(obj,list) else [obj]
