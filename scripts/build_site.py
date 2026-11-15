@@ -388,27 +388,13 @@ def build():
             promo_html = promo_html.replace('style="padding:24px 0"', 'style="margin:18px 0 24px;padding:24px;border:3px solid #e8b451;border-radius:16px;background:linear-gradient(125deg,#071826,#213b52);color:#fff;box-shadow:0 8px 30px #0004"')
             promo_html = promo_html.replace('<h2>🛍️ Black Friday — Matériel Airbus et aéroports</h2>', '<div style="font-size:13px;letter-spacing:.16em;color:#f9cb6a;font-weight:800">MATÉRIEL · AÉROPORTS · AVIONS</div><h2 style="color:#fff;font-size:clamp(25px,3vw,40px);margin:7px 0 12px">🔥 PROMO</h2>')
             index = index.replace('<div class="hero">', promo_html + '<div class="hero">', 1)
-    # Photos MIP : images des fiches officielles, sans illustration inventée.
-    from urllib.request import Request, urlopen
-    from urllib.parse import urljoin
-    import html as html_lib
+    # Photos MIP officielles, même extracteur que la page GRATUIT.
+    from build_freeware import image_for
     def mip_photo(match):
-        source = html_lib.unescape(match.group(1))
-        try:
-            with urlopen(Request(source, headers={"User-Agent": "Mozilla/5.0"}), timeout=6) as response:
-                page = response.read(250000).decode("utf-8", "ignore")
-            tags = re.findall(r"<meta\\s+[^>]*>", page, re.I)
-            photo = ""
-            for tag in tags:
-                if re.search(r"(?:og:image|twitter:image)", tag, re.I):
-                    m = re.search(r"content=[\\\"']([^\\\"']+)", tag, re.I)
-                    if m:
-                        photo = urljoin(source, html_lib.unescape(m.group(1)))
-                        break
-            if photo.startswith("https://") or photo.startswith("http://"):
-                return '<div class="mip-image-slot" style="height:160px;overflow:hidden;border-radius:8px"><img loading="lazy" alt="Photo du MIP sur la fiche fabricant" src="' + h(photo) + '" style="width:100%;height:100%;object-fit:contain;background:#102c42"></div>'
-        except Exception as exc:
-            print("Photo MIP indisponible :", source, str(exc)[:100])
+        source = match.group(1)
+        photo = image_for(source)
+        if photo:
+            return '<div class="mip-image-slot" style="height:160px;overflow:hidden;border-radius:8px"><img loading="lazy" alt="Photo du MIP sur la fiche fabricant" src="' + h(photo) + '" style="width:100%;height:100%;object-fit:contain;background:#102c42" onerror="this.style.display=\'none\'"></div>'
         return '<div class="mip-image-slot" style="height:160px;display:grid;place-items:center;background:#102c42;color:#fff;border-radius:8px">Photo indisponible</div>'
     index = re.sub(r'<div class="mip-image-slot" data-mip-source="([^"]+)"[^>]*>[^<]*</div>', mip_photo, index)
     index = static_brand_icons(index, manifest)
