@@ -26,55 +26,61 @@ def image_for(url):
         return ""
 
 def latest_freeware():
-    """Vérifier chaque jour des produits Orbx gratuits réels (hors Flightsim.to)."""
+    """Catalogues gratuits Orbx et simMarket : filtrage par produits, pas par annonces."""
     from html.parser import HTMLParser
-    class Links(HTMLParser):
+    class ProductLinks(HTMLParser):
         def __init__(self):
             super().__init__()
-            self.urls=[]
-        def handle_starttag(self, tag, attrs):
-            if tag == "a":
-                href=dict(attrs).get("href","")
-                if "/product/" in href:
-                    self.urls.append(urljoin("https://orbxdirect.com/",href))
-    try:
-        with urlopen(Request("https://orbxdirect.com/freeware",headers={"User-Agent":"Mozilla/5.0"}),timeout=15) as res:
-            listing=res.read(1500000).decode("utf-8","ignore")
-        parser=Links()
-        parser.feed(listing)
-        found=[]
-        seen=set()
-        for url in parser.urls[:45]:
-            if url in seen: continue
-            seen.add(url)
-            try:
-                with urlopen(Request(url,headers={"User-Agent":"Mozilla/5.0"}),timeout=6) as res:
-                    page=res.read(250000).decode("utf-8","ignore")
-                plain=html.unescape(re.sub("<[^>]*>"," ",page))
-                if not re.search(r"Freeware\\s+Login to Download|Freeware\\s+Download|Freeware\\s+Screenshots",plain,re.I): continue
-                if not re.search(r"MSFS 2024 Compatible|Microsoft Flight Simulator 2024",plain,re.I): continue
-                name_match=re.search(r"<h1[^>]*>(.*?)</h1>",page,re.I|re.S)
-                if not name_match: continue
-                title=re.sub("<[^>]*>","",name_match.group(1)).strip()
-                if not title: continue
-                lower=title.lower()
-                excluded=("livery","liveries","profile","utility","tools","library","vessels","mission","demo","landmarks","paint","texture")
-                if any(x in lower for x in excluded): continue
-                kind="aeroport" if re.search(r"\\bairport\\b|\\bairfield\\b|\\bairstrip\\b",title,re.I) else "avion" if re.search(r"\\b(boeing|airbus|cessna|helicopter|aircraft|787|a320|a380|b789|fokker|dc-3|piper)\\b",title,re.I) else None
-                if not kind: continue
-                icao_match=re.match(r"^([A-Z0-9]{3,4})\\b",title)
-                icao=icao_match.group(1) if kind=="aeroport" and icao_match else ""
-                found.append({"type":kind,"icao":icao,"title":title,"publisher":"Orbx — produit gratuit",
-                              "description":"Produit affiché gratuit sur Orbx ; téléchargement via Orbx Central.",
-                              "url":url,"source":"Orbx","compatibility":"MSFS 2024 confirmé","image":image_for(url)})
-                if len(found)>=24: break
-            except Exception:
-                continue
-        print("Orbx : ",len(found),"fiches gratuites vérifiées")
-        return found
-    except Exception as exc:
-        print("Veille Orbx indisponible :",exc)
-        return []
+            self.links=[]
+        def handle_starttag(self,tag,attrs):
+            if tag=="a":
+                u=dict(attrs).get("href","")
+                if "/product/" in u or u.endswith(".phtml"):
+                    self.links.append(u)
+    found=[]
+    sources=[
+        ("Orbx","https://orbxdirect.com/freeware","https://orbxdirect.com/"),
+        ("simMarket","https://secure.simmarket.com/gratis.php","https://secure.simmarket.com/")
+    ]
+    for shop,listing_url,base in sources:
+        try:
+            with urlopen(Request(listing_url,headers={"User-Agent":"Mozilla/5.0"}),timeout=12) as res:
+                listing=res.read(1000000).decode("utf-8","ignore")
+            parser=ProductLinks()
+            parser.feed(listing)
+            urls=list(dict.fromkeys(urljoin(base,u) for u in parser.links))[:65]
+            for url in urls:
+                try:
+                    with urlopen(Request(url,headers={"User-Agent":"Mozilla/5.0"}),timeout=5) as res:
+                        page=res.read(220000).decode("utf-8","ignore")
+                    plain=html.unescape(re.sub(r"<[^>]*>"," ",page))
+                    if shop=="Orbx":
+                        if not re.search(r"Freeware\\s+Login to Download|Freeware\\s+Download|Freeware\\s+Screenshots",plain,re.I): continue
+                        if not re.search(r"Microsoft Flight Simulator 2024",plain,re.I): continue
+                    else:
+                        if not re.search(r"€\\s*0[.,]00",plain): continue
+                        if not re.search(r"MSFS24|MFS24|MSFS2024|MSFS 2024",plain,re.I): continue
+                    m=re.search(r"<h1[^>]*>(.*?)</h1>",page,re.I|re.S)
+                    if not m: continue
+                    title=html.unescape(re.sub(r"<[^>]*>","",m.group(1))).strip()
+                    if not title: continue
+                    lower=title.lower()
+                    if any(x in lower for x in ("livery","liveries","profile","utility","tools","library","mission","demo","mesh","mask","landmark","fix","texture","helipad","hospital")): continue
+                    icao_match=re.search(r"\\b([A-Z]{3,4}|K[A-Z]{3})\\b",title)
+                    is_airport=bool(re.search(r"airport|airfield|airstrip|aerodrome|aéroport",title,re.I) or (icao_match and re.search(r"msfs|free|airport",title,re.I)))
+                    is_aircraft=bool(re.search(r"aircraft|boeing|airbus|cessna|helicopter|787|a320|a380|fokker|piper",title,re.I))
+                    if not (is_airport or is_aircraft): continue
+                    kind="aeroport" if is_airport else "avion"
+                    icao=icao_match.group(1) if is_airport and icao_match else ""
+                    found.append({"type":kind,"icao":icao,"title":title,"publisher":shop+" — catalogue gratuit",
+                                  "description":"Produit à 0 € sur la boutique ; consulter les conditions sur la fiche.",
+                                  "url":url,"source":shop,"compatibility":"MSFS 2024","image":image_for(url)})
+                    if len(found)>=40: break
+                except Exception: continue
+            print(shop,":",len(found),"produits gratuits trouvés au total")
+        except Exception as exc:
+            print("Veille",shop,"indisponible :",exc)
+    return found
 
 def build():
     payload=json.loads((PUBLIC/"freeware.json").read_text(encoding="utf-8"))
