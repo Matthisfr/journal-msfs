@@ -48,7 +48,7 @@ def latest_freeware():
                 listing=res.read(1000000).decode("utf-8","ignore")
             parser=ProductLinks()
             parser.feed(listing)
-            urls=list(dict.fromkeys(urljoin(base,u) for u in parser.links))[:65]
+            urls=list(dict.fromkeys(urljoin(base,u) for u in parser.links))[:35]
             for url in urls:
                 try:
                     with urlopen(Request(url,headers={"User-Agent":"Mozilla/5.0"}),timeout=5) as res:
