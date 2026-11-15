@@ -32,6 +32,50 @@
       "source": "Orbx",
       "compatibility": "MSFS 2024 confirmé",
       "image": ""
+    },
+    {
+      "type": "aeroport",
+      "icao": "KLRG",
+      "title": "KLRG — Lincoln Regional Airport",
+      "publisher": "Propair Flight",
+      "description": "Scène gratuite à 0 € référencée par simMarket ; consulter la fiche produit pour l'installation.",
+      "url": "https://secure.simmarket.com/propair-flight-ltd.-klrg-lincoln-regional-airport-msfs24.phtml",
+      "source": "simMarket",
+      "compatibility": "MSFS 2024",
+      "image": ""
+    },
+    {
+      "type": "aeroport",
+      "icao": "EDLP",
+      "title": "EDLP — Paderborn/Lippstadt",
+      "publisher": "Aerosoft",
+      "description": "Scène gratuite à 0 € référencée par simMarket ; consulter la fiche produit pour l'installation.",
+      "url": "https://secure.simmarket.com/aerosoft-airport-paderbornlippstadt-msfs2024-free.phtml",
+      "source": "simMarket",
+      "compatibility": "MSFS 2024",
+      "image": ""
+    },
+    {
+      "type": "aeroport",
+      "icao": "KMKE",
+      "title": "KMKE — Milwaukee Mitchell",
+      "publisher": "iniBuilds",
+      "description": "Scène gratuite à 0 € référencée par simMarket ; consulter la fiche produit pour l'installation.",
+      "url": "https://secure.simmarket.com/inibuilds-inibuilds-milwaukee-mitchell-kmke-msfs-free.phtml",
+      "source": "simMarket",
+      "compatibility": "MSFS 2024",
+      "image": ""
+    },
+    {
+      "type": "aeroport",
+      "icao": "RCLG",
+      "title": "RCLG — Shuinan Taiwan",
+      "publisher": "FSFormosa",
+      "description": "Scène gratuite à 0 € référencée par simMarket ; consulter la fiche produit pour l'installation.",
+      "url": "https://secure.simmarket.com/fsformosa-rclg-shuinan-airport-taiwan-msfs.phtml",
+      "source": "simMarket",
+      "compatibility": "MSFS : compatibilité 2024 à confirmer",
+      "image": ""
     }
   ]
 }
