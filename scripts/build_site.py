@@ -352,8 +352,8 @@ def build():
     if promo_path.is_file():
         promos = json.loads(promo_path.read_text(encoding="utf-8"))
         today = dt.datetime.now(ZoneInfo("Europe/Paris")).date()
-        active = [p for p in promos if not p.get("end") or dt.date.fromisoformat(p["end"]) >= today]
-        active.sort(key=lambda p: (p.get("category") != "Matériel Airbus", p.get("category", ""), p.get("title", "")))
+        active = [p for p in promos if (not p.get("end") or dt.date.fromisoformat(p["end"]) >= today) and p.get("kind") != "catalogue"]
+        active.sort(key=lambda p: (0 if p.get("category", "").startswith("Matériel") else 1 if p.get("category", "").startswith("Aéroport") else 2 if p.get("category", "").startswith("Avion") else 3, p.get("title", "")))
         promo_cards = []
         for p in active:
             title, url = h(p["title"]), h(p["url"])
@@ -366,7 +366,7 @@ def build():
                 + '<small style="color:#f4c879">' + category + expiry + '</small><h3 style="margin:8px 0;color:#fff">' + title + '</h3>'
                 + '<p>' + detail + '</p><a style="color:#9fddff" href="' + url + '" target="_blank" rel="noopener noreferrer">Voir la promotion ↗</a></article>')
         promo_html = ('<section id="promotions-black-friday" class="shell" style="padding:24px 0">'
-            '<h2>🛍️ Black Friday — Matériel Airbus et aéroports</h2>'
+            '<h2>🛍️ PROMO</h2>'
             '<p>Offres repérées sur les boutiques et annonces publiques. Vérifier le prix et la disponibilité avant achat ; les promotions ne sont pas nécessairement cumulables.</p>'
             '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:12px">'
             + "".join(promo_cards) + '</div></section>')
@@ -382,12 +382,12 @@ def build():
                 ("Toutes les offres MSFS", "https://msfsaddons.com/2026/11/14/black-friday-2026-deals-for-microsoft-flight-simulator/")
             ]
             links = " · ".join('<a style="color:#fbd57d" href="' + h(url) + '" target="_blank" rel="noopener noreferrer">' + h(name) + '</a>' for name,url in stores)
-            promo_html = promo_html.replace('</div></section>', '</div><p style="margin:16px 0 0"><b>Boutiques à consulter :</b> ' + links + '</p></section>')
+            promo_html = promo_html.replace('</div></section>', '</div><div style="margin-top:20px;border-top:1px solid #789;padding-top:14px"><h3 style="color:#fff">🎁 GRATUIT — AÉROPORTS ET AVIONS</h3><p>Parcourir les nouveautés gratuites sur les principales plateformes. Gratuité et compatibilité MSFS 2024 à confirmer sur chaque fiche.</p><p><a style="color:#fbd57d" href="https://flightsim.to/sceneries" target="_blank" rel="noopener noreferrer">Flightsim.to — scènes</a> · <a style="color:#fbd57d" href="https://flightsim.to/aircraft" target="_blank" rel="noopener noreferrer">Flightsim.to — avions</a> · <a style="color:#fbd57d" href="https://www.msfsaddons.com/" target="_blank" rel="noopener noreferrer">MSFS Addons — nouveautés</a></p></div><p style="margin:16px 0 0"><b>Boutiques à consulter :</b> ' + links + '</p></section>')
             # Afficher sur l'accueil visible, avant la manchette, et non hors des vues masquées.
             promo_html = promo_html.replace('class="shell"', 'class="black-friday-feature"', 1)
             promo_html = promo_html.replace('style="padding:24px 0"', 'style="margin:18px 0 24px;padding:24px;border:3px solid #e8b451;border-radius:16px;background:linear-gradient(125deg,#071826,#213b52);color:#fff;box-shadow:0 8px 30px #0004"')
-            promo_html = promo_html.replace('<h2>🛍️ Black Friday — Matériel Airbus et aéroports</h2>', '<div style="font-size:13px;letter-spacing:.16em;color:#f9cb6a;font-weight:800">OFFRES SPÉCIALES 2026</div><h2 style="color:#fff;font-size:clamp(25px,3vw,40px);margin:7px 0 12px">🔥 BLACK FRIDAY — PROMOTIONS COCKPIT & AÉROPORTS</h2>')
-            index = index.replace('<section class="view active" id="accueil" aria-label="À la une">', '<section class="view active" id="accueil" aria-label="À la une">' + promo_html, 1)
+            promo_html = promo_html.replace('<h2>🛍️ Black Friday — Matériel Airbus et aéroports</h2>', '<div style="font-size:13px;letter-spacing:.16em;color:#f9cb6a;font-weight:800">MATÉRIEL · AÉROPORTS · AVIONS</div><h2 style="color:#fff;font-size:clamp(25px,3vw,40px);margin:7px 0 12px">🔥 PROMO</h2>')
+            index = index.replace('<div class="hero">', promo_html + '<div class="hero">', 1)
     index = static_brand_icons(index, manifest)
     index = index.replace("</body>", '<script type="application/json" id="brand-manifest">' +
                           json.dumps(manifest, ensure_ascii=False).replace("<", "\\u003c") +
