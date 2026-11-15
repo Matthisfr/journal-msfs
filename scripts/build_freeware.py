@@ -15,14 +15,32 @@ def esc(v):
     return html.escape(str(v or ""), quote=True)
 
 def image_for(url):
+    """Image produit officielle : OpenGraph, Twitter ou données structurées."""
     try:
-        with urlopen(Request(url, headers={"User-Agent":"Mozilla/5.0"}), timeout=7) as res:
-            data = res.read(180000).decode("utf-8", "ignore")
-        m = re.search(r'<meta[^>]+(?:property|name)=["\'](?:og:image|twitter:image)["\'][^>]+content=["\']([^"\']+)', data, re.I)
-        if not m:
-            m = re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+(?:property|name)=["\'](?:og:image|twitter:image)', data, re.I)
-        return urljoin(url, html.unescape(m.group(1))) if m else ""
-    except Exception:
+        with urlopen(Request(url, headers={"User-Agent":"Mozilla/5.0 (compatible; JournalMSFS/1.0)"}), timeout=8) as res:
+            data = res.read(350000).decode("utf-8", "ignore")
+        metas = re.findall(r"<meta\\s+[^>]*>", data, re.I)
+        for tag in metas:
+            if not re.search(r"(?:og:image|twitter:image|itemprop=[\\\"']image)",tag,re.I):
+                continue
+            m = re.search(r"content\\s*=\\s*[\\\"']([^\\\"']+)",tag,re.I)
+            if m:
+                photo=urljoin(url,html.unescape(m.group(1)).replace("\\/", "/"))
+                if photo.startswith(("http://","https://")): return photo
+        for raw in re.findall(r'<script[^>]+type=[\\\"']application/ld\\+json[\\\"'][^>]*>(.*?)</script>',data,re.I|re.S):
+            try:
+                obj=json.loads(raw)
+                objs=obj if isinstance(obj,list) else [obj]
+                for node in objs:
+                    if not isinstance(node,dict): continue
+                    im=node.get("image")
+                    if isinstance(im,list): im=im[0] if im else None
+                    if isinstance(im,dict): im=im.get("url")
+                    if isinstance(im,str) and im.startswith(("https://","http://")): return im
+            except (ValueError,TypeError): pass
+        return ""
+    except Exception as exc:
+        print("Photo indisponible :",url,str(exc)[:70])
         return ""
 
 def latest_freeware():
