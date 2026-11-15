@@ -44,7 +44,7 @@ def latest_freeware():
         parser.feed(listing)
         found=[]
         seen=set()
-        for url in parser.urls[:85]:
+        for url in parser.urls[:45]:
             if url in seen: continue
             seen.add(url)
             try:
