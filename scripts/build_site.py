@@ -369,7 +369,11 @@ def build():
             '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:12px">'
             + "".join(promo_cards) + '</div></section>')
         if active:
-            index = index.replace("</main>", promo_html + "</main>", 1)
+            # Afficher sur l'accueil visible, avant la manchette, et non hors des vues masquées.
+            promo_html = promo_html.replace('class="shell"', 'class="black-friday-feature"', 1)
+            promo_html = promo_html.replace('style="padding:24px 0"', 'style="margin:18px 0 24px;padding:24px;border:3px solid #e8b451;border-radius:16px;background:linear-gradient(125deg,#071826,#213b52);color:#fff;box-shadow:0 8px 30px #0004"')
+            promo_html = promo_html.replace('<h2>🛍️ Black Friday — Matériel Airbus et aéroports</h2>', '<div style="font-size:13px;letter-spacing:.16em;color:#f9cb6a;font-weight:800">OFFRES SPÉCIALES 2026</div><h2 style="color:#fff;font-size:clamp(25px,3vw,40px);margin:7px 0 12px">🔥 BLACK FRIDAY — PROMOTIONS COCKPIT & AÉROPORTS</h2>')
+            index = index.replace('<section class="view active" id="accueil" aria-label="À la une">', '<section class="view active" id="accueil" aria-label="À la une">' + promo_html, 1)
     index = static_brand_icons(index, manifest)
     index = index.replace("</body>", '<script type="application/json" id="brand-manifest">' +
                           json.dumps(manifest, ensure_ascii=False).replace("<", "\\u003c") +
