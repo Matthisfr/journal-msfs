@@ -371,18 +371,6 @@ def build():
             '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:12px">'
             + "".join(promo_cards) + '</div></section>')
         if active:
-            stores = [
-                ("simMarket", "https://secure.simmarket.com/promotions.php"),
-                ("Contrail", "https://contrail.shop/"),
-                ("iniBuilds", "https://inibuilds.com/"),
-                ("WINCTRL", "https://msfsaddons.com/developer/winctrl/"),
-                ("RTRhobby", "https://rtrhobby.com/"),
-                ("S3", "https://santiluib3.com/"),
-                ("SKALARKI MIP", "https://skalarki-electronics.com/collections/a320-mip"),
-                ("Toutes les offres MSFS", "https://msfsaddons.com/2026/11/14/black-friday-2026-deals-for-microsoft-flight-simulator/")
-            ]
-            links = " · ".join('<a style="color:#fbd57d" href="' + h(url) + '" target="_blank" rel="noopener noreferrer">' + h(name) + '</a>' for name,url in stores)
-            promo_html = promo_html.replace('</div></section>', '</div><div style="margin-top:20px;border-top:1px solid #789;padding-top:14px"><h3 style="color:#fff">🎁 GRATUIT — AÉROPORTS ET AVIONS</h3><p>Scènes et avions gratuits trouvés hors Flightsim.to, avec photos et liens.</p><p><a style="color:#fbd57d;font-weight:800" href="gratuits.html">Voir toutes les fiches GRATUIT ↗</a></p></div><p style="margin:16px 0 0"><b>Boutiques à consulter :</b> ' + links + '</p></section>')
             # Afficher sur l'accueil visible, avant la manchette, et non hors des vues masquées.
             promo_html = promo_html.replace('class="shell"', 'class="black-friday-feature"', 1)
             promo_html = promo_html.replace('style="padding:24px 0"', 'style="margin:18px 0 24px;padding:24px;border:3px solid #e8b451;border-radius:16px;background:linear-gradient(125deg,#071826,#213b52);color:#fff;box-shadow:0 8px 30px #0004"')
