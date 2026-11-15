@@ -376,6 +376,59 @@ def build():
             promo_html = promo_html.replace('style="padding:24px 0"', 'style="margin:18px 0 24px;padding:24px;border:3px solid #e8b451;border-radius:16px;background:linear-gradient(125deg,#071826,#213b52);color:#fff;box-shadow:0 8px 30px #0004"')
             promo_html = promo_html.replace('<h2>🛍️ Black Friday — Matériel Airbus et aéroports</h2>', '<div style="font-size:13px;letter-spacing:.16em;color:#f9cb6a;font-weight:800">MATÉRIEL · AÉROPORTS · AVIONS</div><h2 style="color:#fff;font-size:clamp(25px,3vw,40px);margin:7px 0 12px">🔥 PROMO</h2>')
             index = index.replace('<div class="hero">', promo_html + '<div class="hero">', 1)
+    # Wingflex : récupérer les images propres à chaque produit depuis le catalogue officiel.
+    from urllib.request import Request, urlopen
+    from urllib.parse import urljoin
+    import html as html_entities
+    wingflex_photos = {}
+    try:
+        source_url = "https://wingflexshop.com/product-category/flightsim/airlines/"
+        with urlopen(Request(source_url, headers={"User-Agent": "Mozilla/5.0"}), timeout=12) as res:
+            listing = res.read(1200000).decode("utf-8", "ignore")
+        products = re.findall(r'<li\\b[^>]*class=["\\\'][^"\\\']*\\bproduct\\b[^"\\\']*["\\\'][^>]*>.*?</li>', listing, re.I | re.S)
+        matchers = [
+            ("overhead-mcdu", ("overhead", "mcdu")),
+            ("overhead", ("overhead",)),
+            ("combo3", ("fcu", "combo 3")),
+            ("fcu", ("fcu", "cube")),
+            ("efis", ("efis", "cube")),
+        ]
+        for block in products:
+            title = html_entities.unescape(re.sub(r"<[^>]*>", " ", block)).lower()
+            if not any(x in title for x in ("wingflex", "a320", "overhead")):
+                continue
+            image_tag = re.search(r"<img\\b[^>]*>", block, re.I | re.S)
+            if not image_tag:
+                continue
+            tag = image_tag.group(0)
+            image_url = ""
+            for attr in ("data-src", "data-lazy-src", "src"):
+                m = re.search(r'\\b' + attr + r'=["\\\']([^"\\\']+)["\\\']', tag, re.I)
+                if m and not any(x in m.group(1).lower() for x in ("placeholder", "data:image", "blank.gif")):
+                    image_url = urljoin(source_url, html_entities.unescape(m.group(1)))
+                    break
+            if not image_url.startswith(("https://", "http://")):
+                continue
+            for ident, terms in matchers:
+                if ident in wingflex_photos:
+                    continue
+                if ident == "overhead" and "mcdu" in title:
+                    continue
+                if ident == "fcu" and ("combo" in title or "stand" in title):
+                    continue
+                if all(t in title for t in terms):
+                    wingflex_photos[ident] = image_url
+                    break
+    except Exception as exc:
+        print("Photos WINGFLEX : catalogue inaccessible", str(exc)[:140])
+    def wingflex_image(match):
+        ident = match.group(1)
+        photo = wingflex_photos.get(ident)
+        if photo:
+            return '<div class="wingflex-image-slot" style="height:170px;overflow:hidden;border-radius:8px;margin-bottom:12px"><img loading="lazy" alt="Photo officielle WINGFLEX '+h(ident)+'" src="'+h(photo)+'" style="width:100%;height:100%;object-fit:contain;background:#102c42"></div>'
+        return '<div class="wingflex-image-slot" style="height:170px;display:grid;place-items:center;background:#102c42;color:#fff;border-radius:8px;overflow:hidden;margin-bottom:12px">Photo officielle indisponible</div>'
+    index = re.sub(r'<div class="wingflex-image-slot" data-wingflex-id="([^"]+)"[^>]*>[^<]*</div>', wingflex_image, index)
+    print("Photos WINGFLEX identifiées :", sorted(wingflex_photos))
     # Photos MIP officielles, même extracteur que la page GRATUIT.
     from build_freeware import image_for
     def mip_photo(match):
