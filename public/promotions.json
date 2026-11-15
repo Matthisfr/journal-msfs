@@ -42,5 +42,19 @@
     "title": "EKCH — Copenhague (SimNord)",
     "detail": "13,20 € au lieu de 17,60 € (-25 %).",
     "url": "https://secure.simmarket.com/promotions.php?promotions_id=8986"
+  },
+  {
+    "category": "MIP A320 — Fournisseur",
+    "title": "SKALARKI — panneaux MIP A320-232",
+    "detail": "Ensemble de panneaux MIP £432 TTC (sans écrans ni instruments). Tarif catalogue, pas une promotion Black Friday confirmée.",
+    "url": "https://skalarki-electronics.com/products/a320-232-mip",
+    "kind": "catalogue"
+  },
+  {
+    "category": "MIP A320 — Fournisseur",
+    "title": "SKALARKI — MIP pilote équipé",
+    "detail": "Version CS £2 278,80 TTC, comprenant notamment écrans, commandes et panneaux. Tarif catalogue, pas une remise confirmée.",
+    "url": "https://skalarki-electronics.com/products/homeline-mip-panel-package-std",
+    "kind": "catalogue"
   }
 ]
