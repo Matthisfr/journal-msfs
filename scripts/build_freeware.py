@@ -51,7 +51,7 @@ def latest_freeware():
                 with urlopen(Request(url,headers={"User-Agent":"Mozilla/5.0"}),timeout=6) as res:
                     page=res.read(250000).decode("utf-8","ignore")
                 plain=html.unescape(re.sub("<[^>]*>"," ",page))
-                if not re.search(r"\\bFreeware\\b",plain,re.I): continue
+                if not re.search(r"Freeware\\s+Login to Download|Freeware\\s+Download|Freeware\\s+Screenshots",plain,re.I): continue
                 if not re.search(r"MSFS 2024 Compatible|Microsoft Flight Simulator 2024",plain,re.I): continue
                 name_match=re.search(r"<h1[^>]*>(.*?)</h1>",page,re.I|re.S)
                 if not name_match: continue
