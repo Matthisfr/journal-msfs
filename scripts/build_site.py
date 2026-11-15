@@ -550,6 +550,7 @@ fetch('airport_coordinates.json').then(r => {if(!r.ok)throw new Error('Coordonn�
     for ref in re.findall(r'src="icons/([^"]+\.svg)"', index):
         assert (PUBLIC / "icons" / ref).is_file(), f"Icône HTML manquante : {ref}"
     assert independent.count("<tr>") >= len(airports), "Page indépendante incomplète"
+    subprocess.run(["python", str(ROOT / "scripts" / "build_freeware.py")], check=True)
     print(f"Publication : {len(airports)} scènes HTML statiques + page indépendante ; rev={rev}")
 
 if __name__ == "__main__":
