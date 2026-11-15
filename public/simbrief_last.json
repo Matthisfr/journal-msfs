@@ -1,7 +1,7 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-11-14T06:01:25.176702+00:00",
+  "retrieved_at": "2026-11-15T06:09:00.127128+00:00",
   "origin": {
     "icao": "EKCH",
     "name": "KASTRUP"
@@ -13,11 +13,11 @@
   "flight_number": "2809",
   "aircraft": "A320",
   "route": "NEXE2C NEXEN T503 GIMRU DCT MICOS DCT WRB DCT XAROL DCT BOMBI DCT GIGET DCT ABUKA DCT KRH DCT NATOR DCT TRA DCT RIPUS DCT GERSA DCT SOSON DCT DEGAD Z424 RIXUV RIXU3E",
-  "altitude": "30000",
-  "enroute_time": "01:52:12",
-  "scheduled_departure": "2026-11-12T09:35:00Z",
-  "scheduled_arrival": "2026-11-12T11:50:00Z",
-  "generated_at": "2026-11-12T09:03:37Z",
+  "altitude": "36000",
+  "enroute_time": "01:47:19",
+  "scheduled_departure": "2026-11-14T09:15:00Z",
+  "scheduled_arrival": "2026-11-14T11:30:00Z",
+  "generated_at": "2026-11-14T08:40:36Z",
   "route_points": [
     {
       "lat": 55.569028,
@@ -40,14 +40,14 @@
       "name": "GIMRU"
     },
     {
-      "lat": 54.451187,
-      "lon": 11.181167,
-      "name": "TOC"
-    },
-    {
       "lat": 54.305556,
       "lon": 11.005278,
       "name": "MICOS"
+    },
+    {
+      "lat": 53.629795,
+      "lon": 10.523236,
+      "name": "TOC"
     },
     {
       "lat": 51.505697,
@@ -155,8 +155,8 @@
       "name": "ESITE"
     },
     {
-      "lat": 45.191989,
-      "lon": 8.99238,
+      "lat": 45.175622,
+      "lon": 8.996761,
       "name": "TOD"
     },
     {
