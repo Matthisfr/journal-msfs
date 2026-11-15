@@ -26,29 +26,54 @@ def image_for(url):
         return ""
 
 def latest_freeware():
-    """Actualités freeware récentes, excluant Flightsim.to et les utilitaires."""
-    import xml.etree.ElementTree as ET
+    """Vérifier chaque jour des produits Orbx gratuits réels (hors Flightsim.to)."""
+    from html.parser import HTMLParser
+    class Links(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.urls=[]
+        def handle_starttag(self, tag, attrs):
+            if tag == "a":
+                href=dict(attrs).get("href","")
+                if "/product/" in href:
+                    self.urls.append(urljoin("https://orbxdirect.com/",href))
     try:
-        with urlopen(Request("https://msfsaddons.com/category/freeware/feed/",headers={"User-Agent":"JournalMSFS/1.0"}),timeout=12) as res:
-            xml=res.read(700000)
-        root=ET.fromstring(xml)
+        with urlopen(Request("https://orbxdirect.com/freeware",headers={"User-Agent":"Mozilla/5.0"}),timeout=15) as res:
+            listing=res.read(1500000).decode("utf-8","ignore")
+        parser=Links()
+        parser.feed(listing)
         found=[]
-        for item in root.findall("./channel/item")[:35]:
-            title=(item.findtext("title") or "").strip()
-            url=(item.findtext("link") or "").strip()
-            cats=[(c.text or "").lower() for c in item.findall("category")]
-            if "freeware" not in cats or not url or "flightsim.to" in url.lower(): continue
-            kind="aeroport" if "airports" in cats else "avion" if "aircraft" in cats else None
-            if not kind: continue
-            # Ne pas confondre une annonce de développement avec un produit téléchargeable.
-            if re.search(r"upcoming|preview|shows|progress|coming|teases|announces|returns|review|guide",title,re.I): continue
-            if not re.search(r"free|giveaway|gives away|released|available|download|now out",title,re.I): continue
-            found.append({"type":kind,"title":title,"publisher":"MSFS Addons — actualité freeware",
-                          "description":"Annonce gratuite repérée automatiquement ; vérifier la disponibilité sur la fiche source.",
-                          "url":url,"source":"MSFS Addons","compatibility":"MSFS 2024 à vérifier","image":""})
-        return found[:12]
+        seen=set()
+        for url in parser.urls[:85]:
+            if url in seen: continue
+            seen.add(url)
+            try:
+                with urlopen(Request(url,headers={"User-Agent":"Mozilla/5.0"}),timeout=6) as res:
+                    page=res.read(250000).decode("utf-8","ignore")
+                plain=html.unescape(re.sub("<[^>]*>"," ",page))
+                if not re.search(r"\\bFreeware\\b",plain,re.I): continue
+                if not re.search(r"MSFS 2024 Compatible|Microsoft Flight Simulator 2024",plain,re.I): continue
+                name_match=re.search(r"<h1[^>]*>(.*?)</h1>",page,re.I|re.S)
+                if not name_match: continue
+                title=re.sub("<[^>]*>","",name_match.group(1)).strip()
+                if not title: continue
+                lower=title.lower()
+                excluded=("livery","liveries","profile","utility","tools","library","vessels","mission","demo","landmarks","paint","texture")
+                if any(x in lower for x in excluded): continue
+                kind="aeroport" if re.search(r"\\bairport\\b|\\bairfield\\b|\\bairstrip\\b",title,re.I) else "avion" if re.search(r"\\b(boeing|airbus|cessna|helicopter|aircraft|787|a320|a380|b789|fokker|dc-3|piper)\\b",title,re.I) else None
+                if not kind: continue
+                icao_match=re.match(r"^([A-Z0-9]{3,4})\\b",title)
+                icao=icao_match.group(1) if kind=="aeroport" and icao_match else ""
+                found.append({"type":kind,"icao":icao,"title":title,"publisher":"Orbx — produit gratuit",
+                              "description":"Produit affiché gratuit sur Orbx ; téléchargement via Orbx Central.",
+                              "url":url,"source":"Orbx","compatibility":"MSFS 2024 confirmé","image":image_for(url)})
+                if len(found)>=24: break
+            except Exception:
+                continue
+        print("Orbx : ",len(found),"fiches gratuites vérifiées")
+        return found
     except Exception as exc:
-        print("Veille freeware indisponible :",exc)
+        print("Veille Orbx indisponible :",exc)
         return []
 
 def build():
