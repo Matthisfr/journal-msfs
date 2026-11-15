@@ -25,26 +25,6 @@
     },
     {
       "type": "avion",
-      "title": "Airbus A32NX",
-      "publisher": "FlyByWire Simulations",
-      "description": "A320neo gratuit, installateur officiel et téléchargements directs MSFS 2024.",
-      "url": "https://flybywiresim.com/downloads/",
-      "source": "FlyByWire",
-      "compatibility": "MSFS 2024 confirmé",
-      "image": ""
-    },
-    {
-      "type": "avion",
-      "title": "Airbus A380X",
-      "publisher": "FlyByWire Simulations",
-      "description": "A380 gratuit, installateur officiel et téléchargements directs MSFS 2024.",
-      "url": "https://flybywiresim.com/downloads/",
-      "source": "FlyByWire",
-      "compatibility": "MSFS 2024 confirmé",
-      "image": ""
-    },
-    {
-      "type": "avion",
       "title": "Boeing 787-9",
       "publisher": "Horizon Simulations",
       "description": "Gratuit sur Orbx ; nécessite le Boeing 787-10 de l'édition Premium Deluxe.",
