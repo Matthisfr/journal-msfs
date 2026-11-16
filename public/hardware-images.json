@@ -41,12 +41,6 @@
     "source": "Photographie promotionnelle WINWING — simFlight",
     "verification": "non_verifiee_visuellement"
   },
-  "pac": {
-    "path": "hardware/pac.webp",
-    "state": "photo",
-    "source": "Photographie produit — SimRaceShop",
-    "verification": "non_verifiee_visuellement"
-  },
   "pedals": {
     "path": "hardware/pedals.webp",
     "state": "photo",
@@ -73,12 +67,6 @@
   },
   "sidestick-metal": {
     "path": "hardware/sidestick-metal.webp",
-    "state": "photo",
-    "source": "WINCTRL / MSFS Addons — visuel du produit",
-    "verification": "non_verifiee_visuellement"
-  },
-  "ecam": {
-    "path": "hardware/ecam.webp",
     "state": "photo",
     "source": "WINCTRL / MSFS Addons — visuel du produit",
     "verification": "non_verifiee_visuellement"

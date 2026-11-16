@@ -3,18 +3,27 @@
   "profile_url": "https://pilots.sayintentions.ai/u/Mathis",
   "username": "Mathis",
   "rank": "Senior 1st Officer",
-  "flight_hours": 86,
-  "ifr_hours": 84,
+  "flight_hours": 87,
+  "ifr_hours": 85,
   "vfr_hours": 2,
-  "total_flights": 52,
+  "total_flights": 53,
   "airports_visited": 50,
   "source": "profil public Gate 404 (navigateur Chromium)",
   "rank_badge": "sayintentions-rank.svg",
   "recent_flights": [
     {
-      "id": "IFR-884344470",
+      "id": "IFR-884370275",
       "aircraft": "F-FENX",
       "when": "yesterday",
+      "origin": "EHAM",
+      "destination": "LSGG",
+      "rules": "IFR",
+      "duration": "1h 42m"
+    },
+    {
+      "id": "IFR-884344470",
+      "aircraft": "F-FENX",
+      "when": "2 days ago",
       "origin": "EKCH",
       "destination": "LIMC",
       "rules": "IFR",
@@ -23,7 +32,7 @@
     {
       "id": "IFR-884306407",
       "aircraft": "F-FENX",
-      "when": "3 days ago",
+      "when": "4 days ago",
       "origin": "EKCH",
       "destination": "LIMC",
       "rules": "IFR",
@@ -32,7 +41,7 @@
     {
       "id": "IFR-884287210",
       "aircraft": "F-FENX",
-      "when": "4 days ago",
+      "when": "5 days ago",
       "origin": "EGKK",
       "destination": "LPPR",
       "rules": "IFR",
@@ -41,7 +50,7 @@
     {
       "id": "IFR-884267623",
       "aircraft": "F-FENX",
-      "when": "5 days ago",
+      "when": "6 days ago",
       "origin": "LDDU",
       "destination": "LFKJ",
       "rules": "IFR",
@@ -50,7 +59,7 @@
     {
       "id": "IFR-884247917",
       "aircraft": "F-FENX",
-      "when": "6 days ago",
+      "when": "1 week ago",
       "origin": "EDDF",
       "destination": "LFMN",
       "rules": "IFR",
@@ -59,7 +68,7 @@
     {
       "id": "IFR-884231078",
       "aircraft": "F-FENX",
-      "when": "6 days ago",
+      "when": "1 week ago",
       "origin": "LFPG",
       "destination": "LFMN",
       "rules": "IFR",
@@ -91,18 +100,9 @@
       "destination": "TFFR",
       "rules": "IFR",
       "duration": "1h 45m"
-    },
-    {
-      "id": "IFR-884180936",
-      "aircraft": "F-FENX",
-      "when": "1 week ago",
-      "origin": "MKJS",
-      "destination": "MDSD",
-      "rules": "IFR",
-      "duration": "1h 32m"
     }
   ],
-  "flights_checked_at": "2026-11-15T06:09:22.648356+00:00",
-  "verified_at": "2026-11-15T06:09:22.648356+00:00",
-  "checked_at": "2026-11-15T06:09:22.648356+00:00"
+  "flights_checked_at": "2026-11-16T06:01:43.019860+00:00",
+  "verified_at": "2026-11-16T06:01:43.019860+00:00",
+  "checked_at": "2026-11-16T06:01:43.019860+00:00"
 }

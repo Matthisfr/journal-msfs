@@ -1,203 +1,143 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-11-15T06:09:00.127128+00:00",
+  "retrieved_at": "2026-11-16T06:01:12.536006+00:00",
   "origin": {
-    "icao": "EKCH",
-    "name": "KASTRUP"
+    "icao": "EHAM",
+    "name": "SCHIPHOL"
   },
   "destination": {
-    "icao": "LIMC",
-    "name": "MALPENSA"
+    "icao": "LSGG",
+    "name": "GENEVA"
   },
   "flight_number": "2809",
   "aircraft": "A320",
-  "route": "NEXE2C NEXEN T503 GIMRU DCT MICOS DCT WRB DCT XAROL DCT BOMBI DCT GIGET DCT ABUKA DCT KRH DCT NATOR DCT TRA DCT RIPUS DCT GERSA DCT SOSON DCT DEGAD Z424 RIXUV RIXU3E",
-  "altitude": "36000",
-  "enroute_time": "01:47:19",
-  "scheduled_departure": "2026-11-14T09:15:00Z",
-  "scheduled_arrival": "2026-11-14T11:30:00Z",
-  "generated_at": "2026-11-14T08:40:36Z",
+  "route": "LOPI5E LOPIK N852 LNO DCT SUTAL DCT GTQ DCT POGOL DCT LASAT DCT MOROK Z24 AKITO AKIT3R",
+  "altitude": "35000",
+  "enroute_time": "01:08:09",
+  "scheduled_departure": "2026-11-15T10:15:00Z",
+  "scheduled_arrival": "2026-11-15T11:55:00Z",
+  "generated_at": "2026-11-15T09:42:31Z",
   "route_points": [
     {
-      "lat": 55.569028,
-      "lon": 12.56775,
-      "name": "RUBAT"
+      "lat": 52.187778,
+      "lon": 4.820556,
+      "name": "OGOSU"
     },
     {
-      "lat": 55.203383,
-      "lon": 12.12305,
-      "name": "BISTA"
+      "lat": 52.155333,
+      "lon": 4.917972,
+      "name": "AM050"
     },
     {
-      "lat": 54.810778,
-      "lon": 11.625242,
-      "name": "NEXEN"
+      "lat": 51.930833,
+      "lon": 5.129167,
+      "name": "LOPIK"
     },
     {
-      "lat": 54.56,
-      "lon": 11.313611,
-      "name": "GIMRU"
+      "lat": 51.39,
+      "lon": 5.366944,
+      "name": "VELED"
     },
     {
-      "lat": 54.305556,
-      "lon": 11.005278,
-      "name": "MICOS"
+      "lat": 51.265556,
+      "lon": 5.421111,
+      "name": "LUTOM"
     },
     {
-      "lat": 53.629795,
-      "lon": 10.523236,
+      "lat": 51.1825,
+      "lon": 5.448889,
+      "name": "BROGY"
+    },
+    {
+      "lat": 50.6825,
+      "lon": 5.665556,
+      "name": "TERLA"
+    },
+    {
+      "lat": 50.585833,
+      "lon": 5.710278,
+      "name": "LNO"
+    },
+    {
+      "lat": 50.399977,
+      "lon": 5.825826,
       "name": "TOC"
     },
     {
-      "lat": 51.505697,
-      "lon": 9.110914,
-      "name": "WRB"
+      "lat": 49.466667,
+      "lon": 6.391667,
+      "name": "SUTAL"
     },
     {
-      "lat": 51.314575,
-      "lon": 9.045894,
-      "name": "XAROL"
+      "lat": 48.986444,
+      "lon": 6.716222,
+      "name": "GTQ"
     },
     {
-      "lat": 50.056667,
-      "lon": 8.800278,
-      "name": "BOMBI"
+      "lat": 48.399028,
+      "lon": 6.693361,
+      "name": "POGOL"
     },
     {
-      "lat": 49.701111,
-      "lon": 8.726667,
-      "name": "GIGET"
+      "lat": 48.158944,
+      "lon": 6.684139,
+      "name": "LASAT"
     },
     {
-      "lat": 49.465278,
-      "lon": 8.679167,
-      "name": "ABUKA"
+      "lat": 47.396583,
+      "lon": 6.6555,
+      "name": "MOROK"
     },
     {
-      "lat": 48.992944,
-      "lon": 8.584236,
-      "name": "KRH"
+      "lat": 47.213333,
+      "lon": 6.64875,
+      "name": "AKITO"
     },
     {
-      "lat": 48.17,
-      "lon": 8.321261,
-      "name": "NATOR"
-    },
-    {
-      "lat": 47.6895,
-      "lon": 8.436972,
-      "name": "TRA"
-    },
-    {
-      "lat": 47.260278,
-      "lon": 8.5,
-      "name": "RIPUS"
-    },
-    {
-      "lat": 47.039375,
-      "lon": 8.532114,
-      "name": "GERSA"
-    },
-    {
-      "lat": 46.606667,
-      "lon": 8.594167,
-      "name": "SOSON"
-    },
-    {
-      "lat": 46.436111,
-      "lon": 8.618333,
-      "name": "DEGAD"
-    },
-    {
-      "lat": 46.273056,
-      "lon": 8.472222,
-      "name": "BASGO"
-    },
-    {
-      "lat": 46.109722,
-      "lon": 8.495556,
-      "name": "AKASU"
-    },
-    {
-      "lat": 45.8975,
-      "lon": 8.609722,
-      "name": "RIXUV"
-    },
-    {
-      "lat": 45.76435,
-      "lon": 8.764017,
-      "name": "MC685"
-    },
-    {
-      "lat": 45.6175,
-      "lon": 8.876944,
-      "name": "EVGIR"
-    },
-    {
-      "lat": 45.502997,
-      "lon": 8.908103,
-      "name": "MC768"
-    },
-    {
-      "lat": 45.388383,
-      "lon": 8.939244,
-      "name": "MC761"
-    },
-    {
-      "lat": 45.306508,
-      "lon": 8.961411,
-      "name": "MC756"
-    },
-    {
-      "lat": 45.224722,
-      "lon": 8.983611,
-      "name": "ESITE"
-    },
-    {
-      "lat": 45.175622,
-      "lon": 8.996761,
+      "lat": 47.01437,
+      "lon": 6.388249,
       "name": "TOD"
     },
     {
-      "lat": 45.142744,
-      "lon": 9.005553,
-      "name": "MC746"
+      "lat": 46.907139,
+      "lon": 6.248972,
+      "name": "GG518"
     },
     {
-      "lat": 45.060853,
-      "lon": 9.027531,
-      "name": "MC741"
+      "lat": 46.667778,
+      "lon": 5.938333,
+      "name": "BOLGI"
     },
     {
-      "lat": 45.042111,
-      "lon": 8.888956,
-      "name": "MC435"
+      "lat": 46.570944,
+      "lon": 5.814306,
+      "name": "LIRKO"
     },
     {
-      "lat": 45.123975,
-      "lon": 8.866789,
-      "name": "MC430"
+      "lat": 46.495278,
+      "lon": 5.890556,
+      "name": "DINIG"
     },
     {
-      "lat": 45.205833,
-      "lon": 8.844558,
-      "name": "MC425"
+      "lat": 46.337472,
+      "lon": 6.048444,
+      "name": "SOVAD"
     },
     {
-      "lat": 45.287686,
-      "lon": 8.822261,
-      "name": "MC420"
+      "lat": 46.440861,
+      "lon": 6.199889,
+      "name": "GG507"
     },
     {
-      "lat": 45.369444,
-      "lon": 8.8,
-      "name": "INLER"
+      "lat": 46.540194,
+      "lon": 6.346917,
+      "name": "GG514"
     },
     {
-      "lat": 45.63,
-      "lon": 8.723056,
-      "name": "LIMC"
+      "lat": 46.238333,
+      "lon": 6.109444,
+      "name": "LSGG"
     }
   ]
 }
