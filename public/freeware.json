@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-15",
+  "updated_at": "2026-11-17",
   "items": [
     {
       "type": "aeroport",
@@ -76,6 +76,19 @@
       "source": "simMarket",
       "compatibility": "MSFS : compatibilité 2024 à confirmer",
       "image": ""
+    },
+    {
+      "type": "aeroport",
+      "icao": "MA44",
+      "title": "MA44 — Trade Wind Airfield (Martha’s Vineyard)",
+      "publisher": "Burning Blue Design",
+      "description": "Aérodrome en herbe gratuit, recréé dans son ambiance des années 1980. Téléchargement via Orbx Central. Non présent dans l’inventaire d’aéroports du 16 novembre.",
+      "url": "https://orbxdirect.com/product/burningblue-ma44-msfs2024",
+      "source": "Orbx",
+      "compatibility": "MSFS 2024 confirmé",
+      "image": "",
+      "owned": false,
+      "checked_at": "2026-11-17"
     }
   ]
 }
