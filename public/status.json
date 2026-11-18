@@ -1,144 +1,143 @@
 {
-  "edition": "2026-11-17",
-  "last_run": "2026-11-17T06:00:17.823015+00:00",
-  "weather_checked_at": "2026-11-17T06:00:17.823015+00:00",
-  "news_checked_at": "2026-11-17T06:00:17.823015+00:00",
+  "edition": "2026-11-18",
+  "last_run": "2026-11-18T06:09:27.894086+00:00",
+  "weather_checked_at": "2026-11-18T06:09:27.894086+00:00",
+  "news_checked_at": "2026-11-18T06:09:27.894086+00:00",
   "weather": [
     {
-      "icao": "EFOU",
-      "name": "EFOU OULU AIRPORT",
-      "observed_at": "2026-11-17T05:50:00+00:00",
-      "raw": "METAR EFOU 170550Z AUTO 10004KT 0900 R12/1100N FZFG VV002 M01/M01 Q0995",
-      "score": 145,
-      "summary": "brouillard, visibilité < 1 SM",
-      "icon": "🌫️",
-      "phenomenon": "Brouillard",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF EFOU 170535Z 1706/1806 08005KT 0900 FZFG VV001 TEMPO 1706/1708 0500 VV002 BECMG 1708/1710 1500 BR BKN003 TEMPO 1710/1714 5000 BKN005 BECMG 1714/1716 9999 NSW BKN005 TEMPO 1716/1721 BKN020 TEMPO 1721/1803 3000 -SNRA BKN012"
-    },
-    {
-      "icao": "LBSF",
-      "name": "LBSF",
-      "observed_at": "2026-11-17T05:30:00+00:00",
-      "raw": "METAR LBSF 170530Z 09003KT 0500 R09/P2000N FG FEW052 BKN066 05/04 Q1012 NOSIG",
-      "score": 145,
-      "summary": "brouillard, visibilité < 1 SM",
-      "icon": "🌫️",
-      "phenomenon": "Brouillard",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LBSF 170500Z 1706/1806 VRB03KT 3000 BR SCT030 BKN050 TEMPO 1706/1708 0800 BCFG BKN015 BECMG 1708/1710 28010KT 9999 NSW SCT040 BKN060"
-    },
-    {
-      "icao": "LHBP",
-      "name": "Budapest Airport",
-      "observed_at": "2026-11-17T05:30:00+00:00",
-      "raw": "METAR LHBP 170530Z 17004KT 0500 R31L/0900N R31R/1400U FG OVC002 04/04 Q1006 TEMPO 0700 FG",
-      "score": 145,
-      "summary": "brouillard, visibilité < 1 SM",
-      "icon": "🌫️",
-      "phenomenon": "Brouillard",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF LHBP 170515Z 1706/1806 22005KT 0300 FG VV001 TEMPO 1706/1708 16005KT 3000 -DZRA BR BKN005 BKN040 BECMG 1708/1712 20009KT 9999 NSW BKN013 BKN110 BECMG 1712/1715 BKN020 BKN110 TEMPO 1715/1720 6000 -RA BKN013 BKN030 BECMG 1719/1722 24016G26KT SCT013 BKN140 BECMG 1723/1802 20007KT TEMPO 1802/1806 4000 BR BKN003 BKN140"
-    },
-    {
-      "icao": "SABE",
-      "name": "SABE Jorge Newbery Airport",
-      "observed_at": "2026-11-17T05:19:00+00:00",
-      "raw": "SPECI SABE 170519Z 31009KT 9000 -RA FEW030 OVC100 21/19 Q1005 RETSRA TEMPO VRB10KT 3000 TSRA SCT015 SCT045CB OVC050",
-      "score": 122,
-      "summary": "orage, précipitations",
-      "icon": "⛈️",
-      "phenomenon": "Orage",
-      "level": "Très dégradé",
-      "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF SABE 170500Z 1706/1806 33015KT 5000 RA SCT020 BKN050 TX29/1718Z TN20/1710Z TEMPO 1706/1708 VRB10KT 3000 TSRA SCT010 FEW045CB BKN050 BECMG 1710/1713 19010KT 9999 NSW SCT020 BECMG 1720/1722 VRB05KT CAVOK"
-    },
-    {
-      "icao": "BGJN",
-      "name": "Ilulissat Airport",
-      "observed_at": "2026-11-17T05:50:00+00:00",
-      "raw": "METAR BGJN 170550Z AUTO 24018KT 2400 -SN SCT006/// BKN014/// OVC017/// M02/M04 Q0991 RMK LAST OBS",
-      "score": 120,
-      "summary": "neige, visibilité < 3 SM",
+      "icao": "BGGH",
+      "name": "BGGH Nuuk International Airport",
+      "observed_at": "2026-11-18T05:50:00+00:00",
+      "raw": "METAR BGGH 180550Z AUTO 16045G58KT 3600 FZRASN FEW018/// OVC038/// M00/M05 Q0983",
+      "score": 177,
+      "summary": "neige, visibilité < 3 SM, rafales ≥ 35 kt, précipitations",
       "icon": "🌨️",
       "phenomenon": "Neige",
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF BGJN 161727Z 1618/1718 12012KT 9999 BKN030 TEMPO 1618/1702 2000 -SN DRSN SCT008 BKN014 TEMPO 1702/1709 0800 SN DRSN BKN006 BECMG 1707/1709 24015KT TEMPO 1709/1712 2000 -SN DRSN SCT006 BKN012 BECMG 1712/1715 14015KT"
+      "taf_raw": "TAF BGGH 180527Z 1806/1906 17042KT 2000 -SN BKN020 TEMPO 1806/1813 17045G58KT 8000 BLSN BKN025 BECMG 1813/1815 21020KT 0500 SN VV004 TEMPO 1815/1817 8000 NSW SCT004 BKN020 BECMG 1817/1819 9999 NSW SCT004 BKN030 TEMPO 1820/1906 20022G32KT BKN020"
     },
     {
-      "icao": "ENTC",
-      "name": "ENTC Tromso Airport",
-      "observed_at": "2026-11-17T05:50:00+00:00",
-      "raw": "METAR ENTC 170550Z VRB02KT 1900 -SN VV014 M02/M02 Q0999 RMK WIND 2600FT 02021KT",
-      "score": 120,
-      "summary": "neige, visibilité < 3 SM",
+      "icao": "CYYC",
+      "name": "CYYC Calgary International Airport",
+      "observed_at": "2026-11-18T05:00:00+00:00",
+      "raw": "METAR CYYC 180500Z 36009KT 5/8SM R35L/P6000FT/U R11/P6000FT/U R35R/P6000FT/N -SN OVC005 M00/M01 A2992 RMK NS8 CIG VRB 003-007 /S05/ SLP179",
+      "score": 155,
+      "summary": "neige, visibilité < 1 SM",
       "icon": "🌨️",
       "phenomenon": "Neige",
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF ENTC 170500Z 1706/1806 01007KT 9999 FEW010 BKN020 TEMPO 1706/1724 1000 SHSN BKN008 SCT015CB"
+      "taf_raw": "TAF CYYC 180540Z 1806/1906 36010KT 5/8SM -SN OVC004 TEMPO 1806/1812 1SM -SN SCT004 OVC012 FM181200 36010KT 3/4SM -SN OVC006 TEMPO 1812/1818 2SM -SN OVC012 FM181800 36010KT 1SM -SN OVC008 TEMPO 1818/1821 5SM -SN OVC012 FM182100 01010KT 5SM -SN OVC010 FM190300 03005KT P6SM OVC005 BECMG 1904/1906 VRB03KT RMK NXT FCST BY 180900Z"
     },
     {
-      "icao": "GCTS",
-      "name": "GCTS Tenerife Airport",
-      "observed_at": "2026-11-17T05:30:00+00:00",
-      "raw": "METAR GCTS 170530Z 02005KT 350V050 9999 FEW025 20/15 Q1021 NOSIG",
-      "score": 110,
-      "summary": "orage",
+      "icao": "KBZN",
+      "name": "KBZN Bozeman Yellowstone Airport",
+      "observed_at": "2026-11-18T06:04:00+00:00",
+      "raw": "SPECI KBZN 180604Z 26008KT 3/4SM R12/5000VP6000FT -SN BR VV009 00/00 A2978 RMK AO2 P0001 T00000000",
+      "score": 155,
+      "summary": "neige, visibilité < 1 SM",
+      "icon": "🌨️",
+      "phenomenon": "Neige",
+      "level": "Très dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF KBZN 180538Z 1806/1912 27008KT 3/4SM -SN BR SCT002 OVC009 TEMPO 1806/1808 1/2SM -SN FZFG BKN002 OVC009 FM180900 26007KT 1 1/2SM -SN BR SCT008 OVC012 FM181100 26007KT 6SM -SN BR OVC020 FM181200 25007KT P6SM SCT025 OVC040 FM181800 25007KT P6SM BKN170"
+    },
+    {
+      "icao": "KFLL",
+      "name": "KFLL fort lauderdale airport",
+      "observed_at": "2026-11-18T06:05:00+00:00",
+      "raw": "SPECI KFLL 180605Z 12012KT 1SM R10L/2800V4000FT +TSRA BR FEW008 BKN015 OVC021 21/20 A3010 RMK AO2 OCNL LTGICCACG E-SE TS E-SE MOV NE P0057 T02110200 $",
+      "score": 155,
+      "summary": "orage, visibilité < 3 SM",
       "icon": "⛈️",
       "phenomenon": "Orage",
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF GCTS 170200Z 1703/1803 03006KT 9999 FEW020 TX25/1714Z TN19/1708Z BECMG 1709/1711 09013KT BECMG 1719/1721 03008KT"
+      "taf_raw": "TAF KFLL 180531Z 1806/1912 09020G28KT P6SM VCSH BKN040 BKN200 TEMPO 1806/1807 VRB12G20KT 2SM TSRA BKN009CB OVC015 FM181700 08020G30KT P6SM VCTS BKN035CB OVC050 TEMPO 1817/1821 3SM TSRA BKN020CB OVC040 FM190000 09013G23KT P6SM VCSH BKN040"
     },
     {
-      "icao": "PHMK",
-      "name": "PHMK — PHMK Molokai Airport + PHLU Kalaupapa Airport",
-      "observed_at": "2026-11-17T05:54:00+00:00",
-      "raw": "METAR PHMK 170554Z AUTO 05012G23KT 10SM SCT050 SCT065 23/21 A3012 RMK AO2 SLP203 60000 T02280211 10272 20222 53011 TSNO $",
-      "score": 110,
-      "summary": "orage",
-      "icon": "⛈️",
-      "phenomenon": "Orage",
+      "icao": "UUDD",
+      "name": "UUDD Moscow Domodedovo Airport",
+      "observed_at": "2026-11-18T06:00:00+00:00",
+      "raw": "METAR UUDD 180600Z 14006MPS 1100 1000W R13R/1100N SN BKN004 OVC023 M01/M01 Q1000 R13R///99// NOSIG",
+      "score": 155,
+      "summary": "neige, visibilité < 1 SM",
+      "icon": "🌨️",
+      "phenomenon": "Neige",
       "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF PHMK 170539Z 1706/1806 06011G18KT P6SM FEW030 FM170800 04010KT P6SM -SHRA SCT020 BKN035 FM172000 04014G23KT P6SM VCSH SCT020 BKN040 FM180500 04009KT P6SM VCSH SCT020 BKN040"
+      "taf_raw": "TAF UUDD 180511Z 1806/1912 14007MPS 2000 SN OVC006 TX06/1912Z TNM01/1806Z TEMPO 1806/1809 1000 SHSN BKN003 BKN012CB BECMG 1809/1811 6000 NSW TEMPO 1815/1822 3000 -SNRA OVC003 BECMG 1822/1824 18002MPS OVC003 TEMPO 1900/1909 0300 FG OVC001"
     },
     {
-      "icao": "OJAI",
-      "name": "Airport",
-      "observed_at": "2026-11-17T05:00:00+00:00",
-      "raw": "METAR OJAI 170500Z 33003KT 0050 MIFG NSC 09/09 Q1021 NOSIG",
-      "score": 80,
-      "summary": "visibilité < 1 SM",
-      "icon": "☀️",
-      "phenomenon": "Ciel dégagé",
-      "level": "Dégradé",
+      "icao": "UUEE",
+      "name": "UUEE Moscow Sheremetyevo",
+      "observed_at": "2026-11-18T06:00:00+00:00",
+      "raw": "METAR UUEE 180600Z 11007MPS 1600 R06R/1600N R06C/1600N SN SCT005 OVC018 M00/M01 Q0999 R06R/590240 R06C/590240 NOSIG",
+      "score": 155,
+      "summary": "neige, visibilité < 1 SM",
+      "icon": "🌨️",
+      "phenomenon": "Neige",
+      "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF AMD OJAI 170555Z 1706/1812 VRB02KT 0800 FG NSC BECMG 1708/1710 27012KT 5000 HZ SCT035"
+      "taf_raw": "TAF UUEE 180513Z 1806/1906 12007G13MPS 4000 -SN OVC006 TX01/1818Z TNM00/1806Z TEMPO 1806/1812 1500 SHSN BKN003 BKN016CB TEMPO 1815/1821 2500 -SHSNRA BKN003 BKN012CB BECMG 1821/1824 18003MPS BKN003 PROB40 TEMPO 1900/1906 0300 FG"
     },
     {
-      "icao": "SAEZ",
-      "name": "TropicalSim SAEZ",
-      "observed_at": "2026-11-17T05:17:00+00:00",
-      "raw": "SPECI SAEZ 170517Z 04015G26KT 3000 RA BKN031 OVC050 21/20 Q1004 NOSIG",
-      "score": 79,
-      "summary": "visibilité < 3 SM, rafales ≥ 25 kt, précipitations",
-      "icon": "🌧️",
-      "phenomenon": "Précipitations",
-      "level": "Dégradé",
+      "icao": "EPGD",
+      "name": "EPGD Gdansk Airport",
+      "observed_at": "2026-11-18T06:00:00+00:00",
+      "raw": "METAR EPGD 180600Z 14009KT 0150 R29/0500N FG OVC000 02/02 Q0981",
+      "score": 145,
+      "summary": "brouillard, visibilité < 1 SM",
+      "icon": "🌫️",
+      "phenomenon": "Brouillard",
+      "level": "Très dégradé",
       "source_url": "https://aviationweather.gov/",
-      "taf_raw": "TAF SAEZ 170500Z 1706/1806 07005KT 5000 RA BKN030 OVC050 TX25/1718Z TN18/1709Z TEMPO 1706/1708 VRB10 2000 +TSRA BKN009 FEW040CB OVC040 BECMG 1710/1713 20010KT 9999 NSW SCT035 BECMG 1720/1722 VRB05KT CAVOK"
+      "taf_raw": "TAF EPGD 180530Z 1806/1906 13006KT 0300 FG OVC001 BECMG 1807/1809 0800 FG TEMPO 1807/1809 1200 -RADZ BR BKN002 BECMG 1810/1813 23010KT 9999 SCT004 BKN012 TEMPO 1817/1906 4000 RADZ BR BKN002 "
+    },
+    {
+      "icao": "LIPZ",
+      "name": "LIPZ VENICE AIRPORT",
+      "observed_at": "2026-11-18T05:50:00+00:00",
+      "raw": "METAR LIPZ 180550Z 01003KT 340V050 0600 R04R/P2000N FG OVC001 08/08 Q0998 NOSIG",
+      "score": 145,
+      "summary": "brouillard, visibilité < 1 SM",
+      "icon": "🌫️",
+      "phenomenon": "Brouillard",
+      "level": "Très dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF LIPZ 180500Z 1806/1912 VRB05KT 2000 BR BKN005 TEMPO 1806/1808 1000 BKN002 BECMG 1809/1811 7000 SCT020 TEMPO 1820/1906 2000 BCFG BKN005"
+    },
+    {
+      "icao": "SKMD",
+      "name": "SKMD Olaya Herrera Airport",
+      "observed_at": "2026-11-18T06:00:00+00:00",
+      "raw": "METAR SKMD 180600Z AUTO VRB01KT 0450NDV R02/0900N FG BKN011/// OVC013/// 19/19 Q1018",
+      "score": 145,
+      "summary": "brouillard, visibilité < 1 SM",
+      "icon": "🌫️",
+      "phenomenon": "Brouillard",
+      "level": "Très dégradé",
+      "source_url": "https://aviationweather.gov/"
+    },
+    {
+      "icao": "SUMU",
+      "name": "TropicalSim SUMU",
+      "observed_at": "2026-11-18T06:01:00+00:00",
+      "raw": "METAR SUMU 180601Z 32004KT 1500 0400NW R25/1200U R19/0450N BCFG BR FEW003 16/16 Q1004 TEMPO 0500 FG",
+      "score": 145,
+      "summary": "brouillard, visibilité < 1 SM",
+      "icon": "🌫️",
+      "phenomenon": "Brouillard",
+      "level": "Très dégradé",
+      "source_url": "https://aviationweather.gov/",
+      "taf_raw": "TAF SUMU 180530Z 1806/1906 35005KT 9999 SCT020 TX26/1818Z TN15/1810Z TEMPO 1806/1811 3000 BR SCT010 TEMPO 1807/1810 0600 BCFG BKN005 BECMG 1813/1815 27018KT PROB30 TEMPO 1815/1821 5000 TSRA SCT020 FEW040CB BKN060"
     }
   ],
   "weather_coverage": {
     "eligible": 488,
-    "received": 379,
-    "fresh": 379
+    "received": 411,
+    "fresh": 411
   },
   "news": [
     {
@@ -151,7 +150,7 @@
       "url": "https://github.com/MobiFlight/MobiFlight-Connector/releases/tag/11.3.1.4",
       "summary": "Ce qui a changé Jalons et faits saillants 🤩 Migrer l'assistant de configuration de sortie vers une nouvelle interface utilisateur - MVP par @DocMoebiuz dans https://github.com/MobiFlight/MobiFlight-Connector/pull/3446 Activer le rendu haute résolution par @DocMoebiuz dans…",
       "impact": "Préversion : ne pas installer sur le cockpit principal sans sauvegarde et vérification de compatibilité.",
-      "new": true
+      "new": false
     },
     {
       "id": "msfs_fselite_news-content-taimodels-releases-grand-rapids-kgrr-for-msfs",
@@ -163,7 +162,7 @@
       "url": "https://fselite.net/content/taimodels-releases-grand-rapids-kgrr-for-msfs/",
       "summary": "16 novembre 2026 - Taimodels lance l'aéroport Gerald R. Ford de Grand Rapids pour MSFS 2020 et 2024. Actualités MSFS MSFS 2024",
       "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
-      "new": true
+      "new": false
     },
     {
       "id": "msfs_fselite_news-content-black-friday-2026-the-best-deals-available-for-flight-simulator",
@@ -175,7 +174,7 @@
       "url": "https://fselite.net/content/black-friday-2026-the-best-deals-available-for-flight-simulator/",
       "summary": "16 novembre 2026 - Les meilleures offres du Black Friday pour Microsoft Flight Simulator 2020, 2024, X-Plane 12 et tous vos besoins matériels. Promotions MSFS MSFS 2024 XPL12 var HYVOR_TALK_WEBSITE = 3490 ; window.addEventListener('load', function() { hyvorTalkCommentCounts.load({ \"website-id\": HYVOR_TALK_WEBSITE, }) });",
       "impact": "Vérifier l'annonce auprès de FSDreamTeam avant de conclure à une nouvelle version.",
-      "new": true
+      "new": false
     },
     {
       "id": "781299",
@@ -186,7 +185,7 @@
       "url": "https://forums.flightsimulator.com/t/developer-livestream-november-18/781299",
       "summary": "Notre prochain Livestream pour développeurs aura lieu plus tard cette semaine, le mercredi 18 novembre à 18h30 UTC. Rejoignez notre panel régulier composé de Jorg, Seb et Martial qui répondront aux questions de la communauté et discuteront de ce qui arrive dans MSFS !…",
       "impact": "Consulter la publication officielle pour les détails et la compatibilité avec les add-ons.",
-      "new": true
+      "new": false
     },
     {
       "id": "msfs_fselite_news-content-dfflyer-direct-san-jose-california-out-now",
@@ -575,32 +574,32 @@
   ],
   "hardware": [],
   "source_status": {
-    "metar": "partial",
+    "metar": "ok",
     "taf": "ok",
     "official_news": "ok",
     "airport_versions": "partial",
     "official_releases": "ok",
     "software_versions": "partial",
     "sayintentions_news": "no_dated_articles",
-    "gsx_fselite_news": "unavailable",
+    "gsx_fselite_news": "no_dated_articles",
     "msfs_fselite_news": "ok",
     "winctrl_airbus_articles": "ok"
   },
   "errors": [
-    "HTTP Error 504: Gateway Time-out",
     "Versions : FALE / GafferSimulations : Numérotation / édition différente : installée 1.2.2, boutique 1.23 ; comparaison interdite",
     "Versions : HAAB / © lucio sergio barelli : Numérotation / édition différente : installée 1.0.0, boutique 2.0 ; comparaison interdite",
     "Versions : GMMX / PERFECTSOFT : Fiche 1.1.0 plus ancienne que l'installation 1.2.0 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : DTTA / prealsoft : Fiche 1.00 plus ancienne que l'installation 1.0.1 : vérifier le canal éditeur, ne pas rétrograder",
     "Versions : CYVR / fsdreamteam : Fiche 1.0.7 plus ancienne que l'installation 1.3.1 : vérifier le canal éditeur, ne pas rétrograder",
     "Logiciels : fenix: Source inaccessible : ValueError Branche Fenix non explicitement publiée sur le blog",
-    "Logiciels : simapppro: Source inaccessible : ValueError Changelog SimAppPro absent"
+    "Logiciels : simapppro: Source inaccessible : ValueError Changelog SimAppPro absent",
+    "Logiciels : chaseplane: Source inaccessible : ValueError Produit absent du dashboard: ChasePlane"
   ],
   "note": "Collecte quotidienne automatique : METAR/TAF NOAA, flux officiel MSFS, versions GitHub publiées, audit des scènes répertoriées, extraction des versions des boutiques publiques reconnues et surveillance des sites publics. Les versions non publiées ou inaccessibles restent UNKNOWN ; une page modifiée n’est pas une mise à jour confirmée.",
   "version_coverage": {
-    "verified_today": 234,
+    "verified_today": 232,
     "eligible": 418,
-    "unavailable": 141,
+    "unavailable": 143,
     "no_version": 12,
     "inconsistent": 9,
     "not_automatable": 1,
@@ -614,18 +613,18 @@
     "official_url_known": 419,
     "without_official_url": 156,
     "manual_source": 1,
-    "unverified": 341,
-    "audited_at": "2026-11-17T06:00:17.823015+00:00"
+    "unverified": 343,
+    "audited_at": "2026-11-18T06:09:27.894086+00:00"
   },
-  "versions_checked_at": "2026-11-17T06:00:17.823015+00:00",
-  "releases_checked_at": "2026-11-17T06:00:17.823015+00:00",
+  "versions_checked_at": "2026-11-18T06:09:27.894086+00:00",
+  "releases_checked_at": "2026-11-18T06:09:27.894086+00:00",
   "software_coverage": {
     "total": 19,
-    "verified": 9,
+    "verified": 8,
     "changed": 0,
-    "checked_at": "2026-11-17T06:03:01.296824+00:00",
-    "unverified": 10
+    "checked_at": "2026-11-18T06:10:59.690615+00:00",
+    "unverified": 11
   },
   "airac_cycle": "2611",
-  "winctrl_airbus_checked_at": "2026-11-17T06:03:12.582847+00:00"
+  "winctrl_airbus_checked_at": "2026-11-18T06:11:07.729889+00:00"
 }
