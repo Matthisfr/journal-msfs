@@ -779,9 +779,9 @@
         "url": "https://contrail.shop/products/taimodels-wsss-singapore-changi-airport-msfs2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/wsss_tm_thumb_0ca69b4f-3ce9-4b1a-92c7-411146303443_1200x1200.png?v=1778618269",
         "image_checked": true,
-        "comparison": "equal",
-        "server_version": "1.6.0",
-        "version_state": "À jour"
+        "comparison": "update",
+        "server_version": "1.7.0",
+        "version_state": "Mise à jour disponible"
       }
     ],
     "winner": "Non déterminé",
@@ -1166,7 +1166,7 @@
         "image": "",
         "image_checked": true,
         "comparison": "incomparable",
-        "server_version": "2.0.0",
+        "server_version": "2.5.0",
         "version_state": "À vérifier"
       }
     ],
