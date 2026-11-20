@@ -14,7 +14,7 @@
     {
       "id": "IFR-884370275",
       "aircraft": "F-FENX",
-      "when": "4 days ago",
+      "when": "5 days ago",
       "origin": "EHAM",
       "destination": "LSGG",
       "rules": "IFR",
@@ -23,7 +23,7 @@
     {
       "id": "IFR-884344470",
       "aircraft": "F-FENX",
-      "when": "5 days ago",
+      "when": "6 days ago",
       "origin": "EKCH",
       "destination": "LIMC",
       "rules": "IFR",
@@ -102,7 +102,7 @@
       "duration": "1h 45m"
     }
   ],
-  "flights_checked_at": "2026-11-19T06:09:36.354811+00:00",
-  "verified_at": "2026-11-19T06:09:36.354811+00:00",
-  "checked_at": "2026-11-19T06:09:36.354811+00:00"
+  "flights_checked_at": "2026-11-20T06:07:04.353219+00:00",
+  "verified_at": "2026-11-20T06:07:04.353219+00:00",
+  "checked_at": "2026-11-20T06:07:04.353219+00:00"
 }
