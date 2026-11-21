@@ -114,6 +114,9 @@ jobs:
             echo "Commit : publication rapide, données matinales déjà fraîches ou avant 04h"
             exit 0
           fi
+          # Le samedi, toute publication après 04h relance la recherche si
+          # le rapport de catalogues n'a pas été produit le jour même.
+          # Ne pas confondre publication réussie et audit de versions réussi.
           if [[ "$TRIGGER" == "workflow_dispatch" ]]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
             echo "collect=true" >> "$GITHUB_OUTPUT"
@@ -232,9 +235,22 @@ jobs:
             fi
           fi
           if [[ "$excel_changed" == "true" ]] || git log -1 --format=%s | grep -Fq "[collect-total]" || [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.mode }}" == "totale" ]] || [[ "$(TZ=Europe/Paris date +%u)" == "6" ]]; then
-            python scripts/discover_airports.py || echo "Catalogue Contrail / iniBuilds indisponible"
-            python scripts/discover_simmarket.py || echo "Recherche simMarket indisponible"
+            python scripts/discover_airports.py
+            python scripts/discover_simmarket.py
             python scripts/apply_airport_sources.py
+            python - <<'PY'
+          import json,datetime,zoneinfo
+          from pathlib import Path
+          d=json.loads(Path('public/airport_source_candidates.json').read_text())
+          today=datetime.datetime.now(zoneinfo.ZoneInfo('Europe/Paris')).date()
+          for field in ('generated_at','simmarket_checked_at'):
+              value=d.get(field)
+              if not value or datetime.datetime.fromisoformat(value.replace('Z','+00:00')).astimezone(zoneinfo.ZoneInfo('Europe/Paris')).date()!=today:
+                  raise SystemExit(f'ERREUR: scan catalogue incomplet ({field}={value})')
+          if d.get('catalog_errors'):
+              raise SystemExit(f"ERREUR: catalogue incomplet: {d['catalog_errors']}")
+          print('Audit samedi des catalogues terminé et daté du jour')
+          PY
           else
             echo "Recherche catalogue complète : nouvel Excel, samedi ou lancement manuel total."
           fi
