@@ -123,7 +123,7 @@ function renderAirports(){
   $('#airport-body').innerHTML=matches.map(a=>{
     const st=a.status||'UNK-V';
     const source=a.source_url?`<a href="${esc(isSafeUrl(a.source_url))}" target="_blank" rel="noopener noreferrer">${esc((a.source_store||'Éditeur')+(a.source_edition?' · '+a.source_edition:''))} ↗</a>`:a.source_catalog_url?`<a href="${esc(isSafeUrl(a.source_catalog_url))}" target="_blank" rel="noopener noreferrer">Catalogue éditeur (version non confirmée) ↗</a>`:'';
-    const comp=a.server_version?(a.version_comparison==='update'?'update':a.version_comparison==='equal'?'current':a.version_comparison==='source_older'?'ahead':'unknown'):'unknown';
+    const comp=isVerified(a)?(a.version_comparison==='update'?'update':a.version_comparison==='equal'?'current':'unknown'):(a.version_check_state==='source_older'?'ahead':'unknown');
     const compLabel=comp==='update'?'MISE À JOUR':comp==='current'?'À JOUR':comp==='ahead'?'INSTALLÉE + RÉCENTE':comp==='major'?'NOUVELLE ÉDITION':'À COMPARER';
     const pendingLabel=a.source_scope==='parent_reference_only'?'PACK PARENT — À CONFIRMER':a.version_check_state==='source_older'?'BOUTIQUE PLUS ANCIENNE':a.version_check_state==='inconsistent'?'ÉDITION / FORMAT À VÉRIFIER':'COMPARAISON NON VALIDÉE';
     const compClass=comp==='update'?'flag-s':comp==='current'?'flag-ok':'flag-v';
