@@ -238,19 +238,7 @@ jobs:
             python scripts/discover_airports.py
             python scripts/discover_simmarket.py
             python scripts/apply_airport_sources.py
-            python - <<'PY'
-          import json,datetime,zoneinfo
-          from pathlib import Path
-          d=json.loads(Path('public/airport_source_candidates.json').read_text())
-          today=datetime.datetime.now(zoneinfo.ZoneInfo('Europe/Paris')).date()
-          for field in ('generated_at','simmarket_checked_at'):
-              value=d.get(field)
-              if not value or datetime.datetime.fromisoformat(value.replace('Z','+00:00')).astimezone(zoneinfo.ZoneInfo('Europe/Paris')).date()!=today:
-                  raise SystemExit(f'ERREUR: scan catalogue incomplet ({field}={value})')
-          if d.get('catalog_errors'):
-              raise SystemExit(f"ERREUR: catalogue incomplet: {d['catalog_errors']}")
-          print('Audit samedi des catalogues terminé et daté du jour')
-          PY
+            python -c "import json,datetime,zoneinfo,pathlib; d=json.loads(pathlib.Path('public/airport_source_candidates.json').read_text()); today=datetime.datetime.now(zoneinfo.ZoneInfo('Europe/Paris')).date(); check=lambda k: bool(d.get(k)) and datetime.datetime.fromisoformat(d[k].replace('Z','+00:00')).astimezone(zoneinfo.ZoneInfo('Europe/Paris')).date()==today; assert check('generated_at') and check('simmarket_checked_at') and not d.get('catalog_errors'), 'Audit catalogues incomplet'; print('Audit catalogues complet pour',today)"
           else
             echo "Recherche catalogue complète : nouvel Excel, samedi ou lancement manuel total."
           fi
