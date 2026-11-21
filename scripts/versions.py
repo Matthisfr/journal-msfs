@@ -296,6 +296,11 @@ def update_versions(airports):
     for a in airports:
         a["last_attempt_at"]=NOW.isoformat()
         a["last_audited_at"]=NOW.isoformat()
+        # Une comparaison précédente ne vaut jamais confirmation actuelle.
+        # Conserver l’historique sans le confondre avec une MAJ vérifiée.
+        if a.get("version_comparison"):
+            a["last_known_comparison"]=a["version_comparison"]
+        a.pop("version_comparison",None)
         url=str(a.get("source_url") or "")
         host=urllib.parse.urlparse(url).hostname or ""
         if a.get("icao")=="KLVB":
