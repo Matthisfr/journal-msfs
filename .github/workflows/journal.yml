@@ -371,6 +371,26 @@ jobs:
           path: public
           name: github-pages
 
+      - name: Attendre la visibilité de l'archive GitHub Pages
+        if: steps.gate.outputs.run == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPOSITORY: ${{ github.repository }}
+          RUN_ID: ${{ github.run_id }}
+        shell: bash
+        run: |
+          for attempt in $(seq 1 12); do
+            artifacts=$(curl -fsSL --retry 2 -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/$GH_REPOSITORY/actions/runs/$RUN_ID/artifacts?per_page=100") || artifacts='{}'
+            if printf '%s' "$artifacts" | jq -e '.artifacts[]? | select(.name == "github-pages" and .expired == false)' >/dev/null; then
+              echo "Archive github-pages visible par l'API GitHub."
+              exit 0
+            fi
+            echo "Archive pas encore visible : attente $attempt/12"
+            sleep 10
+          done
+          echo "::error::Archive GitHub Pages invisible après 120 secondes."
+          exit 1
+
       - name: Publier le site
         if: steps.gate.outputs.run == 'true'
         id: deployment
