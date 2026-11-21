@@ -1,10 +1,10 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-11-20T06:06:40.567540+00:00",
+  "retrieved_at": "2026-11-21T06:08:45.007876+00:00",
   "origin": {
-    "icao": "LFPG",
-    "name": "CHARLES-DE-GAULLE"
+    "icao": "ELLX",
+    "name": "LUXEMBOURG"
   },
   "destination": {
     "icao": "LFMN",
@@ -12,117 +12,122 @@
   },
   "flight_number": "2809",
   "aircraft": "A320",
-  "route": "LATR7Z LATRA DCT LAMUT DCT UTUVA DCT LERGA DCT LIQID DCT LATAM DCT TUNUR DCT NISAR NISA8R",
-  "altitude": "35000",
-  "enroute_time": "01:15:42",
-  "scheduled_departure": "2026-11-19T16:40:00Z",
-  "scheduled_arrival": "2026-11-19T18:15:00Z",
-  "generated_at": "2026-11-19T16:18:37Z",
+  "route": "GTQ2Q GTQ A242 POGOL DCT LASAT DCT MOROK DCT GILIR DCT GEVEA DCT KOGAS DCT MEDAM DCT VEVAR VEVA8R",
+  "altitude": "29000",
+  "enroute_time": "01:12:22",
+  "scheduled_departure": "2026-11-20T10:40:00Z",
+  "scheduled_arrival": "2026-11-20T12:15:00Z",
+  "generated_at": "2026-11-20T10:08:02Z",
   "route_points": [
     {
-      "lat": 49.015361,
-      "lon": 2.416611,
-      "name": "PG270"
+      "lat": 49.595028,
+      "lon": 6.127028,
+      "name": "LX892"
     },
     {
-      "lat": 49.069417,
-      "lon": 2.365,
-      "name": "PG290"
+      "lat": 49.496667,
+      "lon": 6.258944,
+      "name": "LX895"
     },
     {
-      "lat": 49.096083,
-      "lon": 2.035889,
-      "name": "AMJUS"
+      "lat": 49.385306,
+      "lon": 6.335833,
+      "name": "LX896"
     },
     {
-      "lat": 48.680306,
-      "lon": 2.130389,
-      "name": "DEROL"
+      "lat": 49.220833,
+      "lon": 6.448667,
+      "name": "LX899"
     },
     {
-      "lat": 48.286389,
-      "lon": 2.408889,
-      "name": "LALUX"
+      "lat": 48.986444,
+      "lon": 6.716222,
+      "name": "GTQ"
     },
     {
-      "lat": 48.083333,
-      "lon": 2.516667,
-      "name": "LATRA"
+      "lat": 48.644722,
+      "lon": 6.702778,
+      "name": "KEZOH"
     },
     {
-      "lat": 47.513669,
-      "lon": 2.795166,
+      "lat": 48.399028,
+      "lon": 6.693361,
+      "name": "POGOL"
+    },
+    {
+      "lat": 48.265828,
+      "lon": 6.688234,
       "name": "TOC"
     },
     {
-      "lat": 47.118333,
-      "lon": 2.984722,
-      "name": "LAMUT"
+      "lat": 48.158944,
+      "lon": 6.684139,
+      "name": "LASAT"
     },
     {
-      "lat": 45.86325,
-      "lon": 3.491083,
-      "name": "UTUVA"
+      "lat": 47.396583,
+      "lon": 6.6555,
+      "name": "MOROK"
     },
     {
-      "lat": 45.257278,
-      "lon": 3.750167,
-      "name": "LERGA"
+      "lat": 47.063333,
+      "lon": 6.239167,
+      "name": "GILIR"
     },
     {
-      "lat": 45.142778,
-      "lon": 4.001778,
-      "name": "LIQID"
+      "lat": 46.253917,
+      "lon": 6.132222,
+      "name": "GEVEA"
     },
     {
-      "lat": 45.033861,
-      "lon": 4.239111,
-      "name": "LATAM"
+      "lat": 45.808333,
+      "lon": 6.390833,
+      "name": "KOGAS"
     },
     {
-      "lat": 44.640278,
-      "lon": 4.84,
-      "name": "TUNUR"
+      "lat": 45.264444,
+      "lon": 6.94,
+      "name": "MEDAM"
     },
     {
-      "lat": 44.495278,
-      "lon": 5.071389,
-      "name": "NISAR"
+      "lat": 44.8,
+      "lon": 7.0125,
+      "name": "VEVAR"
     },
     {
-      "lat": 44.372778,
-      "lon": 5.265556,
-      "name": "XIRBI"
+      "lat": 44.214444,
+      "lon": 7.151139,
+      "name": "GAPDO"
     },
     {
-      "lat": 44.156389,
-      "lon": 5.501111,
-      "name": "DOTIG"
+      "lat": 43.832056,
+      "lon": 7.374639,
+      "name": "AMGEL"
     },
     {
-      "lat": 43.906283,
-      "lon": 5.77078,
+      "lat": 43.679361,
+      "lon": 7.545278,
+      "name": "MIKRU"
+    },
+    {
+      "lat": 43.668254,
+      "lon": 7.588698,
       "name": "TOD"
     },
     {
-      "lat": 43.857222,
-      "lon": 5.823333,
-      "name": "VEDIK"
+      "lat": 43.528556,
+      "lon": 8.128111,
+      "name": "OTOKE"
     },
     {
-      "lat": 43.595833,
-      "lon": 6.101111,
-      "name": "AMFOU"
+      "lat": 43.369611,
+      "lon": 7.936306,
+      "name": "MN800"
     },
     {
-      "lat": 43.503889,
-      "lon": 6.434444,
-      "name": "TIPIK"
-    },
-    {
-      "lat": 43.384583,
-      "lon": 6.606361,
-      "name": "MUS"
+      "lat": 43.41575,
+      "lon": 7.824278,
+      "name": "NERAS"
     },
     {
       "lat": 43.665278,
