@@ -1,0 +1,138 @@
+{
+  "state": "ok",
+  "username": "Matthis",
+  "retrieved_at": "2026-11-21T17:40:16.257402+00:00",
+  "origin": {
+    "icao": "ELLX",
+    "name": "LUXEMBOURG"
+  },
+  "destination": {
+    "icao": "LFMN",
+    "name": "NICE/COTE D'AZUR"
+  },
+  "flight_number": "2809",
+  "aircraft": "A320",
+  "route": "GTQ2Q GTQ A242 POGOL DCT LASAT DCT MOROK DCT GILIR DCT GEVEA DCT KOGAS DCT MEDAM DCT VEVAR VEVA8R",
+  "altitude": "29000",
+  "enroute_time": "01:12:22",
+  "scheduled_departure": "2026-11-20T10:40:00Z",
+  "scheduled_arrival": "2026-11-20T12:15:00Z",
+  "generated_at": "2026-11-20T10:08:02Z",
+  "route_points": [
+    {
+      "lat": 49.595028,
+      "lon": 6.127028,
+      "name": "LX892"
+    },
+    {
+      "lat": 49.496667,
+      "lon": 6.258944,
+      "name": "LX895"
+    },
+    {
+      "lat": 49.385306,
+      "lon": 6.335833,
+      "name": "LX896"
+    },
+    {
+      "lat": 49.220833,
+      "lon": 6.448667,
+      "name": "LX899"
+    },
+    {
+      "lat": 48.986444,
+      "lon": 6.716222,
+      "name": "GTQ"
+    },
+    {
+      "lat": 48.644722,
+      "lon": 6.702778,
+      "name": "KEZOH"
+    },
+    {
+      "lat": 48.399028,
+      "lon": 6.693361,
+      "name": "POGOL"
+    },
+    {
+      "lat": 48.265828,
+      "lon": 6.688234,
+      "name": "TOC"
+    },
+    {
+      "lat": 48.158944,
+      "lon": 6.684139,
+      "name": "LASAT"
+    },
+    {
+      "lat": 47.396583,
+      "lon": 6.6555,
+      "name": "MOROK"
+    },
+    {
+      "lat": 47.063333,
+      "lon": 6.239167,
+      "name": "GILIR"
+    },
+    {
+      "lat": 46.253917,
+      "lon": 6.132222,
+      "name": "GEVEA"
+    },
+    {
+      "lat": 45.808333,
+      "lon": 6.390833,
+      "name": "KOGAS"
+    },
+    {
+      "lat": 45.264444,
+      "lon": 6.94,
+      "name": "MEDAM"
+    },
+    {
+      "lat": 44.8,
+      "lon": 7.0125,
+      "name": "VEVAR"
+    },
+    {
+      "lat": 44.214444,
+      "lon": 7.151139,
+      "name": "GAPDO"
+    },
+    {
+      "lat": 43.832056,
+      "lon": 7.374639,
+      "name": "AMGEL"
+    },
+    {
+      "lat": 43.679361,
+      "lon": 7.545278,
+      "name": "MIKRU"
+    },
+    {
+      "lat": 43.668254,
+      "lon": 7.588698,
+      "name": "TOD"
+    },
+    {
+      "lat": 43.528556,
+      "lon": 8.128111,
+      "name": "OTOKE"
+    },
+    {
+      "lat": 43.369611,
+      "lon": 7.936306,
+      "name": "MN800"
+    },
+    {
+      "lat": 43.41575,
+      "lon": 7.824278,
+      "name": "NERAS"
+    },
+    {
+      "lat": 43.665278,
+      "lon": 7.215,
+      "name": "LFMN"
+    }
+  ]
+}

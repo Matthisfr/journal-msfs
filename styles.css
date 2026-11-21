@@ -1,0 +1,319 @@
+:root{--bg:#f5f5f1;--paper:#fff;--navy:#071b2c;--navy2:#0e2d45;--blue:#256f9f;--line:#dfe4e7;--muted:#697783;--ink:#162738;--gold:#c6a073;--soft:#eaf1f5}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--bg);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}a{color:#165d8b}a:hover{text-decoration:underline}.shell{width:min(1260px,calc(100% - 64px));margin:auto}.skip{position:absolute;left:-9999px}.skip:focus{left:10px;top:10px;z-index:20;background:white;padding:10px}.topline{background:#061421;color:#b9cddd;font-size:10px;font-weight:750;letter-spacing:.14em}.topinner{height:35px;display:flex;justify-content:space-between;align-items:center;gap:10px}.dot{display:inline-block;background:#8cba9b;width:7px;height:7px;border-radius:50%;margin-right:8px}.header{background:var(--navy);color:white;border-bottom:4px solid var(--gold)}.masthead{padding:32px 0 26px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:21px}.brandmark{border:1px solid #53748c;color:#b5d9ed;width:70px;height:70px;display:grid;place-items:center;border-radius:50%;font-size:35px;transform:rotate(-17deg)}.eyebrow,.overline{font-size:10px;font-weight:850;letter-spacing:.19em;text-transform:uppercase}.eyebrow{color:#b3cbdc}.brand h1{font:800 clamp(30px,4.4vw,53px)/1.08 Georgia,Times,serif;letter-spacing:-.05em;margin:4px 0}.brand h1 em{color:#9ac4df;font-style:normal}.strap{font-size:12px;color:#a7c0d1}.edition{text-align:right;border-left:1px solid #365267;padding-left:27px;min-width:195px}.edition span,.edition small{display:block;color:#a9bfd0;font-size:11px}.edition strong{display:block;font-size:16px;letter-spacing:.06em;margin:4px 0}.nav{display:flex;gap:6px;overflow-x:auto;padding-bottom:0}.navbtn{background:transparent;color:#d5e3ee;border:0;border-bottom:3px solid transparent;padding:13px 21px;font-size:11px;font-weight:850;letter-spacing:.07em;white-space:nowrap}.navbtn span{font-size:17px;margin-right:6px;color:#86abc5}.navbtn:hover,.navbtn.selected{background:#143249;color:white;border-bottom-color:#d9b387}.main{padding:29px 0 60px;min-height:70vh}.view{display:none}.view.active{display:block}.hero{display:grid;grid-template-columns:minmax(0,1.95fr) minmax(285px,1fr);gap:15px}.hero-main{background:#0b263d;color:white;min-height:400px;position:relative;overflow:hidden;border-radius:4px}.hero-art{position:absolute;inset:0;opacity:.66}.hero-art svg{width:100%;height:100%;object-fit:cover}.hero-main:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,20,33,.95),rgba(5,23,39,.7) 52%,rgba(6,23,37,.1))}.hero-content{position:relative;z-index:1;max-width:560px;padding:48px 40px}.kicker{display:flex;gap:12px;align-items:center;font-size:10px;letter-spacing:.18em;color:#e5c49b;font-weight:800}.kicker-line{height:1px;width:30px;background:#d4aa76}.hero h2{font:700 clamp(33px,4.1vw,56px)/1.1 Georgia,serif;letter-spacing:-.04em;margin:21px 0 16px}.hero h2 span{color:#9ac7e7}.hero p{color:#c5d6e3;font-size:14px;max-width:475px}.cta{margin-top:20px;background:#e8c69a;border:0;border-radius:2px;padding:12px 18px;color:#10293c;font-weight:800;font-size:12px}.cta span{margin-left:12px}.cta:hover{background:#fff}.hero-side{background:var(--paper);border:1px solid var(--line);padding:30px 28px;border-radius:4px}.side-label{font-size:10px;letter-spacing:.16em;font-weight:900;color:#54758c}.status-line{display:flex;gap:12px;align-items:start;margin:20px 0}.status-line strong,.status-line small{display:block}.status-line small{font-size:12px;color:var(--muted);margin-top:3px}.pulse{width:11px;height:11px;background:#dbab62;border-radius:50%;margin-top:5px;flex-shrink:0}.pulse.good{background:#69a98a}.divider{height:1px;background:var(--line);margin:22px 0}.mini-kpi{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini-kpi strong{display:block;font:700 34px Georgia,serif;color:#103b59}.mini-kpi span{font-size:11px;color:var(--muted)}.priority{padding:0;list-style:none;margin:14px 0}.priority li{font-size:12px;padding:8px 0;border-bottom:1px solid #edf0f1}.priority b{font-size:10px;color:#9b8b75;margin-right:12px}.side-foot{font-size:11px!important;color:var(--muted)!important}.sectionbar{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:32px 0 16px}.sectionbar.compact{margin:0 0 15px}.sectionbar h2,.pagehead h2{font:700 30px Georgia,serif;margin:4px 0 0;letter-spacing:-.025em}.overline{color:#a07e55}.muted{font-size:12px;color:var(--muted)}.tile-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}.tile{background:white;text-align:left;border:1px solid var(--line);border-radius:4px;padding:22px;min-height:213px;position:relative;display:flex;flex-direction:column;gap:9px;transition:transform .15s,border-color .15s}.tile:hover{transform:translateY(-3px);border-color:#9ab7ca}.tile-number{font-size:10px;font-weight:900;letter-spacing:.1em;color:#9b825f}.tile-icon{font-size:28px;color:#295f82}.tile strong{font:700 21px Georgia,serif;line-height:1.2}.tile-text{font-size:12px;color:var(--muted)}.tile-arrow{position:absolute;right:20px;top:18px;font-size:18px;color:#7c9aaf}.split-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:17px}.surface{background:#fff;border:1px solid var(--line);border-radius:4px;padding:24px}.textlink{background:none;border:0;color:#256f9f;font-size:12px;font-weight:800}.home-news article{border-top:1px solid var(--line);padding:13px 0}.home-news article:first-child{border-top:0}.home-news strong{display:block;font:700 17px Georgia,serif;margin-bottom:6px}.home-news small{color:var(--muted);font-size:11px}.health-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.health{background:#f5f7f8;padding:14px;border-left:3px solid #d8a968}.health.ok{border-left-color:#62a587}.health strong,.health span{display:block}.health strong{font-size:12px}.health span{font-size:11px;color:var(--muted);margin-top:4px}.fineprint{font-size:12px;color:var(--muted);margin-bottom:0}.pagehead{display:flex;justify-content:space-between;align-items:end;gap:20px;border-bottom:1px solid #d4dce1;padding:17px 0 24px;margin-bottom:22px}.pagehead h2{font-size:39px}.pagehead p{max-width:690px;color:var(--muted);margin:11px 0 0}.pagehead-tag{font-size:11px;letter-spacing:.07em;color:#2a6486;font-weight:850;white-space:nowrap}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}.metrics>div{background:white;border:1px solid var(--line);padding:17px}.metrics strong,.metrics span{display:block}.metrics strong{font:700 27px Georgia,serif}.metrics span{font-size:12px;color:var(--muted)}.weather-list{display:grid;gap:10px}.weather-item{display:grid;grid-template-columns:46px 55px 1fr auto;gap:15px;align-items:start;background:#fff;border:1px solid var(--line);padding:17px}.weather-rank{color:#a48b68;font:700 21px Georgia,serif}.weather-symbol{font-size:27px}.weather-code{font-weight:900;color:#1a5a83;letter-spacing:.07em}.weather-detail{font-size:12px;color:var(--muted);margin-top:4px}.weather-raw{font:11px/1.5 ui-monospace,monospace;color:#516371;margin-top:7px;overflow-wrap:anywhere}.weather-score{font-size:11px;color:#a56e42;text-align:right;font-weight:800}.weather-score small{display:block;font-weight:400;color:var(--muted)}.footnote{font-size:12px;color:var(--muted);line-height:1.7;margin-top:17px}.empty{background:#fff;border:1px dashed #bccbd4;text-align:center;padding:55px 25px;color:var(--muted)}.empty strong{display:block;color:#2b536e;font:700 22px Georgia,serif;margin-bottom:8px}.filterbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:15px}.searchbox{background:#fff;border:1px solid #c9d6df;display:flex;align-items:center;gap:8px;padding:0 14px;flex:1;min-width:260px}.searchbox span{font-size:24px;color:#64869d}.searchbox input{padding:12px 0;outline:0;border:0;width:100%;font-size:13px}.filterbar select{background:white;border:1px solid #c9d6df;padding:12px;max-width:230px;color:#24445c;font-size:12px}.legend{display:flex;gap:10px 18px;flex-wrap:wrap;font-size:11px;color:#6c7984;padding:13px 0 15px;border-bottom:1px solid #e0e5e8}.flag{display:inline-block;padding:4px 7px;border-radius:3px;font-size:10px;font-weight:900;letter-spacing:.02em;white-space:nowrap}.flag-p{background:#e5e9ed;color:#3d5264}.flag-v{background:#fff0d8;color:#9b6719}.flag-c{background:#e0effd;color:#286b9c}.flag-s{background:#fde5e5;color:#b24040}.flag-neutral{background:#e7edf1;color:#466274}.flag-ok{background:#e3f4e8;color:#33794d}.table-caption{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:14px 0;font-size:12px;color:var(--muted)}.table-caption strong{color:#223e55}.tablebox{overflow:auto;border:1px solid var(--line);background:#fff;max-height:690px}table{border-collapse:collapse;width:100%;min-width:780px;text-align:left}th{background:#eaf0f4;font-size:10px;letter-spacing:.1em;color:#3c637e;position:sticky;top:0;z-index:2;text-transform:uppercase}td,th{padding:12px 14px;border-bottom:1px solid #e7ecef;vertical-align:top}td{font-size:12px}tbody tr:hover{background:#f5f9fb}td small{display:block;font-size:11px;color:#7b8790;margin-top:4px}td .code{font-weight:900;color:#215f86;letter-spacing:.08em}.news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.news-card{background:#fff;border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;gap:12px}.news-card .news-meta{font-size:10px;color:#6f8596;letter-spacing:.1em;font-weight:800}.news-card h3{font:700 23px/1.22 Georgia,serif;margin:0}.news-card p{color:#586a77;font-size:13px;margin:0}.news-card .news-impact{background:#f1f6f8;padding:13px;font-size:12px;color:#36566b}.news-card .news-source{font-size:12px;margin-top:auto}.new-tag{display:inline-block;background:#ff9900;color:#231600;font-size:11px;font-weight:900;padding:4px 8px;margin-left:6px;border:1px solid #c97000;border-radius:4px;letter-spacing:.06em;box-shadow:0 1px 3px #bf710044}
+#software-body tr.software-news-row>td{background:#fff3dc}
+#software-body tr.software-news-row>td:first-child{box-shadow:inset 4px 0 #f28c00}
+#software-body tr.software-news-row td:first-child strong{font-weight:900}.margin-top{margin-top:18px}.topics{font-size:14px;line-height:2;color:#35536a}.hardware-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.hardware-card{background:white;border:1px solid var(--line);padding:25px;min-height:225px}.hardware-card.accent{border-top:4px solid #b9915d}.hardware-card h3{font:700 25px Georgia,serif;margin:15px 0 9px}.hardware-card p{font-size:13px;color:#667782;min-height:72px}.footerinner{display:flex;justify-content:space-between;gap:25px;align-items:center}.footerinner p{margin:4px 0 0}.footerinner>div:last-child{text-align:right}.footerinner span{display:block}footer{background:#091e2f;color:#9eb5c5;padding:32px 0;font-size:11px}footer strong{color:#e4f0f7;letter-spacing:.12em}.loading{color:#8c9ba6;font-size:13px}.error{border-left:4px solid #d68c7a;background:#fff2ef;padding:13px 17px;color:#8b4b3f;font-size:12px;margin-bottom:15px}@media(max-width:1030px){.hero{grid-template-columns:1.4fr 1fr}.hero-content{padding:40px 30px}.tile-grid{grid-template-columns:repeat(2,1fr)}.hardware-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:720px){.shell{width:min(100% - 30px,1260px)}.topinner{font-size:9px}.topinner span:last-child{display:none}.masthead{padding:20px 0;align-items:start}.brandmark{display:none}.brand h1{font-size:31px}.strap{font-size:10px}.edition{min-width:auto;padding-left:10px}.edition strong{font-size:10px}.edition small{font-size:9px}.edition span{font-size:9px}.navbtn{padding:11px 13px}.hero{grid-template-columns:1fr}.hero-main{min-height:340px}.hero-content{padding:36px 25px}.hero h2{font-size:38px}.hero-side{padding:22px}.tile-grid,.split-grid,.news-grid,.hardware-grid{grid-template-columns:1fr}.tile{min-height:160px}.pagehead{align-items:start;flex-direction:column}.pagehead h2{font-size:33px}.pagehead-tag{white-space:normal}.metrics{grid-template-columns:repeat(3,1fr)}.metrics strong{font-size:19px}.metrics span{font-size:10px}.weather-item{grid-template-columns:26px 31px 1fr;gap:8px;padding:12px}.weather-score{grid-column:3;text-align:left}.footerinner{flex-direction:column;align-items:start}.footerinner>div:last-child{text-align:left}.health-grid{grid-template-columns:1fr 1fr}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+
+/* Navigation persistante, retour visible et carte personnelle */
+.nav-wrap{position:sticky;top:0;z-index:100;background:var(--navy);box-shadow:0 4px 15px rgba(7,27,44,.2);border-bottom:3px solid var(--gold)}
+.nav-wrap .nav{scrollbar-width:thin}
+.floating-home{position:fixed;right:22px;bottom:22px;z-index:150;border:1px solid #9ab4c7;background:#102d43;color:white;box-shadow:0 6px 22px rgba(0,0,0,.25);padding:12px 17px;border-radius:30px;font-weight:800;font-size:13px}
+.floating-home:hover{background:#20506e}
+.airport-actions{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0 34px}
+.airport-actions button{border:1px solid #b8cbd7;background:#fff;color:#1a4c6b;padding:11px 16px;font-size:13px;font-weight:800;border-radius:4px}
+.airport-actions button:hover{background:#e9f2f7}
+.map-section{border-top:1px solid #cbd7df;padding-top:28px;margin-top:25px}
+.map-section h3{font:700 29px Georgia,serif;margin:8px 0 18px}
+.map-box{border:1px solid #b9cad6;min-height:700px;background:#edf2f5}
+.map-box iframe{display:block;width:100%;height:1020px;border:0}
+.map-placeholder{padding:65px 25px;text-align:center;color:#3d596e}
+.map-placeholder strong{font:700 26px Georgia,serif;color:#173d56}
+.map-placeholder p{max-width:550px;margin:14px auto;font-size:14px}
+.map-caption{margin:0;padding:10px 15px;background:white;font-size:13px}
+@media(max-width:720px){.floating-home{right:12px;bottom:12px;padding:10px 14px}.map-box iframe{height:760px}.nav-wrap .nav{width:100%;padding-left:10px;padding-right:10px}.airport-actions{flex-direction:column}.airport-actions button{width:100%}}
+
+
+/* Horodatage visible sur l'accueil et pictogrammes éditoriaux uniformes */
+.freshness-banner{display:flex;align-items:center;gap:17px;background:#fff;border:1px solid #dce5eb;border-left:4px solid var(--gold);padding:17px 21px;margin:0 0 19px;border-radius:4px}
+.freshness-symbol{display:grid;place-items:center;width:44px;height:44px;flex:0 0 44px;border-radius:50%;background:#eaf2f7;color:#225c80;font-size:26px;font-weight:800}
+.freshness-content{display:flex;flex-direction:column;gap:2px;min-width:0}
+.freshness-label,.freshness-editorial span{font-size:10px;letter-spacing:.11em;font-weight:900;color:#698196}
+.freshness-content strong{font-size:18px;font-weight:850;color:#123a55;line-height:1.3}
+.freshness-content small{font-size:11px;color:#71838e}
+.freshness-editorial{margin-left:auto;padding-left:20px;border-left:1px solid #dce5eb;display:flex;flex-direction:column;gap:4px;min-width:175px}
+.freshness-editorial strong{font-size:13px;color:#375f78}
+.topic-icon{display:inline-grid;place-items:center;flex:0 0 42px;width:42px;height:42px;min-width:42px;min-height:42px;max-width:42px;max-height:42px;line-height:1;border-radius:8px;font:900 13px/1 Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:-.035em;border:1px solid rgba(255,255,255,.14);color:#fff;vertical-align:middle;text-align:center}
+.topic-si{background:#5c4d93}
+.topic-mf{background:#238479}
+.topic-msfs{background:#226eaa}
+.topic-fenix{background:#253c64}
+.topic-winctrl{background:#8b603d}
+.topic-gsx{background:#497c4d}
+.topic-atc{background:#507e98}
+.topic-weather{background:#46869b}
+.topic-hardware{background:#665d8c}
+.topic-generic{background:#5a7387}
+.priority li{display:flex;align-items:center;gap:10px}
+.priority li .topic-icon{flex-basis:42px}
+.news-heading{display:flex;align-items:center;gap:13px}
+.news-heading h3{margin:0;min-width:0}
+.news-heading .topic-icon{align-self:flex-start}
+.home-news article{position:relative}
+.home-news .home-news-row{display:flex;align-items:flex-start;gap:12px}
+.home-news .home-news-content{display:flex;flex-direction:column;gap:5px;min-width:0}
+.hardware-heading{display:flex;align-items:center;gap:12px;margin:14px 0 9px}
+.hardware-heading h3{margin:0;font-size:22px}
+.hardware-card .topic-icon{flex-shrink:0}
+@media(max-width:720px){
+  .freshness-banner{align-items:flex-start;gap:11px;padding:13px 14px;flex-wrap:wrap}
+  .freshness-content strong{font-size:16px}
+  .freshness-editorial{margin-left:55px;padding:8px 0 0;border-left:0;border-top:1px solid #e5edf2;min-width:calc(100% - 55px)}
+  .topic-icon{flex:0 0 42px}
+}
+
+
+/* Icônes éditoriales vectorielles : toutes au même format, sans badge alphabétique. */
+.topic-icon{background:transparent!important;border:0!important;border-radius:9px;overflow:hidden;box-shadow:0 2px 6px rgba(12,33,49,.12);line-height:0;flex-shrink:0}
+.topic-icon img{display:block;width:42px;height:42px;max-width:100%;max-height:100%;object-fit:contain;border-radius:9px}
+.tile .topic-icon{margin:2px 0 3px}
+.news-heading .topic-icon,.home-news-row .topic-icon{margin-top:2px}
+.hardware-heading .topic-icon{margin:0}
+
+
+/* Collection des marques originales, harmonisée comme des miniatures éditoriales.
+   Les logos des éditeurs restent intacts ; seul le cadre, le cadrage et la taille changent. */
+.topic-icon{
+  box-sizing:border-box;
+  width:42px!important;height:42px!important;
+  min-width:42px!important;min-height:42px!important;
+  max-width:42px!important;max-height:42px!important;
+  padding:3px!important;
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  background:linear-gradient(155deg,#28465e 0%,#0a2031 100%)!important;
+  border:1px solid rgba(187,207,219,.55)!important;
+  border-radius:9px!important;
+  box-shadow:0 2px 7px rgba(12,35,51,.19),inset 0 1px 0 rgba(255,255,255,.14)!important;
+  overflow:hidden!important;
+}
+.topic-icon img{
+  display:block!important;
+  width:100%!important;height:100%!important;
+  object-fit:contain!important;
+  border-radius:5px!important;
+  background:transparent;
+}
+.topic-icon.brand-original img{background:#f7f9fc}
+.topic-icon.topic-mf.brand-original img{background:#3366cc}
+.topic-icon.topic-winctrl.brand-original img,
+.topic-icon.topic-gsx.brand-original img{background:#090b0f;object-fit:cover!important}
+.topic-icon.topic-si.brand-original img{object-fit:cover!important;object-position:50% 37%;transform:scale(1.23)}
+.topic-icon.topic-msfs.brand-original img{transform:scale(1.08)}
+.topic-icon.topic-winctrl.brand-original img{transform:scale(2.05)}
+.topic-icon.topic-gsx.brand-original img{transform:scale(1.12)}
+
+
+/* Surveillance quotidienne des sources : compact, vérifiable, sans fausses annonces */
+.watch-panel{margin-top:22px;padding:22px 24px;background:#fff;border:1px solid #d9e2e8;border-radius:9px}
+.watch-panel h3{margin:4px 0 9px;color:#17384f;font:700 24px Georgia,serif}
+.watch-intro{font-size:13px;color:#5d7586;margin:0 0 14px;line-height:1.5}
+.watch-kpis{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.watch-kpis span{padding:7px 11px;background:#eef3f6;border-radius:6px;font-size:12px;font-weight:700;color:#274a61}
+.watch-kpis strong{font-size:16px;color:#102f43}
+.watch-panel details{border-top:1px solid #e0e9ee;margin-top:15px;padding-top:15px}
+.watch-panel summary{cursor:pointer;font-weight:800;color:#235b79;font-size:14px}
+.watch-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px;margin-top:14px}
+.watch-source{display:flex;gap:9px;align-items:center;padding:10px 11px;border:1px solid #e3eaf0;border-radius:7px;min-width:0}
+.watch-source a{font-size:12px;font-weight:700;line-height:1.3;color:#214f6b;text-decoration:none}
+.watch-source small{display:block;color:#687e8c;font-size:10px;margin-top:4px}
+.watch-pill{display:inline-block;flex:0 0 auto;border-radius:4px;padding:4px 6px;font-size:9px;letter-spacing:.03em;font-weight:900;background:#e3eef3;color:#275b74}
+.watch-pill.changed{background:#fff1d6;color:#805400}
+.watch-pill.restricted{background:#f4e6ed;color:#864766}
+.watch-pill.unavailable{background:#e9e9eb;color:#60606a}
+.watch-changes{margin:10px 0 0;font-size:12px;color:#435e70}
+@media(max-width:700px){.watch-panel{padding:15px}.watch-list{grid-template-columns:1fr}}
+
+
+/* Bilan éditorial quotidien des versions de scènes, avant les filtres */
+.airport-update-digest{border:1px solid #c7d8e3;background:linear-gradient(160deg,#f8fbfd,#edf5f8);padding:21px 23px;margin:17px 0 23px;border-radius:9px}
+.airport-update-head h3{font:700 23px Georgia,serif;color:#123a53;margin:7px 0 7px}
+.airport-update-head p{font-size:12px;color:#516e80;line-height:1.5;margin:0 0 10px}
+.airport-update-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:9px;list-style:none;padding:0;margin:13px 0}
+.airport-update-list li{display:flex;align-items:flex-start;gap:10px;border:1px solid #d6e3ea;background:#fff;padding:12px 14px;border-radius:7px}
+.airport-update-code{font:800 12px monospace;color:#135b7b;background:#e5f2f8;border-radius:4px;padding:5px;flex:0 0 auto}
+.airport-update-list strong{font-size:12px;color:#1a4058;display:block;line-height:1.35}
+.airport-update-list small{font-size:11px;color:#577182;display:block;margin-top:4px;line-height:1.5}
+.airport-update-list a{color:#146487;font-weight:700}
+.airport-update-empty{font-size:13px;color:#617c8b}
+.airport-update-digest details{margin-top:10px;border-top:1px solid #d4e2ea;padding-top:10px}
+.airport-update-digest summary{font-size:12px;font-weight:700;color:#385f75;cursor:pointer}
+@media(max-width:720px){.airport-update-digest{padding:14px}.airport-update-list{grid-template-columns:1fr}}
+
+.source-note{display:block;margin-top:5px;color:#7b5260;font-size:10px;line-height:1.4;max-width:340px}
+
+
+/* Inventaire matériel photographique et suivi des versions logicielles */
+.hardware-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:18px;margin:24px 0 28px}
+.hardware-device{display:flex;flex-direction:column;gap:10px;min-width:0;overflow:hidden}
+.hardware-device h3{font-size:19px;line-height:1.25;margin:0}
+.hardware-device p{flex:1;font-size:13px;line-height:1.5;margin:0}
+.hardware-image{height:174px;border-radius:10px;background:linear-gradient(145deg,#152a3c,#243b4d);display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:8px}
+.hardware-photo{width:100%;height:100%;object-fit:contain;background:#e6e9e9;padding:7px}
+.hardware-no-photo{padding:20px;text-align:center;font-size:12px;color:#d6e0e8}
+.hardware-card-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.hardware-card-bottom a,.photo-credit{font-size:11px}
+.photo-credit{opacity:.65}
+.software-overview{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;padding:18px 22px;background:#102b3d;color:#f6f9fc;border-radius:12px;margin:18px 0}
+.software-overview strong{font-size:20px}.software-overview span{font-size:14px}.software-overview small{font-size:12px;opacity:.75}
+.software-controls{display:flex;gap:16px;align-items:end;flex-wrap:wrap;margin:16px 0}
+.software-controls label{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:700}
+.software-controls input,.software-controls select{padding:10px 12px;border:1px solid #b7c6d0;border-radius:8px;min-height:42px;min-width:220px;background:#fff;color:#18344b}
+.software-table .tablebox,.software-table{max-height:none}
+.software-table td small{display:block;margin-top:5px;font-size:11px;line-height:1.35}
+.software-table td strong{font-size:13px}
+.nav-news{background:#d57c20;color:white;border-radius:5px;font-size:9px;padding:3px 5px;margin-left:4px;font-weight:900}
+.nav-news[hidden]{display:none!important}
+@media(max-width:720px){.hardware-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.hardware-image{height:132px}.hardware-device{padding:10px}.software-overview{align-items:start;flex-direction:column;gap:8px}.software-table{overflow-x:auto}}
+@media(max-width:410px){.hardware-gallery{grid-template-columns:1fr}.hardware-image{height:200px}}
+
+.changelog-details{margin:10px 0;border-top:1px solid rgba(110,130,150,.25);padding-top:10px}.changelog-details summary{cursor:pointer;font-size:12px;font-weight:800}.changelog-details p{white-space:pre-wrap;line-height:1.55;max-height:320px;overflow:auto;font-size:12px}
+
+/* Profil Gate 404 — identité visuelle inspirée du portail SayIntentions */
+#sayintentions-career{background:#151513;color:#eeeae2;border:1px solid #53514c;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.16);overflow:hidden;padding:0}
+#sayintentions-career .sectionbar{background:#2a2927;border-bottom:1px solid #565044;margin:0;padding:16px 22px}
+#sayintentions-career .overline{color:#d7a843;letter-spacing:.16em;font-weight:800}
+#sayintentions-career h2{color:#f0b93f;font-family:inherit;font-size:clamp(20px,2.5vw,27px);font-weight:800;margin:4px 0}
+#sayintentions-career-data{padding:20px 22px 22px}
+#sayintentions-career-data .tile-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+#sayintentions-career-data .tile-grid>div{background:#252522;border:1px solid #3b3a35;border-radius:9px;padding:20px 10px;text-align:center;min-width:0}
+#sayintentions-career-data .tile-grid small{display:block;color:#aaa8a2;letter-spacing:.07em;font-size:11px;font-weight:800;text-transform:uppercase;margin:0 0 9px}
+#sayintentions-career-data .tile-grid h3{color:#f7f4eb;font-family:inherit;font-size:clamp(18px,2vw,26px);font-weight:800;line-height:1.22;margin:0;overflow-wrap:anywhere}
+#sayintentions-career-data .tile-grid>div:first-child h3{color:#f1c15c;font-size:clamp(15px,1.65vw,22px)}
+#sayintentions-career-data .fineprint{color:#aaa9a4;margin:15px 0 0;line-height:1.55}
+#sayintentions-career a{color:#e4b552;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){#sayintentions-career-data .tile-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){#sayintentions-career-data .tile-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}#sayintentions-career .sectionbar{padding:14px}#sayintentions-career-data{padding:12px}#sayintentions-career-data .tile-grid>div{padding:14px 8px}}
+
+#sayintentions-career-data .si-rank-line{display:flex;align-items:center;justify-content:center;gap:10px;min-height:48px}
+#sayintentions-career-data .si-rank-badge{width:45px;height:55px;object-fit:contain;flex-shrink:0;border-radius:6px}
+@media(max-width:560px){#sayintentions-career-data .si-rank-line{flex-direction:column;gap:5px}}
+
+#sayintentions-career .si-flights{margin-top:23px;border:1px solid #49453b;border-radius:9px;overflow:hidden;background:#191917}
+#sayintentions-career .si-flights-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#302e29;padding:13px 17px;flex-wrap:wrap}
+#sayintentions-career .si-flights-heading h3{font-family:inherit;color:#edba4a;font-size:16px;margin:0;font-weight:800}
+#sayintentions-career .si-flights-heading a{font-size:12px}
+#sayintentions-career .si-flights-scroll{overflow-x:auto;width:100%}
+#sayintentions-career .si-flights table{width:100%;border-collapse:collapse;min-width:690px;font-size:13px}
+#sayintentions-career .si-flights th{background:#121210;color:#a9a7a1;text-align:left;font-size:11px;padding:12px 14px;font-weight:800;white-space:nowrap}
+#sayintentions-career .si-flights td{padding:12px 14px;color:#ddd9d1;border-top:1px solid #34332e;white-space:nowrap}
+#sayintentions-career .si-flights tbody tr:nth-child(even){background:#22221f}
+#sayintentions-career .si-flights td:first-child strong{color:#e8b54d}
+#sayintentions-career .si-flight-rules{background:#137f99;color:#eafaff;border-radius:5px;padding:3px 7px;font-size:11px;font-weight:800}
+#sayintentions-career .si-flights>.fineprint{padding:0 16px 13px}
+
+#airport-leaflet-map{height:690px;width:100%;z-index:1}.airport-pin{background:transparent;border:0}.airport-pin svg{filter:drop-shadow(0 2px 3px #0005)}.leaflet-popup-content{max-height:360px;overflow:auto}.leaflet-popup-content p{border-top:1px solid #ddd;padding-top:5px}
+
+/* AIRAC en tête ; OLD discret pour les informations de plus d'une semaine. */
+.airac-banner{padding:12px 16px;margin:12px 0 20px;background:#10283b;color:#f7f9fc;border-left:4px solid #c6a073;border-radius:5px;font-size:14px}
+.old-tag{display:inline-block;margin-left:8px;padding:2px 6px;border-radius:4px;background:#596579;color:white;font-size:10px;font-weight:800;letter-spacing:.07em}
+.news-old{opacity:.78;border-left:3px solid #69788a}
+
+/* Flash info compact : maximum deux lignes, avec icônes de rubrique. */
+.hero-news-summary{display:flex;flex-direction:column;gap:4px;margin:12px 0;max-height:none;overflow:visible}
+.hero-news-item{display:flex;align-items:flex-start;gap:7px;min-width:0;line-height:1.4;font-size:12px;color:#e9f3fa}
+.hero-news-item>span:last-child{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;white-space:normal}
+.hero-news-item .topic-icon{flex:0 0 20px;width:20px;height:20px;min-width:20px}
+.hero-news-item .topic-icon img{width:20px;height:20px;object-fit:contain}
+.hero-news-empty{font-size:12px;color:#c6d7e6}
+
+/* Voyant compact d'état de publication GitHub Actions */
+.top-status-wrap{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+.build-status{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:.04em;text-decoration:none;color:inherit;white-space:nowrap;opacity:.95}
+.build-status:hover{text-decoration:underline}
+.build-status-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#8c97a3;box-shadow:0 0 0 2px rgba(140,151,163,.14);flex:none}
+.build-status-ok .build-status-dot{background:#36c981;box-shadow:0 0 0 2px rgba(54,201,129,.18)}
+.build-status-running .build-status-dot{background:#ffb347;box-shadow:0 0 0 2px rgba(255,179,71,.18);animation:build-pulse 1.6s ease-in-out infinite}
+.build-status-error .build-status-dot{background:#f25f64;box-shadow:0 0 0 2px rgba(242,95,100,.18)}
+@keyframes build-pulse{50%{opacity:.4}}
+@media(max-width:700px){.top-status-wrap{gap:6px}.build-status{font-size:9px}}
+
+/* Carte des aéroports : commande plein écran */
+#google-map{position:relative}
+#google-map .map-fullscreen-button{position:static;display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;margin:8px 8px 8px 0;min-height:42px;z-index:auto;background:#fff;color:#202b3a;border:1px solid #adb7c3;border-radius:6px;padding:9px 12px;font:600 13px system-ui,sans-serif;cursor:pointer;box-shadow:0 2px 8px #0003;touch-action:manipulation}
+#google-map:fullscreen,#google-map.map-fullscreen-fallback{background:#111;display:flex;flex-direction:column;padding:0;margin:0;width:100%;height:100%;}
+#google-map:fullscreen #airport-leaflet-map,#google-map.map-fullscreen-fallback #airport-leaflet-map{flex:1;min-height:0;height:100%!important;width:100%}
+#google-map:fullscreen .map-caption,#google-map.map-fullscreen-fallback .map-caption{display:none}
+#google-map.map-fullscreen-fallback{position:fixed!important;inset:0!important;width:100vw!important;height:100dvh!important;z-index:99999!important}
+
+/* Repère discret des aéroports possédant plusieurs scènes */
+.duplicate-badge{display:block;width:max-content;max-width:100%;margin-top:5px;padding:3px 5px;border:1px solid #bf7c0d;border-radius:5px;background:#ffbf4c;color:#171f2a;font-size:9px;line-height:1.2;font-weight:900;letter-spacing:.015em;white-space:nowrap}
+
+.heliport-badge{display:block;width:max-content;max-width:100%;margin-top:5px;padding:3px 6px;border:1px solid #357b8d;border-radius:5px;background:#e1f4f8;color:#15546a;font-size:9px;line-height:1.2;font-weight:900;letter-spacing:.02em;white-space:nowrap}
+
+/* Description Excel : icône discrète sans nouvelle colonne ni hauteur de ligne. */
+.airport-description-info{display:inline;color:#6da9c5;cursor:help;font-size:13px;vertical-align:baseline;white-space:nowrap}
+.airport-description-info:focus{outline:2px solid #6da9c5;border-radius:3px}
+.airport-popup-thumbnail{display:block;width:260px;max-width:100%;aspect-ratio:16/9;object-fit:contain;background:#edf0f3;border-radius:6px;margin-bottom:7px}
+.airport-popup-description{display:inline-block;margin-top:5px;white-space:pre-wrap;overflow-wrap:anywhere;max-width:260px}
+
+/* Bouton commentaire compatible tactile iPad, sans modifier les dimensions du tableau. */
+button.airport-description-info{border:0;background:transparent;padding:0 3px;margin:0;line-height:1;font:inherit;color:#417c9a;cursor:pointer;vertical-align:baseline}
+
+/* Commentaire tactile dans la cellule : panneau superposé sans agrandir la liste. */
+.airport-comment-popover{position:absolute;z-index:2000;max-width:min(330px,80vw);padding:12px 34px 12px 12px;background:#fff;color:#1c3445;border:1px solid #9bb4c5;border-radius:7px;box-shadow:0 4px 16px #0004;white-space:normal;overflow-wrap:anywhere;font-size:13px;line-height:1.45}
+.airport-comment-popover button{position:absolute;top:2px;right:5px;background:transparent;border:0;color:#1c3445;font-size:22px;cursor:pointer}
+
+/* Accès direct tactile à la carte depuis chaque scène, sans colonne supplémentaire. */
+button.airport-map-eye{display:inline-block;border:0;background:transparent;color:#5ba6c9;cursor:pointer;font-size:15px;line-height:1;padding:3px 5px;margin-left:2px;vertical-align:baseline;touch-action:manipulation}
+button.airport-map-eye:focus-visible{outline:2px solid #5ba6c9;border-radius:4px}
+
+/* Raccourcis vers les boutiques depuis la carte des aéroports */
+.airport-shop-popup{min-width:195px}.airport-shop-popup p{margin:8px 0}.airport-shop-popup a{display:block;padding:9px 10px;margin:4px 0;border-radius:6px;background:#eaf2f7;color:#143c56;text-decoration:none;font-weight:650}.airport-shop-popup a:focus-visible{outline:2px solid #3179a4}
+
+/* iPad Safari : ne pas sélectionner les tuiles et libellés de la carte lors d'un appui long. */
+#airport-leaflet-map,#airport-leaflet-map .leaflet-container,#airport-leaflet-map .leaflet-tile-pane,#airport-leaflet-map .leaflet-marker-pane{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+#airport-leaflet-map .leaflet-popup-content,#airport-leaflet-map .leaflet-popup-content a{-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}
+
+/* Accès au comparateur depuis les doublons du tableau */
+.airport-compare-link{display:inline-block;margin:5px 0 2px 5px;padding:4px 8px;border:1px solid #6fa8c4;border-radius:6px;color:#b8e8ff;background:#17415a;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap}.airport-compare-link:hover,.airport-compare-link:focus-visible{background:#275e7b;color:#fff}
+
+/* Qualité reste aligné au bord droit de la barre sur grand écran. */
+@media(min-width:1100px){.nav-wrap .nav{width:100%;max-width:none;padding-left:max(20px,calc((100vw - 1260px)/2));padding-right:0}.nav-wrap .nav-quality{margin-left:auto}}
+
+/* NEWS Navigraph AIRAC : signal fort pendant trois jours après publication. */
+.home-news article.home-airac-news{background:#fff0f0;border-left:5px solid #c92332;padding:12px 14px;border-radius:5px}
+.home-airac-news .home-news-content strong{color:#a91626}
+.airac-news-label{display:inline-block;background:#c92332;color:#fff;border-radius:3px;padding:2px 6px;margin-left:6px;font-size:10px;font-weight:900;letter-spacing:.04em}
+
+/* Priorité au rouge pour les badges AIRAC, même si .new-tag est vert par défaut. */
+.new-tag.airac-red-news,.home-news .new-tag.airac-red-news{background:#c92332!important;color:#fff!important;border:1px solid #9d1524}
+
+/* WINCTRL Airbus : prix datés, sources d'annonce et visuels exacts. */
+.hardware-fact{font-size:12px;line-height:1.45;padding:3px 0;border-bottom:1px solid var(--line,#dfe4e7)}
+.hardware-fact small{display:inline;font-size:11px;color:#657587}
+.hardware-news-entry{min-width:0;overflow:hidden}
+.hardware-news-entry .news-card{height:auto}
+.hardware-news-photo{width:100%;height:170px;object-fit:contain;background:#edf1f4;border:1px solid var(--line,#dfe4e7);border-radius:5px;margin:0 0 7px}
+
+/* Garantir la disparition du badge AIRAC à l'expiration des 72 heures. */
+#airac-home-news[hidden]{display:none!important}
+
+/* Pays affiché discrètement sur la même ligne que le nom de l'aéroport. */
+.airport-country-inline{font-size:.8em;font-weight:400;color:#718096;white-space:nowrap}
+
+/* Bulle de commentaire iPad : superposition fixe hors du tableau scrollable. */
+#airport-comment-popover{position:fixed;z-index:99999;box-sizing:border-box;width:max-content;max-width:min(330px,calc(100vw - 16px));touch-action:manipulation}
+button.airport-description-info{touch-action:manipulation;min-width:26px;min-height:26px}
+
+/* Accès direct visible et tactile dans les bulles Leaflet, sans modifier le tableau. */
+.leaflet-popup-content .airport-popup-link{display:inline-block;margin-top:8px;padding:9px 12px;min-height:24px;background:#143b54;color:#fff!important;border-radius:7px;font-weight:700;text-decoration:none;touch-action:manipulation}
+.leaflet-popup-content .airport-popup-link:focus-visible{outline:3px solid #f39b27;outline-offset:2px}
+
+/* Accès tactile compact aux pages de webcams, sans modifier la hauteur des lignes METAR. */
+.weather-webcam-link{display:inline-flex;align-items:center;justify-content:center;vertical-align:baseline;font-size:15px;line-height:1;text-decoration:none;margin-left:5px;min-width:23px;min-height:23px;touch-action:manipulation;border-radius:5px}
+.weather-webcam-link:focus-visible{outline:2px solid #257eb4;outline-offset:2px}
+
+/* Couche indépendante des aéroports à acheter : masquée par défaut. */
+.map-shopping-toggle{display:inline-flex;align-items:center;gap:6px;margin:8px 8px 8px 0;padding:8px 13px;border:1px solid #2984cb;border-radius:9px;background:#e7f4ff;color:#075c9b;font-weight:700;cursor:pointer;min-height:42px;touch-action:manipulation}
+.map-shopping-toggle[aria-pressed="true"]{background:#1265b6;color:#fff}
+.map-shopping-toggle:focus-visible{outline:3px solid #ffbe31;outline-offset:2px}
+.shopping-bag-pin{display:flex;align-items:center;justify-content:center;border:2px solid #fff;border-radius:11px;background:#1178e4;color:#fff;box-shadow:0 2px 7px #0006;width:31px;height:31px;font-size:20px}
+
+#google-map:fullscreen .map-fullscreen-button,#google-map.map-fullscreen-fallback .map-fullscreen-button{align-self:flex-start;flex-shrink:0;margin:8px}
+
+/* Navigation rapide par fabricant dans la page Matériel. */
+.hardware-jump-nav{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 24px}
+.hardware-jump-nav a{display:inline-flex;align-items:center;gap:7px;padding:10px 14px;border:1px solid #4387b6;border-radius:9px;text-decoration:none;font-weight:700;min-height:44px}
+.hardware-jump-nav a:hover,.hardware-jump-nav a:focus-visible{background:#176aa5;color:white;outline-offset:3px}
+#hardware-my,#hardware-winctrl,#hardware-rtr,#hardware-s3{scroll-margin-top:90px}
+.hardware-section-heading{margin:22px 0 14px}
+[data-hardware-news][hidden]{display:none!important}
