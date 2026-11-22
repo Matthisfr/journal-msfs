@@ -298,6 +298,14 @@ async function load(){
 
  }catch(e){el.innerHTML='<p class="error">'+safe(e.message)+'</p>'}finally{loading=false}
 }
+document.addEventListener('msfs:show-simbrief-on-weather-map',e=>{
+ const orig=String(e.detail?.origin||'').trim().toUpperCase(),dest=String(e.detail?.destination||'').trim().toUpperCase();
+ if(!/^[A-Z]{4}$/.test(orig)||!/^[A-Z]{4}$/.test(dest))return;
+ for(const [id,code] of [['simbrief-departure',orig],['simbrief-arrival',dest]]){
+  const input=$(id);if(input){input.value=code;input.dispatchEvent(new Event('input',{bubbles:true}))}
+ }
+ load().then(()=>{map?.invalidateSize();updateFlightRange();$('weather-map-shell')?.scrollIntoView({block:'center',behavior:'smooth'})});
+});
 document.addEventListener('click',e=>{if(e.target.closest('[data-view="meteo"],[data-goto="meteo"]'))setTimeout(()=>{load();map?.invalidateSize()},120)});
 window.addEventListener('hashchange',()=>{if(location.hash==='#meteo')setTimeout(()=>{load();map?.invalidateSize()},120)});
 document.addEventListener('DOMContentLoaded',()=>{if(location.hash==='#meteo')setTimeout(load,250)});
