@@ -100,7 +100,7 @@ function applyFilters(){
 document.addEventListener('change',e=>{if(e.target.closest('#wx-filters'))applyFilters()});
 document.addEventListener('click',e=>{if(e.target.closest('#wx-reset')){document.querySelectorAll('#wx-filters input[type=checkbox]').forEach(x=>x.checked=true);applyFilters()}});
 
-// Modèle exploratoire A320, calibrage provisoire sur LFMN–EGPK (SimBrief 2 h 50).
+// Modèle exploratoire A320 non calibré sur des OFP SimBrief. Temps bloc indicatif.
 const RANGE_CRUISE_KT=420;
 const RANGE_NONCRUISE_MIN=40;
 const RANGE_ROUTE_FACTOR=1.08;
@@ -126,11 +126,13 @@ function updateFlightRange(){
   const dist=haversineNm(a,b);
   if(map){routeLine=L.polyline([a,b],{color:'#20b6f3',weight:3,dashArray:'8 6'}).addTo(map);map.fitBounds(routeLine.getBounds(),{padding:[60,60],maxZoom:7})}
   const estimate=minutesForDistance(dist);
-  info.textContent=orig+' → '+dest+' : '+Math.round(dist).toLocaleString('fr-FR')+' NM à vol d’oiseau · durée bloc A320 estimée : '+Math.floor(estimate/60)+' h '+String(estimate%60).padStart(2,'0')+' min (estimation exploratoire, non calcul SimBrief).';
+  const fmt=m=>Math.floor(m/60)+' h '+String(m%60).padStart(2,'0');
+  const uncertainty=Math.max(15,Math.round(estimate*.12));
+  info.textContent=orig+' → '+dest+' : '+Math.round(dist).toLocaleString('fr-FR')+' NM à vol d’oiseau · temps bloc A320 indicatif : '+fmt(estimate)+' (fourchette '+fmt(Math.max(0,estimate-uncertainty))+' à '+fmt(estimate+uncertainty)+'). Seul un OFP SimBrief donne une durée calculée pour la route et la météo.';
  }else if((a&&!dest)||(b&&!orig)){
   const center=a||b,icao=a?orig:dest;
   if(map){rangeCircle=L.circle(center,{radius:nm*1852,color:'#3bc5ff',weight:2,fillColor:'#2b9cda',fillOpacity:.12,interactive:false}).addTo(map);map.fitBounds(rangeCircle.getBounds(),{padding:[35,35],maxZoom:6})}
-  info.textContent='Distance atteignable estimée depuis '+icao+' : '+Math.round(nm).toLocaleString('fr-FR')+' NM ('+Math.round(nm*1.852).toLocaleString('fr-FR')+' km) pour '+Math.floor(minutes/60)+' h '+String(minutes%60).padStart(2,'0')+' min.';
+  info.textContent='Rayon indicatif depuis '+icao+' : '+Math.round(nm).toLocaleString('fr-FR')+' NM ('+Math.round(nm*1.852).toLocaleString('fr-FR')+' km) pour '+Math.floor(minutes/60)+' h '+String(minutes%60).padStart(2,'0')+' min de temps bloc. Prévoir une marge : le cercle ne garantit pas le temps réel.';
  }else if((orig&&!a)||(dest&&!b)){
   info.textContent='Coordonnées indisponibles pour '+[orig&&!a?orig:null,dest&&!b?dest:null].filter(Boolean).join(' et ')+'. Sélectionnez un aéroport présent sur la carte.';
  }else info.textContent='Choisissez un aéroport de départ ou d’arrivée sur la carte pour afficher la portée estimée.';
