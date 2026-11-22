@@ -1,6 +1,6 @@
 /* Carte météo des aéroports du Journal — observations réelles uniquement. */
 (()=>{'use strict';
-let map,layer,loading=false,rangeCircle=null,routeLine=null,coordinates={};const weatherMarkers=[];const missingMarkers=[];
+let map,layer,loading=false,rangeCircle=null,routeLine=null,routeTimeMarker=null,coordinates={};const weatherMarkers=[];const missingMarkers=[];
 const $=id=>document.getElementById(id);
 const ANIMATION_KEY='msfs-weather-icons-animated';
 function iconAnimationEnabled(){try{return localStorage.getItem(ANIMATION_KEY)!=='off'}catch{return true}}
@@ -133,6 +133,13 @@ function haversineNm(a,b){
  const h=Math.sin(dlat/2)**2+Math.cos(lat1)*Math.cos(lat2)*Math.sin(dlon/2)**2;
  return 3440.065*2*Math.asin(Math.min(1,Math.sqrt(h)));
 }
+function flightMidpoint(a,b){
+ const toRad=Math.PI/180,toDeg=180/Math.PI;
+ const v=([lat,lon])=>[Math.cos(lat*toRad)*Math.cos(lon*toRad),Math.cos(lat*toRad)*Math.sin(lon*toRad),Math.sin(lat*toRad)];
+ const x=v(a),y=v(b),m=x.map((n,i)=>n+y[i]),norm=Math.hypot(...m);
+ if(norm<1e-8)return [(a[0]+b[0])/2,(a[1]+b[1])/2];
+ return [Math.atan2(m[2],Math.hypot(m[0],m[1]))*toDeg,Math.atan2(m[1],m[0])*toDeg];
+}
 function updateAirportLabelColors(){
  const orig=$('simbrief-departure')?.value.trim().toUpperCase()||'';
  const dest=$('simbrief-arrival')?.value.trim().toUpperCase()||'';
@@ -156,10 +163,17 @@ function updateFlightRange(){
  if(!info)return;
  if(map&&rangeCircle){map.removeLayer(rangeCircle);rangeCircle=null}
  if(map&&routeLine){map.removeLayer(routeLine);routeLine=null}
+ if(map&&routeTimeMarker){map.removeLayer(routeTimeMarker);routeTimeMarker=null}
  const a=airportPoint(orig),b=airportPoint(dest);
  if(a&&b){
   const dist=haversineNm(a,b);
-  if(map){routeLine=L.polyline([a,b],{color:'#20b6f3',weight:3,dashArray:'8 6'}).addTo(map);map.fitBounds(routeLine.getBounds(),{padding:[60,60],maxZoom:7})}
+  if(map){
+   routeLine=L.polyline([a,b],{color:'#20b6f3',weight:3,dashArray:'8 6'}).addTo(map);
+   const duration=minutesForDistance(dist);
+   const label=Math.floor(duration/60)+' h '+String(duration%60).padStart(2,'0');
+   routeTimeMarker=L.marker(flightMidpoint(a,b),{interactive:false,keyboard:false,zIndexOffset:1000,icon:L.divIcon({className:'wx-route-time-marker',html:'<span class="wx-route-time-label" aria-label="Temps de vol estimé : '+label+'">'+label+'</span>',iconSize:[92,32],iconAnchor:[46,16]})}).addTo(map);
+   map.fitBounds(routeLine.getBounds(),{padding:[60,60],maxZoom:7});
+  }
   const estimate=minutesForDistance(dist);
   const fmt=m=>Math.floor(m/60)+' h '+String(m%60).padStart(2,'0');
   const uncertainty=Math.max(15,Math.round(estimate*.12));
