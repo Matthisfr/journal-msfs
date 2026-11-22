@@ -298,13 +298,44 @@ async function load(){
 
  }catch(e){el.innerHTML='<p class="error">'+safe(e.message)+'</p>'}finally{loading=false}
 }
+let lastFlightShown=false;
+async function toggleLastSimbriefFlight(){
+ const button=$('weather-last-flight-toggle'),status=$('weather-last-flight-status');
+ if(!button)return;
+ if(lastFlightShown){
+  lastFlightShown=false;
+  for(const id of ['simbrief-departure','simbrief-arrival']){const input=$(id);if(input){input.value='';input.dispatchEvent(new Event('input',{bubbles:true}))}}
+  button.textContent='👁 Voir le dernier vol';
+  button.setAttribute('aria-pressed','false');
+  if(status)status.textContent='';
+  return;
+ }
+ button.disabled=true;button.textContent='⏳ Chargement…';
+ try{
+  const response=await fetch('simbrief_last.json',{cache:'no-store'});
+  if(!response.ok)throw Error('Dernier OFP indisponible');
+  const data=await response.json();
+  const origin=String(data.origin?.icao||'').toUpperCase(),destination=String(data.destination?.icao||'').toUpperCase();
+  if(data.state!=='ok'||!/^[A-Z]{4}$/.test(origin)||!/^[A-Z]{4}$/.test(destination))throw Error('Dernier OFP incomplet');
+  for(const [id,code] of [['simbrief-departure',origin],['simbrief-arrival',destination]]){
+   const input=$(id);if(input){input.value=code;input.dispatchEvent(new Event('input',{bubbles:true}))}
+  }
+  await load();map?.invalidateSize();updateFlightRange();
+  lastFlightShown=true;button.textContent='👁 Masquer le dernier vol';button.setAttribute('aria-pressed','true');
+  if(status)status.textContent='';
+ }catch(error){
+  if(status)status.textContent='Dernier vol indisponible : '+String(error.message||error);
+  button.textContent='👁 Voir le dernier vol';
+ }finally{button.disabled=false}
+}
+document.addEventListener('click',e=>{if(e.target.closest('#weather-last-flight-toggle'))toggleLastSimbriefFlight()});
 document.addEventListener('msfs:show-simbrief-on-weather-map',e=>{
  const orig=String(e.detail?.origin||'').trim().toUpperCase(),dest=String(e.detail?.destination||'').trim().toUpperCase();
  if(!/^[A-Z]{4}$/.test(orig)||!/^[A-Z]{4}$/.test(dest))return;
  for(const [id,code] of [['simbrief-departure',orig],['simbrief-arrival',dest]]){
   const input=$(id);if(input){input.value=code;input.dispatchEvent(new Event('input',{bubbles:true}))}
  }
- load().then(()=>{map?.invalidateSize();updateFlightRange();$('weather-map-shell')?.scrollIntoView({block:'center',behavior:'smooth'})});
+ load().then(()=>{map?.invalidateSize();updateFlightRange();$('weather-map-shell')?.scrollIntoView({block:'center',behavior:'smooth'});lastFlightShown=true;const btn=$('weather-last-flight-toggle');if(btn){btn.textContent='👁 Masquer le dernier vol';btn.setAttribute('aria-pressed','true')}});
 });
 document.addEventListener('click',e=>{if(e.target.closest('[data-view="meteo"],[data-goto="meteo"]'))setTimeout(()=>{load();map?.invalidateSize()},120)});
 window.addEventListener('hashchange',()=>{if(location.hash==='#meteo')setTimeout(()=>{load();map?.invalidateSize()},120)});
