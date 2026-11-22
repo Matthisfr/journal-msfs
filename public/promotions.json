@@ -41,33 +41,17 @@
   },
   {
     "category": "Aéroport MSFS 2024",
-    "title": "LIPZ — Venise (Atelic)",
-    "detail": "9,09 € au lieu de 12,99 € (-30 %).",
-    "url": "https://secure.simmarket.com/promotions.php?promotions_id=8969"
-  },
-  {
-    "category": "Aéroport MSFS 2024",
-    "title": "LPMA — Madère (Atelic)",
-    "detail": "14,46 € au lieu de 20,65 € (-30 %).",
-    "url": "https://secure.simmarket.com/promotions.php?promotions_id=8969"
-  },
-  {
-    "category": "Aéroport MSFS 2024",
-    "title": "EDDL — Düsseldorf (JustSim NG)",
-    "detail": "13,19 € au lieu de 16,49 € (-20 %).",
-    "url": "https://secure.simmarket.com/promotions.php?promotions_id=8969"
-  },
-  {
-    "category": "Aéroport MSFS 2024",
     "title": "KJAC — Jackson Hole (Dreamflight)",
     "detail": "8,99 € au lieu de 14,99 € (-40 %).",
-    "url": "https://secure.simmarket.com/promotions.php?promotions_id=8972"
+    "url": "https://secure.simmarket.com/promotions.php?promotions_id=8972",
+    "owned": true
   },
   {
     "category": "Aéroport MSFS 2024",
     "title": "EKCH — Copenhague (SimNord)",
     "detail": "13,20 € au lieu de 17,60 € (-25 %).",
-    "url": "https://secure.simmarket.com/promotions.php?promotions_id=8986"
+    "url": "https://secure.simmarket.com/promotions.php?promotions_id=8986",
+    "owned": true
   },
   {
     "category": "MIP A320 — Fournisseur",
