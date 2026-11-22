@@ -746,24 +746,31 @@ if(simbriefDispatchForm)simbriefDispatchForm.addEventListener('submit',e=>{
   window.open('https://dispatch.simbrief.com/options/custom?'+params.toString(),'_blank','noopener,noreferrer');
 });
 async function loadSimbriefFlight(){
-  const el=$('#simbrief-flight-data'),button=$('#simbrief-refresh');
-  if(!el||!button)return;
-  button.disabled=true;el.textContent='Consultation du dernier OFP SimBrief…';
-  const url='https://www.simbrief.com/api/xml.fetcher.php?username=Matthis&client=journal-msfs&json=v2';
-  try{
-    const response=await fetch(url,{cache:'no-store'});
-    if(!response.ok)throw new Error('HTTP '+response.status);
-    const data=await response.json();
-    if(!data||!data.origin||!data.destination)throw new Error('Aucun OFP disponible');
-    const val=x=>esc(x||'—');
-    const origin=data.origin,dest=data.destination,g=data.general||{},aircraft=data.aircraft||{},times=data.times||{};
-    const generated=data.params?.time_generated||data.params?.time_generated_utc||'';
-    el.innerHTML='<div class="tile-grid"><div><small>DÉPART</small><h3>'+val(origin.icao_code)+'</h3><p>'+val(origin.name)+'</p></div><div><small>ARRIVÉE</small><h3>'+val(dest.icao_code)+'</h3><p>'+val(dest.name)+'</p></div><div><small>APPAREIL</small><h3>'+val(aircraft.icaocode||aircraft.name)+'</h3><p>'+val(g.flight_number||g.callsign)+'</p></div></div>'+
-      '<p><b>Route :</b> '+val(g.route)+' · <b>Altitude :</b> '+val(g.initial_altitude)+' · <b>Durée prévue :</b> '+val(times.est_time_enroute)+'</p>'+
-      '<p class="fineprint">Dernier OFP généré '+val(generated)+'. Ce document est un plan de vol, pas la preuve d’un vol effectué.</p>';
-  }catch(e){el.innerHTML='<p>Lecture automatique impossible depuis ce navigateur (compte introuvable, réseau ou restrictions SimBrief). <a href="https://dispatch.simbrief.com/" target="_blank" rel="noopener noreferrer">Ouvrir SimBrief ↗</a></p><small>'+esc(e.message)+'</small>';}
-  finally{button.disabled=false;}
+ const el=$('#simbrief-flight-data'),button=$('#simbrief-live-load'),state=$('#simbrief-live-status');
+ if(!el||!button)return;
+ button.disabled=true;button.textContent='⏳ Chargement…';
+ if(state){state.hidden=false;state.textContent='Interrogation de SimBrief en direct…';state.classList.remove('simbrief-live-error')}
+ try{
+  const response=await fetch('https://www.simbrief.com/api/xml.fetcher.php?username=Matthis&client=journal-msfs&json=v2',{cache:'no-store'});
+  if(!response.ok)throw new Error('HTTP '+response.status);
+  const d=await response.json();
+  const origin=d.origin||{},dest=d.destination||{},g=d.general||{},aircraft=d.aircraft||{},times=d.times||{};
+  const from=String(origin.icao_code||origin.icao||'').toUpperCase(),to=String(dest.icao_code||dest.icao||'').toUpperCase();
+  if(!/^[A-Z]{4}$/.test(from)||!/^[A-Z]{4}$/.test(to))throw new Error('Aucun OFP valide reçu');
+  const v=x=>esc(x??'—');
+  const rawDuration=times.est_time_enroute||times.est_block||'';
+  const duration=Number.isFinite(Number(rawDuration))&&String(rawDuration).trim()!==''?Math.floor(Number(rawDuration)/3600)+':'+String(Math.floor(Number(rawDuration)%3600/60)).padStart(2,'0'):String(rawDuration||'—');
+  const generated=d.params?.time_generated||d.params?.time_generated_utc||'';
+  el.innerHTML='<div class="tile-grid"><div><small>🛫 DÉPART</small><h3>'+v(from)+'</h3><p>'+v(origin.name)+'</p></div><div><small>🛬 ARRIVÉE</small><h3>'+v(to)+'</h3><p>'+v(dest.name)+'</p></div><div><small>✈ APPAREIL</small><h3>'+v(aircraft.icaocode||aircraft.name)+'</h3><p>'+v(g.flight_number||g.callsign)+'</p></div></div>'+
+  '<p><b>PLAN DE VOL :</b> '+v(g.route)+'</p><p><b>Altitude :</b> '+v(g.initial_altitude)+' · <b>Temps prévu :</b> '+v(duration)+'</p>'+
+  '<p class="fineprint">Dernier OFP interrogé directement sur SimBrief'+(generated?' · génération '+v(generated):'')+'. Planification, pas confirmation de vol effectué.</p>';
+  if(state){state.textContent='✓ Dernier OFP chargé directement depuis SimBrief.';state.classList.remove('simbrief-live-error')}
+ }catch(error){
+  console.warn('SimBrief direct indisponible',error);
+  if(state){state.textContent='Lecture directe indisponible (restriction réseau ou SimBrief). Le dernier plan affiché est conservé ; la collecte du Journal reste disponible.';state.classList.add('simbrief-live-error')}
+ }finally{button.disabled=false;button.textContent='↻ Charger le dernier vol'}
 }
+$('#simbrief-live-load')?.addEventListener('click',loadSimbriefFlight);
 // Le bouton Consulter SimBrief ouvre le service officiel : la lecture directe de l’API XML depuis GitHub Pages peut être bloquée par CORS.
 $('#simbrief-refresh')?.addEventListener('click',()=>{window.open('https://dispatch.simbrief.com/','_blank','noopener,noreferrer')});
 async function showPublishedSimbrief(){
