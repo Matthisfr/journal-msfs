@@ -110,7 +110,7 @@ function applyFilters(){
  const fc=new Set([...document.querySelectorAll('#wx-flight input:checked')].map(x=>x.value));
  layer.clearLayers();let shown=0;
  for(const x of weatherMarkers)if(fc.has(x.flight)&&x.kinds.some(k=>wx.has(k))){layer.addLayer(x.marker);shown++}
- if(wx.size===7&&fc.size===4)for(const marker of missingMarkers)layer.addLayer(marker);
+ if(wx.size===7&&fc.size===4)for(const item of missingMarkers)layer.addLayer(item.marker);
  const count=$('weather-map-count');if(count)count.textContent=shown+' stations affichées sur '+weatherMarkers.length+' METAR récents · '+missingMarkers.length+' sans METAR';
 }
 document.addEventListener('change',e=>{if(e.target.closest('#wx-filters'))applyFilters()});
