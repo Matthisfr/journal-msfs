@@ -10,7 +10,8 @@
       "url": "https://orbxdirect.com/product/drzewiecki-epra-msfs",
       "source": "Orbx",
       "compatibility": "MSFS 2024 confirmé",
-      "image": ""
+      "image": "",
+      "owned": false
     },
     {
       "type": "aeroport",
@@ -21,7 +22,8 @@
       "url": "https://orbxdirect.com/product/papadelta-epkk-msfs",
       "source": "Orbx",
       "compatibility": "MSFS 2024 confirmé",
-      "image": ""
+      "image": "",
+      "owned": true
     },
     {
       "type": "avion",
@@ -42,7 +44,8 @@
       "url": "https://secure.simmarket.com/propair-flight-ltd.-klrg-lincoln-regional-airport-msfs24.phtml",
       "source": "simMarket",
       "compatibility": "MSFS 2024",
-      "image": ""
+      "image": "",
+      "owned": false
     },
     {
       "type": "aeroport",
@@ -53,7 +56,8 @@
       "url": "https://secure.simmarket.com/aerosoft-airport-paderbornlippstadt-msfs2024-free.phtml",
       "source": "simMarket",
       "compatibility": "MSFS 2024",
-      "image": ""
+      "image": "",
+      "owned": true
     },
     {
       "type": "aeroport",
@@ -64,7 +68,8 @@
       "url": "https://secure.simmarket.com/inibuilds-inibuilds-milwaukee-mitchell-kmke-msfs-free.phtml",
       "source": "simMarket",
       "compatibility": "MSFS 2024",
-      "image": ""
+      "image": "",
+      "owned": true
     },
     {
       "type": "aeroport",
@@ -75,7 +80,8 @@
       "url": "https://secure.simmarket.com/fsformosa-rclg-shuinan-airport-taiwan-msfs.phtml",
       "source": "simMarket",
       "compatibility": "MSFS : compatibilité 2024 à confirmer",
-      "image": ""
+      "image": "",
+      "owned": false
     },
     {
       "type": "aeroport",
