@@ -1,6 +1,6 @@
 /* Carte météo des aéroports du Journal — observations réelles uniquement. */
 (()=>{'use strict';
-let map,layer,loading=false;const weatherMarkers=[];const missingMarkers=[];
+let map,layer,loading=false,rangeCircle=null,routeLine=null,coordinates={};const weatherMarkers=[];const missingMarkers=[];
 const $=id=>document.getElementById(id);
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function conditions(a){
@@ -99,6 +99,60 @@ function applyFilters(){
 }
 document.addEventListener('change',e=>{if(e.target.closest('#wx-filters'))applyFilters()});
 document.addEventListener('click',e=>{if(e.target.closest('#wx-reset')){document.querySelectorAll('#wx-filters input[type=checkbox]').forEach(x=>x.checked=true);applyFilters()}});
+
+const RANGE_SPEED_KT=430;
+function airportPoint(code){
+ const c=coordinates[String(code||'').trim().toUpperCase()];
+ return c&&Number.isFinite(Number(c.lat))&&Number.isFinite(Number(c.lon))?[Number(c.lat),Number(c.lon)]:null;
+}
+function haversineNm(a,b){
+ const rad=Math.PI/180,lat1=a[0]*rad,lat2=b[0]*rad,dlat=(b[0]-a[0])*rad,dlon=(b[1]-a[1])*rad;
+ const h=Math.sin(dlat/2)**2+Math.cos(lat1)*Math.cos(lat2)*Math.sin(dlon/2)**2;
+ return 3440.065*2*Math.asin(Math.min(1,Math.sqrt(h)));
+}
+function updateFlightRange(){
+ const info=$('flight-range-info'),orig=$('simbrief-departure')?.value.trim().toUpperCase()||'',dest=$('simbrief-arrival')?.value.trim().toUpperCase()||'';
+ const minutes=Number($('flight-duration')?.value||90),nm=RANGE_SPEED_KT*minutes/60;
+ if(!info)return;
+ if(map&&rangeCircle){map.removeLayer(rangeCircle);rangeCircle=null}
+ if(map&&routeLine){map.removeLayer(routeLine);routeLine=null}
+ const a=airportPoint(orig),b=airportPoint(dest);
+ if(a&&b){
+  const dist=haversineNm(a,b);
+  if(map){routeLine=L.polyline([a,b],{color:'#20b6f3',weight:3,dashArray:'8 6'}).addTo(map);map.fitBounds(routeLine.getBounds(),{padding:[60,60],maxZoom:7})}
+  info.textContent=orig+' → '+dest+' : '+Math.round(dist).toLocaleString('fr-FR')+' NM à vol d’oiseau · durée indicative à 430 kt : '+Math.floor(dist/RANGE_SPEED_KT)+' h '+String(Math.round(dist/RANGE_SPEED_KT*60)%60).padStart(2,'0')+' min.';
+ }else if((a&&!dest)||(b&&!orig)){
+  const center=a||b,icao=a?orig:dest;
+  if(map)rangeCircle=L.circle(center,{radius:nm*1852,color:'#3bc5ff',weight:2,fillColor:'#2b9cda',fillOpacity:.12,interactive:false}).addTo(map);
+  info.textContent='Portée théorique depuis '+icao+' : '+Math.round(nm).toLocaleString('fr-FR')+' NM ('+Math.round(nm*1.852).toLocaleString('fr-FR')+' km) pour '+Math.floor(minutes/60)+' h '+String(minutes%60).padStart(2,'0')+' min.';
+ }else if((orig&&!a)||(dest&&!b)){
+  info.textContent='Coordonnées indisponibles pour '+[orig&&!a?orig:null,dest&&!b?dest:null].filter(Boolean).join(' et ')+'. Sélectionnez un aéroport présent sur la carte.';
+ }else info.textContent='Choisissez un aéroport de départ ou d’arrivée sur la carte pour afficher la portée estimée.';
+}
+function setAirportField(field,icao){
+ const el=$(field==='departure'?'simbrief-departure':'simbrief-arrival');
+ if(!el)return;
+ el.value=icao;el.dispatchEvent(new Event('input',{bubbles:true}));
+ map?.closePopup();
+}
+document.addEventListener('click',e=>{
+ const btn=e.target.closest('[data-flight-airport]');
+ if(btn){setAirportField(btn.dataset.flightField,btn.dataset.flightAirport)}
+});
+document.addEventListener('input',e=>{
+ if(e.target?.id==='simbrief-departure'||e.target?.id==='simbrief-arrival')updateFlightRange();
+});
+document.addEventListener('change',e=>{if(e.target?.id==='flight-duration')updateFlightRange()});
+document.addEventListener('DOMContentLoaded',()=>{
+ const sel=$('flight-duration');if(!sel)return;
+ for(let m=90;m<=300;m+=15){const option=document.createElement('option');option.value=String(m);option.textContent=Math.floor(m/60)+' h '+String(m%60).padStart(2,'0');sel.appendChild(option)}
+ sel.value='150';updateFlightRange();
+});
+function popupAirportActions(icao){
+ const code=safe(icao);
+ return '<div class="wx-popup-actions"><button type="button" data-flight-airport="'+code+'" data-flight-field="departure">✈ Départ</button><button type="button" data-flight-airport="'+code+'" data-flight-field="arrival">⌖ Arrivée</button></div>';
+}
+
 async function load(){
  if(map||loading)return;loading=true;
  const el=$('weather-map');if(!el)return;
@@ -107,6 +161,7 @@ async function load(){
   const [wr,cr,ar]=await Promise.all([fetch('weather_all.json',{cache:'no-store'}).then(async r=>r.ok?r:fetch('status.json',{cache:'no-store'})),fetch('airport_coordinates.json',{cache:'no-store'}),fetch('airports.json',{cache:'no-store'})]);
   if(!wr.ok||!cr.ok||!ar.ok)throw Error('Les données météo complètes ne sont pas encore publiées.');
   const [weather,coords,airports]=await Promise.all([wr.json(),cr.json(),ar.json()]);if(!weather.stations&&Array.isArray(weather.weather))weather.stations=weather.weather;
+  coordinates=coords;
   const names=new Map(airports.map(a=>[a.icao,a.name]));
   map=L.map(el,{worldCopyJump:true}).setView([35,10],3);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'© OpenStreetMap'}).addTo(map);
@@ -117,16 +172,17 @@ async function load(){
    valid.add(a.icao);
    const symbol=weatherIcon(a),label=safe(a.icao);
    const marker=L.marker([Number(c.lat),Number(c.lon)],{icon:L.divIcon({className:'wx-marker',html:'<span class="wx-symbol">'+symbol.html+'</span><span class="wx-icao">'+label+'</span>',iconSize:[82,80],iconAnchor:[41,40]})});
-   marker.bindPopup('<div class="wx-popup"><h3>'+symbol.html+' '+label+' — '+safe(names.get(a.icao)||a.name||'')+'</h3><p><strong>Observation :</strong> '+safe(a.observed_at||'')+'</p><pre>'+safe(a.raw||'METAR absent')+'</pre><h4>Décodage du METAR</h4>'+decode(a.raw)+'</div>',{maxWidth:380,minWidth:260});
+   marker.bindPopup('<div class="wx-popup"><h3>'+symbol.html+' '+label+' — '+safe(names.get(a.icao)||a.name||'')+'</h3>'+popupAirportActions(a.icao)+'<p><strong>Observation :</strong> '+safe(a.observed_at||'')+'</p><pre>'+safe(a.raw||'METAR absent')+'</pre><h4>Décodage du METAR</h4>'+decode(a.raw)+'</div>',{maxWidth:380,minWidth:260});
    weatherMarkers.push({marker,flight:flightCategory(a),kinds:weatherKinds(a)});bounds.push([Number(c.lat),Number(c.lon)]);
   }
   // Les stations sans METAR récent restent visibles, sans météo inventée.
   for(const [icao,c] of Object.entries(coords)){
    if(valid.has(icao)||!names.has(icao)||!Number.isFinite(Number(c.lat))||!Number.isFinite(Number(c.lon)))continue;
-   const missingMarker=L.marker([Number(c.lat),Number(c.lon)],{icon:L.divIcon({className:'wx-marker wx-missing',html:'<span class="wx-symbol">❔</span><span class="wx-icao">'+safe(icao)+'</span>',iconSize:[65,58],iconAnchor:[32,29]})}).bindPopup('<strong>'+safe(icao)+'</strong><p>Aucun METAR récent disponible dans la dernière collecte.</p>');
+   const missingMarker=L.marker([Number(c.lat),Number(c.lon)],{icon:L.divIcon({className:'wx-marker wx-missing',html:'<span class="wx-symbol">❔</span><span class="wx-icao">'+safe(icao)+'</span>',iconSize:[65,58],iconAnchor:[32,29]})}).bindPopup('<strong>'+safe(icao)+'</strong>'+popupAirportActions(icao)+'<p>Aucun METAR récent disponible dans la dernière collecte.</p>');
    missingMarkers.push(missingMarker);
   }
   applyFilters();
+  updateFlightRange();
   if(bounds.length)map.fitBounds(bounds,{padding:[28,28],maxZoom:4});
 
  }catch(e){el.innerHTML='<p class="error">'+safe(e.message)+'</p>'}finally{loading=false}
