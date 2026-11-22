@@ -291,6 +291,9 @@ def run():
                 and compare_versions(a.get('installed'),a.get('server_version'),a.get('folder','')) for a in airports),
             'audited_at':NOW.isoformat(),
         })
+        previous=status.get('version_coverage') or {}
+        if previous.get('audited_at') and previous.get('audited_at')!=coverage['audited_at']:
+            status['version_coverage_previous']={k:previous.get(k) for k in ('audited_at','verified_today','unverified','no_source','unavailable','no_version','source_older','inconsistent','not_automatable','inventory_total')}
         status['version_coverage']=coverage
         status['versions_checked_at']=NOW.isoformat()
         src['airport_versions']='ok' if coverage['verified_today']==len(airports) else 'partial'
