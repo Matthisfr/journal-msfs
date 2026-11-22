@@ -100,7 +100,12 @@ function applyFilters(){
 document.addEventListener('change',e=>{if(e.target.closest('#wx-filters'))applyFilters()});
 document.addEventListener('click',e=>{if(e.target.closest('#wx-reset')){document.querySelectorAll('#wx-filters input[type=checkbox]').forEach(x=>x.checked=true);applyFilters()}});
 
-const RANGE_SPEED_KT=430;
+// Approximation A320 de durée bloc : 30 min hors croisière et 8 % de détour.
+const RANGE_CRUISE_KT=420;
+const RANGE_NONCRUISE_MIN=30;
+const RANGE_ROUTE_FACTOR=1.08;
+const distanceForMinutes=minutes=>Math.max(0,(minutes-RANGE_NONCRUISE_MIN)/60*RANGE_CRUISE_KT/RANGE_ROUTE_FACTOR);
+const minutesForDistance=nm=>Math.round(RANGE_NONCRUISE_MIN+nm*RANGE_ROUTE_FACTOR/RANGE_CRUISE_KT*60);
 function airportPoint(code){
  const c=coordinates[String(code||'').trim().toUpperCase()];
  return c&&Number.isFinite(Number(c.lat))&&Number.isFinite(Number(c.lon))?[Number(c.lat),Number(c.lon)]:null;
@@ -112,7 +117,7 @@ function haversineNm(a,b){
 }
 function updateFlightRange(){
  const info=$('flight-range-info'),orig=$('simbrief-departure')?.value.trim().toUpperCase()||'',dest=$('simbrief-arrival')?.value.trim().toUpperCase()||'';
- const minutes=Number($('flight-duration')?.value||90),nm=RANGE_SPEED_KT*minutes/60;
+ const minutes=Number($('flight-duration')?.value||90),nm=distanceForMinutes(minutes);
  if(!info)return;
  if(map&&rangeCircle){map.removeLayer(rangeCircle);rangeCircle=null}
  if(map&&routeLine){map.removeLayer(routeLine);routeLine=null}
@@ -120,11 +125,12 @@ function updateFlightRange(){
  if(a&&b){
   const dist=haversineNm(a,b);
   if(map){routeLine=L.polyline([a,b],{color:'#20b6f3',weight:3,dashArray:'8 6'}).addTo(map);map.fitBounds(routeLine.getBounds(),{padding:[60,60],maxZoom:7})}
-  info.textContent=orig+' → '+dest+' : '+Math.round(dist).toLocaleString('fr-FR')+' NM à vol d’oiseau · durée indicative à 430 kt : '+Math.floor(dist/RANGE_SPEED_KT)+' h '+String(Math.round(dist/RANGE_SPEED_KT*60)%60).padStart(2,'0')+' min.';
+  const estimate=minutesForDistance(dist);
+  info.textContent=orig+' → '+dest+' : '+Math.round(dist).toLocaleString('fr-FR')+' NM à vol d’oiseau · durée bloc A320 estimée : '+Math.floor(estimate/60)+' h '+String(estimate%60).padStart(2,'0')+' min (hors météo et contraintes ATC).';
  }else if((a&&!dest)||(b&&!orig)){
   const center=a||b,icao=a?orig:dest;
   if(map){rangeCircle=L.circle(center,{radius:nm*1852,color:'#3bc5ff',weight:2,fillColor:'#2b9cda',fillOpacity:.12,interactive:false}).addTo(map);map.fitBounds(rangeCircle.getBounds(),{padding:[35,35],maxZoom:6})}
-  info.textContent='Portée théorique depuis '+icao+' : '+Math.round(nm).toLocaleString('fr-FR')+' NM ('+Math.round(nm*1.852).toLocaleString('fr-FR')+' km) pour '+Math.floor(minutes/60)+' h '+String(minutes%60).padStart(2,'0')+' min.';
+  info.textContent='Distance atteignable estimée depuis '+icao+' : '+Math.round(nm).toLocaleString('fr-FR')+' NM ('+Math.round(nm*1.852).toLocaleString('fr-FR')+' km) pour '+Math.floor(minutes/60)+' h '+String(minutes%60).padStart(2,'0')+' min.';
  }else if((orig&&!a)||(dest&&!b)){
   info.textContent='Coordonnées indisponibles pour '+[orig&&!a?orig:null,dest&&!b?dest:null].filter(Boolean).join(' et ')+'. Sélectionnez un aéroport présent sur la carte.';
  }else info.textContent='Choisissez un aéroport de départ ou d’arrivée sur la carte pour afficher la portée estimée.';
