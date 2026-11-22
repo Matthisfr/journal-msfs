@@ -1,6 +1,6 @@
 /* Carte météo des aéroports du Journal — observations réelles uniquement. */
 (()=>{'use strict';
-let map,layer,loading=false;
+let map,layer,loading=false;const weatherMarkers=[];const missingMarkers=[];
 const $=id=>document.getElementById(id);
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function conditions(a){
@@ -63,6 +63,41 @@ function decode(raw){
  if(/\bSN\b/.test(s))lines.push('Phénomène : neige');
  return lines.length?lines.map(x=>'<div>'+safe(x)+'</div>').join(''):'Décodage automatique partiel indisponible : consulter le METAR brut.';
 }
+function flightCategory(a){
+ const raw=String(a.raw||'').toUpperCase().split(/\\s+RMK\\b/)[0];
+ const ceiling=[...raw.matchAll(/\\b(?:BKN|OVC|VV)(\\d{3})\\b/g)].map(x=>Number(x[1])*100);
+ const c=ceiling.length?Math.min(...ceiling):Infinity;
+ let visibility=Infinity;
+ if(/\\bCAVOK\\b/.test(raw))visibility=10/1.609344;
+ const metric=raw.match(/\\b(\\d{4})\\b(?=\\s|$)/g)||[];
+ const meters=metric.map(x=>Number(x)).filter(x=>x===9999||(x>=0&&x<=9000));
+ if(meters.length)visibility=Math.min(visibility,Math.min(...meters.map(x=>x===9999?10000:x))/1609.344);
+ const sm=raw.match(/\\b(?:(\\d+)\\s+)?(\\d+\\/\\d+|\\d+)SM\\b/);
+ if(sm){const frac=sm[2].includes('/')?sm[2].split('/').reduce((a,b)=>Number(a)/Number(b)):Number(sm[2]);visibility=Math.min(visibility,Number(sm[1]||0)+frac)}
+ if(c<500||visibility<1)return 'LIFR';
+ if(c<1000||visibility<3)return 'IFR';
+ if(c<=3000||visibility<=5)return 'MVFR';
+ return 'VFR';
+}
+function weatherKinds(a){
+ const c=conditions(a),out=[];
+ if(c.storm)out.push('storm');if(c.snow)out.push('snow');if(c.rain)out.push('rain');
+ if(c.fog||c.mist)out.push('fog');if(c.windy)out.push('wind');
+ if(c.ceiling==='clear'||c.ceiling==='few')out.push('sun');
+ if(c.ceiling!=='clear')out.push('cloud');
+ return out;
+}
+function applyFilters(){
+ if(!layer)return;
+ const wx=new Set([...document.querySelectorAll('#wx-phenomena input:checked')].map(x=>x.value));
+ const fc=new Set([...document.querySelectorAll('#wx-flight input:checked')].map(x=>x.value));
+ layer.clearLayers();let shown=0;
+ for(const x of weatherMarkers)if(fc.has(x.flight)&&x.kinds.some(k=>wx.has(k))){layer.addLayer(x.marker);shown++}
+ if(wx.size===7&&fc.size===4)for(const marker of missingMarkers)layer.addLayer(marker);
+ const count=$('weather-map-count');if(count)count.textContent=shown+' stations affichées sur '+weatherMarkers.length+' METAR récents · '+missingMarkers.length+' sans METAR';
+}
+document.addEventListener('change',e=>{if(e.target.closest('#wx-filters'))applyFilters()});
+document.addEventListener('click',e=>{if(e.target.closest('#wx-reset')){document.querySelectorAll('#wx-filters input[type=checkbox]').forEach(x=>x.checked=true);applyFilters()}});
 async function load(){
  if(map||loading)return;loading=true;
  const el=$('weather-map');if(!el)return;
@@ -82,15 +117,17 @@ async function load(){
    const symbol=weatherIcon(a),label=safe(a.icao);
    const marker=L.marker([Number(c.lat),Number(c.lon)],{icon:L.divIcon({className:'wx-marker',html:'<span class="wx-symbol">'+symbol.html+'</span><span class="wx-icao">'+label+'</span>',iconSize:[82,80],iconAnchor:[41,40]})});
    marker.bindPopup('<div class="wx-popup"><h3>'+symbol.html+' '+label+' — '+safe(names.get(a.icao)||a.name||'')+'</h3><p><strong>Observation :</strong> '+safe(a.observed_at||'')+'</p><pre>'+safe(a.raw||'METAR absent')+'</pre><h4>Décodage du METAR</h4>'+decode(a.raw)+'</div>',{maxWidth:380,minWidth:260});
-   marker.addTo(layer);bounds.push([Number(c.lat),Number(c.lon)]);
+   weatherMarkers.push({marker,flight:flightCategory(a),kinds:weatherKinds(a)});bounds.push([Number(c.lat),Number(c.lon)]);
   }
   // Les stations sans METAR récent restent visibles, sans météo inventée.
   for(const [icao,c] of Object.entries(coords)){
    if(valid.has(icao)||!names.has(icao)||!Number.isFinite(Number(c.lat))||!Number.isFinite(Number(c.lon)))continue;
-   L.marker([Number(c.lat),Number(c.lon)],{icon:L.divIcon({className:'wx-marker wx-missing',html:'<span class="wx-symbol">❔</span><span class="wx-icao">'+safe(icao)+'</span>',iconSize:[65,58],iconAnchor:[32,29]})}).bindPopup('<strong>'+safe(icao)+'</strong><p>Aucun METAR récent disponible dans la dernière collecte.</p>').addTo(layer);
+   const missingMarker=L.marker([Number(c.lat),Number(c.lon)],{icon:L.divIcon({className:'wx-marker wx-missing',html:'<span class="wx-symbol">❔</span><span class="wx-icao">'+safe(icao)+'</span>',iconSize:[65,58],iconAnchor:[32,29]})}).bindPopup('<strong>'+safe(icao)+'</strong><p>Aucun METAR récent disponible dans la dernière collecte.</p>');
+   missingMarkers.push(missingMarker);
   }
+  applyFilters();
   if(bounds.length)map.fitBounds(bounds,{padding:[28,28],maxZoom:4});
-  $('weather-map-count').textContent=valid.size+' stations avec METAR récent · '+names.size+' scènes dans l’inventaire';
+
  }catch(e){el.innerHTML='<p class="error">'+safe(e.message)+'</p>'}finally{loading=false}
 }
 document.addEventListener('click',e=>{if(e.target.closest('[data-view="meteo"],[data-goto="meteo"]'))setTimeout(()=>{load();map?.invalidateSize()},120)});
