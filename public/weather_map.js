@@ -133,8 +133,23 @@ function haversineNm(a,b){
  const h=Math.sin(dlat/2)**2+Math.cos(lat1)*Math.cos(lat2)*Math.sin(dlon/2)**2;
  return 3440.065*2*Math.asin(Math.min(1,Math.sqrt(h)));
 }
+function updateAirportLabelColors(){
+ const orig=$('simbrief-departure')?.value.trim().toUpperCase()||'';
+ const dest=$('simbrief-arrival')?.value.trim().toUpperCase()||'';
+ for(const item of weatherMarkers){
+  const node=item.marker.getElement();if(!node)continue;
+  node.classList.toggle('wx-is-departure',!!orig&&item.icao===orig);
+  node.classList.toggle('wx-is-arrival',!!dest&&item.icao===dest);
+ }
+ for(const item of missingMarkers){
+  const node=item.marker.getElement();if(!node)continue;
+  node.classList.toggle('wx-is-departure',!!orig&&item.icao===orig);
+  node.classList.toggle('wx-is-arrival',!!dest&&item.icao===dest);
+ }
+}
 function updateFlightRange(){
  const info=$('flight-range-info'),orig=$('simbrief-departure')?.value.trim().toUpperCase()||'',dest=$('simbrief-arrival')?.value.trim().toUpperCase()||'';
+ updateAirportLabelColors();
  const minutes=Number($('flight-duration')?.value||90),nm=distanceForMinutes(minutes);
  if(!info)return;
  if(map&&rangeCircle){map.removeLayer(rangeCircle);rangeCircle=null}
@@ -253,13 +268,13 @@ async function load(){
    const symbol=weatherIcon(a),label=safe(a.icao);
    const marker=L.marker([Number(c.lat),Number(c.lon)],{icon:L.divIcon({className:'wx-marker',html:'<span class="wx-symbol">'+symbol.html+'</span><span class="wx-icao">'+label+'</span>',iconSize:[82,80],iconAnchor:[41,40]})});
    marker.bindPopup('<div class="wx-popup"><h3>'+symbol.html+' '+label+' — '+safe(names.get(a.icao)||a.name||'')+'</h3>'+popupAirportActions(a.icao)+'<p><strong>Observation :</strong> '+safe(a.observed_at||'')+'</p><pre>'+safe(a.raw||'METAR absent')+'</pre><h4>Décodage du METAR</h4>'+decode(a.raw)+'</div>',{maxWidth:380,minWidth:260});
-   weatherMarkers.push({marker,flight:flightCategory(a),kinds:weatherKinds(a)});bounds.push([Number(c.lat),Number(c.lon)]);
+   weatherMarkers.push({marker,icao:String(a.icao||'').toUpperCase(),flight:flightCategory(a),kinds:weatherKinds(a)});marker.on('add',updateAirportLabelColors);bounds.push([Number(c.lat),Number(c.lon)]);
   }
   // Les stations sans METAR récent restent visibles, sans météo inventée.
   for(const [icao,c] of Object.entries(coords)){
    if(valid.has(icao)||!names.has(icao)||!Number.isFinite(Number(c.lat))||!Number.isFinite(Number(c.lon)))continue;
    const missingMarker=L.marker([Number(c.lat),Number(c.lon)],{icon:L.divIcon({className:'wx-marker wx-missing',html:'<span class="wx-symbol">❔</span><span class="wx-icao">'+safe(icao)+'</span>',iconSize:[65,58],iconAnchor:[32,29]})}).bindPopup('<strong>'+safe(icao)+'</strong>'+popupAirportActions(icao)+'<p>Aucun METAR récent disponible dans la dernière collecte.</p>');
-   missingMarkers.push(missingMarker);
+   missingMarkers.push({marker:missingMarker,icao:String(icao).toUpperCase()});missingMarker.on('add',updateAirportLabelColors);
   }
   applyFilters();
   updateFlightRange();
