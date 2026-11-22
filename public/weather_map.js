@@ -161,7 +161,7 @@ function setWeatherMapFullscreen(expanded){
  btn.setAttribute('aria-pressed',String(expanded));
  btn.setAttribute('aria-label',expanded?'Quitter le plein écran':'Afficher la carte en plein écran');
  btn.title=expanded?'Quitter le plein écran':'Plein écran';
- btn.innerHTML=expanded?'✕ <span>Quitter le plein écran</span>':'⛶ <span>Plein écran</span>';
+ btn.innerHTML=expanded?'✕ <span>Quitter le plein écran</span>':'⛶ <span>AGRANDIR LA CARTE</span>';
  if(map){requestAnimationFrame(()=>{map.invalidateSize();setTimeout(()=>map.invalidateSize(),180)})}
 }
 document.addEventListener('click',e=>{
