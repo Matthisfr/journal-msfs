@@ -123,7 +123,7 @@ function updateFlightRange(){
   info.textContent=orig+' → '+dest+' : '+Math.round(dist).toLocaleString('fr-FR')+' NM à vol d’oiseau · durée indicative à 430 kt : '+Math.floor(dist/RANGE_SPEED_KT)+' h '+String(Math.round(dist/RANGE_SPEED_KT*60)%60).padStart(2,'0')+' min.';
  }else if((a&&!dest)||(b&&!orig)){
   const center=a||b,icao=a?orig:dest;
-  if(map)rangeCircle=L.circle(center,{radius:nm*1852,color:'#3bc5ff',weight:2,fillColor:'#2b9cda',fillOpacity:.12,interactive:false}).addTo(map);
+  if(map){rangeCircle=L.circle(center,{radius:nm*1852,color:'#3bc5ff',weight:2,fillColor:'#2b9cda',fillOpacity:.12,interactive:false}).addTo(map);map.fitBounds(rangeCircle.getBounds(),{padding:[35,35],maxZoom:6})}
   info.textContent='Portée théorique depuis '+icao+' : '+Math.round(nm).toLocaleString('fr-FR')+' NM ('+Math.round(nm*1.852).toLocaleString('fr-FR')+' km) pour '+Math.floor(minutes/60)+' h '+String(minutes%60).padStart(2,'0')+' min.';
  }else if((orig&&!a)||(dest&&!b)){
   info.textContent='Coordonnées indisponibles pour '+[orig&&!a?orig:null,dest&&!b?dest:null].filter(Boolean).join(' et ')+'. Sélectionnez un aéroport présent sur la carte.';
@@ -183,7 +183,7 @@ async function load(){
   }
   applyFilters();
   updateFlightRange();
-  if(bounds.length)map.fitBounds(bounds,{padding:[28,28],maxZoom:4});
+  if(bounds.length&&!rangeCircle&&!routeLine)map.fitBounds(bounds,{padding:[28,28],maxZoom:4});
 
  }catch(e){el.innerHTML='<p class="error">'+safe(e.message)+'</p>'}finally{loading=false}
 }
