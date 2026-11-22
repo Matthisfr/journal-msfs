@@ -1,0 +1,3 @@
+Demande de collecte totale du Journal MSFS le 22 novembre 2026.
+Déclenchement explicite du workflow GitHub Actions via le message [collect-total].
+Contrôler le résultat dans les exécutions du workflow et le site public.
