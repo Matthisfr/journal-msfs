@@ -198,7 +198,37 @@ async function load(){
   coordinates=coords;
   const names=new Map(airports.map(a=>[a.icao,a.name]));
   map=L.map(el,{worldCopyJump:true}).setView([35,10],3);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'© OpenStreetMap'}).addTo(map);
+  // Mêmes fonds que la carte des aéroports : raster immédiatement disponible,
+  // fonds vectoriels ajoutés si MapLibre peut se charger.
+  const baseMaps={
+   'Plan':L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}),
+   'Satellite':L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Tiles &copy; Esri and contributors'}),
+   'Relief':L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',{maxZoom:17,attribution:'&copy; OpenTopoMap contributors &copy; OpenStreetMap'})
+  };
+  const selectedStyle=(()=>{try{return localStorage.getItem('msfs-weather-map-style')||'Plan'}catch{return 'Plan'}})();
+  let mapStyles;
+  const showMapStyles=()=>{if(mapStyles)map.removeControl(mapStyles);mapStyles=L.control.layers(baseMaps,null,{position:'topleft',collapsed:true}).addTo(map)};
+  (baseMaps[selectedStyle]||baseMaps.Plan).addTo(map);
+  showMapStyles();
+  map.on('baselayerchange',e=>{try{localStorage.setItem('msfs-weather-map-style',e.name)}catch(_){}});
+  // Les fonds vectoriels ne doivent jamais bloquer les METAR.
+  (async()=>{
+   try{
+    const loadScript=src=>new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=src;script.onload=resolve;script.onerror=reject;document.head.appendChild(script)});
+    if(!document.getElementById('maplibre-map-styles')){const css=document.createElement('link');css.id='maplibre-map-styles';css.rel='stylesheet';css.href='https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.css';document.head.appendChild(css)}
+    if(!window.maplibregl)await loadScript('https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.js');
+    if(!L.maplibreGL)await loadScript('https://cdn.jsdelivr.net/npm/@maplibre/maplibre-gl-leaflet@0.1.1/leaflet-maplibre-gl.js');
+    if(!L.maplibreGL)return;
+    for(const [name,style] of Object.entries({'Sombre':'dark','Fiord':'fiord','Positron':'positron','Liberty':'liberty','Bright':'bright'})){
+     baseMaps[name]=L.maplibreGL({style:'https://tiles.openfreemap.org/styles/'+style,attribution:'&copy; OpenFreeMap &copy; OpenStreetMap contributors'});
+    }
+    showMapStyles();
+    if(baseMaps[selectedStyle]&&['Sombre','Fiord','Positron','Liberty','Bright'].includes(selectedStyle)){
+     map.eachLayer(layer=>{if(Object.values(baseMaps).includes(layer))map.removeLayer(layer)});
+     baseMaps[selectedStyle].addTo(map);
+    }
+   }catch(e){console.warn('Fonds vectoriels météo indisponibles, fonds classiques conservés',e)}
+  })();
   layer=L.layerGroup().addTo(map);
   const valid=new Set(),bounds=[];
   for(const a of weather.stations||[]){
