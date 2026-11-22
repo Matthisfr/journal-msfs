@@ -599,9 +599,9 @@
         "url": "https://contrail.shop/products/slhsimdesigns-soca-cayenne-felix-eboue-msfs2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_6c674626-5a58-4613-a994-9244e18e925f_1200x1200.webp?v=1734207941",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "update",
         "server_version": "1.1.0",
-        "version_state": "À vérifier"
+        "version_state": "Mise à jour disponible"
       }
     ],
     "winner": "Non déterminé",
@@ -629,9 +629,9 @@
         "url": "https://contrail.shop/products/wf-scenery-studio-vhhh-hong-kong-international-msfs2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_4451a4c3-3381-43f5-be86-484abc39957e_1200x1200.webp?v=1733860388",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.0.3",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       }
     ],
     "winner": "Non déterminé",
@@ -899,9 +899,9 @@
         "url": "https://contrail.shop/products/mk-studios-eddl-dusseldorf-airport-msfs-2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_0e1943d5-ff21-4979-b910-6a68e7adec37_1200x1200.webp?v=1748426034",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.1.1",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       }
     ],
     "winner": "Partagé",
@@ -975,9 +975,9 @@
         "url": "https://contrail.shop/products/edwe-emden-airport-msfs",
         "image": "https://contrail.shop/cdn/shop/products/thumb_b45f323a-efbe-42b0-8aed-f96835854360_1200x1200.jpg?v=1674666809",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.0.0",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       }
     ],
     "winner": "Non déterminé",
@@ -1005,9 +1005,9 @@
         "url": "https://contrail.shop/products/egcc-manchester-airport",
         "image": "https://contrail.shop/cdn/shop/products/thumb_a3ceaa8e-7e82-4fa6-9898-06e308c9264d_1200x1200.jpg?v=1674666915",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.2.0",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       },
       {
         "publisher": "TAIMODELS",
@@ -1035,9 +1035,9 @@
         "url": "https://contrail.shop/products/eggp-liverpool-john-lennon-airport",
         "image": "https://contrail.shop/cdn/shop/products/thumb_7cce8b0b-a451-4884-8971-df00701dd622_1200x1200.jpg?v=1674664969",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.5.0",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       },
       {
         "publisher": "inibuilds",
@@ -1095,9 +1095,9 @@
         "url": "https://contrail.shop/products/lows-salzburg-airport",
         "image": "https://contrail.shop/cdn/shop/products/thumb_8e4fac6e-aa8d-4497-afd1-5a3ddacff502_1200x1200.jpg?v=1674664988",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.2.1",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       },
       {
         "publisher": "RDPresets",
@@ -1165,7 +1165,7 @@
         "url": "https://inibuilds.com/products/fly2high-sofia-lbsf-msfs",
         "image": "",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "incomparable",
         "server_version": "2.5.0",
         "version_state": "À vérifier"
       }
@@ -1195,9 +1195,9 @@
         "url": "https://inibuilds.com/products/inibuilds-dubrovnik-lddu-msfs",
         "image": "",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.0.2",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       }
     ],
     "winner": "Non déterminé",
@@ -1255,9 +1255,9 @@
         "url": "https://contrail.shop/products/taimodels-ekbi-billund-airport-msfs2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/ekbi_thumb_f6a6e5fa-4ac0-4667-924c-e7d4ea99fa25_1200x1200.png?v=1788988762",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.0.0",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       }
     ],
     "winner": "Non déterminé",
@@ -1275,9 +1275,9 @@
         "url": "https://contrail.shop/products/mkstudios-gcts-tenerife-south-airport-v2-msfs2024",
         "image": "https://contrail.shop/cdn/shop/files/mkgcts_thumb_3ccc1f1c-0e35-4aec-8c1d-b4e8ed2d0a89_1200x1200.png?v=1787596699",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "2.0.1",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       },
       {
         "publisher": "Sim-wings",
@@ -1285,9 +1285,9 @@
         "url": "https://contrail.shop/products/gcts-tenerife-south-airport",
         "image": "https://contrail.shop/cdn/shop/products/thumb_e8525d76-9dfb-42ea-a2f3-1e64174838a9_1200x1200.jpg?v=1674667936",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.4.0",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       }
     ],
     "winner": "Non déterminé",
@@ -1305,9 +1305,9 @@
         "url": "https://inibuilds.com/products/inibuilds-ibiza-leib-msfs2024",
         "image": "",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.0.3",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       },
       {
         "publisher": "sim-wings",
@@ -1445,9 +1445,9 @@
         "url": "https://inibuilds.com/products/pilot-experience-sim-ajaccio-lfkj-msfs",
         "image": "",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.3.2",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       }
     ],
     "winner": "Indéterminé",
@@ -1611,9 +1611,9 @@
         "url": "https://inibuilds.com/products/pilot-experience-sim-brest-bretagne-lfrb-msfs",
         "image": "",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.1.1",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       }
     ],
     "winner": "Non déterminé",
@@ -1701,9 +1701,9 @@
         "url": "https://contrail.shop/products/mm-simulations-lgsm-samos-intl-airport-msfs-2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_5aaf58f4-acf0-4cc6-bbbc-6710cac6cb6f_1200x1200.jpg?v=1751653726",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.0.1",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       },
       {
         "publisher": "Terrainy Studios",
@@ -1761,9 +1761,9 @@
         "url": "https://inibuilds.com/products/simpixel-bari-libd-msfs",
         "image": "",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.2.2",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       },
       {
         "publisher": "SuperSonic",
@@ -1791,9 +1791,9 @@
         "url": "https://contrail.shop/products/atelic-lipz-venice-airport-msfs-2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/lipz_thumb_bab1d923-05df-43ee-b8ec-c19651319642_1200x1200.png?v=1791750658",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.0.4",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       },
       {
         "publisher": "© lucio sergio barelli",
@@ -1892,9 +1892,9 @@
         "url": "https://contrail.shop/products/mm-simulations-eyvi-vilnius-international-airport-msfs",
         "image": "https://contrail.shop/cdn/shop/files/thumb_fc0bad74-5a46-470d-a6ca-c0412a2a9921_1200x1200.webp?v=1719338418",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.1.3",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       }
     ],
     "winner": "Non déterminé",
@@ -1912,9 +1912,9 @@
         "url": "https://contrail.shop/products/atelic-ellx-luxembourg-airport-msfs-2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_dd69490c-405b-4afc-9f36-7d4fc447a80b_1200x1200.jpg?v=1757068199",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.0.2",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       },
       {
         "publisher": "JustSim",
@@ -1942,9 +1942,9 @@
         "url": "https://inibuilds.com/products/inibuilds-malta-lmml-msfs-2024",
         "image": "",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.0.1",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       },
       {
         "publisher": "JustSim",
@@ -2048,9 +2048,9 @@
         "url": "https://contrail.shop/products/drzewiecki-epsc-szczecin-airport-msfs-2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_d39ca6fe-6cdf-4838-89a3-311f1b0a30ae_1200x1200.jpg?v=1774897623",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.0.0",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       },
       {
         "publisher": "Papa Delta Studio",
@@ -2148,9 +2148,9 @@
         "url": "https://contrail.shop/products/lkpr-prague-airport-msfs",
         "image": "https://contrail.shop/cdn/shop/products/thumb_e097aa56-30ab-4889-8dab-c85926625985_1200x1200.jpg?v=1674668259",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.0.4",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       }
     ],
     "winner": "Non déterminé",
@@ -2268,9 +2268,9 @@
         "url": "https://contrail.shop/products/mk-studios-lszh-zurich-airport-msfs",
         "image": "https://contrail.shop/cdn/shop/files/thumb_3d6bc5c9-3cf7-45ba-bbb8-5e1a632c5c24_1200x1200.webp?v=1733858281",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.1.2",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       }
     ],
     "winner": "MK Studios (visuel)",
@@ -2314,9 +2314,9 @@
         "url": "https://contrail.shop/products/ltbs-dalaman-intl-msfs",
         "image": "https://contrail.shop/cdn/shop/files/thumb_f9e855fc-a33c-4bb4-967a-e719c99211e9_1200x1200.jpg?v=1769416457",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.7.0",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       }
     ],
     "winner": "Non déterminé",
@@ -2334,9 +2334,9 @@
         "url": "https://contrail.shop/products/mxi-design-ltfj-istanbul-sabiha-gokcen-airport-msfs-2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_793946c2-9687-4b96-8337-98527eaedad4_1200x1200.webp?v=1747928373",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.1.0",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       },
       {
         "publisher": "SceneryTR Design",
@@ -2344,9 +2344,9 @@
         "url": "https://contrail.shop/products/scenerytr-ltfj-istanbul-sabiha-gokcen-airport-msfs-2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_73973cf1-1228-4e94-80fc-9f289577a3e1_1200x1200.jpg?v=1770105851",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.0.5",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       }
     ],
     "winner": "Non déterminé",
@@ -2374,9 +2374,9 @@
         "url": "https://inibuilds.com/products/tuwaiq-designs-bahrain-airport-v2-msfs",
         "image": "",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "source_older",
         "server_version": "2.1",
-        "version_state": "À vérifier"
+        "version_state": "Version installée plus récente"
       }
     ],
     "winner": "Non déterminé",

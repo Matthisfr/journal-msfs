@@ -1,123 +1,128 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-11-22T11:52:16.574167+00:00",
+  "retrieved_at": "2026-11-22T19:34:28.235718+00:00",
   "origin": {
-    "icao": "LIMC",
-    "name": "MALPENSA"
+    "icao": "KSEA",
+    "name": "SEATTLE-TACOMA INTL"
   },
   "destination": {
-    "icao": "LFPO",
-    "name": "ORLY"
+    "icao": "KLAS",
+    "name": "REID INTL"
   },
   "flight_number": "2809",
   "aircraft": "A320",
-  "route": "AOS5W AOSTA DCT ORSUD DCT MOLUS DCT UNKIR DCT DJL DJL9E",
-  "altitude": "30000",
-  "enroute_time": "01:04:13",
-  "scheduled_departure": "2026-11-22T09:20:00Z",
-  "scheduled_arrival": "2026-11-22T10:55:00Z",
-  "generated_at": "2026-11-22T08:48:22Z",
+  "route": "SUMMA2 LKV DCT RYANN J92 OAL DCT TQILA COKTL4",
+  "altitude": "37000",
+  "enroute_time": "01:51:15",
+  "scheduled_departure": "2026-11-23T15:50:00Z",
+  "scheduled_arrival": "2026-11-23T18:15:00Z",
+  "generated_at": "2026-11-22T18:34:07Z",
   "route_points": [
     {
-      "lat": 45.708889,
-      "lon": 8.726167,
-      "name": "MC604"
+      "lat": 47.252167,
+      "lon": -122.309667,
+      "name": "NEVJO"
     },
     {
-      "lat": 45.715306,
-      "lon": 8.603472,
-      "name": "MC613"
+      "lat": 46.617858,
+      "lon": -121.988322,
+      "name": "SUMMA"
     },
     {
-      "lat": 45.68,
-      "lon": 8.522778,
-      "name": "DOGUB"
-    },
-    {
-      "lat": 45.628333,
-      "lon": 8.406667,
-      "name": "NELAB"
-    },
-    {
-      "lat": 45.574828,
-      "lon": 8.315631,
-      "name": "MC501"
-    },
-    {
-      "lat": 45.591406,
-      "lon": 8.244561,
-      "name": "MC502"
-    },
-    {
-      "lat": 45.667697,
-      "lon": 7.91445,
-      "name": "MC519"
-    },
-    {
-      "lat": 45.796389,
-      "lon": 7.345833,
-      "name": "AOSTA"
-    },
-    {
-      "lat": 45.957778,
-      "lon": 7.181667,
-      "name": "ORSUD"
-    },
-    {
-      "lat": 46.161267,
-      "lon": 6.97279,
+      "lat": 44.764545,
+      "lon": -121.295857,
       "name": "TOC"
     },
     {
-      "lat": 46.443889,
-      "lon": 6.679444,
-      "name": "MOLUS"
+      "lat": 42.492844,
+      "lon": -120.507106,
+      "name": "LKV"
     },
     {
-      "lat": 46.815556,
-      "lon": 5.726944,
-      "name": "UNKIR"
+      "lat": 39.233781,
+      "lon": -119.279461,
+      "name": "RYANN"
     },
     {
-      "lat": 47.270778,
-      "lon": 5.097333,
-      "name": "DJL"
+      "lat": 38.979686,
+      "lon": -118.961642,
+      "name": "YERIN"
     },
     {
-      "lat": 47.496422,
-      "lon": 4.748972,
-      "name": "ALARO"
+      "lat": 38.511478,
+      "lon": -118.384572,
+      "name": "BABIT"
     },
     {
-      "lat": 47.883333,
-      "lon": 4.141111,
-      "name": "TUNOR"
+      "lat": 38.003261,
+      "lon": -117.770447,
+      "name": "OAL"
     },
     {
-      "lat": 47.964017,
-      "lon": 3.582283,
+      "lat": 37.475833,
+      "lon": -117.200556,
+      "name": "TQILA"
+    },
+    {
+      "lat": 37.331742,
+      "lon": -117.075272,
+      "name": "BASIC"
+    },
+    {
+      "lat": 37.100631,
+      "lon": -116.875378,
+      "name": "FLCHR"
+    },
+    {
+      "lat": 36.715832,
+      "lon": -116.54588,
       "name": "TOD"
     },
     {
-      "lat": 47.966111,
-      "lon": 3.5675,
-      "name": "OKRIX"
+      "lat": 36.650689,
+      "lon": -116.490503,
+      "name": "TBRAN"
     },
     {
-      "lat": 48.202139,
-      "lon": 3.206111,
-      "name": "EBOMA"
+      "lat": 36.455056,
+      "lon": -116.214236,
+      "name": "ARYEL"
     },
     {
-      "lat": 48.295028,
-      "lon": 3.062944,
-      "name": "MOLBA"
+      "lat": 36.251106,
+      "lon": -115.928656,
+      "name": "COKTL"
     },
     {
-      "lat": 48.723333,
-      "lon": 2.379444,
-      "name": "LFPO"
+      "lat": 36.138794,
+      "lon": -115.75085,
+      "name": "ZLLDA"
+    },
+    {
+      "lat": 36.0401,
+      "lon": -115.430922,
+      "name": "DEEON"
+    },
+    {
+      "lat": 36.016253,
+      "lon": -115.354153,
+      "name": "ENNVY"
+    },
+    {
+      "lat": 36.004019,
+      "lon": -115.107725,
+      "name": "REDQN"
+    },
+    {
+      "lat": 35.999236,
+      "lon": -115.014089,
+      "name": "BERBN"
+    },
+    {
+      "lat": 36.080342,
+      "lon": -115.15245,
+      "name": "KLAS"
     }
   ]
 }

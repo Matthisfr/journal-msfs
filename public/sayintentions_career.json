@@ -14,7 +14,7 @@
     {
       "id": "IFR-884499053",
       "aircraft": "F-FENX",
-      "when": "9 hours ago",
+      "when": "17 hours ago",
       "origin": "LIMC",
       "destination": "LFPO",
       "rules": "IFR",
@@ -102,7 +102,7 @@
       "duration": "2h 6m"
     }
   ],
-  "flights_checked_at": "2026-11-22T11:52:37.950078+00:00",
-  "verified_at": "2026-11-22T11:52:37.950078+00:00",
-  "checked_at": "2026-11-22T11:52:37.950078+00:00"
+  "flights_checked_at": "2026-11-22T19:34:52.424374+00:00",
+  "verified_at": "2026-11-22T19:34:52.424374+00:00",
+  "checked_at": "2026-11-22T19:34:52.424374+00:00"
 }
