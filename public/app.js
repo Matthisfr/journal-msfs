@@ -191,7 +191,23 @@ function openSimbriefMap(){
   setTimeout(()=>{focusSimbriefRoute();scrollToAirportMap()},650);
  }
 }
-$('#simbrief-map-eye')?.addEventListener('click',openSimbriefMap);
+async function openSimbriefOnFlightPlanMap(){
+ const button=$('#simbrief-map-eye');
+ if(button)button.disabled=true;
+ try{
+  const response=await fetch('simbrief_last.json',{cache:'no-store'});
+  if(!response.ok)throw new Error('OFP indisponible');
+  const data=await response.json();
+  const origin=String(data.origin?.icao||'').toUpperCase(),destination=String(data.destination?.icao||'').toUpperCase();
+  if(data.state!=='ok'||!/^[A-Z]{4}$/.test(origin)||!/^[A-Z]{4}$/.test(destination))throw new Error('Codes ICAO absents du dernier OFP');
+  switchView('meteo');
+  document.dispatchEvent(new CustomEvent('msfs:show-simbrief-on-weather-map',{detail:{origin,destination}}));
+ }catch(error){
+  console.warn('Impossible d’ouvrir le dernier OFP sur la carte météo',error);
+  alert('Le dernier plan de vol SimBrief est indisponible pour la carte. Réessaie après la prochaine collecte.');
+ }finally{if(button)button.disabled=false}
+}
+$('#simbrief-map-eye')?.addEventListener('click',openSimbriefOnFlightPlanMap);
 
 let airportMapMarkers=[];
 let airportMapCaption=null;
