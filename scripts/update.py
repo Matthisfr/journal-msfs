@@ -115,6 +115,7 @@ def collect_weather(airports):
             'summary':summary,'icon':icon,'phenomenon':phenomenon,'level':level,
             'source_url':'https://aviationweather.gov/'})
     ranked.sort(key=lambda a:(-a['score'],a['icao']))
+    (PUBLIC/'weather_all.json').write_text(json.dumps({'checked_at':NOW.isoformat(),'stations':ranked},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     top=ranked[:10]
     taf_status='no_data'
     if top:
