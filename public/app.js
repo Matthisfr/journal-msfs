@@ -262,7 +262,7 @@ async function addSimbriefRoute(map, airportData, slot){
   simbriefRouteBounds=fromSimbriefBounds(fixes,start,end);
   const layer=L.layerGroup();
   simbriefRouteLayer=layer;
-  if(showSimbriefOnLoad){savePreFlightMapView();layer.addTo(map);}
+  // Le dernier vol n'est plus affiché sur la carte des aéroports.
   const icon=(type)=>L.divIcon({className:'simbrief-aircraft',html:'<span style="display:grid;place-items:center;background:#102c42;border:2px solid white;color:white;border-radius:50%;width:38px;height:38px;font-size:23px">'+(type==='departure'?'🛫':'🛬')+'</span>',iconSize:[38,38],iconAnchor:[19,19]});
   const from=valid(start)?[Number(start.lat),Number(start.lon)]:points[0];
   const to=valid(end)?[Number(end.lat),Number(end.lon)]:points[points.length-1];
@@ -281,24 +281,6 @@ async function addSimbriefRoute(map, airportData, slot){
    const fl=Number(flight.altitude);
    L.marker(middle,{icon:routeLabel('Vol '+duration(flight.enroute_time)+' · '+(fl>0?'FL'+Math.round(fl/100):'FL —')),interactive:false}).addTo(layer);
   }
-  const button=L.DomUtil.create('button','simbrief-route-toggle',slot);
-  button.type='button';
-  button.textContent=showSimbriefOnLoad?'👁 Masquer le dernier vol':'👁 Voir le dernier vol';
-  button.title='Afficher ou masquer le dernier vol SimBrief';
-  button.setAttribute('aria-pressed',String(showSimbriefOnLoad));
-  button.style.cssText='position:absolute;top:8px;left:50%;transform:translateX(-50%);z-index:1200;background:#102c42;color:white;border:2px solid white;border-radius:7px;padding:8px 12px;font-weight:bold;cursor:pointer;white-space:nowrap;box-shadow:0 2px 8px #0006';
-  L.DomEvent.disableClickPropagation(button);
-  L.DomEvent.disableScrollPropagation(button);
-  simbriefRouteButton=button;
-  L.DomEvent.on(button,'click',()=>{
-   const visible=!map.hasLayer(layer);
-   setSimbriefRouteVisible(visible);
-   if(visible){
-    // Afficher tout le trajet SimBrief et recentrer la carte sur ce vol.
-    focusSimbriefRoute();
-    scrollToAirportMap();
-   }
-  });
   showSimbriefOnLoad=false;
   const label=document.createElement('p');
   label.className='map-caption';
