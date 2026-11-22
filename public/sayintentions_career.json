@@ -3,14 +3,23 @@
   "profile_url": "https://pilots.sayintentions.ai/u/Mathis",
   "username": "Mathis",
   "rank": "Senior 1st Officer",
-  "flight_hours": 89,
-  "ifr_hours": 87,
+  "flight_hours": 91,
+  "ifr_hours": 89,
   "vfr_hours": 2,
-  "total_flights": 54,
+  "total_flights": 55,
   "airports_visited": 51,
   "source": "profil public Gate 404 (navigateur Chromium)",
   "rank_badge": "sayintentions-rank.svg",
   "recent_flights": [
+    {
+      "id": "IFR-884499053",
+      "aircraft": "F-FENX",
+      "when": "9 hours ago",
+      "origin": "LIMC",
+      "destination": "LFPO",
+      "rules": "IFR",
+      "duration": "1h 37m"
+    },
     {
       "id": "IFR-884461452",
       "aircraft": "F-FENX",
@@ -77,7 +86,7 @@
     {
       "id": "IFR-884231078",
       "aircraft": "F-FENX",
-      "when": "1 week ago",
+      "when": "2 weeks ago",
       "origin": "LFPG",
       "destination": "LFMN",
       "rules": "IFR",
@@ -91,18 +100,9 @@
       "destination": "LFPG",
       "rules": "IFR",
       "duration": "2h 6m"
-    },
-    {
-      "id": "IFR-884224876",
-      "aircraft": "F-FENX",
-      "when": "2 weeks ago",
-      "origin": "EIDW",
-      "destination": "LFPG",
-      "rules": "IFR",
-      "duration": "0h 11m"
     }
   ],
-  "flights_checked_at": "2026-11-22T06:09:52.662840+00:00",
-  "verified_at": "2026-11-22T06:09:52.662840+00:00",
-  "checked_at": "2026-11-22T06:09:52.662840+00:00"
+  "flights_checked_at": "2026-11-22T11:52:37.950078+00:00",
+  "verified_at": "2026-11-22T11:52:37.950078+00:00",
+  "checked_at": "2026-11-22T11:52:37.950078+00:00"
 }

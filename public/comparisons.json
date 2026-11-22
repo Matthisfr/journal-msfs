@@ -1195,9 +1195,9 @@
         "url": "https://inibuilds.com/products/inibuilds-dubrovnik-lddu-msfs",
         "image": "",
         "image_checked": true,
-        "comparison": "equal",
+        "comparison": "",
         "server_version": "1.0.2",
-        "version_state": "À jour"
+        "version_state": "À vérifier"
       }
     ],
     "winner": "Non déterminé",

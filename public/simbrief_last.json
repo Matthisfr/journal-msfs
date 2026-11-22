@@ -1,138 +1,123 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-11-22T06:09:10.158191+00:00",
+  "retrieved_at": "2026-11-22T11:52:16.574167+00:00",
   "origin": {
-    "icao": "ELLX",
-    "name": "LUXEMBOURG"
+    "icao": "LIMC",
+    "name": "MALPENSA"
   },
   "destination": {
-    "icao": "LFMN",
-    "name": "NICE/COTE D'AZUR"
+    "icao": "LFPO",
+    "name": "ORLY"
   },
   "flight_number": "2809",
   "aircraft": "A320",
-  "route": "GTQ2Q GTQ A242 POGOL DCT LASAT DCT MOROK DCT GILIR DCT GEVEA DCT KOGAS DCT MEDAM DCT VEVAR VEVA8R",
-  "altitude": "29000",
-  "enroute_time": "01:12:22",
-  "scheduled_departure": "2026-11-20T10:40:00Z",
-  "scheduled_arrival": "2026-11-20T12:15:00Z",
-  "generated_at": "2026-11-20T10:08:02Z",
+  "route": "AOS5W AOSTA DCT ORSUD DCT MOLUS DCT UNKIR DCT DJL DJL9E",
+  "altitude": "30000",
+  "enroute_time": "01:04:13",
+  "scheduled_departure": "2026-11-22T09:20:00Z",
+  "scheduled_arrival": "2026-11-22T10:55:00Z",
+  "generated_at": "2026-11-22T08:48:22Z",
   "route_points": [
     {
-      "lat": 49.595028,
-      "lon": 6.127028,
-      "name": "LX892"
+      "lat": 45.708889,
+      "lon": 8.726167,
+      "name": "MC604"
     },
     {
-      "lat": 49.496667,
-      "lon": 6.258944,
-      "name": "LX895"
+      "lat": 45.715306,
+      "lon": 8.603472,
+      "name": "MC613"
     },
     {
-      "lat": 49.385306,
-      "lon": 6.335833,
-      "name": "LX896"
+      "lat": 45.68,
+      "lon": 8.522778,
+      "name": "DOGUB"
     },
     {
-      "lat": 49.220833,
-      "lon": 6.448667,
-      "name": "LX899"
+      "lat": 45.628333,
+      "lon": 8.406667,
+      "name": "NELAB"
     },
     {
-      "lat": 48.986444,
-      "lon": 6.716222,
-      "name": "GTQ"
+      "lat": 45.574828,
+      "lon": 8.315631,
+      "name": "MC501"
     },
     {
-      "lat": 48.644722,
-      "lon": 6.702778,
-      "name": "KEZOH"
+      "lat": 45.591406,
+      "lon": 8.244561,
+      "name": "MC502"
     },
     {
-      "lat": 48.399028,
-      "lon": 6.693361,
-      "name": "POGOL"
+      "lat": 45.667697,
+      "lon": 7.91445,
+      "name": "MC519"
     },
     {
-      "lat": 48.265828,
-      "lon": 6.688234,
+      "lat": 45.796389,
+      "lon": 7.345833,
+      "name": "AOSTA"
+    },
+    {
+      "lat": 45.957778,
+      "lon": 7.181667,
+      "name": "ORSUD"
+    },
+    {
+      "lat": 46.161267,
+      "lon": 6.97279,
       "name": "TOC"
     },
     {
-      "lat": 48.158944,
-      "lon": 6.684139,
-      "name": "LASAT"
+      "lat": 46.443889,
+      "lon": 6.679444,
+      "name": "MOLUS"
     },
     {
-      "lat": 47.396583,
-      "lon": 6.6555,
-      "name": "MOROK"
+      "lat": 46.815556,
+      "lon": 5.726944,
+      "name": "UNKIR"
     },
     {
-      "lat": 47.063333,
-      "lon": 6.239167,
-      "name": "GILIR"
+      "lat": 47.270778,
+      "lon": 5.097333,
+      "name": "DJL"
     },
     {
-      "lat": 46.253917,
-      "lon": 6.132222,
-      "name": "GEVEA"
+      "lat": 47.496422,
+      "lon": 4.748972,
+      "name": "ALARO"
     },
     {
-      "lat": 45.808333,
-      "lon": 6.390833,
-      "name": "KOGAS"
+      "lat": 47.883333,
+      "lon": 4.141111,
+      "name": "TUNOR"
     },
     {
-      "lat": 45.264444,
-      "lon": 6.94,
-      "name": "MEDAM"
-    },
-    {
-      "lat": 44.8,
-      "lon": 7.0125,
-      "name": "VEVAR"
-    },
-    {
-      "lat": 44.214444,
-      "lon": 7.151139,
-      "name": "GAPDO"
-    },
-    {
-      "lat": 43.832056,
-      "lon": 7.374639,
-      "name": "AMGEL"
-    },
-    {
-      "lat": 43.679361,
-      "lon": 7.545278,
-      "name": "MIKRU"
-    },
-    {
-      "lat": 43.668254,
-      "lon": 7.588698,
+      "lat": 47.964017,
+      "lon": 3.582283,
       "name": "TOD"
     },
     {
-      "lat": 43.528556,
-      "lon": 8.128111,
-      "name": "OTOKE"
+      "lat": 47.966111,
+      "lon": 3.5675,
+      "name": "OKRIX"
     },
     {
-      "lat": 43.369611,
-      "lon": 7.936306,
-      "name": "MN800"
+      "lat": 48.202139,
+      "lon": 3.206111,
+      "name": "EBOMA"
     },
     {
-      "lat": 43.41575,
-      "lon": 7.824278,
-      "name": "NERAS"
+      "lat": 48.295028,
+      "lon": 3.062944,
+      "name": "MOLBA"
     },
     {
-      "lat": 43.665278,
-      "lon": 7.215,
-      "name": "LFMN"
+      "lat": 48.723333,
+      "lon": 2.379444,
+      "name": "LFPO"
     }
   ]
 }
