@@ -2,6 +2,10 @@
 (()=>{'use strict';
 let map,layer,loading=false,rangeCircle=null,routeLine=null,routeTimeMarker=null,coordinates={};const weatherMarkers=[];const missingMarkers=[];
 const $=id=>document.getElementById(id);
+let activeSimbriefFlight=null;
+function simbriefDuration(raw){const m=String(raw||'').match(/^(\d+):(\d{2})(?::\d{2})?$/);return m?Number(m[1])+' h '+m[2]:null}
+function validSimbriefPoint(p){return p&&Number.isFinite(Number(p.lat))&&Number.isFinite(Number(p.lon))&&Math.abs(Number(p.lat))<=90&&Math.abs(Number(p.lon))<=180}
+
 const ANIMATION_KEY='msfs-weather-icons-animated';
 function iconAnimationEnabled(){try{return localStorage.getItem(ANIMATION_KEY)!=='off'}catch{return true}}
 function updateIconAnimation(){
@@ -159,25 +163,30 @@ function updateFlightRange(){
  updateAirportLabelColors();
  const minutes=Number($('flight-duration')?.value||120),nm=distanceForMinutes(minutes);
  const forecast=$('simbrief-estimated-time');
- if(forecast){const from=airportPoint(orig),to=airportPoint(dest);if(from&&to){const estimate=minutesForDistance(haversineNm(from,to));forecast.textContent=Math.floor(estimate/60)+' h '+String(estimate%60).padStart(2,'0')}else forecast.textContent='—'}
+ if(forecast){const from=airportPoint(orig),to=airportPoint(dest);if(from&&to){const estimate=minutesForDistance(haversineNm(from,to));const exact=activeSimbriefFlight?.origin?.icao===orig&&activeSimbriefFlight?.destination?.icao===dest?simbriefDuration(activeSimbriefFlight.enroute_time):null;forecast.textContent=exact||(Math.floor(estimate/60)+' h '+String(estimate%60).padStart(2,'0'))}else forecast.textContent='—'}
  if(!info)return;
  if(map&&rangeCircle){map.removeLayer(rangeCircle);rangeCircle=null}
  if(map&&routeLine){map.removeLayer(routeLine);routeLine=null}
  if(map&&routeTimeMarker){map.removeLayer(routeTimeMarker);routeTimeMarker=null}
  const a=airportPoint(orig),b=airportPoint(dest);
+ const exact=activeSimbriefFlight&&activeSimbriefFlight.origin?.icao===orig&&activeSimbriefFlight.destination?.icao===dest?activeSimbriefFlight:null;
  if(a&&b){
   const dist=haversineNm(a,b);
   if(map){
-   routeLine=L.polyline([a,b],{color:'#20b6f3',weight:3,dashArray:'8 6'}).addTo(map);
+   const fixes=exact?(exact.route_points||[]).filter(validSimbriefPoint).map(p=>[Number(p.lat),Number(p.lon)]):[];
+   const points=fixes.length>=2?[a,...fixes,b]:[a,b];
+   routeLine=L.polyline(points,{color:'#20b6f3',weight:3,dashArray:exact?'':'8 6'}).addTo(map);
    const duration=minutesForDistance(dist);
-   const label=Math.floor(duration/60)+' h '+String(duration%60).padStart(2,'0');
-   routeTimeMarker=L.marker(flightMidpoint(a,b),{interactive:false,keyboard:false,zIndexOffset:1000,icon:L.divIcon({className:'wx-route-time-marker',html:'<span class="wx-route-time-label" aria-label="Temps de vol estimé : '+label+'">'+label+'</span>',iconSize:[92,32],iconAnchor:[46,16]})}).addTo(map);
+   const label=(exact&&simbriefDuration(exact.enroute_time))||(Math.floor(duration/60)+' h '+String(duration%60).padStart(2,'0'));
+   const middle=points[Math.floor((points.length-1)/2)];
+   const labelPoint=points.length>2?flightMidpoint(middle,points[Math.min(points.length-1,Math.floor((points.length-1)/2)+1)]):flightMidpoint(a,b);
+   routeTimeMarker=L.marker(labelPoint,{interactive:false,keyboard:false,zIndexOffset:1000,icon:L.divIcon({className:'wx-route-time-marker',html:'<span class="wx-route-time-label" aria-label="Temps de vol '+(exact?'SimBrief':'estimé')+' : '+label+'">'+label+'</span>',iconSize:[92,32],iconAnchor:[46,16]})}).addTo(map);
    map.fitBounds(routeLine.getBounds(),{padding:[60,60],maxZoom:7});
   }
   const estimate=minutesForDistance(dist);
   const fmt=m=>Math.floor(m/60)+' h '+String(m%60).padStart(2,'0');
   const uncertainty=Math.max(15,Math.round(estimate*.12));
-  info.textContent=orig+' → '+dest+' : '+Math.round(dist).toLocaleString('fr-FR')+' NM à vol d’oiseau · temps bloc A320 indicatif : '+fmt(estimate)+' (fourchette '+fmt(Math.max(0,estimate-uncertainty))+' à '+fmt(estimate+uncertainty)+'). Seul un OFP SimBrief donne une durée calculée pour la route et la météo.';
+  info.textContent=exact&&simbriefDuration(exact.enroute_time)?orig+' → '+dest+' · Plan de vol SimBrief : '+(exact.route||'route publiée')+' · temps prévu '+simbriefDuration(exact.enroute_time)+'.':orig+' → '+dest+' : '+Math.round(dist).toLocaleString('fr-FR')+' NM à vol d’oiseau · temps bloc A320 indicatif : '+fmt(estimate)+' (fourchette '+fmt(Math.max(0,estimate-uncertainty))+' à '+fmt(estimate+uncertainty)+'). Seul un OFP SimBrief donne une durée calculée pour la route et la météo.';
  }else if((a&&!dest)||(b&&!orig)){
   const center=a||b,icao=a?orig:dest;
   if(map){rangeCircle=L.circle(center,{radius:nm*1852,color:'#3bc5ff',weight:2,fillColor:'#2b9cda',fillOpacity:.12,interactive:false}).addTo(map);map.fitBounds(rangeCircle.getBounds(),{padding:[35,35],maxZoom:6})}
@@ -303,7 +312,7 @@ async function toggleLastSimbriefFlight(){
  const button=$('weather-last-flight-toggle'),status=$('weather-last-flight-status');
  if(!button)return;
  if(lastFlightShown){
-  lastFlightShown=false;
+  lastFlightShown=false;activeSimbriefFlight=null;
   for(const id of ['simbrief-departure','simbrief-arrival']){const input=$(id);if(input){input.value='';input.dispatchEvent(new Event('input',{bubbles:true}))}}
   button.textContent='👁 Voir le dernier vol';
   button.setAttribute('aria-pressed','false');
@@ -317,6 +326,7 @@ async function toggleLastSimbriefFlight(){
   const data=await response.json();
   const origin=String(data.origin?.icao||'').toUpperCase(),destination=String(data.destination?.icao||'').toUpperCase();
   if(data.state!=='ok'||!/^[A-Z]{4}$/.test(origin)||!/^[A-Z]{4}$/.test(destination))throw Error('Dernier OFP incomplet');
+  activeSimbriefFlight=data;
   for(const [id,code] of [['simbrief-departure',origin],['simbrief-arrival',destination]]){
    const input=$(id);if(input){input.value=code;input.dispatchEvent(new Event('input',{bubbles:true}))}
   }
