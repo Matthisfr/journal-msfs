@@ -153,6 +153,30 @@ document.addEventListener('input',e=>{
  if(e.target?.id==='simbrief-departure'||e.target?.id==='simbrief-arrival')updateFlightRange();
 });
 document.addEventListener('change',e=>{if(e.target?.id==='flight-duration')updateFlightRange()});
+function setWeatherMapFullscreen(expanded){
+ const shell=$('weather-map-shell'),btn=$('weather-map-fullscreen');
+ if(!shell||!btn)return;
+ shell.classList.toggle('wx-map-expanded',expanded);
+ document.body.classList.toggle('wx-map-open',expanded);
+ btn.setAttribute('aria-pressed',String(expanded));
+ btn.setAttribute('aria-label',expanded?'Quitter le plein écran':'Afficher la carte en plein écran');
+ btn.title=expanded?'Quitter le plein écran':'Plein écran';
+ btn.innerHTML=expanded?'✕ <span>Quitter le plein écran</span>':'⛶ <span>Plein écran</span>';
+ if(map){requestAnimationFrame(()=>{map.invalidateSize();setTimeout(()=>map.invalidateSize(),180)})}
+}
+document.addEventListener('click',e=>{
+ if(e.target.closest('#weather-map-fullscreen')){
+  setWeatherMapFullscreen(!$('weather-map-shell')?.classList.contains('wx-map-expanded'));
+ }
+ if(e.target.closest('#simbrief-clear-airports')){
+  for(const id of ['simbrief-departure','simbrief-arrival']){const el=$(id);if(el){el.value='';el.dispatchEvent(new Event('input',{bubbles:true}))}}
+  map?.closePopup();
+ }
+});
+document.addEventListener('keydown',e=>{
+ if(e.key==='Escape'&&$('weather-map-shell')?.classList.contains('wx-map-expanded'))setWeatherMapFullscreen(false);
+});
+
 document.addEventListener('DOMContentLoaded',()=>{
  const sel=$('flight-duration');if(!sel)return;
  for(let m=90;m<=300;m+=15){const option=document.createElement('option');option.value=String(m);option.textContent=Math.floor(m/60)+' h '+String(m%60).padStart(2,'0');sel.appendChild(option)}
