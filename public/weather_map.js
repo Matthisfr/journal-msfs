@@ -101,11 +101,13 @@ document.addEventListener('change',e=>{if(e.target.closest('#wx-filters'))applyF
 document.addEventListener('click',e=>{if(e.target.closest('#wx-reset')){document.querySelectorAll('#wx-filters input[type=checkbox]').forEach(x=>x.checked=true);applyFilters()}});
 
 // Modèle exploratoire A320 non calibré sur des OFP SimBrief. Temps bloc indicatif.
-const RANGE_CRUISE_KT=420;
-const RANGE_NONCRUISE_MIN=40;
-const RANGE_ROUTE_FACTOR=1.08;
-const distanceForMinutes=minutes=>Math.max(0,(minutes-RANGE_NONCRUISE_MIN)/60*RANGE_CRUISE_KT/RANGE_ROUTE_FACTOR);
-const minutesForDistance=nm=>Math.round(RANGE_NONCRUISE_MIN+nm*RANGE_ROUTE_FACTOR/RANGE_CRUISE_KT*60);
+// Estimation bloc A320 calibree sur trois OFP SimBrief (EIDW-LFPG, KSEA-KLAS, LFPG-LGMK).
+// Ajustement indicatif : 52 min fixes + 0,12 min par NM orthodromique.
+// Ne remplace pas un OFP : vents, routage, roulage et contraintes ATC non modelises.
+const RANGE_FIXED_MIN=52;
+const RANGE_MIN_PER_NM=0.12;
+const distanceForMinutes=minutes=>Math.max(0,(minutes-RANGE_FIXED_MIN)/RANGE_MIN_PER_NM);
+const minutesForDistance=nm=>Math.round(RANGE_FIXED_MIN+nm*RANGE_MIN_PER_NM);
 function airportPoint(code){
  const c=coordinates[String(code||'').trim().toUpperCase()];
  return c&&Number.isFinite(Number(c.lat))&&Number.isFinite(Number(c.lon))?[Number(c.lat),Number(c.lon)]:null;
