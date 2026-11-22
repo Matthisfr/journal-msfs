@@ -150,7 +150,9 @@ function updateAirportLabelColors(){
 function updateFlightRange(){
  const info=$('flight-range-info'),orig=$('simbrief-departure')?.value.trim().toUpperCase()||'',dest=$('simbrief-arrival')?.value.trim().toUpperCase()||'';
  updateAirportLabelColors();
- const minutes=Number($('flight-duration')?.value||90),nm=distanceForMinutes(minutes);
+ const minutes=Number($('flight-duration')?.value||120),nm=distanceForMinutes(minutes);
+ const forecast=$('simbrief-estimated-time');
+ if(forecast){const from=airportPoint(orig),to=airportPoint(dest);if(from&&to){const estimate=minutesForDistance(haversineNm(from,to));forecast.textContent=Math.floor(estimate/60)+' h '+String(estimate%60).padStart(2,'0')}else forecast.textContent='—'}
  if(!info)return;
  if(map&&rangeCircle){map.removeLayer(rangeCircle);rangeCircle=null}
  if(map&&routeLine){map.removeLayer(routeLine);routeLine=null}
@@ -211,7 +213,7 @@ document.addEventListener('keydown',e=>{
 document.addEventListener('DOMContentLoaded',()=>{
  const sel=$('flight-duration');if(!sel)return;
  for(let m=90;m<=300;m+=15){const option=document.createElement('option');option.value=String(m);option.textContent=Math.floor(m/60)+' h '+String(m%60).padStart(2,'0');sel.appendChild(option)}
- sel.value='150';updateFlightRange();
+ sel.value='120';updateFlightRange();
 });
 function popupAirportActions(icao){
  const code=safe(icao);
