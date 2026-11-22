@@ -764,7 +764,8 @@ async function loadSimbriefFlight(){
   }catch(e){el.innerHTML='<p>Lecture automatique impossible depuis ce navigateur (compte introuvable, réseau ou restrictions SimBrief). <a href="https://dispatch.simbrief.com/" target="_blank" rel="noopener noreferrer">Ouvrir SimBrief ↗</a></p><small>'+esc(e.message)+'</small>';}
   finally{button.disabled=false;}
 }
-$('#simbrief-refresh')?.addEventListener('click',loadSimbriefFlight);
+// Le bouton Consulter SimBrief ouvre le service officiel : la lecture directe de l’API XML depuis GitHub Pages peut être bloquée par CORS.
+$('#simbrief-refresh')?.addEventListener('click',()=>{window.open('https://dispatch.simbrief.com/','_blank','noopener,noreferrer')});
 async function showPublishedSimbrief(){
  const el=$('#simbrief-flight-data');if(!el)return;
  try{
