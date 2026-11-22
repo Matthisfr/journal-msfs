@@ -2501,7 +2501,7 @@
     "name": "Ilulissat Airport",
     "source": "OurAirports / airport-codes",
     "country_code": "GL",
-    "aircraft_marker": "cessna"
+    "aircraft_marker": "airliner"
   },
   "FALE": {
     "lat": -29.613381,
