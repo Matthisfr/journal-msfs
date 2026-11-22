@@ -80,7 +80,7 @@
 #weather-map-shell .wx-animation-setting input{width:16px;height:16px;flex-shrink:0}
 #weather-map-shell .wx-animation-setting small{display:none}
 @media(max-width:480px){#weather-map-shell .wx-animation-setting{left:8px;bottom:22px;padding:6px 8px}#weather-map-shell .wx-animation-setting label{font-size:11px}}
-</style></head>
+</style><style id="simbrief-estimate-heading-v2">#meteo .simbrief-estimate-heading{display:flex;align-items:baseline;justify-content:space-between;gap:6px;flex-wrap:wrap}#meteo .simbrief-estimate-note{font-size:10px;font-weight:500;color:#58748a;white-space:nowrap;text-transform:none;letter-spacing:0}</style></head>
 <body>
   <a class="skip" href="#main">Aller au contenu</a>
   <div class="topline"><div class="shell topinner"><span><span class="dot"></span> JOURNAL INDÉPENDANT · MSFS 2024</span><span class="top-status-wrap"><span id="sync-label">ÉDITION DE LANCEMENT · COLLECTE NON ACTIVÉE</span><a id="build-status" class="build-status build-status-unknown" href="https://github.com/Matthisfr/journal-msfs/actions/workflows/journal.yml" target="_blank" rel="noopener noreferrer" title="État de la dernière publication du Journal MSFS" aria-label="État de la publication : vérification en cours"><span class="build-status-dot" aria-hidden="true"></span><span id="build-status-text">Vérification…</span></a></span></div></div>
@@ -144,7 +144,7 @@
             <label>Départ (ICAO)<input id="simbrief-departure" name="orig" maxlength="4" minlength="4" pattern="[A-Za-z]{4}" placeholder="Choisir sur la carte" required autocomplete="off"></label>
             <label>Arrivée (ICAO)<input id="simbrief-arrival" name="dest" maxlength="4" minlength="4" pattern="[A-Za-z]{4}" placeholder="Choisir sur la carte" required autocomplete="off"></label>
             <label>Airline<input id="simbrief-airline" name="airline" value="AFR" maxlength="3" required></label>
-            <label>Flight Number<input id="simbrief-flight-number" name="fltnum" value="2809" required></label><div class="simbrief-estimate-field" aria-live="polite"><span class="simbrief-estimate-title">Temps de vol prévu</span><strong id="simbrief-estimated-time">—</strong><small>Estimation A320 · notre outil</small></div>
+            <label>Flight Number<input id="simbrief-flight-number" name="fltnum" value="2809" required></label><div class="simbrief-estimate-field" aria-live="polite"><div class="simbrief-estimate-heading"><span class="simbrief-estimate-title">Temps de vol prévu</span><span class="simbrief-estimate-note">(Estimation)</span></div><strong id="simbrief-estimated-time">—</strong></div>
           </div>
           <div class="simbrief-aircraft-info"><div><small>APPAREIL</small><strong>A320-200</strong></div><div><small>AIRFRAME</small><strong>G-FENX · CFM56-5B4/P · WTF</strong></div></div>
           <button type="submit" class="simbrief-dispatch-button">Ouvrir SimBrief ↗</button>
