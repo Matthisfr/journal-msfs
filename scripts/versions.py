@@ -208,7 +208,7 @@ def check_page(url):
         try:
             return fetch(url), None
         except urllib.error.HTTPError as exc:
-            if exc.code in (429, 500, 502, 503, 504) and attempt == 0:
+            if exc.code in (500, 502, 503, 504) and attempt == 0:
                 time.sleep(1.5)
                 continue
             label = "accès compte ou robot" if exc.code in (401, 403, 429) else "page inaccessible"
@@ -272,8 +272,30 @@ def update_versions(airports):
         if url.startswith("https://") and host in ALLOWED and a.get("source_scope")!="parent_reference_only":
             unique[url]=None
     # Une requête par fiche, même quand plusieurs scènes y font référence.
-    with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool:
-        fetched=dict(zip(unique,pool.map(check_page,unique)))
+    # Éviter les rafales de requêtes par boutique : Contrail et iniBuilds
+    # renvoient souvent HTTP 429 lorsque 12 fiches sont ouvertes simultanément.
+    # Deux connexions au maximum par domaine, et un court espacement entre
+    # les départs de requêtes ; les 429 persistants restent UNKNOWN.
+    import threading
+    import time
+    host_locks={}
+    host_next={}
+    host_guard=threading.Lock()
+    def polite_check(url):
+        host=urllib.parse.urlparse(url).hostname or ""
+        with host_guard:
+            if host not in host_locks:
+                host_locks[host]=threading.Semaphore(2)
+                host_next[host]=0.0
+            gate=host_locks[host]
+        with gate:
+            with host_guard:
+                delay=max(0,host_next[host]-time.monotonic())
+                host_next[host]=max(time.monotonic(),host_next[host])+0.8
+            if delay:time.sleep(delay)
+            return check_page(url)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
+        fetched=dict(zip(unique,pool.map(polite_check,unique)))
     # Découverte générique : chercher les annonces officielles liées par la
     # boutique, puis comparer uniquement les versions explicitement annoncées.
     bulletin_urls={}
