@@ -64,15 +64,16 @@ function decode(raw){
  return lines.length?lines.map(x=>'<div>'+safe(x)+'</div>').join(''):'Décodage automatique partiel indisponible : consulter le METAR brut.';
 }
 function flightCategory(a){
- const raw=String(a.raw||'').toUpperCase().split(/\\s+RMK\\b/)[0];
- const ceiling=[...raw.matchAll(/\\b(?:BKN|OVC|VV)(\\d{3})\\b/g)].map(x=>Number(x[1])*100);
+ const raw=String(a.raw||'').toUpperCase().split(/\s+RMK\b/)[0];
+ const ceiling=[...raw.matchAll(/\b(?:BKN|OVC|VV)(\d{3})\b/g)].map(x=>Number(x[1])*100);
  const c=ceiling.length?Math.min(...ceiling):Infinity;
  let visibility=Infinity;
- if(/\\bCAVOK\\b/.test(raw))visibility=10/1.609344;
- const metric=raw.match(/\\b(\\d{4})\\b(?=\\s|$)/g)||[];
- const meters=metric.map(x=>Number(x)).filter(x=>x===9999||(x>=0&&x<=9000));
+ if(/\bCAVOK\b/.test(raw))visibility=10/1.609344;
+ const tokens=raw.split(/\s+/);const windIndex=tokens.findIndex(t=>/^(?:\d{3}|VRB)\d{2,3}(?:G\d{2,3})?KT$/.test(t));
+ const visibilityToken=windIndex>=0?tokens.slice(windIndex+1,windIndex+4).find(t=>/^(?:9999|\d{4})(?:NDV)?$/.test(t)):null;
+ const meters=visibilityToken?[Number(visibilityToken.slice(0,4))]:[];
  if(meters.length)visibility=Math.min(visibility,Math.min(...meters.map(x=>x===9999?10000:x))/1609.344);
- const sm=raw.match(/\\b(?:(\\d+)\\s+)?(\\d+\\/\\d+|\\d+)SM\\b/);
+ const sm=raw.match(/\b(?:(\d+)\s+)?(\d+\/\d+|\d+)SM\b/);
  if(sm){const frac=sm[2].includes('/')?sm[2].split('/').reduce((a,b)=>Number(a)/Number(b)):Number(sm[2]);visibility=Math.min(visibility,Number(sm[1]||0)+frac)}
  if(c<500||visibility<1)return 'LIFR';
  if(c<1000||visibility<3)return 'IFR';
