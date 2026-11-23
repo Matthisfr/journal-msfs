@@ -83,7 +83,17 @@ $('#airport-body')?.addEventListener('click',event=>{
  const eye=event.target.closest?.('.airport-map-eye');
  if(eye)focusAirportFromList(eye.dataset.icao);
 });
+function renderAirportUpdateDigest(){
+ const host=document.getElementById('airport-update-digest');if(!host)return;
+ const day=String(status.versions_checked_at||'').slice(0,10);
+ const updates=airports.filter(a=>a.version_check_state==='verified'&&a.version_comparison==='update'&&a.version_checked_at===day);
+ const safeLink=a=>isSafeUrl(a.version_source_url||a.source_url);
+ host.innerHTML='<div class="sectionbar compact"><div><div class="overline">VERSIONS CONTRÔLÉES · '+esc(day||'date inconnue')+'</div><h2>'+updates.length+' mises à jour confirmées</h2></div></div>'+
+ (updates.length?'<div class="tablebox"><table><thead><tr><th>ICAO</th><th>Scène</th><th>Installée</th><th>Disponible</th><th>Fiche</th></tr></thead><tbody>'+
+ updates.sort((a,b)=>String(a.icao).localeCompare(String(b.icao))).map(a=>'<tr><td><strong>'+esc(a.icao)+'</strong></td><td>'+esc(a.name||a.folder||'')+'</td><td>'+esc(a.installed||'—')+'</td><td>'+esc(a.server_version||'—')+'</td><td>'+(safeLink(a)==='#'?'—':'<a href="'+esc(safeLink(a))+'" target="_blank" rel="noopener noreferrer">Voir ↗</a>')+'</td></tr>').join('')+'</tbody></table></div>':'<p>Aucune mise à jour confirmée lors du dernier contrôle daté.</p>');
+}
 function renderAirports(){
+ renderAirportUpdateDigest();
   const q=$('#airport-search').value.trim().toLowerCase(),region=$('#region-filter').value,st=$('#status-filter').value;
   const checkedDate=String(status.versions_checked_at||'').slice(0,10);
   const isVerified=a=>!!a.server_version&&a.version_check_state==='verified'&&a.version_checked_at===checkedDate;
