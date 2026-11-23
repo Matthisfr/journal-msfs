@@ -1,6 +1,10 @@
 name: Journal MSFS - météo de 15h (Paris)
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/weather-refresh-request.txt'
   schedule:
     # 15h07 en été (UTC+2) ou en hiver (UTC+1), avec rattrapages.
     - cron: '7 13 * * *'
@@ -28,7 +32,7 @@ jobs:
         shell: bash
         run: |
           hour=$(TZ=Europe/Paris date +%H)
-          if [[ "${{ github.event_name }}" != "workflow_dispatch" ]] && (( 10#$hour < 15 || 10#$hour > 16 )); then
+          if [[ "${{ github.event_name }}" == "schedule" ]] && (( 10#$hour < 15 || 10#$hour > 16 )); then
             echo "run=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
@@ -41,9 +45,9 @@ jobs:
           path=Path('public/weather_all.json')
           try:
               stamp=dt.datetime.fromisoformat(json.loads(path.read_text())['checked_at'].replace('Z','+00:00')).astimezone(local)
-              fresh=stamp.date()==now.date() and stamp.hour>=14 and stamp.minute>=45 if stamp.hour==14 else stamp.date()==now.date() and stamp.hour>=15
+              fresh=stamp.date()==now.date() and (stamp.hour>=15 or (stamp.hour==14 and stamp.minute>=45))
           except (OSError,KeyError,ValueError,TypeError): fresh=False
-          run=os.environ.get('EVENT')=='workflow_dispatch' or not fresh
+          run=os.environ.get('EVENT') in ('workflow_dispatch','push') or not fresh
           with open(os.environ['GITHUB_OUTPUT'],'a') as f: f.write(f'run={str(run).lower()}\n')
           print('Collecte météo 15h requise :',run)
           PY
