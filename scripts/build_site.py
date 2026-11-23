@@ -326,6 +326,15 @@ def render_watch(watch):
 def build():
     airports = json.loads((PUBLIC / "airports.json").read_text(encoding="utf-8"))
     assert len(airports) >= 1, "Inventaire des scènes vide"
+    # Retirer des achats souhaités les aéroports désormais présents dans l'inventaire.
+    wishlist_file = PUBLIC / "airport_wishlist.json"
+    if wishlist_file.exists():
+        wishlist = json.loads(wishlist_file.read_text(encoding="utf-8"))
+        if isinstance(wishlist, list):
+            owned = {str(a.get("icao", "")).strip().upper() for a in airports}
+            remaining = [x for x in wishlist if isinstance(x, dict) and str(x.get("icao", "")).strip().upper() not in owned]
+            if remaining != wishlist:
+                wishlist_file.write_text(json.dumps(remaining, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
     rows = render_rows(airports)
     status = json.loads((PUBLIC / "status.json").read_text(encoding="utf-8"))
     editorial = json.loads((PUBLIC / "editorial.json").read_text(encoding="utf-8"))
