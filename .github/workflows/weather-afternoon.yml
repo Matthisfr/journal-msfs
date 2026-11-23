@@ -1,0 +1,76 @@
+name: Journal MSFS - météo de 15h (Paris)
+
+on:
+  schedule:
+    # 15h07 en été (UTC+2) ou en hiver (UTC+1), avec rattrapages.
+    - cron: '7 13 * * *'
+    - cron: '7 14 * * *'
+    - cron: '37 14 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: journal-msfs-weather-afternoon
+  cancel-in-progress: false
+
+jobs:
+  refresh-weather:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - name: Vérifier le créneau français et la fraîcheur météo
+        id: gate
+        shell: bash
+        run: |
+          hour=$(TZ=Europe/Paris date +%H)
+          if [[ "${{ github.event_name }}" != "workflow_dispatch" ]] && (( 10#$hour < 15 || 10#$hour > 16 )); then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          python - <<'PY'
+          import datetime as dt, json, os
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          local=ZoneInfo('Europe/Paris')
+          now=dt.datetime.now(local)
+          path=Path('public/weather_all.json')
+          try:
+              stamp=dt.datetime.fromisoformat(json.loads(path.read_text())['checked_at'].replace('Z','+00:00')).astimezone(local)
+              fresh=stamp.date()==now.date() and stamp.hour>=14 and stamp.minute>=45 if stamp.hour==14 else stamp.date()==now.date() and stamp.hour>=15
+          except (OSError,KeyError,ValueError,TypeError): fresh=False
+          run=os.environ.get('EVENT')=='workflow_dispatch' or not fresh
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f: f.write(f'run={str(run).lower()}\n')
+          print('Collecte météo 15h requise :',run)
+          PY
+        env:
+          EVENT: ${{ github.event_name }}
+      - name: Collecter uniquement les METAR et TAF NOAA
+        if: steps.gate.outputs.run == 'true'
+        run: python scripts/refresh_weather_only.py
+      - name: Enregistrer les METAR actualisés
+        if: steps.gate.outputs.run == 'true'
+        shell: bash
+        run: |
+          git config user.name "journal-msfs-bot"
+          git config user.email "journal-msfs-bot@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+            git add public/weather_all.json
+            if git diff --cached --quiet; then
+              echo "Pas de changement météo à enregistrer"
+              exit 0
+            fi
+            git commit -m "Journal: METAR NOAA actualisés vers 15h (Paris)"
+            if git push origin HEAD:main; then
+              echo "METAR publiables via le workflow principal déclenché par push"
+              exit 0
+            fi
+            sleep 4
+          done
+          exit 1
