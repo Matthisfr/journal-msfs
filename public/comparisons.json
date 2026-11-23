@@ -629,9 +629,9 @@
         "url": "https://contrail.shop/products/wf-scenery-studio-vhhh-hong-kong-international-msfs2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_4451a4c3-3381-43f5-be86-484abc39957e_1200x1200.webp?v=1733860388",
         "image_checked": true,
-        "comparison": "equal",
+        "comparison": "",
         "server_version": "1.0.3",
-        "version_state": "À jour"
+        "version_state": "À vérifier"
       }
     ],
     "winner": "Non déterminé",
@@ -779,9 +779,9 @@
         "url": "https://contrail.shop/products/taimodels-wsss-singapore-changi-airport-msfs2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/wsss_tm_thumb_0ca69b4f-3ce9-4b1a-92c7-411146303443_1200x1200.png?v=1778618269",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "update",
         "server_version": "1.7.0",
-        "version_state": "À vérifier"
+        "version_state": "Mise à jour disponible"
       }
     ],
     "winner": "Non déterminé",
@@ -1035,9 +1035,9 @@
         "url": "https://contrail.shop/products/eggp-liverpool-john-lennon-airport",
         "image": "https://contrail.shop/cdn/shop/products/thumb_7cce8b0b-a451-4884-8971-df00701dd622_1200x1200.jpg?v=1674664969",
         "image_checked": true,
-        "comparison": "equal",
+        "comparison": "",
         "server_version": "1.5.0",
-        "version_state": "À jour"
+        "version_state": "À vérifier"
       },
       {
         "publisher": "inibuilds",
@@ -1345,9 +1345,9 @@
         "url": "https://contrail.shop/products/lemg-malaga-airport-msfs",
         "image": "https://contrail.shop/cdn/shop/files/thumb_16571092-81d1-4110-84e4-4894e481e8fa_1200x1200.jpg?v=1701355292",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.2.2",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       }
     ],
     "winner": "Non déterminé",
@@ -2118,9 +2118,9 @@
         "url": "https://contrail.shop/products/atelic-lpma-madeira-airport-msfs",
         "image": "https://contrail.shop/cdn/shop/files/thumb_22d980c6-5d85-49e6-83c9-d113ab0d5d97_1200x1200.webp?v=1729290688",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.1.0",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       }
     ],
     "winner": "Non déterminé",

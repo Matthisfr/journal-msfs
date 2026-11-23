@@ -1,7 +1,7 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-11-22T19:34:28.235718+00:00",
+  "retrieved_at": "2026-11-23T06:07:03.308471+00:00",
   "origin": {
     "icao": "KSEA",
     "name": "SEATTLE-TACOMA INTL"
@@ -14,10 +14,10 @@
   "aircraft": "A320",
   "route": "SUMMA2 LKV DCT RYANN J92 OAL DCT TQILA COKTL4",
   "altitude": "37000",
-  "enroute_time": "01:51:15",
+  "enroute_time": "01:51:11",
   "scheduled_departure": "2026-11-23T15:50:00Z",
   "scheduled_arrival": "2026-11-23T18:15:00Z",
-  "generated_at": "2026-11-22T18:34:07Z",
+  "generated_at": "2026-11-22T22:00:10Z",
   "route_points": [
     {
       "lat": 47.252167,
@@ -30,8 +30,8 @@
       "name": "SUMMA"
     },
     {
-      "lat": 44.764545,
-      "lon": -121.295857,
+      "lat": 44.748412,
+      "lon": -121.290033,
       "name": "TOC"
     },
     {
