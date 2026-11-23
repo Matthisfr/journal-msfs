@@ -334,7 +334,7 @@ def build():
             owned = {str(a.get("icao", "")).strip().upper() for a in airports}
             remaining = [x for x in wishlist if isinstance(x, dict) and str(x.get("icao", "")).strip().upper() not in owned]
             if remaining != wishlist:
-                wishlist_file.write_text(json.dumps(remaining, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+                wishlist_file.write_text(json.dumps(remaining, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     rows = render_rows(airports)
     status = json.loads((PUBLIC / "status.json").read_text(encoding="utf-8"))
     editorial = json.loads((PUBLIC / "editorial.json").read_text(encoding="utf-8"))
