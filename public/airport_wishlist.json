@@ -20,6 +20,11 @@
     "country": "MX"
   },
   {
+    "icao": "SBBR",
+    "name": "SBBR",
+    "country": "—"
+  },
+  {
     "icao": "SBGL",
     "name": "Rio de Janeiro/Galeão – Antônio Carlos Jobim",
     "country": "BR"
