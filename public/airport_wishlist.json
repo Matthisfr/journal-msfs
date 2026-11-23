@@ -1,5 +1,10 @@
 [
   {
+    "icao": "EGBB",
+    "name": "Birmingham Airport",
+    "country": "GB"
+  },
+  {
     "icao": "GMAD",
     "name": "Al Massira Airport",
     "country": "MA"
