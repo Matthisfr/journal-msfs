@@ -3,5 +3,10 @@
     "icao": "MMLP",
     "name": "Aeropuerto Internacional de La Paz (Manuel Márquez de León)",
     "country": "MX"
+  },
+  {
+    "icao": "SBGL",
+    "name": "SBGL",
+    "country": "—"
   }
 ]
