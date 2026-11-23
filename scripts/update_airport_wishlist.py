@@ -33,7 +33,7 @@ if action == "ADD" and (not entry.get("name") or not entry.get("country_code")):
 
 if action=="ADD" and icao not in owned and not any(x["icao"]==icao for x in entries):
     if len(entries)>=30: raise SystemExit("Limite de 30 aéroports atteinte")
-    if not entry.get("name") or not entry.get("country_code"):\n        raise SystemExit("Aéroport non identifié : ajout refusé pour éviter un nom ou pays erroné : "+icao)\n    entries.append({"icao":icao,"name":entry["name"],"country":entry["country_code"]})
+    entries.append({"icao":icao,"name":entry.get("name") or icao,"country":entry.get("country_code") or "—"})
 if action=="REMOVE": entries=[x for x in entries if x["icao"]!=icao]
 entries=[x for x in entries if x["icao"] not in owned]
 entries.sort(key=lambda x:x["icao"])
