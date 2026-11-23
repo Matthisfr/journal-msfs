@@ -17,7 +17,7 @@ airports=json.loads(Path("public/airports.json").read_text())
 owned={str(x.get("icao","")).upper() for x in airports}
 coords=json.loads(Path("public/airport_coordinates.json").read_text())
 entry=coords.get(icao,{})
-if action=="ADD" and icao not in owned and entry and not any(x["icao"]==icao for x in entries):
+if action=="ADD" and icao not in owned and not any(x["icao"]==icao for x in entries):
     if len(entries)>=30: raise SystemExit("Limite de 30 aéroports atteinte")
     entries.append({"icao":icao,"name":entry.get("name") or icao,"country":entry.get("country_code") or "—"})
 if action=="REMOVE": entries=[x for x in entries if x["icao"]!=icao]
