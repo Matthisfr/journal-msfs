@@ -420,6 +420,21 @@ async function renderMap(){
     }
     updateShoppingButton();
   }catch(error){console.warn('Liste de courses indisponible',error);updateShoppingButton()}
+  // Liste de courses partagée : écriture sécurisée via une issue GitHub du propriétaire.
+  const wishlistHost=document.getElementById('airport-wishlist');
+  const ownedWishlistCodes=new Set(airports.map(a=>String(a.icao||'').toUpperCase()));
+  const wishlistUrl=(action,code)=>'https://github.com/Matthisfr/journal-msfs/issues/new?'+new URLSearchParams({title:'[AIRPORT-WISHLIST] '+action+' '+code,body:'Demande personnelle pour le Journal MSFS. Enregistrer cette sélection dans la liste de courses.'}).toString();
+  let wishlistEntries=[];
+  const renderWishlist=()=>{
+   if(!wishlistHost)return;
+   const rows=wishlistEntries.filter(x=>!ownedWishlistCodes.has(x.icao));
+   wishlistHost.innerHTML='<div class="sectionbar compact"><div><div class="overline">MES FUTURS ACHATS</div><h2>🛍️ Liste de courses — '+rows.length+' / 30</h2></div></div>'+
+    (rows.length?'<div class="tablebox"><table><thead><tr><th>ICAO</th><th>Aéroport</th><th>Pays</th><th>Action</th></tr></thead><tbody>'+rows.map(x=>'<tr><td><strong>'+esc(x.icao)+'</strong></td><td>'+esc(x.name)+'</td><td>'+esc(x.country||'—')+'</td><td><a href="'+esc(wishlistUrl('REMOVE',x.icao))+'" target="_blank" rel="noopener noreferrer">✕ Retirer</a></td></tr>').join('')+'</tbody></table></div>':'<p class="fineprint">Ta liste est vide. Choisis un aéroport sur la carte et ajoute-le ici.</p>')+
+    '<p class="fineprint">Liste commune à tous tes appareils. Pour ajouter ou retirer un aéroport, valide la demande sur GitHub avec ton compte Matthisfr. La liste est mise à jour après publication ; les aéroports de ton inventaire sont automatiquement masqués.</p>';
+  };
+  const reloadWishlist=async()=>{try{const response=await fetch('airport_wishlist.json',{cache:'no-store'});if(response.ok){const data=await response.json();wishlistEntries=Array.isArray(data)?data:[];renderWishlist()}}catch(e){console.warn('Liste de courses non disponible',e)}};
+  renderWishlist();reloadWishlist();
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)reloadWishlist()});
   // Appui long (iPad) ou clic droit : raccourcis de recherche des scènes.
   // Identifier l'aéroport réellement touché, y compris hors inventaire personnel.
   const showAirportShops=(code,name,position)=>{
@@ -431,7 +446,7 @@ async function renderMap(){
     ['Flightsim.to','https://flightsim.to/search?q='+query]
    ];
    const html='<div class="airport-shop-popup"><strong>'+esc(code)+' — '+esc(name||code)+'</strong><p>Rechercher des scènes pour cet aéroport :</p>'+
-     shops.map(([label,url])=>'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(label)+' ↗</a>').join('')+'</div>';
+     shops.map(([label,url])=>'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(label)+' ↗</a>').join('')+'<p><a class="airport-wishlist-add" href="'+esc(wishlistUrl('ADD',code))+'" target="_blank" rel="noopener noreferrer">🛍️ Ajouter à ma liste de courses</a></p></div>';
    L.popup({maxWidth:300}).setLatLng(position).setContent(html).openOn(airportMap);
   };
   let worldAirportIndexPromise=null;
