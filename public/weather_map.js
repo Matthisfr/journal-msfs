@@ -251,6 +251,12 @@ async function load(){
   const [wr,cr,ar]=await Promise.all([fetch('weather_all.json',{cache:'no-store'}).then(async r=>r.ok?r:fetch('status.json',{cache:'no-store'})),fetch('airport_coordinates.json',{cache:'no-store'}),fetch('airports.json',{cache:'no-store'})]);
   if(!wr.ok||!cr.ok||!ar.ok)throw Error('Les données météo complètes ne sont pas encore publiées.');
   const [weather,coords,airports]=await Promise.all([wr.json(),cr.json(),ar.json()]);if(!weather.stations&&Array.isArray(weather.weather))weather.stations=weather.weather;
+  const updated=$('metar-header-updated');
+  if(updated){
+   const stamp=weather.checked_at||weather.updated_at||weather.generated_at;
+   const date=stamp?new Date(stamp):null;
+   updated.textContent=date&&!Number.isNaN(date.getTime())?'mis à jour le '+new Intl.DateTimeFormat('fr-FR',{timeZone:'Europe/Paris',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(date).replace(',',' à'):'mise à jour non datée';
+  }
   coordinates=coords;
   const names=new Map(airports.map(a=>[a.icao,a.name]));
   map=L.map(el,{worldCopyJump:true}).setView([35,10],3);
