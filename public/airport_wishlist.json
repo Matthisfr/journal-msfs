@@ -28,5 +28,10 @@
     "icao": "SBGL",
     "name": "Rio de Janeiro/Galeão – Antônio Carlos Jobim",
     "country": "BR"
+  },
+  {
+    "icao": "SBPA",
+    "name": "SBPA",
+    "country": "—"
   }
 ]
