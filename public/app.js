@@ -445,6 +445,8 @@ async function renderMap(){
   const reloadWishlist=async()=>{try{const response=await fetch('airport_wishlist.json',{cache:'no-store'});if(response.ok){const data=await response.json();wishlistEntries=Array.isArray(data)?data:[];renderWishlist()}}catch(e){console.warn('Liste de courses non disponible',e)}};
   renderWishlist();reloadWishlist();
   document.addEventListener('visibilitychange',()=>{if(!document.hidden)reloadWishlist()});
+  window.addEventListener('focus',reloadWishlist);
+  setInterval(()=>{if(!document.hidden)reloadWishlist()},60000);
   // Appui long (iPad) ou clic droit : raccourcis de recherche des scènes.
   // Identifier l'aéroport réellement touché, y compris hors inventaire personnel.
   const showAirportShops=(code,name,position)=>{
