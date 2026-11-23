@@ -48,5 +48,10 @@
     "icao": "SBPA",
     "name": "Aeroporto Internacional de Porto Alegre — Salgado Filho",
     "country": "BR"
+  },
+  {
+    "icao": "YSCB",
+    "name": "Canberra Airport",
+    "country": "AU"
   }
 ]
