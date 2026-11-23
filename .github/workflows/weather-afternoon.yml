@@ -14,9 +14,11 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
-  group: journal-msfs-weather-afternoon
+  group: journal-msfs-pages
   cancel-in-progress: false
 
 jobs:
@@ -70,7 +72,7 @@ jobs:
           git commit -m "Journal: METAR NOAA actualisés vers 15h (Paris)"
           for attempt in 1 2 3; do
             if git push origin HEAD:main; then
-              echo "METAR publiables via le workflow principal déclenché par push"
+              echo "METAR enregistrés sur main ; publication directe à suivre"
               exit 0
             fi
             git fetch origin main
@@ -78,3 +80,18 @@ jobs:
             sleep 4
           done
           exit 1
+
+      - name: Récupérer les données publiables les plus récentes
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Publier directement les METAR sur GitHub Pages
+        if: steps.gate.outputs.run == 'true'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: public
+          clean: true
+          single-commit: true
