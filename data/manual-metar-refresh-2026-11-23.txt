@@ -1,0 +1,1 @@
+Demande explicite de rafraîchissement immédiat du Journal MSFS et des données METAR NOAA AWC, le 23 novembre 2026. La date affichée doit provenir de weather_all.json.checked_at et être formatée en Europe/Paris.
