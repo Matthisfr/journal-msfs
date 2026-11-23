@@ -5,6 +5,7 @@ on:
 permissions:
   contents: write
   issues: write
+  pages: write
 concurrency:
   group: journal-msfs-pages
   cancel-in-progress: false
@@ -32,3 +33,14 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh issue close "${{ github.event.issue.number }}" --repo "${{ github.repository }}"
+      - name: Récupérer le dernier inventaire et la liste
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+      - name: Publier la liste sur GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: public
+          clean: true
+          single-commit: true
