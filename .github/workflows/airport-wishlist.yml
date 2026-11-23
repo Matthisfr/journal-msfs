@@ -1,0 +1,34 @@
+name: Journal MSFS - liste de courses aéroports
+on:
+  issues:
+    types: [opened]
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: journal-msfs-pages
+  cancel-in-progress: false
+jobs:
+  wishlist:
+    if: github.event.issue.user.login == github.repository_owner && startsWith(github.event.issue.title, '[AIRPORT-WISHLIST] ')
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Modifier la liste de courses
+        run: python scripts/update_airport_wishlist.py
+      - name: Enregistrer les changements
+        run: |
+          git config user.name journal-msfs-bot
+          git config user.email journal-msfs-bot@users.noreply.github.com
+          git add public/airport_wishlist.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Journal: liste de courses aéroports"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Fermer la demande traitée
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue close "${{ github.event.issue.number }}" --repo "${{ github.repository }}"
