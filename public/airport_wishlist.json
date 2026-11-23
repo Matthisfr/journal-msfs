@@ -1,18 +1,18 @@
 [
   {
     "icao": "KSJC",
-    "name": "KSJC",
-    "country": "—"
+    "name": "San José Mineta International Airport",
+    "country": "US"
   },
   {
     "icao": "KSMF",
-    "name": "KSMF",
-    "country": "—"
+    "name": "Sacramento International Airport",
+    "country": "US"
   },
   {
     "icao": "MMGL",
-    "name": "MMGL",
-    "country": "—"
+    "name": "Aeropuerto Internacional de Guadalajara (Miguel Hidalgo y Costilla)",
+    "country": "MX"
   },
   {
     "icao": "MMLP",
@@ -21,22 +21,22 @@
   },
   {
     "icao": "SBBR",
-    "name": "SBBR",
-    "country": "—"
+    "name": "Aeroporto Internacional de Brasília — Presidente Juscelino Kubitschek",
+    "country": "BR"
   },
   {
     "icao": "SBEG",
-    "name": "SBEG",
-    "country": "—"
+    "name": "Aeroporto Internacional de Manaus — Eduardo Gomes",
+    "country": "BR"
   },
   {
     "icao": "SBGL",
-    "name": "Rio de Janeiro/Galeão – Antônio Carlos Jobim",
+    "name": "Aeroporto Internacional do Rio de Janeiro/Galeão — Antônio Carlos Jobim",
     "country": "BR"
   },
   {
     "icao": "SBPA",
-    "name": "SBPA",
-    "country": "—"
+    "name": "Aeroporto Internacional de Porto Alegre — Salgado Filho",
+    "country": "BR"
   }
 ]
