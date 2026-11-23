@@ -292,6 +292,16 @@ async function load(){
    }catch(e){console.warn('Fonds vectoriels météo indisponibles, fonds classiques conservés',e)}
   })();
   layer=L.layerGroup().addTo(map);
+  const bounds=renderWeatherStations(weather,coords,names);
+  weatherStamp=weather.checked_at||weather.updated_at||weather.generated_at||null;
+  updateFlightRange();
+  if(bounds.length&&!rangeCircle&&!routeLine)map.fitBounds(bounds,{padding:[28,28],maxZoom:4});
+
+ }catch(e){el.innerHTML='<p class="error">'+safe(e.message)+'</p>'}finally{loading=false}
+}
+
+function renderWeatherStations(weather,coords,names){
+  weatherMarkers.length=0;missingMarkers.length=0;
   const valid=new Set(),bounds=[];
   for(const a of weather.stations||[]){
    const c=coords[a.icao];if(!c||!Number.isFinite(Number(c.lat))||!Number.isFinite(Number(c.lon)))continue;
@@ -308,11 +318,32 @@ async function load(){
    missingMarkers.push({marker:missingMarker,icao:String(icao).toUpperCase()});missingMarker.on('add',updateAirportLabelColors);
   }
   applyFilters();
-  updateFlightRange();
-  if(bounds.length&&!rangeCircle&&!routeLine)map.fitBounds(bounds,{padding:[28,28],maxZoom:4});
-
- }catch(e){el.innerHTML='<p class="error">'+safe(e.message)+'</p>'}finally{loading=false}
+  return bounds;
 }
+let weatherStamp=null;
+async function refreshWeatherIfNew(){
+ if(!map||loading||document.visibilityState==='hidden')return;
+ try{
+  const response=await fetch('weather_all.json',{cache:'no-store'});
+  if(!response.ok)return;
+  const weather=await response.json();
+  const stamp=weather.checked_at||weather.updated_at||weather.generated_at;
+  if(!stamp||stamp===weatherStamp)return;
+  const airportsResponse=await fetch('airports.json',{cache:'no-store'});
+  if(!airportsResponse.ok)return;
+  const airports=await airportsResponse.json();
+  const names=new Map(airports.map(a=>[a.icao,a.name]));
+  const updated=$('metar-header-updated');
+  if(updated){
+   const date=new Date(stamp);
+   if(!Number.isNaN(date.getTime()))updated.textContent='mis à jour le '+new Intl.DateTimeFormat('fr-FR',{timeZone:'Europe/Paris',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(date).replace(',',' à');
+  }
+  renderWeatherStations(weather,coordinates,names);
+  weatherStamp=stamp;
+ }catch(error){console.warn('Actualisation METAR différée',error)}
+}
+setInterval(refreshWeatherIfNew,5*60*1000);
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')refreshWeatherIfNew()});
 let lastFlightShown=false;
 async function toggleLastSimbriefFlight(){
  const button=$('weather-last-flight-toggle'),status=$('weather-last-flight-status');
