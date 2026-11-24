@@ -81,17 +81,18 @@ jobs:
           done
           exit 1
 
-      - name: Récupérer les données publiables les plus récentes
+      - name: Publier uniquement le fichier météo dans gh-pages
         if: steps.gate.outputs.run == 'true'
+        shell: bash
         run: |
-          git fetch origin main
-          git reset --hard origin/main
-
-      - name: Publier directement les METAR sur GitHub Pages
-        if: steps.gate.outputs.run == 'true'
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: public
-          clean: true
-          single-commit: true
+          git fetch origin main gh-pages
+          git worktree add --detach "$RUNNER_TEMP/weather-pages" origin/gh-pages
+          git show origin/main:public/weather_all.json > "$RUNNER_TEMP/weather-pages/weather_all.json"
+          cd "$RUNNER_TEMP/weather-pages"
+          git add weather_all.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Journal: publication météo de 15h"
+            git push origin HEAD:gh-pages
+          fi
+          git fetch origin gh-pages
+          git show origin/gh-pages:weather_all.json | python -c 'import json,sys; print("Météo publiée :",json.load(sys.stdin)["checked_at"])'
