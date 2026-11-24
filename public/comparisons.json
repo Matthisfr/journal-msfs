@@ -520,6 +520,36 @@
     "criteria": []
   },
   {
+    "code": "KSMF",
+    "name": "KSMF Sacramento International Airport",
+    "scenes": [
+      {
+        "publisher": "DOUBLET",
+        "installed": "1.1.0",
+        "url": "https://secure.simmarket.com/double-t-ksmf-sacramento-intl-airport-msfs.phtml",
+        "image": "https://secure.simmarket.com/images/products/0/0d/17621/LOGO.png",
+        "image_checked": true,
+        "comparison": "equal",
+        "server_version": "1.1",
+        "version_state": "À jour"
+      },
+      {
+        "publisher": "Orbx",
+        "installed": "1.0.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
     "code": "SKBO",
     "name": "Airport",
     "scenes": [
@@ -629,9 +659,9 @@
         "url": "https://contrail.shop/products/wf-scenery-studio-vhhh-hong-kong-international-msfs2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_4451a4c3-3381-43f5-be86-484abc39957e_1200x1200.webp?v=1733860388",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.0.3",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       }
     ],
     "winner": "Non déterminé",
@@ -761,8 +791,18 @@
   },
   {
     "code": "WSSS",
-    "name": "WSSS Singapore",
+    "name": "WSSS Singapore Changi International Airport",
     "scenes": [
+      {
+        "publisher": "Cloudsurf Asia Simulations",
+        "installed": "1.0.2",
+        "url": "https://secure.simmarket.com/cloudsurf-asia-simulations-wsss-singapore-changi-airport-msfs.phtml",
+        "image": "https://secure.simmarket.com/images/products/e/ef/14445/SIMMARKET.jpg",
+        "image_checked": true,
+        "comparison": "update",
+        "server_version": "1.7.0",
+        "version_state": "Mise à jour disponible"
+      },
       {
         "publisher": "imaginesim",
         "installed": "3.1.0",
@@ -859,9 +899,9 @@
         "url": "https://contrail.shop/products/atelic-eddc-dresden-airport-msfs-2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_ce0c7b23-fed4-4308-a9c7-10a450774707_1200x1200.jpg?v=1774289711",
         "image_checked": true,
-        "comparison": "equal",
+        "comparison": "",
         "server_version": "1.0.0",
-        "version_state": "À jour"
+        "version_state": "À vérifier"
       },
       {
         "publisher": "JUSTSIM",
@@ -894,14 +934,24 @@
         "version_state": "À jour"
       },
       {
+        "publisher": "JustSim",
+        "installed": "1.1.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
         "publisher": "MK-STUDIOS",
         "installed": "1.1.1",
         "url": "https://contrail.shop/products/mk-studios-eddl-dusseldorf-airport-msfs-2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_0e1943d5-ff21-4979-b910-6a68e7adec37_1200x1200.webp?v=1748426034",
         "image_checked": true,
-        "comparison": "equal",
+        "comparison": "",
         "server_version": "1.1.1",
-        "version_state": "À jour"
+        "version_state": "À vérifier"
       }
     ],
     "winner": "Partagé",
@@ -975,9 +1025,39 @@
         "url": "https://contrail.shop/products/edwe-emden-airport-msfs",
         "image": "https://contrail.shop/cdn/shop/products/thumb_b45f323a-efbe-42b0-8aed-f96835854360_1200x1200.jpg?v=1674666809",
         "image_checked": true,
-        "comparison": "equal",
+        "comparison": "",
         "server_version": "1.0.0",
-        "version_state": "À jour"
+        "version_state": "À vérifier"
+      }
+    ],
+    "winner": "Non déterminé",
+    "confidence": "Avis insuffisants",
+    "summary": "Aucune comparaison indépendante suffisamment fiable. Consultez les fiches officielles pour les images et avis disponibles.",
+    "criteria": []
+  },
+  {
+    "code": "EGBB",
+    "name": "Birmingham Airport | EGBB",
+    "scenes": [
+      {
+        "publisher": "Macco Simulations",
+        "installed": "1.1.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
+      {
+        "publisher": "pyreegue",
+        "installed": "1.0.9",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
       }
     ],
     "winner": "Non déterminé",
@@ -1285,9 +1365,9 @@
         "url": "https://contrail.shop/products/gcts-tenerife-south-airport",
         "image": "https://contrail.shop/cdn/shop/products/thumb_e8525d76-9dfb-42ea-a2f3-1e64174838a9_1200x1200.jpg?v=1674667936",
         "image_checked": true,
-        "comparison": "equal",
+        "comparison": "",
         "server_version": "1.4.0",
-        "version_state": "À jour"
+        "version_state": "À vérifier"
       }
     ],
     "winner": "Non déterminé",
@@ -1345,9 +1425,9 @@
         "url": "https://contrail.shop/products/lemg-malaga-airport-msfs",
         "image": "https://contrail.shop/cdn/shop/files/thumb_16571092-81d1-4110-84e4-4894e481e8fa_1200x1200.jpg?v=1701355292",
         "image_checked": true,
-        "comparison": "equal",
+        "comparison": "",
         "server_version": "1.2.2",
-        "version_state": "À jour"
+        "version_state": "À vérifier"
       }
     ],
     "winner": "Non déterminé",
@@ -1783,8 +1863,18 @@
   },
   {
     "code": "LIPZ",
-    "name": "LIPZ VENICE AIRPORT",
+    "name": "Aerosoft Venice Airport",
     "scenes": [
+      {
+        "publisher": "Aerosoft",
+        "installed": "1.0.0",
+        "url": "",
+        "image": "",
+        "image_checked": false,
+        "comparison": "",
+        "server_version": "",
+        "version_state": "À vérifier"
+      },
       {
         "publisher": "Atelic",
         "installed": "1.0.4",
@@ -2118,9 +2208,9 @@
         "url": "https://contrail.shop/products/atelic-lpma-madeira-airport-msfs",
         "image": "https://contrail.shop/cdn/shop/files/thumb_22d980c6-5d85-49e6-83c9-d113ab0d5d97_1200x1200.webp?v=1729290688",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.1.0",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       }
     ],
     "winner": "Non déterminé",

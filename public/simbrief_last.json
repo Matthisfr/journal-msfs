@@ -1,158 +1,133 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-11-24T06:10:33.305678+00:00",
+  "retrieved_at": "2026-11-24T10:41:49.563298+00:00",
   "origin": {
-    "icao": "EKCH",
-    "name": "KASTRUP"
+    "icao": "LEMD",
+    "name": "ADOLFO SUAREZ MADRID-BARAJAS"
   },
   "destination": {
-    "icao": "LSPV",
-    "name": "WANGEN-LACHEN"
+    "icao": "LFPO",
+    "name": "ORLY"
   },
   "flight_number": "2809",
   "aircraft": "A320",
-  "route": "NEXE2A NEXEN T503 MICOS DCT SAS P605 ELNAT Z99 MASEK DCT KRH T715 PABLA Y163 NATOR N850 RIPUS L613 MANEG Z651 KESEX DCT",
+  "route": "RBO4N RBO DCT OSTIX DCT GASMO DCT DGO L176 LUSEM DCT LULUT DCT TUDRA DCT BEVOL UT158 AMB AMB9E",
   "altitude": "38000",
-  "enroute_time": "01:26:01",
-  "scheduled_departure": "2026-11-23T20:45:00Z",
-  "scheduled_arrival": "2026-11-23T22:45:00Z",
-  "generated_at": "2026-11-23T20:14:27Z",
+  "enroute_time": "01:20:20",
+  "scheduled_departure": "2026-11-24T07:45:00Z",
+  "scheduled_arrival": "2026-11-24T09:45:00Z",
+  "generated_at": "2026-11-24T07:11:29Z",
   "route_points": [
     {
-      "lat": 55.648992,
-      "lon": 12.70435,
-      "name": "CH840"
+      "lat": 40.546417,
+      "lon": -3.575194,
+      "name": "SSY"
     },
     {
-      "lat": 55.741436,
-      "lon": 12.842397,
-      "name": "CH843"
+      "lat": 40.636417,
+      "lon": -3.542639,
+      "name": "MD901"
     },
     {
-      "lat": 55.603236,
-      "lon": 12.931364,
-      "name": "CH844"
+      "lat": 40.7035,
+      "lon": -3.536667,
+      "name": "MD902"
     },
     {
-      "lat": 55.5156,
-      "lon": 12.771814,
-      "name": "CH845"
+      "lat": 40.853861,
+      "lon": -3.246639,
+      "name": "RBO"
     },
     {
-      "lat": 55.203383,
-      "lon": 12.12305,
-      "name": "BISTA"
+      "lat": 41.504444,
+      "lon": -3.1,
+      "name": "OSTIX"
     },
     {
-      "lat": 54.810778,
-      "lon": 11.625242,
-      "name": "NEXEN"
+      "lat": 41.729444,
+      "lon": -3.048889,
+      "name": "GASMO"
     },
     {
-      "lat": 54.56,
-      "lon": 11.313611,
-      "name": "GIMRU"
+      "lat": 42.453306,
+      "lon": -2.880694,
+      "name": "DGO"
     },
     {
-      "lat": 54.305556,
-      "lon": 11.005278,
-      "name": "MICOS"
-    },
-    {
-      "lat": 53.704938,
-      "lon": 10.665697,
+      "lat": 42.962852,
+      "lon": -2.262006,
       "name": "TOC"
     },
     {
-      "lat": 52.250778,
-      "lon": 9.884219,
-      "name": "SAS"
+      "lat": 42.983722,
+      "lon": -2.236361,
+      "name": "CEGAM"
     },
     {
-      "lat": 51.868489,
-      "lon": 9.80975,
-      "name": "NORTA"
+      "lat": 43.098444,
+      "lon": -2.094722,
+      "name": "BAGAS"
     },
     {
-      "lat": 51.631547,
-      "lon": 9.764619,
-      "name": "LUXUX"
+      "lat": 43.311194,
+      "lon": -1.830389,
+      "name": "SSN"
     },
     {
-      "lat": 51.470008,
-      "lon": 9.734122,
-      "name": "WERRA"
+      "lat": 43.374722,
+      "lon": -1.780556,
+      "name": "LUSEM"
     },
     {
-      "lat": 51.204317,
-      "lon": 9.690989,
-      "name": "ELNAT"
+      "lat": 44.398611,
+      "lon": -0.839722,
+      "name": "LULUT"
     },
     {
-      "lat": 51.085,
-      "lon": 9.6675,
-      "name": "ELLUM"
+      "lat": 46.538889,
+      "lon": 0.780833,
+      "name": "TUDRA"
     },
     {
-      "lat": 50.729167,
-      "lon": 9.598333,
-      "name": "MASEK"
+      "lat": 47.011944,
+      "lon": 0.930833,
+      "name": "BEVOL"
     },
     {
-      "lat": 48.992944,
-      "lon": 8.584236,
-      "name": "KRH"
-    },
-    {
-      "lat": 48.788586,
-      "lon": 8.351969,
-      "name": "PABLA"
-    },
-    {
-      "lat": 48.578078,
-      "lon": 8.275225,
+      "lat": 47.304901,
+      "lon": 1.02448,
       "name": "TOD"
     },
     {
-      "lat": 48.490833,
-      "lon": 8.243611,
-      "name": "HERBI"
+      "lat": 47.428917,
+      "lon": 1.064444,
+      "name": "AMB"
     },
     {
-      "lat": 48.17,
-      "lon": 8.321261,
-      "name": "NATOR"
+      "lat": 47.5075,
+      "lon": 1.104722,
+      "name": "DIBES"
     },
     {
-      "lat": 47.858333,
-      "lon": 8.396667,
-      "name": "TITIX"
+      "lat": 48.059167,
+      "lon": 1.387083,
+      "name": "CAD"
     },
     {
-      "lat": 47.6895,
-      "lon": 8.436972,
-      "name": "TRA"
+      "lat": 48.131361,
+      "lon": 1.459889,
+      "name": "SOTIP"
     },
     {
-      "lat": 47.260278,
-      "lon": 8.5,
-      "name": "RIPUS"
+      "lat": 48.24175,
+      "lon": 1.571639,
+      "name": "ODILO"
     },
     {
-      "lat": 47.204167,
-      "lon": 8.722222,
-      "name": "MANEG"
-    },
-    {
-      "lat": 47.234722,
-      "lon": 8.716667,
-      "name": "KESEX"
-    },
-    {
-      "lat": 47.204722,
-      "lon": 8.8675,
-      "name": "LSPV"
+      "lat": 48.723333,
+      "lon": 2.379444,
+      "name": "LFPO"
     }
   ]
 }

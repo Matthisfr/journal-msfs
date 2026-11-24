@@ -3926,5 +3926,45 @@
     "source": "OurAirports / airport-codes",
     "country_code": "US",
     "aircraft_marker": "airliner"
+  },
+  "EGBB": {
+    "lat": 52.453899,
+    "lon": -1.74803,
+    "name": "Birmingham Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "GB",
+    "aircraft_marker": "airliner"
+  },
+  "GMAD": {
+    "lat": 30.322478,
+    "lon": -9.412003,
+    "name": "Al Massira Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "MA",
+    "aircraft_marker": "airliner"
+  },
+  "KSJC": {
+    "lat": 37.362452,
+    "lon": -121.929188,
+    "name": "Mineta San Jose International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
+  },
+  "KSMF": {
+    "lat": 38.6954,
+    "lon": -121.591003,
+    "name": "Sacramento International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
+  },
+  "YSCB": {
+    "lat": -35.3069,
+    "lon": 149.195007,
+    "name": "Canberra Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "AU",
+    "aircraft_marker": "airliner"
   }
 }
