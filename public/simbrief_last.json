@@ -1,128 +1,158 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-11-23T07:52:36.411613+00:00",
+  "retrieved_at": "2026-11-24T06:10:33.305678+00:00",
   "origin": {
-    "icao": "KSEA",
-    "name": "SEATTLE-TACOMA INTL"
+    "icao": "EKCH",
+    "name": "KASTRUP"
   },
   "destination": {
-    "icao": "KLAS",
-    "name": "REID INTL"
+    "icao": "LSPV",
+    "name": "WANGEN-LACHEN"
   },
   "flight_number": "2809",
   "aircraft": "A320",
-  "route": "SUMMA2 LKV DCT RYANN J92 OAL DCT TQILA COKTL4",
-  "altitude": "37000",
-  "enroute_time": "01:51:11",
-  "scheduled_departure": "2026-11-23T15:50:00Z",
-  "scheduled_arrival": "2026-11-23T18:15:00Z",
-  "generated_at": "2026-11-22T22:00:10Z",
+  "route": "NEXE2A NEXEN T503 MICOS DCT SAS P605 ELNAT Z99 MASEK DCT KRH T715 PABLA Y163 NATOR N850 RIPUS L613 MANEG Z651 KESEX DCT",
+  "altitude": "38000",
+  "enroute_time": "01:26:01",
+  "scheduled_departure": "2026-11-23T20:45:00Z",
+  "scheduled_arrival": "2026-11-23T22:45:00Z",
+  "generated_at": "2026-11-23T20:14:27Z",
   "route_points": [
     {
-      "lat": 47.252167,
-      "lon": -122.309667,
-      "name": "NEVJO"
+      "lat": 55.648992,
+      "lon": 12.70435,
+      "name": "CH840"
     },
     {
-      "lat": 46.617858,
-      "lon": -121.988322,
-      "name": "SUMMA"
+      "lat": 55.741436,
+      "lon": 12.842397,
+      "name": "CH843"
     },
     {
-      "lat": 44.748412,
-      "lon": -121.290033,
+      "lat": 55.603236,
+      "lon": 12.931364,
+      "name": "CH844"
+    },
+    {
+      "lat": 55.5156,
+      "lon": 12.771814,
+      "name": "CH845"
+    },
+    {
+      "lat": 55.203383,
+      "lon": 12.12305,
+      "name": "BISTA"
+    },
+    {
+      "lat": 54.810778,
+      "lon": 11.625242,
+      "name": "NEXEN"
+    },
+    {
+      "lat": 54.56,
+      "lon": 11.313611,
+      "name": "GIMRU"
+    },
+    {
+      "lat": 54.305556,
+      "lon": 11.005278,
+      "name": "MICOS"
+    },
+    {
+      "lat": 53.704938,
+      "lon": 10.665697,
       "name": "TOC"
     },
     {
-      "lat": 42.492844,
-      "lon": -120.507106,
-      "name": "LKV"
+      "lat": 52.250778,
+      "lon": 9.884219,
+      "name": "SAS"
     },
     {
-      "lat": 39.233781,
-      "lon": -119.279461,
-      "name": "RYANN"
+      "lat": 51.868489,
+      "lon": 9.80975,
+      "name": "NORTA"
     },
     {
-      "lat": 38.979686,
-      "lon": -118.961642,
-      "name": "YERIN"
+      "lat": 51.631547,
+      "lon": 9.764619,
+      "name": "LUXUX"
     },
     {
-      "lat": 38.511478,
-      "lon": -118.384572,
-      "name": "BABIT"
+      "lat": 51.470008,
+      "lon": 9.734122,
+      "name": "WERRA"
     },
     {
-      "lat": 38.003261,
-      "lon": -117.770447,
-      "name": "OAL"
+      "lat": 51.204317,
+      "lon": 9.690989,
+      "name": "ELNAT"
     },
     {
-      "lat": 37.475833,
-      "lon": -117.200556,
-      "name": "TQILA"
+      "lat": 51.085,
+      "lon": 9.6675,
+      "name": "ELLUM"
     },
     {
-      "lat": 37.331742,
-      "lon": -117.075272,
-      "name": "BASIC"
+      "lat": 50.729167,
+      "lon": 9.598333,
+      "name": "MASEK"
     },
     {
-      "lat": 37.100631,
-      "lon": -116.875378,
-      "name": "FLCHR"
+      "lat": 48.992944,
+      "lon": 8.584236,
+      "name": "KRH"
     },
     {
-      "lat": 36.715832,
-      "lon": -116.54588,
+      "lat": 48.788586,
+      "lon": 8.351969,
+      "name": "PABLA"
+    },
+    {
+      "lat": 48.578078,
+      "lon": 8.275225,
       "name": "TOD"
     },
     {
-      "lat": 36.650689,
-      "lon": -116.490503,
-      "name": "TBRAN"
+      "lat": 48.490833,
+      "lon": 8.243611,
+      "name": "HERBI"
     },
     {
-      "lat": 36.455056,
-      "lon": -116.214236,
-      "name": "ARYEL"
+      "lat": 48.17,
+      "lon": 8.321261,
+      "name": "NATOR"
     },
     {
-      "lat": 36.251106,
-      "lon": -115.928656,
-      "name": "COKTL"
+      "lat": 47.858333,
+      "lon": 8.396667,
+      "name": "TITIX"
     },
     {
-      "lat": 36.138794,
-      "lon": -115.75085,
-      "name": "ZLLDA"
+      "lat": 47.6895,
+      "lon": 8.436972,
+      "name": "TRA"
     },
     {
-      "lat": 36.0401,
-      "lon": -115.430922,
-      "name": "DEEON"
+      "lat": 47.260278,
+      "lon": 8.5,
+      "name": "RIPUS"
     },
     {
-      "lat": 36.016253,
-      "lon": -115.354153,
-      "name": "ENNVY"
+      "lat": 47.204167,
+      "lon": 8.722222,
+      "name": "MANEG"
     },
     {
-      "lat": 36.004019,
-      "lon": -115.107725,
-      "name": "REDQN"
+      "lat": 47.234722,
+      "lon": 8.716667,
+      "name": "KESEX"
     },
     {
-      "lat": 35.999236,
-      "lon": -115.014089,
-      "name": "BERBN"
-    },
-    {
-      "lat": 36.080342,
-      "lon": -115.15245,
-      "name": "KLAS"
+      "lat": 47.204722,
+      "lon": 8.8675,
+      "name": "LSPV"
     }
   ]
 }
