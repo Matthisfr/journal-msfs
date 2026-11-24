@@ -346,7 +346,8 @@ def build():
         home_updated = "Le " + paris.strftime("%d/%m/%Y à %H:%M") + " (Paris)"
     else:
         home_updated = "En attente de la première collecte"
-    editorial_updated = editorial.get("last_updated") or "Non actualisées"
+    news_checked = status.get("news_checked_at")
+    editorial_updated = dt.datetime.fromisoformat(news_checked.replace("Z", "+00:00")).astimezone(ZoneInfo("Europe/Paris")).strftime("%d/%m/%Y à %H:%M") if news_checked else "Non actualisées"
     manifest_file = PUBLIC / "brand-manifest.json"
     manifest = json.loads(manifest_file.read_text(encoding="utf-8")) if manifest_file.is_file() else {}
     index = (PUBLIC / "index.html").read_text(encoding="utf-8")
