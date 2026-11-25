@@ -10,6 +10,11 @@
     "country": "US"
   },
   {
+    "icao": "KGRR",
+    "name": "Gerald R. Ford International Airport",
+    "country": "US"
+  },
+  {
     "icao": "KPIT",
     "name": "Pittsburgh International Airport",
     "country": "US"
