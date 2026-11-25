@@ -1,133 +1,98 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-11-24T10:41:49.563298+00:00",
+  "retrieved_at": "2026-11-25T07:37:23.413883+00:00",
   "origin": {
-    "icao": "LEMD",
-    "name": "ADOLFO SUAREZ MADRID-BARAJAS"
+    "icao": "KSEA",
+    "name": "SEATTLE-TACOMA INTL"
   },
   "destination": {
-    "icao": "LFPO",
-    "name": "ORLY"
+    "icao": "KSLC",
+    "name": "SALT LAKE CITY INTL"
   },
   "flight_number": "2809",
   "aircraft": "A320",
-  "route": "RBO4N RBO DCT OSTIX DCT GASMO DCT DGO L176 LUSEM DCT LULUT DCT TUDRA DCT BEVOL UT158 AMB AMB9E",
-  "altitude": "38000",
-  "enroute_time": "01:20:20",
-  "scheduled_departure": "2026-11-24T07:45:00Z",
-  "scheduled_arrival": "2026-11-24T09:45:00Z",
-  "generated_at": "2026-11-24T07:11:29Z",
+  "route": "SUMMA2 SUMMA DCT WANTA Q154 BYI SKEES7",
+  "altitude": "37000",
+  "enroute_time": "01:24:48",
+  "scheduled_departure": "2026-11-24T13:05:00Z",
+  "scheduled_arrival": "2026-11-24T15:10:00Z",
+  "generated_at": "2026-11-24T12:31:55Z",
   "route_points": [
     {
-      "lat": 40.546417,
-      "lon": -3.575194,
-      "name": "SSY"
+      "lat": 47.252167,
+      "lon": -122.309667,
+      "name": "NEVJO"
     },
     {
-      "lat": 40.636417,
-      "lon": -3.542639,
-      "name": "MD901"
+      "lat": 46.617858,
+      "lon": -121.988322,
+      "name": "SUMMA"
     },
     {
-      "lat": 40.7035,
-      "lon": -3.536667,
-      "name": "MD902"
+      "lat": 46.473289,
+      "lon": -121.623631,
+      "name": "WANTA"
     },
     {
-      "lat": 40.853861,
-      "lon": -3.246639,
-      "name": "RBO"
-    },
-    {
-      "lat": 41.504444,
-      "lon": -3.1,
-      "name": "OSTIX"
-    },
-    {
-      "lat": 41.729444,
-      "lon": -3.048889,
-      "name": "GASMO"
-    },
-    {
-      "lat": 42.453306,
-      "lon": -2.880694,
-      "name": "DGO"
-    },
-    {
-      "lat": 42.962852,
-      "lon": -2.262006,
+      "lat": 45.868565,
+      "lon": -120.240773,
       "name": "TOC"
     },
     {
-      "lat": 42.983722,
-      "lon": -2.236361,
-      "name": "CEGAM"
+      "lat": 44.993681,
+      "lon": -118.353208,
+      "name": "JELTI"
     },
     {
-      "lat": 43.098444,
-      "lon": -2.094722,
-      "name": "BAGAS"
+      "lat": 44.359078,
+      "lon": -117.192011,
+      "name": "HOVEL"
     },
     {
-      "lat": 43.311194,
-      "lon": -1.830389,
-      "name": "SSN"
+      "lat": 43.640119,
+      "lon": -115.748122,
+      "name": "VELUY"
     },
     {
-      "lat": 43.374722,
-      "lon": -1.780556,
-      "name": "LUSEM"
+      "lat": 42.580239,
+      "lon": -113.865858,
+      "name": "BYI"
     },
     {
-      "lat": 44.398611,
-      "lon": -0.839722,
-      "name": "LULUT"
+      "lat": 42.283958,
+      "lon": -113.470106,
+      "name": "EFFTA"
     },
     {
-      "lat": 46.538889,
-      "lon": 0.780833,
-      "name": "TUDRA"
-    },
-    {
-      "lat": 47.011944,
-      "lon": 0.930833,
-      "name": "BEVOL"
-    },
-    {
-      "lat": 47.304901,
-      "lon": 1.02448,
+      "lat": 42.021896,
+      "lon": -113.124659,
       "name": "TOD"
     },
     {
-      "lat": 47.428917,
-      "lon": 1.064444,
-      "name": "AMB"
+      "lat": 41.693142,
+      "lon": -112.697183,
+      "name": "BLIDA"
     },
     {
-      "lat": 47.5075,
-      "lon": 1.104722,
-      "name": "DIBES"
+      "lat": 41.530792,
+      "lon": -112.488444,
+      "name": "BEARR"
     },
     {
-      "lat": 48.059167,
-      "lon": 1.387083,
-      "name": "CAD"
+      "lat": 41.444131,
+      "lon": -112.387272,
+      "name": "SKEES"
     },
     {
-      "lat": 48.131361,
-      "lon": 1.459889,
-      "name": "SOTIP"
+      "lat": 41.224214,
+      "lon": -112.076553,
+      "name": "EKKHO"
     },
     {
-      "lat": 48.24175,
-      "lon": 1.571639,
-      "name": "ODILO"
-    },
-    {
-      "lat": 48.723333,
-      "lon": 2.379444,
-      "name": "LFPO"
+      "lat": 40.788394,
+      "lon": -111.977772,
+      "name": "KSLC"
     }
   ]
 }
