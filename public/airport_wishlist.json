@@ -1,5 +1,10 @@
 [
   {
+    "icao": "KCMH",
+    "name": "John Glenn Columbus International Airport",
+    "country": "US"
+  },
+  {
     "icao": "KCOS",
     "name": "City of Colorado Springs Municipal Airport",
     "country": "US"
