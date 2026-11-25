@@ -10,6 +10,11 @@
     "country": "US"
   },
   {
+    "icao": "KPIT",
+    "name": "Pittsburgh International Airport",
+    "country": "US"
+  },
+  {
     "icao": "KTUL",
     "name": "Tulsa International Airport",
     "country": "US"
