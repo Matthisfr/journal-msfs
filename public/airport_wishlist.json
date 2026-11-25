@@ -1,5 +1,10 @@
 [
   {
+    "icao": "KCOS",
+    "name": "City of Colorado Springs Municipal Airport",
+    "country": "US"
+  },
+  {
     "icao": "KTUL",
     "name": "Tulsa International Airport",
     "country": "US"
