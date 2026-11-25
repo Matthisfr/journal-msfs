@@ -1,5 +1,10 @@
 [
   {
+    "icao": "FKYS",
+    "name": "Yaoundé Nsimalen International Airport",
+    "country": "CM"
+  },
+  {
     "icao": "KCMH",
     "name": "John Glenn Columbus International Airport",
     "country": "US"
