@@ -3966,5 +3966,37 @@
     "source": "OurAirports / airport-codes",
     "country_code": "AU",
     "aircraft_marker": "airliner"
+  },
+  "FKYS": {
+    "lat": 3.72256,
+    "lon": 11.5533,
+    "name": "Yaoundé Nsimalen International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "CM",
+    "aircraft_marker": "airliner"
+  },
+  "KCMH": {
+    "lat": 39.998001,
+    "lon": -82.891899,
+    "name": "John Glenn Columbus International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
+  },
+  "KCOS": {
+    "lat": 38.805801,
+    "lon": -104.700996,
+    "name": "City of Colorado Springs Municipal Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
+  },
+  "KTUL": {
+    "lat": 36.197084,
+    "lon": -95.886225,
+    "name": "Tulsa International Airport",
+    "source": "OurAirports / airport-codes",
+    "country_code": "US",
+    "aircraft_marker": "airliner"
   }
 }
