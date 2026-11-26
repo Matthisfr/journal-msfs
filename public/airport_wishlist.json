@@ -5,6 +5,11 @@
     "country": "US"
   },
   {
+    "icao": "KELP",
+    "name": "El Paso International Airport",
+    "country": "US"
+  },
+  {
     "icao": "KGRR",
     "name": "Gerald R. Ford International Airport",
     "country": "US"
