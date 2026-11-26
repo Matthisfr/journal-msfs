@@ -243,6 +243,42 @@ function popupAirportActions(icao){
  return '<div class="wx-popup-actions"><button type="button" data-flight-airport="'+code+'" data-flight-field="departure">✈ Départ</button><button type="button" data-flight-airport="'+code+'" data-flight-field="arrival">⌖ Arrivée</button></div>';
 }
 
+let worldIndexPromise;
+function wishlistLink(code){
+ return 'https://github.com/Matthisfr/journal-msfs/issues/new?title='+encodeURIComponent('[AIRPORT-WISHLIST] ADD '+code)+'&body='+encodeURIComponent('Demande personnelle pour le Journal MSFS.');
+}
+function installAirportLongPress(el){
+ let timer=null,start=null,handled=false,last=0;
+ const clear=()=>{clearTimeout(timer);timer=null};
+ const ignored=e=>e.target.closest?.('.leaflet-control,.leaflet-popup');
+ async function identify(pos){
+  const popup=L.popup({maxWidth:340}).setLatLng(pos).setContent('Identification de l’aéroport…').openOn(map);
+  try{
+   if(!worldIndexPromise)worldIndexPromise=fetch('world_airports.json').then(r=>{if(!r.ok)throw Error('Index indisponible');return r.json()}).catch(e=>{worldIndexPromise=null;throw e});
+   const index=await worldIndexPromise;
+   let best=null,min=12000;
+   for(const [code,a] of Object.entries(index)){
+    if(!Array.isArray(a)||!Number.isFinite(Number(a[0]))||!Number.isFinite(Number(a[1])))continue;
+    const d=map.distance(pos,[Number(a[0]),Number(a[1])]);
+    if(d<min){min=d;best={code,name:a[2],lat:a[0],lon:a[1]}}
+   }
+   if(!best){popup.setContent('Aucun aéroport à proximité. Zoome sur les pistes et réessaie.');return}
+   const q=encodeURIComponent(best.code);
+   popup.setLatLng([best.lat,best.lon]).setContent('<div class="airport-shop-popup"><strong>'+safe(best.code)+' — '+safe(best.name||best.code)+'</strong>'+popupAirportActions(best.code)+'<p><a href="'+safe(wishlistLink(best.code))+'" target="_blank" rel="noopener noreferrer">🛍️ Ajouter à ma liste de courses</a></p><a href="https://secure.simmarket.com/advanced_search_result.php?keywords='+q+'" target="_blank" rel="noopener noreferrer">SimMarket ↗</a> · <a href="https://flightsim.to/search?q='+q+'" target="_blank" rel="noopener noreferrer">Flightsim.to ↗</a></div>');
+  }catch(e){popup.setContent('Index des aéroports indisponible. Réessaie dans quelques instants.')}
+ }
+ el.addEventListener('touchstart',e=>{
+  clear();handled=false;if(e.touches.length!==1||ignored(e))return;
+  const t=e.touches[0],rect=el.getBoundingClientRect();start={x:t.clientX,y:t.clientY};
+  const pos=map.containerPointToLatLng([start.x-rect.left,start.y-rect.top]);
+  timer=setTimeout(()=>{handled=true;last=Date.now();identify(pos);clear()},700);
+ },{passive:true});
+ el.addEventListener('touchmove',e=>{if(e.touches.length!==1||!start||Math.hypot(e.touches[0].clientX-start.x,e.touches[0].clientY-start.y)>12)clear()},{passive:true});
+ for(const type of ['touchend','touchcancel'])el.addEventListener(type,()=>{clear();start=null},{passive:true});
+ el.addEventListener('contextmenu',e=>{if(ignored(e))return;e.preventDefault();if(!handled||Date.now()-last>1500)identify(map.mouseEventToLatLng(e))});
+ el.addEventListener('selectstart',e=>{if(!ignored(e))e.preventDefault()});
+}
+
 async function load(){
  if(map||loading)return;loading=true;
  const el=$('weather-map');if(!el)return;
@@ -260,6 +296,7 @@ async function load(){
   coordinates=coords;
   const names=new Map(airports.map(a=>[a.icao,a.name]));
   map=L.map(el,{worldCopyJump:true}).setView([35,10],3);
+  installAirportLongPress(el);
   // Mêmes fonds que la carte des aéroports : raster immédiatement disponible,
   // fonds vectoriels ajoutés si MapLibre peut se charger.
   const baseMaps={
