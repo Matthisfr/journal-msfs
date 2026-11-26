@@ -5,6 +5,11 @@
     "country": "CM"
   },
   {
+    "icao": "KAUS",
+    "name": "Austin-Bergstrom International Airport",
+    "country": "US"
+  },
+  {
     "icao": "KCMH",
     "name": "John Glenn Columbus International Airport",
     "country": "US"
