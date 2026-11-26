@@ -1,98 +1,98 @@
 {
   "state": "ok",
   "username": "Matthis",
-  "retrieved_at": "2026-11-25T07:47:56.661338+00:00",
+  "retrieved_at": "2026-11-26T06:11:34.279551+00:00",
   "origin": {
-    "icao": "KSEA",
-    "name": "SEATTLE-TACOMA INTL"
+    "icao": "LFML",
+    "name": "MARSEILLE/PROVENCE"
   },
   "destination": {
-    "icao": "KSLC",
-    "name": "SALT LAKE CITY INTL"
+    "icao": "LFPO",
+    "name": "ORLY"
   },
   "flight_number": "2809",
   "aircraft": "A320",
-  "route": "SUMMA2 SUMMA DCT WANTA Q154 BYI SKEES7",
-  "altitude": "37000",
-  "enroute_time": "01:24:48",
-  "scheduled_departure": "2026-11-24T13:05:00Z",
-  "scheduled_arrival": "2026-11-24T15:10:00Z",
-  "generated_at": "2026-11-24T12:31:55Z",
+  "route": "ETRE6B ETREK DCT MADOT DCT MOPEM DCT PIBAT PIBA9E",
+  "altitude": "30000",
+  "enroute_time": "01:01:57",
+  "scheduled_departure": "2026-11-25T17:10:00Z",
+  "scheduled_arrival": "2026-11-25T18:45:00Z",
+  "generated_at": "2026-11-25T16:35:37Z",
   "route_points": [
     {
-      "lat": 47.252167,
-      "lon": -122.309667,
-      "name": "NEVJO"
+      "lat": 43.583056,
+      "lon": 5.234472,
+      "name": "VENTA"
     },
     {
-      "lat": 46.617858,
-      "lon": -121.988322,
-      "name": "SUMMA"
+      "lat": 43.71025,
+      "lon": 5.177278,
+      "name": "DOLIV"
     },
     {
-      "lat": 46.473289,
-      "lon": -121.623631,
-      "name": "WANTA"
+      "lat": 43.883333,
+      "lon": 5.095278,
+      "name": "SAURG"
     },
     {
-      "lat": 45.868565,
-      "lon": -120.240773,
+      "lat": 44.725528,
+      "lon": 4.900389,
+      "name": "KURIR"
+    },
+    {
+      "lat": 44.833805,
+      "lon": 4.839485,
       "name": "TOC"
     },
     {
-      "lat": 44.993681,
-      "lon": -118.353208,
-      "name": "JELTI"
+      "lat": 45.187639,
+      "lon": 4.638722,
+      "name": "ETREK"
     },
     {
-      "lat": 44.359078,
-      "lon": -117.192011,
-      "name": "HOVEL"
+      "lat": 45.730056,
+      "lon": 4.514,
+      "name": "MADOT"
     },
     {
-      "lat": 43.640119,
-      "lon": -115.748122,
-      "name": "VELUY"
+      "lat": 46.283611,
+      "lon": 4.384167,
+      "name": "MOPEM"
     },
     {
-      "lat": 42.580239,
-      "lon": -113.865858,
-      "name": "BYI"
+      "lat": 46.805944,
+      "lon": 4.259139,
+      "name": "PIBAT"
     },
     {
-      "lat": 42.283958,
-      "lon": -113.470106,
-      "name": "EFFTA"
+      "lat": 47.373889,
+      "lon": 3.924722,
+      "name": "FF307"
     },
     {
-      "lat": 42.021896,
-      "lon": -113.124659,
+      "lat": 47.759792,
+      "lon": 3.692948,
       "name": "TOD"
     },
     {
-      "lat": 41.693142,
-      "lon": -112.697183,
-      "name": "BLIDA"
+      "lat": 47.966111,
+      "lon": 3.5675,
+      "name": "OKRIX"
     },
     {
-      "lat": 41.530792,
-      "lon": -112.488444,
-      "name": "BEARR"
+      "lat": 48.202139,
+      "lon": 3.206111,
+      "name": "EBOMA"
     },
     {
-      "lat": 41.444131,
-      "lon": -112.387272,
-      "name": "SKEES"
+      "lat": 48.295028,
+      "lon": 3.062944,
+      "name": "MOLBA"
     },
     {
-      "lat": 41.224214,
-      "lon": -112.076553,
-      "name": "EKKHO"
-    },
-    {
-      "lat": 40.788394,
-      "lon": -111.977772,
-      "name": "KSLC"
+      "lat": 48.723333,
+      "lon": 2.379444,
+      "name": "LFPO"
     }
   ]
 }

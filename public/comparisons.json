@@ -629,9 +629,9 @@
         "url": "https://contrail.shop/products/slhsimdesigns-soca-cayenne-felix-eboue-msfs2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_6c674626-5a58-4613-a994-9244e18e925f_1200x1200.webp?v=1734207941",
         "image_checked": true,
-        "comparison": "update",
+        "comparison": "",
         "server_version": "1.1.0",
-        "version_state": "Mise à jour disponible"
+        "version_state": "À vérifier"
       }
     ],
     "winner": "Non déterminé",
@@ -659,9 +659,9 @@
         "url": "https://contrail.shop/products/wf-scenery-studio-vhhh-hong-kong-international-msfs2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_4451a4c3-3381-43f5-be86-484abc39957e_1200x1200.webp?v=1733860388",
         "image_checked": true,
-        "comparison": "equal",
+        "comparison": "",
         "server_version": "1.0.3",
-        "version_state": "À jour"
+        "version_state": "À vérifier"
       }
     ],
     "winner": "Non déterminé",
@@ -899,9 +899,9 @@
         "url": "https://contrail.shop/products/atelic-eddc-dresden-airport-msfs-2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_ce0c7b23-fed4-4308-a9c7-10a450774707_1200x1200.jpg?v=1774289711",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.0.0",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       },
       {
         "publisher": "JUSTSIM",
@@ -1025,9 +1025,9 @@
         "url": "https://contrail.shop/products/edwe-emden-airport-msfs",
         "image": "https://contrail.shop/cdn/shop/products/thumb_b45f323a-efbe-42b0-8aed-f96835854360_1200x1200.jpg?v=1674666809",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.0.0",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       }
     ],
     "winner": "Non déterminé",
@@ -1175,9 +1175,9 @@
         "url": "https://contrail.shop/products/lows-salzburg-airport",
         "image": "https://contrail.shop/cdn/shop/products/thumb_8e4fac6e-aa8d-4497-afd1-5a3ddacff502_1200x1200.jpg?v=1674664988",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.2.1",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       },
       {
         "publisher": "RDPresets",
@@ -2238,9 +2238,9 @@
         "url": "https://contrail.shop/products/lkpr-prague-airport-msfs",
         "image": "https://contrail.shop/cdn/shop/products/thumb_e097aa56-30ab-4889-8dab-c85926625985_1200x1200.jpg?v=1674668259",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.0.4",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       }
     ],
     "winner": "Non déterminé",

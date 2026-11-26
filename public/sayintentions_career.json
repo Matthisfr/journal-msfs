@@ -3,18 +3,27 @@
   "profile_url": "https://pilots.sayintentions.ai/u/Mathis",
   "username": "Mathis",
   "rank": "Senior 1st Officer",
-  "flight_hours": 93,
-  "ifr_hours": 91,
+  "flight_hours": 94,
+  "ifr_hours": 92,
   "vfr_hours": 2,
-  "total_flights": 56,
+  "total_flights": 57,
   "airports_visited": 53,
   "source": "profil public Gate 404 (navigateur Chromium)",
   "rank_badge": "sayintentions-rank.svg",
   "recent_flights": [
     {
+      "id": "IFR-884556865",
+      "aircraft": "F-FENX",
+      "when": "20 hours ago",
+      "origin": "LFML",
+      "destination": "LFPO",
+      "rules": "IFR",
+      "duration": "1h 31m"
+    },
+    {
       "id": "IFR-884536780",
       "aircraft": "F-FENX",
-      "when": "yesterday",
+      "when": "2 days ago",
       "origin": "KSEA",
       "destination": "KSLC",
       "rules": "IFR",
@@ -23,7 +32,7 @@
     {
       "id": "IFR-884499053",
       "aircraft": "F-FENX",
-      "when": "3 days ago",
+      "when": "4 days ago",
       "origin": "LIMC",
       "destination": "LFPO",
       "rules": "IFR",
@@ -32,7 +41,7 @@
     {
       "id": "IFR-884461452",
       "aircraft": "F-FENX",
-      "when": "5 days ago",
+      "when": "6 days ago",
       "origin": "ELLX",
       "destination": "LFMN",
       "rules": "IFR",
@@ -59,7 +68,7 @@
     {
       "id": "IFR-884306407",
       "aircraft": "F-FENX",
-      "when": "1 week ago",
+      "when": "2 weeks ago",
       "origin": "EKCH",
       "destination": "LIMC",
       "rules": "IFR",
@@ -91,18 +100,9 @@
       "destination": "LFMN",
       "rules": "IFR",
       "duration": "2h 7m"
-    },
-    {
-      "id": "IFR-884231078",
-      "aircraft": "F-FENX",
-      "when": "2 weeks ago",
-      "origin": "LFPG",
-      "destination": "LFMN",
-      "rules": "IFR",
-      "duration": "1h 40m"
     }
   ],
-  "flights_checked_at": "2026-11-25T07:48:35.910865+00:00",
-  "verified_at": "2026-11-25T07:48:35.910865+00:00",
-  "checked_at": "2026-11-25T07:48:35.910865+00:00"
+  "flights_checked_at": "2026-11-26T06:11:56.550458+00:00",
+  "verified_at": "2026-11-26T06:11:56.550458+00:00",
+  "checked_at": "2026-11-26T06:11:56.550458+00:00"
 }
