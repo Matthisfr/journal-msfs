@@ -1,22 +1,7 @@
 [
   {
-    "icao": "FKYS",
-    "name": "Yaoundé Nsimalen International Airport",
-    "country": "CM"
-  },
-  {
     "icao": "KAUS",
     "name": "Austin-Bergstrom International Airport",
-    "country": "US"
-  },
-  {
-    "icao": "KCMH",
-    "name": "John Glenn Columbus International Airport",
-    "country": "US"
-  },
-  {
-    "icao": "KCOS",
-    "name": "City of Colorado Springs Municipal Airport",
     "country": "US"
   },
   {
@@ -27,11 +12,6 @@
   {
     "icao": "KPIT",
     "name": "Pittsburgh International Airport",
-    "country": "US"
-  },
-  {
-    "icao": "KTUL",
-    "name": "Tulsa International Airport",
     "country": "US"
   },
   {
