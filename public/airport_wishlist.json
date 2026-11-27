@@ -30,6 +30,11 @@
     "country": "US"
   },
   {
+    "icao": "KRIC",
+    "name": "Richmond International Airport",
+    "country": "US"
+  },
+  {
     "icao": "MMGL",
     "name": "Aeropuerto Internacional de Guadalajara (Miguel Hidalgo y Costilla)",
     "country": "MX"
