@@ -10,6 +10,11 @@
     "country": "US"
   },
   {
+    "icao": "KBUF",
+    "name": "Buffalo Niagara International Airport",
+    "country": "US"
+  },
+  {
     "icao": "KELP",
     "name": "El Paso International Airport",
     "country": "US"
