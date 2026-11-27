@@ -5,6 +5,11 @@
     "country": "CA"
   },
   {
+    "icao": "KACY",
+    "name": "Atlantic City International Airport",
+    "country": "US"
+  },
+  {
     "icao": "KAUS",
     "name": "Austin-Bergstrom International Airport",
     "country": "US"
