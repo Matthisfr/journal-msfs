@@ -1,5 +1,10 @@
 [
   {
+    "icao": "CYQR",
+    "name": "Regina International Airport",
+    "country": "CA"
+  },
+  {
     "icao": "KAUS",
     "name": "Austin-Bergstrom International Airport",
     "country": "US"
