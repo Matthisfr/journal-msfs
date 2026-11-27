@@ -399,9 +399,9 @@
         "url": "https://inibuilds.com/products/inibuilds-new-orleans-kmsy-msfs-2024",
         "image": "",
         "image_checked": true,
-        "comparison": "equal",
-        "server_version": "1.0.0",
-        "version_state": "À jour"
+        "comparison": "update",
+        "server_version": "1.0.1",
+        "version_state": "Mise à jour disponible"
       },
       {
         "publisher": "lvfr",
@@ -649,9 +649,9 @@
         "url": "https://inibuilds.com/products/inibuilds-hong-kong-vhhh-msfs-2024",
         "image": "",
         "image_checked": true,
-        "comparison": "equal",
-        "server_version": "1.1.1",
-        "version_state": "À jour"
+        "comparison": "update",
+        "server_version": "1.1.2",
+        "version_state": "Mise à jour disponible"
       },
       {
         "publisher": "WFSceneryStudio",
@@ -819,9 +819,9 @@
         "url": "https://contrail.shop/products/taimodels-wsss-singapore-changi-airport-msfs2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/wsss_tm_thumb_0ca69b4f-3ce9-4b1a-92c7-411146303443_1200x1200.png?v=1778618269",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "update",
         "server_version": "1.7.0",
-        "version_state": "À vérifier"
+        "version_state": "Mise à jour disponible"
       }
     ],
     "winner": "Non déterminé",
@@ -899,9 +899,9 @@
         "url": "https://contrail.shop/products/atelic-eddc-dresden-airport-msfs-2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_ce0c7b23-fed4-4308-a9c7-10a450774707_1200x1200.jpg?v=1774289711",
         "image_checked": true,
-        "comparison": "equal",
+        "comparison": "",
         "server_version": "1.0.0",
-        "version_state": "À jour"
+        "version_state": "À vérifier"
       },
       {
         "publisher": "JUSTSIM",
@@ -1025,9 +1025,9 @@
         "url": "https://contrail.shop/products/edwe-emden-airport-msfs",
         "image": "https://contrail.shop/cdn/shop/products/thumb_b45f323a-efbe-42b0-8aed-f96835854360_1200x1200.jpg?v=1674666809",
         "image_checked": true,
-        "comparison": "equal",
+        "comparison": "",
         "server_version": "1.0.0",
-        "version_state": "À jour"
+        "version_state": "À vérifier"
       }
     ],
     "winner": "Non déterminé",
@@ -1085,9 +1085,9 @@
         "url": "https://contrail.shop/products/egcc-manchester-airport",
         "image": "https://contrail.shop/cdn/shop/products/thumb_a3ceaa8e-7e82-4fa6-9898-06e308c9264d_1200x1200.jpg?v=1674666915",
         "image_checked": true,
-        "comparison": "equal",
+        "comparison": "",
         "server_version": "1.2.0",
-        "version_state": "À jour"
+        "version_state": "À vérifier"
       },
       {
         "publisher": "TAIMODELS",
@@ -1175,9 +1175,9 @@
         "url": "https://contrail.shop/products/lows-salzburg-airport",
         "image": "https://contrail.shop/cdn/shop/products/thumb_8e4fac6e-aa8d-4497-afd1-5a3ddacff502_1200x1200.jpg?v=1674664988",
         "image_checked": true,
-        "comparison": "equal",
+        "comparison": "",
         "server_version": "1.2.1",
-        "version_state": "À jour"
+        "version_state": "À vérifier"
       },
       {
         "publisher": "RDPresets",
@@ -1355,9 +1355,9 @@
         "url": "https://contrail.shop/products/mkstudios-gcts-tenerife-south-airport-v2-msfs2024",
         "image": "https://contrail.shop/cdn/shop/files/mkgcts_thumb_3ccc1f1c-0e35-4aec-8c1d-b4e8ed2d0a89_1200x1200.png?v=1787596699",
         "image_checked": true,
-        "comparison": "equal",
+        "comparison": "",
         "server_version": "2.0.1",
-        "version_state": "À jour"
+        "version_state": "À vérifier"
       },
       {
         "publisher": "Sim-wings",
@@ -2208,9 +2208,9 @@
         "url": "https://contrail.shop/products/atelic-lpma-madeira-airport-msfs",
         "image": "https://contrail.shop/cdn/shop/files/thumb_22d980c6-5d85-49e6-83c9-d113ab0d5d97_1200x1200.webp?v=1729290688",
         "image_checked": true,
-        "comparison": "equal",
+        "comparison": "",
         "server_version": "1.1.0",
-        "version_state": "À jour"
+        "version_state": "À vérifier"
       }
     ],
     "winner": "Non déterminé",
