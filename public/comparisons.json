@@ -629,9 +629,9 @@
         "url": "https://contrail.shop/products/slhsimdesigns-soca-cayenne-felix-eboue-msfs2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_6c674626-5a58-4613-a994-9244e18e925f_1200x1200.webp?v=1734207941",
         "image_checked": true,
-        "comparison": "update",
+        "comparison": "",
         "server_version": "1.1.0",
-        "version_state": "Mise à jour disponible"
+        "version_state": "À vérifier"
       }
     ],
     "winner": "Non déterminé",
@@ -749,9 +749,9 @@
         "url": "https://contrail.shop/products/taimodels-vobl-kempegowda-airport-msfs2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/vobl_thumb_d35bd6d0-ea45-422e-9379-3e047a4163c3_1200x1200.png?v=1778611821",
         "image_checked": true,
-        "comparison": "equal",
+        "comparison": "",
         "server_version": "1.1.0",
-        "version_state": "À jour"
+        "version_state": "À vérifier"
       }
     ],
     "winner": "Non déterminé",
@@ -819,9 +819,9 @@
         "url": "https://contrail.shop/products/taimodels-wsss-singapore-changi-airport-msfs2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/wsss_tm_thumb_0ca69b4f-3ce9-4b1a-92c7-411146303443_1200x1200.png?v=1778618269",
         "image_checked": true,
-        "comparison": "update",
+        "comparison": "",
         "server_version": "1.7.0",
-        "version_state": "Mise à jour disponible"
+        "version_state": "À vérifier"
       }
     ],
     "winner": "Non déterminé",
@@ -899,9 +899,9 @@
         "url": "https://contrail.shop/products/atelic-eddc-dresden-airport-msfs-2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_ce0c7b23-fed4-4308-a9c7-10a450774707_1200x1200.jpg?v=1774289711",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.0.0",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       },
       {
         "publisher": "JUSTSIM",
@@ -1085,9 +1085,9 @@
         "url": "https://contrail.shop/products/egcc-manchester-airport",
         "image": "https://contrail.shop/cdn/shop/products/thumb_a3ceaa8e-7e82-4fa6-9898-06e308c9264d_1200x1200.jpg?v=1674666915",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.2.0",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       },
       {
         "publisher": "TAIMODELS",
@@ -1175,9 +1175,9 @@
         "url": "https://contrail.shop/products/lows-salzburg-airport",
         "image": "https://contrail.shop/cdn/shop/products/thumb_8e4fac6e-aa8d-4497-afd1-5a3ddacff502_1200x1200.jpg?v=1674664988",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.2.1",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       },
       {
         "publisher": "RDPresets",
@@ -1355,9 +1355,9 @@
         "url": "https://contrail.shop/products/mkstudios-gcts-tenerife-south-airport-v2-msfs2024",
         "image": "https://contrail.shop/cdn/shop/files/mkgcts_thumb_3ccc1f1c-0e35-4aec-8c1d-b4e8ed2d0a89_1200x1200.png?v=1787596699",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "2.0.1",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       },
       {
         "publisher": "Sim-wings",
@@ -2002,9 +2002,9 @@
         "url": "https://contrail.shop/products/atelic-ellx-luxembourg-airport-msfs-2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_dd69490c-405b-4afc-9f36-7d4fc447a80b_1200x1200.jpg?v=1757068199",
         "image_checked": true,
-        "comparison": "equal",
+        "comparison": "",
         "server_version": "1.0.2",
-        "version_state": "À jour"
+        "version_state": "À vérifier"
       },
       {
         "publisher": "JustSim",
@@ -2138,9 +2138,9 @@
         "url": "https://contrail.shop/products/drzewiecki-epsc-szczecin-airport-msfs-2020-2024",
         "image": "https://contrail.shop/cdn/shop/files/thumb_d39ca6fe-6cdf-4838-89a3-311f1b0a30ae_1200x1200.jpg?v=1774897623",
         "image_checked": true,
-        "comparison": "equal",
+        "comparison": "",
         "server_version": "1.0.0",
-        "version_state": "À jour"
+        "version_state": "À vérifier"
       },
       {
         "publisher": "Papa Delta Studio",
@@ -2208,9 +2208,9 @@
         "url": "https://contrail.shop/products/atelic-lpma-madeira-airport-msfs",
         "image": "https://contrail.shop/cdn/shop/files/thumb_22d980c6-5d85-49e6-83c9-d113ab0d5d97_1200x1200.webp?v=1729290688",
         "image_checked": true,
-        "comparison": "",
+        "comparison": "equal",
         "server_version": "1.1.0",
-        "version_state": "À vérifier"
+        "version_state": "À jour"
       }
     ],
     "winner": "Non déterminé",
