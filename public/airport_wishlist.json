@@ -5,6 +5,11 @@
     "country": "CA"
   },
   {
+    "icao": "FOOL",
+    "name": "Libreville Leon M'ba International Airport",
+    "country": "GA"
+  },
+  {
     "icao": "KACY",
     "name": "Atlantic City International Airport",
     "country": "US"
