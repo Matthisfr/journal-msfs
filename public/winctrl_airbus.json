@@ -1,9 +1,20 @@
 {
-  "checked_at": "2026-11-27T10:30:36.848286+00:00",
+  "checked_at": "2026-11-28T06:09:53.191945+00:00",
   "source_url": "https://msfsaddons.com/developer/winctrl/",
   "source_state": "ok",
   "scope": "Matériels Airbus uniquement ; annonces historiques et prix datés",
   "articles": [
+    {
+      "url": "https://msfsaddons.com/2026/11/27/winctrl-ursa-minor-32-joystick-review-dont-judge-a-sidestick-by-its-cover/",
+      "date": "2026-11-27",
+      "title": "WINCTRL Airbus : annonce 32 Sidestick Controller Metal 2",
+      "summary": "MSFS Addons présente 32 Sidestick Controller Metal 2. Consulte l'article pour les caractéristiques et les conditions de vente.",
+      "products": [
+        "sidestick-metal"
+      ],
+      "image_url": "https://msfsaddons.com/wp-content/uploads/2026/11/winctrl-ursa-minor-airline-joystick-review-hero-v4.webp",
+      "source": "MSFS Addons — WINCTRL"
+    },
     {
       "date": "2026-10-22",
       "url": "https://msfsaddons.com/2026/10/22/airbus-captain-sticks-are-like-buses-winctrls-full-metal-left-hand-grip-arrives-on-the-same-day-as-mozas/",
@@ -107,8 +118,8 @@
       "release_date": "2026-10-28",
       "release_kind": "date de mise en vente annoncée",
       "image_url": "https://msfsaddons.com/wp-content/uploads/2026/10/WINCTRL-32-Sidestick-Controller-L-7.png.webp",
-      "article_date": "2026-10-22",
-      "article_url": "https://msfsaddons.com/2026/10/22/airbus-captain-sticks-are-like-buses-winctrls-full-metal-left-hand-grip-arrives-on-the-same-day-as-mozas/"
+      "article_date": "2026-11-27",
+      "article_url": "https://msfsaddons.com/2026/11/27/winctrl-ursa-minor-32-joystick-review-dont-judge-a-sidestick-by-its-cover/"
     },
     "nws": {
       "price": "$82.30",

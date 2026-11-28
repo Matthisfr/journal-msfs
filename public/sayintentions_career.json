@@ -23,7 +23,7 @@
     {
       "id": "IFR-884536780",
       "aircraft": "F-FENX",
-      "when": "3 days ago",
+      "when": "4 days ago",
       "origin": "KSEA",
       "destination": "KSLC",
       "rules": "IFR",
@@ -32,7 +32,7 @@
     {
       "id": "IFR-884499053",
       "aircraft": "F-FENX",
-      "when": "5 days ago",
+      "when": "6 days ago",
       "origin": "LIMC",
       "destination": "LFPO",
       "rules": "IFR",
@@ -59,7 +59,7 @@
     {
       "id": "IFR-884344470",
       "aircraft": "F-FENX",
-      "when": "1 week ago",
+      "when": "2 weeks ago",
       "origin": "EKCH",
       "destination": "LIMC",
       "rules": "IFR",
@@ -102,7 +102,7 @@
       "duration": "2h 7m"
     }
   ],
-  "flights_checked_at": "2026-11-27T10:31:02.286178+00:00",
-  "verified_at": "2026-11-27T10:31:02.286178+00:00",
-  "checked_at": "2026-11-27T10:31:02.286178+00:00"
+  "flights_checked_at": "2026-11-28T06:10:12.339366+00:00",
+  "verified_at": "2026-11-28T06:10:12.339366+00:00",
+  "checked_at": "2026-11-28T06:10:12.339366+00:00"
 }
