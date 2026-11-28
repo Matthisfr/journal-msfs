@@ -10,6 +10,11 @@
     "country": "GA"
   },
   {
+    "icao": "HTZA",
+    "name": "Abeid Amani Karume International Airport",
+    "country": "TZ"
+  },
+  {
     "icao": "KACY",
     "name": "Atlantic City International Airport",
     "country": "US"
