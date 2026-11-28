@@ -832,8 +832,8 @@
     "aircraft_marker": "airliner"
   },
   "LOWI": {
-    "lat": 47.260201,
-    "lon": 11.344,
+    "lat": 47.260278,
+    "lon": 11.343889,
     "name": "Innsbruck Airport",
     "source": "OurAirports / airport-codes",
     "country_code": "AT",
@@ -1704,8 +1704,8 @@
     "aircraft_marker": "airliner"
   },
   "NTTB": {
-    "lat": -16.444400787353516,
-    "lon": -151.75100708007812,
+    "lat": -16.444401,
+    "lon": -151.751007,
     "name": "Bora Bora Airport",
     "source": "OurAirports / airport-codes",
     "country_code": "PF",
@@ -1824,8 +1824,8 @@
     "aircraft_marker": "airliner"
   },
   "SCEL": {
-    "lat": -33.393001556396484,
-    "lon": -70.78579711914062,
+    "lat": -33.390252,
+    "lon": -70.794697,
     "name": "Comodoro Arturo Merino Benítez International Airport",
     "source": "OurAirports / airport-codes",
     "country_code": "CL",
@@ -3986,7 +3986,7 @@
   "KCOS": {
     "lat": 38.805801,
     "lon": -104.700996,
-    "name": "City of Colorado Springs Municipal Airport",
+    "name": "Colorado Springs Airport",
     "source": "OurAirports / airport-codes",
     "country_code": "US",
     "aircraft_marker": "airliner"
