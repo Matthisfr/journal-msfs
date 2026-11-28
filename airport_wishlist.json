@@ -1,0 +1,82 @@
+[
+  {
+    "icao": "CYQR",
+    "name": "Regina International Airport",
+    "country": "CA"
+  },
+  {
+    "icao": "FOOL",
+    "name": "Libreville Leon M'ba International Airport",
+    "country": "GA"
+  },
+  {
+    "icao": "HTZA",
+    "name": "Abeid Amani Karume International Airport",
+    "country": "TZ"
+  },
+  {
+    "icao": "KACY",
+    "name": "Atlantic City International Airport",
+    "country": "US"
+  },
+  {
+    "icao": "KAUS",
+    "name": "Austin-Bergstrom International Airport",
+    "country": "US"
+  },
+  {
+    "icao": "KBUF",
+    "name": "Buffalo Niagara International Airport",
+    "country": "US"
+  },
+  {
+    "icao": "KELP",
+    "name": "El Paso International Airport",
+    "country": "US"
+  },
+  {
+    "icao": "KGRR",
+    "name": "Gerald R. Ford International Airport",
+    "country": "US"
+  },
+  {
+    "icao": "KPIT",
+    "name": "Pittsburgh International Airport",
+    "country": "US"
+  },
+  {
+    "icao": "KRIC",
+    "name": "Richmond International Airport",
+    "country": "US"
+  },
+  {
+    "icao": "MMGL",
+    "name": "Aeropuerto Internacional de Guadalajara (Miguel Hidalgo y Costilla)",
+    "country": "MX"
+  },
+  {
+    "icao": "MMLP",
+    "name": "Aeropuerto Internacional de La Paz (Manuel Márquez de León)",
+    "country": "MX"
+  },
+  {
+    "icao": "SBBR",
+    "name": "Aeroporto Internacional de Brasília — Presidente Juscelino Kubitschek",
+    "country": "BR"
+  },
+  {
+    "icao": "SBEG",
+    "name": "Aeroporto Internacional de Manaus — Eduardo Gomes",
+    "country": "BR"
+  },
+  {
+    "icao": "SBGL",
+    "name": "Aeroporto Internacional do Rio de Janeiro/Galeão — Antônio Carlos Jobim",
+    "country": "BR"
+  },
+  {
+    "icao": "SBPA",
+    "name": "Aeroporto Internacional de Porto Alegre — Salgado Filho",
+    "country": "BR"
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "id": "si-community-crew-20261026",
+      "title": "SayIntentions : Community Crew disponible pour tous",
+      "date": "2026-10-26",
+      "summary": "Les abonnés peuvent utiliser des copilotes et membres d'équipage de cabine créés par la communauté, avec les voix réelles de leurs auteurs, et partager leurs propres créations.",
+      "impact": "Explorer les équipages communautaires pour le Fenix A320.",
+      "category": "SayIntentions",
+      "topic": "SayIntentions",
+      "source": "SayIntentions — What's New (capture du Pilot Portal)",
+      "url": "https://p2.sayintentions.ai/p2/#news",
+      "new": false
+    },
+    {
+      "id": "si-progressive-taxi-20261023",
+      "title": "SayIntentions : Progressive Taxi accessible à tous",
+      "date": "2026-10-23",
+      "summary": "La fonction Progressive Taxi est désormais accessible à tous les utilisateurs, selon l'annonce What's New.",
+      "impact": "Tester le guidage au roulage lors d'un prochain vol.",
+      "category": "SayIntentions",
+      "topic": "SayIntentions",
+      "source": "SayIntentions — What's New (capture du Pilot Portal)",
+      "url": "https://p2.sayintentions.ai/p2/#news",
+      "new": false
+    },
+    {
+      "id": "si-atc-improvements-20261022",
+      "title": "SayIntentions : améliorations ATC pour les arrivées IFR et le sol",
+      "date": "2026-10-22",
+      "summary": "Améliorations annoncées pour les arrivées IFR et les opérations au sol.",
+      "impact": "Tester les autorisations d'arrivée et les opérations au sol.",
+      "category": "SayIntentions",
+      "topic": "SayIntentions",
+      "source": "SayIntentions — What's New (capture du Pilot Portal)",
+      "url": "https://p2.sayintentions.ai/p2/#news",
+      "new": false
+    }
+  ]
+}

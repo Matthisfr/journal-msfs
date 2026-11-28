@@ -1,0 +1,22 @@
+{
+  "name": "Le Journal MSFS",
+  "short_name": "Journal MSFS",
+  "description": "Le quotidien du cockpit MSFS 2024",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#071421",
+  "theme_color": "#071421",
+  "icons": [
+    {
+      "src": "journal-msfs-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "journal-msfs-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "fcu": {
+    "path": "hardware/fcu.jpg",
+    "state": "photo",
+    "source": "Photographie produit — Shopee",
+    "verification": "non_verifiee_visuellement"
+  },
+  "efis": {
+    "path": "hardware/efis.jpg",
+    "state": "photo",
+    "source": "Photographie produit — Carousell",
+    "verification": "non_verifiee_visuellement"
+  },
+  "mcdu": {
+    "path": "hardware/mcdu.png",
+    "state": "photo",
+    "source": "Photographie WINWING MCDU (gamme de trois CDU) — FSNews",
+    "verification": "non_verifiee_visuellement"
+  },
+  "nws": {
+    "path": "hardware/nws.png",
+    "state": "photo",
+    "source": "Photographie promotionnelle WINWING — simFlight",
+    "verification": "non_verifiee_visuellement"
+  },
+  "rmp": {
+    "path": "hardware/rmp.jpg",
+    "state": "photo",
+    "source": "Visuel produit WINCTRL officiel — X",
+    "verification": "non_verifiee_visuellement"
+  },
+  "tcas": {
+    "path": "hardware/tcas.png",
+    "state": "photo",
+    "source": "Photographie produit — JVTech",
+    "verification": "non_verifiee_visuellement"
+  },
+  "throttle": {
+    "path": "hardware/throttle.jpg",
+    "state": "photo",
+    "source": "Photographie promotionnelle WINWING — simFlight",
+    "verification": "non_verifiee_visuellement"
+  },
+  "pedals": {
+    "path": "hardware/pedals.webp",
+    "state": "photo",
+    "source": "Photographie produit — SimRaceShop",
+    "verification": "non_verifiee_visuellement"
+  },
+  "acp": {
+    "path": "hardware/acp.webp",
+    "state": "photo",
+    "source": "Visuel de présentation WINWING ACP32 — FSExpo 2025 / simFlight",
+    "verification": "non_verifiee_visuellement"
+  },
+  "ovhd": {
+    "path": "hardware/ovhd.webp",
+    "state": "photo",
+    "source": "WINCTRL / MSFS Addons — visuel du produit",
+    "verification": "non_verifiee_visuellement"
+  },
+  "agp": {
+    "path": "hardware/agp.jpg",
+    "state": "photo",
+    "source": "Photographie produit — The Onion Shop",
+    "verification": "non_verifiee_visuellement"
+  },
+  "sidestick-metal": {
+    "path": "hardware/sidestick-metal.webp",
+    "state": "photo",
+    "source": "WINCTRL / MSFS Addons — visuel du produit",
+    "verification": "non_verifiee_visuellement"
+  },
+  "brake-pressure-gauge": {
+    "path": "hardware/brake-pressure-gauge.jpg",
+    "state": "photo",
+    "source": "Visuel de référence SL3 Simulations — autre fabricant que WINCTRL",
+    "origin": "https://www.santiluib3.com/cdn/shop/files/PressureGauge1.jpg?v=1752602892",
+    "verification": "reference_visuelle_autre_fabricant"
+  }
+}

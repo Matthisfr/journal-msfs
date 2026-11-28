@@ -1,0 +1,840 @@
+'use strict';
+const $=s=>document.querySelector(s);
+const $$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const isSafeUrl=u=>{try{const x=new URL(u);return ['https:','http:'].includes(x.protocol)?x.href:'#'}catch{return '#'}};
+const countryName=code=>{const iso=String(airportCoordinates[String(code||'').trim().toUpperCase()]?.country_code||'').trim().toUpperCase();if(!/^[A-Z]{2}$/.test(iso))return '';try{return new Intl.DisplayNames(['fr'],{type:'region'}).of(iso)||''}catch{return iso}};
+const countrySuffix=code=>{const name=countryName(code);return name?' ['+name+']':''};
+const localDate=s=>{if(!s)return '—';const d=new Date(s.length===10?s+'T12:00:00Z':s);return isNaN(d)?s:new Intl.DateTimeFormat('fr-FR',{day:'2-digit',month:'short',year:'numeric',timeZone:'Europe/Paris'}).format(d)};
+const localDateTime=s=>{if(!s)return 'Non exécutée';const d=new Date(s);return isNaN(d)?s:new Intl.DateTimeFormat('fr-FR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit',timeZone:'Europe/Paris'}).format(d)};
+let airports=[], status={}, editorial={}, software={items:[]}, hardware=[], hardwareImages={}, winctrlAirbus={articles:[],products:{}}, rtrAirbus={products:[],changes:[]}, s3Airbus={products:[],changes:[]}, airportCoordinates={};
+const brandLogos=(()=>{try{return JSON.parse(document.getElementById('brand-manifest')?.textContent||'{}')}catch{return {}}})();
+function brandIcon(kind,label){
+  const source=brandLogos[kind]?.path||'icons/'+kind+'.svg';
+  const fallback='icons/'+kind+'.svg';
+  const cls=brandLogos[kind]?' brand-original':'';
+  return '<span class="topic-icon topic-'+kind+cls+'" title="'+esc(label)+'" aria-label="'+esc(label)+'"><img src="'+esc(source)+'" width="42" height="42" alt="" decoding="async" onerror="this.onerror=null;this.src=&#39;icons/generic.svg&#39;"></span>';
+}
+window.MSFS_MAP_URL='https://www.google.com/maps/d/u/0/edit?mid=1smgM-lIXr_QPyWKxPrS68bmU0FsMjYM&usp=sharing';
+function switchView(view){if(!document.getElementById(view))view='accueil';$$('.view').forEach(e=>e.classList.toggle('active',e.id===view));$$('.navbtn').forEach(e=>{const sel=e.dataset.view===view;e.classList.toggle('selected',sel);if(sel)e.setAttribute('aria-current','page');else e.removeAttribute('aria-current')});history.replaceState(null,'','#'+view);if(view==='aeroports')renderMap();window.scrollTo({top:0,behavior:'smooth'})}
+$$('.navbtn').forEach(e=>e.addEventListener('click',()=>switchView(e.dataset.view)));
+$$('[data-goto]').forEach(e=>e.addEventListener('click',()=>switchView(e.dataset.goto)));
+$$('[data-top]').forEach(e=>e.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'})));
+
+function compareVersions(installed,online){
+  const a=String(installed||'').match(/\d+/g),b=String(online||'').match(/\d+/g);
+  if(!a||!b||a.length!==b.length)return 'different';
+  if(Number(a[0])!==Number(b[0]))return Number(b[0])>Number(a[0])?'major':'ahead';
+  const n=Math.max(a.length,b.length);
+  for(let i=0;i<n;i++){const x=Number(a[i]||0),y=Number(b[i]||0);if(y>x)return 'update';if(y<x)return 'ahead'}
+  return 'current';
+}
+// Bulle hors du tableau : Safari iPad ne la masque pas dans le conteneur défilant.
+document.addEventListener?.('click',event=>{
+ const button=event.target.closest?.('.airport-description-info');
+ const current=document.getElementById('airport-comment-popover');
+ if(!button){
+  if(current&&!event.target.closest?.('#airport-comment-popover'))current.remove();
+  return;
+ }
+ event.preventDefault();
+ event.stopPropagation();
+ if(current){
+  const same=current.dataset.source===button.dataset.description&&current.dataset.code===button.closest('tr')?.querySelector('.code')?.textContent;
+  current.remove();
+  if(same)return;
+ }
+ const note=document.createElement('div');
+ note.id='airport-comment-popover';
+ note.className='airport-comment-popover';
+ note.dataset.source=button.dataset.description||'';
+ note.dataset.code=button.closest('tr')?.querySelector('.code')?.textContent||'';
+ note.setAttribute('role','dialog');
+ note.setAttribute('aria-label','Commentaire de scène');
+ const label=document.createElement('strong');label.textContent='Commentaire : ';
+ const value=document.createElement('span');value.textContent=button.dataset.description||'';
+ const close=document.createElement('button');close.type='button';close.textContent='×';close.setAttribute('aria-label','Fermer le commentaire');
+ close.addEventListener('click',()=>note.remove());
+ note.append(label,value,close);
+ document.body.appendChild(note);
+ const rect=button.getBoundingClientRect();
+ const width=note.offsetWidth,height=note.offsetHeight;
+ const left=Math.max(8,Math.min(rect.left,window.innerWidth-width-8));
+ const top=rect.bottom+height+8<window.innerHeight?rect.bottom+6:Math.max(8,rect.top-height-6);
+ note.style.left=left+'px';
+ note.style.top=top+'px';
+});
+async function focusAirportFromList(code){
+ const key=String(code||'').trim().toUpperCase();
+ if(!key)return;
+ if(!airportMap)await renderMap();
+ const target=airportMapMarkers.find(x=>x.code===key);
+ if(!airportMap||!target){window.alert('Coordonnées non disponibles pour '+key);return;}
+ if(!airportMap.hasLayer(target.marker))target.marker.addTo(airportMap);
+ scrollToAirportMap();
+ setTimeout(()=>{
+  airportMap.invalidateSize();
+  airportMap.setView(target.marker.getLatLng(),Math.max(airportMap.getZoom(),12),{animate:true});
+  target.marker.openPopup();
+  scrollToAirportMap();
+ },220);
+}
+$('#airport-body')?.addEventListener('click',event=>{
+ const eye=event.target.closest?.('.airport-map-eye');
+ if(eye)focusAirportFromList(eye.dataset.icao);
+});
+function renderAirportUpdateDigest(){
+ const host=document.getElementById('airport-update-digest');if(!host)return;
+ const day=String(status.versions_checked_at||'').slice(0,10);
+ const updates=airports.filter(a=>a.version_check_state==='verified'&&a.version_comparison==='update'&&a.version_checked_at===day);
+ const safeLink=a=>isSafeUrl(a.version_source_url||a.source_url);
+ host.innerHTML='<div class="sectionbar compact"><div><div class="overline">VERSIONS CONTRÔLÉES · '+esc(day||'date inconnue')+'</div><h2>'+updates.length+' mises à jour confirmées</h2></div></div>'+
+ (updates.length?'<div class="tablebox"><table><thead><tr><th>ICAO</th><th>Scène</th><th>Installée</th><th>Disponible</th><th>Fiche</th></tr></thead><tbody>'+
+ updates.sort((a,b)=>String(a.icao).localeCompare(String(b.icao))).map(a=>'<tr><td><strong>'+esc(a.icao)+'</strong></td><td>'+esc(a.name||a.folder||'')+'</td><td>'+esc(a.installed||'—')+'</td><td>'+esc(a.server_version||'—')+'</td><td>'+(safeLink(a)==='#'?'—':'<a href="'+esc(safeLink(a))+'" target="_blank" rel="noopener noreferrer">Voir ↗</a>')+'</td></tr>').join('')+'</tbody></table></div>':'<p>Aucune mise à jour confirmée lors du dernier contrôle daté.</p>');
+}
+function renderAirports(){
+ renderAirportUpdateDigest();
+  const q=$('#airport-search').value.trim().toLowerCase(),region=$('#region-filter').value,st=$('#status-filter').value;
+  const checkedDate=String(status.versions_checked_at||'').slice(0,10);
+  const isVerified=a=>!!a.server_version&&a.version_check_state==='verified'&&a.version_checked_at===checkedDate;
+  const verified=airports.filter(isVerified);
+  const updates=verified.filter(a=>a.version_comparison==='update');
+  $('#verified-count').textContent=verified.length;
+  $('#updates-count').textContent=updates.length;
+  const airportCodeCounts=new Map();
+  airports.forEach(a=>{const code=String(a.icao||'').trim().toUpperCase();if(code)airportCodeCounts.set(code,(airportCodeCounts.get(code)||0)+1)});
+  const duplicatedAirports=[...airportCodeCounts.values()].filter(count=>count>1).length;
+  const duplicateSummary=$('#duplicates-count');if(duplicateSummary)duplicateSummary.textContent=duplicatedAirports;
+  const issues={
+    "Version non publiée":airports.filter(a=>a.version_check_state==='no_version').length,
+    "Boutique en retard":airports.filter(a=>a.version_check_state==='source_older').length,
+    "Édition / format ambigu":airports.filter(a=>a.version_check_state==='inconsistent').length,
+    "Source inaccessible":airports.filter(a=>a.version_check_state==='unavailable').length,
+    "Fiche produit manquante":airports.filter(a=>a.version_check_state==='no_source').length,
+    "Sous-scène / privé":airports.filter(a=>a.version_check_state==='not_automatable').length
+  };
+  const unresolved=airports.length-verified.length;
+  const knownButUnconfirmed=airports.filter(a=>a.server_version&&a.version_check_state!=='verified').length;
+  const withoutPublishedVersion=airports.filter(a=>!a.server_version).length;
+  const diag=$('#airport-diagnostics');
+  if(diag)diag.textContent=`${verified.length}/${airports.length} versions vérifiées · ${knownButUnconfirmed} versions publiées mais non confirmées · ${withoutPublishedVersion} sans version comparable. À approfondir : ${unresolved} scènes · `+Object.entries(issues).filter(([,n])=>n).map(([label,n])=>`${n} ${label.toLowerCase()}`).join(' · ')+'. Chaque cas est réévalué quotidiennement.';
+  const isHeliport=a=>a.scene_type==="heliport"||/heliport|helipad|helistop|helisurface/i.test([a.name,a.folder].join(" "));
+  const duplicateCounts=new Map();
+  airports.forEach(a=>{const code=String(a.icao||'').trim().toUpperCase();if(code)duplicateCounts.set(code,(duplicateCounts.get(code)||0)+1)});
+  const matches=airports.filter(a=>(!q||[a.icao,a.original,a.name,a.publisher,a.folder,a.country,a.region,a.installed,a.server_version].join(' ').toLowerCase().includes(q))&&(!region||(a.region||a.country)===region)&&(!st||(st==='airliner'||st==='cessna'?airportCoordinates[String(a.icao||'').trim().toUpperCase()]?.aircraft_marker===st:st==='verified'?isVerified(a):st==='current'?isVerified(a)&&a.version_comparison==='equal':st==='update'?isVerified(a)&&a.version_comparison==='update':st==='duplicates'?(duplicateCounts.get(String(a.icao||'').trim().toUpperCase())||0)>1:a.status===st))).sort((left,right)=>{
+    const lc=String(left.icao||'').trim().toUpperCase();
+    const rc=String(right.icao||'').trim().toUpperCase();
+    return lc.localeCompare(rc,'en',{numeric:true})||
+      String(left.name||'').localeCompare(String(right.name||''),'fr');
+  });
+  if(airportMap)updateAirportMap(matches);
+  $('#airport-count').textContent=`${matches.length} scène${matches.length>1?'s':''} affichée${matches.length>1?'s':''} sur ${airports.length}`;
+  const cls={'UNK-P':'p','UNK-V':'v','UNK-C':'c','UNK-S':'s','verified':'ok'};
+  $('#airport-body').innerHTML=matches.map(a=>{
+    const st=a.status||'UNK-V';
+    const source=a.source_url?`<a href="${esc(isSafeUrl(a.source_url))}" target="_blank" rel="noopener noreferrer">${esc((a.source_store||'Éditeur')+(a.source_edition?' · '+a.source_edition:''))} ↗</a>`:a.source_catalog_url?`<a href="${esc(isSafeUrl(a.source_catalog_url))}" target="_blank" rel="noopener noreferrer">Catalogue éditeur (version non confirmée) ↗</a>`:'';
+    const comp=isVerified(a)?(a.version_comparison==='update'?'update':a.version_comparison==='equal'?'current':'unknown'):(a.version_check_state==='source_older'?'ahead':'unknown');
+    const compLabel=comp==='update'?'MISE À JOUR':comp==='current'?'À JOUR':comp==='ahead'?'INSTALLÉE + RÉCENTE':comp==='major'?'NOUVELLE ÉDITION':'À COMPARER';
+    const pendingLabel=a.source_scope==='parent_reference_only'?'PACK PARENT — À CONFIRMER':a.version_check_state==='source_older'?'BOUTIQUE PLUS ANCIENNE':a.version_check_state==='inconsistent'?'ÉDITION / FORMAT À VÉRIFIER':'COMPARAISON NON VALIDÉE';
+    const compClass=comp==='update'?'flag-s':comp==='current'?'flag-ok':'flag-v';
+    const online=isVerified(a)?`<b>${esc(a.server_version)}</b><small><span class="flag ${compClass}">${compLabel}</span></small><small>${source}</small><small>Vérifiée le ${esc(localDate(a.version_checked_at))}</small>`:a.server_version?`<b>${esc(a.server_version)}</b><small>${a.version_checked_at===checkedDate?'Version boutique contrôlée aujourd’hui, comparaison non validée':'Dernière version connue, non revalidée aujourd’hui'}</small><small><span class="flag flag-${cls[st]||'v'}">${esc(pendingLabel)}</span></small><small>${source}</small><small>Dernière confirmation : ${esc(localDate(a.version_checked_at))}</small>`:`<span class="flag flag-${cls[st]||'v'}">${esc(a.source_scope==='parent_reference_only'?'PACK PARENT — À CONFIRMER':st)}</span>${source?`<small>${source}</small>`:''}`;
+    return `<tr><td><span class="code">${esc(a.icao)}</span> <button type="button" class="airport-map-eye" data-icao="${esc(a.icao)}" aria-label="Voir ${esc(a.icao)} sur la carte" title="Voir sur la carte">👁</button>${isHeliport(a)?'<small class="heliport-badge" title="Scène d’héliport">🚁 HÉLIPORT</small>':""}${(duplicateCounts.get(String(a.icao||"").trim().toUpperCase())||0)>1?'<small class="duplicate-badge" title="Plusieurs scènes pour cet aéroport">✈ ▣ DOUBLON</small><a class="airport-compare-link" href="comparateur.html?icao=${encodeURIComponent(String(a.icao||&quot;&quot;).trim().toUpperCase())}" title="Comparer les scènes de cet aéroport">⚖ Comparer</a>':""}${a.original!==a.icao?`<small>Source : ${esc(a.original)}</small>`:''}</td><td><b>${esc(a.name)}</b><span class="airport-country-inline">${esc(countrySuffix(a.icao))}</span>${a.source_url&&isSafeUrl(a.source_url)!=='#'?` <a class="airport-direct-link" href="${esc(isSafeUrl(a.source_url))}" target="_blank" rel="noopener noreferrer" title="Ouvrir la fiche de cette scène">↗ Fiche scène</a>`:''}${a.description?` <button type="button" class="airport-description-info" data-description="${esc(a.description)}" aria-label="Lire le commentaire de ${esc(a.name)}">ⓘ</button>`:""}<small>${esc(a.note||a.folder||'')}</small></td><td>${esc(a.publisher)}</td><td><b>${esc(a.installed||'Non renseignée')}</b></td><td>${online}${(a.version_check_state!=='verified'&&a.version_check_reason)?`<small class="source-note">${esc(a.version_check_reason)}</small>`:''}${a.source_note?`<small class="source-note">${esc(a.source_note)}</small>`:''}${a.reference_version&&a.reference_source_url?`<small class="source-note">${a.reference_confidence==='publisher_page_human_checked'||a.reference_confidence==='official_support_human_checked'?'Référence éditeur, non revalidée automatiquement':'Indication tierce non officielle'} : <a href="${esc(isSafeUrl(a.reference_source_url))}" target="_blank" rel="noopener noreferrer">${esc(a.reference_version)} ↗</a> (non utilisée pour les alertes)</small>`:''}</td></tr>`;
+  }).join('')||'<tr><td colspan="5">Aucune scène correspondant à ces filtres.</td></tr>';
+}
+let airportMap=null;
+let simbriefRouteBounds=null;
+const WORLD_BOUNDS=[[-85,-180],[85,180]];
+let preFlightMapView=null;
+function savePreFlightMapView(){
+ if(airportMap&&!preFlightMapView){
+  preFlightMapView={center:airportMap.getCenter(),zoom:airportMap.getZoom()};
+ }
+}
+// Leaflet : transition progressive (déplacement et zoom simultanés).
+// Respecter les utilisateurs qui préfèrent réduire les animations.
+function flightMapAnimation(){
+ const reduced=typeof window.matchMedia==='function'&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ return {animate:!reduced,duration:reduced?0:1.8,easeLinearity:0.22};
+}
+function restorePreFlightMapView(){
+ if(!airportMap||!preFlightMapView)return;
+ const previous=preFlightMapView;
+ preFlightMapView=null;
+ airportMap.stop();
+ airportMap.invalidateSize();
+ airportMap.flyTo(previous.center,previous.zoom,flightMapAnimation());
+}
+let simbriefRouteLayer=null;
+let simbriefRouteButton=null;
+let showSimbriefOnLoad=false;
+function setSimbriefRouteVisible(visible){
+ if(!airportMap||!simbriefRouteLayer)return;
+ if(visible&&!airportMap.hasLayer(simbriefRouteLayer)){savePreFlightMapView();simbriefRouteLayer.addTo(airportMap);}
+ if(!visible&&airportMap.hasLayer(simbriefRouteLayer))airportMap.removeLayer(simbriefRouteLayer);
+ if(!visible)restorePreFlightMapView();
+ if(simbriefRouteButton){simbriefRouteButton.textContent=visible?'👁 Masquer le dernier vol':'👁 Voir le dernier vol';simbriefRouteButton.setAttribute('aria-pressed',String(visible));}
+}
+let focusSimbriefOnOpen=false;
+function focusSimbriefRoute(){
+ if(!airportMap||!simbriefRouteBounds||!airportMap.hasLayer(simbriefRouteLayer))return;
+ airportMap.stop();
+ airportMap.invalidateSize();
+ airportMap.flyToBounds(simbriefRouteBounds,{padding:[65,65],maxZoom:9,...flightMapAnimation()});
+}
+function scrollToAirportMap(){
+ const map=document.getElementById('airport-leaflet-map')||document.getElementById('google-map');
+ if(!map)return;
+ const rect=map.getBoundingClientRect();
+ const target=Math.max(0,window.scrollY+rect.top-(window.innerHeight-rect.height)/2);
+ window.scrollTo({top:target,behavior:'auto'});
+}
+function openSimbriefMap(){
+ showSimbriefOnLoad=true;
+ focusSimbriefOnOpen=true;
+ setSimbriefRouteVisible(true);
+ switchView('aeroports');
+ // Le scroll en haut de switchView est asynchrone : attendre sa fin.
+ setTimeout(scrollToAirportMap,500);
+ setTimeout(scrollToAirportMap,1000);
+ if(airportMap&&simbriefRouteBounds){
+  focusSimbriefOnOpen=false;
+  setTimeout(()=>{focusSimbriefRoute();scrollToAirportMap()},650);
+ }
+}
+async function openSimbriefOnFlightPlanMap(){
+ const button=$('#simbrief-map-eye');
+ if(button)button.disabled=true;
+ try{
+  const response=await fetch('simbrief_last.json',{cache:'no-store'});
+  if(!response.ok)throw new Error('OFP indisponible');
+  const data=await response.json();
+  const origin=String(data.origin?.icao||'').toUpperCase(),destination=String(data.destination?.icao||'').toUpperCase();
+  if(data.state!=='ok'||!/^[A-Z]{4}$/.test(origin)||!/^[A-Z]{4}$/.test(destination))throw new Error('Codes ICAO absents du dernier OFP');
+  switchView('meteo');
+  document.dispatchEvent(new CustomEvent('msfs:show-simbrief-on-weather-map',{detail:{origin,destination}}));
+ }catch(error){
+  console.warn('Impossible d’ouvrir le dernier OFP sur la carte météo',error);
+  alert('Le dernier plan de vol SimBrief est indisponible pour la carte. Réessaie après la prochaine collecte.');
+ }finally{if(button)button.disabled=false}
+}
+$('#simbrief-map-eye')?.addEventListener('click',openSimbriefOnFlightPlanMap);
+
+let airportMapMarkers=[];
+let airportMapCaption=null;
+function updateAirportMap(matches){
+ if(!airportMap)return;
+ const visibleCodes=new Set(matches.map(a=>String(a.icao||'').trim().toUpperCase()));
+ let shown=0;
+ for(const item of airportMapMarkers){
+  if(visibleCodes.has(item.code)){if(!airportMap.hasLayer(item.marker))item.marker.addTo(airportMap);shown++}
+  else if(airportMap.hasLayer(item.marker))airportMap.removeLayer(item.marker);
+ }
+ if(airportMapCaption)airportMapCaption.textContent=shown+' aéroports affichés sur '+airportMapMarkers.length+' géolocalisés · '+matches.length+' scènes filtrées · Vert : à jour · Orange : MAJ disponible · Gris : non vérifié';
+}
+
+// Découper les traversées du méridien 180° pour ne pas tracer une ligne à travers le planisphère.
+function splitAntimeridian(points){
+ const segments=[];let current=[];
+ for(const point of points){
+  if(current.length){
+   const prev=current[current.length-1],delta=point[1]-prev[1];
+   if(Math.abs(delta)>180){
+    const target=delta>0?-180:180;
+    const unwrapped=point[1]+(delta>0?-360:360);
+    const fraction=(target-prev[1])/(unwrapped-prev[1]);
+    const latitude=prev[0]+fraction*(point[0]-prev[0]);
+    current.push([latitude,target]);segments.push(current);
+    current=[[latitude,-target]];
+   }
+  }
+  current.push(point);
+ }
+ if(current.length)segments.push(current);
+ return segments;
+}
+function fromSimbriefBounds(fixes,start,end){
+ const coords=[];
+ for(const p of [start,...fixes,end])if(p&&Number.isFinite(Number(p.lat))&&Number.isFinite(Number(p.lon)))coords.push([Number(p.lat),Number(p.lon)]);
+ return coords.length>=2?L.latLngBounds(coords):null;
+}
+async function addSimbriefRoute(map, airportData, slot){
+ try{
+  const flight=await fetch('simbrief_last.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.json());
+  if(flight.state!=='ok')return;
+  const start=airportData[String(flight.origin?.icao||'').toUpperCase()];
+  const end=airportData[String(flight.destination?.icao||'').toUpperCase()];
+  const valid=p=>p&&Number.isFinite(Number(p.lat))&&Number.isFinite(Number(p.lon))&&Math.abs(Number(p.lat))<=90&&Math.abs(Number(p.lon))<=180;
+  const fixes=(Array.isArray(flight.route_points)?flight.route_points:[]).filter(valid);
+  const points=fixes.map(p=>[Number(p.lat),Number(p.lon)]);
+  const utc=t=>{if(!t)return '—';const s=String(t);const d=/^[0-9]{10,13}$/.test(s)?new Date(Number(s)*(s.length===10?1000:1)):new Date(s);return Number.isNaN(d.getTime())?'—':d.toISOString().slice(11,16)+'Z'};
+  const duration=t=>{const s=String(t||'');const m=s.match(/^([0-9]+):([0-9]{2})/);return m?Number(m[1])+'h'+m[2]:'—'};
+  const routeLabel=(t,placement='center')=>{const width=Math.max(110,Math.ceil(String(t).length*7.5)+22);const offset=placement==='right'?[-25,17]:placement==='left'?[width+25,17]:[width/2,17];return L.divIcon({className:'simbrief-label',html:'<div style="box-sizing:border-box;width:'+width+'px;background:#102c42;color:white;border:1px solid white;border-radius:6px;padding:7px 10px;white-space:nowrap;font-size:12px;font-weight:bold;text-align:center;box-shadow:0 2px 5px #0007">'+esc(t)+'</div>',iconSize:[width,32],iconAnchor:offset});};
+  simbriefRouteBounds=fromSimbriefBounds(fixes,start,end);
+  const layer=L.layerGroup();
+  simbriefRouteLayer=layer;
+  // Le dernier vol n'est plus affiché sur la carte des aéroports.
+  const icon=(type)=>L.divIcon({className:'simbrief-aircraft',html:'<span style="display:grid;place-items:center;background:#102c42;border:2px solid white;color:white;border-radius:50%;width:38px;height:38px;font-size:23px">'+(type==='departure'?'🛫':'🛬')+'</span>',iconSize:[38,38],iconAnchor:[19,19]});
+  const from=valid(start)?[Number(start.lat),Number(start.lon)]:points[0];
+  const to=valid(end)?[Number(end.lat),Number(end.lon)]:points[points.length-1];
+  if(from){L.marker(from,{icon:icon('departure')}).bindPopup('🛫 Départ : '+esc(flight.origin?.icao||'')).addTo(layer);L.marker(from,{icon:routeLabel('Départ '+utc(flight.scheduled_departure),'right'),interactive:false}).addTo(layer);}
+  if(to){L.marker(to,{icon:icon('arrival')}).bindPopup('🛬 Arrivée : '+esc(flight.destination?.icao||'')).addTo(layer);L.marker(to,{icon:routeLabel('Arrivée '+utc(flight.scheduled_arrival),'left'),interactive:false}).addTo(layer);}
+  // Ne jamais transformer une route SimBrief non géocodée en ligne directe.
+  if(fixes.length>=2){
+   if(valid(start))points.unshift(from);
+   if(valid(end))points.push(to);
+   for(const segment of splitAntimeridian(points)){
+    if(segment.length<2)continue;
+    L.polyline(segment,{color:'#172635',weight:6,opacity:.85,interactive:false}).addTo(layer);
+    L.polyline(segment,{color:'#ffffff',weight:3,opacity:1,interactive:false}).addTo(layer);
+   }
+   const middle=points[Math.floor(points.length/2)];
+   const fl=Number(flight.altitude);
+   L.marker(middle,{icon:routeLabel('Vol '+duration(flight.enroute_time)+' · '+(fl>0?'FL'+Math.round(fl/100):'FL —')),interactive:false}).addTo(layer);
+  }
+  showSimbriefOnLoad=false;
+  const label=document.createElement('p');
+  label.className='map-caption';
+  label.textContent='SimBrief : '+(flight.origin?.icao||'?')+' → '+(flight.destination?.icao||'?')+(fixes.length>=2?' · tracé via '+fixes.length+' points de navigation':' · coordonnées des points de navigation indisponibles : aucun faux tracé affiché');
+  slot.appendChild(label);
+ }catch(e){console.warn('Plan SimBrief non disponible sur la carte',e)}
+}
+
+async function renderMap(){
+ const slot=$('#google-map');if(!slot||airportMap)return;
+ try{
+  const data=Object.keys(airportCoordinates).length?airportCoordinates:await fetch('airport_coordinates.json').then(r=>r.json());
+  const thumbnails=await fetch('airport-thumbnails.json').then(r=>r.ok?r.json():{}).catch(()=>({}));
+  const sceneThumbnail=a=>{
+    const filename=thumbnails?.[a.folder];
+    if(typeof filename!=='string'||!/^[a-f0-9]{24}\.webp$/.test(filename))return '';
+    return '<img class="airport-popup-thumbnail" src="airport-thumbnails/'+filename+'" alt="'+esc(a.name||a.folder)+'" loading="lazy" decoding="async">';
+  };
+  if(!window.L){await new Promise((ok,no)=>{const s=document.createElement('script');s.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';s.onload=ok;s.onerror=no;document.head.appendChild(s)})}
+  slot.innerHTML='<div id="airport-leaflet-map"></div><p class="map-caption">Vert : à jour · Orange : mise à jour disponible · Gris : non vérifié</p>';
+  const mapElement=slot.querySelector('#airport-leaflet-map');
+  const fullscreenButton=document.createElement('button');
+  fullscreenButton.type='button';fullscreenButton.className='map-fullscreen-button';fullscreenButton.textContent='⛶ Plein écran';
+  fullscreenButton.setAttribute('aria-label','Afficher la carte en plein écran');
+  // Commande dans la barre au-dessus de la carte : ne masque plus les zooms Leaflet +/-.
+  slot.insertBefore(fullscreenButton,mapElement);
+  const updateMapSize=()=>setTimeout(()=>airportMap&&airportMap.invalidateSize(),120);
+  const updateFullscreenLabel=()=>{const active=document.fullscreenElement===slot||slot.classList.contains('map-fullscreen-fallback');fullscreenButton.textContent=active?'✕ Quitter le plein écran':'⛶ Plein écran';fullscreenButton.setAttribute('aria-label',active?'Quitter le plein écran':'Afficher la carte en plein écran');updateMapSize()};
+  fullscreenButton.addEventListener('click',async()=>{
+   if(document.fullscreenElement===slot){await document.exitFullscreen();return}
+   if(slot.classList.contains('map-fullscreen-fallback')){slot.classList.remove('map-fullscreen-fallback');document.body.style.overflow='';updateFullscreenLabel();return}
+   try{if(!slot.requestFullscreen)throw new Error('fullscreen unsupported');await slot.requestFullscreen()}catch(_){slot.classList.add('map-fullscreen-fallback');document.body.style.overflow='hidden';updateFullscreenLabel()}
+  });
+  document.addEventListener('fullscreenchange',updateFullscreenLabel);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&slot.classList.contains('map-fullscreen-fallback')){slot.classList.remove('map-fullscreen-fallback');document.body.style.overflow='';updateFullscreenLabel()}});
+  // Charger les styles vectoriels avec une attente limitée : la carte raster reste disponible en secours.
+  let vectorReady=false;
+  try{
+    if(!document.getElementById('maplibre-map-styles')){
+      const css=document.createElement('link');
+      css.id='maplibre-map-styles';css.rel='stylesheet';
+      css.href='https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.css';
+      document.head.appendChild(css);
+    }
+    const loadMapScript=src=>new Promise((resolve,reject)=>{
+      const script=document.createElement('script');
+      script.src=src;script.onload=resolve;script.onerror=()=>reject(new Error('Chargement impossible : '+src));
+      document.head.appendChild(script);
+    });
+    const timeout=ms=>new Promise((_,reject)=>setTimeout(()=>reject(new Error('Délai de chargement des fonds vectoriels dépassé')),ms));
+    await Promise.race([(async()=>{
+      if(!window.maplibregl)await loadMapScript('https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.js');
+      if(!L.maplibreGL)await loadMapScript('https://cdn.jsdelivr.net/npm/@maplibre/maplibre-gl-leaflet@0.1.1/leaflet-maplibre-gl.js');
+    })(),timeout(3000)]);
+    vectorReady=Boolean(L.maplibreGL);
+  }catch(e){console.warn('Fonds vectoriels indisponibles : carte classique conservée',e)}
+  airportMap=L.map('airport-leaflet-map',{maxBounds:WORLD_BOUNDS,maxBoundsViscosity:1}).setView([43.7,7.2],5);
+  const baseMaps={
+    'Plan':L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{noWrap:true,maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}),
+    'Satellite':L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{noWrap:true,maxZoom:19,attribution:'Tiles &copy; Esri and contributors'}),
+    'Relief':L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',{noWrap:true,maxZoom:17,attribution:'&copy; OpenTopoMap contributors &copy; OpenStreetMap'})
+  };
+  if(vectorReady){
+    for(const [name,style] of Object.entries({
+      'Sombre':'dark','Fiord':'fiord','Positron':'positron','Liberty':'liberty','Bright':'bright'
+    })){
+      baseMaps[name]=L.maplibreGL({style:'https://tiles.openfreemap.org/styles/'+style,attribution:'&copy; OpenFreeMap &copy; OpenStreetMap contributors'});
+    }
+  }
+  const selectedStyle=(()=>{try{return localStorage.getItem('msfs-airport-map-style')||'Plan'}catch{return 'Plan'}})();
+  (baseMaps[selectedStyle]||baseMaps.Plan).addTo(airportMap);
+  const mapStyles=L.control.layers(baseMaps,null,{position:'topright',collapsed:true}).addTo(airportMap);
+  airportMap.on('baselayerchange',e=>{try{localStorage.setItem('msfs-airport-map-style',e.name)}catch{}});
+
+  const groups={};for(const a of airports){const k=a.icao;if(data[k])(groups[k]??=[]).push(a)}
+  const bounds=[];
+  const mappedSceneCount=Object.values(groups).reduce((sum,items)=>sum+items.length,0);
+  const info=slot.querySelector('.map-caption');
+  airportMapCaption=info;
+  if(info)info.textContent=Object.keys(groups).length+' aéroports localisés · '+mappedSceneCount+' scènes · '+(airports.length-mappedSceneCount)+' scènes sans repère autonome (sous-scènes, code non confirmé ou fictif) · Vert : à jour · Orange : MAJ disponible · Gris : non vérifié';
+  for(const [code,items] of Object.entries(groups)){
+   const valid=a=>a.version_check_state==='verified'&&a.server_version&&a.version_checked_at===String(status.versions_checked_at||'').slice(0,10);
+   const outdated=items.some(a=>valid(a)&&a.version_comparison==='update');
+   const current=items.every(a=>valid(a)&&a.version_comparison==='equal');
+   const color=outdated?'#f29a25':current?'#249c63':'#9299a3';
+   const heliport=items.some(a=>a.scene_type==="heliport"||/heliport|helipad|helistop|helisurface/i.test([a.name,a.folder].join(" ")));
+   const lightAircraft=data[code].aircraft_marker==='cessna';
+   const silhouette=lightAircraft?'icons/cessna.png':'icons/a320.png';
+   const svg='<div style="position:relative;width:36px;height:46px"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="46" viewBox="0 0 36 46"><path d="M18 44C13 35 2 26 2 18a16 16 0 1 1 32 0c0 8-11 18-16 26" fill="'+color+'" stroke="white" stroke-width="2"/></svg><img alt="" src="'+silhouette+'" style="position:absolute;left:5px;top:6px;width:26px;height:29px;object-fit:contain;pointer-events:none"></div>';
+   const icon=L.divIcon({className:'airport-pin',html:heliport?svg.replace(/<img alt=""[^>]*>/,'<span style="position:absolute;left:5px;top:8px;font-size:23px;line-height:26px">🚁</span>'):svg,iconSize:[36,46],iconAnchor:[18,44]});
+   const details=items.map(a=>'<p>'+sceneThumbnail(a)+'<b>'+esc(a.name||a.folder)+esc(countrySuffix(code))+'</b><br>'+esc(a.publisher)+' · '+esc(a.installed||'—')+' / '+esc(a.server_version||'inconnue')+(a.source_url&&isSafeUrl(a.source_url)!=='#'?'<br><a class="airport-direct-link airport-popup-link" href="'+esc(isSafeUrl(a.source_url))+'" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir la fiche de cette scène sur '+esc(a.source_store||'le site marchand')+'">↗ Voir la fiche scène · '+esc(a.source_store||'Éditeur')+'</a>':'')+(a.description?'<br><span class="airport-popup-description"><b>Commentaire :</b> '+esc(a.description)+'</span>':'')+'</p>').join('');
+   const m=L.marker([data[code].lat,data[code].lon],{icon}).bindPopup('<strong>'+esc(code)+' — '+esc(data[code].name||'')+esc(countrySuffix(code))+'</strong>'+details,{maxWidth:300,maxHeight:410}).addTo(airportMap);
+   airportMapMarkers.push({code:String(code).trim().toUpperCase(),marker:m});
+   bounds.push(m.getLatLng());
+  }
+  // Liste de courses : couche indépendante, cachée par défaut.
+  // Les aéroports possédés restent exclus même si le JSON est en retard sur un import.
+  const shoppingLayer=L.layerGroup();
+  const shoppingControl=document.createElement('button');
+  shoppingControl.type='button';
+  shoppingControl.className='map-shopping-toggle';
+  shoppingControl.setAttribute('aria-pressed','false');
+  const bagSvg='<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg>';
+  let shoppingVisible=false;
+  let shoppingCounts={airport:0,aerodrome:0};
+  const updateShoppingButton=()=>{
+    shoppingControl.innerHTML=bagSvg+' <span>'+shoppingCounts.airport+' aéroports · '+shoppingCounts.aerodrome+' aérodromes — '+(shoppingVisible?'Masquer':'Afficher')+'</span>';
+  };
+  updateShoppingButton();
+  slot.insertBefore(shoppingControl,mapElement);
+  shoppingControl.addEventListener('click',()=>{
+    shoppingVisible=!shoppingVisible;
+    if(shoppingVisible)shoppingLayer.addTo(airportMap);
+    else airportMap.removeLayer(shoppingLayer);
+    shoppingControl.setAttribute('aria-pressed',String(shoppingVisible));
+    updateShoppingButton();
+  });
+  try{
+    const response=await fetch('shopping_airports.json',{cache:'no-store'});
+    if(!response.ok)throw new Error('Liste non encore créée');
+    const shopping=await response.json();
+    const ownedCodes=new Set(airports.map(a=>String(a.icao||'').trim().toUpperCase()));
+    for(const entry of shopping){
+      const code=String(entry.icao||'').trim().toUpperCase();
+      if(!/^(?:[A-Z]{4}|[A-Z0-9]{3,5})$/.test(code)||ownedCodes.has(code))continue;
+      if(!Number.isFinite(+entry.lat)||!Number.isFinite(+entry.lon)||Math.abs(+entry.lat)>90||Math.abs(+entry.lon)>180)continue;
+      const shops=(entry.shops||[]).slice(0,2).map(x=>{
+        const url=isSafeUrl(x.url);
+        if(url==='#')return '';
+        return '<a class="airport-direct-link airport-popup-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" title="'+esc(x.product_title||'Voir la scène')+'">↗ '+esc(x.store||'Boutique')+' · '+esc(x.price_type||'Prix à vérifier')+'</a>';
+      }).filter(Boolean).join('<br>');
+      if(!shops)continue;
+      const aircraft=entry.type==='heliport'?'🚁':entry.type==='aerodrome'?'<img src="icons/cessna.png" alt="" width="26" height="26">':'<img src="icons/a320.png" alt="" width="26" height="26">';
+      const icon=L.divIcon({className:'airport-shopping-pin',html:'<div class="shopping-bag-pin" aria-hidden="true">'+aircraft+'</div>',iconSize:[34,38],iconAnchor:[17,17]});
+      shoppingCounts[entry.type==='aerodrome'?'aerodrome':'airport']++;
+      L.marker([+entry.lat,+entry.lon],{icon}).bindPopup('<strong>'+esc(code)+' — '+esc(entry.name||code)+'</strong><p>'+esc(entry.type==='aerodrome'?'Aérodrome':'Aéroport')+' · Scène MSFS disponible :</p>'+shops).addTo(shoppingLayer);
+    }
+    updateShoppingButton();
+  }catch(error){console.warn('Liste de courses indisponible',error);updateShoppingButton()}
+  // Liste de courses partagée : écriture sécurisée via une issue GitHub du propriétaire.
+  const wishlistHost=document.getElementById('airport-wishlist');
+  const ownedWishlistCodes=new Set(airports.map(a=>String(a.icao||'').toUpperCase()));
+  const wishlistUrl=(action,code)=>'https://github.com/Matthisfr/journal-msfs/issues/new?'+new URLSearchParams({title:'[AIRPORT-WISHLIST] '+action+' '+code,body:'Demande personnelle pour le Journal MSFS. Enregistrer cette sélection dans la liste de courses.'}).toString();
+  let wishlistEntries=[];
+  const renderWishlist=()=>{
+   if(!wishlistHost)return;
+   const rows=wishlistEntries.filter(x=>!ownedWishlistCodes.has(x.icao));
+   wishlistHost.innerHTML='<div class="sectionbar compact"><div><div class="overline">MES FUTURS ACHATS</div><h2>🛍️ Liste de courses — '+rows.length+' / 30</h2></div></div>'+
+    (rows.length?'<div class="tablebox"><table><thead><tr><th>ICAO</th><th>Aéroport</th><th>Pays</th><th>Action</th></tr></thead><tbody>'+rows.map(x=>'<tr><td><strong>'+esc(x.icao)+'</strong></td><td>'+esc(x.name)+'</td><td>'+esc((()=>{try{return new Intl.DisplayNames(['fr'],{type:'region'}).of(x.country)||x.country}catch{return x.country||'—'}})())+'</td><td><a href="'+esc(wishlistUrl('REMOVE',x.icao))+'" target="_blank" rel="noopener noreferrer">✕ Retirer</a></td></tr>').join('')+'</tbody></table></div>':'<p class="fineprint">Ta liste est vide. Choisis un aéroport sur la carte et ajoute-le ici.</p>')+
+    '<p class="fineprint">Liste commune à tous tes appareils. Pour ajouter ou retirer un aéroport, valide la demande sur GitHub avec ton compte Matthisfr. La liste est mise à jour après publication ; les aéroports de ton inventaire sont automatiquement masqués.</p>';
+  };
+  const reloadWishlist=async()=>{try{const response=await fetch('airport_wishlist.json',{cache:'no-store'});if(response.ok){const data=await response.json();wishlistEntries=Array.isArray(data)?data:[];renderWishlist()}}catch(e){console.warn('Liste de courses non disponible',e)}};
+  renderWishlist();reloadWishlist();
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)reloadWishlist()});
+  window.addEventListener('focus',reloadWishlist);
+  setInterval(()=>{if(!document.hidden)reloadWishlist()},60000);
+  // Appui long (iPad) ou clic droit : raccourcis de recherche des scènes.
+  // Identifier l'aéroport réellement touché, y compris hors inventaire personnel.
+  const showAirportShops=(code,name,position)=>{
+   const query=encodeURIComponent(code);
+   const shops=[
+    ['SimMarket','https://secure.simmarket.com/advanced_search_result.php?keywords='+query],
+    ['iniBuilds','https://inibuilds.com/search?q='+query],
+    ['Contrail','https://contrail.shop/search?q='+query],
+    ['Flightsim.to','https://flightsim.to/search?q='+query]
+   ];
+   const html='<div class="airport-shop-popup"><strong>'+esc(code)+' — '+esc(name||code)+'</strong><p>Rechercher des scènes pour cet aéroport :</p>'+
+     shops.map(([label,url])=>'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(label)+' ↗</a>').join('')+'<p><a class="airport-wishlist-add" href="'+esc(wishlistUrl('ADD',code))+'" target="_blank" rel="noopener noreferrer">🛍️ Ajouter à ma liste de courses</a></p></div>';
+   L.popup({maxWidth:300}).setLatLng(position).setContent(html).openOn(airportMap);
+  };
+  let worldAirportIndexPromise=null;
+  const searchPopupForPoint=async latlng=>{
+   const point=airportMap.latLngToContainerPoint(latlng);
+   const nearest=airportMapMarkers.map(item=>({item,distance:point.distanceTo(airportMap.latLngToContainerPoint(item.marker.getLatLng()))})).sort((a,b)=>a.distance-b.distance)[0];
+   if(nearest&&nearest.distance<35){
+    const code=nearest.item.code;
+    showAirportShops(code,(data[code]&&data[code].name)||code,nearest.item.marker.getLatLng());return;
+   }
+   const loading=L.popup({maxWidth:290}).setLatLng(latlng).setContent('Identification automatique de l’aéroport…').openOn(airportMap);
+   try{
+    if(!worldAirportIndexPromise)worldAirportIndexPromise=fetch('world_airports.json').then(r=>{if(!r.ok)throw Error('Index indisponible');return r.json()}).catch(e=>{worldAirportIndexPromise=null;throw e});
+    const index=await worldAirportIndexPromise;
+    let closest=null,minimum=Infinity;
+    for(const [code,entry] of Object.entries(index)){
+     const distance=airportMap.distance(latlng,[entry[0],entry[1]]);
+     if(distance<minimum){minimum=distance;closest={code,name:entry[2],lat:entry[0],lon:entry[1]}}
+    }
+    // Éviter de sélectionner un autre aéroport à plusieurs dizaines de kilomètres.
+    if(closest&&minimum<12000){
+     showAirportShops(closest.code,closest.name,[closest.lat,closest.lon]);
+    }else loading.setContent('Aucun aéroport identifié à proximité. Zoome sur les pistes et réessaie.');
+   }catch(e){loading.setContent('Index des aéroports non encore disponible. Réessaie après la prochaine publication.')}
+  };
+  // Safari iPad : empêcher le menu de sélection sans bloquer le déplacement de la carte.
+  let longPressTimer=null,startPoint=null,activeTouch=null,handledLongPress=false;
+  const clearLongPress=()=>{if(longPressTimer!==null){clearTimeout(longPressTimer);longPressTimer=null}};
+  const beginLongPress=(x,y)=>{
+   clearLongPress();handledLongPress=false;startPoint={x,y};
+   const rect=mapElement.getBoundingClientRect();
+   const latlng=airportMap.containerPointToLatLng([x-rect.left,y-rect.top]);
+   longPressTimer=setTimeout(()=>{handledLongPress=true;searchPopupForPoint(latlng);clearLongPress()},700);
+  };
+  mapElement.addEventListener('touchstart',e=>{
+   if(e.touches.length!==1||e.target.closest('.leaflet-control,.leaflet-popup')){clearLongPress();return}
+   activeTouch=e.touches[0].identifier;
+   beginLongPress(e.touches[0].clientX,e.touches[0].clientY);
+  },{passive:true});
+  mapElement.addEventListener('touchmove',e=>{
+   if(e.touches.length!==1){clearLongPress();return}
+   const t=e.touches[0];
+   if(startPoint&&Math.hypot(t.clientX-startPoint.x,t.clientY-startPoint.y)>12)clearLongPress();
+  },{passive:true});
+  ['touchend','touchcancel'].forEach(type=>mapElement.addEventListener(type,()=>{clearLongPress();startPoint=null;activeTouch=null},{passive:true}));
+  mapElement.addEventListener('contextmenu',e=>{
+   if(e.target.closest('.leaflet-control,.leaflet-popup'))return;
+   e.preventDefault();
+   if(!handledLongPress)searchPopupForPoint(airportMap.mouseEventToLatLng(e));
+  });
+  mapElement.addEventListener('selectstart',e=>{if(!e.target.closest('.leaflet-popup'))e.preventDefault()});
+  updateAirportMap(airports.filter(a=>{const q=$('#airport-search').value.trim().toLowerCase(),region=$('#region-filter').value,st=$('#status-filter').value;const code=String(a.icao||'').trim().toUpperCase();const counts=airports.filter(x=>String(x.icao||'').trim().toUpperCase()===code).length;const verified=!!a.server_version&&a.version_check_state==='verified'&&a.version_checked_at===String(status.versions_checked_at||'').slice(0,10);return (!q||[a.icao,a.original,a.name,a.publisher,a.folder,a.country,a.region,a.installed,a.server_version].join(' ').toLowerCase().includes(q))&&(!region||(a.region||a.country)===region)&&(!st||(st==='duplicates'?counts>1:st==='verified'?verified:st==='current'?verified&&a.version_comparison==='equal':st==='update'?verified&&a.version_comparison==='update':a.status===st))}));
+  await addSimbriefRoute(airportMap,data,slot);
+  if(focusSimbriefOnOpen&&simbriefRouteBounds){focusSimbriefOnOpen=false;focusSimbriefRoute();setTimeout(scrollToAirportMap,600);}
+  else if(bounds.length)airportMap.fitBounds(bounds,{padding:[20,20],maxZoom:7});
+  setTimeout(()=>airportMap.invalidateSize(),100);
+ }catch(e){slot.textContent='Carte momentanément indisponible : '+e.message}
+}
+// Liens de webcams identifiés par ICAO ; aucune vidéo chargée dans le journal.
+// Les sources signalées non vérifiées ouvrent leur page externe sans promesse de direct.
+const airportWebcams={
+ SUMU:{url:'https://worldcam.eu/webcams/south-america/uruguay/20793-carrasco-international-airport',label:'Webcam Montevideo — accès au flux à confirmer'},
+ LFBO:{url:'https://www.meteohorizon.com/europe/france/occitanie/upper-garonne/toulouse-blagnac-airport/webcam',label:'Webcam Toulouse-Blagnac — flux à confirmer'},
+ LFBZ:{url:'https://www.destination-biarritz.fr/pratique/webcams-biarritz/',label:'Webcams panoramiques de Biarritz (ville)'},
+ LFSB:{url:'https://www.basel.com/fr/meteo-webcam',label:'Webcam panoramique de Bâle (ville)'}
+};
+function weatherWebcamLink(code){
+ const camera=airportWebcams[String(code||'').trim().toUpperCase()];
+ if(!camera)return '';
+ const url=isSafeUrl(camera.url);
+ if(url==='#')return '';
+ return ' <a class="weather-webcam-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" title="'+esc(camera.label)+'" aria-label="'+esc(camera.label)+'">📷</a>';
+}
+function renderWeather(){const cov=status.weather_coverage||{};$('#metar-eligible').textContent=cov.eligible??'—';$('#metar-fresh').textContent=cov.fresh??'—';$('#metar-updated').textContent=status.weather_checked_at?localDateTime(status.weather_checked_at):'Non collectée';const arr=(status.weather||[]).slice(0,10);const w=$('#weather-container');if(!arr.length){w.innerHTML='<div class="empty"><strong>☁ Aucune observation vérifiée disponible</strong>Le TOP 10 apparaîtra après une collecte METAR réussie. Aucun classement fictif n’est présenté.</div>';return}const stale=status.source_status?.metar!=='ok';w.innerHTML=(stale?'<div class="error">La dernière collecte METAR a échoué : les observations ci-dessous peuvent être périmées. Vérifie les heures UTC.</div>':'')+arr.map((a,i)=>`<article class="weather-item"><div class="weather-rank">${String(i+1).padStart(2,'0')}</div><div class="weather-symbol" aria-label="${esc(a.phenomenon||'Conditions météo')}">${esc(a.icon||'☁️')}</div><div><div class="weather-code">${esc(a.icao)}${weatherWebcamLink(a.icao)} <span style="font-weight:400;color:#6c8291;font-size:12px;letter-spacing:0">${esc(a.name||'')}</span></div><div class="weather-detail">${esc(a.summary||'Observation disponible')} · ${esc(localDateTime(a.observed_at))} (heure Paris) · <a href="${esc(isSafeUrl(a.source_url||'https://aviationweather.gov/'))}" target="_blank" rel="noopener noreferrer">NOAA AWC ↗</a></div><div class="weather-raw">METAR : ${esc(a.raw||'Non disponible')}</div>${a.taf_raw?`<div class="weather-raw">TAF (prévision) : ${esc(a.taf_raw)}</div>`:''}</div><div class="weather-score">${esc(a.level||'À surveiller')}<small>${esc(a.score??'')} points</small></div></article>`).join('');$('#tile-weather').textContent=`${arr.length} stations classées parmi ${cov.fresh??'?'} METAR récents.`}
+function topicInfo(a){
+  const s=String([a.topic,a.category,a.title].join(' ')).toLowerCase();
+  if(/\bsayintentions\b|\bsayintention\b/.test(s))return ['SI','si','SayIntentions'];
+  if(/\bmobiflight\b|\bmf\b/.test(s))return ['MF','mf','MobiFlight'];
+  if(/\bfenix\b|\ba32x\b|\bcids\b/.test(s))return ['FX','fenix','Fenix'];
+  if(/\bwinctrl\b|\bwinwing\b|\bsimapppro\b/.test(s))return ['WC','winctrl','WINCTRL'];
+  if(/\bgsx\b/.test(s))return ['GSX','gsx','GSX'];
+  if(/\bnavigraph\b|\bairac\b|\bsimlink\b/.test(s))return ['NAV','navigraph','Navigraph'];
+  if(/\bfshud\b/.test(s))return ['ATC','fshud','FSHud'];
+  if(/\bfsl tl\b|\bfsltl\b|\baig\b/.test(s))return ['AI','traffic','Trafic IA'];
+  if(/\bsantiluib3\b|\bs3\b/.test(s))return ['S3','s3','Modules S3'];
+  if(/\batc\b/.test(s))return ['ATC','atc','ATC'];
+  if(/\bm[eé]t[eé]o\b|\bmetar\b|\bstratawx\b/.test(s))return ['WX','weather','Météo'];
+  if(/\bmsfs\b|\bflight simulator\b|\bsim update\b/.test(s))return ['FS','msfs','MSFS 2024'];
+  if(/\bflytampa\b|\bairport\b|\ba[eé]roport\b/.test(s))return ['APT','airport','Aéroports'];
+  return ['✈','generic','Actualités aviation'];
+}
+function topicBadge(a){
+  const [code,kind,label]=topicInfo(a);
+  return brandIcon(kind,label);
+}
+function newsAgeGroup(a){
+  const raw=String(a.published_at||a.date||'');
+  const d=new Date(raw.length===10?raw+'T00:00:00Z':raw);
+  if(!Number.isFinite(d.getTime()))return 3;
+  const hours=(Date.now()-d.getTime())/3600000;
+  return hours<=24?0:hours<=72?1:hours<=1440?2:3;
+}
+function newsMarkup(a){
+  const change=a.changelog_url?'<div class="news-impact"><b>Version : '+esc(a.version_before||'—')+' → '+esc(a.version_after||'—')+'</b>'+
+    (a.details?'<details class="changelog-details"><summary>Afficher les modifications détaillées</summary><p>'+esc(a.details)+'</p></details>':'')+
+    '<a href="'+esc(isSafeUrl(a.changelog_url))+'" target="_blank" rel="noopener noreferrer">Consulter le changelog officiel complet ↗</a></div>':'';
+  return '<article class="news-card'+(newsAgeGroup(a)===2?' news-old':'')+'"><div class="news-meta">'+esc(a.category||'ACTUALITÉS')+' · '+esc(localDate(a.date))+
+    (newsAgeGroup(a)===0?'<span class="new-tag'+(/airac|navigraph/i.test([a.title,a.topic,a.category,a.source].join(' '))?' airac-red-news':'')+'">NEWS</span>':newsAgeGroup(a)===2?'<span class="old-tag">OLD</span>':'')+'</div><div class="news-heading">'+topicBadge(a)+
+    '<h3>'+esc(a.title)+'</h3></div>'+(a.summary?'<p>'+esc(a.summary)+'</p>':'')+
+    (a.impact?'<div class="news-impact"><b>Impact / action :</b> '+esc(a.impact)+'</div>':'')+change+
+    '<div class="news-source"><a href="'+esc(isSafeUrl(a.url))+'" target="_blank" rel="noopener noreferrer">'+esc(a.source||'Source officielle')+' ↗</a></div></article>';
+}
+
+// Le bandeau AIRAC statique est actualisé côté navigateur sans attendre un nouveau déploiement.
+function syncAiracHomeBadge(){
+ const el=document.getElementById('airac-home-news');if(!el)return;
+ const started=Date.parse(el.dataset.release||'');
+ const age=Date.now()-started;
+ el.hidden=!(Number.isFinite(started)&&age>=0&&age<72*3600000);
+}
+syncAiracHomeBadge();
+if(typeof window!=='undefined' && typeof window.setInterval==='function')window.setInterval(syncAiracHomeBadge,60000);
+
+function renderNews(){
+  const editorialNews=editorial.news||[];
+  const superseded=new Set(editorialNews.flatMap(a=>a.supersedes||[]));
+  const a=[...editorialNews,...(status.news||[]).filter(x=>!superseded.has(x.url))]
+    .filter((x,i,all)=>all.findIndex(y=>(y.id||y.url+' '+y.title)===(x.id||x.url+' '+x.title))===i)
+    .filter(x=>Number.isFinite(new Date(x.published_at||x.date).getTime()))
+    .sort((x,y)=>new Date(y.published_at||y.date)-new Date(x.published_at||x.date))
+    .slice(0,16);
+  $('#news-container').innerHTML=a.length?a.map(newsMarkup).join(''):'<div class="empty"><strong>Aucune nouveauté vérifiée</strong>Le site ne publie pas d’annonce sans date ni source vérifiable.</div>';
+  const hero=document.querySelector('#accueil .hero-main p');
+  // Accueil : uniquement les annonces réellement publiées aujourd'hui (heure française).
+  // Une découverte aujourd'hui d'une ancienne annonce ne la rend pas nouvelle.
+  const todayParis=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+  const parisDay=value=>{
+    const raw=String(value||'');
+    if(/^\d{4}-\d{2}-\d{2}$/.test(raw))return raw;
+    const d=new Date(raw);
+    return Number.isFinite(d.getTime())?new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(d):'';
+  };
+  const airacNews=x=>/\bairac\b/i.test([x.title,x.topic,x.category].join(' '));
+  // 72 heures glissantes à partir de l'entrée en vigueur officielle du cycle AIRAC.
+  // Référence AIRAC 2611 : 29 octobre 2026 ; chaque cycle dure 28 jours.
+  const airacCycle=String(status.airac_cycle||'');
+  const airacIndex=/^\d{4}$/.test(airacCycle)?Number(airacCycle.slice(0,2))*13+Number(airacCycle.slice(2)):NaN;
+  const baseIndex=26*13+11;
+  const airacStart=Number.isFinite(airacIndex)?new Date(Date.UTC(2026,9,28,23)+(airacIndex-baseIndex)*28*86400000):null;
+  const airacAge=airacStart?Date.now()-airacStart.getTime():Infinity;
+  const recentAirac=airacAge>=0&&airacAge<72*3600000;
+  const airacItem=recentAirac?{
+    id:'navigraph-airac-'+airacCycle,title:'NAVIGRAPH AIRAC '+airacCycle,
+    category:'NAVIGRAPH AIRAC',topic:'AIRAC',date:airacStart.toISOString().slice(0,10),
+    url:'https://navigraph.com/',airacEffective:true
+  }:null;
+  const homeItems=[
+    ...(airacItem?[airacItem]:[]),
+    ...a.filter(x=>{
+      const release=parisDay(x.published_at||x.date);
+      // Pas de faux NEWS AIRAC pour une ancienne annonce ou pour Navigraph Charts.
+      return release===todayParis&&!airacNews(x);
+    })
+  ].slice(0,6);
+  if(hero)hero.textContent=homeItems.length?'À la une aujourd’hui : '+homeItems[0].title+'. Consulte les actualités pour le détail et la source officielle.':'Aucune nouveauté publiée aujourd’hui. Retrouve les dernières actualités dans la rubrique Nouveautés.';
+  $('#home-news').innerHTML=homeItems.map(x=>'<article class="'+(x.airacEffective?'home-airac-news':'')+'"><div class="home-news-row">'+topicBadge(x)+'<div class="home-news-content"><small>'+esc(x.category||'Actualités')+' · '+esc(localDate(x.date))+(x.airacEffective?' <span class="airac-news-label">NEWS</span>':'')+'</small><strong>'+esc(x.title)+'</strong><a href="'+esc(isSafeUrl(x.url))+'" target="_blank" rel="noopener noreferrer">Source officielle ↗</a></div></div></article>').join('')||'<p class="muted">Aucune nouveauté publiée aujourd’hui.</p>';
+}
+
+function renderSoftware(){
+  const items=Array.isArray(software.items)?software.items:[],q=($('#software-search')?.value||'').trim().toLowerCase(),filter=$('#software-filter')?.value||'';
+  // NEWS uniquement pour une version stable réellement changée dans les dernières 24 h.
+  // last_change_at est conservé par la collecte suivante.
+  const isFreshChange=x=>{
+    const at=x.changed_at||x.last_change_at;
+    const time=Date.parse(at||'');
+    return Boolean(x.version&&at&&Number.isFinite(time)&&Date.now()>=time&&Date.now()-time<24*60*60*1000&&['verified','changed'].includes(x.state));
+  };
+  const changed=items.filter(isFreshChange).length,verified=items.filter(x=>x.state==='verified'||x.state==='changed').length;
+  const overview=$('#software-overview');
+  if(overview)overview.innerHTML='<strong>'+items.length+' logiciels suivis</strong><span>'+verified+' versions confirmées · '+changed+' changements · '+(items.length-verified)+' non confirmées</span><small>Contrôle : '+esc(localDateTime(software.checked_at))+'</small>';
+  const selected=items.filter(x=>(!q||[x.name,x.group,x.version,x.reason].join(' ').toLowerCase().includes(q))&&(!filter||(filter==='changed'?x.state==='changed':filter==='verified'?['verified','changed'].includes(x.state):!['verified','changed'].includes(x.state))));
+  // Ordre stable : VÉRIFIÉ (NEWS inclus), puis RÉFÉRENCE DATÉE, puis UNKNOWN.
+  const priority=x=>['verified','changed'].includes(x.state)?0:x.reference_version?1:2;
+  selected.sort((a,b)=>priority(a)-priority(b));
+  const body=$('#software-body');if(!body)return;
+  body.innerHTML=selected.map(x=>{
+    const ok=['verified','changed'].includes(x.state),fresh=isFreshChange(x);
+    const tag=fresh?'<span class="new-tag">NEWS</span>':ok?'<span class="flag flag-ok">VÉRIFIÉ</span>':x.reference_version?'<span class="flag flag-c">RÉFÉRENCE DATÉE</span>':'<span class="flag flag-v">UNKNOWN</span>';
+    const preview=x.preview_version?'<small>Préversion : '+esc(x.preview_version)+'</small>':'';
+    const last=x.previous_version?'<small>Précédente : '+esc(x.previous_version)+'</small>':'';
+    const versionDate=x.published_at?'<small>MAJ de cette version : '+esc(localDate(x.published_at))+'</small>':x.changed_at||x.last_change_at?'<small>Changement détecté le '+esc(localDate(x.changed_at||x.last_change_at))+' · date de sortie non confirmée</small>':x.reference_note&&x.id==='fenix'?'<small>Sortie de la branche V3 : 21 octobre 2026 · build non confirmé</small>':'<small>Date de sortie de cette version non publiée / non vérifiée</small>';
+    return '<tr'+(fresh?' class="software-news-row"':'')+'><td><strong>'+esc(x.name)+'</strong><small>'+esc(x.group)+'</small></td>'+
+      '<td><strong>'+esc(x.version||x.reference_version||'Non publiée')+'</strong>'+((x.version||x.reference_version)?versionDate:'')+(x.state==='unavailable'&&x.version?'<small>Dernière version connue · non revérifiée depuis '+esc(localDateTime(x.last_confirmed_at))+'</small>':'')+(x.reference_version&&!x.version?'<small>Relevée le '+esc(localDate(x.reference_checked_at))+' · non revalidée automatiquement</small>':'')+preview+'</td>'+
+      '<td>'+tag+last+'<small>'+esc(x.reason||'')+'</small></td>'+
+      '<td><a href="'+esc(isSafeUrl(x.version_url||(x.reference_version?x.reference_source_url:null)||x.source_url))+'" target="_blank" rel="noopener noreferrer">Source officielle ↗</a>'+
+      (fresh?'<small>Changelog complet dans <a href="#nouveautes" data-software-news="1">Nouveautés</a></small>':'')+
+      '<small>Contrôle : '+esc(localDateTime(x.checked_at))+'</small></td></tr>';
+  }).join('')||'<tr><td colspan="4">Aucun logiciel correspondant.</td></tr>';
+  $$('[data-software-news]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();switchView('nouveautes')}));
+}
+function renderHardwareGallery(){
+  const el=$('#hardware-gallery');if(!el)return;
+  // Les modules possédés d'abord, puis les attendus, enfin les produits surveillés.
+  const priority=x=>x.ownership==='Possédé'?0:x.ownership==='Attendu'?1:2;
+  const orderedHardware=(Array.isArray(hardware)?hardware:[])
+    .map((item,index)=>({item,index}))
+    .sort((a,b)=>priority(a.item)-priority(b.item)||a.index-b.index)
+    .map(entry=>entry.item);
+  el.innerHTML=orderedHardware.map(x=>{
+    const photo=hardwareImages[x.id]||{};
+    // URL versionnée : Safari/iPad ne doit pas conserver la précédente photographie.
+    const photoPath=x.id==='brake-pressure-gauge'&&photo.path
+      ?photo.path+'?photo=brake-gauge-corrected-20261031'
+      :photo.path;
+    const info=(winctrlAirbus.products||{})[x.id]||{};
+    const picture=['photo','photo_remote'].includes(photo.state)&&photo.path?
+      '<img class="hardware-photo" loading="lazy" decoding="async" src="'+esc(photoPath)+'" alt="Visuel du matériel '+esc(x.name)+'" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.hidden=false">'+
+      '<span class="hardware-no-photo" hidden>Visuel momentanément indisponible</span>':
+      '<span class="hardware-no-photo">Visuel de ce modèle non disponible</span>';
+    const owned=x.ownership==='Possédé',pending=x.ownership==='Attendu';
+    const announcement=info.article_date?'<div class="hardware-fact"><b>Annonce :</b> '+esc(localDate(info.article_date))+'</div>':'';
+    const price=info.price?'<div class="hardware-fact"><b>Prix annoncé :</b> '+(info.price_eu?esc(info.price_eu)+' (UE) · ':'')+esc(info.price)+' <small>(article du '+esc(localDate(info.price_date||info.article_date))+', non actualisé)</small></div>':'';
+    const release=info.release_date?'<div class="hardware-fact"><b>'+esc(info.release_kind||'Date annoncée')+' :</b> '+esc(localDate(info.release_date))+'</div>':'';
+    const availability=info.availability?'<div class="hardware-fact"><b>Situation à la date de l’annonce :</b> '+esc(info.availability)+'</div>':'';
+    const story=info.article_url?'<a href="'+esc(isSafeUrl(info.article_url))+'" target="_blank" rel="noopener noreferrer">Annonce et visuels ↗</a>':'';
+    return '<article class="hardware-card hardware-device">'+
+      '<div class="hardware-image">'+picture+'</div>'+
+      '<div class="overline">'+esc(owned?'DANS TON COCKPIT':pending?'MATÉRIEL ATTENDU':'SURVEILLANCE AIRBUS')+'</div>'+
+      '<h3>'+esc(x.name)+'</h3>'+
+      '<p>'+esc(owned?'Matériel possédé · suivi SimAppPro et Fenix.':pending?'Disponibilité et compatibilité à surveiller.':'Produit Airbus surveillé, non déclaré possédé.')+'</p>'+
+      announcement+price+release+availability+
+      (x.preview_url?'<p><a href="'+esc(isSafeUrl(x.preview_url))+'" target="_blank" rel="noopener noreferrer">Voir les visuels du prototype ↗</a><small>'+esc(x.preview_note||'')+'</small></p>':'')+
+      '<div class="hardware-card-bottom"><span class="flag '+(owned?'flag-ok':'flag-v')+'">'+esc(x.ownership)+'</span>'+
+      '<a href="'+esc(isSafeUrl(x.official_url))+'" target="_blank" rel="noopener noreferrer">WINCTRL ↗</a></div>'+
+      (story?'<small>'+story+'</small>':'')+
+      (['photo','photo_remote'].includes(photo.state)?'<small class="photo-credit">'+esc(photo.source||'Visuel du produit')+'</small>':'')+
+      '</article>';
+  }).join('')||'<p>Inventaire matériel indisponible.</p>';
+}
+function renderHardwareNews(){
+  const extras=(winctrlAirbus.articles||[]).map(a=>({...a,category:'Matériel Airbus',
+    topic:'WINCTRL',source:'MSFS Addons — WINCTRL'}));
+  const fromEditorial=editorial.hardware||[];
+  const uniq=new Map();
+  for(const x of [...extras,...fromEditorial])if(x.url&&!uniq.has(x.url))uniq.set(x.url,x);
+  const a=[...uniq.values()].sort((x,y)=>String(y.date).localeCompare(String(x.date))).slice(0,10);
+  const markup=a.map(x=>{
+    const id=(x.products||[]).find(k=>hardwareImages[k]?.path);
+    const photo=id?hardwareImages[id]:null;
+    const img=photo&&photo.path?'<img class="hardware-news-photo" loading="lazy" decoding="async" src="'+esc(photo.path)+'" alt="Visuel '+esc((x.products||[]).join(', '))+'">':'';
+    return '<div class="hardware-news-entry">'+img+newsMarkup(x)+'</div>';
+  }).join('');
+  const state=winctrlAirbus.source_state==='ok'?'Source MSFS Addons contrôlée':'Source temporairement inaccessible — références datées conservées';
+  const control=winctrlAirbus.checked_at?'<p class="muted">'+esc(state)+' · '+esc(localDateTime(winctrlAirbus.checked_at))+'</p>':'';
+  const rtr=(rtrAirbus.products||[]).slice(0,30);
+  const rtrMarkup=rtr.map(p=>'<article class="hardware-news-entry"><div class="news-card">'+(p.image_url?'<img class="hardware-news-photo" loading="lazy" alt="" src="'+esc(isSafeUrl(p.image_url))+'">':'')+'<strong>'+esc(p.title)+'</strong><p>'+(p.price_usd!=null?esc(p.price_usd.toFixed(2))+' USD · ':'')+(p.available?'Disponible selon le dernier relevé':'Indisponible selon le dernier relevé')+'</p><a target="_blank" rel="noopener noreferrer" href="'+esc(isSafeUrl(p.url))+'">Voir chez RTRhobby ↗</a></div></article>').join('');
+  const rtrSection='<div id="hardware-rtr" class="sectionbar"><h2>RTRhobby — matériel Airbus <span class="new-tag" data-hardware-news="rtr" hidden>NEWS</span></h2></div><p class="muted">Surveillance quotidienne du catalogue Airbus · '+esc(rtrAirbus.checked_at?localDateTime(rtrAirbus.checked_at):'premier contrôle à venir')+' · '+esc(rtrAirbus.source_state==='ok'?'Source contrôlée':'Source à vérifier')+' · <a href="https://rtrhobby.com/collections/airbus" target="_blank" rel="noopener noreferrer">Catalogue officiel ↗</a></p>'+(rtrMarkup?'<div class="news-grid">'+rtrMarkup+'</div>':'<p class="muted">Produits en attente de la prochaine collecte automatique.</p>');
+  const s3Rows=(s3Airbus.products||[]);
+  const s3Markup=s3Rows.map(p=>'<article class="hardware-news-entry"><div class="news-card">'+(p.image_url?'<a href="'+esc(isSafeUrl(p.url))+'" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir la fiche produit '+esc(p.title)+'"><img class="hardware-news-photo" loading="lazy" alt="'+esc(p.title)+'" src="'+esc(isSafeUrl(p.image_url))+'"></a>':'')+'<strong><a href="'+esc(isSafeUrl(p.url))+'" target="_blank" rel="noopener noreferrer">'+esc(p.title)+'</a></strong><p>'+(p.price!=null?esc(String(p.price))+' '+esc(p.currency||'')+' · ':'')+esc(p.availability||'Disponibilité non confirmée')+'</p>'+(p.published_at?'<small>Publication : '+esc(localDate(p.published_at))+'</small>':'')+'<a target="_blank" rel="noopener noreferrer" href="'+esc(isSafeUrl(p.url))+'">Voir chez S3 ↗</a></div></article>').join('');
+  const s3Section='<div id="hardware-s3" class="sectionbar"><h2>S3 — matériel Airbus <span class="new-tag" data-hardware-news="s3" hidden>NEWS</span></h2></div><p class="muted">Surveillance des modules Airbus Santiluib3 · '+esc(s3Airbus.checked_at?localDateTime(s3Airbus.checked_at):'premier contrôle à venir')+' · '+esc(s3Airbus.source_state==='ok'?'Source contrôlée':'Source non vérifiée')+' · <a href="https://www.santiluib3.com/" target="_blank" rel="noopener noreferrer">Site officiel ↗</a></p>'+(s3Markup?'<div class="news-grid">'+s3Markup+'</div>':'<p class="muted">Produits et tarifs en attente de vérification sur le site officiel.</p>');
+  $('#hardware-news').innerHTML=(a.length?'<div id="hardware-winctrl" class="sectionbar"><h2>WINCTRL — actualités du matériel Airbus <span class="new-tag" data-hardware-news="winctrl" hidden>NEWS</span></h2></div>'+control+'<p class="muted">Les prix cités sont ceux des annonces datées, pas des tarifs en boutique vérifiés aujourd’hui.</p><div class="news-grid">'+markup+'</div>':'<div id="hardware-winctrl" class="sectionbar"><h2>WINCTRL — actualités du matériel Airbus</h2></div><p class="muted">Aucune actualité disponible.</p>')+rtrSection+s3Section;
+  const fresh=date=>{const t=Date.parse(date||'');return Number.isFinite(t)&&t<=Date.now()&&Date.now()-t<7*86400000};
+  const flags={my:false,winctrl:a.some(x=>fresh(x.date)),rtr:(rtrAirbus.changes||[]).some(x=>fresh(x.updated_at||x.published_at)),s3:(s3Airbus.changes||[]).some(x=>fresh(x.published_at||x.updated_at))};
+  $('[data-hardware-news]').forEach(el=>{el.hidden=!flags[el.dataset.hardwareNews]});
+  $('[data-hardware-jump]').forEach(link=>{link.onclick=e=>{e.preventDefault();const target=document.getElementById(link.dataset.hardwareJump);if(!target)return;target.scrollIntoView({behavior:'smooth',block:'start'});history.replaceState(null,'','#'+link.dataset.hardwareJump)}});
+
+}
+function renderStatus(){if(status.edition)$('#edition-date').textContent=new Date(status.edition+'T12:00:00Z').toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric',timeZone:'Europe/Paris'}).toUpperCase();const done=!!status.last_run;const dateTime=new Intl.DateTimeFormat('fr-FR',{day:'2-digit',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit',timeZone:'Europe/Paris'});$('#home-updated').textContent=done?'Le '+dateTime.format(new Date(status.last_run)):'En attente de la première collecte';$('#home-editorial-updated').textContent=status.news_checked_at?localDateTime(status.news_checked_at)+(new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(status.news_checked_at))<String(status.edition||'')?' · À ACTUALISER':''):'Non actualisées';$('#last-check').textContent=done?'Collecte : '+localDateTime(status.last_run):'Données de lancement · non actualisées';$('#sync-label').textContent=done?'DERNIÈRE COLLECTE : '+localDateTime(status.last_run):'COLLECTE AUTOMATIQUE NON ENCORE EXÉCUTÉE';$('#dashboard-timestamp').textContent=done?'Dernier passage : '+localDateTime(status.last_run):'Édition de lancement';$('#run-state').textContent=done?'Collecte exécutée':'Automatisation non encore exécutée';$('#run-detail').textContent=done?'Voir le détail des sources ci-dessous.':'La collecte doit être activée après publication sur GitHub.';$('#status-dot').classList.toggle('good',done&&status.source_status?.metar==='ok');$('#footer-updated').textContent=done?'Dernière collecte : '+localDateTime(status.last_run):'Publication et automatisation non encore activées';const src=status.source_status||{};const parts=[['Météo METAR',src.metar],['Prévisions TAF',src.taf],['Actualités officielles',src.official_news],['Versions des scènes',airports.some(a=>a.server_version)?'partial':src.airport_versions],['Éditorial ChatGPT',editorial.last_updated?'ok':'non_executed']];$('#source-health').innerHTML=parts.map(([name,s])=>`<div class="health ${s==='ok'?'ok':''}"><strong>${esc(name)}</strong><span>${s==='ok'?'Collecte réussie':s==='non_verified'?'Non vérifiées':s==='error'?'Échec de collecte':s==='partial'?'Partiellement vérifiées':'En attente'}</span></div>`).join('')}
+function renderQualityAudit(){
+ const el=$('#quality-audit-body');if(!el)return;
+ const labels={no_version:'Version publique absente',source_older:'Source plus ancienne',inconsistent:'Éditions incompatibles',no_source:'Fiche exacte manquante',not_automatable:'Sous-scène / vérification manuelle',unavailable:'Source inaccessible'};
+ const missing=airports.filter(a=>a.version_check_state!=='verified');
+ const counts={};missing.forEach(a=>{const k=a.version_check_state||'unavailable';counts[k]=(counts[k]||0)+1});
+ const unknownHardware=(Array.isArray(hardware)?hardware:[]).filter(h=>!hardwareImages[h.id]||hardwareImages[h.id].state!=='photo'||hardwareImages[h.id].verification!=='verified_exact_product');
+ const sections=[['Scènes non vérifiées',missing.length+' / '+airports.length],['Matériels sans identité photo vérifiée',unknownHardware.length+' / '+(Array.isArray(hardware)?hardware.length:0)],...Object.entries(labels).filter(([k])=>counts[k]).map(([k,label])=>[label,String(counts[k])])];
+ const cov=status.version_coverage||{},prev=status.version_coverage_previous||{};
+ const delta=(typeof prev.verified_today==='number'&&typeof cov.verified_today==='number')?cov.verified_today-prev.verified_today:null;
+ const summary='<div class="quality-progress" style="grid-column:1/-1;padding:12px 15px;border:1px solid #b7cfdf;border-radius:9px;background:#eaf4fa;color:#15394e"><strong>Vérification des scènes : '+esc(cov.verified_today??airports.length-missing.length)+' / '+esc(airports.length)+'</strong><p style="margin:5px 0 0;font-size:13px">'+(delta===null?'Première mesure comparative en attente de la prochaine collecte.':('Évolution depuis la collecte précédente : '+(delta>0?'+':'')+esc(delta)+' scènes vérifiées.'))+' Les sources bloquées ou sans version restent non vérifiées.</p></div>';
+ el.innerHTML=summary+sections.map(([label,n])=>'<div class="health"><strong>'+esc(label)+'</strong><span>'+esc(n)+'</span></div>').join('');
+ const details=$('#quality-airport-details');if(details){details.innerHTML='<table><thead><tr><th>Code</th><th>Scène</th><th>Installée</th><th>Version source</th><th>Diagnostic</th></tr></thead><tbody>'+missing.map(a=>'<tr><td><strong>'+esc(a.icao)+'</strong></td><td>'+esc(a.folder)+'</td><td>'+esc(a.installed||'—')+'</td><td>'+esc(a.server_version||'—')+'</td><td>'+esc(labels[a.version_check_state]||a.version_check_state)+'<small>'+esc(a.version_check_reason||'')+'</small>'+(a.source_url?'<p><a target="_blank" rel="noopener noreferrer" href="'+esc(isSafeUrl(a.source_url))+'">Source éditeur ↗</a></p>':'')+'</td></tr>').join('')+'</tbody></table>';}
+ const hardwareDetails=$('#quality-hardware-details');if(hardwareDetails)hardwareDetails.innerHTML=unknownHardware.map(h=>'<p><strong>'+esc(h.name)+'</strong> — '+esc(hardwareImages[h.id]?.verification==='reference_visuelle_autre_fabricant'?'Photo de référence d’un autre fabricant : ne pas présenter comme photo du produit exact':hardwareImages[h.id]?.reason||'Photo présente, correspondance exacte du modèle à confirmer')+(hardwareImages[h.id]?.source?' · Source : '+esc(hardwareImages[h.id].source):'')+'</p>').join('')||'<p>Toutes les photographies ont un fichier référencé. Leur exactitude doit encore être vérifiée individuellement.</p>';
+
+}
+async function init(){try{const [ar,sr,er,sv,hc,hi,wa,rr,s3r]=await Promise.all(['airports.json','status.json','editorial.json','software_versions.json','hardware_catalog.json','hardware-images.json','winctrl_airbus.json','rtrhobby_airbus.json','s3_airbus.json'].map(p=>fetch(p,{cache:'no-store'}).catch(()=>null)));if(!ar?.ok||!sr?.ok||!er?.ok)throw new Error('Fichiers de données indisponibles');[airports,status,editorial]=await Promise.all([ar.json(),sr.json(),er.json()]);software=sv?.ok?await sv.json():{items:[]};hardware=hc?.ok?await hc.json():[];hardwareImages=hi?.ok?await hi.json():{};winctrlAirbus=wa?.ok?await wa.json():{articles:[],products:{}};rtrAirbus=rr?.ok?await rr.json():{products:[],changes:[]};s3Airbus=s3r?.ok?await s3r.json():{products:[],changes:[]};try{airportCoordinates=await fetch('airport_coordinates.json',{cache:'no-store'}).then(r=>r.ok?r.json():{})}catch(_){airportCoordinates={}};$('#count-scenes').textContent=airports.length;$('#count-codes').textContent=new Set(airports.map(x=>x.icao)).size;$('#airport-total').textContent=airports.length+' SCÈNES - '+new Set(airports.map(a=>String(a.icao||'').trim().toUpperCase()).filter(Boolean)).size+' AÉROPORTS DISTINCTS';const regions=[...new Set(airports.map(a=>a.region||a.country).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'fr'));$('#region-filter').innerHTML='<option value="">Toutes les régions</option>'+regions.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');document.querySelectorAll('[data-icao-country]').forEach(el=>{el.textContent=countrySuffix(el.dataset.icaoCountry)});for(const [name,fn] of [['Matériel',renderHardwareGallery],['Actualités matériel',renderHardwareNews],['Aéroports',renderAirports],['État du journal',renderStatus],['Météo',renderWeather],['Nouveautés',renderNews],['Logiciels',renderSoftware],['Qualité',renderQualityAudit]]){try{fn()}catch(err){console.error('Erreur rubrique '+name,err)}}}catch(e){$('#run-state').textContent='Données indisponibles';$('#run-detail').textContent='Chargement interrompu : '+String(e?.message||e).slice(0,180);$('#weather-container').innerHTML='<div class="error">Chargement des données impossible. Ouvre le site via un serveur web.</div>';$('#airport-count').textContent='Erreur de chargement';console.error(e)}if(location.hash)switchView(location.hash.slice(1))}
+const simbriefDispatchForm=$('#simbrief-dispatch-form');
+if(simbriefDispatchForm)simbriefDispatchForm.addEventListener('submit',e=>{
+  e.preventDefault();
+  const orig=$('#simbrief-departure').value.trim().toUpperCase();
+  const dest=$('#simbrief-arrival').value.trim().toUpperCase();
+  const airline=$('#simbrief-airline').value.trim().toUpperCase();
+  const fltnum=$('#simbrief-flight-number').value.trim();
+  if(!/^[A-Z]{4}$/.test(orig)||!/^[A-Z]{4}$/.test(dest)||orig===dest){alert('Saisis deux codes ICAO différents de quatre lettres.');return}
+  const params=new URLSearchParams({orig,dest,type:'A320',airline,fltnum});
+  window.open('https://dispatch.simbrief.com/options/custom?'+params.toString(),'_blank','noopener,noreferrer');
+});
+async function loadSimbriefFlight(){
+ const el=$('#simbrief-flight-data'),button=$('#simbrief-live-load'),state=$('#simbrief-live-status');
+ if(!el||!button)return;
+ button.disabled=true;button.textContent='⏳ Chargement…';
+ if(state){state.hidden=false;state.textContent='Interrogation de SimBrief en direct…';state.classList.remove('simbrief-live-error')}
+ try{
+  const response=await fetch('https://www.simbrief.com/api/xml.fetcher.php?username=Matthis&client=journal-msfs&json=v2',{cache:'no-store'});
+  if(!response.ok)throw new Error('HTTP '+response.status);
+  const d=await response.json();
+  const origin=d.origin||{},dest=d.destination||{},g=d.general||{},aircraft=d.aircraft||{},times=d.times||{};
+  const from=String(origin.icao_code||origin.icao||'').toUpperCase(),to=String(dest.icao_code||dest.icao||'').toUpperCase();
+  if(!/^[A-Z]{4}$/.test(from)||!/^[A-Z]{4}$/.test(to))throw new Error('Aucun OFP valide reçu');
+  const v=x=>esc(x??'—');
+  const rawDuration=times.est_time_enroute||times.est_block||'';
+  const duration=Number.isFinite(Number(rawDuration))&&String(rawDuration).trim()!==''?Math.floor(Number(rawDuration)/3600)+':'+String(Math.floor(Number(rawDuration)%3600/60)).padStart(2,'0'):String(rawDuration||'—');
+  const generated=d.params?.time_generated||d.params?.time_generated_utc||'';
+  el.innerHTML='<div class="tile-grid"><div><small>🛫 DÉPART</small><h3>'+v(from)+'</h3><p>'+v(origin.name)+'</p></div><div><small>🛬 ARRIVÉE</small><h3>'+v(to)+'</h3><p>'+v(dest.name)+'</p></div><div><small>✈ APPAREIL</small><h3>'+v(aircraft.icaocode||aircraft.name)+'</h3><p>'+v(g.flight_number||g.callsign)+'</p></div></div>'+
+  '<p><b>PLAN DE VOL :</b> '+v(g.route)+'</p><p><b>Altitude :</b> '+v(g.initial_altitude)+' · <b>Temps prévu :</b> '+v(duration)+'</p>'+
+  '<p class="fineprint">Dernier OFP interrogé directement sur SimBrief'+(generated?' · génération '+v(generated):'')+'. Planification, pas confirmation de vol effectué.</p>';
+  if(state){state.textContent='✓ Dernier OFP chargé directement depuis SimBrief.';state.classList.remove('simbrief-live-error')}
+ }catch(error){
+  console.warn('SimBrief direct indisponible',error);
+  if(state){state.textContent='Lecture directe indisponible (restriction réseau ou SimBrief). Le dernier plan affiché est conservé ; la collecte du Journal reste disponible.';state.classList.add('simbrief-live-error')}
+ }finally{button.disabled=false;button.textContent='↻ Charger le dernier vol'}
+}
+$('#simbrief-live-load')?.addEventListener('click',loadSimbriefFlight);
+// Le bouton Consulter SimBrief ouvre le service officiel : la lecture directe de l’API XML depuis GitHub Pages peut être bloquée par CORS.
+$('#simbrief-refresh')?.addEventListener('click',()=>{window.open('https://dispatch.simbrief.com/','_blank','noopener,noreferrer')});
+async function showPublishedSimbrief(){
+ const el=$('#simbrief-flight-data');if(!el)return;
+ try{
+  const response=await fetch('simbrief_last.json',{cache:'no-store'});if(!response.ok)throw Error('Not published');
+  const d=await response.json();if(d.state!=='ok'||!d.origin?.icao||!d.destination?.icao)throw Error('No OFP');
+  const v=x=>esc(x||'—');
+  el.innerHTML='<div class="tile-grid"><div><small>🛫 DÉPART</small><h3>'+v(d.origin.icao)+'</h3><p>'+v(d.origin.name)+'</p></div><div><small>🛬 ARRIVÉE</small><h3>'+v(d.destination.icao)+'</h3><p>'+v(d.destination.name)+'</p></div><div><small>✈ APPAREIL</small><h3>'+v(d.aircraft)+'</h3><p>'+v(d.flight_number)+'</p></div></div>'+
+  '<p><b>PLAN DE VOL :</b> '+v(d.route)+'</p><p><b>Altitude :</b> '+v(d.altitude)+' · <b>Temps prévu :</b> '+v(d.enroute_time)+'</p>'+
+  '<p class="fineprint">Dernier OFP généré sur SimBrief · collecte '+v(d.retrieved_at)+'. Planification, pas confirmation de vol effectué.</p>';
+ }catch(e){el.innerHTML='<p class="fineprint">Dernier OFP non encore disponible. Utilise « Consulter SimBrief » pour essayer une lecture directe.</p>';}
+}
+async function showSayIntentionsCareer(){
+ const el=$('#sayintentions-career-data');if(!el)return;
+ try{
+  const r=await fetch('sayintentions_career.json',{cache:'no-store'});if(!r.ok)throw Error('Unavailable');
+  const d=await r.json();const value=x=>esc(x??'—');
+  if(d.rank==null&&d.flight_hours==null){el.innerHTML='<p class="fineprint">Le profil public est connu, mais les statistiques ne sont pas encore lisibles automatiquement. <a href="https://pilots.sayintentions.ai/u/Mathis" target="_blank" rel="noopener noreferrer">Voir le profil officiel ↗</a></p>';return;}
+  el.innerHTML='<div class="tile-grid"><div><small>GRADE</small><div class="si-rank-line">'+(d.rank_badge==='sayintentions-rank.svg'?'<img class="si-rank-badge" src="https://pilots.sayintentions.ai/p2d/assets/images/rankings/senior_first_officer.svg" alt="Insigne de grade SayIntentions" loading="lazy">':'')+'<h3>'+value(d.rank)+'</h3></div></div><div><small>HEURES IFR</small><h3>'+value(d.ifr_hours)+'</h3></div><div><small>HEURES VFR</small><h3>'+value(d.vfr_hours)+'</h3></div><div><small>VOLS EFFECTUÉS</small><h3>'+value(d.total_flights)+'</h3></div><div><small>AÉROPORTS VISITÉS</small><h3>'+value(d.airports_visited)+'</h3></div></div><p class="fineprint">'+(d.state==='ok'?'Données publiques récupérées automatiquement.':'Données issues de la capture du 25 octobre 2026 ; actualisation automatique non encore opérationnelle.')+' Dernière vérification : '+value(d.verified_at)+'. <a href="https://pilots.sayintentions.ai/u/Mathis" target="_blank" rel="noopener noreferrer">Profil officiel ↗</a></p>';
+  const flights=Array.isArray(d.recent_flights)?d.recent_flights:[];
+  const rows=flights.map(f=>'<tr><td><strong>'+value(f.id)+'</strong></td><td>'+value(f.aircraft)+'</td><td>'+value(f.when)+'</td><td><b>'+value(f.origin)+'</b></td><td><b>'+value(f.destination)+'</b></td><td><span class="si-flight-rules">'+value(f.rules)+'</span></td><td>'+value(f.duration)+'</td></tr>').join('');
+  el.innerHTML+='<div class="si-flights"><div class="si-flights-heading"><h3>✈ Mes derniers vols</h3><a href="https://pilots.sayintentions.ai/u/Mathis" target="_blank" rel="noopener noreferrer">Tous les détails sur Gate 404 ↗</a></div>'+(rows?'<div class="si-flights-scroll"><table><thead><tr><th>Vol</th><th>Avion</th><th>Quand</th><th>Départ</th><th>Arrivée</th><th>Règles</th><th>Durée</th></tr></thead><tbody>'+rows+'</tbody></table></div><p class="fineprint">Dernière lecture des vols : '+value(d.flights_checked_at)+'.</p>':'<p class="fineprint">Historique des vols en attente de récupération automatique.</p>')+'</div>';
+ }catch(e){el.innerHTML='<p class="fineprint">Statistiques SayIntentions en attente de première collecte. <a href="https://pilots.sayintentions.ai/u/Mathis" target="_blank" rel="noopener noreferrer">Consulter le profil ↗</a></p>';}
+}
+showSayIntentionsCareer();
+showPublishedSimbrief();
+
+['airport-search','region-filter','status-filter'].forEach(id=>$('#'+id).addEventListener(id==='airport-search'?'input':'change',renderAirports));['software-search','software-filter'].forEach(id=>{const el=$('#'+id);if(el)el.addEventListener(id==='software-search'?'input':'change',renderSoftware)});init();
+
+/* État de la publication : interroge les dernières exécutions publiques du workflow. */
+async function refreshBuildStatus(){
+  const badge=document.getElementById('build-status'), label=document.getElementById('build-status-text');
+  if(!badge||!label)return;
+  try{
+    const response=await fetch('https://api.github.com/repos/Matthisfr/journal-msfs/actions/workflows/journal.yml/runs?per_page=5',{cache:'no-store',headers:{Accept:'application/vnd.github+json'}});
+    if(!response.ok)throw new Error('GitHub API '+response.status);
+    const data=await response.json();
+    const run=(data.workflow_runs||[])[0];
+    if(!run)throw new Error('Aucune exécution disponible');
+    const running=run.status!=='completed';
+    const ok=!running&&run.conclusion==='success';
+    const kind=running?'running':ok?'ok':'error';
+    const wording=running?'Mise à jour…':ok?'Journal à jour':'Échec mise à jour';
+    badge.className='build-status build-status-'+kind;
+    label.textContent=wording;
+    badge.title=wording+' — '+new Date(run.created_at).toLocaleString('fr-FR')+' — ouvrir GitHub Actions';
+    badge.setAttribute('aria-label',wording);
+    badge.href=run.html_url||'https://github.com/Matthisfr/journal-msfs/actions/workflows/journal.yml';
+  }catch(err){
+    badge.className='build-status build-status-unknown';
+    label.textContent='État indisponible';
+    badge.title='Impossible de consulter GitHub Actions pour le moment';
+    badge.setAttribute('aria-label','État de publication indisponible');
+  }
+}
+if(typeof window!=='undefined'&&typeof window.fetch==='function')refreshBuildStatus();
+if(typeof window!=='undefined'&&typeof window.setInterval==='function')window.setInterval(refreshBuildStatus,90000);

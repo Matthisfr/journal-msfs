@@ -1,0 +1,100 @@
+{
+  "updated_at": "2026-11-17",
+  "items": [
+    {
+      "type": "aeroport",
+      "icao": "EPRA",
+      "title": "EPRA — Varsovie-Radom",
+      "publisher": "Drzewiecki Design",
+      "description": "Aéroport détaillé gratuit sur Orbx. Connexion Orbx Central nécessaire.",
+      "url": "https://orbxdirect.com/product/drzewiecki-epra-msfs",
+      "source": "Orbx",
+      "compatibility": "MSFS 2024 confirmé",
+      "image": "",
+      "owned": false
+    },
+    {
+      "type": "aeroport",
+      "icao": "EPKK",
+      "title": "EPKK — Cracovie-Balice",
+      "publisher": "Papa Delta Studio",
+      "description": "Scène gratuite sur Orbx ; GSX Pro requis pour les passerelles intégrées.",
+      "url": "https://orbxdirect.com/product/papadelta-epkk-msfs",
+      "source": "Orbx",
+      "compatibility": "MSFS 2024 confirmé",
+      "image": "",
+      "owned": true
+    },
+    {
+      "type": "avion",
+      "title": "Boeing 787-9",
+      "publisher": "Horizon Simulations",
+      "description": "Gratuit sur Orbx ; nécessite le Boeing 787-10 de l'édition Premium Deluxe.",
+      "url": "https://orbxdirect.com/product/horizon-simulations-b789",
+      "source": "Orbx",
+      "compatibility": "MSFS 2024 confirmé",
+      "image": ""
+    },
+    {
+      "type": "aeroport",
+      "icao": "KLRG",
+      "title": "KLRG — Lincoln Regional Airport",
+      "publisher": "Propair Flight",
+      "description": "Scène gratuite à 0 € référencée par simMarket ; consulter la fiche produit pour l'installation.",
+      "url": "https://secure.simmarket.com/propair-flight-ltd.-klrg-lincoln-regional-airport-msfs24.phtml",
+      "source": "simMarket",
+      "compatibility": "MSFS 2024",
+      "image": "",
+      "owned": false
+    },
+    {
+      "type": "aeroport",
+      "icao": "EDLP",
+      "title": "EDLP — Paderborn/Lippstadt",
+      "publisher": "Aerosoft",
+      "description": "Scène gratuite à 0 € référencée par simMarket ; consulter la fiche produit pour l'installation.",
+      "url": "https://secure.simmarket.com/aerosoft-airport-paderbornlippstadt-msfs2024-free.phtml",
+      "source": "simMarket",
+      "compatibility": "MSFS 2024",
+      "image": "",
+      "owned": true
+    },
+    {
+      "type": "aeroport",
+      "icao": "KMKE",
+      "title": "KMKE — Milwaukee Mitchell",
+      "publisher": "iniBuilds",
+      "description": "Scène gratuite à 0 € référencée par simMarket ; consulter la fiche produit pour l'installation.",
+      "url": "https://secure.simmarket.com/inibuilds-inibuilds-milwaukee-mitchell-kmke-msfs-free.phtml",
+      "source": "simMarket",
+      "compatibility": "MSFS 2024",
+      "image": "",
+      "owned": true
+    },
+    {
+      "type": "aeroport",
+      "icao": "RCLG",
+      "title": "RCLG — Shuinan Taiwan",
+      "publisher": "FSFormosa",
+      "description": "Scène gratuite à 0 € référencée par simMarket ; consulter la fiche produit pour l'installation.",
+      "url": "https://secure.simmarket.com/fsformosa-rclg-shuinan-airport-taiwan-msfs.phtml",
+      "source": "simMarket",
+      "compatibility": "MSFS : compatibilité 2024 à confirmer",
+      "image": "",
+      "owned": false
+    },
+    {
+      "type": "aeroport",
+      "icao": "MA44",
+      "title": "MA44 — Trade Wind Airfield (Martha’s Vineyard)",
+      "publisher": "Burning Blue Design",
+      "description": "Aérodrome en herbe gratuit, recréé dans son ambiance des années 1980. Téléchargement via Orbx Central. Non présent dans l’inventaire d’aéroports du 16 novembre.",
+      "url": "https://orbxdirect.com/product/burningblue-ma44-msfs2024",
+      "source": "Orbx",
+      "compatibility": "MSFS 2024 confirmé",
+      "image": "",
+      "owned": false,
+      "checked_at": "2026-11-17"
+    }
+  ]
+}
